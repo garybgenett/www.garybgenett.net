@@ -1,0 +1,162 @@
+Gary B. Genett
+
+Seattle, WA 98101 • 206-391-6606 • me@garybgenett.net •
+linkedin.com/in/gary-b-genett
+
+Senior Technical Program Manager
+
+Highly accomplished professional with over 20 years of measured success in
+organizational change and program management for complex technical industries.
+
+--------------------------------------------------------------------------------
+
+Forward-looking and innovative critical thinker, driven for success. Keeps the
+big picture in focus with an attention to detail. Drives product and program
+management lifecycles from initial design and planning to successful delivery
+within time and budget constraints. Experienced in building and leading teams,
+fostering individual growth and achieving or exceeding goals. Consummate team
+player, capable of collaborating with a wide range of business and technical
+stakeholders, including executive leadership. Embodies empathy and curiosity,
+establishing and nurturing open and honest communication channels to keep all
+relevant parties well informed and to enable efficient problem resolution.
+Approachable, personable, and is sought out for expertise and advice on a
+continual basis. Proficient in Cloud, SaaS, PaaS, IaaS, DevOps, REST APIs, and
+Web Development back-end to front-end.
+
+Areas of Expertise
+
+  -------------------------- -------------------------- --------------------------
+  • Strategic Planning       • Program & Project        • Sales, Consulting &
+                             Management                 Training
+
+  • Complete Product         • Cross-functional         • Cloud Migrations &
+  Lifecycle                  Collaboration              Operations
+
+  • Change Management        • Building & Leading Teams • Agile, Scrum & Waterfall
+  -------------------------- -------------------------- --------------------------
+
+--------------------------------------------------------------------------------
+
+Professional Experience
+
+PACCAR – TEKsystems Consultant – Seattle, WA
+
+Senior Program Manager, IT Operations, June 2022 - Current
+
+Directed the mission-critical Solution Services Management program, a central
+communication, integration, and data aggregation point for international
+operations. Lead the funded collaboration with Decisiv, building enhanced
+functionality on their SaaS platform for use by PACCAR Fleets and Dealers.
+Managed a large full-stack development backlog across 3 cross-functional Agile
+teams, including ramping up the 3rd to full capacity. Coordinated all efforts
+between 3 major divisions, Parts, Peterbilt, and Kenworth, and collaborated to
+develop a mutual vision with the vendor and all stakeholders. Assessed
+technology capabilities of vendor platform, and consolidated requirements based
+on most pressing business needs and shortest paths.
+
+-   Increased efficiency of $5M Solution Services Management program, delivering
+    a year-long projected timeline in 6 months, saving almost $1M in engineering
+    costs.
+-   Successfully developed, documented, and implemented a program structure with
+    improved reporting and tracking, establishing phase gates, streamlining
+    delivery, and aligning all stakeholders on a consistent
+    requirements-to-release lifecycle.
+-   Demonstrated thought-leadership by re-imagining the executive 3-5-year
+    strategic roadmap of the program.
+-   Directed, coached, and professionally developed the Program Managers and
+    Business Analysts on all 4 teams.
+
+Twitter – TEKsystems Consultant – Seattle, WA
+
+Senior Program Manager, Organizational Change Integration, October 2021 - June 2022
+
+Lead functional and technical delivery of key team, organization, and
+company-wide initiatives in critical focus areas like organizational change,
+product and policy launches, and dedicated service programs. Solved complex
+challenges involving all aspects of customer service and content moderation
+operations on the platform. Partnered with cross-functional stakeholders and
+drove execution from concept to ship.
+
+-   Demonstrated thought-leadership in the transformation of the Product Launch
+    team into Organizational Change Integration, including reorienting Program
+    Managers to the fundamentals of their new roles.
+-   Successfully advocated to integrate critical tooling into the roadmap for
+    Professional Profiles on behalf of Customer Service teams, which required
+    buy-in from 3 different engineering groups.
+-   Increased bot and policy enforcement efficiency by partnering with experts
+    in Health, and Data Science.
+
+Highspot – Seattle, WA
+
+Senior Technical Program Manager, Engineering Operations, April 2020 - April 2021
+
+Managed the Content Integration, Management, and Consumption teams as a
+servant-leader. Coordinated the Product Management, Engineering, Design, and
+Quality Assurance teams to develop targeted plans for the delivery of SaaS
+products and technologies. Ensured that new features and enhancement of products
+were documented, implemented, and tested properly.
+
+-   Grew the initial group into four teams to fully focus on separate SaaS
+    disciplines, with the completion of two reorganizations.
+-   Developed reusable custom Jira configurations and established processes
+    specific to the independent development teams, addressing individual needs
+    and resulting in a 400% increase in delivery of features.
+-   Created and implemented four front-end and three back-end integrations
+    across Salesforce, Quip, HigherLogic, Widen, and OpenText, generating over
+    $3M in new business.
+
+Alaska Airlines – TEKsystems Consultant – Seattle, WA
+
+Senior Technical Program Manager, Maintenance & Engineering, June 2019 - December 2019
+
+Designed, implemented, and evolved standardized templates for written
+documentation and application/network diagrams required for executive,
+management, developer, and support audiences. Enabled the development team with
+short-term and long-term processes to facilitate the migration to Azure.
+Identified and mitigated potential risks to the project and organizational
+change efforts.
+
+-   Championed and designed an engineering knowledge center as part of a $40M
+    M&E systems integration and process alignment after the Virgin America
+    merger.
+-   Improved quality controls and outcomes with the creation and implementation
+    of best practices for the transition to a cloud-based DevOps model.
+
+Enviro-Master – Seattle, WA
+
+President & Operations Manager, July 2016 - January 2019
+
+Acquired and operated a commercial products and services firm focused on
+restroom hygiene and supply.
+
+-   Doubled the existing sales, with a 50% increase in sites yielding $100K in
+    yearly recurring revenue.
+-   Reduced operational budget by 20% following the acquisition, while producing
+    a 15% increase in wages.
+
+F5 Networks – Seattle, WA
+
+Strategic Leader & Team Builder, 2004 - 2016
+
+Successfully delivered in multiple cross-functional positions, spanning the full
+product lifecycle through market analysis, business strategy, product
+management, customer requirements, architecture, design, program management,
+product development, release, go-to-market, competitive analysis, pre-sales,
+close-of-deal, implementation, deployment, and migration, with support and
+consulting through the entire process.
+
+-   Senior Product Management Engineer, 2014 - 2016
+-   New Product Introduction Engineer, 2009 - 2014
+-   Field Systems Sales Engineer, 2006 - 2009
+-   Product Management Engineer, 2004 - 2006
+-   Network Support Engineer, 2004
+
+--------------------------------------------------------------------------------
+
+Education
+
+  --------------------------------------- ---------------------------------------
+  Programming Course                      Programming Courses
+
+  University of Washington, Seattle, WA   Seattle Central College, Seattle, WA
+  --------------------------------------- ---------------------------------------

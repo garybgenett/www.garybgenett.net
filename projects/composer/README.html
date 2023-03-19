@@ -1,0 +1,3880 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Gary B. Genett" />
+  <title>Composer CMS: Content Make System</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <style type="text/css">
+:root {
+--background-body: #fff;
+--background: #efefef;
+--background-alt: #f7f7f7;
+--selection: #9e9e9e;
+--text-main: #363636;
+--text-bright: #000;
+--text-muted: #70777f;
+--links: #0076d1;
+--focus: #0096bfab;
+--border: #dbdbdb;
+--code: #000;
+--animation-duration: 0.1s;
+--button-base: #d0cfcf;
+--button-hover: #9b9b9b;
+--scrollbar-thumb: rgb(170, 170, 170);
+--scrollbar-thumb-hover: var(--button-hover);
+--form-placeholder: #949494;
+--form-text: #1d1d1d;
+--variable: #39a33c;
+--highlight: #ff0;
+--select-arrow: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' height='62.5' width='116.9' fill='%23161f27'%3E %3Cpath d='M115.3,1.6 C113.7,0 111.1,0 109.5,1.6 L58.5,52.7 L7.4,1.6 C5.8,0 3.2,0 1.6,1.6 C0,3.2 0,5.8 1.6,7.4 L55.5,61.3 C56.3,62.1 57.3,62.5 58.4,62.5 C59.4,62.5 60.5,62.1 61.3,61.3 L115.2,7.4 C116.9,5.8 116.9,3.2 115.3,1.6Z'/%3E %3C/svg%3E");
+}
+@media (prefers-color-scheme: dark) {
+:root {
+--background-body: #202b38;
+--background: #161f27;
+--background-alt: #1a242f;
+--selection: #1c76c5;
+--text-main: #dbdbdb;
+--text-bright: #fff;
+--text-muted: #a9b1ba;
+--links: #41adff;
+--focus: #0096bfab;
+--border: #526980;
+--code: #ffbe85;
+--animation-duration: 0.1s;
+--button-base: #0c151c;
+--button-hover: #040a0f;
+--scrollbar-thumb: var(--button-hover);
+--scrollbar-thumb-hover: rgb(0, 0, 0);
+--form-placeholder: #a9a9a9;
+--form-text: #fff;
+--variable: #d941e2;
+--highlight: #efdb43;
+--select-arrow: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' height='62.5' width='116.9' fill='%23efefef'%3E %3Cpath d='M115.3,1.6 C113.7,0 111.1,0 109.5,1.6 L58.5,52.7 L7.4,1.6 C5.8,0 3.2,0 1.6,1.6 C0,3.2 0,5.8 1.6,7.4 L55.5,61.3 C56.3,62.1 57.3,62.5 58.4,62.5 C59.4,62.5 60.5,62.1 61.3,61.3 L115.2,7.4 C116.9,5.8 116.9,3.2 115.3,1.6Z'/%3E %3C/svg%3E");
+}
+}
+html {
+scrollbar-color: rgb(170, 170, 170) #fff;
+scrollbar-color: var(--scrollbar-thumb) var(--background-body);
+scrollbar-width: thin;
+}
+@media (prefers-color-scheme: dark) {
+html {
+scrollbar-color: #040a0f #202b38;
+scrollbar-color: var(--scrollbar-thumb) var(--background-body);
+}
+}
+@media (prefers-color-scheme: dark) {
+html {
+scrollbar-color: #040a0f #202b38;
+scrollbar-color: var(--scrollbar-thumb) var(--background-body);
+}
+}
+@media (prefers-color-scheme: dark) {
+html {
+scrollbar-color: #040a0f #202b38;
+scrollbar-color: var(--scrollbar-thumb) var(--background-body);
+}
+}
+@media (prefers-color-scheme: dark) {
+html {
+scrollbar-color: #040a0f #202b38;
+scrollbar-color: var(--scrollbar-thumb) var(--background-body);
+}
+}
+@media (prefers-color-scheme: dark) {
+html {
+scrollbar-color: #040a0f #202b38;
+scrollbar-color: var(--scrollbar-thumb) var(--background-body);
+}
+}
+@media (prefers-color-scheme: dark) {
+html {
+scrollbar-color: #040a0f #202b38;
+scrollbar-color: var(--scrollbar-thumb) var(--background-body);
+}
+}
+body {
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif;
+line-height: 1.4;
+max-width: 800px;
+margin: 20px auto;
+padding: 0 10px;
+word-wrap: break-word;
+color: #363636;
+color: var(--text-main);
+background: #fff;
+background: var(--background-body);
+text-rendering: optimizeLegibility;
+}
+@media (prefers-color-scheme: dark) {
+body {
+background: #202b38;
+background: var(--background-body);
+}
+}
+@media (prefers-color-scheme: dark) {
+body {
+color: #dbdbdb;
+color: var(--text-main);
+}
+}
+button {
+transition:
+background-color 0.1s linear,
+border-color 0.1s linear,
+color 0.1s linear,
+box-shadow 0.1s linear,
+transform 0.1s ease;
+transition:
+background-color var(--animation-duration) linear,
+border-color var(--animation-duration) linear,
+color var(--animation-duration) linear,
+box-shadow var(--animation-duration) linear,
+transform var(--animation-duration) ease;
+}
+@media (prefers-color-scheme: dark) {
+button {
+transition:
+background-color 0.1s linear,
+border-color 0.1s linear,
+color 0.1s linear,
+box-shadow 0.1s linear,
+transform 0.1s ease;
+transition:
+background-color var(--animation-duration) linear,
+border-color var(--animation-duration) linear,
+color var(--animation-duration) linear,
+box-shadow var(--animation-duration) linear,
+transform var(--animation-duration) ease;
+}
+}
+input {
+transition:
+background-color 0.1s linear,
+border-color 0.1s linear,
+color 0.1s linear,
+box-shadow 0.1s linear,
+transform 0.1s ease;
+transition:
+background-color var(--animation-duration) linear,
+border-color var(--animation-duration) linear,
+color var(--animation-duration) linear,
+box-shadow var(--animation-duration) linear,
+transform var(--animation-duration) ease;
+}
+@media (prefers-color-scheme: dark) {
+input {
+transition:
+background-color 0.1s linear,
+border-color 0.1s linear,
+color 0.1s linear,
+box-shadow 0.1s linear,
+transform 0.1s ease;
+transition:
+background-color var(--animation-duration) linear,
+border-color var(--animation-duration) linear,
+color var(--animation-duration) linear,
+box-shadow var(--animation-duration) linear,
+transform var(--animation-duration) ease;
+}
+}
+textarea {
+transition:
+background-color 0.1s linear,
+border-color 0.1s linear,
+color 0.1s linear,
+box-shadow 0.1s linear,
+transform 0.1s ease;
+transition:
+background-color var(--animation-duration) linear,
+border-color var(--animation-duration) linear,
+color var(--animation-duration) linear,
+box-shadow var(--animation-duration) linear,
+transform var(--animation-duration) ease;
+}
+@media (prefers-color-scheme: dark) {
+textarea {
+transition:
+background-color 0.1s linear,
+border-color 0.1s linear,
+color 0.1s linear,
+box-shadow 0.1s linear,
+transform 0.1s ease;
+transition:
+background-color var(--animation-duration) linear,
+border-color var(--animation-duration) linear,
+color var(--animation-duration) linear,
+box-shadow var(--animation-duration) linear,
+transform var(--animation-duration) ease;
+}
+}
+h1 {
+font-size: 2.2em;
+margin-top: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-bottom: 12px;
+margin-top: 24px;
+}
+h1 {
+color: #000;
+color: var(--text-bright);
+}
+@media (prefers-color-scheme: dark) {
+h1 {
+color: #fff;
+color: var(--text-bright);
+}
+}
+h2 {
+color: #000;
+color: var(--text-bright);
+}
+@media (prefers-color-scheme: dark) {
+h2 {
+color: #fff;
+color: var(--text-bright);
+}
+}
+h3 {
+color: #000;
+color: var(--text-bright);
+}
+@media (prefers-color-scheme: dark) {
+h3 {
+color: #fff;
+color: var(--text-bright);
+}
+}
+h4 {
+color: #000;
+color: var(--text-bright);
+}
+@media (prefers-color-scheme: dark) {
+h4 {
+color: #fff;
+color: var(--text-bright);
+}
+}
+h5 {
+color: #000;
+color: var(--text-bright);
+}
+@media (prefers-color-scheme: dark) {
+h5 {
+color: #fff;
+color: var(--text-bright);
+}
+}
+h6 {
+color: #000;
+color: var(--text-bright);
+}
+@media (prefers-color-scheme: dark) {
+h6 {
+color: #fff;
+color: var(--text-bright);
+}
+}
+strong {
+color: #000;
+color: var(--text-bright);
+}
+@media (prefers-color-scheme: dark) {
+strong {
+color: #fff;
+color: var(--text-bright);
+}
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong,
+th {
+font-weight: 600;
+}
+q::before {
+content: none;
+}
+q::after {
+content: none;
+}
+blockquote {
+border-left: 4px solid #0096bfab;
+border-left: 4px solid var(--focus);
+margin: 1.5em 0;
+padding: 0.5em 1em;
+font-style: italic;
+}
+@media (prefers-color-scheme: dark) {
+blockquote {
+border-left: 4px solid #0096bfab;
+border-left: 4px solid var(--focus);
+}
+}
+q {
+border-left: 4px solid #0096bfab;
+border-left: 4px solid var(--focus);
+margin: 1.5em 0;
+padding: 0.5em 1em;
+font-style: italic;
+}
+@media (prefers-color-scheme: dark) {
+q {
+border-left: 4px solid #0096bfab;
+border-left: 4px solid var(--focus);
+}
+}
+blockquote > footer {
+font-style: normal;
+border: 0;
+}
+blockquote cite {
+font-style: normal;
+}
+address {
+font-style: normal;
+}
+mark {
+background-color: #ff0;
+background-color: var(--highlight);
+border-radius: 2px;
+padding: 0 2px 0 2px;
+color: #000;
+}
+@media (prefers-color-scheme: dark) {
+mark {
+background-color: #efdb43;
+background-color: var(--highlight);
+}
+}
+a > code,
+a > strong {
+color: inherit;
+}
+button,
+select,
+input[type='submit'],
+input[type='reset'],
+input[type='button'],
+input[type='checkbox'],
+input[type='range'],
+input[type='radio'] {
+cursor: pointer;
+}
+input,
+select {
+display: block;
+}
+[type='checkbox'],
+[type='radio'] {
+display: initial;
+}
+input {
+color: #1d1d1d;
+color: var(--form-text);
+background-color: #efefef;
+background-color: var(--background);
+font-family: inherit;
+font-size: inherit;
+margin-right: 6px;
+margin-bottom: 6px;
+padding: 10px;
+border: none;
+border-radius: 6px;
+outline: none;
+}
+@media (prefers-color-scheme: dark) {
+input {
+background-color: #161f27;
+background-color: var(--background);
+}
+}
+@media (prefers-color-scheme: dark) {
+input {
+color: #fff;
+color: var(--form-text);
+}
+}
+button {
+color: #1d1d1d;
+color: var(--form-text);
+background-color: #efefef;
+background-color: var(--background);
+font-family: inherit;
+font-size: inherit;
+margin-right: 6px;
+margin-bottom: 6px;
+padding: 10px;
+border: none;
+border-radius: 6px;
+outline: none;
+}
+@media (prefers-color-scheme: dark) {
+button {
+background-color: #161f27;
+background-color: var(--background);
+}
+}
+@media (prefers-color-scheme: dark) {
+button {
+color: #fff;
+color: var(--form-text);
+}
+}
+textarea {
+color: #1d1d1d;
+color: var(--form-text);
+background-color: #efefef;
+background-color: var(--background);
+font-family: inherit;
+font-size: inherit;
+margin-right: 6px;
+margin-bottom: 6px;
+padding: 10px;
+border: none;
+border-radius: 6px;
+outline: none;
+}
+@media (prefers-color-scheme: dark) {
+textarea {
+background-color: #161f27;
+background-color: var(--background);
+}
+}
+@media (prefers-color-scheme: dark) {
+textarea {
+color: #fff;
+color: var(--form-text);
+}
+}
+select {
+color: #1d1d1d;
+color: var(--form-text);
+background-color: #efefef;
+background-color: var(--background);
+font-family: inherit;
+font-size: inherit;
+margin-right: 6px;
+margin-bottom: 6px;
+padding: 10px;
+border: none;
+border-radius: 6px;
+outline: none;
+}
+@media (prefers-color-scheme: dark) {
+select {
+background-color: #161f27;
+background-color: var(--background);
+}
+}
+@media (prefers-color-scheme: dark) {
+select {
+color: #fff;
+color: var(--form-text);
+}
+}
+button {
+background-color: #d0cfcf;
+background-color: var(--button-base);
+padding-right: 30px;
+padding-left: 30px;
+}
+@media (prefers-color-scheme: dark) {
+button {
+background-color: #0c151c;
+background-color: var(--button-base);
+}
+}
+input[type='submit'] {
+background-color: #d0cfcf;
+background-color: var(--button-base);
+padding-right: 30px;
+padding-left: 30px;
+}
+@media (prefers-color-scheme: dark) {
+input[type='submit'] {
+background-color: #0c151c;
+background-color: var(--button-base);
+}
+}
+input[type='reset'] {
+background-color: #d0cfcf;
+background-color: var(--button-base);
+padding-right: 30px;
+padding-left: 30px;
+}
+@media (prefers-color-scheme: dark) {
+input[type='reset'] {
+background-color: #0c151c;
+background-color: var(--button-base);
+}
+}
+input[type='button'] {
+background-color: #d0cfcf;
+background-color: var(--button-base);
+padding-right: 30px;
+padding-left: 30px;
+}
+@media (prefers-color-scheme: dark) {
+input[type='button'] {
+background-color: #0c151c;
+background-color: var(--button-base);
+}
+}
+button:hover {
+background: #9b9b9b;
+background: var(--button-hover);
+}
+@media (prefers-color-scheme: dark) {
+button:hover {
+background: #040a0f;
+background: var(--button-hover);
+}
+}
+input[type='submit']:hover {
+background: #9b9b9b;
+background: var(--button-hover);
+}
+@media (prefers-color-scheme: dark) {
+input[type='submit']:hover {
+background: #040a0f;
+background: var(--button-hover);
+}
+}
+input[type='reset']:hover {
+background: #9b9b9b;
+background: var(--button-hover);
+}
+@media (prefers-color-scheme: dark) {
+input[type='reset']:hover {
+background: #040a0f;
+background: var(--button-hover);
+}
+}
+input[type='button']:hover {
+background: #9b9b9b;
+background: var(--button-hover);
+}
+@media (prefers-color-scheme: dark) {
+input[type='button']:hover {
+background: #040a0f;
+background: var(--button-hover);
+}
+}
+input[type='color'] {
+min-height: 2rem;
+padding: 8px;
+cursor: pointer;
+}
+input[type='checkbox'],
+input[type='radio'] {
+height: 1em;
+width: 1em;
+}
+input[type='radio'] {
+border-radius: 100%;
+}
+input {
+vertical-align: top;
+}
+label {
+vertical-align: middle;
+margin-bottom: 4px;
+display: inline-block;
+}
+input:not([type='checkbox']):not([type='radio']),
+input[type='range'],
+select,
+button,
+textarea {
+-webkit-appearance: none;
+}
+textarea {
+display: block;
+margin-right: 0;
+box-sizing: border-box;
+resize: vertical;
+}
+textarea:not([cols]) {
+width: 100%;
+}
+textarea:not([rows]) {
+min-height: 40px;
+height: 140px;
+}
+select {
+background: #efefef url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' height='62.5' width='116.9' fill='%23161f27'%3E %3Cpath d='M115.3,1.6 C113.7,0 111.1,0 109.5,1.6 L58.5,52.7 L7.4,1.6 C5.8,0 3.2,0 1.6,1.6 C0,3.2 0,5.8 1.6,7.4 L55.5,61.3 C56.3,62.1 57.3,62.5 58.4,62.5 C59.4,62.5 60.5,62.1 61.3,61.3 L115.2,7.4 C116.9,5.8 116.9,3.2 115.3,1.6Z'/%3E %3C/svg%3E") calc(100% - 12px) 50% / 12px no-repeat;
+background: var(--background) var(--select-arrow) calc(100% - 12px) 50% / 12px no-repeat;
+padding-right: 35px;
+}
+@media (prefers-color-scheme: dark) {
+select {
+background: #161f27 url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' height='62.5' width='116.9' fill='%23efefef'%3E %3Cpath d='M115.3,1.6 C113.7,0 111.1,0 109.5,1.6 L58.5,52.7 L7.4,1.6 C5.8,0 3.2,0 1.6,1.6 C0,3.2 0,5.8 1.6,7.4 L55.5,61.3 C56.3,62.1 57.3,62.5 58.4,62.5 C59.4,62.5 60.5,62.1 61.3,61.3 L115.2,7.4 C116.9,5.8 116.9,3.2 115.3,1.6Z'/%3E %3C/svg%3E") calc(100% - 12px) 50% / 12px no-repeat;
+background: var(--background) var(--select-arrow) calc(100% - 12px) 50% / 12px no-repeat;
+}
+}
+@media (prefers-color-scheme: dark) {
+select {
+background: #161f27 url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' height='62.5' width='116.9' fill='%23efefef'%3E %3Cpath d='M115.3,1.6 C113.7,0 111.1,0 109.5,1.6 L58.5,52.7 L7.4,1.6 C5.8,0 3.2,0 1.6,1.6 C0,3.2 0,5.8 1.6,7.4 L55.5,61.3 C56.3,62.1 57.3,62.5 58.4,62.5 C59.4,62.5 60.5,62.1 61.3,61.3 L115.2,7.4 C116.9,5.8 116.9,3.2 115.3,1.6Z'/%3E %3C/svg%3E") calc(100% - 12px) 50% / 12px no-repeat;
+background: var(--background) var(--select-arrow) calc(100% - 12px) 50% / 12px no-repeat;
+}
+}
+@media (prefers-color-scheme: dark) {
+select {
+background: #161f27 url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' height='62.5' width='116.9' fill='%23efefef'%3E %3Cpath d='M115.3,1.6 C113.7,0 111.1,0 109.5,1.6 L58.5,52.7 L7.4,1.6 C5.8,0 3.2,0 1.6,1.6 C0,3.2 0,5.8 1.6,7.4 L55.5,61.3 C56.3,62.1 57.3,62.5 58.4,62.5 C59.4,62.5 60.5,62.1 61.3,61.3 L115.2,7.4 C116.9,5.8 116.9,3.2 115.3,1.6Z'/%3E %3C/svg%3E") calc(100% - 12px) 50% / 12px no-repeat;
+background: var(--background) var(--select-arrow) calc(100% - 12px) 50% / 12px no-repeat;
+}
+}
+@media (prefers-color-scheme: dark) {
+select {
+background: #161f27 url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' height='62.5' width='116.9' fill='%23efefef'%3E %3Cpath d='M115.3,1.6 C113.7,0 111.1,0 109.5,1.6 L58.5,52.7 L7.4,1.6 C5.8,0 3.2,0 1.6,1.6 C0,3.2 0,5.8 1.6,7.4 L55.5,61.3 C56.3,62.1 57.3,62.5 58.4,62.5 C59.4,62.5 60.5,62.1 61.3,61.3 L115.2,7.4 C116.9,5.8 116.9,3.2 115.3,1.6Z'/%3E %3C/svg%3E") calc(100% - 12px) 50% / 12px no-repeat;
+background: var(--background) var(--select-arrow) calc(100% - 12px) 50% / 12px no-repeat;
+}
+}
+select::-ms-expand {
+display: none;
+}
+select[multiple] {
+padding-right: 10px;
+background-image: none;
+overflow-y: auto;
+}
+input:focus {
+box-shadow: 0 0 0 2px #0096bfab;
+box-shadow: 0 0 0 2px var(--focus);
+}
+@media (prefers-color-scheme: dark) {
+input:focus {
+box-shadow: 0 0 0 2px #0096bfab;
+box-shadow: 0 0 0 2px var(--focus);
+}
+}
+select:focus {
+box-shadow: 0 0 0 2px #0096bfab;
+box-shadow: 0 0 0 2px var(--focus);
+}
+@media (prefers-color-scheme: dark) {
+select:focus {
+box-shadow: 0 0 0 2px #0096bfab;
+box-shadow: 0 0 0 2px var(--focus);
+}
+}
+button:focus {
+box-shadow: 0 0 0 2px #0096bfab;
+box-shadow: 0 0 0 2px var(--focus);
+}
+@media (prefers-color-scheme: dark) {
+button:focus {
+box-shadow: 0 0 0 2px #0096bfab;
+box-shadow: 0 0 0 2px var(--focus);
+}
+}
+textarea:focus {
+box-shadow: 0 0 0 2px #0096bfab;
+box-shadow: 0 0 0 2px var(--focus);
+}
+@media (prefers-color-scheme: dark) {
+textarea:focus {
+box-shadow: 0 0 0 2px #0096bfab;
+box-shadow: 0 0 0 2px var(--focus);
+}
+}
+input[type='checkbox']:active,
+input[type='radio']:active,
+input[type='submit']:active,
+input[type='reset']:active,
+input[type='button']:active,
+input[type='range']:active,
+button:active {
+transform: translateY(2px);
+}
+input:disabled,
+select:disabled,
+button:disabled,
+textarea:disabled {
+cursor: not-allowed;
+opacity: 0.5;
+}
+::-moz-placeholder {
+color: #949494;
+color: var(--form-placeholder);
+}
+::placeholder {
+color: #949494;
+color: var(--form-placeholder);
+}
+@media (prefers-color-scheme: dark) {
+::-moz-placeholder {
+color: #a9a9a9;
+color: var(--form-placeholder);
+}
+::placeholder {
+color: #a9a9a9;
+color: var(--form-placeholder);
+}
+}
+fieldset {
+border: 1px #0096bfab solid;
+border: 1px var(--focus) solid;
+border-radius: 6px;
+margin: 0;
+margin-bottom: 12px;
+padding: 10px;
+}
+@media (prefers-color-scheme: dark) {
+fieldset {
+border: 1px #0096bfab solid;
+border: 1px var(--focus) solid;
+}
+}
+legend {
+font-size: 0.9em;
+font-weight: 600;
+}
+input[type='range'] {
+margin: 10px 0;
+padding: 10px 0;
+background: transparent;
+}
+input[type='range']:focus {
+outline: none;
+}
+input[type='range']::-webkit-slider-runnable-track {
+width: 100%;
+height: 9.5px;
+-webkit-transition: 0.2s;
+transition: 0.2s;
+background: #efefef;
+background: var(--background);
+border-radius: 3px;
+}
+@media (prefers-color-scheme: dark) {
+input[type='range']::-webkit-slider-runnable-track {
+background: #161f27;
+background: var(--background);
+}
+}
+input[type='range']::-webkit-slider-thumb {
+box-shadow: 0 1px 1px #000, 0 0 1px #0d0d0d;
+height: 20px;
+width: 20px;
+border-radius: 50%;
+background: #dbdbdb;
+background: var(--border);
+-webkit-appearance: none;
+margin-top: -7px;
+}
+@media (prefers-color-scheme: dark) {
+input[type='range']::-webkit-slider-thumb {
+background: #526980;
+background: var(--border);
+}
+}
+input[type='range']:focus::-webkit-slider-runnable-track {
+background: #efefef;
+background: var(--background);
+}
+@media (prefers-color-scheme: dark) {
+input[type='range']:focus::-webkit-slider-runnable-track {
+background: #161f27;
+background: var(--background);
+}
+}
+input[type='range']::-moz-range-track {
+width: 100%;
+height: 9.5px;
+-moz-transition: 0.2s;
+transition: 0.2s;
+background: #efefef;
+background: var(--background);
+border-radius: 3px;
+}
+@media (prefers-color-scheme: dark) {
+input[type='range']::-moz-range-track {
+background: #161f27;
+background: var(--background);
+}
+}
+input[type='range']::-moz-range-thumb {
+box-shadow: 1px 1px 1px #000, 0 0 1px #0d0d0d;
+height: 20px;
+width: 20px;
+border-radius: 50%;
+background: #dbdbdb;
+background: var(--border);
+}
+@media (prefers-color-scheme: dark) {
+input[type='range']::-moz-range-thumb {
+background: #526980;
+background: var(--border);
+}
+}
+input[type='range']::-ms-track {
+width: 100%;
+height: 9.5px;
+background: transparent;
+border-color: transparent;
+border-width: 16px 0;
+color: transparent;
+}
+input[type='range']::-ms-fill-lower {
+background: #efefef;
+background: var(--background);
+border: 0.2px solid #010101;
+border-radius: 3px;
+box-shadow: 1px 1px 1px #000, 0 0 1px #0d0d0d;
+}
+@media (prefers-color-scheme: dark) {
+input[type='range']::-ms-fill-lower {
+background: #161f27;
+background: var(--background);
+}
+}
+input[type='range']::-ms-fill-upper {
+background: #efefef;
+background: var(--background);
+border: 0.2px solid #010101;
+border-radius: 3px;
+box-shadow: 1px 1px 1px #000, 0 0 1px #0d0d0d;
+}
+@media (prefers-color-scheme: dark) {
+input[type='range']::-ms-fill-upper {
+background: #161f27;
+background: var(--background);
+}
+}
+input[type='range']::-ms-thumb {
+box-shadow: 1px 1px 1px #000, 0 0 1px #0d0d0d;
+border: 1px solid #000;
+height: 20px;
+width: 20px;
+border-radius: 50%;
+background: #dbdbdb;
+background: var(--border);
+}
+@media (prefers-color-scheme: dark) {
+input[type='range']::-ms-thumb {
+background: #526980;
+background: var(--border);
+}
+}
+input[type='range']:focus::-ms-fill-lower {
+background: #efefef;
+background: var(--background);
+}
+@media (prefers-color-scheme: dark) {
+input[type='range']:focus::-ms-fill-lower {
+background: #161f27;
+background: var(--background);
+}
+}
+input[type='range']:focus::-ms-fill-upper {
+background: #efefef;
+background: var(--background);
+}
+@media (prefers-color-scheme: dark) {
+input[type='range']:focus::-ms-fill-upper {
+background: #161f27;
+background: var(--background);
+}
+}
+a {
+text-decoration: none;
+color: #0076d1;
+color: var(--links);
+}
+@media (prefers-color-scheme: dark) {
+a {
+color: #41adff;
+color: var(--links);
+}
+}
+a:hover {
+text-decoration: underline;
+}
+code {
+background: #efefef;
+background: var(--background);
+color: #000;
+color: var(--code);
+padding: 2.5px 5px;
+border-radius: 6px;
+font-size: 1em;
+}
+@media (prefers-color-scheme: dark) {
+code {
+color: #ffbe85;
+color: var(--code);
+}
+}
+@media (prefers-color-scheme: dark) {
+code {
+background: #161f27;
+background: var(--background);
+}
+}
+samp {
+background: #efefef;
+background: var(--background);
+color: #000;
+color: var(--code);
+padding: 2.5px 5px;
+border-radius: 6px;
+font-size: 1em;
+}
+@media (prefers-color-scheme: dark) {
+samp {
+color: #ffbe85;
+color: var(--code);
+}
+}
+@media (prefers-color-scheme: dark) {
+samp {
+background: #161f27;
+background: var(--background);
+}
+}
+time {
+background: #efefef;
+background: var(--background);
+color: #000;
+color: var(--code);
+padding: 2.5px 5px;
+border-radius: 6px;
+font-size: 1em;
+}
+@media (prefers-color-scheme: dark) {
+time {
+color: #ffbe85;
+color: var(--code);
+}
+}
+@media (prefers-color-scheme: dark) {
+time {
+background: #161f27;
+background: var(--background);
+}
+}
+pre > code {
+padding: 10px;
+display: block;
+overflow-x: auto;
+}
+var {
+color: #39a33c;
+color: var(--variable);
+font-style: normal;
+font-family: monospace;
+}
+@media (prefers-color-scheme: dark) {
+var {
+color: #d941e2;
+color: var(--variable);
+}
+}
+kbd {
+background: #efefef;
+background: var(--background);
+border: 1px solid #dbdbdb;
+border: 1px solid var(--border);
+border-radius: 2px;
+color: #363636;
+color: var(--text-main);
+padding: 2px 4px 2px 4px;
+}
+@media (prefers-color-scheme: dark) {
+kbd {
+color: #dbdbdb;
+color: var(--text-main);
+}
+}
+@media (prefers-color-scheme: dark) {
+kbd {
+border: 1px solid #526980;
+border: 1px solid var(--border);
+}
+}
+@media (prefers-color-scheme: dark) {
+kbd {
+background: #161f27;
+background: var(--background);
+}
+}
+img,
+video {
+max-width: 100%;
+height: auto;
+}
+hr {
+border: none;
+border-top: 1px solid #dbdbdb;
+border-top: 1px solid var(--border);
+}
+@media (prefers-color-scheme: dark) {
+hr {
+border-top: 1px solid #526980;
+border-top: 1px solid var(--border);
+}
+}
+table {
+border-collapse: collapse;
+margin-bottom: 10px;
+width: 100%;
+}
+table caption {
+text-align: left;
+}
+td,
+th {
+padding: 6px;
+text-align: left;
+vertical-align: top;
+word-wrap: break-word;
+}
+thead {
+border-bottom: 1px solid #dbdbdb;
+border-bottom: 1px solid var(--border);
+}
+@media (prefers-color-scheme: dark) {
+thead {
+border-bottom: 1px solid #526980;
+border-bottom: 1px solid var(--border);
+}
+}
+tfoot {
+border-top: 1px solid #dbdbdb;
+border-top: 1px solid var(--border);
+}
+@media (prefers-color-scheme: dark) {
+tfoot {
+border-top: 1px solid #526980;
+border-top: 1px solid var(--border);
+}
+}
+tbody tr:nth-child(even) {
+background-color: #efefef;
+background-color: var(--background);
+}
+@media (prefers-color-scheme: dark) {
+tbody tr:nth-child(even) {
+background-color: #161f27;
+background-color: var(--background);
+}
+}
+tbody tr:nth-child(even) button {
+background-color: #f7f7f7;
+background-color: var(--background-alt);
+}
+@media (prefers-color-scheme: dark) {
+tbody tr:nth-child(even) button {
+background-color: #1a242f;
+background-color: var(--background-alt);
+}
+}
+tbody tr:nth-child(even) button:hover {
+background-color: #fff;
+background-color: var(--background-body);
+}
+@media (prefers-color-scheme: dark) {
+tbody tr:nth-child(even) button:hover {
+background-color: #202b38;
+background-color: var(--background-body);
+}
+}
+::-webkit-scrollbar {
+height: 10px;
+width: 10px;
+}
+::-webkit-scrollbar-track {
+background: #efefef;
+background: var(--background);
+border-radius: 6px;
+}
+@media (prefers-color-scheme: dark) {
+::-webkit-scrollbar-track {
+background: #161f27;
+background: var(--background);
+}
+}
+::-webkit-scrollbar-thumb {
+background: rgb(170, 170, 170);
+background: var(--scrollbar-thumb);
+border-radius: 6px;
+}
+@media (prefers-color-scheme: dark) {
+::-webkit-scrollbar-thumb {
+background: #040a0f;
+background: var(--scrollbar-thumb);
+}
+}
+@media (prefers-color-scheme: dark) {
+::-webkit-scrollbar-thumb {
+background: #040a0f;
+background: var(--scrollbar-thumb);
+}
+}
+::-webkit-scrollbar-thumb:hover {
+background: #9b9b9b;
+background: var(--scrollbar-thumb-hover);
+}
+@media (prefers-color-scheme: dark) {
+::-webkit-scrollbar-thumb:hover {
+background: rgb(0, 0, 0);
+background: var(--scrollbar-thumb-hover);
+}
+}
+@media (prefers-color-scheme: dark) {
+::-webkit-scrollbar-thumb:hover {
+background: rgb(0, 0, 0);
+background: var(--scrollbar-thumb-hover);
+}
+}
+::-moz-selection {
+background-color: #9e9e9e;
+background-color: var(--selection);
+color: #000;
+color: var(--text-bright);
+}
+::selection {
+background-color: #9e9e9e;
+background-color: var(--selection);
+color: #000;
+color: var(--text-bright);
+}
+@media (prefers-color-scheme: dark) {
+::-moz-selection {
+color: #fff;
+color: var(--text-bright);
+}
+::selection {
+color: #fff;
+color: var(--text-bright);
+}
+}
+@media (prefers-color-scheme: dark) {
+::-moz-selection {
+background-color: #1c76c5;
+background-color: var(--selection);
+}
+::selection {
+background-color: #1c76c5;
+background-color: var(--selection);
+}
+}
+details {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+background-color: #f7f7f7;
+background-color: var(--background-alt);
+padding: 10px 10px 0;
+margin: 1em 0;
+border-radius: 6px;
+overflow: hidden;
+}
+@media (prefers-color-scheme: dark) {
+details {
+background-color: #1a242f;
+background-color: var(--background-alt);
+}
+}
+details[open] {
+padding: 10px;
+}
+details > :last-child {
+margin-bottom: 0;
+}
+details[open] summary {
+margin-bottom: 10px;
+}
+summary {
+display: list-item;
+background-color: #efefef;
+background-color: var(--background);
+padding: 10px;
+margin: -10px -10px 0;
+cursor: pointer;
+outline: none;
+}
+@media (prefers-color-scheme: dark) {
+summary {
+background-color: #161f27;
+background-color: var(--background);
+}
+}
+summary:hover,
+summary:focus {
+text-decoration: underline;
+}
+details > :not(summary) {
+margin-top: 0;
+}
+summary::-webkit-details-marker {
+color: #363636;
+color: var(--text-main);
+}
+@media (prefers-color-scheme: dark) {
+summary::-webkit-details-marker {
+color: #dbdbdb;
+color: var(--text-main);
+}
+}
+dialog {
+background-color: #f7f7f7;
+background-color: var(--background-alt);
+color: #363636;
+color: var(--text-main);
+border: none;
+border-radius: 6px;
+border-color: #dbdbdb;
+border-color: var(--border);
+padding: 10px 30px;
+}
+@media (prefers-color-scheme: dark) {
+dialog {
+border-color: #526980;
+border-color: var(--border);
+}
+}
+@media (prefers-color-scheme: dark) {
+dialog {
+color: #dbdbdb;
+color: var(--text-main);
+}
+}
+@media (prefers-color-scheme: dark) {
+dialog {
+background-color: #1a242f;
+background-color: var(--background-alt);
+}
+}
+dialog > header:first-child {
+background-color: #efefef;
+background-color: var(--background);
+border-radius: 6px 6px 0 0;
+margin: -10px -30px 10px;
+padding: 10px;
+text-align: center;
+}
+@media (prefers-color-scheme: dark) {
+dialog > header:first-child {
+background-color: #161f27;
+background-color: var(--background);
+}
+}
+dialog::backdrop {
+background: #0000009c;
+-webkit-backdrop-filter: blur(4px);
+backdrop-filter: blur(4px);
+}
+footer {
+border-top: 1px solid #dbdbdb;
+border-top: 1px solid var(--border);
+padding-top: 10px;
+color: #70777f;
+color: var(--text-muted);
+}
+@media (prefers-color-scheme: dark) {
+footer {
+color: #a9b1ba;
+color: var(--text-muted);
+}
+}
+@media (prefers-color-scheme: dark) {
+footer {
+border-top: 1px solid #526980;
+border-top: 1px solid var(--border);
+}
+}
+body > footer {
+margin-top: 40px;
+}
+@media print {
+body,
+pre,
+code,
+summary,
+details,
+button,
+input,
+textarea {
+background-color: #fff;
+}
+button,
+input,
+textarea {
+border: 1px solid #000;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+button,
+input,
+textarea,
+footer,
+summary,
+strong {
+color: #000;
+}
+summary::marker {
+color: #000;
+}
+summary::-webkit-details-marker {
+color: #000;
+}
+tbody tr:nth-child(even) {
+background-color: #f2f2f2;
+}
+a {
+color: #00f;
+text-decoration: underline;
+}
+}
+.navbar {
+background-color:	#efefef;
+background-color:	var(--background);
+}
+@media (prefers-color-scheme: dark) {
+.navbar {
+background-color:	#161f27;
+background-color:	var(--background);
+}
+}
+.dropdown-menu {
+background-color:	#efefef;
+background-color:	var(--background);
+}
+@media (prefers-color-scheme: dark) {
+.dropdown-menu {
+background-color:	#161f27;
+background-color:	var(--background);
+}
+}
+.accordion-button {
+background-color:	#efefef;
+background-color:	var(--background);
+}
+@media (prefers-color-scheme: dark) {
+.accordion-button {
+background-color:	#161f27;
+background-color:	var(--background);
+}
+}
+.card-header {
+background-color:	#efefef;
+background-color:	var(--background);
+}
+@media (prefers-color-scheme: dark) {
+.card-header {
+background-color:	#161f27;
+background-color:	var(--background);
+}
+}
+.accordion-item {
+border:	1px solid #dbdbdb;
+border:	1px solid var(--border);
+}
+@media (prefers-color-scheme: dark) {
+.accordion-item {
+border:	1px solid #526980;
+border:	1px solid var(--border);
+}
+}
+.card {
+border:	1px solid #dbdbdb;
+border:	1px solid var(--border);
+}
+@media (prefers-color-scheme: dark) {
+.card {
+border:	1px solid #526980;
+border:	1px solid var(--border);
+}
+}
+</style>
+  <style type="text/css">
+html {
+font-size:	14px;
+}
+body,
+table,
+tr {
+text-rendering:	optimizeLegibility;
+vertical-align:	text-top;
+text-align:	left;
+word-wrap:	normal;
+}
+img,
+video {
+max-width:	100%;
+height:	auto;
+}
+
+</style>
+  <link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAc0lEQVQ4y8VTQQ7AIAgrZA/z6fwMD8vcQCDspBcN0GIrAqcXNes0w1OQpBAsLjrujVdSwm4WPF7gE+MvW0gitqM/87pyRWLl0S4hJ6nMJwDEm3l9EgDAVRrWeFb+CVZfywU4lyRWt6bgxiB1JrEc5eOfEROp5CKUZInHTAAAAABJRU5ErkJggg==" rel="icon" type="image/x-icon">
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Composer CMS: Content Make System</h1>
+<p class="author">Gary B. Genett</p>
+<p class="date">v3.1 (2023-03-06)</p>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#composer-cms" id="toc-composer-cms"><span class="toc-section-number">1</span> Composer CMS</a>
+<ul>
+<li><a href="#overview" id="toc-overview"><span class="toc-section-number">1.1</span> Overview</a></li>
+<li><a href="#quick-start" id="toc-quick-start"><span class="toc-section-number">1.2</span> Quick Start</a></li>
+<li><a href="#principles" id="toc-principles"><span class="toc-section-number">1.3</span> Principles</a></li>
+<li><a href="#requirements" id="toc-requirements"><span class="toc-section-number">1.4</span> Requirements</a></li>
+</ul></li>
+<li><a href="#composer-operation" id="toc-composer-operation"><span class="toc-section-number">2</span> Composer Operation</a>
+<ul>
+<li><a href="#recommended-workflow" id="toc-recommended-workflow"><span class="toc-section-number">2.1</span> Recommended Workflow</a></li>
+<li><a href="#document-formatting" id="toc-document-formatting"><span class="toc-section-number">2.2</span> Document Formatting</a>
+<ul>
+<li><a href="#static-websites" id="toc-static-websites"><span class="toc-section-number">2.2.1</span> Static Websites</a></li>
+<li><a href="#html" id="toc-html"><span class="toc-section-number">2.2.2</span> HTML</a></li>
+<li><a href="#pdf" id="toc-pdf"><span class="toc-section-number">2.2.3</span> PDF</a></li>
+<li><a href="#epub" id="toc-epub"><span class="toc-section-number">2.2.4</span> EPUB</a></li>
+<li><a href="#revealjs-presentations" id="toc-revealjs-presentations"><span class="toc-section-number">2.2.5</span> Reveal.js Presentations</a></li>
+<li><a href="#microsoft-word--powerpoint" id="toc-microsoft-word--powerpoint"><span class="toc-section-number">2.2.6</span> Microsoft Word &amp; PowerPoint</a></li>
+</ul></li>
+<li><a href="#configuration-settings" id="toc-configuration-settings"><span class="toc-section-number">2.3</span> Configuration Settings</a></li>
+<li><a href="#precedence-rules" id="toc-precedence-rules"><span class="toc-section-number">2.4</span> Precedence Rules</a></li>
+<li><a href="#specifying-dependencies" id="toc-specifying-dependencies"><span class="toc-section-number">2.5</span> Specifying Dependencies</a></li>
+<li><a href="#custom-targets" id="toc-custom-targets"><span class="toc-section-number">2.6</span> Custom Targets</a></li>
+<li><a href="#repository-versions" id="toc-repository-versions"><span class="toc-section-number">2.7</span> Repository Versions</a></li>
+</ul></li>
+<li><a href="#composer-variables" id="toc-composer-variables"><span class="toc-section-number">3</span> Composer Variables</a>
+<ul>
+<li><a href="#formatting-variables" id="toc-formatting-variables"><span class="toc-section-number">3.1</span> Formatting Variables</a>
+<ul>
+<li><a href="#c_site" id="toc-c_site"><span class="toc-section-number">3.1.1</span> c_site</a></li>
+<li><a href="#c_type--c_base--c_list" id="toc-c_type--c_base--c_list"><span class="toc-section-number">3.1.2</span> c_type / c_base / c_list</a></li>
+<li><a href="#c_lang" id="toc-c_lang"><span class="toc-section-number">3.1.3</span> c_lang</a></li>
+<li><a href="#c_logo" id="toc-c_logo"><span class="toc-section-number">3.1.4</span> c_logo</a></li>
+<li><a href="#c_icon" id="toc-c_icon"><span class="toc-section-number">3.1.5</span> c_icon</a></li>
+<li><a href="#c_css" id="toc-c_css"><span class="toc-section-number">3.1.6</span> c_css</a></li>
+<li><a href="#c_toc" id="toc-c_toc"><span class="toc-section-number">3.1.7</span> c_toc</a></li>
+<li><a href="#c_level" id="toc-c_level"><span class="toc-section-number">3.1.8</span> c_level</a></li>
+<li><a href="#c_margin" id="toc-c_margin"><span class="toc-section-number">3.1.9</span> c_margin</a></li>
+<li><a href="#c_options" id="toc-c_options"><span class="toc-section-number">3.1.10</span> c_options</a></li>
+</ul></li>
+<li><a href="#control-variables" id="toc-control-variables"><span class="toc-section-number">3.2</span> Control Variables</a>
+<ul>
+<li><a href="#makejobs" id="toc-makejobs"><span class="toc-section-number">3.2.1</span> MAKEJOBS</a></li>
+<li><a href="#composer_docolor" id="toc-composer_docolor"><span class="toc-section-number">3.2.2</span> COMPOSER_DOCOLOR</a></li>
+<li><a href="#composer_debugit" id="toc-composer_debugit"><span class="toc-section-number">3.2.3</span> COMPOSER_DEBUGIT</a></li>
+<li><a href="#composer_include" id="toc-composer_include"><span class="toc-section-number">3.2.4</span> COMPOSER_INCLUDE</a></li>
+<li><a href="#composer_depends" id="toc-composer_depends"><span class="toc-section-number">3.2.5</span> COMPOSER_DEPENDS</a></li>
+<li><a href="#composer_keeping" id="toc-composer_keeping"><span class="toc-section-number">3.2.6</span> COMPOSER_KEEPING</a></li>
+<li><a href="#composer_log" id="toc-composer_log"><span class="toc-section-number">3.2.7</span> COMPOSER_LOG</a></li>
+<li><a href="#composer_ext" id="toc-composer_ext"><span class="toc-section-number">3.2.8</span> COMPOSER_EXT</a></li>
+<li><a href="#composer_targets" id="toc-composer_targets"><span class="toc-section-number">3.2.9</span> COMPOSER_TARGETS</a></li>
+<li><a href="#composer_subdirs" id="toc-composer_subdirs"><span class="toc-section-number">3.2.10</span> COMPOSER_SUBDIRS</a></li>
+<li><a href="#composer_exports" id="toc-composer_exports"><span class="toc-section-number">3.2.11</span> COMPOSER_EXPORTS</a></li>
+<li><a href="#composer_ignores" id="toc-composer_ignores"><span class="toc-section-number">3.2.12</span> COMPOSER_IGNORES</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#composer-targets" id="toc-composer-targets"><span class="toc-section-number">4</span> Composer Targets</a>
+<ul>
+<li><a href="#primary-targets" id="toc-primary-targets"><span class="toc-section-number">4.1</span> Primary Targets</a>
+<ul>
+<li><a href="#help--help-all" id="toc-help--help-all"><span class="toc-section-number">4.1.1</span> help / help-all</a></li>
+<li><a href="#template--template-yml--template-md" id="toc-template--template-yml--template-md"><span class="toc-section-number">4.1.2</span> template / template-yml / template-md</a></li>
+<li><a href="#compose" id="toc-compose"><span class="toc-section-number">4.1.3</span> compose</a></li>
+<li><a href="#site" id="toc-site"><span class="toc-section-number">4.1.4</span> site</a></li>
+<li><a href="#install--install-all--install-force" id="toc-install--install-all--install-force"><span class="toc-section-number">4.1.5</span> install / install-all / install-force</a></li>
+<li><a href="#clean--clean-all---clean" id="toc-clean--clean-all---clean"><span class="toc-section-number">4.1.6</span> clean / clean-all / *-clean</a></li>
+<li><a href="#all--all-all---all" id="toc-all--all-all---all"><span class="toc-section-number">4.1.7</span> all / all-all / *-all</a></li>
+<li><a href="#list" id="toc-list"><span class="toc-section-number">4.1.8</span> list</a></li>
+</ul></li>
+<li><a href="#additional-targets" id="toc-additional-targets"><span class="toc-section-number">4.2</span> Additional Targets</a>
+<ul>
+<li><a href="#_release--_update--_update-all" id="toc-_release--_update--_update-all"><span class="toc-section-number">4.2.1</span> _release / _update / _update-all</a></li>
+<li><a href="#_debug--_debug-file" id="toc-_debug--_debug-file"><span class="toc-section-number">4.2.2</span> _debug / _debug-file</a></li>
+<li><a href="#check--check-all--config--config-all--targets" id="toc-check--check-all--config--config-all--targets"><span class="toc-section-number">4.2.3</span> check / check-all / config / config-all / targets</a></li>
+<li><a href="#init--init-force" id="toc-init--init-force"><span class="toc-section-number">4.2.4</span> init / init-force</a></li>
+<li><a href="#commit--commit-all" id="toc-commit--commit-all"><span class="toc-section-number">4.2.5</span> commit / commit-all</a></li>
+<li><a href="#export" id="toc-export"><span class="toc-section-number">4.2.6</span> export</a></li>
+</ul></li>
+<li><a href="#internal-targets" id="toc-internal-targets"><span class="toc-section-number">4.3</span> Internal Targets</a></li>
+</ul></li>
+<li><a href="#reference" id="toc-reference"><span class="toc-section-number">5</span> Reference</a>
+<ul>
+<li><a href="#configuration" id="toc-configuration"><span class="toc-section-number">5.1</span> Configuration</a>
+<ul>
+<li><a href="#pandoc-extensions" id="toc-pandoc-extensions"><span class="toc-section-number">5.1.1</span> Pandoc Extensions</a></li>
+<li><a href="#templates" id="toc-templates"><span class="toc-section-number">5.1.2</span> Templates</a></li>
+<li><a href="#defaults" id="toc-defaults"><span class="toc-section-number">5.1.3</span> Defaults</a></li>
+</ul></li>
+<li><a href="#reserved" id="toc-reserved"><span class="toc-section-number">5.2</span> Reserved</a>
+<ul>
+<li><a href="#target-names" id="toc-target-names"><span class="toc-section-number">5.2.1</span> Target Names</a></li>
+<li><a href="#variable-names" id="toc-variable-names"><span class="toc-section-number">5.2.2</span> Variable Names</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<section id="composer-cms" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Composer CMS</h1>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAc0lEQVQ4y8VTQQ7AIAgrZA/z6fwMD8vcQCDspBcN0GIrAqcXNes0w1OQpBAsLjrujVdSwm4WPF7gE+MvW0gitqM/87pyRWLl0S4hJ6nMJwDEm3l9EgDAVRrWeFb+CVZfywU4lyRWt6bgxiB1JrEc5eOfEROp5CKUZInHTAAAAABJRU5ErkJggg==" alt="Composer Icon" /></th>
+<th style="text-align: left;">“Creating Made Simple.”</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://github.com/garybgenett/composer/tree/v3.1">Composer CMS v3.1</a></td>
+<td style="text-align: left;"><a href="https://github.com/garybgenett/composer/blob/master/LICENSE.md">License: GPL</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="http://www.garybgenett.net/projects/composer">Gary B. Genett</a></td>
+<td style="text-align: left;"><a href="mailto:composer@garybgenett.net?subject=Composer%20CMS%20Submission&amp;body=Thank%20you%20for%20sending%20a%20message%21">composer@garybgenett.net</a></td>
+</tr>
+</tbody>
+</table>
+<!-- #>> [Markdown]: http://daringfireball.net/projects/markdown -->
+<!-- #>> [Markdown]: https://commonmark.org -->
+<section id="overview" class="level2" data-number="1.1">
+<h2 data-number="1.1"><span class="header-section-number">1.1</span> Overview</h2>
+<p><strong><a href="http://www.garybgenett.net/projects/composer">Composer</a> is a simple but powerful CMS based on <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a>, <a href="https://getbootstrap.com">Bootstrap</a> and <a href="http://www.gnu.org/software/make">GNU Make</a>.</strong> It is a document and website build system that processes directories or individual files in <a href="https://pandoc.org/MANUAL.html#pandocs-markdown">Markdown</a> format.</p>
+<p>Traditionally, CMS stands for Content Management System. <a href="http://www.garybgenett.net/projects/composer">Composer</a> is designed to be a Content <strong>Make</strong> System. Written content is vastly easier to manage as plain text, which can be crafted with simple editors and tracked with revision control. However, professional documentation, publications, and websites require formatting that is dynamic and feature-rich.</p>
+<p><a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a> is an extremely powerful document conversion tool, and is a widely used standard for processing <a href="https://pandoc.org/MANUAL.html#pandocs-markdown">Markdown</a> into other formats. While it has reasonable defaults, there are a large number of options, and additional tools are required for some formats and features.</p>
+<p><a href="http://www.garybgenett.net/projects/composer">Composer</a> consolidates all the necessary components, simplifies the options, and prettifies the output formats, all in one place. It also serves as a build system, so that large repositories can be managed as documentation archives or published as <a href="#static-websites">Static Websites</a>.</p>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeMAAADICAIAAABUCR4uAAABhGlDQ1BJQ0MgcHJvZmlsZQAAKJF9kT1Iw0AcxV9ba6VUOthBxCFDdWpBVMRRq1CECqFWaNXB5NIvaGJIUlwcBdeCgx+LVQcXZ10dXAVB8APE0clJ0UVK/F9SaBHjwXE/3t173L0D/M0aU82eMUDVLCObTgn5wooQekUQYfQiioTETH1WFDPwHF/38PH1LsmzvM/9OfqVoskAn0A8w3TDIl4nntq0dM77xDFWkRTic+KEQRckfuS67PIb57LDfp4ZM3LZOeIYsVDuYrmLWcVQiSeJ44qqUb4/77LCeYuzWquz9j35CyNFbXmJ6zSHkcYCFiFCgIw6qqjBQpJWjRQTWdpPefiHHL9ILplcVTByzGMDKiTHD/4Hv7s1SxPjblIkBQRfbPtjBAjtAq2GbX8f23brBAg8A1dax7/RBKY/SW90tPgREN0GLq47mrwHXO4Ag0+6ZEiOFKDpL5WA9zP6pgIwcAuEV93e2vs4fQBy1FXmBjg4BEbLlL3m8e6+7t7+PdPu7wc213KP0n9sFQAAAAlwSFlzAAAYJQAAGMMBG9cmzQAAAAd0SU1FB+YFCgYdDrfNAIIAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAQfklEQVR42u2dW5LjKBBF6YreUddyWB7LqdnTfHhaI/NMXlYC50RHhytLQgiVr9MpuDJ/jPljAABAL18MAQDAQkrtbv8TIUKECBEtEXJqAADt/HoVqf95k3NjjDVEiBAhQkRFxJjbHUW+axAhQoSIxgg5NREiRIiQUxMhQoQIkb4IdxQBANTDyhcAAOWQUwMAoNQAAIBSAwCg1AAAsIpSO0EktaMTb/wIXg9d7BwbzsK9/6saWx2jAgAqyM6nHiHWTv1bv22m40DZc0oHB6UGWFOpG8Ra/9vdJXJh78UkzRN/Bvz8/BQjyDTAlnzF8rrsm1Sy+rGh2uASpQaX3ksS8QRXzuukbF9ufr22vdfpJcp3aQ4jU1W7OMzaLiDA2Tl1bWbtxNUGV1l/EEZcaw9T2lOl1G17PZ1TO8Hl0nMBAbbnd+IdZwvvY1uKfIArl7e3o7vYZt4LefvRH6tO1g4bou/v72JklExb2ZAov4AA+yn19W1/EZm+v3edjnezeAhB5wUEUEvlfOpOmW6b4mZLrdmOGYTCvea1ZqXfZNqqH64yku+F/gsIsCWXP/VMmXaxUkAqp8qkpcV28i3Le+hiVQsny/q8I0r6XCPTV8UjjJhpA6b/AgJsjlIvvb0Tqqaz+0xOzQUEQKl5o58CFxDgAKUGAIC/4NAEAIBSAwDAOKXm+ZJEiBAhojFCTg0AoJ1rPnXRdYkIESJEiDwSKTg0ESFChAiR5yPk1ESIECFCTk2ECBEiRPoi3FEEAFAPaxQBAJRDTg0AgFIDAABKDQCwN78ZAoVInhIAXAtAqSM44+zf52/IX7v3uYHRyGtj70f7/qyP6F6ZHoY73jsWPXSm5c8zVhf0PzklfFJMqs/yc7kep9u8wXUh5j0GHkBEdj61SWnl9fr1wvsx+quU5ubbL+7V03L+iBryuIE6qJzUhNLmc3Gx7Zufd4NSw7N8Vb6dfF1+ZaBhphxNb7Vhz3hE3yoJtShfaLnK8dcAK1Y/3Pv/NiVt0ZqGpAoBelJXk33CrHkvRLiY0jU/u7ZYcLDvW5r0o4Zd6THCDbUO4WONAZ5Sapt9qHRd3p0qMacqxVUZfWcufP+YOeHjJFX5zdSFwz+F4l7Cll324e/FpNiJX7uYNNtSql7VKwC9OXWobmFyfeXdmSJDm0SOEtbo/c/T6h5jT/ueLId5bnjQvCDaRJ6bOS+XSMybv3MAbJVTh2lyVKxhe8JkecjlT5U43JwCNH+yoJOvae9b61QmKG7ZtMlVRpygaCs/tMs26LIVBlef8hc7nCpluGmjDaAhpzZBTXKKOKYS7WtWSSpJr2on3Cs6TWWhrN8lEsx8xKTVzSYi0dTS1rdjB92ds+83OaMlDltzRzEzYpY7iqCV60kCK+aYGlesDCG6Ls5lJz80ZKkN9YcDYY0iqADXU6AOAKAcHJqgXH8AgGfBoYlv3MA1hb2UWuJ2lHFoyqx8KbomSW4nSvpjZG5QxbOQ+Ez1cKZD0x5EzwWnJ+iix6HpM5HU0YX9TJlJ1R4r005tD+X510Dt0K9u2+A+eGXhEBrr1MWstlmqPjmFY96xVE1EIaEG2Kb6IV1NLhEpiYvTJ+WYBZNhuqfWoWm5PodH5xMI5in1MIemTDnCZi36vG1G+TrNVL23/uhcU7O6Q5POPgd/wBVPQgBQkVOHOiWRrfC+X9TXqS07npTgZ5ynlGTxizo0Gd19pp4De+bUlDJOYJJD06J9tog1DKXxjuLYFLWqtbYEOfXcxafOoi1Broqs69DkFPdZ3hPL8k6YkFObokNTWIdtq8wK2xFOoI7KZSbvlhwr3OY+oUW+13CZPsGhqeia9Hifo+NsyaxhJjg0aeRwh6b+I87uc0P7rFGELnBogtqqC30GQKkBAOANHJo0cs43ZWoCAOOVusGPSeLQ1HbzcG8OcWjCtwhAxGyHpugL4Wty6oFKfdT5AmzGeIcm0AYTxQBWZ8pqctCs2n8/a+MRhQ5NADB+NXnb6o8Vnxe+XEK9hNsRAIR8JXLqdlL+SjP2gua6xwy3IxfIukuk5FxmgDaltsH/XWLdZs3B7cR1sYHThb39A4AhSt1Y4kCsP5kgV0X0OzQBgJDpDk0ZbyP8S2tl+gSHJgCIwGpyhfz8pSennpfLzz5TAECpQZFSA4CEL4YA8lC7AECpYWJNQN7OkGNx4QBmIa9+1Lp2XLcN7/+uX3k/Zva6/6oYMQIXkehe2pRaUpRwpYiwteIGr/HKRxBrgM8odbVDkwmMmfKeTZJtUr5OVXtF+yPU8VWU2ojvKPYr9UuaixGUGkBF9SPUwXC6nverPOG8PUk3MjMCU/2paue0Sssoh9Xv72/EGmCqUotWk78UsChwDROlhS0fi0sXN8Yfy8WLGwDwFFMcmjzBVeW+NPUJ4jO7/b9kz+60tf9LtuWjE0CTUktdT1MqnMmOhYIo3Mxb7hj9rfBAC2Xxn0xwyaYBdsupwwduzS5l5GvQ0f6sjouZPs+T6XtODQAamDWfWnhP7/N6urSCz+h66jZgg0wPvDkJANGc2oyyPM2LozW2zdepzR+q7ejasO+PYrmrdpVDk+hY9j+Nvl5cqh2m2xSyAT4Evh8KYY0iAKDUAAArge8HAIB2fjMECrkqCZkbdJJtAGATPu/QFPXiyGwjb2c/pX4fJemWALBxTt0yn/o1bzo/e7rKAKRzm11hZjPAyTzs0ARCmWYoAVBq87hDE2S/TADA0WhxaIquavE+GFZ0VgIAGKjUDzs0UacGAEjx9f4Nu3pB+Wt9tqehQtMPAACoUurB9Is1zxYAAHjxgEOTMNLWzpZ4rkx8dgGcxq/Xspd/GAlNsEYRAN7AoQkAQDk4NAEAoNQAAIBSAwCco9ThUnIiRIgQIfJ8hJwaAEA71yw9b5WKNUSIECFCREXkbZYe3zWIECFCRGOEnJoIESJEyKmJECFChEhfhDuKAADqYTU5AIByyKkBAFBqAABAqQEAUGoAAFCj1Jc5fRwniKR2dIYHK1ZRuBbdbH81nPvv33IdLnZb/tvhp985pF7fHJog5z73o6wODWLtxsmDO0hyUOpOQZmnVh/uf/RXxQ3mnfsQpQ5fQEVOXUayoCa/+3B4qmCTTK81bOHnlvyTzK72F+Jcss/Xr6ztUnM9WN6/Mn63KKP3RreVb31303cb5HipyH3NjreNrWwZYsl1fuDvF9nFPihdfSR6uVIy/fPzcz0xMoxUJXQvdXj9+JK8e8RTEG8vSeTV4NV+UY5Tr3vk794HSQ+jfQjPtCrjDscHPlX9aCiDRLf0nrbtZC0Xqx+1LR9Z/XDZ16mIE2zTEHGyi1ObU4fSENYEUv+n0tKqiCeRYQ06WqMoFqkllY3UGRV7WDV68h6mxoc69eScOvrlufbrtE2nW53CSuLcWvcYO3L3ZDlzka3s6GHu/NQT2e+paCZnvH51FSuqSgH9mbW3e6aHVR94A8eQusdkpe6XaYlOuOz7G1bABldyj/dmWC5oEJ17gWK2ZnmVjal7wSQq7yh2yrSr36ZzvofdeY6gq4zkr5WrPLTLNuiC5Lrn+1LPHcUqlbm+lWfqy15yPSoJzVczvIN6PRQeV7JZw0l5GxTHECbn1G0ybQX39MJt7PudrPAb9f0dn+/Gprm5S3z3cDXDkxl4E9w2Ntkfi+3Y1pu7DXcU7zIaTpa4K4inJuGPxXZSLdcWAaLthLocpuFR7U5VbFKyG24T3Ss8VrSHqTGEdjb30lv2juKMnHrecWfTk1P3Z7UPX2Wnveerz15HqdXoGSskF1dqPZoIjCFKDQAAEXBoAgDQztsdxcKir+aJH6wSrKd2AV71t9Str0a4Us77Vp5aHxju5W2Zasc7etu0h/yyRjgaHJrUKvVcLdv6rzq/Ui7zq+LKveb7ewMn0sGB4NB0Ikc5NGU0cTO3I0Cpx4m1iZk+mNgMDZfw8UgZfchbhsqB94w7nGCv5kuakum7NIeReTQvI0y5f3i/5TMAJlQ/GsogODQpq34c4tDkeQBFI6mih8m6OEl8lIpGzHlnKAAPHJqoe0wZuccdmsJcOMyLhbKYX8co2QXg40qNQxPUXNIHHZqKhQsciGAVcGhaO0Guihzo0PQx04kqjzqAmTk1Dk36ZBqHpjYxTc2DNoJJzanJ2sX8PWw56iKNCx1EwKHpnJx63nFn8xmHps/k1AAodfaLOiyr1AAoNQ5NAACqwaEJAEA7ODQpBYemrrN71KGp2DfviNw/hDI4NKlV6rlatvVf9bMOTcK+pZYvAoTg0HQiODQZTQ5N5NRQV/2oEGubjUh0IjozOhO5m0d429jKliGWXOcH/n6RXeyD0tVHopcrJdP986mbZTRa96iqvZA4w2erHw1lEByalFU/cGhKVUjMOIemYoFF0g5AR05tcGjas+6BQ5OwOjGkWNFspgoo9adkWqITODStDw5NAKPAoWntBLkqgkPTxGsR2E+//pE1w8dzahya9Mk0Dk1tYjrboSksmJC2Qxc4NJ2TU8877mzWcmhClAGlbtIVHJoWV+rFxocBApQaAOA0cGgCANAODk1KwaGp6+wUOzRl+sxEEUiCQ5NapZ6rZVv/VWt2aJL0GcADh6YTwaHJaHJoAiiCQxOqLRp4HJqqxPraOKy9pOoq4V4ArdWPhjIIDk3Kqh84NKUqJOazDk2SIgxAa05tcGjas+6BQ1OmqcyPRbEGeEKpcWiCmkt6pkMT5QsYCw5NayfIVREcmiZeC1eIpzybyL5hdE6NQ5M+mcahqU1Mpzo03T8eip5N9425owhJcGg6J6eed9zZrOXQVPtbgOOV2uDQtINSLz9iDBmg1AAAe4NDEwCAdnBoUgoOTV1nt6BDU9WpdR632Q1qyNGhBRya1Cr13Df81n/VKzo0tZ1dPjijBWruj4BD04ng0GS2c2giz0Wph4q1iZk+mNgMDZfw8UgZfchbhsqB94w7nGCv5kuakum7NIeRqQpYWyu4O4TcgxLXkfxemSN27hX2+XpNEr1g9aOhDIJDk7LqBw5Nea0MU+kGh6aqKorEoano35Q/r2IPw43Dc6f68SA4NFH3mDJyhzs0hUsTJcfKC3TVl4DXC4nnCWyq1Dg0Qc0lPdOhSSL312SS1Irz1LwU4bF43NdO4NC0doJcFcGhaeK1cCO3jBYiatv3zn1sD0FxTo1Dkz6ZxqGpTUynOjTlPzDuGbSXUHvbZFyc7o+JSXk/hV8ait8wwnOPOv+RrT8ADk3n5NTzjjub1R2aPnBcyUwPQKl16xmz9BZXashLMCqMUgMAwMPg0AQAoB0cmpSCQ1NnQeDiWYcmbr7BGHBoUqvUc7Vs679qPQ5NVJBhCDg0nQgOTWY7hybYm/o1ijZ4o9v69S+pmdGZyN08wtvGVrYMseQ6P/D3i+xiH5SuPhK9XCmZ7p9P3ZgJ2HjdozaVTs1xzlRaAFqrHw1lEByalFU/cGhKVUjMOIemYoFFWHIBaM2pDQ5Ne9Y9cGjKNJX5cUjanuozQKtS49AENZcUhyaAfnBoWjtBrorg0DTxWrgB+zYUxIGcepBM49A0U6ZxaGoT06kOTdFp1yn3JRPcUaQGAhFwaDonp5533Nng0AQoNQ5NoF2pAVBqHJoAAFSDQxMAAEoNAAAoNQAASg0AACg1AACk+Re1n+/TbyIf6gAAAABJRU5ErkJggg==" alt="Composer Screenshot" /><br />
+</p>
+</section>
+<section id="quick-start" class="level2" data-number="1.2">
+<h2 data-number="1.2"><span class="header-section-number">1.2</span> Quick Start</h2>
+<p>Use <code>make help</code> to get started:</p>
+<pre><code>make [-f .../Makefile] [variables] &lt;filename&gt;.&lt;extension&gt;
+make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
+<p>Create documents from source <a href="https://pandoc.org/MANUAL.html#pandocs-markdown">Markdown</a> files (see <a href="#formatting-variables">Formatting Variables</a>):</p>
+<pre><code>make README.html
+make Composer-v3.1.Manual.html c_list=&quot;README.md LICENSE.md&quot;</code></pre>
+<p>Save a persistent configuration (see <a href="#recommended-workflow">Recommended Workflow</a> and <a href="#configuration-settings">Configuration Settings</a>):</p>
+<pre><code>make template &gt;.composer.mk
+$EDITOR .composer.mk
+    Composer-v3.1.Manual.html: override c_list := README.md LICENSE.md
+make clean
+make all</code></pre>
+<p>Recursively install and build an entire directory tree (see <a href="#recommended-workflow">Recommended Workflow</a>):</p>
+<pre><code>cd .../documents
+mv .../composer .Composer
+make -f .Composer/Makefile install-all
+make all-all</code></pre>
+<p>See <code>help-all</code> for full details and additional targets.</p>
+</section>
+<section id="principles" class="level2" data-number="1.3">
+<h2 data-number="1.3"><span class="header-section-number">1.3</span> Principles</h2>
+<p>The guiding principles of <a href="http://www.garybgenett.net/projects/composer">Composer</a>:</p>
+<ul>
+<li>All source files in readable plain text</li>
+<li>Professional output, suitable for publication</li>
+<li>Minimal dependencies, and entirely command-line driven</li>
+<li>Separate content and formatting; writing and publishing are independent</li>
+<li>Inheritance and dependencies; global, tree, directory and file overrides</li>
+<li>Fast; both to initiate commands and for processing to complete</li>
+</ul>
+<p>Direct support for key document types (see <a href="#document-formatting">Document Formatting</a>):</p>
+<ul>
+<li><a href="#static-websites">Static Websites</a></li>
+<li><a href="#html">HTML</a></li>
+<li><a href="#pdf">PDF</a></li>
+<li><a href="#epub">EPUB</a></li>
+<li><a href="#revealjs-presentations">Reveal.js Presentations</a></li>
+<li><a href="#microsoft-word--powerpoint">Microsoft Word &amp; PowerPoint</a></li>
+</ul>
+</section>
+<section id="requirements" class="level2" data-number="1.4">
+<h2 data-number="1.4"><span class="header-section-number">1.4</span> Requirements</h2>
+<p><a href="http://www.garybgenett.net/projects/composer">Composer</a> has almost no external dependencies. All needed components are integrated directly into the repository, including <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a>. <a href="http://www.garybgenett.net/projects/composer">Composer</a> does require a minimal command-line environment based on <a href="http://www.gnu.org">GNU</a> tools, particularly <a href="http://www.gnu.org/software/make">GNU Make</a>, which is standard for all <a href="https://gnu.org/gnu/linux-and-gnu.html">GNU/Linux</a> systems. The <a href="https://docs.microsoft.com/en-us/windows/wsl">Windows Subsystem for Linux</a> for Windows and <a href="https://www.macports.org">MacPorts</a> for macOS both provide suitable environments.</p>
+<p>The one large external requirement is <a href="https://tug.org/texlive">TeX Live</a>, and it can be installed using the package managers of each of the above systems. It is only necessary for creating <a href="#pdf">PDF</a> files.</p>
+<p>Below are the versions of the components in the repository, and the tested versions of external tools for this iteration of <a href="http://www.garybgenett.net/projects/composer">Composer</a>. Use <a href="#check--check-all--config--config-all--targets">check</a> to validate your system.</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Repository</th>
+<th style="text-align: left;">Commit</th>
+<th style="text-align: left;">License</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a></td>
+<td style="text-align: left;">2.18</td>
+<td style="text-align: left;">GPL</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://mikefarah.gitbook.io/yq">YQ</a></td>
+<td style="text-align: left;">v4.24.2</td>
+<td style="text-align: left;">MIT</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://getbootstrap.com">Bootstrap</a></td>
+<td style="text-align: left;">v5.1.3</td>
+<td style="text-align: left;">MIT</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://bootswatch.com">Bootswatch</a></td>
+<td style="text-align: left;">v5.1.3</td>
+<td style="text-align: left;">MIT</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://fontawesome.com">Font-Awesome</a></td>
+<td style="text-align: left;">6.1.2</td>
+<td style="text-align: left;">MIT / CC-BY</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://watercss.kognise.dev">Water.css</a></td>
+<td style="text-align: left;">d950cbc9f8607521587f</td>
+<td style="text-align: left;">MIT</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://github.com/simov/markdown-viewer">Markdown Viewer</a></td>
+<td style="text-align: left;">059f3192d4ebf5fa9776</td>
+<td style="text-align: left;">MIT</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="https://github.com/simov/markdown-themes">Markdown Themes</a></td>
+<td style="text-align: left;">6b3643d0f703727d8472</td>
+<td style="text-align: left;">None</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://revealjs.com">Reveal.js</a></td>
+<td style="text-align: left;">4.3.1</td>
+<td style="text-align: left;">MIT</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Project</th>
+<th style="text-align: left;">Composer Version</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="http://www.gnu.org/software/bash">GNU Bash</a></td>
+<td style="text-align: left;">5.1.16</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">– <a href="http://www.gnu.org/software/coreutils">GNU Coreutils</a></td>
+<td style="text-align: left;">8.32</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">– <a href="http://www.gnu.org/software/findutils">GNU Findutils</a></td>
+<td style="text-align: left;">4.9.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">– <a href="http://www.gnu.org/software/sed">GNU Sed</a></td>
+<td style="text-align: left;">4.8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="http://www.gnu.org/software/make">GNU Make</a></td>
+<td style="text-align: left;">4.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">– <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a></td>
+<td style="text-align: left;">2.18</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">– <a href="https://mikefarah.gitbook.io/yq">YQ</a></td>
+<td style="text-align: left;">4.24.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">– <a href="https://tug.org/texlive">TeX Live</a> (pdf)</td>
+<td style="text-align: left;">2021 3.141592653-2.6-1.40.22</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://github.com/simov/markdown-viewer">Markdown Viewer</a> is included both for its CSS stylesheets, and for real-time rendering of <a href="https://pandoc.org/MANUAL.html#pandocs-markdown">Markdown</a> files as they are being written. To install, follow the instructions in the <code>README.md</code>.</p>
+<p>The versions of the integrated repositories can be changed, if desired (see <a href="#repository-versions">Repository Versions</a>).</p>
+<hr />
+</section>
+</section>
+<section id="composer-operation" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Composer Operation</h1>
+<section id="recommended-workflow" class="level2" data-number="2.1">
+<h2 data-number="2.1"><span class="header-section-number">2.1</span> Recommended Workflow</h2>
+<p>The ideal workflow is to put <a href="http://www.garybgenett.net/projects/composer">Composer</a> in a top-level <code>.Composer</code> for each directory tree you want to manage, creating a structure similar to this:</p>
+<pre><code>.../.Composer
+.../
+.../tld/
+.../tld/sub/</code></pre>
+<p>Then, it can be converted to a <a href="http://www.garybgenett.net/projects/composer">Composer</a> documentation archive (<a href="#quick-start">Quick Start</a> example):</p>
+<pre><code>make -f .Composer/Makefile install-all
+make all-all</code></pre>
+<p>If specific settings need to be used, either globally or per-directory, <code>.composer.mk</code> files can be created (see <a href="#configuration-settings">Configuration Settings</a>, <a href="#quick-start">Quick Start</a> example):</p>
+<pre><code>make template &gt;.composer.mk
+$EDITOR .composer.mk</code></pre>
+<p>Custom targets can also be defined, using standard <a href="http://www.gnu.org/software/make">GNU Make</a> syntax (see <a href="#custom-targets">Custom Targets</a>).</p>
+<p><a href="http://www.gnu.org/software/make">GNU Make</a> does not support file and directory names with spaces in them, and neither does <a href="http://www.garybgenett.net/projects/composer">Composer</a>. Documentation archives which have such files or directories will produce unexpected results.</p>
+<p>It is fully supported for input files to be symbolic links to files that reside outside the documentation archive:</p>
+<pre><code>cd .../tld
+ln -rs .../README.md ./
+make README.html</code></pre>
+<p>Finally, it is best practice to <a href="#install--install-all--install-force">install-force</a> after every <a href="http://www.garybgenett.net/projects/composer">Composer</a> upgrade, in case there are any changes to the <code>Makefile</code> template (see <a href="#primary-targets">Primary Targets</a>).</p>
+<p>The archive is ready, and each directory is both a part of the collective and its own individual instance. Targets can be run per-file, per-directory, or recursively through an entire directory tree. The most commonly used targets are in <a href="#primary-targets">Primary Targets</a>.</p>
+<p><strong>Welcome to <a href="http://www.garybgenett.net/projects/composer">Composer</a>. <em>Happy Making!</em></strong></p>
+</section>
+<section id="document-formatting" class="level2" data-number="2.2">
+<h2 data-number="2.2"><span class="header-section-number">2.2</span> Document Formatting</h2>
+<p>As outlined in <a href="#overview">Overview</a> and <a href="#principles">Principles</a>, a primary goal of <a href="http://www.garybgenett.net/projects/composer">Composer</a> is to produce beautiful and professional output. <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a> does reasonably well at this, and yet its primary focus is document conversion, not document formatting. <a href="http://www.garybgenett.net/projects/composer">Composer</a> fills this gap by specifically tuning a select list of the most commonly used document formats.</p>
+<p>Further options for each document type are in <a href="#formatting-variables">Formatting Variables</a>. All improvements not exposed as variables will apply to all documents created with a given instance of <a href="http://www.garybgenett.net/projects/composer">Composer</a>.</p>
+<p>#WORK remove heredoc…</p>
+<p>Note that all the files referenced below are embedded in the ‘Embedded Files’ and ‘Heredoc’ sections of the <code>Makefile</code>. They are exported by the <a href="#_release--_update--_update-all">_release</a> target, and will be overwritten whenever it is run.</p>
+<section id="static-websites" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1"><span class="header-section-number">2.2.1</span> Static Websites</h3>
+<p><a href="https://getbootstrap.com">Bootstrap</a> is a leading web development framework, capable of building static webpages that behave dynamically. Static sites are very easy and inexpensive to host, and are extremely responsive compared to truly dynamic webpages.</p>
+<p><a href="http://www.garybgenett.net/projects/composer">Composer</a> uses this framework to transform an archive of simple text files into a modern website, with the appearance and behavior of dynamically indexed pages.</p>
+<p>#WORKING</p>
+<pre><code>.../artifacts/bootstrap/bootstrap.js
+.../artifacts/bootstrap/bootstrap.css
+.../artifacts/composer/composer.site.css
+.../artifacts/composer/composer.site.shade.light.css
+.../artifacts/composer/composer.site.shade.dark.css
+.../artifacts/images/logo.img
+.../artifacts/images/icon.img</code></pre>
+<p><a href="https://bootswatch.com">Bootswatch</a></p>
+<p>#WORK</p>
+<pre><code>.../bootswatch/docs/index.html</code></pre>
+<p>#WORK</p>
+</section>
+<section id="html" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2"><span class="header-section-number">2.2.2</span> HTML</h3>
+<p>In addition to being a helpful real-time rendering tool, <a href="https://github.com/simov/markdown-viewer">Markdown Viewer</a> includes several CSS stylesheets that are much more visually appealing than the <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a> default, and which behave like normal webpages, so <a href="http://www.garybgenett.net/projects/composer">Composer</a> uses them for all <a href="#html">HTML</a>-based document types, including <a href="#epub">EPUB</a>.</p>
+<p>Information on installing <a href="https://github.com/simov/markdown-viewer">Markdown Viewer</a> for use as a <a href="https://pandoc.org/MANUAL.html#pandocs-markdown">Markdown</a> rendering tool is in <a href="#requirements">Requirements</a>.</p>
+</section>
+<section id="pdf" class="level3" data-number="2.2.3">
+<h3 data-number="2.2.3"><span class="header-section-number">2.2.3</span> PDF</h3>
+<p>The default formatting for <a href="#pdf">PDF</a> is geared towards academic papers and the typesetting of printed books, instead of documents that are intended to be purely digital.</p>
+<p>Internally, <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a> first converts to LaTeX, and then uses <a href="https://tug.org/texlive">TeX Live</a> to convert into the final <a href="#pdf">PDF</a>. <a href="http://www.garybgenett.net/projects/composer">Composer</a> inserts customized LaTeX to modify the final output:</p>
+<pre><code>.../artifacts/composer/composer.pdf.latex</code></pre>
+</section>
+<section id="epub" class="level3" data-number="2.2.4">
+<h3 data-number="2.2.4"><span class="header-section-number">2.2.4</span> EPUB</h3>
+<p>The <a href="#epub">EPUB</a> format is essentially packaged <a href="#html">HTML</a>, so <a href="http://www.garybgenett.net/projects/composer">Composer</a> uses the same <a href="https://github.com/simov/markdown-viewer">Markdown Viewer</a> CSS stylesheets for it.</p>
+</section>
+<section id="revealjs-presentations" class="level3" data-number="2.2.5">
+<h3 data-number="2.2.5"><span class="header-section-number">2.2.5</span> Reveal.js Presentations</h3>
+<p>The CSS for <a href="https://revealjs.com">Reveal.js</a> presentations has been modified to create a more traditional and readable end result. The customized version is at:</p>
+<pre><code>.../artifacts/composer/composer.revealjs.css</code></pre>
+<p>It links in a default theme from the <code>.../reveal.js/dist/theme</code> directory. Edit the location in the file, or use <a href="#c_css">c_css</a> to select a different theme.</p>
+<p>It is set up so that a logo can be placed in the upper right hand corner on each slide, for presentations that need to be branded. Simply copy an image file to the logo location:</p>
+<pre><code>.../artifacts/images/logo.img</code></pre>
+<p>To have different logos for different directories (using <a href="#recommended-workflow">Recommended Workflow</a>, <a href="#configuration-settings">Configuration Settings</a> and <a href="#precedence-rules">Precedence Rules</a>):</p>
+<pre><code>cd .../presentations
+cp .../logo.img ./
+ln -rs .../.Composer/artifacts/composer/composer.revealjs.css ./.composer.css
+echo &#39;override c_type := revealjs&#39; &gt;&gt;./.composer.mk
+make all</code></pre>
+</section>
+<section id="microsoft-word--powerpoint" class="level3" data-number="2.2.6">
+<h3 data-number="2.2.6"><span class="header-section-number">2.2.6</span> Microsoft Word &amp; PowerPoint</h3>
+<p>The internal <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a> templates for these are exported by <a href="http://www.garybgenett.net/projects/composer">Composer</a>, so they are available for customization:</p>
+<pre><code>.../artifacts/reference.docx
+.../artifacts/reference.pptx</code></pre>
+<p>They are not currently modified by <a href="http://www.garybgenett.net/projects/composer">Composer</a>.</p>
+</section>
+</section>
+<section id="configuration-settings" class="level2" data-number="2.3">
+<h2 data-number="2.3"><span class="header-section-number">2.3</span> Configuration Settings</h2>
+<p><a href="http://www.garybgenett.net/projects/composer">Composer</a> uses <code>.composer.mk</code> files for persistent settings and definition of <a href="#custom-targets">Custom Targets</a>. By default, they only apply to the directory they are in (see <a href="#composer_include">COMPOSER_INCLUDE</a> in <a href="#control-variables">Control Variables</a>). A <code>.composer.mk</code> in the main <a href="http://www.garybgenett.net/projects/composer">Composer</a> directory will be global to all directories. The targets and settings in the most local file override all others (see <a href="#precedence-rules">Precedence Rules</a>).</p>
+<p>The easiest way to create a new <code>.composer.mk</code> is with the <a href="#template--template-yml--template-md">template</a> target (<a href="#quick-start">Quick Start</a> example):</p>
+<pre><code>make template &gt;.composer.mk
+$EDITOR .composer.mk</code></pre>
+<p>All variable definitions must be in the <code>override [variable] := [value]</code> format from the <a href="#template--template-yml--template-md">template</a> target. Doing otherwise will result in unexpected behavior, and is not supported. The regular expression that is used to detect them:</p>
+<pre><code>override[[:space:]]+([^[:space:]]+)[[:space:]]+[:][=]</code></pre>
+<p>Variables can also be specified per-target, using <a href="http://www.gnu.org/software/make">GNU Make</a> syntax:</p>
+<pre><code>README.%: override c_toc := 0
+README.revealjs.html: override c_toc :=</code></pre>
+<p>In this case, there are multiple definitions that could apply to <code>README.revealjs.html</code>, due to the <code>%</code> wildcard. Since the most specific target match is used, the final value for <a href="#c_toc">c_toc</a> would be empty.</p>
+</section>
+<section id="precedence-rules" class="level2" data-number="2.4">
+<h2 data-number="2.4"><span class="header-section-number">2.4</span> Precedence Rules</h2>
+<p>The order of precedence for <code>.composer.mk</code> files is global-to-local (see <a href="#composer_include">COMPOSER_INCLUDE</a> in <a href="#control-variables">Control Variables</a>). This means that the values in the most local file override all others.</p>
+<p>Variable aliases, such as <code>COMPOSER_DEBUGIT</code>/<code>c_debug</code>/<code>V</code> are prioritized in the order shown, with <code>COMPOSER_*</code> taking precedence over <code>c_*</code>, over the short alias.</p>
+<p>Selection of the CSS file can be done using <code>.composer.css</code> or the <a href="#c_css">c_css</a> variable, with <code>.composer.css</code> taking precedence (unless <a href="#c_css">c_css</a> comes from <code>.composer.mk</code>). The process for <code>.composer.css</code> files is identical to <code>.composer.mk</code> (see <a href="#composer_include">COMPOSER_INCLUDE</a> in <a href="#control-variables">Control Variables</a>).</p>
+<p>All values in <code>.composer.mk</code> take precedence over everything else, including <code>.composer.css</code> and environment variables.</p>
+</section>
+<section id="specifying-dependencies" class="level2" data-number="2.5">
+<h2 data-number="2.5"><span class="header-section-number">2.5</span> Specifying Dependencies</h2>
+<p>If there are files or directories that have dependencies on other files or directories being processed first, this can be done simply using <a href="http://www.gnu.org/software/make">GNU Make</a> syntax in <code>.composer.mk</code>:</p>
+<pre><code>LICENSE.html: README.html
+all-subdirs-artifacts: all-subdirs-pandoc</code></pre>
+<p>This would require <code>README.html</code> to be completed before <code>LICENSE.html</code>, and for <code>pandoc</code> to be processed before <code>artifacts</code>. Directories need to be specified with the <code>all-subdirs-*</code> syntax in order to avoid conflicts with target names (see <a href="#custom-targets">Custom Targets</a>). A good examples of this is the internal <a href="#internal-targets">_test</a> target, which is a common directory name.</p>
+<p>Chaining of dependencies can be as complex and layered as <a href="http://www.gnu.org/software/make">GNU Make</a> will support. Note that if a file or directory is set to depend on a target, that target will be run whenever the file or directory is called.</p>
+</section>
+<section id="custom-targets" class="level2" data-number="2.6">
+<h2 data-number="2.6"><span class="header-section-number">2.6</span> Custom Targets</h2>
+<p>If needed, custom targets can be defined inside a <code>.composer.mk</code> file (see <a href="#configuration-settings">Configuration Settings</a>), using standard <a href="http://www.gnu.org/software/make">GNU Make</a> syntax. Naming them as <a href="#clean--clean-all---clean">*-clean</a> or <a href="#all--all-all---all">*-all</a> will include them in runs of the respective targets. Targets with any other names will need to be run manually, or included in <a href="#composer_targets">COMPOSER_TARGETS</a> (see <a href="#control-variables">Control Variables</a>).</p>
+<p>#WORK …or, via <a href="#specifying-dependencies">Specifying Dependencies</a></p>
+<p>There are a few limitations when naming custom targets. Targets starting with the regular expression <code>[_.]</code> are hidden, and are skipped by auto-detection. Additionally, there is a list of reserved targets in <a href="#reserved">Reserved</a>, along with a list of reserved variables.</p>
+<p>Any included <code>.composer.mk</code> files are sourced early in the main <a href="http://www.garybgenett.net/projects/composer">Composer</a> <code>Makefile</code>, so matching targets and most variables will be overridden. In the case of conflicting targets, <a href="http://www.gnu.org/software/make">GNU Make</a> will produce warning messages. Variables will have their values changed silently. Changing the values of internal <a href="http://www.garybgenett.net/projects/composer">Composer</a> variables is not recommended or supported.</p>
+<p>A final note is that <a href="#clean--clean-all---clean">*-clean</a> and <a href="#all--all-all---all">*-all</a> targets are stripped from <a href="#composer_targets">COMPOSER_TARGETS</a>. In cases where this results in an empty <a href="#composer_targets">COMPOSER_TARGETS</a>, there will be a message and no actions will be taken.</p>
+</section>
+<section id="repository-versions" class="level2" data-number="2.7">
+<h2 data-number="2.7"><span class="header-section-number">2.7</span> Repository Versions</h2>
+<p>There are a few internal variables used by <a href="#_release--_update--_update-all">_update</a> to select the repository and binary versions of integrated components (see <a href="#requirements">Requirements</a>). These are exposed for configuration, but only within <code>.composer.mk</code>:</p>
+<ul>
+<li><code>PANDOC_VER</code> (must be a binary version number)</li>
+<li><code>PANDOC_CMT</code> (defaults to <code>PANDOC_VER</code>)</li>
+<li><code>YQ_VER</code> (must be a binary version number)</li>
+<li><code>YQ_CMT</code> (defaults to <code>YQ_VER</code>)</li>
+<li><code>BOOTSTRAP_CMT</code></li>
+<li><code>BOOTSWATCH_CMT</code></li>
+<li><code>FONTAWES_CMT</code></li>
+<li><code>WATERCSS_CMT</code></li>
+<li><code>MDVIEWER_CMT</code></li>
+<li><code>MDTHEMES_CMT</code></li>
+<li><code>REVEALJS_CMT</code></li>
+</ul>
+<p>Binaries for <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a> and <a href="https://mikefarah.gitbook.io/yq">YQ</a> are installed in their respective directories. By moving or removing them, or changing the version number and foregoing <a href="#_release--_update--_update-all">_update-all</a> (see <a href="#additional-targets">Additional Targets</a>), the system versions will be used instead. This will work as long as the commit versions match, so that supporting files are in alignment.</p>
+<p>It is possible that changing the versions will introduce incompatibilities with <a href="http://www.garybgenett.net/projects/composer">Composer</a>, which are usually impacts to the prettification of output files (see <a href="#document-formatting">Document Formatting</a>).</p>
+<hr />
+</section>
+</section>
+<section id="composer-variables" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Composer Variables</h1>
+<section id="formatting-variables" class="level2" data-number="3.1">
+<h2 data-number="3.1"><span class="header-section-number">3.1</span> Formatting Variables</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variable</th>
+<th style="text-align: left;">Purpose</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="#c_site">c_site</a> ~ S</td>
+<td style="text-align: left;">Enable <a href="#static-websites">Static Websites</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#c_type--c_base--c_list">c_type</a> ~ T</td>
+<td style="text-align: left;">Desired output format</td>
+<td style="text-align: left;">html</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#c_type--c_base--c_list">c_base</a> ~ B</td>
+<td style="text-align: left;">Base of output file</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#c_type--c_base--c_list">c_list</a> ~ L</td>
+<td style="text-align: left;">List of input files(s)</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#c_lang">c_lang</a> ~ g</td>
+<td style="text-align: left;">Language for document headers</td>
+<td style="text-align: left;">en-US</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#c_logo">c_logo</a> ~ b</td>
+<td style="text-align: left;">#WORKING</td>
+<td style="text-align: left;">logo.img</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#c_icon">c_icon</a> ~ i</td>
+<td style="text-align: left;">#WORKING</td>
+<td style="text-align: left;">icon.img</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#c_css">c_css</a> ~ s</td>
+<td style="text-align: left;">Location of CSS file</td>
+<td style="text-align: left;">theme.html-default.css</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#c_toc">c_toc</a> ~ c</td>
+<td style="text-align: left;">Table of contents depth</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#c_level">c_level</a> ~ l</td>
+<td style="text-align: left;">Chapter/slide header level</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#c_margin">c_margin</a> ~ m</td>
+<td style="text-align: left;">Size of margins (<a href="#pdf">PDF</a>)</td>
+<td style="text-align: left;">0.8in</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#c_options">c_options</a> ~ o</td>
+<td style="text-align: left;">Custom Pandoc options</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Values (c_type)</th>
+<th style="text-align: left;">Format</th>
+<th style="text-align: left;">Extension</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">html</td>
+<td style="text-align: left;">HyperText Markup Language</td>
+<td style="text-align: left;">*.html</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pdf</td>
+<td style="text-align: left;">Portable Document Format</td>
+<td style="text-align: left;">*.pdf</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">epub</td>
+<td style="text-align: left;">Electronic Publication</td>
+<td style="text-align: left;">*.epub</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">revealjs</td>
+<td style="text-align: left;">Reveal.js Presentation</td>
+<td style="text-align: left;">*.revealjs.html</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">docx</td>
+<td style="text-align: left;">Microsoft Word</td>
+<td style="text-align: left;">*.docx</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pptx</td>
+<td style="text-align: left;">Microsoft PowerPoint</td>
+<td style="text-align: left;">*.pptx</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">text</td>
+<td style="text-align: left;">Plain Text (well-formatted)</td>
+<td style="text-align: left;">*.txt</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">markdown</td>
+<td style="text-align: left;">Markdown (for testing)</td>
+<td style="text-align: left;">*.md.txt</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><em>Other <a href="#c_type--c_base--c_list">c_type</a> values will be passed directly to <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a></em></li>
+<li><em>Special <a href="#c_css">c_css</a> values:</em>
+<ul>
+<li><em><code>.composer.css</code> = Filesystem override of variable value</em></li>
+<li><em><code>css_alt</code> = Use the alternate default stylesheet</em></li>
+<li><em><code>0</code> = Revert to the <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a> default</em></li>
+</ul></li>
+<li><em>Special <a href="#c_toc">c_toc</a> value: <code>0</code> = List all headers, and number sections</em></li>
+<li><em>Special <a href="#c_level">c_level</a> value: <code>0</code> = Varies by <a href="#c_type--c_base--c_list">c_type</a> (see <a href="#help--help-all">help-all</a>)</em></li>
+<li><em>An empty <a href="#c_margin">c_margin</a> value enables individual margins:</em>
+<ul>
+<li><em><code>c_margin_top</code> ~ <code>mt</code></em></li>
+<li><em><code>c_margin_bottom</code> ~ <code>mb</code></em></li>
+<li><em><code>c_margin_left</code> ~ <code>ml</code></em></li>
+<li><em><code>c_margin_right</code> ~ <code>mr</code></em></li>
+</ul></li>
+</ul>
+<section id="c_site" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1"><span class="header-section-number">3.1.1</span> c_site</h3>
+<p>#WORK</p>
+</section>
+<section id="c_type--c_base--c_list" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2"><span class="header-section-number">3.1.2</span> c_type / c_base / c_list</h3>
+<p>The <a href="#compose">compose</a> target uses these variables to decide what to build and how. The output file is <code>[c_base].&lt;extension&gt;</code>, and is constructed from the <a href="#c_type--c_base--c_list">c_list</a> input files, in order. The <code>&lt;extension&gt;</code> is selected based on the <a href="#c_type--c_base--c_list">c_type</a> table above. Generally, it is not required to use the <a href="#compose">compose</a> target directly for supported <a href="#c_type--c_base--c_list">c_type</a> files, since it is run automatically based on what output file <code>&lt;extension&gt;</code> is specified.</p>
+<p>The automatic input file detection works by matching one of the following (<a href="#quick-start">Quick Start</a> example):</p>
+<pre><code>make README.html                    ~ README (empty [COMPOSER_EXT])
+make README.html                    ~ README.md
+make README.md.html                 ~ README.md
+make Composer-v3.1.Manual.html      c_list=&quot;README.md LICENSE.md&quot;</code></pre>
+<p>Other values for <a href="#c_type--c_base--c_list">c_type</a>, such as <code>json</code> or <code>man</code>, for example, can be passed through to <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a> manually:</p>
+<pre><code>make compose c_type=&quot;json&quot; c_base=&quot;README&quot; c_list=&quot;README.md&quot;
+make compose c_type=&quot;man&quot; c_base=&quot;Composer-v3.1.Manual&quot; c_list=&quot;README.md&quot;</code></pre>
+<p>Any of the file types supported by <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a> can be created this way. The only limitation is that the input files must be in <a href="https://pandoc.org/MANUAL.html#pandocs-markdown">Markdown</a> format.</p>
+</section>
+<section id="c_lang" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3"><span class="header-section-number">3.1.3</span> c_lang</h3>
+<ul>
+<li>Primarily for <a href="#pdf">PDF</a>, this specifies the language that the table of contents (<a href="#c_toc">c_toc</a>) and chapter headings (<a href="#c_level">c_level</a>) will use.</li>
+</ul>
+</section>
+<section id="c_logo" class="level3" data-number="3.1.4">
+<h3 data-number="3.1.4"><span class="header-section-number">3.1.4</span> c_logo</h3>
+<p>#WORKING</p>
+</section>
+<section id="c_icon" class="level3" data-number="3.1.5">
+<h3 data-number="3.1.5"><span class="header-section-number">3.1.5</span> c_icon</h3>
+<p>#WORKING</p>
+</section>
+<section id="c_css" class="level3" data-number="3.1.6">
+<h3 data-number="3.1.6"><span class="header-section-number">3.1.6</span> c_css</h3>
+<ul>
+<li>By default, a CSS stylesheet from <a href="https://github.com/simov/markdown-viewer">Markdown Viewer</a> is used for <a href="#html">HTML</a> and <a href="#epub">EPUB</a>, and one of the <a href="https://revealjs.com">Reveal.js</a> themes is used for <a href="#revealjs-presentations">Reveal.js Presentations</a>. This variable allows for selection of a different file in all cases.</li>
+<li>The special value <code>css_alt</code> selects the alternate default stylesheet. Using <code>0</code> reverts to the <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a> default.</li>
+<li>This value can be overridden by the presence of <code>.composer.css</code> files. See <a href="#precedence-rules">Precedence Rules</a> for details.</li>
+</ul>
+</section>
+<section id="c_toc" class="level3" data-number="3.1.7">
+<h3 data-number="3.1.7"><span class="header-section-number">3.1.7</span> c_toc</h3>
+<ul>
+<li>Setting this to a value of <code>[1-6]</code> creates a table of contents at the beginning of the document. The numerical value is how many header levels deep the table should go. A value of <code>6</code> lists all header levels.</li>
+<li>Using a value of <code>0</code> lists all header levels, and additionally numbers all the sections, for reference.</li>
+</ul>
+</section>
+<section id="c_level" class="level3" data-number="3.1.8">
+<h3 data-number="3.1.8"><span class="header-section-number">3.1.8</span> c_level</h3>
+<ul>
+<li>This value has different effects, depending on the <a href="#c_type--c_base--c_list">c_type</a> of the output document.</li>
+<li>For <a href="#html">HTML</a>, any value enables <code>section-divs</code>, which wraps headings and their section content in <code>&lt;section&gt;</code> tags and attaches identifiers to them instead of the headings themselves. This is for CSS styling, and is generally desired.</li>
+<li>For <a href="#pdf">PDF</a>, there are 3 top-level division types: <code>part</code>, <code>chapter</code>, and <code>section</code>. This sets the top-level header to the specified type, which changes the way the document is presented. Using <code>part</code> divides the document into “Parts”, each starting with a stand-alone title page. With this division type, each second-level heading starts a new “Chapter”. A <code>chapter</code> simply starts a new section on a new page, and lower-level headings continue as running portions within it. Finally, <code>section</code> creates one long running document with no blank pages or section breaks (like a <a href="#html">HTML</a> page). To set the desired value:
+<ul>
+<li><code>part</code> ~ <code>0</code></li>
+<li><code>chapter</code> ~ <code>2</code></li>
+<li><code>section</code> ~ Any other value</li>
+</ul></li>
+<li>For <a href="#epub">EPUB</a>, this creates chapter breaks at the specified level, starting the section on a new page. The special <code>0</code> simply sets it to the default value of <code>2</code>.</li>
+<li>For <a href="#revealjs-presentations">Reveal.js Presentations</a>, the top-level headings can persist on the screen when moving through slides in their sections, or they can rotate out as their own individual slides. Setting to <code>0</code> enables persistent headings, and all other values use the default.</li>
+<li>An empty value defers to the <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a> defaults in all cases.</li>
+</ul>
+</section>
+<section id="c_margin" class="level3" data-number="3.1.9">
+<h3 data-number="3.1.9"><span class="header-section-number">3.1.9</span> c_margin</h3>
+<ul>
+<li>The default margins for <a href="#pdf">PDF</a> are formatted for typesetting of printed books, where there is a large amount of open space around the edges and the text on each page is shifted away from where the binding would be. This is generally not what is desired in a purely digital <a href="#pdf">PDF</a> document.</li>
+<li>This is one value for all the margins. Setting it to an empty value exposes variables for each of the individual margins: <code>c_margin_top</code>, <code>c_margin_bottom</code>, <code>c_margin_left</code> and <code>c_margin_right</code>.</li>
+</ul>
+</section>
+<section id="c_options" class="level3" data-number="3.1.10">
+<h3 data-number="3.1.10"><span class="header-section-number">3.1.10</span> c_options</h3>
+<ul>
+<li>In some cases, it may be desirable to add additional <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a> options. Anything put in this variable will be passed directly to <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a> as additional command-line arguments.</li>
+</ul>
+</section>
+</section>
+<section id="control-variables" class="level2" data-number="3.2">
+<h2 data-number="3.2"><span class="header-section-number">3.2</span> Control Variables</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variable</th>
+<th style="text-align: left;">Purpose</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="#makejobs">MAKEJOBS</a></td>
+<td style="text-align: left;">Parallel processing threads</td>
+<td style="text-align: left;">1 <code>(makejobs)</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#composer_docolor">COMPOSER_DOCOLOR</a></td>
+<td style="text-align: left;">Enable title/color sequences</td>
+<td style="text-align: left;"><code>(boolean)</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#composer_debugit">COMPOSER_DEBUGIT</a></td>
+<td style="text-align: left;">Use verbose output</td>
+<td style="text-align: left;"><code>(debugit)</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#composer_include">COMPOSER_INCLUDE</a></td>
+<td style="text-align: left;">Include all: <code>.composer.mk</code></td>
+<td style="text-align: left;"><code>(boolean)</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#composer_depends">COMPOSER_DEPENDS</a></td>
+<td style="text-align: left;">Sub-directories first: <a href="#all--all-all---all">all</a></td>
+<td style="text-align: left;"><code>(boolean)</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#composer_keeping">COMPOSER_KEEPING</a></td>
+<td style="text-align: left;">Log entries / cache files</td>
+<td style="text-align: left;">100 <code>(keeping)</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#composer_log">COMPOSER_LOG</a></td>
+<td style="text-align: left;">Timestamped command log</td>
+<td style="text-align: left;">.composed</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#composer_ext">COMPOSER_EXT</a></td>
+<td style="text-align: left;">Markdown file extension</td>
+<td style="text-align: left;">.md</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#composer_targets">COMPOSER_TARGETS</a></td>
+<td style="text-align: left;">See: <a href="#all--all-all---all">all</a>/<a href="#clean--clean-all---clean">clean</a></td>
+<td style="text-align: left;"><a href="#check--check-all--config--config-all--targets">config</a>/<a href="#check--check-all--config--config-all--targets">targets</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#composer_subdirs">COMPOSER_SUBDIRS</a></td>
+<td style="text-align: left;">See: <a href="#all--all-all---all">all</a>/<a href="#clean--clean-all---clean">clean</a>/<a href="#install--install-all--install-force">install</a></td>
+<td style="text-align: left;"><a href="#check--check-all--config--config-all--targets">config</a>/<a href="#check--check-all--config--config-all--targets">targets</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#composer_exports">COMPOSER_EXPORTS</a></td>
+<td style="text-align: left;">See: <a href="#all--all-all---all">all</a>/<a href="#clean--clean-all---clean">clean</a>/<a href="#install--install-all--install-force">install</a></td>
+<td style="text-align: left;"><a href="#check--check-all--config--config-all--targets">config</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#composer_ignores">COMPOSER_IGNORES</a></td>
+<td style="text-align: left;">See: <a href="#all--all-all---all">all</a>/<a href="#clean--clean-all---clean">clean</a>/<a href="#install--install-all--install-force">install</a></td>
+<td style="text-align: left;"><a href="#check--check-all--config--config-all--targets">config</a></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><em><a href="#makejobs">MAKEJOBS</a> ~ <code>c_jobs</code> ~ <code>J</code></em></li>
+<li><em><a href="#composer_docolor">COMPOSER_DOCOLOR</a> ~ <code>c_color</code> ~ <code>C</code></em></li>
+<li><em><a href="#composer_debugit">COMPOSER_DEBUGIT</a> ~ <code>c_debug</code> ~ <code>V</code></em></li>
+<li><em><code>(makejobs)</code> = empty is disabled / number of threads / <code>0</code> is no limit</em></li>
+<li><em><code>(debugit)</code> = empty is disabled / any value enables / <code>0</code> is full tracing</em></li>
+<li><em><code>(keeping)</code> = empty is no limit / number to keep / <code>0</code> is none</em></li>
+<li><em><code>(boolean)</code> = empty is disabled / any value enables</em></li>
+</ul>
+<section id="makejobs" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1"><span class="header-section-number">3.2.1</span> MAKEJOBS</h3>
+<p>#WORK a small number of large directories will process faster than a large number of small ones, especially with site</p>
+<ul>
+<li>By default, <a href="http://www.garybgenett.net/projects/composer">Composer</a> progresses linearly, doing one task at a time. If there are dependencies between items, this can be beneficial, since it ensures things will happen in a particular order. The downside, however, is that it is very slow.</li>
+<li><a href="http://www.garybgenett.net/projects/composer">Composer</a> supports <a href="http://www.gnu.org/software/make">GNU Make</a> parallel execution, where multiple threads can be working through tasks independently. Experiment with lower values first. When recursing through large directories, each <code>make</code> that instantiates into a sub-directory has it’s own jobs server, so the total number of threads running can proliferate rapidly.</li>
+<li>This can drastically speed up execution, processing thousands of files and directories in minutes. However, values that are too high can exhaust system resources. With great power comes great responsibility.</li>
+<li>A value of <code>0</code> does parallel execution with no thread limit.</li>
+</ul>
+</section>
+<section id="composer_docolor" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2"><span class="header-section-number">3.2.2</span> COMPOSER_DOCOLOR</h3>
+<ul>
+<li><a href="http://www.garybgenett.net/projects/composer">Composer</a> uses colors to make all output and <a href="#help--help-all">help</a> text easier to read. The escape sequences used to accomplish this can create mixed results when reading in an output file or a <code>$PAGER</code>, or just make it harder to read for some.</li>
+<li>This is also used internally for targets like <a href="#_debug--_debug-file">_debug-file</a> and <a href="#template--template-yml--template-md">template</a>, where plain text is required.</li>
+</ul>
+</section>
+<section id="composer_debugit" class="level3" data-number="3.2.3">
+<h3 data-number="3.2.3"><span class="header-section-number">3.2.3</span> COMPOSER_DEBUGIT</h3>
+<ul>
+<li>Provides more explicit details about what is happening at each step. Produces a lot more output, and can be slower. It will also be hard to read unless <a href="#makejobs">MAKEJOBS</a> is set to <code>1</code>.</li>
+<li>Full tracing using <code>0</code> also displays <a href="http://www.gnu.org/software/make">GNU Make</a> debugging output.</li>
+<li><em>When doing <a href="#_debug--_debug-file">_debug</a>, this is used to pass a list of targets to test (see <a href="#additional-targets">Additional Targets</a>).</em></li>
+</ul>
+</section>
+<section id="composer_include" class="level3" data-number="3.2.4">
+<h3 data-number="3.2.4"><span class="header-section-number">3.2.4</span> COMPOSER_INCLUDE</h3>
+<ul>
+<li>On every run, <a href="http://www.garybgenett.net/projects/composer">Composer</a> walks through the <code>MAKEFILE_LIST</code>, all the way back to the main <code>Makefile</code>, looking for <code>.composer.mk</code> files in each directory. By default, it only reads the ones in the main <a href="http://www.garybgenett.net/projects/composer">Composer</a> directory and the current directory, in that order. This option enables reading all of them.</li>
+<li>In the example directory tree below, normally the <code>.composer.mk</code> in <code>.Composer</code> is read first, and then <code>tld/sub/.composer.mk</code>. With this enabled, it will read all of them in order from top to bottom: <code>.Composer/.composer.mk</code>, <code>.composer.mk</code>, <code>tld/.composer.mk</code>, and finally <code>tld/sub/.composer.mk</code>.</li>
+<li>This is why it is best practice to have a <code>.Composer</code> directory at the top level for each documentation archive (see <a href="#recommended-workflow">Recommended Workflow</a>). Not only does it allow for strict version control of <a href="http://www.garybgenett.net/projects/composer">Composer</a> per-archive, it also provides a mechanism for setting <a href="#composer-variables">Composer Variables</a> globally.</li>
+<li>When using this option, care should be taken with “Local” variables from <a href="#template--template-yml--template-md">template</a> (see <a href="#templates">Templates</a>). They will be propagated down the tree, which is generally not desired except in very specific cases. Using [COMPOSER_CURDIR] to limit their scope is recommended (see below).</li>
+<li>The [COMPOSER_CURDIR] variable is set when reading in a <code>.composer.mk</code> file in the <code>make</code> running directory (the <code>$CURDIR</code>), and is empty otherwise. This provides a way to limit particular portions of the file to the local directory, regardless of whether <a href="#composer_include">COMPOSER_INCLUDE</a> is set or not. An example of this is below.</li>
+<li>This setting also causes <code>.composer.yml</code> and <code>.composer.css</code> files to be processed in an identical manner (see <a href="#precedence-rules">Precedence Rules</a>).</li>
+</ul>
+<p>Example directory tree (see <a href="#recommended-workflow">Recommended Workflow</a>):</p>
+<pre><code>.../.Composer/Makefile
+.../.Composer/.composer.mk
+.../Makefile
+.../.composer.mk
+.../tld/Makefile
+.../tld/.composer.mk
+.../tld/sub/Makefile
+.../tld/sub/.composer.mk</code></pre>
+<p>Example usage of the [COMPOSER_CURDIR] variable:</p>
+<pre><code>ifneq ($(COMPOSER_CURDIR),)
+    [...]
+endif</code></pre>
+</section>
+<section id="composer_depends" class="level3" data-number="3.2.5">
+<h3 data-number="3.2.5"><span class="header-section-number">3.2.5</span> COMPOSER_DEPENDS</h3>
+<ul>
+<li>When doing <a href="#all--all-all---all">all-all</a>, <a href="http://www.garybgenett.net/projects/composer">Composer</a> will process the current directory before recursing into sub-directories. This reverses that, and sub-directories will be processed first.</li>
+<li>In the example directory tree in <a href="#composer_include">COMPOSER_INCLUDE</a> above, the default would be: <code>.../</code>, <code>.../tld</code>, and then <code>.../tld/sub</code>. If the higher-level directories have dependencies on the sub-directories being run first, this will support that by doing them in reverse order, processing them from bottom to top.</li>
+<li>This has no effect on <a href="#install--install-all--install-force">install</a> or <a href="#clean--clean-all---clean">clean</a>.</li>
+</ul>
+</section>
+<section id="composer_keeping" class="level3" data-number="3.2.6">
+<h3 data-number="3.2.6"><span class="header-section-number">3.2.6</span> COMPOSER_KEEPING</h3>
+<p>#WORK 0 deletes all…</p>
+</section>
+<section id="composer_log" class="level3" data-number="3.2.7">
+<h3 data-number="3.2.7"><span class="header-section-number">3.2.7</span> COMPOSER_LOG</h3>
+<ul>
+<li><a href="http://www.garybgenett.net/projects/composer">Composer</a> appends to a <code>.composed</code> log file in the current directory whenever it executes <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a>. This provides some accounting, and is used by <a href="#list">list</a> to determine which <code>*.md</code> files have been updated since the last time <a href="http://www.garybgenett.net/projects/composer">Composer</a> was run.</li>
+<li>This setting can change the name of the log file, or disable it completely (empty value).</li>
+<li>It is removed each time <a href="#clean--clean-all---clean">clean</a> is run.</li>
+</ul>
+</section>
+<section id="composer_ext" class="level3" data-number="3.2.8">
+<h3 data-number="3.2.8"><span class="header-section-number">3.2.8</span> COMPOSER_EXT</h3>
+<ul>
+<li>The <a href="https://pandoc.org/MANUAL.html#pandocs-markdown">Markdown</a> file extension <a href="http://www.garybgenett.net/projects/composer">Composer</a> uses: <code>*.md</code>. This is for auto-detection of files to add to <a href="#composer_targets">COMPOSER_TARGETS</a>, files to output for <a href="#list">list</a>, and other tasks. This is a widely used standard, including <a href="https://github.com">GitHub</a>. Another commonly used extension is: <code>*.markdown</code>.</li>
+<li>In some cases, they do not have any extension, such as <code>README</code> and <code>LICENSE</code> in source code directories. Setting this to an empty value causes them to be detected and output. It also causes all other files to be processed, because it becomes the wildcard <code>*</code>, so use with care. It is likely best to use <a href="#composer_targets">COMPOSER_TARGETS</a> to explicitly set the targets list in these situations.</li>
+</ul>
+</section>
+<section id="composer_targets" class="level3" data-number="3.2.9">
+<h3 data-number="3.2.9"><span class="header-section-number">3.2.9</span> COMPOSER_TARGETS</h3>
+<p>#WORK does not pick up .* files/directories</p>
+<ul>
+<li>The list of output files to create or delete with <a href="#clean--clean-all---clean">clean</a> and <a href="#all--all-all---all">all</a>. <a href="http://www.garybgenett.net/projects/composer">Composer</a> does auto-detection using <a href="#c_type--c_base--c_list">c_type</a> and <a href="#composer_ext">COMPOSER_EXT</a>, so this does not usually need to be set. Hidden files that start with <code>.</code> are skipped.</li>
+<li>Setting this manually disables auto-detection. It can also include non-file targets added into a <code>.composer.mk</code> file (see <a href="#custom-targets">Custom Targets</a>).</li>
+<li>The <code>.null</code> target is special, and when used as a value for <a href="#composer_targets">COMPOSER_TARGETS</a> or <a href="#composer_subdirs">COMPOSER_SUBDIRS</a> it will display a message and do nothing. A side-effect of this target is that an actual file or directory named <code>.null</code> will never be created or removed by <a href="http://www.garybgenett.net/projects/composer">Composer</a>.</li>
+<li>An empty value triggers auto-detection</li>
+<li>Use <a href="#check--check-all--config--config-all--targets">config</a> or <a href="#check--check-all--config--config-all--targets">targets</a> to check the current value.</li>
+</ul>
+</section>
+<section id="composer_subdirs" class="level3" data-number="3.2.10">
+<h3 data-number="3.2.10"><span class="header-section-number">3.2.10</span> COMPOSER_SUBDIRS</h3>
+<ul>
+<li>The list of sub-directories to recurse into with <a href="#install--install-all--install-force">install</a>, <a href="#clean--clean-all---clean">clean</a>, and <a href="#all--all-all---all">all</a>. The behavior and configuration is identical to <a href="#composer_targets">COMPOSER_TARGETS</a> above, including auto-detection and the <code>.null</code> target. Hidden directories that start with <code>.</code> are skipped.</li>
+<li>An empty value triggers auto-detection</li>
+<li>Use <a href="#check--check-all--config--config-all--targets">config</a> or <a href="#check--check-all--config--config-all--targets">targets</a> to check the current value.</li>
+</ul>
+</section>
+<section id="composer_exports" class="level3" data-number="3.2.11">
+<h3 data-number="3.2.11"><span class="header-section-number">3.2.11</span> COMPOSER_EXPORTS</h3>
+<p>#WORKING # this one will be complicated… maybe? # has, effectively, the same <code>.null</code> behavior as above… # also overridden by <a href="#composer_ignores">COMPOSER_IGNORES</a> # document .targets token… # hidden variables… # /.g/_data/zactive/coding/composer/Composer.export #<br />
+#</p>
+</section>
+<section id="composer_ignores" class="level3" data-number="3.2.12">
+<h3 data-number="3.2.12"><span class="header-section-number">3.2.12</span> COMPOSER_IGNORES</h3>
+<p>#WORK either remove site here, or add it to the ones above…</p>
+<ul>
+<li>The list of <a href="#composer_targets">COMPOSER_TARGETS</a> and <a href="#composer_subdirs">COMPOSER_SUBDIRS</a> to skip with <a href="#site">site</a>, <a href="#install--install-all--install-force">install</a>, <a href="#clean--clean-all---clean">clean</a>, and <a href="#all--all-all---all">all</a>. This allows for selective auto-detection, when the list of items to process is larger than those to leave alone.</li>
+<li>Use <a href="#check--check-all--config--config-all--targets">config</a> to check the current value.</li>
+</ul>
+<hr />
+</section>
+</section>
+</section>
+<section id="composer-targets" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Composer Targets</h1>
+<section id="primary-targets" class="level2" data-number="4.1">
+<h2 data-number="4.1"><span class="header-section-number">4.1</span> Primary Targets</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Target</th>
+<th style="text-align: left;">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="#help--help-all">help</a></td>
+<td style="text-align: left;">Basic help overview (default)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#help--help-all">help-all</a></td>
+<td style="text-align: left;">Console version of <code>README.md</code> (mostly identical)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#template--template-yml--template-md">template</a></td>
+<td style="text-align: left;">Print settings template: <code>.composer.mk</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#template--template-yml--template-md">template-yml</a></td>
+<td style="text-align: left;">Print settings template: <code>.composer.yml</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#template--template-yml--template-md">template-md</a></td>
+<td style="text-align: left;">Print <code>markdown</code> file template</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#compose">compose</a></td>
+<td style="text-align: left;">Document creation engine (see <a href="#formatting-variables">Formatting Variables</a>)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#site">site</a></td>
+<td style="text-align: left;"><a href="#static-websites">Static Websites</a> from all <a href="https://pandoc.org/MANUAL.html#pandocs-markdown">Markdown</a> files</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">[site-all]</td>
+<td style="text-align: left;">Recursively create <a href="#static-websites">Static Websites</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">[site-force]</td>
+<td style="text-align: left;">Recursively create <a href="#static-websites">Static Websites</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#install--install-all--install-force">install</a></td>
+<td style="text-align: left;">Current directory initialization: <code>Makefile</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#install--install-all--install-force">install-all</a></td>
+<td style="text-align: left;">Do <a href="#install--install-all--install-force">install</a> recursively (no overwrite)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#install--install-all--install-force">install-force</a></td>
+<td style="text-align: left;">Recursively force overwrite of <code>Makefile</code> files</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#clean--clean-all---clean">clean</a></td>
+<td style="text-align: left;">Remove output files: <a href="#composer_targets">COMPOSER_TARGETS</a> :: <a href="#clean--clean-all---clean">*-clean</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#clean--clean-all---clean">clean-all</a></td>
+<td style="text-align: left;">Do <a href="#clean--clean-all---clean">clean</a> recursively: <a href="#composer_subdirs">COMPOSER_SUBDIRS</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#clean--clean-all---clean">*-clean</a></td>
+<td style="text-align: left;">Any targets named this way will also be run by <a href="#clean--clean-all---clean">clean</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#all--all-all---all">all</a></td>
+<td style="text-align: left;">Create output files: <a href="#composer_targets">COMPOSER_TARGETS</a> :: <a href="#all--all-all---all">*-all</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#all--all-all---all">all-all</a></td>
+<td style="text-align: left;">Do <a href="#all--all-all---all">all</a> recursively: <a href="#composer_subdirs">COMPOSER_SUBDIRS</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#all--all-all---all">*-all</a></td>
+<td style="text-align: left;">Any targets named this way will also be run by <a href="#all--all-all---all">all</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#list">list</a></td>
+<td style="text-align: left;">Show updated files: <code>*</code><a href="#composer_ext">COMPOSER_EXT</a> &gt;&gt; <a href="#composer_log">COMPOSER_LOG</a></td>
+</tr>
+</tbody>
+</table>
+<section id="help--help-all" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1"><span class="header-section-number">4.1.1</span> help / help-all</h3>
+<ul>
+<li>Outputs all of the documentation for <a href="http://www.garybgenett.net/projects/composer">Composer</a>. The <code>README.md</code> has a few extra sections covering internal targets, along with reserved target and variable names, but is otherwise identical to the <a href="#help--help-all">help-all</a> output.</li>
+</ul>
+</section>
+<section id="template--template-yml--template-md" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2"><span class="header-section-number">4.1.2</span> template / template-yml / template-md</h3>
+<ul>
+<li>Prints useful templates for creating new files (see <a href="#templates">Templates</a>):
+<ul>
+<li><a href="http://www.garybgenett.net/projects/composer">Composer</a> <code>.composer.mk</code> (see <a href="#configuration-settings">Configuration Settings</a>)</li>
+<li><a href="http://www.garybgenett.net/projects/composer">Composer</a> <a href="#site">site</a> and <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a> <code>.composer.yml</code> (see <a href="#site">site</a>)</li>
+<li><a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a> <code>markdown</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="compose" class="level3" data-number="4.1.3">
+<h3 data-number="4.1.3"><span class="header-section-number">4.1.3</span> compose</h3>
+<ul>
+<li>This is the very core of <a href="http://www.garybgenett.net/projects/composer">Composer</a>, and does the actual work of the <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a> conversion. Details are in the <a href="#c_type--c_base--c_list">c_type / c_base / c_list</a> section of <a href="#formatting-variables">Formatting Variables</a>.</li>
+</ul>
+</section>
+<section id="site" class="level3" data-number="4.1.4">
+<h3 data-number="4.1.4"><span class="header-section-number">4.1.4</span> site</h3>
+<p>#WORK site rebuilds indexes, force recursively</p>
+</section>
+<section id="install--install-all--install-force" class="level3" data-number="4.1.5">
+<h3 data-number="4.1.5"><span class="header-section-number">4.1.5</span> install / install-all / install-force</h3>
+<ul>
+<li>Creates the necessary <code>Makefile</code> files to set up a directory or a directory tree as a <a href="http://www.garybgenett.net/projects/composer">Composer</a> archive. By default, it will not overwrite any existing files.</li>
+<li>Doing a simple <a href="#install--install-all--install-force">install</a> will only create a file in the current directory, whereas <a href="#install--install-all--install-force">install-all</a> will recurse through the entire directory tree. A full <a href="#install--install-all--install-force">install-force</a> is the same as <a href="#install--install-all--install-force">install-all</a>, with the exception that it will overwrite all <code>Makefile</code> files.</li>
+<li>The topmost directory will have the <code>Makefile</code> created for it modified to point to <a href="http://www.garybgenett.net/projects/composer">Composer</a>.</li>
+</ul>
+</section>
+<section id="clean--clean-all---clean" class="level3" data-number="4.1.6">
+<h3 data-number="4.1.6"><span class="header-section-number">4.1.6</span> clean / clean-all / *-clean</h3>
+<ul>
+<li>Deletes all <a href="#composer_targets">COMPOSER_TARGETS</a> output files in the current directory, after first running all <a href="#clean--clean-all---clean">*-clean</a> targets.</li>
+<li>Doing <a href="#clean--clean-all---clean">clean-all</a> does the same thing recursively, through all the <a href="#composer_subdirs">COMPOSER_SUBDIRS</a>.</li>
+</ul>
+</section>
+<section id="all--all-all---all" class="level3" data-number="4.1.7">
+<h3 data-number="4.1.7"><span class="header-section-number">4.1.7</span> all / all-all / *-all</h3>
+<ul>
+<li>Creates all <a href="#composer_targets">COMPOSER_TARGETS</a> output files in the current directory, after first running all <a href="#all--all-all---all">*-all</a> targets.</li>
+<li>Doing <a href="#all--all-all---all">all-all</a> does the same thing recursively, through all the <a href="#composer_subdirs">COMPOSER_SUBDIRS</a>.</li>
+</ul>
+</section>
+<section id="list" class="level3" data-number="4.1.8">
+<h3 data-number="4.1.8"><span class="header-section-number">4.1.8</span> list</h3>
+<ul>
+<li>Outputs all the <a href="#composer_ext">COMPOSER_EXT</a> files that have been modified since <a href="#composer_log">COMPOSER_LOG</a> was last updated (see both in <a href="#control-variables">Control Variables</a>). Acts as a quick reference to see if anything has changed.</li>
+<li>Since the <a href="#composer_log">COMPOSER_LOG</a> file is updated whenever <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a> is executed, this target will primarily be useful when <a href="#all--all-all---all">all</a> is the only target used to create files in the directory.</li>
+</ul>
+</section>
+</section>
+<section id="additional-targets" class="level2" data-number="4.2">
+<h2 data-number="4.2"><span class="header-section-number">4.2</span> Additional Targets</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Target</th>
+<th style="text-align: left;">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="#_release--_update--_update-all">_release</a></td>
+<td style="text-align: left;">Full upgrade to current release, repository preparation</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#_release--_update--_update-all">_update</a></td>
+<td style="text-align: left;">Update all included components (see <a href="#requirements">Requirements</a>)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#_release--_update--_update-all">_update-all</a></td>
+<td style="text-align: left;">Complete <a href="#_release--_update--_update-all">_update</a>, including binaries: <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a>, <a href="https://mikefarah.gitbook.io/yq">YQ</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#_debug--_debug-file">_debug</a></td>
+<td style="text-align: left;">Diagnostics, tests targets list in <a href="#composer_debugit">COMPOSER_DEBUGIT</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#_debug--_debug-file">_debug-file</a></td>
+<td style="text-align: left;">Export <a href="#_debug--_debug-file">_debug</a> results to a plain text file</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#check--check-all--config--config-all--targets">check</a></td>
+<td style="text-align: left;">List system packages and versions (see <a href="#requirements">Requirements</a>)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#check--check-all--config--config-all--targets">check-all</a></td>
+<td style="text-align: left;">Complete <a href="#check--check-all--config--config-all--targets">check</a> package list, and system information</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#check--check-all--config--config-all--targets">config</a></td>
+<td style="text-align: left;">Show values of all <a href="#composer-variables">Composer Variables</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#check--check-all--config--config-all--targets">config-all</a></td>
+<td style="text-align: left;">Complete <a href="#check--check-all--config--config-all--targets">config</a>, including environment variables</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#check--check-all--config--config-all--targets">targets</a></td>
+<td style="text-align: left;">List all available targets for the current directory</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#init--init-force">init</a></td>
+<td style="text-align: left;">#WORK</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#init--init-force">init-force</a></td>
+<td style="text-align: left;">#WORK</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#commit--commit-all">commit</a></td>
+<td style="text-align: left;">Timestamped <a href="https://git-scm.com">Git</a> commit of the current directory tree</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#commit--commit-all">commit-all</a></td>
+<td style="text-align: left;">Automatic <a href="#commit--commit-all">commit</a>, without <code>$EDITOR</code> step</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#export">export</a></td>
+<td style="text-align: left;">#WORK</td>
+</tr>
+</tbody>
+</table>
+<section id="_release--_update--_update-all" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1"><span class="header-section-number">4.2.1</span> _release / _update / _update-all</h3>
+<p>#WORKING break this section up</p>
+<ul>
+<li>Using the repository configuration (see <a href="#repository-versions">Repository Versions</a>), these fetch and install all external components.</li>
+<li>The <a href="#_release--_update--_update-all">_update-all</a> target also fetches the <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a> and <a href="https://mikefarah.gitbook.io/yq">YQ</a> binaries, whereas <a href="#_release--_update--_update-all">_update</a> only fetches the repositories.</li>
+<li>In addition to doing <a href="#_release--_update--_update-all">_update-all</a>, <a href="#_release--_update--_update-all">_release</a> performs the steps necessary to turn the current directory into a complete clone of <a href="http://www.garybgenett.net/projects/composer">Composer</a>.</li>
+<li>One of the unique features of <a href="http://www.garybgenett.net/projects/composer">Composer</a> is that everything needed to compose itself is embedded in the <code>Makefile</code>.</li>
+</ul>
+<p>Rapid cloning:</p>
+<pre><code>mkdir .../clone
+cd .../clone
+make -f .../.Composer/Makefile _release</code></pre>
+</section>
+<section id="_debug--_debug-file" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2"><span class="header-section-number">4.2.2</span> _debug / _debug-file</h3>
+<ul>
+<li>This is the tool to use for any support issues. Submit the output file to: <a href="mailto:composer@garybgenett.net?subject=Composer%20CMS%20Submission&amp;body=Thank%20you%20for%20sending%20a%20message%21">composer@garybgenett.net</a></li>
+<li>Internally, it also runs:
+<ul>
+<li><a href="#internal-targets">_test</a></li>
+<li><a href="#check--check-all--config--config-all--targets">check-all</a></li>
+<li><a href="#check--check-all--config--config-all--targets">config-all</a></li>
+<li><a href="#check--check-all--config--config-all--targets">targets</a></li>
+</ul></li>
+<li>If issues are occurring when running a particular set of targets, list them in <a href="#composer_debugit">COMPOSER_DEBUGIT</a>.</li>
+<li>For general issues, run in the top-level directory (see <a href="#recommended-workflow">Recommended Workflow</a>). For specific issues, run in the directory where the issue is occurring.</li>
+</ul>
+<p>For example:</p>
+<pre><code>make COMPOSER_DEBUGIT=&quot;README.html Composer-v3.1.Manual.html&quot; _debug-file</code></pre>
+</section>
+<section id="check--check-all--config--config-all--targets" class="level3" data-number="4.2.3">
+<h3 data-number="4.2.3"><span class="header-section-number">4.2.3</span> check / check-all / config / config-all / targets</h3>
+<p>#WORKING break this section up</p>
+<p>#WORK site #WORK site-all #WORK site-force # site-clean # site-list # site-list-list # site-list-null # site-list-all # site-list-% # site-library # site-.composer.mk # site-.composer.yml # site-template # site-template-_test # site-template-config</p>
+<ul>
+<li>Useful targets for validating tooling and configurations.</li>
+<li>Use <a href="#check--check-all--config--config-all--targets">check</a> to see the list of components and their versions, in relation to the system installed versions. Doing <a href="#check--check-all--config--config-all--targets">check-all</a> will show the complete list of tools that are used by <a href="http://www.garybgenett.net/projects/composer">Composer</a>.</li>
+<li>The current values of all <a href="#composer-variables">Composer Variables</a> is output by <a href="#check--check-all--config--config-all--targets">config</a>, and <a href="#check--check-all--config--config-all--targets">config-all</a> will additionally output all environment variables.</li>
+<li>A structured list of detected targets, <a href="#clean--clean-all---clean">*-clean</a> and <a href="#all--all-all---all">*-all</a> targets, <a href="#composer_targets">COMPOSER_TARGETS</a>, and <a href="#composer_subdirs">COMPOSER_SUBDIRS</a> is printed by <a href="#check--check-all--config--config-all--targets">targets</a>.</li>
+<li>Together, <a href="#check--check-all--config--config-all--targets">config</a> and <a href="#check--check-all--config--config-all--targets">targets</a> reveal the entire internal state of <a href="http://www.garybgenett.net/projects/composer">Composer</a>.</li>
+</ul>
+</section>
+<section id="init--init-force" class="level3" data-number="4.2.4">
+<h3 data-number="4.2.4"><span class="header-section-number">4.2.4</span> init / init-force</h3>
+<p>#WORKING</p>
+</section>
+<section id="commit--commit-all" class="level3" data-number="4.2.5">
+<h3 data-number="4.2.5"><span class="header-section-number">4.2.5</span> commit / commit-all</h3>
+<ul>
+<li>Using the directory structure in <a href="#recommended-workflow">Recommended Workflow</a>, <code>.../</code> is considered the top-level directory. Meaning, it is the last directory before linking to <a href="http://www.garybgenett.net/projects/composer">Composer</a>.</li>
+<li>If the top-level directory is a <a href="https://git-scm.com">Git</a> repository (it has <code>&lt;directory&gt;.git</code> or <code>&lt;directory&gt;/.git</code>), this target creates a commit of the current directory tree with the title format below.</li>
+<li>For example, if it is run in the <code>.../tld</code> directory, that entire tree would be in the commit, including <code>.../tld/sub</code>. The purpose of this is to create quick and easy checkpoints when working on documentation that does not necessarily fit in a process where there are specific atomic steps being accomplished.</li>
+<li>When this target is run in a <a href="http://www.garybgenett.net/projects/composer">Composer</a> directory, it uses itself as the top-level directory. When calling <a href="http://www.garybgenett.net/projects/composer">Composer</a> directly using <code>-f</code>, the current directory is used.</li>
+</ul>
+<p>Commit title format:</p>
+<pre><code>[Composer CMS v3.1 :: 2023-03-06T10:53:46-08:00]</code></pre>
+</section>
+<section id="export" class="level3" data-number="4.2.6">
+<h3 data-number="4.2.6"><span class="header-section-number">4.2.6</span> export</h3>
+<p>#WORKING</p>
+</section>
+</section>
+<section id="internal-targets" class="level2" data-number="4.3">
+<h2 data-number="4.3"><span class="header-section-number">4.3</span> Internal Targets</h2>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Target</th>
+<th style="text-align: left;">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><a href="#internal-targets">help-help</a></td>
+<td style="text-align: left;">Complete <code>README.md</code> content (similar to <a href="#help--help-all">help-all</a>)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#internal-targets">.template-install</a></td>
+<td style="text-align: left;">The <code>Makefile</code> used by <a href="#install--install-all--install-force">install</a> (see <a href="#templates">Templates</a>)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#internal-targets">.template</a></td>
+<td style="text-align: left;">The <code>.composer.mk</code> used by <a href="#template--template-yml--template-md">template</a> (see <a href="#templates">Templates</a>)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#internal-targets">headers</a></td>
+<td style="text-align: left;">Series of targets that handle all informational output</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#internal-targets">headers-template</a></td>
+<td style="text-align: left;">For testing default <a href="#internal-targets">headers</a> output</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#internal-targets">headers-template-all</a></td>
+<td style="text-align: left;">For testing complete <a href="#internal-targets">headers</a> output</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#internal-targets">.make_database</a></td>
+<td style="text-align: left;">Complete contents of <a href="http://www.gnu.org/software/make">GNU Make</a> internal state</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#internal-targets">.all_targets</a></td>
+<td style="text-align: left;">Extracted list of all targets from <a href="#internal-targets">.make_database</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#internal-targets">.null</a></td>
+<td style="text-align: left;">Placeholder to specify or detect empty values</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#internal-targets">_update-_test</a></td>
+<td style="text-align: left;">#WORK</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#internal-targets">_setup</a></td>
+<td style="text-align: left;">Extracts embedded files from <code>Makefile</code>, and does <a href="#all--all-all---all">all</a></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#internal-targets">_setup-all</a></td>
+<td style="text-align: left;">#WORK</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#internal-targets">_test</a></td>
+<td style="text-align: left;">Test suite, validates all supported features</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#internal-targets">_test-file</a></td>
+<td style="text-align: left;">Export <a href="#internal-targets">_test</a> results to a plain text file</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#internal-targets">check-help</a></td>
+<td style="text-align: left;">Minimized <a href="#check--check-all--config--config-all--targets">check</a> output (used for <a href="#requirements">Requirements</a>)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#internal-targets">subdirs</a></td>
+<td style="text-align: left;">Expands <a href="#composer_subdirs">COMPOSER_SUBDIRS</a> into <code>*-subdirs-*</code> targets</td>
+</tr>
+</tbody>
+</table>
+<p><em>(None of these are intended to be run directly during normal use, and are only documented for completeness.)</em></p>
+<hr />
+</section>
+</section>
+<section id="reference" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Reference</h1>
+<section id="configuration" class="level2" data-number="5.1">
+<h2 data-number="5.1"><span class="header-section-number">5.1</span> Configuration</h2>
+<section id="pandoc-extensions" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1"><span class="header-section-number">5.1.1</span> Pandoc Extensions</h3>
+<p><a href="http://www.garybgenett.net/projects/composer">Composer</a> uses the <code>markdown</code> input format, with these extensions:</p>
+<pre><code>ascii_identifiers
+auto_identifiers
+emoji
+fancy_lists
+fenced_divs
+footnotes
+gfm_auto_identifiers
+header_attributes
+implicit_figures
+implicit_header_references
+inline_notes
+intraword_underscores
+line_blocks
+link_attributes
+markdown_in_html_blocks
+pandoc_title_block
+pipe_tables
+raw_html
+raw_tex
+shortcut_reference_links
+smart
+strikeout
+superscript
+task_lists
+yaml_metadata_block</code></pre>
+</section>
+<section id="templates" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2"><span class="header-section-number">5.1.2</span> Templates</h3>
+<p>The <a href="#install--install-all--install-force">install</a> target <code>Makefile</code> template (for reference only):</p>
+<pre><code>override COMPOSER_MY_PATH := $(abspath $(dir $(lastword $(MAKEFILE_LIST))))
+override COMPOSER_TEACHER := $(abspath $(dir $(COMPOSER_MY_PATH)))/Makefile
+include $(COMPOSER_TEACHER)</code></pre>
+<p>Use the <a href="#template--template-yml--template-md">template</a> target to create <code>.composer.mk</code> files:</p>
+<pre><code>########################################
+# Global
+
+# override MAKEJOBS := 1
+# override COMPOSER_DOCOLOR :=
+# override COMPOSER_DEBUGIT :=
+# override COMPOSER_KEEPING := 100
+# override COMPOSER_LOG := .composed
+# override COMPOSER_EXT := .md
+# override c_site :=
+# override c_type := html
+# override c_lang := en-US
+# override c_logo := $(COMPOSER_DIR)/artifacts/images/logo.img
+# override c_icon := $(COMPOSER_DIR)/artifacts/images/icon.img
+# override c_css := $(COMPOSER_DIR)/artifacts/themes/theme.html-default.css
+
+########################################
+# ifneq ($(COMPOSER_CURDIR),)
+
+########################################
+# Local
+
+# override COMPOSER_INCLUDE :=
+# override COMPOSER_DEPENDS :=
+# override COMPOSER_TARGETS := README.site.html README.html README.pdf README.epub README.revealjs.html README.docx
+# override COMPOSER_SUBDIRS := _site artifacts bin bootstrap bootswatch font-awesome markdown-themes markdown-viewer pandoc reveal.js water.css yq
+# override COMPOSER_EXPORTS := *.html *.pdf *.epub *.revealjs.html *.docx *.pptx *.txt *.md.txt
+# override COMPOSER_IGNORES := Composer.export
+# override c_base :=
+# override c_list :=
+# override c_toc :=
+# override c_level := 2
+# override c_margin := 0.8in
+# override c_margin_top :=
+# override c_margin_bottom :=
+# override c_margin_left :=
+# override c_margin_right :=
+# override c_options :=
+
+########################################
+# endif</code></pre>
+<p>Use the <a href="#template--template-yml--template-md">template-yml</a> target to create <code>.composer.yml</code> files:</p>
+<pre><code># variables:
+#   title-prefix: null
+#   site-config:
+#     homepage: null
+#     brand: null
+#     copyright: null
+#     search_name: null
+#     search_site: null
+#     search_call: null
+#     search_form: null
+#     header: null
+#     footer: null
+#     css_shade: dark
+#     copy_protect: null
+#     cols_break: lg
+#     cols_sticky: 1
+#     cols_order:
+#       - 1
+#       - 2
+#       - 3
+#     cols_reorder:
+#       - 1
+#       - 3
+#       - 2
+#     cols_size:
+#       - 3
+#       - 7
+#       - 2
+#     cols_resize:
+#       - 6
+#       - 12
+#       - 6
+#     metainfo_null: &#39;*(none)*&#39;
+#     metainfo: &#39;&lt;date&gt; :: &lt;title&gt;&lt;|&gt; -- &lt;author|; &gt;&#39;
+#     tagslist:
+#       author:
+#         title: Author
+#         display: &#39;*Authors: &lt;|&gt;, &lt;|&gt;*&#39;
+#       tags:
+#         title: Tag
+#         display: &#39;*Tags: &lt;|&gt;, &lt;|&gt;*&#39;
+#     readtime: &#39;*Reading time: &lt;word&gt; words, &lt;time&gt; minutes*&#39;
+#     readtime_wpm: 220
+#   site-library:
+#     folder: null
+#     auto_update: null
+#     digest_title: Latest Updates
+#     digest_continue: &#39;[...]&#39;
+#     digest_permalink: &#39;*(permalink to full text)*&#39;
+#     digest_chars: 1024
+#     digest_count: 10
+#     digest_expanded: 0
+#     digest_spacer: 1
+#     sitemap_title: Site Map
+#     sitemap_expanded: 0
+#     sitemap_spacer: 1
+#     lists_expanded: 0
+#     lists_spacer: 1
+#   site-nav-top: null
+#   site-nav-bottom: null
+#   site-nav-left: null
+#   site-nav-right: null
+#   site-info-top: null
+#   site-info-bottom: null</code></pre>
+<p>Use the <a href="#template--template-yml--template-md">template-md</a> target to create new <code>markdown</code> files:</p>
+<pre><code>---
+title: &quot;Composer CMS: Content Make System&quot;
+date: 2023-03-06
+author:
+  - Gary B. Genett
+tags:
+  - Composer
+---
+*Happy Making!*</code></pre>
+</section>
+<section id="defaults" class="level3" data-number="5.1.3">
+<h3 data-number="5.1.3"><span class="header-section-number">5.1.3</span> Defaults</h3>
+<p>The default <code>.composer.mk</code> in the <a href="http://www.garybgenett.net/projects/composer">Composer</a> directory:</p>
+<pre><code>################################################################################
+# Composer CMS :: GNU Make Configuration
+################################################################################
+ifneq ($(COMPOSER_CURDIR),)
+################################################################################
+
+########################################
+# Wildcards
+
+README.%: override c_logo := artifacts/images/logo-v1.0.png
+README.%: override c_icon := artifacts/images/icon-v1.0.png
+README.%: override c_toc := 0
+
+########################################
+# Settings
+
+override README.site.html := artifacts/README.site.md
+README.site.html: override c_site := 1
+README.site.html: override c_toc :=
+
+override README.pdf := README.md LICENSE.md
+
+override README.revealjs.html := artifacts/README.revealjs.md
+README.revealjs.html: override c_toc :=
+
+################################################################################
+endif
+################################################################################
+# End Of File
+################################################################################</code></pre>
+<p>The template <code>.composer.yml</code> in the <code>artifacts</code> directory:</p>
+<pre><code>################################################################################
+# Composer CMS :: YAML Configuration
+################################################################################
+
+variables:
+
+########################################
+# site
+
+  title-prefix: EXAMPLE SITE
+
+########################################
+  site-config:
+
+    homepage: http://www.garybgenett.net/projects/composer
+    brand: LOGO / BRAND
+#&gt;&gt; copyright: COPYRIGHT
+    copyright: |
+      &lt;!-- composer &gt;&gt; icon gpl &gt;&gt; --&gt;
+      &lt;!-- composer &gt;&gt; icon cc-by-nc-nd &gt;&gt; --&gt;
+      &lt;!-- composer &gt;&gt; icon copyright &gt;&gt; --&gt;
+      COPYRIGHT
+
+#&gt;&gt; search_name: SEARCH
+    search_name: |
+      &lt;!-- composer &gt;&gt; icon search &gt;&gt; --&gt;
+    search_site: https://duckduckgo.com
+    search_call: q
+    search_form: |
+      &lt;!-- composer &gt;&gt; form sites garybgenett.net &gt;&gt; --&gt;
+      &lt;!-- composer &gt;&gt; form ia web &gt;&gt; --&gt;
+      &lt;!-- composer &gt;&gt; form kae d &gt;&gt; --&gt;
+      &lt;!-- composer &gt;&gt; form ko 1 &gt;&gt; --&gt;
+      &lt;!-- composer &gt;&gt; form kp -1 &gt;&gt; --&gt;
+      &lt;!-- composer &gt;&gt; form kv 1 &gt;&gt; --&gt;
+      &lt;!-- composer &gt;&gt; form kz -1 &gt;&gt; --&gt;
+
+#&gt;&gt; header: null
+#&gt;&gt; footer: null
+
+#&gt;&gt; css_shade: dark
+#&gt;&gt; copy_protect: null
+
+#&gt;&gt; cols_break: lg
+#&gt;&gt; cols_sticky: 1
+#&gt;&gt; cols_order: [ 1, 2, 3 ]
+#&gt;&gt; cols_reorder: [ 1, 3, 2 ]
+#&gt;&gt; cols_size: [ 3, 7, 2 ]
+#&gt;&gt; cols_resize: [ 6, 12, 6 ]
+
+#&gt;&gt; metainfo_null: &quot;*(none)*&quot;
+#&gt;&gt; metainfo: &quot;&lt;date&gt; :: &lt;title&gt;&lt;|&gt; -- &lt;author|; &gt;&quot;
+#&gt;&gt; tagslist:
+#&gt;&gt;   author:
+#&gt;&gt;     title: &quot;Author&quot;
+#&gt;&gt;     display: &quot;*Authors: &lt;|&gt;, &lt;|&gt;*&quot;
+#&gt;&gt;   tags:
+#&gt;&gt;     title: &quot;Tag&quot;
+#&gt;&gt;     display: &quot;*Tags: &lt;|&gt;, &lt;|&gt;*&quot;
+
+#&gt;&gt; readtime: &quot;*Reading time: &lt;word&gt; words, &lt;time&gt; minutes*&quot;
+#&gt;&gt; readtime_wpm: 220
+
+########################################
+  site-library:
+
+    folder: #&gt;&gt; null
+#&gt;&gt; auto_update: null
+
+#&gt;&gt; digest_title: &quot;Latest Updates&quot;
+#&gt;&gt; digest_continue: &quot;[...]&quot;
+#&gt;&gt; digest_permalink: &quot;*(permalink to full text)*&quot;
+#&gt;&gt; digest_chars: 1024
+#&gt;&gt; digest_count: 10
+#&gt;&gt; digest_expanded: 0
+#&gt;&gt; digest_spacer: 1
+
+#&gt;&gt; sitemap_title: &quot;Site Map&quot;
+#&gt;&gt; sitemap_expanded: 0
+#&gt;&gt; sitemap_spacer: 1
+
+#&gt;&gt; lists_expanded: 0
+#&gt;&gt; lists_spacer: 1
+
+########################################
+  site-nav-top:
+
+    MENU:
+      - MAIN: &lt;composer_root&gt;/index.html
+      - PAGES:
+        - Composer README: &lt;composer_root&gt;/../index.html
+        - spacer
+        - Introduction:
+          - _: &lt;composer_root&gt;/index.html
+          - Default Site: &lt;composer_root&gt;/null/index.html
+          - Configured Site: &lt;composer_root&gt;/config/index.html
+          - Pandoc Markdown: &lt;composer_root&gt;/pandoc/MANUAL.html
+          - Bootstrap Default: &lt;composer_root&gt;/bootstrap/site/content/docs/5.1/getting-started/introduction.html
+        - Layout &amp; Elements:
+          - _: &lt;composer_root&gt;/examples.html
+          - Metainfo Page: &lt;composer_root&gt;/config/pages.html
+          - Metainfo File: &lt;composer_root&gt;/config/pages/2020-01-01+template_00.html
+          - Themes &amp; Shades: &lt;composer_root&gt;/themes/index.html
+        - Default Library Page:
+          - _: &lt;composer_root&gt;/_library/index.html
+          - Configured Library Page: &lt;composer_root&gt;/config/_library-config/index.html
+#&gt;&gt;       - Default Digest Page: &lt;composer_root&gt;/index-digest.html
+#&gt;&gt;       - Configured Digest Page: &lt;composer_root&gt;/config/index-digest.html
+    CONTENTS:
+      - CONTENTS:
+        - contents
+#&gt;&gt;     - contents 6
+#&gt;&gt;     - contents 0
+    SPACE:
+      - spacer
+    LIBRARY:
+      - DATES:
+        - library date
+      - AUTHORS:
+        - library author
+      - TAGS:
+        - library tags
+
+########################################
+  site-nav-bottom:
+
+    PATH:
+      - SITEMAP: &lt;composer_root&gt;/_library/sitemap.html
+    INFO:
+      - tagslist author
+      - tagslist tags
+
+########################################
+  site-nav-left:
+
+    BEGIN:
+    MENU:
+      - fold-begin 0 . 0 LEFT FOLD
+      - _: |
+          * ITEM 1
+          * ITEM 2
+          * ITEM 3
+      - fold-end
+    MIDDLE:
+      - spacer
+    TEXT:
+      - box-begin 0 LEFT BOX
+      - _: |
+          LEFT TEXT
+      - box-end
+    SPACE:
+      - spacer
+    CONTENTS:
+      - box-begin 0 CONTENTS
+      - metainfo
+      - contents
+#&gt;&gt;   - contents 6
+#&gt;&gt;   - contents 0
+      - tagslist author
+      - tagslist tags
+      - readtime
+      - box-end
+    END:
+
+########################################
+  site-nav-right:
+
+    BEGIN:
+    MENU:
+      - fold-begin 0 . 0 RIGHT FOLD
+      - _: |
+          * ITEM 1
+          * ITEM 2
+          * ITEM 3
+      - fold-end
+    MIDDLE:
+      - spacer
+    TEXT:
+      - box-begin 0 RIGHT BOX
+      - _: |
+          RIGHT TEXT
+      - box-end
+    SPACE:
+      - spacer
+    LIBRARY:
+      - fold-begin group fold-library
+      - fold-begin 0 0 fold-library DATES
+      - library date
+      - fold-end
+      - fold-begin 0 0 fold-library AUTHORS
+      - library author
+      - fold-end
+      - fold-begin 0 . fold-library TAGS
+      - library tags
+      - fold-end
+      - fold-end group
+    END:
+
+########################################
+  site-info-top:
+
+    TEXT:
+      - TOP TEXT
+    INFO:
+#&gt;&gt;   - metainfo
+#&gt;&gt;   - tagslist author
+#&gt;&gt;   - tagslist tags
+#&gt;&gt;   - readtime
+    ICON:
+      - icon github https://github.com/garybgenett/composer Composer CMS
+#&gt;&gt;   - |
+#&gt;&gt;       &lt;!-- composer &gt;&gt; icon gpl &gt;&gt; --&gt;
+#&gt;&gt;       &lt;!-- composer &gt;&gt; icon cc-by-nc-nd &gt;&gt; --&gt;
+#&gt;&gt;       &lt;!-- composer &gt;&gt; icon copyright &gt;&gt; --&gt;
+
+########################################
+  site-info-bottom:
+
+    TEXT:
+      - BOTTOM TEXT
+    INFO:
+#&gt;&gt;   - metainfo
+#&gt;&gt;   - tagslist author
+#&gt;&gt;   - tagslist tags
+      - readtime
+    ICON:
+
+################################################################################
+# End Of File
+################################################################################</code></pre>
+</section>
+</section>
+<section id="reserved" class="level2" data-number="5.2">
+<h2 data-number="5.2"><span class="header-section-number">5.2</span> Reserved</h2>
+<section id="target-names" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1"><span class="header-section-number">5.2.1</span> Target Names</h3>
+<p>Do not create targets which match these, or use them as prefixes:</p>
+<pre><code>.all_targets
+.make_database
+.null
+all
+check
+clean
+commit
+compose
+config
+export
+headers
+help
+init
+install
+list
+site
+subdirs
+targets
+template
+_debug
+_release
+_setup
+_test
+_update</code></pre>
+</section>
+<section id="variable-names" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2"><span class="header-section-number">5.2.2</span> Variable Names</h3>
+<p>Do not create variables which match these, and avoid similar names:</p>
+<pre><code>~
+7Z
+7Z_VER
+BASE64
+BASH
+BASH_VER
+BOOTSTRAP_ART_CSS
+BOOTSTRAP_ART_JS
+BOOTSTRAP_CMT
+BOOTSTRAP_DEF_CSS
+BOOTSTRAP_DEF_JS
+BOOTSTRAP_DIR
+BOOTSTRAP_DIR_CSS
+BOOTSTRAP_DIR_JS
+BOOTSTRAP_DOC_VER
+BOOTSTRAP_LIC
+BOOTSTRAP_SRC
+BOOTSWATCH_CMT
+BOOTSWATCH_CSS_ALT
+BOOTSWATCH_CSS_DARK
+BOOTSWATCH_CSS_LIGHT
+BOOTSWATCH_CSS_SOLAR_DARK
+BOOTSWATCH_CSS_SOLAR_LIGHT
+BOOTSWATCH_DIR
+BOOTSWATCH_LIC
+BOOTSWATCH_SRC
+CAT
+CHECKIT
+CHMOD
+CLEANER
+CODEBLOCK
+COLUMNS
+COLUMN_2
+COMMENTED
+COMPOSER
+COMPOSER_ART
+COMPOSER_BASENAME
+COMPOSER_BIN
+COMPOSER_CNAME
+COMPOSER_COLOR
+COMPOSER_COMPOSER
+COMPOSER_CONTENTS
+COMPOSER_CONTENTS_DIRS
+COMPOSER_CONTENTS_EXT
+COMPOSER_CONTENTS_FILES
+COMPOSER_CSS
+COMPOSER_CURDIR
+COMPOSER_CUSTOM
+COMPOSER_DEBUGIT
+COMPOSER_DEBUGIT_ALL
+COMPOSER_DEPENDS
+COMPOSER_DIR
+COMPOSER_DOCOLOR
+COMPOSER_DOSETUP_DIR
+COMPOSER_EXPORT
+COMPOSER_EXPORTS
+COMPOSER_EXPORTS_DEFAULT
+COMPOSER_EXPORT_DEFAULT
+COMPOSER_EXPORT_REGEX
+COMPOSER_EXT
+COMPOSER_EXT_DEFAULT
+COMPOSER_EXT_SPECIAL
+COMPOSER_FILENAME
+COMPOSER_FIND
+COMPOSER_FULLNAME
+COMPOSER_HEADLINE
+COMPOSER_HOMEPAGE
+COMPOSER_ICON
+COMPOSER_ICON_VER
+COMPOSER_IGNORES
+COMPOSER_IMAGES
+COMPOSER_INCLUDE
+COMPOSER_INCLUDES
+COMPOSER_INCLUDES_LIST
+COMPOSER_INCLUDES_TREE
+COMPOSER_KEEPING
+COMPOSER_LIBRARY
+COMPOSER_LIBRARY_AUTO_UPDATE
+COMPOSER_LIBRARY_DIR
+COMPOSER_LIBRARY_PATH
+COMPOSER_LIBRARY_ROOT
+COMPOSER_LIBRARY_ROOT_REGEX
+COMPOSER_LICENSE
+COMPOSER_LOG
+COMPOSER_LOGO
+COMPOSER_LOGO_VER
+COMPOSER_LOG_DEFAULT
+COMPOSER_MY_PATH
+COMPOSER_NOCOLOR
+COMPOSER_OPTIONS
+COMPOSER_OPTIONS_EXPORT
+COMPOSER_OPTIONS_GLOBAL
+COMPOSER_OPTIONS_LOCAL
+COMPOSER_OPTIONS_MAKE
+COMPOSER_OPTIONS_PANDOC
+COMPOSER_OPTIONS_PUBLISH
+COMPOSER_OPTIONS_PUBLISH_ENV
+COMPOSER_PANDOC
+COMPOSER_PKG
+COMPOSER_REGEX
+COMPOSER_REGEX_DEFINE
+COMPOSER_REGEX_EVAL
+COMPOSER_REGEX_OVERRIDE
+COMPOSER_REGEX_PREFIX
+COMPOSER_RELEASE
+COMPOSER_REPOPAGE
+COMPOSER_RESERVED
+COMPOSER_RESERVED_DOITALL
+COMPOSER_ROOT
+COMPOSER_ROOT_PATH
+COMPOSER_ROOT_REGEX
+COMPOSER_SETTINGS
+COMPOSER_SUBDIRS
+COMPOSER_TAGLINE
+COMPOSER_TARGETS
+COMPOSER_TARGETS_AUTO
+COMPOSER_TEACHER
+COMPOSER_TECHNAME
+COMPOSER_TIMESTAMP
+COMPOSER_TINYNAME
+COMPOSER_TMP
+COMPOSER_TMP_FILE
+COMPOSER_VERSION
+COMPOSER_YML
+COMPOSER_YML_DATA
+COMPOSER_YML_DATA_SKEL
+COMPOSER_YML_DATA_TAGSLIST
+COMPOSER_YML_DATA_TAGSLIST_SKEL
+COMPOSER_YML_DATA_VAL
+COMPOSER_YML_LIST
+CONFIGS
+CONVICT
+COPYRIGHT_FULL
+COPYRIGHT_SHORT
+COREUTILS_VER
+CP
+CREATED_TAGLINE
+CREATOR
+CSS_ALT
+CSS_ICONS
+CSS_ICON_ARROW_D
+CSS_ICON_ARROW_L
+CSS_ICON_ARROW_R
+CSS_ICON_ARROW_U
+CSS_ICON_COPYRIGHT
+CSS_ICON_GITHUB
+CSS_ICON_MENU
+CSS_ICON_SEARCH
+CSS_THEME
+CSS_THEMES
+CUSTOM_HTML_CSS
+CUSTOM_PDF_LATEX
+CUSTOM_PUBLISH_CSS
+CUSTOM_PUBLISH_CSS_SHADE
+CUSTOM_PUBLISH_SH
+CUSTOM_REVEALJS_CSS
+DATE
+DATEMARK
+DATENAME
+DATESTAMP
+DEBUGIT
+DEPTH_DEFAULT
+DEPTH_MAX
+DESC_DOCX
+DESC_EPUB
+DESC_HTML
+DESC_LINT
+DESC_LPDF
+DESC_PPTX
+DESC_PRES
+DESC_TEXT
+DIFF
+DIFFUTILS_VER
+DISTRIB
+DIST_ICON_v1.0
+DIST_LOGO_v1.0
+DIST_SCREENSHOT_v1.0
+DIST_SCREENSHOT_v3.0
+DIST_SCREENSHOT_v4.0
+DIVIDE
+DOFORCE
+DOITALL
+DOMAKE
+DOSETUP
+DO_HEREDOC
+ECHO
+ENDOLINE
+ENV
+ENV_MAKE
+EOL
+EXAMPLE
+EXPAND
+EXPORTS
+EXPR
+EXTENSION
+EXTN_DEFAULT
+EXTN_DOCX
+EXTN_EPUB
+EXTN_HTML
+EXTN_LINT
+EXTN_LPDF
+EXTN_PPTX
+EXTN_PRES
+EXTN_TEXT
+EXT_ICON_CC
+EXT_ICON_GPL
+FIND
+FINDUTILS_VER
+FIND_ALL
+FONTAWES_CMT
+FONTAWES_DIR
+FONTAWES_LIC
+FONTAWES_SRC
+GIT
+GIT_LOG_COUNT
+GIT_LOG_FORMAT
+GIT_OPTS_CONVICT
+GIT_REPO
+GIT_REPO_DO
+GIT_RUN
+GIT_RUN_COMPOSER
+GIT_VER
+GZIP_BIN
+GZIP_VER
+HEAD
+HEADERS
+HEADER_L
+HEAD_MAIN
+HELPOUT
+HEREDOC_COMPOSER_MK
+HEREDOC_COMPOSER_MK_PUBLISH
+HEREDOC_COMPOSER_MK_PUBLISH_BOOTSTRAP_DIR
+HEREDOC_COMPOSER_MK_PUBLISH_BOOTSTRAP_TREE
+HEREDOC_COMPOSER_MK_PUBLISH_CONFIGS
+HEREDOC_COMPOSER_MK_PUBLISH_EXAMPLE
+HEREDOC_COMPOSER_MK_PUBLISH_NOTHING
+HEREDOC_COMPOSER_MK_PUBLISH_PAGEDIR
+HEREDOC_COMPOSER_MK_PUBLISH_PANDOC_DIR
+HEREDOC_COMPOSER_MK_PUBLISH_SHOWDIR
+HEREDOC_COMPOSER_MK_PUBLISH_SHOWDIR_TARGET
+HEREDOC_COMPOSER_YML
+HEREDOC_COMPOSER_YML_PUBLISH_BOOTSTRAP_DIR
+HEREDOC_COMPOSER_YML_PUBLISH_BOOTSTRAP_TREE
+HEREDOC_COMPOSER_YML_PUBLISH_CONFIGS
+HEREDOC_COMPOSER_YML_PUBLISH_EXAMPLE
+HEREDOC_COMPOSER_YML_PUBLISH_LIBRARY
+HEREDOC_COMPOSER_YML_PUBLISH_NOTHING
+HEREDOC_COMPOSER_YML_PUBLISH_PAGEDIR
+HEREDOC_COMPOSER_YML_PUBLISH_PANDOC_DIR
+HEREDOC_COMPOSER_YML_PUBLISH_SHOWDIR
+HEREDOC_COMPOSER_YML_README
+HEREDOC_CUSTOM_HTML_CSS
+HEREDOC_CUSTOM_HTML_CSS_SOLARIZED
+HEREDOC_CUSTOM_HTML_CSS_WATER_CSS_HACK
+HEREDOC_CUSTOM_HTML_CSS_WATER_SRC_SOLAR
+HEREDOC_CUSTOM_HTML_CSS_WATER_VAR_SHADE
+HEREDOC_CUSTOM_HTML_CSS_WATER_VAR_SOLAR
+HEREDOC_CUSTOM_PDF_LATEX
+HEREDOC_CUSTOM_PUBLISH_CSS
+HEREDOC_CUSTOM_PUBLISH_CSS_HACK
+HEREDOC_CUSTOM_PUBLISH_CSS_POST
+HEREDOC_CUSTOM_PUBLISH_CSS_PRE
+HEREDOC_CUSTOM_PUBLISH_CSS_SHADE
+HEREDOC_CUSTOM_PUBLISH_CSS_TESTING
+HEREDOC_CUSTOM_PUBLISH_CSS_THEME
+HEREDOC_CUSTOM_PUBLISH_JS_POST
+HEREDOC_CUSTOM_PUBLISH_JS_PRE
+HEREDOC_CUSTOM_PUBLISH_SH
+HEREDOC_CUSTOM_REVEALJS_CSS
+HEREDOC_GITATTRIBUTES
+HEREDOC_GITIGNORE
+HEREDOC_LICENSE
+HTML_BREAK
+HTML_HIDE
+HTML_SPACE
+INPUT
+INSTALL
+LIBRARY_AUTO_UPDATE
+LIBRARY_AUTO_UPDATE_ALT
+LIBRARY_DIGEST_CHARS
+LIBRARY_DIGEST_CHARS_ALT
+LIBRARY_DIGEST_CONTINUE
+LIBRARY_DIGEST_CONTINUE_ALT
+LIBRARY_DIGEST_COUNT
+LIBRARY_DIGEST_COUNT_ALT
+LIBRARY_DIGEST_EXPANDED
+LIBRARY_DIGEST_EXPANDED_ALT
+LIBRARY_DIGEST_EXPANDED_MOD
+LIBRARY_DIGEST_PERMALINK
+LIBRARY_DIGEST_PERMALINK_ALT
+LIBRARY_DIGEST_SPACER
+LIBRARY_DIGEST_SPACER_ALT
+LIBRARY_DIGEST_TITLE
+LIBRARY_DIGEST_TITLE_ALT
+LIBRARY_FOLDER
+LIBRARY_FOLDER_ALT
+LIBRARY_LISTS_EXPANDED
+LIBRARY_LISTS_EXPANDED_ALT
+LIBRARY_LISTS_EXPANDED_MOD
+LIBRARY_LISTS_SPACER
+LIBRARY_LISTS_SPACER_ALT
+LIBRARY_SITEMAP_EXPANDED
+LIBRARY_SITEMAP_EXPANDED_ALT
+LIBRARY_SITEMAP_EXPANDED_MOD
+LIBRARY_SITEMAP_SPACER
+LIBRARY_SITEMAP_SPACER_ALT
+LIBRARY_SITEMAP_TITLE
+LIBRARY_SITEMAP_TITLE_ALT
+LINERULE
+LISTING
+LN
+LS
+LS_TIME
+MAKEFILE
+MAKEFILE_LIST
+MAKEFLAGS
+MAKEFLAGS_ENV
+MAKEJOBS
+MAKEJOBS_DEFAULT
+MAKEJOBS_OPTS
+MAKE_DB
+MAKE_VER
+MARKER
+MDTHEMES_CMT
+MDTHEMES_DIR
+MDTHEMES_LIC
+MDTHEMES_SRC
+MDVIEWER_CMT
+MDVIEWER_CMT_SASS_VER
+MDVIEWER_CSS_ALT
+MDVIEWER_CSS_DARK
+MDVIEWER_CSS_DIR
+MDVIEWER_CSS_LIGHT
+MDVIEWER_CSS_SOLAR_DARK
+MDVIEWER_CSS_SOLAR_LIGHT
+MDVIEWER_DIR
+MDVIEWER_LIC
+MDVIEWER_SRC
+MENU_SELF
+MKDIR
+MV
+NEWLINE
+NOFAIL
+NOTHING
+NOTHING_IGNORES
+NPM
+NPM_INSTALL
+NPM_RUN
+NPM_VER
+NULL
+OS_TYPE
+OS_UNAME
+OUTPUT
+OUTPUT_FILENAME
+OUT_LICENSE
+OUT_MANUAL
+OUT_README
+PANDOC
+PANDOC_BIN
+PANDOC_CMT
+PANDOC_CMT_DISPLAY
+PANDOC_DATA
+PANDOC_DIR
+PANDOC_EXTENSIONS
+PANDOC_FROM
+PANDOC_JSON_TO_LINT
+PANDOC_LIC
+PANDOC_LNX_BIN
+PANDOC_LNX_DST
+PANDOC_LNX_SRC
+PANDOC_MAC_BIN
+PANDOC_MAC_DST
+PANDOC_MAC_SRC
+PANDOC_MD_TO_HTML
+PANDOC_MD_TO_JSON
+PANDOC_MD_TO_TEXT
+PANDOC_OPTIONS
+PANDOC_OPTIONS_ERROR
+PANDOC_SRC
+PANDOC_TEX_PDF
+PANDOC_URL
+PANDOC_VER
+PANDOC_WIN_BIN
+PANDOC_WIN_DST
+PANDOC_WIN_SRC
+PATH_LIST
+PRINT
+PRINTER
+PRINTF
+PUBLISH
+PUBLISH_BOOTSTRAP_TREE
+PUBLISH_CMD_BEG
+PUBLISH_CMD_END
+PUBLISH_CMD_ROOT
+PUBLISH_COLS_BREAK
+PUBLISH_COLS_BREAK_ALT
+PUBLISH_COLS_ORDER_C
+PUBLISH_COLS_ORDER_C_ALT
+PUBLISH_COLS_ORDER_L
+PUBLISH_COLS_ORDER_L_ALT
+PUBLISH_COLS_ORDER_R
+PUBLISH_COLS_ORDER_R_ALT
+PUBLISH_COLS_REORDER_C
+PUBLISH_COLS_REORDER_C_ALT
+PUBLISH_COLS_REORDER_L
+PUBLISH_COLS_REORDER_L_ALT
+PUBLISH_COLS_REORDER_L_MOD
+PUBLISH_COLS_REORDER_R
+PUBLISH_COLS_REORDER_R_ALT
+PUBLISH_COLS_RESIZE_C
+PUBLISH_COLS_RESIZE_C_ALT
+PUBLISH_COLS_RESIZE_L
+PUBLISH_COLS_RESIZE_L_ALT
+PUBLISH_COLS_RESIZE_R
+PUBLISH_COLS_RESIZE_R_ALT
+PUBLISH_COLS_RESIZE_R_MOD
+PUBLISH_COLS_SIZE_C
+PUBLISH_COLS_SIZE_C_ALT
+PUBLISH_COLS_SIZE_L
+PUBLISH_COLS_SIZE_L_ALT
+PUBLISH_COLS_SIZE_R
+PUBLISH_COLS_SIZE_R_ALT
+PUBLISH_COLS_STICKY
+PUBLISH_COLS_STICKY_ALT
+PUBLISH_COPY_PROTECT
+PUBLISH_COPY_PROTECT_ALT
+PUBLISH_CREATORS
+PUBLISH_CREATORS_PRINT
+PUBLISH_CREATORS_PRINT_ALT
+PUBLISH_CREATORS_PRINT_MOD
+PUBLISH_CREATORS_TITLE
+PUBLISH_CREATORS_TITLE_ALT
+PUBLISH_CREATORS_TITLE_MOD
+PUBLISH_CSS_SHADE
+PUBLISH_CSS_SHADE_ALT
+PUBLISH_DIRS
+PUBLISH_DIRS_CONFIGS
+PUBLISH_DIRS_DEBUGIT
+PUBLISH_EXAMPLE
+PUBLISH_FILES
+PUBLISH_FOOTER
+PUBLISH_FOOTER_ALT
+PUBLISH_HEADER
+PUBLISH_HEADER_ALT
+PUBLISH_INCLUDE
+PUBLISH_INCLUDE_ALT
+PUBLISH_INDEX
+PUBLISH_LIBRARY
+PUBLISH_LIBRARY_ALT
+PUBLISH_LOG
+PUBLISH_METAINFO
+PUBLISH_METAINFO_ALT
+PUBLISH_METAINFO_MOD
+PUBLISH_METAINFO_NULL
+PUBLISH_METAINFO_NULL_ALT
+PUBLISH_OUT_README
+PUBLISH_PAGEDIR
+PUBLISH_PAGE_1
+PUBLISH_PAGE_1_CONFIGS
+PUBLISH_PAGE_1_INCLUDE
+PUBLISH_PAGE_1_NAME
+PUBLISH_PAGE_2
+PUBLISH_PAGE_2_NAME
+PUBLISH_PAGE_3
+PUBLISH_PAGE_3_CONFIGS
+PUBLISH_PAGE_3_FOOTER
+PUBLISH_PAGE_3_HEADER
+PUBLISH_PAGE_3_NAME
+PUBLISH_PAGE_4_HEADER
+PUBLISH_PAGE_4_NAME
+PUBLISH_PAGE_5_HEADER
+PUBLISH_PAGE_5_NAME
+PUBLISH_PAGE_EXAMPLE
+PUBLISH_PAGE_EXAMPLE_DISPLAY
+PUBLISH_PAGE_EXAMPLE_INCLUDE
+PUBLISH_PAGE_EXAMPLE_LAYOUT
+PUBLISH_PAGE_EXAMPLE_NAME
+PUBLISH_PAGE_INCLUDE
+PUBLISH_PAGE_INCLUDE_ALT
+PUBLISH_PAGE_INCLUDE_ALT_NAME
+PUBLISH_PAGE_INCLUDE_EXAMPLE
+PUBLISH_PAGE_INCLUDE_NAME
+PUBLISH_PAGE_LIBRARY
+PUBLISH_PAGE_LIBRARY_ALT
+PUBLISH_PAGE_LIBRARY_ALT_NAME
+PUBLISH_PAGE_LIBRARY_EXAMPLE
+PUBLISH_PAGE_LIBRARY_NAME
+PUBLISH_PAGE_PAGEDIR_FOOTER
+PUBLISH_PAGE_PAGEDIR_HEADER
+PUBLISH_PAGE_PAGEDIR_NAME
+PUBLISH_PAGE_SHOWDIR
+PUBLISH_PAGE_SHOWDIR_INCLUDE
+PUBLISH_PAGE_SHOWDIR_NAME
+PUBLISH_PAGE_TESTING
+PUBLISH_PAGE_TESTING_NAME
+PUBLISH_READTIME
+PUBLISH_READTIME_ALT
+PUBLISH_READTIME_WPM
+PUBLISH_READTIME_WPM_ALT
+PUBLISH_ROOT
+PUBLISH_SHOWDIR
+PUBLISH_SH_HELPERS
+PUBLISH_SH_RUN
+PUBLISH_TAGSLIST
+PUBLISH_TAGSLIST_PRINT
+PUBLISH_TAGSLIST_PRINT_ALT
+PUBLISH_TAGSLIST_PRINT_MOD
+PUBLISH_TAGSLIST_TITLE
+PUBLISH_TAGSLIST_TITLE_ALT
+PUBLISH_TAGSLIST_TITLE_MOD
+PUBLISH_TESTING
+READ_ALIASES
+REALMAKE
+REALPATH
+REVEALJS_CMT
+REVEALJS_CSS_ALT
+REVEALJS_CSS_DARK
+REVEALJS_CSS_LIGHT
+REVEALJS_CSS_SOLAR_DARK
+REVEALJS_CSS_SOLAR_LIGHT
+REVEALJS_DIR
+REVEALJS_LIC
+REVEALJS_SRC
+RM
+RSYNC
+RSYNC_VER
+SED
+SED_ESCAPE_COLOR
+SED_ESCAPE_LIST
+SED_VER
+SHELL
+SORT
+SOURCE_INCLUDES
+SPECIAL_VAL
+SPLIT
+SUBDIRS
+TABLE_C2
+TABLE_M2
+TABLE_M3
+TAIL
+TAR
+TARGETS
+TAR_VER
+TEE
+TESTING
+TESTING_COMPOSER_DIR
+TESTING_COMPOSER_MAKEFILE
+TESTING_DIR
+TESTING_LOGFILE
+TESTING_MAKEJOBS
+TEX_PDF
+TEX_PDF_VER
+TITLE_END
+TITLE_LN
+TMPL_DOCX
+TMPL_EPUB
+TMPL_HTML
+TMPL_LINT
+TMPL_LPDF
+TMPL_PPTX
+TMPL_PRES
+TMPL_TEXT
+TOKEN
+TOUCH
+TR
+TRUE
+TYPE_DEFAULT
+TYPE_DOCX
+TYPE_EPUB
+TYPE_HTML
+TYPE_LINT
+TYPE_LPDF
+TYPE_PPTX
+TYPE_PRES
+TYPE_TARGETS
+TYPE_TARGETS_LIST
+TYPE_TARGETS_OPTIONS
+TYPE_TEXT
+UNAME
+UPGRADE
+VIM_FOLDING
+VIM_OPTIONS
+WATERCSS_CMT
+WATERCSS_CSS_ALT
+WATERCSS_CSS_DARK
+WATERCSS_CSS_LIGHT
+WATERCSS_CSS_SOLAR_ALT
+WATERCSS_CSS_SOLAR_DARK
+WATERCSS_CSS_SOLAR_LIGHT
+WATERCSS_DIR
+WATERCSS_LIC
+WATERCSS_SRC
+WC
+WC_CHAR
+WC_WORD
+WGET
+WGET_PACKAGE
+WGET_PACKAGE_DO
+WGET_VER
+YQ
+YQ_BIN
+YQ_CMT
+YQ_CMT_DISPLAY
+YQ_DIR
+YQ_EVAL
+YQ_EVAL_DATA
+YQ_EVAL_DATA_FORMAT
+YQ_EVAL_FILES
+YQ_LIC
+YQ_LNX_BIN
+YQ_LNX_DST
+YQ_LNX_SRC
+YQ_MAC_BIN
+YQ_MAC_DST
+YQ_MAC_SRC
+YQ_READ
+YQ_SRC
+YQ_URL
+YQ_VER
+YQ_WIN_BIN
+YQ_WIN_DST
+YQ_WIN_SRC
+YQ_WRITE
+YQ_WRITE_FILE
+YQ_WRITE_JSON
+YQ_WRITE_OUT
+YQ_WRITE_OUT_COLOR
+c_base
+c_css
+c_css_select
+c_css_select_theme
+c_icon
+c_lang
+c_level
+c_list
+c_list_file
+c_list_var
+c_logo
+c_margin
+c_margin_bottom
+c_margin_left
+c_margin_right
+c_margin_top
+c_options
+c_site
+c_toc
+c_type
+clean-logs
+compose-dependencies
+compose-log
+compose-.null
+composer-cp
+composer-ln
+composer-make
+composer-makefile
+composer-mkdir
+composer-mv
+composer-note
+composer-rm
+_debug-output
+template-print
+template-var
+template-var-static
+export-filter
+export-find
+export-libraries
+export-library
+export-tree
+export-config
+headers
+headers-dir
+headers-file
+headers-note
+headers-path-dir
+headers-path-list
+headers-path-root
+headers-rm
+headers-run
+headers-skip
+headers-compose
+headers-compose-PANDOC_OPTIONS
+headers-subdirs
+help-all-CUSTOM
+help-all-DEPENDS
+help-all-FORMAT
+help-all-GOALS
+help-all-LINKS
+help-all-LINKS_EXT
+help-all-ORDERS
+help-all-OVERVIEW
+help-all-REQUIRE
+help-all-REQUIRE_POST
+help-all-SECTION
+help-all-SETTINGS
+help-all-TARGETS_ADDITIONAL
+help-all-TARGETS_INTERNAL
+help-all-TARGETS_PRIMARY
+help-all-TITLE
+help-all-VARIABLES_CONTROL
+help-all-VARIABLES_FORMAT
+help-all-VERSIONS
+help-all-WORKFLOW
+help-help-list-template
+help-help-targets-FORMAT
+help-help-targets-SECTIONS
+help-help-targets-TITLES
+install-Makefile
+site-cache
+site-caches
+site-caches-begin
+site-caches-end
+site-library
+site-library-digest
+site-library-digest-create
+site-library-digest-files
+site-library-digest-list
+site-library-digest-src
+site-library-digest-vars
+site-library-index
+site-library-indexer
+site-library-metadata
+site-library-sitemap
+site-library-sitemap-create
+site-library-sitemap-done
+site-library-sitemap-file
+site-library-sitemap-src
+site-library-sitemap-src-file
+site-library-sitemap-vars
+site-library-sort-sh
+site-library-sort-yq
+site-_debug-output
+site-targets
+site-targets-cache
+site-targets-contents
+site-targets-contents-done
+site-targets-file
+site-targets-helpers
+site-targets-metainfo
+site-targets-metainfo-done
+site-targets-readtime
+site-targets-readtime-done
+site-targets-tagslist
+site-targets-tagslist-done
+subdirs-template
+targets-list
+_test-COMPOSER_INCLUDE-done
+_test-COMPOSER_INCLUDE-init
+_test-count
+_test-done
+_test-fail
+_test-find
+_test-hold
+_test-init
+_test-load
+_test-log
+_test-make
+_test-mark
+_test-pwd
+_test-run
+_test-speed-init
+_test-speed-init-load
+_test-headers
+_C
+_D
+_E
+_EXPORT_DIRECTORY
+_EXPORT_GIT_BRANCH
+_EXPORT_GIT_REPO
+_F
+_H
+_M
+_N
+_S</code></pre>
+<hr />
+<p><em>Happy Making!</em></p>
+</section>
+</section>
+</section>
+</body>
+</html>

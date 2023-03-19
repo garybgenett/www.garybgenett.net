@@ -1,0 +1,4 @@
+variables:
+  site-nav-left:
+    TAGLINE:
+      - _: "*Happy Making!*"

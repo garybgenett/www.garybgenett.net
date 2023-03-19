@@ -1,0 +1,123 @@
+variables:
+  title-prefix: Gary B. Genett
+  site-config:
+    homepage: http://www.garybgenett.net
+    brand: null
+    copyright: |
+      <!-- composer >> icon copyright >> -->
+      Copyright (c) 2022, Gary B. Genett
+    search_name: |
+      <!-- composer >> icon search >> -->
+    search_site: https://duckduckgo.com
+    search_call: q
+    search_form: |
+      <!-- composer >> form sites garybgenett.net >> -->
+      <!-- composer >> form ia web >> -->
+      <!-- composer >> form kae d >> -->
+      <!-- composer >> form ko 1 >> -->
+      <!-- composer >> form kp -1 >> -->
+      <!-- composer >> form kv 1 >> -->
+      <!-- composer >> form kz -1 >> -->
+    header: null
+    footer: null
+    css_shade: dark
+    copy_protect: 1
+    cols_break: lg
+    cols_sticky: 1
+    cols_order:
+      - 1
+      - 2
+      - 3
+    cols_reorder:
+      - 1
+      - 3
+      - 2
+    cols_size:
+      - 3
+      - 7
+      - 2
+    cols_resize:
+      - 6
+      - 12
+      - 6
+    metainfo_null: '*(none)*'
+    metainfo: '<date> :: <title>'
+    tagslist:
+      author:
+        title: Author
+        display: '*Authors: <|>, <|>*'
+      tags:
+        title: Tag
+        display: '*Tags: <|>, <|>*'
+    readtime: '*Reading time: <word> words, <time> minutes*'
+    readtime_wpm: 220
+  site-library:
+    folder: null
+    auto_update: null
+    digest_title: Latest Updates
+    digest_continue: '[...]'
+    digest_permalink: '*(permalink to full text)*'
+    digest_chars: 2048
+    digest_count: 20
+    digest_expanded: 0
+    digest_spacer: 1
+    sitemap_title: Site Map
+    sitemap_expanded: 0
+    sitemap_spacer: null
+    lists_expanded: null
+    lists_spacer: null
+  site-nav-top:
+    MENU:
+      - Latest: <composer_root>/index.html
+      - Projects: <composer_root>/projects/index.html
+      - Composer: <composer_root>/projects/composer/index.html
+      - GaryOS: <composer_root>/projects/gary-os/index.html
+    CONTENTS:
+      - Contents:
+          - contents 0
+    LIBRARY:
+      - History:
+          - library date
+      - Tags:
+          - library tags
+  site-nav-bottom:
+    PATH:
+      - Sitemap: <composer_root>/library/sitemap.html
+    INFO:
+      - tagslist tags
+  site-nav-left:
+    MENU: null
+    SPACE: null
+    CONTENTS:
+      - box-begin 0 Contents
+      - contents 0
+      - box-end
+  site-nav-right:
+    MENU:
+      - box-begin 0 Pages
+      - _: |
+          * [Latest](<composer_root>/index.html)
+          * [Projects](<composer_root>/projects/index.html)
+          * [Composer](<composer_root>/projects/composer/index.html)
+          * [GaryOS](<composer_root>/projects/gary-os/index.html)
+      - box-end
+    SPACE:
+      - spacer
+    LIBRARY:
+      - box-begin 0 History
+      - library date
+      - box-end
+      - spacer
+      - box-begin 0 Tags
+      - library tags
+      - box-end
+  site-info-top:
+    TEXT: null
+    INFO: null
+    ICON:
+      - icon github https://github.com/garybgenett Gary B. Genett
+  site-info-bottom:
+    TEXT: null
+    INFO:
+      - readtime
+    ICON: null
