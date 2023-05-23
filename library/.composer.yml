@@ -40,8 +40,8 @@ variables:
       - 6
       - 12
       - 6
-    metainfo_null: '*(none)*'
     metainfo: '<date> :: <title>'
+    metainfo_null: '*(none)*'
     tagslist:
       author:
         title: Author

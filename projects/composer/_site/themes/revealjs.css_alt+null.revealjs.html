@@ -746,7 +746,7 @@ height:	auto;
 <section id="title-slide">
   <h1 class="title">Composer CMS: Content Make System</h1>
   <p class="author">Gary B. Genett</p>
-  <p class="date">v3.1 (2023-03-18)</p>
+  <p class="date">v3.1 (2023-04-03)</p>
 </section>
 
 <section>
@@ -927,6 +927,22 @@ make all-all</code></pre>
 <tr class="even">
 <td style="text-align: left;">– [TeX Live] (pdf)</td>
 <td style="text-align: left;">2021 3.141592653-2.6-1.40.22</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Supporting Tools:</td>
+<td style="text-align: left;">&gt;&gt;</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">– Git SCM</td>
+<td style="text-align: left;">2.37.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">– GNU Diffutils</td>
+<td style="text-align: left;">3.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">– Rsync</td>
+<td style="text-align: left;">3.2.4</td>
 </tr>
 </tbody>
 </table>
@@ -1223,7 +1239,7 @@ make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
 <td style="text-align: left;"><code>(*)</code></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">[COMPOSER_PKG]</td>
+<td style="text-align: left;">[COMPOSER_SRC]</td>
 <td style="text-align: left;">Repositories and downloads</td>
 <td style="text-align: left;">[COMPOSER_DIR]/.sources</td>
 </tr>
@@ -1247,7 +1263,6 @@ make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
 <ul>
 <li><em><code>(*)</code> = configurable in <code>.composer.mk</code> or <code>.composer.yml</code></em></li>
 </ul>
-<p><em>These are internal variables only exposed within <code>.composer.mk</code> files.</em> <em>See [Configuration Settings] and [Custom Targets] for more details.</em></p>
 </section>
 <section class="slide level2">
 
@@ -1273,7 +1288,7 @@ make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
 </tr>
 <tr class="even">
 <td style="text-align: left;">[help-all]</td>
-<td style="text-align: left;">Console version of <code>README.md</code> (mostly identical)</td>
+<td style="text-align: left;">Console version of <code>README.md</code> (no reference sections)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">[template]</td>
@@ -1304,42 +1319,46 @@ make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
 <td style="text-align: left;">Do [site] recursively: including [COMPOSER_LIBRARY]</td>
 </tr>
 <tr class="even">
+<td style="text-align: left;">[site-clean]</td>
+<td style="text-align: left;">Remove [c_site] only: [COMPOSER_LIBRARY]/[COMPOSER_TMP]</td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;">[install]</td>
 <td style="text-align: left;">Current directory initialization: <code>Makefile</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">[install-all]</td>
 <td style="text-align: left;">Do [install] recursively (no overwrite)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">[install-force]</td>
 <td style="text-align: left;">Recursively force overwrite of <code>Makefile</code> files</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">[clean]</td>
 <td style="text-align: left;">Remove output files: [COMPOSER_TARGETS] :: [*-clean]</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">[clean-all]</td>
 <td style="text-align: left;">Do [clean] recursively: [COMPOSER_SUBDIRS]</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">[*-clean]</td>
 <td style="text-align: left;">Any targets named this way will also be run by [clean]</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">[all]</td>
 <td style="text-align: left;">Create output files: [COMPOSER_TARGETS] :: [*-all]</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">[all-all]</td>
 <td style="text-align: left;">Do [all] recursively: [COMPOSER_SUBDIRS]</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">[*-all]</td>
 <td style="text-align: left;">Any targets named this way will also be run by [all]</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">[list]</td>
 <td style="text-align: left;">Show updated files: <code>*</code>[COMPOSER_EXT] &gt;&gt; [COMPOSER_LOG]</td>
 </tr>
@@ -1393,6 +1412,14 @@ make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
 <td style="text-align: left;">Complete [config], including environment variables</td>
 </tr>
 <tr class="even">
+<td style="text-align: left;">[config-*]</td>
+<td style="text-align: left;">Export individual <a href="#/composer-variables">Composer Variables</a> values</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">[config-yml]</td>
+<td style="text-align: left;">JSON export of <code>.composer.yml</code> configuration</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">[targets]</td>
 <td style="text-align: left;">List all available targets for the current directory</td>
 </tr>
@@ -1415,6 +1442,34 @@ make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
 <tr class="odd">
 <td style="text-align: left;">[export]</td>
 <td style="text-align: left;">Synchronize <code>+Composer</code> export of [COMPOSER_ROOT]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">[export-git]</td>
+<td style="text-align: left;">Commit <code>+Composer</code> to [Git] branch, and push upstream</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">[site-library]</td>
+<td style="text-align: left;">Build or update the [COMPOSER_LIBRARY]</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">[site-list]</td>
+<td style="text-align: left;">Show [COMPOSER_LIBRARY] metadata for current directory</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">[site-list-all]</td>
+<td style="text-align: left;">Do [site-list] for entire directory tree</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">[site-list-list]</td>
+<td style="text-align: left;">Output existing metadata fields and values</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">[site-list-null]</td>
+<td style="text-align: left;">List files which are missing metadata fields</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">[site-list-*]</td>
+<td style="text-align: left;">Find and export all files named <code>*</code> in the tree</td>
 </tr>
 </tbody>
 </table>
