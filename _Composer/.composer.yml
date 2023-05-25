@@ -53,8 +53,6 @@ variables:
     MENU:
       - Latest:				<composer_root>/index.html
       - Projects:			<composer_root>/projects/index.html
-      - Composer:			<composer_root>/projects/composer/index.html
-      - GaryOS:				<composer_root>/projects/gary-os/index.html
     CONTENTS:
       - Contents:
         - contents 0
@@ -80,15 +78,7 @@ variables:
 
   site-nav-right:
     MENU:
-      - box-begin 0 Pages
-      - _: |
-          * [Latest](<composer_root>/index.html)
-          * [Projects](<composer_root>/projects/index.html)
-          * [Composer](<composer_root>/projects/composer/index.html)
-          * [GaryOS](<composer_root>/projects/gary-os/index.html)
-      - box-end
     SPACE:
-      - spacer
     LIBRARY:
       - box-begin 0 History
       - library date
@@ -102,7 +92,8 @@ variables:
     TEXT:
     INFO:
     ICON:
-      - icon github https://github.com/garybgenett Gary B. Genett
+      - icon <composer_root>/../garygearguy/favicon.png author http://www.garygearguy.com Gary the Gear Guy
+      - icon github https://github.com/garybgenett Gary B. Genett on Github
 
   site-info-bottom:
     TEXT:

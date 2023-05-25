@@ -9,7 +9,7 @@ override PROJECTS			:= composer gary-os
 
 ########################################
 
-override COMPOSER_IGNORES		:= index.md
+#>override COMPOSER_IGNORES		:= index.md
 
 ################################################################################
 
