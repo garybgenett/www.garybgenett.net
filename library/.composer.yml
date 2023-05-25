@@ -106,6 +106,9 @@ variables:
     INFO: null
     ICON:
       - icon <composer_root>/../garygearguy/favicon.png author http://www.garygearguy.com Gary the Gear Guy
+      - icon <composer_root>/../tresobis/favicon.png project http://www.tresobis.org Tresobis
+      - icon <composer_root>/projects/composer/artifacts/images/icon-v1.0.png project <composer_root>/projects/composer/index.html Composer CMS
+      - icon <composer_root>/projects/gary-os/artifacts/images/icon-v6.0.png project <composer_root>/projects/gary-os/index.html GaryOS
       - icon github https://github.com/garybgenett Gary B. Genett on Github
   site-info-bottom:
     TEXT: null
