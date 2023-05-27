@@ -50,10 +50,10 @@ variables:
       - Contents:
         - contents 0
     LIBRARY:
-      - History:
-        - library date
       - Tags:
         - library tags
+      - History:
+        - library date
 
   site-nav-bottom:
     PATH:
@@ -73,12 +73,12 @@ variables:
     MENU:
     SPACE:
     LIBRARY:
-      - box-begin 0 History
-      - library date
-      - box-end
-      - spacer
       - box-begin 0 Tags
       - library tags
+      - box-end
+      - spacer
+      - box-begin 0 History
+      - library date
       - box-end
 
   site-info-top:

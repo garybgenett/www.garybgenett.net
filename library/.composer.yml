@@ -74,10 +74,10 @@ variables:
       - Contents:
           - contents 0
     LIBRARY:
-      - History:
-          - library date
       - Tags:
           - library tags
+      - History:
+          - library date
   site-nav-bottom:
     PATH:
       - Sitemap: <composer_root>/library/sitemap.html
@@ -94,12 +94,12 @@ variables:
     MENU: null
     SPACE: null
     LIBRARY:
-      - box-begin 0 History
-      - library date
-      - box-end
-      - spacer
       - box-begin 0 Tags
       - library tags
+      - box-end
+      - spacer
+      - box-begin 0 History
+      - library date
       - box-end
   site-info-top:
     TEXT: null
