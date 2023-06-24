@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content />
-  <meta name="dcterms.date" content="2023-05-25" />
+  <meta name="dcterms.date" content="2023-06-24" />
   <title>Gary B. Genett – Composer CMS v3.1</title>
   <style>
     code{white-space: pre-wrap;}
@@ -12770,11 +12770,27 @@ width:	auto;
 }
 .composer-display {
 height:	auto;
-width:	100%;
+max-width:	100%;
 }
 .composer-display-item {
 height:	auto;
 max-width:	128px;
+}
+.composer-frame {
+#>>	height:	auto;
+max-height:	70vh;
+height:	512px;
+max-width:	90%;
+width:	90%;
+frameborder:	0;
+}
+.composer-frame-youtube {
+#>>	height:	315px;
+#>>	width:	560px;
+height:	384px;
+#>>	allow:	"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;";
+allow:	"accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;";
+allowfullscreen;
 }
 
 .composer-menu-div::before {
@@ -12817,8 +12833,8 @@ word-wrap:	normal;
 }
 img,
 video {
-max-width:	100%;
 height:	auto;
+max-width:	100%;
 }
 
 h1	{ font-size: 2rem; }
@@ -19727,7 +19743,7 @@ margin-top:	0px;
 <a href="#document-formatting" class="dropdown-item">Document Formatting</a>
 </li>
 <li>
-<a href="#workingnownowdocs" class="dropdown-item">#WORKING:NOW:NOW:DOCS###########################################################</a>
+<a href="#workingnownowdocsfix" class="dropdown-item">#WORKING:NOW:NOW:DOCS:FIX#######################################################</a>
 <ul class="composer-menu-list">
 <li>
 <a href="#static-websites" class="dropdown-item">Static Websites</a>
@@ -20157,7 +20173,7 @@ Contents
 <li><a href="#next-steps">Next Steps</a></li>
 </ul></li>
 <li><a href="#document-formatting">Document Formatting</a></li>
-<li><a href="#workingnownowdocs">#WORKING:NOW:NOW:DOCS###########################################################</a>
+<li><a href="#workingnownowdocsfix">#WORKING:NOW:NOW:DOCS:FIX#######################################################</a>
 <ul>
 <li><a href="#static-websites">Static Websites</a></li>
 </ul></li>
@@ -20650,8 +20666,8 @@ Document Formatting
 </div>
 <div class="card-body">
 <!-- site-box-begin :: finish >> 2 Document Formatting -->
-<section id="workingnownowdocs" class="level2">
-<h2>#WORKING:NOW:NOW:DOCS###########################################################</h2>
+<section id="workingnownowdocsfix" class="level2">
+<h2>#WORKING:NOW:NOW:DOCS:FIX#######################################################</h2>
 <p>As outlined in <a href="#overview">Overview</a> and <a href="#principles">Principles</a>, a primary goal of <a href="http://www.garybgenett.net/projects/composer">Composer</a> is to produce beautiful and professional output. <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a> does reasonably well at this, and yet its primary focus is document conversion, not document formatting. <a href="http://www.garybgenett.net/projects/composer">Composer</a> fills this gap by specifically tuning a select list of the most commonly used document formats.</p>
 <p>The input <a href="https://pandoc.org/MANUAL.html#pandocs-markdown">Markdown</a> format used by <a href="http://www.garybgenett.net/projects/composer">Composer</a> is the <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a> default. However, the <a href="#pandoc-extensions">Pandoc Extensions</a> list has been modified slightly. See that section and the <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a> <a href="https://pandoc.org/MANUAL.html#pandocs-markdown">Markdown</a> documentation for the exact list and details for each.</p>
 <p>Further options for each document type are in <a href="#formatting-variables">Formatting Variables</a>. All improvements not exposed as variables will apply to all documents created with a given instance of <a href="http://www.garybgenett.net/projects/composer">Composer</a>.</p>
@@ -21859,7 +21875,7 @@ make -f .../.Composer/Makefile _release</code></pre>
 <li>For the <a href="#commit--commit-all--commit-list">commit-list</a> target specifically, <a href="#c_type--c_base--c_list">c_list</a> is repurposed to select the limited list of files and/or directories that should be committed. All selected files and directories must exist in the current directory or somewhere in the subdirectory tree below it. There is no option to skip the <code>$EDITOR</code> with this target.</li>
 </ul>
 <p>Commit title format:</p>
-<pre><code>[Composer CMS v3.1 :: 2023-04-06T21:58:45-07:00]</code></pre>
+<pre><code>[Composer CMS v3.1 :: 2023-06-24T01:21:13-07:00]</code></pre>
 <p>Example using <a href="#commit--commit-all--commit-list">commit-list</a> with <a href="#c_type--c_base--c_list">c_list</a>:</p>
 <pre><code>make commit-list c_list=&quot;Makefile artifacts&quot;</code></pre>
 </section>
@@ -22143,8 +22159,8 @@ include $(COMPOSER_TEACHER)</code></pre>
 #       - 6
 #       - 12
 #       - 6
-#     metainfo_null: &#39;*(none)*&#39;
 #     metainfo: &#39;&lt;date&gt; :: &lt;title&gt;&lt;|&gt; -- &lt;author|; &gt;&#39;
+#     metainfo_null: &#39;*(none)*&#39;
 #     tagslist:
 #       author:
 #         title: Author
@@ -22160,6 +22176,8 @@ include $(COMPOSER_TEACHER)</code></pre>
 #     digest_title: Latest Updates
 #     digest_continue: &#39;[...]&#39;
 #     digest_permalink: &#39;*(permalink to full text)*&#39;
+#     digest_header: null
+#     digest_footer: null
 #     digest_chars: 1024
 #     digest_count: 10
 #     digest_expanded: 0
@@ -22167,6 +22185,8 @@ include $(COMPOSER_TEACHER)</code></pre>
 #     sitemap_title: Site Map
 #     sitemap_expanded: 0
 #     sitemap_spacer: 1
+#     lists_header: null
+#     lists_footer: null
 #     lists_expanded: 0
 #     lists_spacer: 1
 #   site-nav-top: null
@@ -22178,7 +22198,7 @@ include $(COMPOSER_TEACHER)</code></pre>
 <p>Use the <a href="#template--template-yml--template-md">template-md</a> target to create new <code>markdown</code> files:</p>
 <pre><code>---
 title: &quot;Composer CMS: Content Make System&quot;
-date: 2023-04-06
+date: 2023-06-24
 author:
   - Gary B. Genett
 tags:
@@ -22275,8 +22295,8 @@ variables:
 #&gt;&gt; cols_size: [ 3, 7, 2 ]
 #&gt;&gt; cols_resize: [ 6, 12, 6 ]
 
-#&gt;&gt; metainfo_null: &quot;*(none)*&quot;
 #&gt;&gt; metainfo: &quot;&lt;date&gt; :: &lt;title&gt;&lt;|&gt; -- &lt;author|; &gt;&quot;
+#&gt;&gt; metainfo_null: &quot;*(none)*&quot;
 #&gt;&gt; tagslist:
 #&gt;&gt;   author:
 #&gt;&gt;     title: &quot;Author&quot;
@@ -22297,6 +22317,8 @@ variables:
 #&gt;&gt; digest_title: &quot;Latest Updates&quot;
 #&gt;&gt; digest_continue: &quot;[...]&quot;
 #&gt;&gt; digest_permalink: &quot;*(permalink to full text)*&quot;
+#&gt;&gt; digest_header: null
+#&gt;&gt; digest_footer: null
 #&gt;&gt; digest_chars: 1024
 #&gt;&gt; digest_count: 10
 #&gt;&gt; digest_expanded: 0
@@ -22306,6 +22328,8 @@ variables:
 #&gt;&gt; sitemap_expanded: 0
 #&gt;&gt; sitemap_spacer: 1
 
+#&gt;&gt; lists_header: null
+#&gt;&gt; lists_footer: null
 #&gt;&gt; lists_expanded: 0
 #&gt;&gt; lists_spacer: 1
 
@@ -22427,7 +22451,8 @@ variables:
   site-info-top:
 
     TEXT:
-      - TOP TEXT
+      - _: |
+          TOP TEXT
     INFO:
 #&gt;&gt;   - metainfo
 #&gt;&gt;   - tagslist author
@@ -22435,7 +22460,7 @@ variables:
 #&gt;&gt;   - readtime
     ICON:
       - icon github https://github.com/garybgenett/composer Composer CMS
-#&gt;&gt;   - |
+#&gt;&gt;   - _: |
 #&gt;&gt;       &lt;!-- composer &gt;&gt; icon gpl &gt;&gt; --&gt;
 #&gt;&gt;       &lt;!-- composer &gt;&gt; icon cc-by-nc-nd &gt;&gt; --&gt;
 #&gt;&gt;       &lt;!-- composer &gt;&gt; icon copyright &gt;&gt; --&gt;
@@ -22444,7 +22469,8 @@ variables:
   site-info-bottom:
 
     TEXT:
-      - BOTTOM TEXT
+      - _: |
+          BOTTOM TEXT
     INFO:
 #&gt;&gt;   - metainfo
 #&gt;&gt;   - tagslist author
@@ -22685,6 +22711,7 @@ DESC_LINT
 DESC_LPDF
 DESC_PPTX
 DESC_PRES
+DESC_SITE
 DESC_TEXT
 DIFF
 DIFFUTILS_VER
@@ -22803,6 +22830,12 @@ LIBRARY_DIGEST_COUNT_ALT
 LIBRARY_DIGEST_EXPANDED
 LIBRARY_DIGEST_EXPANDED_ALT
 LIBRARY_DIGEST_EXPANDED_MOD
+LIBRARY_DIGEST_FOOTER
+LIBRARY_DIGEST_FOOTER_ALT
+LIBRARY_DIGEST_FOOTER_MOD
+LIBRARY_DIGEST_HEADER
+LIBRARY_DIGEST_HEADER_ALT
+LIBRARY_DIGEST_HEADER_MOD
 LIBRARY_DIGEST_PERMALINK
 LIBRARY_DIGEST_PERMALINK_ALT
 LIBRARY_DIGEST_SPACER
@@ -22814,6 +22847,12 @@ LIBRARY_FOLDER_ALT
 LIBRARY_LISTS_EXPANDED
 LIBRARY_LISTS_EXPANDED_ALT
 LIBRARY_LISTS_EXPANDED_MOD
+LIBRARY_LISTS_FOOTER
+LIBRARY_LISTS_FOOTER_ALT
+LIBRARY_LISTS_FOOTER_MOD
+LIBRARY_LISTS_HEADER
+LIBRARY_LISTS_HEADER_ALT
+LIBRARY_LISTS_HEADER_MOD
 LIBRARY_LISTS_SPACER
 LIBRARY_LISTS_SPACER_ALT
 LIBRARY_SITEMAP_EXPANDED
@@ -23047,6 +23086,7 @@ RSYNC
 RSYNC_VER
 SED
 SED_ESCAPE_COLOR
+SED_ESCAPE_CONTROL
 SED_ESCAPE_LIST
 SED_VER
 SHELL
@@ -23237,6 +23277,7 @@ site-library-digest
 site-library-digest-create
 site-library-digest-files
 site-library-digest-list
+site-library-digest-null
 site-library-digest-src
 site-library-digest-vars
 site-library-index
@@ -23455,7 +23496,7 @@ History
 <!-- site-info-data-list :: start >> info-bottom.["INFO"][0] -->
 <p class="composer-link navbar-text me-3">
 <!-- composer >> readtime-list >> -->
-<em>Reading time: 8040 words, 36 minutes</em>
+<em>Reading time: 8084 words, 36 minutes</em>
 </p>
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"][0] -->
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"] -->

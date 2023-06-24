@@ -9211,6 +9211,86 @@ scrollbar-color:	rgba(var(--bs-secondary-rgb)) transparent;
 --selection:	var(--solarized-violet);
 --variable:	var(--solarized-cyan);
 }
+.composer-form {
+background-color:	#eee8d5;
+background-color:	var(--background);
+color:	#657b83;
+color:	var(--text-main);
+border:	1px solid #93a1a1;
+border:	1px solid var(--border);
+}
+@media (prefers-color-scheme: dark) {
+.composer-form {
+border:	1px solid #586e75;
+border:	1px solid var(--border);
+}
+}
+@media (prefers-color-scheme: dark) {
+.composer-form {
+border:	1px solid #586e75;
+border:	1px solid var(--border);
+}
+}
+@media (prefers-color-scheme: dark) {
+.composer-form {
+border:	1px solid #586e75;
+border:	1px solid var(--border);
+}
+}
+@media (prefers-color-scheme: dark) {
+.composer-form {
+border:	1px solid #586e75;
+border:	1px solid var(--border);
+}
+}
+@media (prefers-color-scheme: dark) {
+.composer-form {
+color:	#839496;
+color:	var(--text-main);
+}
+}
+@media (prefers-color-scheme: dark) {
+.composer-form {
+color:	#839496;
+color:	var(--text-main);
+}
+}
+@media (prefers-color-scheme: dark) {
+.composer-form {
+color:	#839496;
+color:	var(--text-main);
+}
+}
+@media (prefers-color-scheme: dark) {
+.composer-form {
+color:	#839496;
+color:	var(--text-main);
+}
+}
+@media (prefers-color-scheme: dark) {
+.composer-form {
+background-color:	#073642;
+background-color:	var(--background);
+}
+}
+@media (prefers-color-scheme: dark) {
+.composer-form {
+background-color:	#073642;
+background-color:	var(--background);
+}
+}
+@media (prefers-color-scheme: dark) {
+.composer-form {
+background-color:	#073642;
+background-color:	var(--background);
+}
+}
+@media (prefers-color-scheme: dark) {
+.composer-form {
+background-color:	#073642;
+background-color:	var(--background);
+}
+}
 .navbar {
 background-color:	#eee8d5;
 background-color:	var(--background);
@@ -12263,6 +12343,86 @@ text-decoration: underline;
 --selection:	var(--solarized-violet);
 --variable:	var(--solarized-cyan);
 }
+.composer-form {
+background-color:	#073642;
+background-color:	var(--background);
+color:	#839496;
+color:	var(--text-main);
+border:	1px solid #586e75;
+border:	1px solid var(--border);
+}
+@media (prefers-color-scheme: dark) {
+.composer-form {
+border:	1px solid #586e75;
+border:	1px solid var(--border);
+}
+}
+@media (prefers-color-scheme: dark) {
+.composer-form {
+border:	1px solid #586e75;
+border:	1px solid var(--border);
+}
+}
+@media (prefers-color-scheme: dark) {
+.composer-form {
+border:	1px solid #586e75;
+border:	1px solid var(--border);
+}
+}
+@media (prefers-color-scheme: dark) {
+.composer-form {
+border:	1px solid #586e75;
+border:	1px solid var(--border);
+}
+}
+@media (prefers-color-scheme: dark) {
+.composer-form {
+color:	#839496;
+color:	var(--text-main);
+}
+}
+@media (prefers-color-scheme: dark) {
+.composer-form {
+color:	#839496;
+color:	var(--text-main);
+}
+}
+@media (prefers-color-scheme: dark) {
+.composer-form {
+color:	#839496;
+color:	var(--text-main);
+}
+}
+@media (prefers-color-scheme: dark) {
+.composer-form {
+color:	#839496;
+color:	var(--text-main);
+}
+}
+@media (prefers-color-scheme: dark) {
+.composer-form {
+background-color:	#073642;
+background-color:	var(--background);
+}
+}
+@media (prefers-color-scheme: dark) {
+.composer-form {
+background-color:	#073642;
+background-color:	var(--background);
+}
+}
+@media (prefers-color-scheme: dark) {
+.composer-form {
+background-color:	#073642;
+background-color:	var(--background);
+}
+}
+@media (prefers-color-scheme: dark) {
+.composer-form {
+background-color:	#073642;
+background-color:	var(--background);
+}
+}
 .navbar {
 background-color:	#073642;
 background-color:	var(--background);
@@ -12506,6 +12666,11 @@ color:	var(--solarized-magenta);
   <style type="text/css">
 
 
+.composer-form {
+background-color:	rgba(var(--bs-dark-rgb));
+color:	rgba(var(--bs-secondary-rgb));
+border:	1px solid rgba(var(--bs-secondary-rgb));
+}
 .navbar,
 .dropdown-menu,
 .accordion-button,
@@ -12667,11 +12832,27 @@ width:	auto;
 }
 .composer-display {
 height:	auto;
-width:	100%;
+max-width:	100%;
 }
 .composer-display-item {
 height:	auto;
 max-width:	128px;
+}
+.composer-frame {
+#>>	height:	auto;
+max-height:	70vh;
+height:	512px;
+max-width:	90%;
+width:	90%;
+frameborder:	0;
+}
+.composer-frame-youtube {
+#>>	height:	315px;
+#>>	width:	560px;
+height:	384px;
+#>>	allow:	"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;";
+allow:	"accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;";
+allowfullscreen;
 }
 
 .composer-menu-div::before {
@@ -12714,8 +12895,8 @@ word-wrap:	normal;
 }
 img,
 video {
-max-width:	100%;
 height:	auto;
+max-width:	100%;
 }
 
 h1	{ font-size: 2rem; }
@@ -19912,7 +20093,7 @@ TOP TEXT
 <!-- site-info-data :: finish >> top -->
 <!-- site-search :: start >> -->
 <form class="nav-item d-flex form-inline" action="https://duckduckgo.com">
-<input class="form-control form-control-sm me-1" type="text" name="q"> <button type="submit" class="btn btn-sm">
+<input class="composer-form form-control form-control-sm me-1" type="text" name="q"> <button type="submit" class="btn btn-sm">
 <!-- site-icon :: start >> search --> <img class="composer-icon" alt="Search" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tISBGb250IEF3ZXNvbWUgRnJlZSA2LjEuMiBieSBAZm9udGF3ZXNvbWUgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbSBMaWNlbnNlIC0gaHR0cHM6Ly9mb250YXdlc29tZS5jb20vbGljZW5zZS9mcmVlIChJY29uczogQ0MgQlkgNC4wLCBGb250czogU0lMIE9GTCAxLjEsIENvZGU6IE1JVCBMaWNlbnNlKSBDb3B5cmlnaHQgMjAyMiBGb250aWNvbnMsIEluYy4gLS0+PHBhdGggZD0iTTUwMC4zIDQ0My43bC0xMTkuNy0xMTkuN2MyNy4yMi00MC40MSA0MC42NS05MC45IDMzLjQ2LTE0NC43QzQwMS44IDg3Ljc5IDMyNi44IDEzLjMyIDIzNS4yIDEuNzIzQzk5LjAxLTE1LjUxLTE1LjUxIDk5LjAxIDEuNzI0IDIzNS4yYzExLjYgOTEuNjQgODYuMDggMTY2LjcgMTc3LjYgMTc4LjljNTMuOCA3LjE4OSAxMDQuMy02LjIzNiAxNDQuNy0zMy40NmwxMTkuNyAxMTkuN2MxNS42MiAxNS42MiA0MC45NSAxNS42MiA1Ni41NyAwQzUxNS45IDQ4NC43IDUxNS45IDQ1OS4zIDUwMC4zIDQ0My43ek03OS4xIDIwOGMwLTcwLjU4IDU3LjQyLTEyOCAxMjgtMTI4czEyOCA1Ny40MiAxMjggMTI4YzAgNzAuNTgtNTcuNDIgMTI4LTEyOCAxMjhTNzkuMSAyNzguNiA3OS4xIDIwOHoiLz48L3N2Zz4=">
 <!-- site-icon :: finish >> search --> </button>
 <!-- site-form :: start >> sites garybgenett.net --> <input type="hidden" name="sites" value="garybgenett.net">
@@ -20057,7 +20238,7 @@ CONTENTS
 <!-- site-nav-side-list :: finish >> nav-left.["CONTENTS"][3] -->
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][4] -->
 <!-- composer >> readtime-list >> -->
-<p><em>Reading time: 2253 words, 10 minutes</em></p>
+<p><em>Reading time: 2246 words, 10 minutes</em></p>
 <!-- site-nav-side-list :: finish >> nav-left.["CONTENTS"][4] -->
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][5] -->
 <!-- site-box-end :: start >> -->
@@ -20445,124 +20626,39 @@ track changes setting for docx; one of <code>&quot;accept-changes&quot;</code>, 
 <td style="text-align: left;">.r</td>
 <td style="text-align: left;"><code>Rscript</code></td>
 </tr>
-<tr class="even">
-<td style="text-align: left;">– site-file :: f</td>
-<td style="text-align: left;">inish &gt;&gt; filters.md –&gt;</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">– site-targets &gt;</td>
-<td style="text-align: left;">&gt; …/pandoc/doc/.composer.tmp/site-cache.column-end.html –&gt;</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">– site-column-en</td>
-<td style="text-align: left;">d :: start &gt;&gt; –&gt;</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">div&gt;</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">– site-column-en</td>
-<td style="text-align: left;">d :: finish &gt;&gt; –&gt;</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">– site-targets &gt;</td>
-<td style="text-align: left;">&gt; …/pandoc/doc/.composer.tmp/site-cache.nav-right.html –&gt;</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">– site-nav-side</td>
-<td style="text-align: left;">:: start &gt;&gt; right –&gt;</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">– site-column-be</td>
-<td style="text-align: left;">gin :: start &gt;&gt; right –&gt;</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">iv class=“d-flex</td>
-<td style="text-align: left;">flex-column order-lg-3 order-2 col-lg-2 col-6 d-lg-block d-block composer-sticky p-2”&gt;</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">– site-column-be</td>
-<td style="text-align: left;">gin :: finish &gt;&gt; right –&gt;</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">– site-nav-side-</td>
-<td style="text-align: left;">list :: start &gt;&gt; nav-right.[“BEGIN”] –&gt;</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">– site-nav-side-</td>
-<td style="text-align: left;">list :: finish &gt;&gt; nav-right.[“BEGIN”] –&gt;</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">– site-nav-side-</td>
-<td style="text-align: left;">list :: start &gt;&gt; nav-right.[“MENU”] –&gt;</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">– site-nav-side-</td>
-<td style="text-align: left;">list :: start &gt;&gt; nav-right.[“MENU”][0] –&gt;</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">– site-fold-begi</td>
-<td style="text-align: left;">n :: start &gt;&gt; 0 . 0 RIGHT FOLD –&gt;</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">iv class=“accordi</td>
-<td style="text-align: left;">on”&gt;</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">iv class=“accordi</td>
-<td style="text-align: left;">on-item”&gt;</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">iv class=“accordi</td>
-<td style="text-align: left;">on-header” id=“right-fold”&gt;</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">utton class=“acco</td>
-<td style="text-align: left;">rdion-button” type=“button” data-bs-toggle=“collapse” data-bs-target=“#toggle-RIGHTFOLD”&gt;</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">6 class=“composer</td>
-<td style="text-align: left;">-header”&gt;</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">GHT FOLD</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">h6&gt;</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">button&gt;</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">div&gt;</td>
-<td style="text-align: left;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">iv id=“toggle-RIG</td>
-<td style="text-align: left;">HTFOLD” class=“accordion-collapse collapse show”&gt;</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">iv class=“accordi</td>
-<td style="text-align: left;">on-body”&gt;</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">– site-fold-begi</td>
-<td style="text-align: left;">n :: finish &gt;&gt; 0 . 0 RIGHT FOLD –&gt;</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">– site-nav-side-</td>
-<td style="text-align: left;">list :: finish &gt;&gt; nav-right.[“MENU”][0] –&gt;</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">– site-nav-side-</td>
-<td style="text-align: left;">list :: start &gt;&gt; nav-right.[“MENU”][1] –&gt;</td>
-</tr>
 </tbody>
 </table>
+<!-- site-file :: finish >> filters.md -->
+<!-- site-targets >> .../pandoc/doc/.composer.tmp/site-cache.column-end.html -->
+<!-- site-column-end :: start >> -->
+</section>
+</section>
+</div>
+<!-- site-column-end :: finish >> -->
+<!-- site-targets >> .../pandoc/doc/.composer.tmp/site-cache.nav-right.html -->
+<!-- site-nav-side :: start >> right -->
+<!-- site-column-begin :: start >> right -->
+<div class="d-flex flex-column order-lg-3 order-2 col-lg-2 col-6 d-lg-block d-block composer-sticky p-2">
+<!-- site-column-begin :: finish >> right -->
+<!-- site-nav-side-list :: start >> nav-right.["BEGIN"] -->
+<!-- site-nav-side-list :: finish >> nav-right.["BEGIN"] -->
+<!-- site-nav-side-list :: start >> nav-right.["MENU"] -->
+<!-- site-nav-side-list :: start >> nav-right.["MENU"][0] -->
+<!-- site-fold-begin :: start >> 0 . 0 RIGHT FOLD -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="right-fold" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-RIGHTFOLD">
+<h6 class="composer-header">
+RIGHT FOLD
+</h6>
+</button>
+</div>
+<div id="toggle-RIGHTFOLD" class="accordion-collapse collapse show">
+<div class="accordion-body">
+<!-- site-fold-begin :: finish >> 0 . 0 RIGHT FOLD -->
+<!-- site-nav-side-list :: finish >> nav-right.["MENU"][0] -->
+<!-- site-nav-side-list :: start >> nav-right.["MENU"][1] -->
 <ul>
 <li>ITEM 1</li>
 <li>ITEM 2</li>
@@ -20571,8 +20667,6 @@ track changes setting for docx; one of <code>&quot;accept-changes&quot;</code>, 
 <!-- site-nav-side-list :: finish >> nav-right.["MENU"][1] -->
 <!-- site-nav-side-list :: start >> nav-right.["MENU"][2] -->
 <!-- site-fold-end :: start >> -->
-</section>
-</section>
 </div>
 </div>
 </div>
@@ -21095,7 +21189,7 @@ BOTTOM TEXT
 <!-- site-info-data-list :: start >> info-bottom.["INFO"][0] -->
 <p class="composer-link navbar-text me-3">
 <!-- composer >> readtime-list >> -->
-<em>Reading time: 2253 words, 10 minutes</em>
+<em>Reading time: 2246 words, 10 minutes</em>
 </p>
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"][0] -->
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"] -->

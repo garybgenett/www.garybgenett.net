@@ -6,8 +6,8 @@ variables:
   title-prefix:				"Gary B. Genett"
 
 ########################################
-
   site-config:
+
     homepage:				http://www.garybgenett.net
     brand:				null
     copyright: |
@@ -31,18 +31,22 @@ variables:
 
     metainfo:				"<date> :: <title>"
 
+########################################
   site-library:
+
     folder:				library
     auto_update:			null #>>> 1
-    digest_chars:			2048
+
     digest_count:			20
+
     sitemap_spacer:			null
+
     lists_expanded:			null
     lists_spacer:			null
 
 ########################################
-
   site-nav-top:
+
     MENU:
       - Latest:				<composer_root>/index.html
       - Projects:			<composer_root>/projects/index.html
@@ -55,13 +59,17 @@ variables:
       - History:
         - library date
 
+########################################
   site-nav-bottom:
+
     PATH:
       - Sitemap:			<composer_root>/library/sitemap.html
     INFO:
       - tagslist tags
 
+########################################
   site-nav-left:
+
     MENU:
     SPACE:
     CONTENTS:
@@ -69,7 +77,9 @@ variables:
       - contents 0
       - box-end
 
+########################################
   site-nav-right:
+
     MENU:
     SPACE:
     LIBRARY:
@@ -81,7 +91,9 @@ variables:
       - library date
       - box-end
 
+########################################
   site-info-top:
+
     TEXT:
     INFO:
     ICON:
@@ -91,7 +103,9 @@ variables:
       - icon <composer_root>/projects/gary-os/artifacts/images/icon-v6.0.png project <composer_root>/projects/gary-os/index.html GaryOS
       - icon github https://github.com/garybgenett Gary B. Genett on Github
 
+########################################
   site-info-bottom:
+
     TEXT:
     INFO:
       - readtime

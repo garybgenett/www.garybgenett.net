@@ -730,8 +730,8 @@ word-wrap:	normal;
 }
 img,
 video {
-max-width:	100%;
 height:	auto;
+max-width:	100%;
 }
 
 
@@ -745,7 +745,7 @@ height:	auto;
 <section id="title-slide">
   <h1 class="title">Composer CMS: Content Make System</h1>
   <p class="author">Gary B. Genett</p>
-  <p class="date">v3.1 (2023-04-03)</p>
+  <p class="date">v3.1 (2023-06-24)</p>
 </section>
 
 <section>
@@ -924,7 +924,7 @@ make all-all</code></pre>
 <td style="text-align: left;">4.24.2</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">– [TeX Live] (pdf)</td>
+<td style="text-align: left;">– [TeX Live] [PDF]</td>
 <td style="text-align: left;">2021 3.141592653-2.6-1.40.22</td>
 </tr>
 <tr class="odd">
@@ -932,15 +932,15 @@ make all-all</code></pre>
 <td style="text-align: left;">&gt;&gt;</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">– Git SCM</td>
+<td style="text-align: left;">– [Git SCM]</td>
 <td style="text-align: left;">2.37.4</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">– GNU Diffutils</td>
+<td style="text-align: left;">– [GNU Diffutils]</td>
 <td style="text-align: left;">3.8</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">– Rsync</td>
+<td style="text-align: left;">– [Rsync]</td>
 <td style="text-align: left;">3.2.4</td>
 </tr>
 </tbody>
@@ -977,62 +977,62 @@ make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">[c_site] ~ S</td>
+<td style="text-align: left;">[c_site] ~ <code>S</code></td>
 <td style="text-align: left;">Enable [Static Websites]</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">[c_type] ~ T</td>
+<td style="text-align: left;">[c_type] ~ <code>T</code></td>
 <td style="text-align: left;">Desired output format</td>
 <td style="text-align: left;">html</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">[c_base] ~ B</td>
+<td style="text-align: left;">[c_base] ~ <code>B</code></td>
 <td style="text-align: left;">Base of output file</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">[c_list] ~ L</td>
+<td style="text-align: left;">[c_list] ~ <code>L</code></td>
 <td style="text-align: left;">List of input files(s)</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">[c_lang] ~ a</td>
+<td style="text-align: left;">[c_lang] ~ <code>a</code></td>
 <td style="text-align: left;">Language for document headers</td>
 <td style="text-align: left;">en-US</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">[c_logo] ~ g</td>
+<td style="text-align: left;">[c_logo] ~ <code>g</code></td>
 <td style="text-align: left;">Logo image ([HTML] formats)</td>
 <td style="text-align: left;">logo.img</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">[c_icon] ~ i</td>
+<td style="text-align: left;">[c_icon] ~ <code>i</code></td>
 <td style="text-align: left;">Icon image ([HTML] formats)</td>
 <td style="text-align: left;">icon.img</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">[c_css] ~ c</td>
+<td style="text-align: left;">[c_css] ~ <code>c</code></td>
 <td style="text-align: left;">Location of CSS file</td>
 <td style="text-align: left;">theme.html-default.css</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">[c_toc] ~ t</td>
+<td style="text-align: left;">[c_toc] ~ <code>t</code></td>
 <td style="text-align: left;">Table of contents depth</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">[c_level] ~ l</td>
+<td style="text-align: left;">[c_level] ~ <code>l</code></td>
 <td style="text-align: left;">Chapter/slide header level</td>
 <td style="text-align: left;">2</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">[c_margin] ~ m</td>
+<td style="text-align: left;">[c_margin] ~ <code>m</code></td>
 <td style="text-align: left;">Size of margins ([PDF])</td>
 <td style="text-align: left;">0.8in</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">[c_options] ~ o</td>
+<td style="text-align: left;">[c_options] ~ <code>o</code></td>
 <td style="text-align: left;">Custom Pandoc options</td>
 <td style="text-align: left;"></td>
 </tr>
@@ -1041,50 +1041,50 @@ make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Values (c_type)</th>
+<th style="text-align: left;">Values ([c_type])</th>
 <th style="text-align: left;">Format</th>
 <th style="text-align: left;">Extension</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">html</td>
-<td style="text-align: left;">HyperText Markup Language</td>
+<td style="text-align: left;"><code>html</code></td>
+<td style="text-align: left;">[HyperText Markup Language]</td>
 <td style="text-align: left;">*.html</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">pdf</td>
-<td style="text-align: left;">Portable Document Format</td>
+<td style="text-align: left;"><code>pdf</code></td>
+<td style="text-align: left;">[Portable Document Format]</td>
 <td style="text-align: left;">*.pdf</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">epub</td>
-<td style="text-align: left;">Electronic Publication</td>
+<td style="text-align: left;"><code>epub</code></td>
+<td style="text-align: left;">[Electronic Publication]</td>
 <td style="text-align: left;">*.epub</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">revealjs</td>
-<td style="text-align: left;">Reveal.js Presentation</td>
+<td style="text-align: left;"><code>revealjs</code></td>
+<td style="text-align: left;">[Reveal.js Presentation]</td>
 <td style="text-align: left;">*.revealjs.html</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">docx</td>
-<td style="text-align: left;">Microsoft Word</td>
+<td style="text-align: left;"><code>docx</code></td>
+<td style="text-align: left;">[Microsoft Word]</td>
 <td style="text-align: left;">*.docx</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">pptx</td>
-<td style="text-align: left;">Microsoft PowerPoint</td>
+<td style="text-align: left;"><code>pptx</code></td>
+<td style="text-align: left;">[Microsoft PowerPoint]</td>
 <td style="text-align: left;">*.pptx</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">text</td>
-<td style="text-align: left;">Plain Text (well-formatted)</td>
+<td style="text-align: left;"><code>text</code></td>
+<td style="text-align: left;">[Plain Text (well-formatted)]</td>
 <td style="text-align: left;">*.txt</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">markdown</td>
-<td style="text-align: left;">Markdown (for testing)</td>
+<td style="text-align: left;"><code>markdown</code></td>
+<td style="text-align: left;">[Markdown (for testing)]</td>
 <td style="text-align: left;">*.md.txt</td>
 </tr>
 </tbody>
@@ -1098,7 +1098,7 @@ make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
 <li><em><code>0</code> = Revert to the [Pandoc] default</em></li>
 </ul></li>
 <li><em>Special [c_toc] value: <code>0</code> = List all headers, and number sections</em></li>
-<li><em>Special [c_level] value: <code>0</code> = Varies by [c_type] (see [help-all])</em></li>
+<li><em>Special [c_level] value: <code>0</code> = Varies by [c_type] (see [c_level])</em></li>
 <li><em>An empty [c_margin] value enables individual margins:</em>
 <ul>
 <li><em><code>c_margin_top</code> ~ <code>mt</code></em></li>
@@ -1230,12 +1230,12 @@ make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
 <tr class="odd">
 <td style="text-align: left;">[COMPOSER_EXPORT]</td>
 <td style="text-align: left;">Target: [export]</td>
-<td style="text-align: left;">[COMPOSER_ROOT]/+Composer <code>(*)</code></td>
+<td style="text-align: left;">[COMPOSER_ROOT]/+Composer <code>(mk)</code></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">[COMPOSER_LIBRARY]</td>
 <td style="text-align: left;">Target: [site]/[site-library]</td>
-<td style="text-align: left;"><code>(*)</code></td>
+<td style="text-align: left;"><code>(yml)</code></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">[COMPOSER_SRC]</td>
@@ -1260,7 +1260,8 @@ make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
 </tbody>
 </table>
 <ul>
-<li><em><code>(*)</code> = configurable in <code>.composer.mk</code> or <code>.composer.yml</code></em></li>
+<li><em><code>(mk)</code> = configurable in <code>.composer.mk</code></em></li>
+<li><em><code>(yml)</code> = configurable in <code>.composer.yml</code></em></li>
 </ul>
 </section>
 <section class="slide level2">
@@ -1303,7 +1304,7 @@ make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
 </tr>
 <tr class="even">
 <td style="text-align: left;">[compose]</td>
-<td style="text-align: left;">Document creation engine (see <a href="#/formatting-variables">Formatting Variables</a>)</td>
+<td style="text-align: left;">Document creation engine (see [c_type])</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">[site]</td>
