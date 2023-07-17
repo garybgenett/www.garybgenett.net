@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content />
-  <meta name="dcterms.date" content="2023-06-24" />
+  <meta name="dcterms.date" content="2023-06-25" />
   <title>EXAMPLE SITE – Author: Albert Krewinkel</title>
   <style>
     code{white-space: pre-wrap;}
@@ -20210,7 +20210,8 @@ January 10, 2020 :: Pandoc Lua Filters  – Albert Krewinkel; John MacFarlane
 <p>Pandoc has long supported filters, which allow the pandoc abstract syntax tree (AST) to be manipulated between the parsing and the writing phase. <a href="https://pandoc.org/filters.html">Traditional pandoc filters</a> accept a JSON representation of the pandoc AST and produce an altered JSON representation of the AST. They may be written in any programming language, and invoked from pandoc using the <code>--filter</code> option.</p>
 <p>Although traditional filters are very flexible, they have a couple of disadvantages. First, there is some overhead in writing JSON to stdout and reading it from stdin (twice, once on each side of the filter). Second, whether a filter will work will depend on details of the user’s environment. A filter may require an interpreter for a certain programming language to be available, as well as a library for manipulating the pandoc AST in JSON form. One cannot simply provide a filter that can be used by anyone who has a certain version of the pandoc executable.</p>
 <p>Starting with version 2.0, pandoc makes it possible to write filters in Lua without any external dependencies at all. A Lua interpreter (version 5.3) and a Lua library for creating pandoc filters is built into the pandoc executable. Pandoc data types are marshaled to Lua directly, avoiding the overhead of writing JSON to stdout and reading it from stdin.</p>
-<p>[…] <a href="../pandoc/doc/lua-filters.html"><em>(permalink to full text)</em></a></p>
+<p>[…]</p>
+<p><a href="../pandoc/doc/lua-filters.html"><em>(permalink to full text)</em></a></p>
 <!-- site-fold-end :: start >> -->
 </section>
 </div>
@@ -20248,7 +20249,8 @@ January 10, 2020 :: Pandoc Lua Filters  – Albert Krewinkel; John MacFarlane
 <p>Pandoc has a publicly accessible git repository on GitHub: <a href="https://github.com/jgm/pandoc" class="uri">https://github.com/jgm/pandoc</a>. To get a local copy of the source:</p>
 <pre><code>git clone https://github.com/jgm/pandoc</code></pre>
 <p>The source for the main pandoc program is <code>app/pandoc.hs</code>. The source for the pandoc library is in <code>src/</code>, the source for the tests is in <code>test/</code>, and the source for the benchmarks is in <code>benchmark/</code>.</p>
-<p>[…] <a href="../pandoc/doc/short-guide-to-pandocs-sources.html"><em>(permalink to full text)</em></a></p>
+<p>[…]</p>
+<p><a href="../pandoc/doc/short-guide-to-pandocs-sources.html"><em>(permalink to full text)</em></a></p>
 <!-- site-fold-end :: start >> -->
 </section>
 </div>
@@ -20571,7 +20573,8 @@ list of keywords. Items are used as contents of the <a href="https://jats.nlm.ni
 The article title. Added to the document’s front matter via the <a href="https://jats.nlm.nih.gov/publishing/tag-library/1.2/element/article-title.html"><code>&lt;article-title&gt;</code></a> element.
 </dd>
 </dl>
-<p>[…] <a href="../pandoc/doc/jats.html"><em>(permalink to full text)</em></a></p>
+<p>[…]</p>
+<p><a href="../pandoc/doc/jats.html"><em>(permalink to full text)</em></a></p>
 <!-- site-fold-end :: start >> -->
 </section>
 </div>
@@ -20616,7 +20619,8 @@ The article title. Added to the document’s front matter via the <a href="https
 <li><p>TITLE: document title; fully supported.</p></li>
 <li><p>EXPORT_FILE_NAME: target filename; <em>unsupported</em>, the output defaults to stdout unless a target has to be given as a command line option.</p></li>
 </ul>
-<p>[…] <a href="../pandoc/doc/org.html"><em>(permalink to full text)</em></a></p>
+<p>[…]</p>
+<p><a href="../pandoc/doc/org.html"><em>(permalink to full text)</em></a></p>
 <!-- site-fold-end :: start >> -->
 </section>
 </div>

@@ -74,14 +74,16 @@ variables:
     MENU:
       - Latest: <composer_root>/index.html
       - Projects: <composer_root>/projects/index.html
-    CONTENTS:
-      - Contents:
-          - contents 0
     LIBRARY:
       - Tags:
           - library tags
       - History:
           - library date
+    SPACE:
+      - spacer
+    CONTENTS:
+      - Contents:
+          - contents 0
   site-nav-bottom:
     PATH:
       - Sitemap: <composer_root>/library/sitemap.html

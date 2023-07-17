@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content />
-  <meta name="dcterms.date" content="2023-06-24" />
+  <meta name="dcterms.date" content="2023-06-25" />
   <title>EXAMPLE SITE – Author: John MacFarlane</title>
   <style>
     code{white-space: pre-wrap;}
@@ -20298,7 +20298,8 @@ November 21, 2021 :: Creating Custom Pandoc Writers in Lua  – John MacFarlane
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code></pre></div>
 <p>The best way to go about creating a classic custom writer is to modify the example that comes with pandoc. To get the example, you can do</p>
 <pre><code>pandoc --print-default-data-file sample.lua &gt; sample.lua</code></pre>
-<p>[…] <a href="../pandoc/doc/custom-writers.html"><em>(permalink to full text)</em></a></p>
+<p>[…]</p>
+<p><a href="../pandoc/doc/custom-writers.html"><em>(permalink to full text)</em></a></p>
 <!-- site-fold-end :: start >> -->
 </section>
 </div>
@@ -20338,7 +20339,8 @@ November 18, 2021 :: Creating Custom Pandoc Readers in Lua  – John MacFarlane
 </ul>
 <p>The <code>Reader</code> function should return a <code>Pandoc</code> AST. This can be created using functions in the <a href="https://pandoc.org/lua-filters.html#module-pandoc"><code>pandoc</code> module</a>, which is automatically in scope. (Indeed, all of the utility functions that are available for <a href="https://pandoc.org/lua-filters.html">Lua filters</a> are available in custom readers, too.)</p>
 <p>Each source item corresponds to a file or stream passed to pandoc containing its text and name. E.g., if a single file <code>input.txt</code> is passed to pandoc, then the list of sources will contain just a single element <code>s</code>, where <code>s.name == &#39;input.txt&#39;</code> and <code>s.text</code> contains the file contents as a string.</p>
-<p>[…] <a href="../pandoc/doc/custom-readers.html"><em>(permalink to full text)</em></a></p>
+<p>[…]</p>
+<p><a href="../pandoc/doc/custom-readers.html"><em>(permalink to full text)</em></a></p>
 <!-- site-fold-end :: start >> -->
 </section>
 </div>
@@ -20373,7 +20375,8 @@ January 10, 2020 :: Pandoc Lua Filters  – Albert Krewinkel; John MacFarlane
 <p>Pandoc has long supported filters, which allow the pandoc abstract syntax tree (AST) to be manipulated between the parsing and the writing phase. <a href="https://pandoc.org/filters.html">Traditional pandoc filters</a> accept a JSON representation of the pandoc AST and produce an altered JSON representation of the AST. They may be written in any programming language, and invoked from pandoc using the <code>--filter</code> option.</p>
 <p>Although traditional filters are very flexible, they have a couple of disadvantages. First, there is some overhead in writing JSON to stdout and reading it from stdin (twice, once on each side of the filter). Second, whether a filter will work will depend on details of the user’s environment. A filter may require an interpreter for a certain programming language to be available, as well as a library for manipulating the pandoc AST in JSON form. One cannot simply provide a filter that can be used by anyone who has a certain version of the pandoc executable.</p>
 <p>Starting with version 2.0, pandoc makes it possible to write filters in Lua without any external dependencies at all. A Lua interpreter (version 5.3) and a Lua library for creating pandoc filters is built into the pandoc executable. Pandoc data types are marshaled to Lua directly, avoiding the overhead of writing JSON to stdout and reading it from stdin.</p>
-<p>[…] <a href="../pandoc/doc/lua-filters.html"><em>(permalink to full text)</em></a></p>
+<p>[…]</p>
+<p><a href="../pandoc/doc/lua-filters.html"><em>(permalink to full text)</em></a></p>
 <!-- site-fold-end :: start >> -->
 </section>
 </div>
@@ -20412,7 +20415,8 @@ April 4, 2022 :: Pandoc User’s Guide  – John MacFarlane
 <p>Pandoc is a <a href="https://www.haskell.org">Haskell</a> library for converting from one markup format to another, and a command-line tool that uses this library.</p>
 <p>Pandoc can convert between numerous markup and word processing formats, including, but not limited to, various flavors of <a href="https://daringfireball.net/projects/markdown/">Markdown</a>, <a href="https://www.w3.org/html/">HTML</a>, <a href="https://www.latex-project.org/">LaTeX</a> and <a href="https://en.wikipedia.org/wiki/Office_Open_XML">Word docx</a>. For the full lists of input and output formats, see the <code>--from</code> and <code>--to</code> <a href="#general-options-1">options below</a>. Pandoc can also produce <a href="https://www.adobe.com/pdf/">PDF</a> output: see <a href="#creating-a-pdf">creating a PDF</a>, below.</p>
 <p>Pandoc’s enhanced version of Markdown includes syntax for <a href="#tables">tables</a>, <a href="#definition-lists">definition lists</a>, <a href="#metadata-blocks">metadata blocks</a>, <a href="#footnotes">footnotes</a>, <a href="#citations">citations</a>, <a href="#math">math</a>, and much more. See below under <a href="#pandocs-markdown">Pandoc’s Markdown</a>.</p>
-<p>[…] <a href="../pandoc/MANUAL.html"><em>(permalink to full text)</em></a></p>
+<p>[…]</p>
+<p><a href="../pandoc/MANUAL.html"><em>(permalink to full text)</em></a></p>
 <!-- site-fold-end :: start >> -->
 </section>
 </div>
@@ -20459,7 +20463,8 @@ Chapter one is over.
 # Chapter Two
 
 Chapter two has just begun.</code></pre>
-<p>[…] <a href="../pandoc/doc/epub.html"><em>(permalink to full text)</em></a></p>
+<p>[…]</p>
+<p><a href="../pandoc/doc/epub.html"><em>(permalink to full text)</em></a></p>
 <!-- site-fold-end :: start >> -->
 </section>
 </div>
@@ -20495,7 +20500,8 @@ Chapter two has just begun.</code></pre>
 <p>When the <code>-s</code>/<code>--standalone</code> option is used, pandoc will generate a standalone document rather than a fragment. For example, in HTML output this will include the <code>&lt;head&gt;</code> element; in LaTeX output, it will include the preamble.</p>
 <p>Pandoc comes with a default template for (almost) every output format. A template is a plain text file containing variables that are replaced by text generated by pandoc. For example, the variable <code>$body$</code> will be replaced by the document body, and <code>$title$</code> by the title from metadata.</p>
 <p>To look at the default template for an output format, you can do <code>pandoc -D FORMAT</code>, where <code>FORMAT</code> is replaced by the name of the format. For example <code>pandoc -D latex</code>. You can also use your own template instead, either by using the <code>--template</code> option or by putting the custom template in your user data directory (on Linux and macOS, <code>~/.pandoc/templates/</code>).</p>
-<p>[…] <a href="../pandoc/doc/customizing-pandoc.html"><em>(permalink to full text)</em></a></p>
+<p>[…]</p>
+<p><a href="../pandoc/doc/customizing-pandoc.html"><em>(permalink to full text)</em></a></p>
 <!-- site-fold-end :: start >> -->
 </section>
 </div>
@@ -20544,7 +20550,8 @@ Chapter two has just begun.</code></pre>
 <li>In KDE, go to <code>KMenu</code>, then <code>System</code>, then <code>Terminal Program (Konsole)</code>.</li>
 </ul></li>
 </ul>
-<p>[…] <a href="../pandoc/doc/getting-started.html"><em>(permalink to full text)</em></a></p>
+<p>[…]</p>
+<p><a href="../pandoc/doc/getting-started.html"><em>(permalink to full text)</em></a></p>
 <!-- site-fold-end :: start >> -->
 </section>
 </div>

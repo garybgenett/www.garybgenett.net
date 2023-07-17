@@ -50,14 +50,21 @@ variables:
     MENU:
       - Latest:				<composer_root>/index.html
       - Projects:			<composer_root>/projects/index.html
-    CONTENTS:
-      - Contents:
-        - contents 0
+#>  CONTENTS:
+#>    - Contents:
+#>      - contents 0
+#>  SPACE:
+#>    - spacer
     LIBRARY:
       - Tags:
         - library tags
       - History:
         - library date
+    SPACE:
+      - spacer
+    CONTENTS:
+      - Contents:
+        - contents 0
 
 ########################################
   site-nav-bottom:

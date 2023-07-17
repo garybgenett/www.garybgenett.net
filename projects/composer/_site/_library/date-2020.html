@@ -5,8 +5,8 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content />
-  <meta name="dcterms.date" content="2023-06-24" />
-  <title>EXAMPLE SITE – Date: 2020</title>
+  <meta name="dcterms.date" content="2023-06-25" />
+  <title>EXAMPLE SITE – Year: 2020</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -20202,7 +20202,8 @@ January 10, 2020 :: Pandoc Lua Filters  – Albert Krewinkel; John MacFarlane
 <p>Pandoc has long supported filters, which allow the pandoc abstract syntax tree (AST) to be manipulated between the parsing and the writing phase. <a href="https://pandoc.org/filters.html">Traditional pandoc filters</a> accept a JSON representation of the pandoc AST and produce an altered JSON representation of the AST. They may be written in any programming language, and invoked from pandoc using the <code>--filter</code> option.</p>
 <p>Although traditional filters are very flexible, they have a couple of disadvantages. First, there is some overhead in writing JSON to stdout and reading it from stdin (twice, once on each side of the filter). Second, whether a filter will work will depend on details of the user’s environment. A filter may require an interpreter for a certain programming language to be available, as well as a library for manipulating the pandoc AST in JSON form. One cannot simply provide a filter that can be used by anyone who has a certain version of the pandoc executable.</p>
 <p>Starting with version 2.0, pandoc makes it possible to write filters in Lua without any external dependencies at all. A Lua interpreter (version 5.3) and a Lua library for creating pandoc filters is built into the pandoc executable. Pandoc data types are marshaled to Lua directly, avoiding the overhead of writing JSON to stdout and reading it from stdin.</p>
-<p>[…] <a href="../pandoc/doc/lua-filters.html"><em>(permalink to full text)</em></a></p>
+<p>[…]</p>
+<p><a href="../pandoc/doc/lua-filters.html"><em>(permalink to full text)</em></a></p>
 <!-- site-fold-end :: start >> -->
 </section>
 </div>
@@ -20253,7 +20254,8 @@ make all-all</code></pre>
 <pre><code>make template &gt;.composer.mk &amp;&amp; $EDITOR .composer.mk
 make template-yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre>
 <p>Custom targets can also be defined, using standard [GNU Make] syntax (see [Custom Targets]).</p>
-<p>[…] <a href="../config/pages/2020-01-01+template_00.html"><em>(permalink to full text)</em></a></p>
+<p>[…]</p>
+<p><a href="../config/pages/2020-01-01+template_00.html"><em>(permalink to full text)</em></a></p>
 <!-- site-fold-end :: start >> -->
 </section>
 </section>

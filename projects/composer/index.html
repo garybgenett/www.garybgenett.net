@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content />
-  <meta name="dcterms.date" content="2023-06-24" />
+  <meta name="dcterms.date" content="2023-06-25" />
   <title>Gary B. Genett – Composer CMS v3.1</title>
   <style>
     code{white-space: pre-wrap;}
@@ -19694,6 +19694,55 @@ margin-top:	0px;
 </li>
 <!-- site-nav-top-list :: finish >> nav-top.["MENU"][1] -->
 <!-- site-nav-top-list :: finish >> nav-top.["MENU"] -->
+<!-- site-nav-top-list :: start >> nav-top.["LIBRARY"] -->
+<!-- site-nav-top-list :: start >> nav-top.["LIBRARY"][0] -->
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Tags</a>
+<ul class="composer-menu-lg dropdown-menu">
+<!-- site-nav-top-list :: start >> nav-top.["LIBRARY"][0].["Tags"] -->
+<!-- site-nav-top-list :: start >> nav-top.["LIBRARY"][0].["Tags"][0] -->
+<!-- site-library-shelf :: start >> menu tags -->
+<li>
+<a class="dropdown-item" href="../../library/tags-personal.html">Personal (2)</a>
+</li>
+<li>
+<a class="dropdown-item" href="../../library/tags-releases.html">Releases (2)</a>
+</li>
+<!-- site-library-shelf :: finish >> menu tags -->
+<!-- site-nav-top-list :: finish >> nav-top.["LIBRARY"][0].["Tags"][0] -->
+<!-- site-nav-top-list :: finish >> nav-top.["LIBRARY"][0].["Tags"] -->
+</ul>
+</li>
+<!-- site-nav-top-list :: finish >> nav-top.["LIBRARY"][0] -->
+<!-- site-nav-top-list :: start >> nav-top.["LIBRARY"][1] -->
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">History</a>
+<ul class="composer-menu-lg dropdown-menu">
+<!-- site-nav-top-list :: start >> nav-top.["LIBRARY"][1].["History"] -->
+<!-- site-nav-top-list :: start >> nav-top.["LIBRARY"][1].["History"][0] -->
+<!-- site-library-shelf :: start >> menu date -->
+<li>
+<a class="dropdown-item" href="../../library/date-2023.html">2023 (4)</a>
+</li>
+<!-- site-library-shelf :: finish >> menu date -->
+<!-- site-nav-top-list :: finish >> nav-top.["LIBRARY"][1].["History"][0] -->
+<!-- site-nav-top-list :: finish >> nav-top.["LIBRARY"][1].["History"] -->
+</ul>
+</li>
+<!-- site-nav-top-list :: finish >> nav-top.["LIBRARY"][1] -->
+<!-- site-nav-top-list :: finish >> nav-top.["LIBRARY"] -->
+<!-- site-nav-top-list :: start >> nav-top.["SPACE"] -->
+<!-- site-nav-top-list :: start >> nav-top.["SPACE"][0] -->
+<!-- site-nav-divider :: start >> top-menu -->
+<li class="composer-menu-div nav-item nav-link d-lg-block d-none">
+ 
+</li>
+<li class="nav-item d-lg-none d-block">
+<hr class="dropdown-divider">
+</li>
+<!-- site-nav-divider :: finish >> top-menu -->
+<!-- site-nav-top-list :: finish >> nav-top.["SPACE"][0] -->
+<!-- site-nav-top-list :: finish >> nav-top.["SPACE"] -->
 <!-- site-nav-top-list :: start >> nav-top.["CONTENTS"] -->
 <!-- site-nav-top-list :: start >> nav-top.["CONTENTS"][0] -->
 <li class="nav-item dropdown">
@@ -20028,43 +20077,6 @@ margin-top:	0px;
 </li>
 <!-- site-nav-top-list :: finish >> nav-top.["CONTENTS"][0] -->
 <!-- site-nav-top-list :: finish >> nav-top.["CONTENTS"] -->
-<!-- site-nav-top-list :: start >> nav-top.["LIBRARY"] -->
-<!-- site-nav-top-list :: start >> nav-top.["LIBRARY"][0] -->
-<li class="nav-item dropdown">
-<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Tags</a>
-<ul class="composer-menu-lg dropdown-menu">
-<!-- site-nav-top-list :: start >> nav-top.["LIBRARY"][0].["Tags"] -->
-<!-- site-nav-top-list :: start >> nav-top.["LIBRARY"][0].["Tags"][0] -->
-<!-- site-library-shelf :: start >> menu tags -->
-<li>
-<a class="dropdown-item" href="../../library/tags-personal.html">Personal (2)</a>
-</li>
-<li>
-<a class="dropdown-item" href="../../library/tags-releases.html">Releases (2)</a>
-</li>
-<!-- site-library-shelf :: finish >> menu tags -->
-<!-- site-nav-top-list :: finish >> nav-top.["LIBRARY"][0].["Tags"][0] -->
-<!-- site-nav-top-list :: finish >> nav-top.["LIBRARY"][0].["Tags"] -->
-</ul>
-</li>
-<!-- site-nav-top-list :: finish >> nav-top.["LIBRARY"][0] -->
-<!-- site-nav-top-list :: start >> nav-top.["LIBRARY"][1] -->
-<li class="nav-item dropdown">
-<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">History</a>
-<ul class="composer-menu-lg dropdown-menu">
-<!-- site-nav-top-list :: start >> nav-top.["LIBRARY"][1].["History"] -->
-<!-- site-nav-top-list :: start >> nav-top.["LIBRARY"][1].["History"][0] -->
-<!-- site-library-shelf :: start >> menu date -->
-<li>
-<a class="dropdown-item" href="../../library/date-2023.html">2023 (4)</a>
-</li>
-<!-- site-library-shelf :: finish >> menu date -->
-<!-- site-nav-top-list :: finish >> nav-top.["LIBRARY"][1].["History"][0] -->
-<!-- site-nav-top-list :: finish >> nav-top.["LIBRARY"][1].["History"] -->
-</ul>
-</li>
-<!-- site-nav-top-list :: finish >> nav-top.["LIBRARY"][1] -->
-<!-- site-nav-top-list :: finish >> nav-top.["LIBRARY"] -->
 </ul>
 <!-- site-nav-end :: start >> top -->
 <!-- site-info-data :: start >> top -->
@@ -21875,7 +21887,7 @@ make -f .../.Composer/Makefile _release</code></pre>
 <li>For the <a href="#commit--commit-all--commit-list">commit-list</a> target specifically, <a href="#c_type--c_base--c_list">c_list</a> is repurposed to select the limited list of files and/or directories that should be committed. All selected files and directories must exist in the current directory or somewhere in the subdirectory tree below it. There is no option to skip the <code>$EDITOR</code> with this target.</li>
 </ul>
 <p>Commit title format:</p>
-<pre><code>[Composer CMS v3.1 :: 2023-06-24T01:21:13-07:00]</code></pre>
+<pre><code>[Composer CMS v3.1 :: 2023-06-25T15:24:20-07:00]</code></pre>
 <p>Example using <a href="#commit--commit-all--commit-list">commit-list</a> with <a href="#c_type--c_base--c_list">c_list</a>:</p>
 <pre><code>make commit-list c_list=&quot;Makefile artifacts&quot;</code></pre>
 </section>
@@ -22198,7 +22210,7 @@ include $(COMPOSER_TEACHER)</code></pre>
 <p>Use the <a href="#template--template-yml--template-md">template-md</a> target to create new <code>markdown</code> files:</p>
 <pre><code>---
 title: &quot;Composer CMS: Content Make System&quot;
-date: 2023-06-24
+date: 2023-06-25
 author:
   - Gary B. Genett
 tags:
