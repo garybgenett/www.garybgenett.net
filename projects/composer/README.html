@@ -1470,7 +1470,7 @@ max-width:	100%;
 <header id="title-block-header">
 <h1 class="title">Composer CMS: Content Make System</h1>
 <p class="author">Gary B. Genett</p>
-<p class="date">v3.1 (2023-06-25)</p>
+<p class="date">v3.1 (2023-08-01)</p>
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
@@ -2362,7 +2362,7 @@ make compose c_type=&quot;man&quot; c_base=&quot;Composer-v3.1.Manual&quot; c_li
 </section>
 <section id="composer_keeping" class="level3" data-number="4.2.6">
 <h3 data-number="4.2.6"><span class="header-section-number">4.2.6</span> COMPOSER_KEEPING</h3>
-<p>#WORK 0 deletes all… # COMPOSER_KEEPING test &amp; document # clean-logs test &amp; document</p>
+<p>#WORK 0 deletes all… # COMPOSER_KEEPING test &amp; document # clean-logs test &amp; document # clean-logs only runs on all, so single files could go forever…?</p>
 </section>
 <section id="composer_log" class="level3" data-number="4.2.7">
 <h3 data-number="4.2.7"><span class="header-section-number">4.2.7</span> COMPOSER_LOG</h3>
@@ -2864,7 +2864,7 @@ make -f .../.Composer/Makefile _release</code></pre>
 <li>For the <a href="#commit--commit-all--commit-list">commit-list</a> target specifically, <a href="#c_type--c_base--c_list">c_list</a> is repurposed to select the limited list of files and/or directories that should be committed. All selected files and directories must exist in the current directory or somewhere in the subdirectory tree below it. There is no option to skip the <code>$EDITOR</code> with this target.</li>
 </ul>
 <p>Commit title format:</p>
-<pre><code>[Composer CMS v3.1 :: 2023-06-25T15:24:19-07:00]</code></pre>
+<pre><code>[Composer CMS v3.1 :: 2023-08-01T10:35:52-07:00]</code></pre>
 <p>Example using <a href="#commit--commit-all--commit-list">commit-list</a> with <a href="#c_type--c_base--c_list">c_list</a>:</p>
 <pre><code>make commit-list c_list=&quot;Makefile artifacts&quot;</code></pre>
 </section>
@@ -3081,6 +3081,7 @@ include $(COMPOSER_TEACHER)</code></pre>
 #     homepage: null
 #     brand: null
 #     copyright: null
+#     composer: 1
 #     search_name: null
 #     search_site: null
 #     search_call: null
@@ -3146,7 +3147,7 @@ include $(COMPOSER_TEACHER)</code></pre>
 <p>Use the <a href="#template--template-yml--template-md">template-md</a> target to create new <code>markdown</code> files:</p>
 <pre><code>---
 title: &quot;Composer CMS: Content Make System&quot;
-date: 2023-06-25
+date: 2023-08-01
 author:
   - Gary B. Genett
 tags:
@@ -3215,6 +3216,7 @@ variables:
       &lt;!-- composer &gt;&gt; icon cc-by-nc-nd &gt;&gt; --&gt;
       &lt;!-- composer &gt;&gt; icon copyright &gt;&gt; --&gt;
       COPYRIGHT
+#&gt;&gt; composer: 1
 
 #&gt;&gt; search_name: SEARCH
     search_name: |
@@ -3575,6 +3577,7 @@ COMPOSER_RELEASE
 COMPOSER_REPOPAGE
 COMPOSER_RESERVED
 COMPOSER_RESERVED_DOITALL
+COMPOSER_RESERVED_SKIP
 COMPOSER_ROOT
 COMPOSER_ROOT_PATH
 COMPOSER_ROOT_REGEX
@@ -3911,6 +3914,9 @@ PUBLISH_COLS_SIZE_R
 PUBLISH_COLS_SIZE_R_ALT
 PUBLISH_COLS_STICKY
 PUBLISH_COLS_STICKY_ALT
+PUBLISH_COMPOSER
+PUBLISH_COMPOSER_ALT
+PUBLISH_COMPOSER_MOD
 PUBLISH_COPY_PROTECT
 PUBLISH_COPY_PROTECT_ALT
 PUBLISH_CREATORS

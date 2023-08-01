@@ -27,6 +27,9 @@ variables:
       <!-- composer >> form kv 1 >> -->
       <!-- composer >> form kz -1 >> -->
 
+    header:				<composer_root>/_header.md.cms
+    footer:				<composer_root>/_footer.md.cms
+
     copy_protect:			1
 
     metainfo:				"<date> :: <title>"
@@ -106,9 +109,10 @@ variables:
     ICON:
 #>    - icon <composer_root>/../garygearguy/favicon.png author http://www.garygearguy.com Gary Gear Guy
 #>    - icon <composer_root>/../tresobis/favicon.png project http://www.tresobis.org Tresobis
-      - icon <composer_root>/projects/composer/artifacts/images/icon-v1.0.png project <composer_root>/projects/composer/index.html Composer CMS
-      - icon <composer_root>/projects/gary-os/artifacts/images/icon-v6.0.png project <composer_root>/projects/gary-os/index.html GaryOS
-      - icon github https://github.com/garybgenett Gary B. Genett on Github
+      - _: |
+          <!-- composer >> icon <composer_root>/projects/composer/artifacts/images/icon-v1.0.png project <composer_root>/projects/composer/index.html Composer CMS >> -->
+          <!-- composer >> icon <composer_root>/projects/gary-os/artifacts/images/icon-v6.0.png project <composer_root>/projects/gary-os/index.html GaryOS >> -->
+          <!-- composer >> icon github https://github.com/garybgenett Gary B. Genett on Github >> -->
 
 ########################################
   site-info-bottom:

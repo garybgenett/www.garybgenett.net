@@ -6,6 +6,7 @@ variables:
     copyright: |
       <!-- composer >> icon copyright >> -->
       Copyright (c) 2022, Gary B. Genett
+    composer: 1
     search_name: |
       <!-- composer >> icon search >> -->
     search_site: https://duckduckgo.com
@@ -18,8 +19,8 @@ variables:
       <!-- composer >> form kp -1 >> -->
       <!-- composer >> form kv 1 >> -->
       <!-- composer >> form kz -1 >> -->
-    header: null
-    footer: null
+    header: <composer_root>/_header.md.cms
+    footer: <composer_root>/_footer.md.cms
     css_shade: dark
     copy_protect: 1
     cols_break: lg
@@ -111,9 +112,10 @@ variables:
     TEXT: null
     INFO: null
     ICON:
-      - icon <composer_root>/projects/composer/artifacts/images/icon-v1.0.png project <composer_root>/projects/composer/index.html Composer CMS
-      - icon <composer_root>/projects/gary-os/artifacts/images/icon-v6.0.png project <composer_root>/projects/gary-os/index.html GaryOS
-      - icon github https://github.com/garybgenett Gary B. Genett on Github
+      - _: |
+          <!-- composer >> icon <composer_root>/projects/composer/artifacts/images/icon-v1.0.png project <composer_root>/projects/composer/index.html Composer CMS >> -->
+          <!-- composer >> icon <composer_root>/projects/gary-os/artifacts/images/icon-v6.0.png project <composer_root>/projects/gary-os/index.html GaryOS >> -->
+          <!-- composer >> icon github https://github.com/garybgenett Gary B. Genett on Github >> -->
   site-info-bottom:
     TEXT: null
     INFO:
