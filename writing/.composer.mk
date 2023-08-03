@@ -4,11 +4,10 @@
 ifneq ($(COMPOSER_CURDIR),)
 ################################################################################
 
-override COMPOSER_IGNORES		:= 404.md index.md resume
-
-################################################################################
-
-index.html: $(COMPOSER_ROOT)/library/index-include.md.cms
+%.html: $(COMPOSER_ROOT)/_header.md.cms
+%.html: $(COMPOSER_ROOT)/_header-pages.md.cms
+%.html: $(COMPOSER_ROOT)/_footer-pages.md.cms
+%.html: $(COMPOSER_ROOT)/_footer.md.cms
 
 ################################################################################
 endif

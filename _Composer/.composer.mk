@@ -24,13 +24,19 @@ override c_logo				:= $(COMPOSER_ROOT)/favicon.png
 override c_icon				:= $(COMPOSER_ROOT)/favicon.png
 
 ################################################################################
-ifeq ($(CURDIR),$(COMPOSER_ROOT))
+
+%.html: $(COMPOSER_ROOT)/_header.md.cms
+#>%.html: $(COMPOSER_ROOT)/_header-pages.md.cms
+#>%.html: $(COMPOSER_ROOT)/_footer-pages.md.cms
+%.html: $(COMPOSER_ROOT)/_footer.md.cms
+
+################################################################################
+ifeq ($(COMPOSER_CURDIR),)
 ################################################################################
 
-.PHONY: .publish
-.publish:
+.PHONY: $(notdir $(COMPOSER_ROOT))-$(EXPORTS)
+$(notdir $(COMPOSER_ROOT))-$(EXPORTS):
 	@$(TOUCH) $(COMPOSER_ROOT)/.nojekyll
-	@$(MAKE) --directory $(COMPOSER_ROOT) $(EXPORTS)
 	@$(RSYNC) \
 		$(abspath $(COMPOSER_ROOT)/../../coding/composer/$(notdir $(PUBLISH_ROOT))/$(notdir $(COMPOSER_EXPORT_DEFAULT)))/ \
 		$(COMPOSER_EXPORT)/projects/composer/$(notdir $(PUBLISH_ROOT))
@@ -38,13 +44,6 @@ ifeq ($(CURDIR),$(COMPOSER_ROOT))
 
 ################################################################################
 endif
-################################################################################
-
-%.html: $(COMPOSER_ROOT)/_header.md.cms
-#>%.html: $(COMPOSER_ROOT)/_header-pages.md.cms
-#>%.html: $(COMPOSER_ROOT)/_footer-pages.md.cms
-%.html: $(COMPOSER_ROOT)/_footer.md.cms
-
 ################################################################################
 # end of file
 ################################################################################

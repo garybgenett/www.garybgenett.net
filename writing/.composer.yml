@@ -1,0 +1,34 @@
+################################################################################
+# composer settings file
+################################################################################
+
+variables:
+
+########################################
+  site-config:
+
+    header:				<composer_root>/_header-pages.md.cms
+    footer:				<composer_root>/_footer-pages.md.cms
+
+########################################
+  site-nav-top:
+
+    CONTENTS:
+      - Contents:
+        - contents
+
+########################################
+  site-nav-left:
+
+    CONTENTS:
+      - box-begin 0 Contents
+      - readtime
+      - spacer
+      - contents
+      - spacer
+      - tagslist tags
+      - box-end
+
+################################################################################
+# end of file
+################################################################################
