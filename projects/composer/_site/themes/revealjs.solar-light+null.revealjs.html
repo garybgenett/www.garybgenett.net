@@ -742,7 +742,7 @@ max-width:	100%;
 <section id="title-slide">
   <h1 class="title">Composer CMS: Content Make System</h1>
   <p class="author">Gary B. Genett</p>
-  <p class="date">v3.1 (2023-06-25)</p>
+  <p class="date">v3.1 (2023-08-03)</p>
 </section>
 
 <section>
@@ -1441,8 +1441,16 @@ make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
 <td style="text-align: left;">Synchronize <code>+Composer</code> export of [COMPOSER_ROOT]</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">[export-git]</td>
-<td style="text-align: left;">Commit <code>+Composer</code> to [Git] branch, and push upstream</td>
+<td style="text-align: left;">[export-all]</td>
+<td style="text-align: left;">#WORKING:DOCS</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">[export-force]</td>
+<td style="text-align: left;">#WORKING:DOCS</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">[*-export]</td>
+<td style="text-align: left;">Any targets named this way will also be run by [export]</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">[site-library]</td>

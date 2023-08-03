@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content />
-  <meta name="dcterms.date" content="2023-08-02" />
+  <meta name="dcterms.date" content="2023-08-03" />
   <title>Gary B. Genett – Composer CMS v3.1</title>
   <style>
     code{white-space: pre-wrap;}
@@ -20026,7 +20026,7 @@ margin-top:	0px;
 <a href="#commit--commit-all--commit-list" class="dropdown-item">commit / commit-all / commit-list</a>
 </li>
 <li>
-<a href="#export--export-git" class="dropdown-item">export / export-git</a>
+<a href="#export--export-all--export-force---export" class="dropdown-item">export / export-all / export-force / *-export</a>
 </li>
 <li>
 <a href="#site-library" class="dropdown-item">site-library</a>
@@ -20266,7 +20266,7 @@ Contents
 <li><a href="#config--config-all--config---config-yml--targets">config / config-all / config-* / config-yml / targets</a></li>
 <li><a href="#init--init-force">init / init-force</a></li>
 <li><a href="#commit--commit-all--commit-list">commit / commit-all / commit-list</a></li>
-<li><a href="#export--export-git">export / export-git</a></li>
+<li><a href="#export--export-all--export-force---export">export / export-all / export-force / *-export</a></li>
 <li><a href="#site-library">site-library</a></li>
 <li><a href="#site-list--site-list-all--site-list-list--site-list-null--site-list-">site-list / site-list-all / site-list-list / site-list-null / site-list-*</a></li>
 </ul></li>
@@ -20870,11 +20870,11 @@ Custom Targets
 </div>
 <div class="card-body">
 <!-- site-box-begin :: finish >> 2 Custom Targets -->
-<p>If needed, custom targets can be defined inside a <code>.composer.mk</code> file (see <a href="#configuration-settings">Configuration Settings</a>), using standard <a href="http://www.gnu.org/software/make">GNU Make</a> syntax. Naming them as <a href="#clean--clean-all---clean">*-clean</a> or <a href="#all--all-all---all">*-all</a> will include them in runs of the respective targets. Targets with any other names will need to be run manually, or included in <a href="#composer_targets">COMPOSER_TARGETS</a>.</p>
+<p>If needed, custom targets can be defined inside a <code>.composer.mk</code> file (see <a href="#configuration-settings">Configuration Settings</a>), using standard <a href="http://www.gnu.org/software/make">GNU Make</a> syntax. Naming them as <a href="#export--export-all--export-force---export">*-export</a>, <a href="#clean--clean-all---clean">*-clean</a> or <a href="#all--all-all---all">*-all</a> will include them in runs of the respective targets. Targets with any other names will need to be run manually, or included in <a href="#composer_targets">COMPOSER_TARGETS</a>.</p>
 <p>#WORK …or, via <a href="#specifying-dependencies">Specifying Dependencies</a></p>
 <p>There are a few limitations when naming custom targets. Targets starting with the regular expression <code>[_.]</code> are hidden, and are skipped by auto-detection. Additionally, there is a list of reserved targets in <a href="#reserved">Reserved</a>, along with a list of reserved variables.</p>
 <p>Any included <code>.composer.mk</code> files are sourced early in the main <a href="http://www.garybgenett.net/projects/composer">Composer</a> <code>Makefile</code>, so matching targets and most variables will be overridden. In the case of conflicting targets, <a href="http://www.gnu.org/software/make">GNU Make</a> will produce warning messages. Variables will have their values changed silently. Changing the values of internal <a href="http://www.garybgenett.net/projects/composer">Composer</a> variables is not recommended or supported.</p>
-<p>A final note is that <a href="#clean--clean-all---clean">*-clean</a> and <a href="#all--all-all---all">*-all</a> targets are stripped from <a href="#composer_targets">COMPOSER_TARGETS</a>. In cases where this results in an empty <a href="#composer_targets">COMPOSER_TARGETS</a>, there will be a message and no actions will be taken.</p>
+<p>A final note is that <a href="#export--export-all--export-force---export">*-export</a>, <a href="#clean--clean-all---clean">*-clean</a> and <a href="#all--all-all---all">*-all</a> targets are stripped from <a href="#composer_targets">COMPOSER_TARGETS</a>. In cases where this results in an empty <a href="#composer_targets">COMPOSER_TARGETS</a>, there will be a message and no actions will be taken.</p>
 <!-- site-box-end :: start >> -->
 </div>
 </div>
@@ -21245,12 +21245,12 @@ Control Variables
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="#composer_exports">COMPOSER_EXPORTS</a></td>
-<td style="text-align: left;">See also: <a href="#c_site">c_site</a>/<a href="#export--export-git">export</a></td>
+<td style="text-align: left;">See also: <a href="#c_site">c_site</a>/<a href="#export--export-all--export-force---export">export</a></td>
 <td style="text-align: left;"><a href="#config--config-all--config---config-yml--targets">config</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="#composer_ignores">COMPOSER_IGNORES</a></td>
-<td style="text-align: left;">See also: <a href="#c_site">c_site</a>/<a href="#export--export-git">export</a></td>
+<td style="text-align: left;">See also: <a href="#c_site">c_site</a>/<a href="#export--export-all--export-force---export">export</a></td>
 <td style="text-align: left;"><a href="#config--config-all--config---config-yml--targets">config</a></td>
 </tr>
 </tbody>
@@ -21362,9 +21362,9 @@ Control Variables
 </section>
 <section id="composer_ignores" class="level3">
 <h3>COMPOSER_IGNORES</h3>
-<p>#WORK either remove site here, or add it to the ones above…</p>
+<p>#WORK either remove site here, or add it to the ones above… #WORK also, there are also implications for site-library…</p>
 <ul>
-<li>The list of <a href="#composer_targets">COMPOSER_TARGETS</a> and <a href="#composer_subdirs">COMPOSER_SUBDIRS</a> to skip with <a href="#site--site-all--site-force">site</a>, <a href="#install--install-all--install-force">install</a>, <a href="#clean--clean-all---clean">clean</a>, and <a href="#all--all-all---all">all</a>. This allows for selective auto-detection, when the list of items to process is larger than those to leave alone.</li>
+<li>The list of <a href="#composer_targets">COMPOSER_TARGETS</a>, <a href="#composer_subdirs">COMPOSER_SUBDIRS</a> and <a href="#composer_exports">COMPOSER_EXPORTS</a> to skip with <a href="#export--export-all--export-force---export">export</a>, <a href="#site--site-all--site-force">site</a>, <a href="#install--install-all--install-force">install</a>, <a href="#clean--clean-all---clean">clean</a>, and <a href="#all--all-all---all">all</a>. This allows for selective auto-detection, when the list of items to process is larger than those to leave alone.</li>
 <li>Use <a href="#config--config-all--config---config-yml--targets">config</a> to check the current value.</li>
 </ul>
 <!-- site-box-end :: start >> -->
@@ -21426,7 +21426,7 @@ Helper Variables
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="#composer_export">COMPOSER_EXPORT</a></td>
-<td style="text-align: left;">Target: <a href="#export--export-git">export</a></td>
+<td style="text-align: left;">Target: <a href="#export--export-all--export-force---export">export</a></td>
 <td style="text-align: left;"><a href="#composer_root">COMPOSER_ROOT</a>/+Composer <code>(mk)</code></td>
 </tr>
 <tr class="even">
@@ -21467,6 +21467,7 @@ Helper Variables
 </section>
 <section id="composer_curdir" class="level3">
 <h3>COMPOSER_CURDIR</h3>
+<p>#WORKING:DOCS can also be used to detect first pass, using “ifeq”, to prevent “warning: overriding recipe for target” warnings…</p>
 <ul>
 <li>This is set to <code>$CURDIR</code> when reading in a <code>.composer.mk</code> file in the <code>make</code> running directory, and is empty otherwise. This provides a way to limit particular portions of the file to the local directory, regardless of whether <a href="#composer_include">COMPOSER_INCLUDE</a> is set or not.</li>
 </ul>
@@ -21786,12 +21787,20 @@ Additional Targets
 <td style="text-align: left;">Automatic <a href="#commit--commit-all--commit-list">commit</a>, without <code>$EDITOR</code> step</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="#export--export-git">export</a></td>
+<td style="text-align: left;"><a href="#export--export-all--export-force---export">export</a></td>
 <td style="text-align: left;">Synchronize <code>+Composer</code> export of <a href="#composer_root">COMPOSER_ROOT</a></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="#export--export-git">export-git</a></td>
-<td style="text-align: left;">Commit <code>+Composer</code> to <a href="https://git-scm.com">Git</a> branch, and push upstream</td>
+<td style="text-align: left;"><a href="#export--export-all--export-force---export">export-all</a></td>
+<td style="text-align: left;">#WORKING:DOCS</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#export--export-all--export-force---export">export-force</a></td>
+<td style="text-align: left;">#WORKING:DOCS</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#export--export-all--export-force---export">*-export</a></td>
+<td style="text-align: left;">Any targets named this way will also be run by <a href="#export--export-all--export-force---export">export</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="#site-library">site-library</a></td>
@@ -21861,7 +21870,7 @@ make -f .../.Composer/Makefile _release</code></pre>
 <li>The current values of all <a href="#composer-variables">Composer Variables</a> is output by <a href="#config--config-all--config---config-yml--targets">config</a>, and <a href="#config--config-all--config---config-yml--targets">config-all</a> will additionally output all environment variables.</li>
 <li>Individual <a href="#composer-variables">Composer Variables</a> can be exported with <a href="#config--config-all--config---config-yml--targets">config-*</a>. This is useful for scripting in <code>.composer.mk</code> (see <a href="#custom-targets">Custom Targets</a>).</li>
 <li>A JSON version of the <code>.composer.yml</code> configuration is exported with <a href="#config--config-all--config---config-yml--targets">config-yml</a>. This is available for any external scripting, such as in <code>.composer.mk</code> (see <a href="#custom-targets">Custom Targets</a>), and is parseable with <a href="https://mikefarah.gitbook.io/yq">YQ</a>.</li>
-<li>A structured list of detected targets, <a href="#clean--clean-all---clean">*-clean</a> and <a href="#all--all-all---all">*-all</a> targets, <a href="#composer_targets">COMPOSER_TARGETS</a>, and <a href="#composer_subdirs">COMPOSER_SUBDIRS</a> is printed by <a href="#config--config-all--config---config-yml--targets">targets</a>.</li>
+<li>A structured list of detected targets, <a href="#export--export-all--export-force---export">*-export</a>, <a href="#clean--clean-all---clean">*-clean</a> and <a href="#all--all-all---all">*-all</a> targets, <a href="#composer_targets">COMPOSER_TARGETS</a>, and <a href="#composer_subdirs">COMPOSER_SUBDIRS</a> is printed by <a href="#config--config-all--config---config-yml--targets">targets</a>.</li>
 <li>Together, <a href="#config--config-all--config---config-yml--targets">config</a> and <a href="#config--config-all--config---config-yml--targets">targets</a> reveal the entire internal state of <a href="http://www.garybgenett.net/projects/composer">Composer</a>.</li>
 </ul>
 </section>
@@ -21880,13 +21889,13 @@ make -f .../.Composer/Makefile _release</code></pre>
 <li>For the <a href="#commit--commit-all--commit-list">commit-list</a> target specifically, <a href="#c_type--c_base--c_list">c_list</a> is repurposed to select the limited list of files and/or directories that should be committed. All selected files and directories must exist in the current directory or somewhere in the subdirectory tree below it. There is no option to skip the <code>$EDITOR</code> with this target.</li>
 </ul>
 <p>Commit title format:</p>
-<pre><code>[Composer CMS v3.1 :: 2023-08-02T16:39:43-07:00]</code></pre>
+<pre><code>[Composer CMS v3.1 :: 2023-08-03T02:38:00-07:00]</code></pre>
 <p>Example using <a href="#commit--commit-all--commit-list">commit-list</a> with <a href="#c_type--c_base--c_list">c_list</a>:</p>
 <pre><code>make commit-list c_list=&quot;Makefile artifacts&quot;</code></pre>
 </section>
-<section id="export--export-git" class="level3">
-<h3>export / export-git</h3>
-<p>#WORKING</p>
+<section id="export--export-all--export-force---export" class="level3">
+<h3>export / export-all / export-force / *-export</h3>
+<p>#WORKING … and then runs all <a href="#export--export-all--export-force---export">*-export</a> targets.</p>
 </section>
 <section id="site-library" class="level3">
 <h3>site-library</h3>
@@ -22204,7 +22213,7 @@ include $(COMPOSER_TEACHER)</code></pre>
 <p>Use the <a href="#template--template-yml--template-md">template-md</a> target to create new <code>markdown</code> files:</p>
 <pre><code>---
 title: &quot;Composer CMS: Content Make System&quot;
-date: 2023-08-02
+date: 2023-08-03
 author:
   - Gary B. Genett
 tags:
@@ -23512,7 +23521,7 @@ History
 <!-- site-info-data-list :: start >> info-bottom.["INFO"][0] -->
 <p class="composer-link navbar-text me-3">
 <!-- composer >> readtime-list >> -->
-<em>Reading time: 8106 words, 36 minutes</em>
+<em>Reading time: 8156 words, 37 minutes</em>
 </p>
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"][0] -->
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"] -->
