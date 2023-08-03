@@ -8,7 +8,7 @@ override _EXPORT_GIT_BRANCH		:= gh-pages
 ################################################################################
 
 override COMPOSER_EXPORTS		:= CNAME README.markdown .nojekyll
-override COMPOSER_EXPORTS		+= .composer.mk .composer.yml .composer-* *.yml
+override COMPOSER_EXPORTS		+= .composer.mk .composer.yml .composer-*
 override COMPOSER_EXPORTS		+= _header* _footer*
 override COMPOSER_EXPORTS		+= .targets
 ifneq ($(COMPOSER_CURDIR),)
