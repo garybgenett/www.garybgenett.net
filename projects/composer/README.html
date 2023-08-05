@@ -1470,7 +1470,7 @@ max-width:	100%;
 <header id="title-block-header">
 <h1 class="title">Composer CMS: Content Make System</h1>
 <p class="author">Gary B. Genett</p>
-<p class="date">v3.1 (2023-08-03)</p>
+<p class="date">v3.1 (2023-08-05)</p>
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
@@ -1744,6 +1744,11 @@ make all-all</code></pre>
 <td style="text-align: left;">4.3.1</td>
 <td style="text-align: left;">MIT</td>
 </tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="https://firebase.google.com">Google Firebase</a></td>
+<td style="text-align: left;">v12.4.6</td>
+<td style="text-align: left;">MIT</td>
+</tr>
 </tbody>
 </table>
 <table>
@@ -1996,7 +2001,10 @@ all-subdirs-artifacts: all-subdirs-pandoc</code></pre>
 <li><code>MDVIEWER_CMT</code></li>
 <li><code>MDTHEMES_CMT</code></li>
 <li><code>REVEALJS_CMT</code></li>
+<li><code>FIREBASE_VER</code> (must be a binary version number)</li>
+<li><code>FIREBASE_CMT</code> (defaults to <code>FIREBASE_VER</code>)</li>
 </ul>
+<p>#WORKING:THIS <a href="https://firebase.google.com">Google Firebase</a> is only for <a href="#_release--_update--_update-all">_update-all</a> / DOFORCE?</p>
 <p>Binaries for <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a> and <a href="https://mikefarah.gitbook.io/yq">YQ</a> are installed in their respective directories. By moving or removing them, or changing the version number and foregoing <a href="#_release--_update--_update-all">_update-all</a>, the system versions will be used instead. This will work as long as the commit versions match, so that supporting files are in alignment.</p>
 <p>It is possible that changing the versions will introduce incompatibilities with <a href="http://www.garybgenett.net/projects/composer">Composer</a>, which are usually impacts to the prettification of output files (see <a href="#document-formatting">Document Formatting</a>).</p>
 <hr />
@@ -2402,6 +2410,8 @@ make compose c_type=&quot;man&quot; c_base=&quot;Composer-v3.1.Manual&quot; c_li
 <section id="composer_exports" class="level3" data-number="4.2.11">
 <h3 data-number="4.2.11"><span class="header-section-number">4.2.11</span> COMPOSER_EXPORTS</h3>
 <p>#WORKING # this one will be complicated… maybe? # has, effectively, the same <code>.null</code> behavior as above… # also overridden by <a href="#composer_ignores">COMPOSER_IGNORES</a> # document .targets token… # hidden variables… # /.g/_data/zactive/coding/composer/+Composer #<br />
+#<br />
+#<br />
 #</p>
 </section>
 <section id="composer_ignores" class="level3" data-number="4.2.12">
@@ -2516,6 +2526,8 @@ endif</code></pre>
 <li>[_EXPORT_DIRECTORY]</li>
 <li>[_EXPORT_GIT_REPO]</li>
 <li>[_EXPORT_GIT_BRANCH]</li>
+<li>[_EXPORT_FIRE_ACCOUNT]</li>
+<li>[_EXPORT_FIRE_PROJECT]</li>
 </ul>
 </section>
 <section id="composer_library" class="level3" data-number="4.3.6">
@@ -2873,7 +2885,7 @@ make -f .../.Composer/Makefile _release</code></pre>
 <li>For the <a href="#commit--commit-all--commit-list">commit-list</a> target specifically, <a href="#c_type--c_base--c_list">c_list</a> is repurposed to select the limited list of files and/or directories that should be committed. All selected files and directories must exist in the current directory or somewhere in the subdirectory tree below it. There is no option to skip the <code>$EDITOR</code> with this target.</li>
 </ul>
 <p>Commit title format:</p>
-<pre><code>[Composer CMS v3.1 :: 2023-08-03T02:37:58-07:00]</code></pre>
+<pre><code>[Composer CMS v3.1 :: 2023-08-05T04:08:46-07:00]</code></pre>
 <p>Example using <a href="#commit--commit-all--commit-list">commit-list</a> with <a href="#c_type--c_base--c_list">c_list</a>:</p>
 <pre><code>make commit-list c_list=&quot;Makefile artifacts&quot;</code></pre>
 </section>
@@ -3156,7 +3168,7 @@ include $(COMPOSER_TEACHER)</code></pre>
 <p>Use the <a href="#template--template-yml--template-md">template-md</a> target to create new <code>markdown</code> files:</p>
 <pre><code>---
 title: &quot;Composer CMS: Content Make System&quot;
-date: 2023-08-03
+date: 2023-08-05
 author:
   - Gary B. Genett
 tags:
@@ -3692,6 +3704,16 @@ EXT_ICON_GPL
 FIND
 FINDUTILS_VER
 FIND_ALL
+FIREBASE
+FIREBASE_BIN
+FIREBASE_CMT
+FIREBASE_CMT_DISPLAY
+FIREBASE_DIR
+FIREBASE_LIC
+FIREBASE_RUN
+FIREBASE_SRC
+FIREBASE_VER
+FIREBASE_VER_COMPOSER
 FONTAWES_CMT
 FONTAWES_DIR
 FONTAWES_LIC
@@ -3881,6 +3903,7 @@ PANDOC_SRC
 PANDOC_TEX_PDF
 PANDOC_URL
 PANDOC_VER
+PANDOC_VER_COMPOSER
 PANDOC_WIN_BIN
 PANDOC_WIN_DST
 PANDOC_WIN_SRC
@@ -4122,6 +4145,7 @@ YQ_READ
 YQ_SRC
 YQ_URL
 YQ_VER
+YQ_VER_COMPOSER
 YQ_WIN_BIN
 YQ_WIN_DST
 YQ_WIN_SRC
@@ -4272,6 +4296,8 @@ _C
 _D
 _E
 _EXPORT_DIRECTORY
+_EXPORT_FIRE_ACCOUNT
+_EXPORT_FIRE_PROJECT
 _EXPORT_GIT_BRANCH
 _EXPORT_GIT_REPO
 _F
