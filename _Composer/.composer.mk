@@ -5,6 +5,9 @@
 override _EXPORT_GIT_REPO		:= ssh://git@github.com/garybgenett/www.garybgenett.net.git
 override _EXPORT_GIT_BRANCH		:= gh-pages
 
+override _EXPORT_FIRE_ACCOUNT		:= gary@tresobis.org
+override _EXPORT_FIRE_PROJECT		:= garybgenett-site
+
 ################################################################################
 
 override COMPOSER_EXPORTS		:= CNAME README.markdown .nojekyll
