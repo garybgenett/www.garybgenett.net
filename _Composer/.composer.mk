@@ -25,8 +25,8 @@ override MAKEJOBS			:= 0
 override COMPOSER_INCLUDE		:= 1
 
 override c_site				:= 1
-override c_logo				:= $(COMPOSER_ROOT)/favicon.png
-override c_icon				:= $(COMPOSER_ROOT)/favicon.png
+override c_logo				:= $(COMPOSER_ROOT)/_branding/logo.png
+override c_icon				:= $(COMPOSER_ROOT)/_branding/logo.png
 
 ################################################################################
 
