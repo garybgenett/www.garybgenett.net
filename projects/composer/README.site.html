@@ -21470,9 +21470,9 @@ endif</code></pre>
 <ul>
 <li>[_EXPORT_DIRECTORY]</li>
 <li>[_EXPORT_GIT_REPO]</li>
-<li>[_EXPORT_GIT_BRANCH]</li>
-<li>[_EXPORT_FIRE_ACCOUNT]</li>
-<li>[_EXPORT_FIRE_PROJECT]</li>
+<li>[_EXPORT_GIT_BNCH]</li>
+<li>[_EXPORT_FIRE_ACCT]</li>
+<li>[_EXPORT_FIRE_PROJ]</li>
 </ul>
 </section>
 <section id="composer_library" class="level3">
@@ -21871,7 +21871,7 @@ make -f .../.Composer/Makefile _release</code></pre>
 <li>For the <a href="#commit--commit-all--commit-list">commit-list</a> target specifically, <a href="#c_type--c_base--c_list">c_list</a> is repurposed to select the limited list of files and/or directories that should be committed. All selected files and directories must exist in the current directory or somewhere in the subdirectory tree below it. There is no option to skip the <code>$EDITOR</code> with this target.</li>
 </ul>
 <p>Commit title format:</p>
-<pre><code>[Composer CMS v3.1 :: 2023-08-06T18:38:26-07:00]</code></pre>
+<pre><code>[Composer CMS v3.1 :: 2023-08-15T01:35:53-07:00]</code></pre>
 <p>Example using <a href="#commit--commit-all--commit-list">commit-list</a> with <a href="#c_type--c_base--c_list">c_list</a>:</p>
 <pre><code>make commit-list c_list=&quot;Makefile artifacts&quot;</code></pre>
 </section>
@@ -22195,7 +22195,7 @@ include $(COMPOSER_TEACHER)</code></pre>
 <p>Use the <a href="#template--template-yml--template-md">template-md</a> target to create new <code>markdown</code> files:</p>
 <pre><code>---
 title: &quot;Composer CMS: Content Make System&quot;
-date: 2023-08-06
+date: 2023-08-15
 author:
   - Gary B. Genett
 tags:
@@ -23343,9 +23343,9 @@ _C
 _D
 _E
 _EXPORT_DIRECTORY
-_EXPORT_FIRE_ACCOUNT
-_EXPORT_FIRE_PROJECT
-_EXPORT_GIT_BRANCH
+_EXPORT_FIRE_ACCT
+_EXPORT_FIRE_PROJ
+_EXPORT_GIT_BNCH
 _EXPORT_GIT_REPO
 _F
 _H

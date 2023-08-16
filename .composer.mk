@@ -4,7 +4,9 @@
 ifneq ($(COMPOSER_CURDIR),)
 ################################################################################
 
-override COMPOSER_IGNORES		:= 404.md index.md resume
+override COMPOSER_IGNORES		:= 404.md index.md
+override COMPOSER_IGNORES		+= _branding _documents _template*
+override COMPOSER_IGNORES		+= resume
 
 ################################################################################
 
