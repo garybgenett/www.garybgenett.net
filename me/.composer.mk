@@ -98,10 +98,8 @@ resume-cover.html \
 ifeq ($(c_type),pdf)
 override c_options := $(c_options) --variable=classoption="twoside"
 ifeq ($(c_base),.resume-cover.pdf)
-override c_options := $(c_options) --include-in-header=".resume-cover.pdf.latex"
 override c_options := $(c_options) --metadata=title-meta='Gary B. Genett - Cover Letter'
 else
-override c_options := $(c_options) --include-in-header=".resume.pdf.latex"
 override c_options := $(c_options) --metadata=title-meta='Gary B. Genett - Resume'
 endif
 endif
@@ -111,8 +109,8 @@ resume.pdf \
 resume-cover.pdf\
 :
 	@$(eval override MOD_BASE := $(subst .pdf,,$(@)))
-	@$(call DO_HEREDOC,PDF_HACK) >.$(@).latex
-#>>>	@$(CAT) .$(@).latex
+	@$(call DO_HEREDOC,PDF_HACK) >.$(@).header
+#>>>	@$(CAT) .$(@).header
 	@$(SED) \
 		-e "s|^([-]{3}[-]+)$$|<\!-- \1 -->|g" \
 		-e "s|^<\!-- (----) -->$$| \1|g" \
@@ -125,7 +123,7 @@ resume-cover.pdf\
 		c_list=".$(@).md" \
 	)
 	@$(call $(COMPOSER_TINYNAME)-mv,.$(@).pdf,$(@))
-	@$(call $(COMPOSER_TINYNAME)-rm,.$(@).latex)
+	@$(call $(COMPOSER_TINYNAME)-rm,.$(@).header)
 	@$(call $(COMPOSER_TINYNAME)-rm,.$(@).md)
 
 ################################################################################
