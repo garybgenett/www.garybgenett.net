@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content />
-  <meta name="dcterms.date" content="2023-08-15" />
+  <meta name="dcterms.date" content="2023-10-06" />
   <title>Gary B. Genett – Composer CMS v3.1</title>
   <style>
     code{white-space: pre-wrap;}
@@ -19819,9 +19819,31 @@ margin-top:	0px;
 </li>
 <li>
 <a href="#configuration-settings" class="dropdown-item">Configuration Settings</a>
+<ul class="composer-menu-list">
+<li>
+<a href="#gnu-make-composermk" class="dropdown-item">GNU Make (.composer.mk)</a>
+</li>
+<li>
+<a href="#pandoc--bootstrap-composeryml" class="dropdown-item">Pandoc &amp; Bootstrap (.composer.yml)</a>
+</li>
+</ul>
 </li>
 <li>
 <a href="#precedence-rules" class="dropdown-item">Precedence Rules</a>
+<ul class="composer-menu-list">
+<li>
+<a href="#configuration-files" class="dropdown-item">Configuration Files</a>
+</li>
+<li>
+<a href="#header--css-files" class="dropdown-item">Header &amp; CSS Files</a>
+</li>
+<li>
+<a href="#variables--aliases" class="dropdown-item">Variables &amp; Aliases</a>
+</li>
+<li>
+<a href="#pandoc-options" class="dropdown-item">Pandoc Options</a>
+</li>
+</ul>
 </li>
 <li>
 <a href="#specifying-dependencies" class="dropdown-item">Specifying Dependencies</a>
@@ -20166,8 +20188,18 @@ Contents
 <li><a href="#plain-text">Plain Text</a></li>
 <li><a href="#pandoc-markdown">Pandoc Markdown</a></li>
 </ul></li>
-<li><a href="#configuration-settings">Configuration Settings</a></li>
-<li><a href="#precedence-rules">Precedence Rules</a></li>
+<li><a href="#configuration-settings">Configuration Settings</a>
+<ul>
+<li><a href="#gnu-make-composermk">GNU Make (.composer.mk)</a></li>
+<li><a href="#pandoc--bootstrap-composeryml">Pandoc &amp; Bootstrap (.composer.yml)</a></li>
+</ul></li>
+<li><a href="#precedence-rules">Precedence Rules</a>
+<ul>
+<li><a href="#configuration-files">Configuration Files</a></li>
+<li><a href="#header--css-files">Header &amp; CSS Files</a></li>
+<li><a href="#variables--aliases">Variables &amp; Aliases</a></li>
+<li><a href="#pandoc-options">Pandoc Options</a></li>
+</ul></li>
 <li><a href="#specifying-dependencies">Specifying Dependencies</a></li>
 <li><a href="#custom-targets">Custom Targets</a></li>
 <li><a href="#repository-versions">Repository Versions</a></li>
@@ -20305,6 +20337,7 @@ Contents
 </tr>
 </tbody>
 </table>
+<p>– Formats: <a href="README.site.html">webpage</a> / <a href="README.html">html</a> / <a href="README.pdf">pdf</a> / <a href="README.epub">epub</a> / <a href="README.revealjs.html">revealjs.html</a> / <a href="README.docx">docx</a></p>
 <!-- #>> [Markdown]: http://daringfireball.net/projects/markdown -->
 <!-- #>> [Markdown]: https://commonmark.org -->
 <!-- site-spacer :: start >> -->
@@ -20362,7 +20395,8 @@ make Composer-v3.1.Manual.html c_list=&quot;README.md LICENSE.md&quot;</code></p
 <p>Save a persistent configuration (see <a href="#recommended-workflow">Recommended Workflow</a> and <a href="#configuration-settings">Configuration Settings</a>):</p>
 <pre><code>make template &gt;.composer.mk
 $EDITOR .composer.mk
-    Composer-v3.1.Manual.html: override c_list := README.md LICENSE.md
+    override COMPOSER_TARGETS := .targets Composer-v3.1.Manual.html
+    override Composer-v3.1.Manual.html := README.md LICENSE.md
 make clean
 make all</code></pre>
 <p>Recursively install and build an entire directory tree (see <a href="#recommended-workflow">Recommended Workflow</a>):</p>
@@ -20560,8 +20594,8 @@ Requirements
 </tr>
 </tbody>
 </table>
-<p>#WORKING:FIREBASE <a href="https://firebase.google.com">Google Firebase</a> is only for <a href="#_release--_update--_update-all">_update-all</a> / DOFORCE?</p>
 <p><a href="https://github.com/simov/markdown-viewer">Markdown Viewer</a> is included both for its CSS stylesheets, and for real-time rendering of <a href="https://pandoc.org/MANUAL.html#pandocs-markdown">Markdown</a> files as they are being written. To install, follow the instructions in the <code>README.md</code>.</p>
+<p><a href="https://firebase.google.com">Google Firebase</a> is only necessary for uploading via the <a href="#export--export-all--export-force---export">export-all</a> and <a href="#export--export-all--export-force---export">export-force</a> targets.</p>
 <p>The versions of the integrated repositories can be changed, if desired (see <a href="#repository-versions">Repository Versions</a>).</p>
 <!-- site-box-end :: start >> -->
 </div>
@@ -20650,10 +20684,15 @@ Document Formatting
 <div class="card-body">
 <!-- site-box-begin :: finish >> 2 Document Formatting -->
 <p>#WORKING:NOW:NOW:DOCS:FIX#######################################################</p>
+<pre><code>.../artifacts/pandoc/template.*
+.../artifacts/pandoc/reference.*
+.../artifacts/composer/composer-site.css
+.../artifacts/composer/composer-html.css</code></pre>
+<p>#WORKING:NOW:NOW:DOCS:FIX#######################################################</p>
 <p>As outlined in <a href="#overview">Overview</a> and <a href="#principles">Principles</a>, a primary goal of <a href="http://www.garybgenett.net/projects/composer">Composer</a> is to produce beautiful and professional output. <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a> does reasonably well at this, and yet its primary focus is document conversion, not document formatting. <a href="http://www.garybgenett.net/projects/composer">Composer</a> fills this gap by specifically tuning a select list of the most commonly used document formats.</p>
 <p>The input <a href="https://pandoc.org/MANUAL.html#pandocs-markdown">Markdown</a> format used by <a href="http://www.garybgenett.net/projects/composer">Composer</a> is the <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a> default. However, the <a href="#pandoc-extensions">Pandoc Extensions</a> list has been modified slightly. See that section and the <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a> <a href="https://pandoc.org/MANUAL.html#pandocs-markdown">Markdown</a> documentation for the exact list and details for each.</p>
 <p>Further options for each document type are in <a href="#formatting-variables">Formatting Variables</a>. All improvements not exposed as variables will apply to all documents created with a given instance of <a href="http://www.garybgenett.net/projects/composer">Composer</a>.</p>
-<p>Note that all the files referenced below are embedded in the ‘Embedded Files’ and ‘Heredoc’ sections of the <code>Makefile</code>. They are exported by the <a href="#_release--_update--_update-all">_release</a> target, and will be overwritten whenever it is run.</p>
+<p>Note that all the files referenced below are embedded in the ‘Embedded Files’ section of the <code>Makefile</code>. They are exported by the <a href="#_release--_update--_update-all">_release</a> target, and will be overwritten whenever it is run.</p>
 <section id="static-websites" class="level3">
 <h3>Static Websites</h3>
 <p><a href="https://getbootstrap.com">Bootstrap</a> is a leading web development framework, capable of building static webpages that behave dynamically. Static sites are very easy and inexpensive to host, and are extremely responsive compared to truly dynamic webpages.</p>
@@ -20670,43 +20709,47 @@ Document Formatting
 <p>#WORKING:NOW:NOW:FIX############################################################</p>
 <pre><code>.../bootswatch/docs/index.html</code></pre>
 <p>#WORKING:NOW:NOW:FIX############################################################</p>
+<p>– Examples: <a href="_site/index.html">Example Website</a> / <a href="README.site.html">README.site.html</a></p>
 </section>
 <section id="html" class="level3">
 <h3>HTML</h3>
 <p>In addition to being a helpful real-time rendering tool, <a href="https://github.com/simov/markdown-viewer">Markdown Viewer</a> includes several CSS stylesheets that are much more visually appealing than the <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a> default, and which behave like normal webpages, so <a href="http://www.garybgenett.net/projects/composer">Composer</a> uses them for all <a href="#html">HTML</a>-based document types, including <a href="#epub">EPUB</a>.</p>
 <p>Information on installing <a href="https://github.com/simov/markdown-viewer">Markdown Viewer</a> for use as a <a href="https://pandoc.org/MANUAL.html#pandocs-markdown">Markdown</a> rendering tool is in <a href="#requirements">Requirements</a>.</p>
+<p>– Example: <a href="README.html">README.html</a></p>
 </section>
 <section id="pdf" class="level3">
 <h3>PDF</h3>
 <p>The default formatting for <a href="#pdf">PDF</a> is geared towards academic papers and the typesetting of printed books, instead of documents that are intended to be purely digital.</p>
 <p>Internally, <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a> first converts to LaTeX, and then uses <a href="https://tug.org/texlive">TeX Live</a> to convert into the final <a href="#pdf">PDF</a>. <a href="http://www.garybgenett.net/projects/composer">Composer</a> inserts customized LaTeX to modify the final output:</p>
-<pre><code>.../artifacts/composer/composer.pdf.latex</code></pre>
+<pre><code>.../artifacts/composer/composer-pdf.header</code></pre>
+<p>#WORK …/artifacts/composer/composer.pdf.latex</p>
+<p>– Example: <a href="README.pdf">README.pdf</a></p>
 </section>
 <section id="epub" class="level3">
 <h3>EPUB</h3>
 <p>The <a href="#epub">EPUB</a> format is essentially packaged <a href="#html">HTML</a>, so <a href="http://www.garybgenett.net/projects/composer">Composer</a> uses the same <a href="https://github.com/simov/markdown-viewer">Markdown Viewer</a> CSS stylesheets for it.</p>
+<p>– Example: <a href="README.epub">README.epub</a></p>
 </section>
 <section id="revealjs-presentations" class="level3">
 <h3>Reveal.js Presentations</h3>
 <p>The CSS for <a href="https://revealjs.com">Reveal.js</a> presentations has been modified to create a more traditional and readable end result. The customized version is at:</p>
-<pre><code>.../artifacts/composer/composer.revealjs.css</code></pre>
+<pre><code>.../artifacts/composer/composer-revealjs.css</code></pre>
+<p>#WORK …/artifacts/composer/composer.revealjs.css</p>
 <p>#WORKING:NOW:NOW:FIX############################################################ # rework this</p>
 <p>It links in a default theme from the <code>.../reveal.js/dist/theme</code> directory. Edit the location in the file, or use <a href="#c_css">c_css</a> to select a different theme.</p>
 <p>It is set up so that a logo can be placed in the upper right hand corner on each slide, for presentations that need to be branded. Simply copy an image file to the logo location:</p>
 <pre><code>.../artifacts/images/logo.img</code></pre>
 <p>To have different logos for different directories (using <a href="#recommended-workflow">Recommended Workflow</a>, <a href="#configuration-settings">Configuration Settings</a> and <a href="#precedence-rules">Precedence Rules</a>):</p>
-<pre><code>cd .../presentations
-cp .../logo.img ./
-ln -rs .../.Composer/artifacts/composer/composer.revealjs.css ./.composer.css
-echo &#39;override c_type := revealjs&#39; &gt;&gt;./.composer.mk
-make all</code></pre>
+<p>#WORK no longer the best way to do this… cd …/presentations cp …/logo.img ./ ln -rs …/.Composer/artifacts/composer/composer.revealjs.css ./.composer-revealjs.css echo ‘override c_type := revealjs’ &gt;&gt;./.composer.mk make all</p>
+<p>– Example: <a href="README.revealjs.html">README.revealjs.html</a></p>
 </section>
 <section id="microsoft-word--powerpoint" class="level3">
 <h3>Microsoft Word &amp; PowerPoint</h3>
 <p>The internal <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a> templates for these are exported by <a href="http://www.garybgenett.net/projects/composer">Composer</a>, so they are available for customization:</p>
-<pre><code>.../artifacts/reference.docx
-.../artifacts/reference.pptx</code></pre>
+<pre><code>.../artifacts/pandoc/reference.docx
+.../artifacts/pandoc/reference.pptx</code></pre>
 <p>They are not currently modified by <a href="http://www.garybgenett.net/projects/composer">Composer</a>.</p>
+<p>– Example: <a href="README.docx">README.docx</a></p>
 </section>
 <section id="plain-text" class="level3">
 <h3>Plain Text</h3>
@@ -20741,6 +20784,11 @@ Configuration Settings
 <div class="card-body">
 <!-- site-box-begin :: finish >> 2 Configuration Settings -->
 <p>#WORKING:NOW:NOW:FIX############################################################</p>
+<section id="gnu-make-composermk" class="level3">
+<h3>GNU Make (.composer.mk)</h3>
+</section>
+<section id="pandoc--bootstrap-composeryml" class="level3">
+<h3>Pandoc &amp; Bootstrap (.composer.yml)</h3>
 <p><a href="http://www.garybgenett.net/projects/composer">Composer</a> uses <code>.composer.mk</code> files for persistent settings and definition of <a href="#custom-targets">Custom Targets</a>. By default, they only apply to the directory they are in (see <a href="#composer_include">COMPOSER_INCLUDE</a> in <a href="#control-variables">Control Variables</a>). A <code>.composer.mk</code> in the main <a href="http://www.garybgenett.net/projects/composer">Composer</a> directory will be global to all directories. The targets and settings in the most local file override all others (see <a href="#precedence-rules">Precedence Rules</a>).</p>
 <p>The easiest way to create new <code>.composer.mk</code> and <code>.composer.yml</code> files is with the <a href="#template--template-yml--template-md">template</a> and <a href="#template--template-yml--template-md">template-yml</a> targets (<a href="#quick-start">Quick Start</a> example):</p>
 <pre><code>make template &gt;.composer.mk         &amp;&amp; $EDITOR .composer.mk
@@ -20756,6 +20804,7 @@ README.revealjs.html: override c_toc :=</code></pre>
 .../artifacts/.composer.yml
 .../artifacts/README.site.yml</code></pre>
 <!-- site-box-end :: start >> -->
+</section>
 </div>
 </div>
 <!-- site-box-end :: finish >> -->
@@ -20777,12 +20826,44 @@ Precedence Rules
 </div>
 <div class="card-body">
 <!-- site-box-begin :: finish >> 2 Precedence Rules -->
+<p>All processing in <a href="http://www.garybgenett.net/projects/composer">Composer</a> is done in global-to-local order, so that the most local file or value always takes precedence.</p>
+<section id="configuration-files" class="level3">
+<h3>Configuration Files</h3>
+<p>Both <code>.composer.mk</code> and <code>.composer.yml</code> files follow the model illustrated in <a href="#composer_include">COMPOSER_INCLUDE</a> under <a href="#control-variables">Control Variables</a>. This means that the values in the most local file override all others.</p>
 <p>#WORKING:NOW:NOW:FIX############################################################</p>
-<p>The order of precedence for <code>.composer.mk</code> files is local-to-global (see <a href="#composer_include">COMPOSER_INCLUDE</a> in <a href="#control-variables">Control Variables</a>). This means that the values in the most local file override all others.</p>
+<p>All values in <code>.composer.mk</code> take precedence over everything else, including environment variables.</p>
+</section>
+<section id="header--css-files" class="level3">
+<h3>Header &amp; CSS Files</h3>
+<p>#WORK the same for all…</p>
+<pre><code>.../artifacts/composer/composer-pdf.header
+.../.composer-pdf.header
+./README.pdf.header</code></pre>
+<p>#WORK the same for all…</p>
+<pre><code>.../artifacts/composer/composer-html.css
+.../.composer-html.css
+./README.html.css</code></pre>
+<p>#WORK the <a href="#c_css">c_css</a> layering…</p>
+<ol type="1">
+<li><a href="#c_site">c_site</a> &gt;&gt; <a href="https://getbootstrap.com">Bootstrap</a></li>
+<li><a href="#c_css">c_css</a></li>
+<li><a href="#c_site">c_site</a> &gt;&gt; <code>.composer.yml</code> :: [site-config].[css_shade] #WORK comment 1. <a href="#composer_dir">COMPOSER_DIR</a>/artifacts/composer/composer-<a href="#c_type--c_base--c_list">c_type</a>.css</li>
+<li><a href="#composer_art">COMPOSER_ART</a>/composer/composer-<a href="#c_type--c_base--c_list">c_type</a>.css</li>
+<li><a href="#composer_include">COMPOSER_INCLUDE</a> &gt;&gt; …/.composer-<a href="#c_type--c_base--c_list">c_type</a>.css</li>
+<li><a href="#curdir">CURDIR</a>/<a href="#c_type--c_base--c_list">c_base</a>.<code>&lt;extension&gt;</code>.css</li>
+</ol>
+<p>The first four are core to <a href="http://www.garybgenett.net/projects/composer">Composer</a>, and are always included. <a href="#composer_include">COMPOSER_INCLUDE</a> and <a href="#curdir">CURDIR</a> files are optional, and only used if they exist.</p>
+</section>
+<section id="variables--aliases" class="level3">
+<h3>Variables &amp; Aliases</h3>
 <p>Variable aliases, such as <code>COMPOSER_DEBUGIT</code>/<code>c_debug</code>/<code>V</code> are prioritized in the order shown, with <code>COMPOSER_*</code> taking precedence over <code>c_*</code>, over the short alias.</p>
-<p>Selection of the CSS file can be done using <code>.composer.css</code> or the <a href="#c_css">c_css</a> variable, with <code>.composer.css</code> taking precedence (unless <a href="#c_css">c_css</a> comes from <code>.composer.mk</code>). The process for <code>.composer.css</code> files is identical to <code>.composer.mk</code> (see <a href="#composer_include">COMPOSER_INCLUDE</a> in <a href="#control-variables">Control Variables</a>).</p>
-<p>All values in <code>.composer.mk</code> take precedence over everything else, including <code>.composer.css</code> and environment variables.</p>
+<p>Full <code>COMPOSER_*</code> variable names should always be used in <code>.composer.mk</code> files, to avoid being overwritten by recursive environment persistence.</p>
+</section>
+<section id="pandoc-options" class="level3">
+<h3>Pandoc Options</h3>
+<p>#WORK # does not seem to be documented anywhere… test it, with examples here, regardless… # seems to be: yaml_metadata, –defaults, –metadata*, etc.</p>
 <!-- site-box-end :: start >> -->
+</section>
 </div>
 </div>
 <!-- site-box-end :: finish >> -->
@@ -20875,7 +20956,6 @@ Repository Versions
 <li><code>FIREBASE_VER</code> (must be a binary version number)</li>
 <li><code>FIREBASE_CMT</code> (defaults to <code>FIREBASE_VER</code>)</li>
 </ul>
-<p>#WORKING:FIREBASE <a href="https://firebase.google.com">Google Firebase</a> is only for <a href="#_release--_update--_update-all">_update-all</a> / DOFORCE?</p>
 <p>Binaries for <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a> and <a href="https://mikefarah.gitbook.io/yq">YQ</a> are installed in their respective directories. By moving or removing them, or changing the version number and foregoing <a href="#_release--_update--_update-all">_update-all</a>, the system versions will be used instead. This will work as long as the commit versions match, so that supporting files are in alignment.</p>
 <p>It is possible that changing the versions will introduce incompatibilities with <a href="http://www.garybgenett.net/projects/composer">Composer</a>, which are usually impacts to the prettification of output files (see <a href="#document-formatting">Document Formatting</a>).</p>
 <!-- site-box-end :: start >> -->
@@ -21033,7 +21113,6 @@ Formatting Variables
 <li><em>Other <a href="#c_type--c_base--c_list">c_type</a> values will be passed directly to <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a></em></li>
 <li><em>Special <a href="#c_css">c_css</a> values:</em>
 <ul>
-<li><em><code>.composer.css</code> = Filesystem override of variable value</em></li>
 <li><em><code>css_alt</code> = Use the alternate default stylesheet</em></li>
 <li><em><code>0</code> = Revert to the <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a> default</em></li>
 </ul></li>
@@ -21072,13 +21151,13 @@ make compose c_type=&quot;man&quot; c_base=&quot;Composer-v3.1.Manual&quot; c_li
 </section>
 <section id="c_logo" class="level3">
 <h3>c_logo</h3>
-<p>#WORKING</p>
+<p>#WORKING # 1 # revealjs</p>
 <p>#WORKING document /.g/_data/zactive/coding/composer/artifacts/images</p>
 <pre><code>.../artifacts/images</code></pre>
 </section>
 <section id="c_icon" class="level3">
 <h3>c_icon</h3>
-<p>#WORKING</p>
+<p>#WORKING # html # revealjs</p>
 </section>
 <section id="c_css" class="level3">
 <h3>c_css</h3>
@@ -21087,7 +21166,7 @@ make compose c_type=&quot;man&quot; c_base=&quot;Composer-v3.1.Manual&quot; c_li
 <ul>
 <li>By default, a CSS stylesheet from <a href="https://github.com/simov/markdown-viewer">Markdown Viewer</a> is used for <a href="#html">HTML</a> and <a href="#epub">EPUB</a>, and one of the <a href="https://revealjs.com">Reveal.js</a> themes is used for <a href="#revealjs-presentations">Reveal.js Presentations</a>. This variable allows for selection of a different file in all cases.</li>
 <li>The special value <code>css_alt</code> selects the alternate default stylesheet. Using <code>0</code> reverts to the <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a> default.</li>
-<li>This value can be overridden by the presence of <code>.composer.css</code> files. See <a href="#precedence-rules">Precedence Rules</a> for details.</li>
+<li><a href="http://www.garybgenett.net/projects/composer">Composer</a> includes several different CSS files, depending on the <a href="#c_type--c_base--c_list">c_type</a> of the file being built. See <a href="#header--css-files">Header &amp; CSS Files</a> under <a href="#precedence-rules">Precedence Rules</a> for details on how they are layered together.</li>
 </ul>
 </section>
 <section id="c_toc" class="level3">
@@ -21259,8 +21338,8 @@ Control Variables
 <li>On every run, <a href="http://www.garybgenett.net/projects/composer">Composer</a> walks through the <code>MAKEFILE_LIST</code>, all the way back to the main <code>Makefile</code>, looking for <code>.composer.mk</code> files in each directory. By default, it only reads the ones in the main <a href="http://www.garybgenett.net/projects/composer">Composer</a> directory and the current directory, in that order. This option enables reading all of them.</li>
 <li>In the example directory tree below, normally the <code>.composer.mk</code> in <code>.Composer</code> is read first, and then <code>tld/sub/.composer.mk</code>. With this enabled, it will read all of them in order from top to bottom: <code>.Composer/.composer.mk</code>, <code>.composer.mk</code>, <code>tld/.composer.mk</code>, and finally <code>tld/sub/.composer.mk</code>.</li>
 <li>This is why it is best practice to have a <code>.Composer</code> directory at the top level for each documentation archive (see <a href="#recommended-workflow">Recommended Workflow</a>). Not only does it allow for strict version control of <a href="http://www.garybgenett.net/projects/composer">Composer</a> per-archive, it also provides a mechanism for setting <a href="#composer-variables">Composer Variables</a> globally.</li>
-<li>When using this option, care should be taken with “Local” variables from <a href="#template--template-yml--template-md">template</a> (see <a href="#templates">Templates</a>). They will be propagated down the tree, which is generally not desired except in very specific cases. Using <a href="#composer_curdir">COMPOSER_CURDIR</a> to limit their scope is recommended.</li>
-<li>This setting also causes <code>.composer.yml</code> and <code>.composer.css</code> files to be processed in an identical manner (see <a href="#precedence-rules">Precedence Rules</a>).</li>
+<li>When using this option, care should be taken with “Local” variables from <a href="#template--template-yml--template-md">template</a> (see <a href="#templates">Templates</a>). They will be propagated down the tree, which is generally not desired except in very specific cases. Using <a href="#composer_curdir">COMPOSER_CURDIR</a> to limit their scope is highly recommended.</li>
+<li>This setting also causes <code>.composer.yml</code> and <code>.composer-*</code> files to be processed in an identical manner (see <a href="#configuration-files">Configuration Files</a> and <a href="#header--css-files">Header &amp; CSS Files</a> under <a href="#precedence-rules">Precedence Rules</a>).</li>
 </ul>
 <p>Example directory tree (see <a href="#recommended-workflow">Recommended Workflow</a>):</p>
 <pre><code>.../.Composer/Makefile
@@ -21298,6 +21377,7 @@ Control Variables
 <li>The <a href="https://pandoc.org/MANUAL.html#pandocs-markdown">Markdown</a> file extension <a href="http://www.garybgenett.net/projects/composer">Composer</a> uses: <code>*.md</code>. This is for auto-detection of files to add to <a href="#composer_targets">COMPOSER_TARGETS</a>, files to output for <a href="#list">list</a>, and other tasks. This is a widely used standard, including <a href="https://github.com">GitHub</a>. Another commonly used extension is: <code>*.markdown</code>.</li>
 <li>In some cases, they do not have any extension, such as <code>README</code> and <code>LICENSE</code> in source code directories. Setting this to an empty value causes them to be detected and output. It also causes all other files to be processed, because it becomes the wildcard <code>*</code>, so use with care. It is likely best to use <a href="#composer_targets">COMPOSER_TARGETS</a> to explicitly set the targets list in these situations.</li>
 </ul>
+<p>#WORK # add a note that a per-target “override README.html :=” is probably best… # come to think of it, probably should just go back to not allowing an empty value…</p>
 <p>#WORKING document! # .targets # COMPOSER_TARGETS # COMPOSER_SUBDIRS # COMPOSER_EXPORTS # COMPOSER_IGNORES</p>
 </section>
 <section id="composer_targets" class="level3">
@@ -21433,9 +21513,11 @@ Helper Variables
 </section>
 <section id="composer_curdir" class="level3">
 <h3>COMPOSER_CURDIR</h3>
-<p>#WORKING:DOCS can also be used to detect first pass, using “ifeq”, to prevent “warning: overriding recipe for target” warnings…</p>
+<p>#WORKING can also be used to detect first pass, using “ifeq”, to prevent “warning: overriding recipe for target” warnings…</p>
 <ul>
-<li>This is set to <code>$CURDIR</code> when reading in a <code>.composer.mk</code> file in the <code>make</code> running directory, and is empty otherwise. This provides a way to limit particular portions of the file to the local directory, regardless of whether <a href="#composer_include">COMPOSER_INCLUDE</a> is set or not.</li>
+<li>This is set to <a href="#curdir">CURDIR</a> when reading in a <code>.composer.mk</code> file in the <a href="http://www.gnu.org/software/make">GNU Make</a> running directory, and is empty otherwise. This provides a way to limit particular portions of the file to the local directory, regardless of whether <a href="#composer_include">COMPOSER_INCLUDE</a> is set or not.</li>
+<li>Uses for this are to limit the availability of targets to the local directory, or to prevent variable values from recursing down to sub-directories.</li>
+<li>Generally speaking, it is best practice to completely encapsulate all <code>.composer.mk</code> files with this, except for the specific portions that need to be passed down, similar to <a href="#template--template-yml--template-md">template</a> (see <a href="#templates">Templates</a>).</li>
 </ul>
 <p>Example usage in a <code>.composer.mk</code> file:</p>
 <pre><code>ifneq ($(COMPOSER_CURDIR),)
@@ -21760,11 +21842,11 @@ Additional Targets
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="#export--export-all--export-force---export">export-all</a></td>
-<td style="text-align: left;">#WORKING:DOCS</td>
+<td style="text-align: left;">Also publish <code>+Composer</code> upstream: <a href="https://git-scm.com">Git</a>/<a href="https://firebase.google.com">Firebase</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="#export--export-all--export-force---export">export-force</a></td>
-<td style="text-align: left;">#WORKING:DOCS</td>
+<td style="text-align: left;">Publish only, without synchronizing <code>+Composer</code> first</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="#export--export-all--export-force---export">*-export</a></td>
@@ -21800,13 +21882,14 @@ Additional Targets
 <h3>_release / _update / _update-all</h3>
 <ul>
 <li>Using the repository configuration (see <a href="#repository-versions">Repository Versions</a>), these fetch and install all external components.</li>
-<li>The <a href="#_release--_update--_update-all">_update-all</a> target also fetches the <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a> and <a href="https://mikefarah.gitbook.io/yq">YQ</a> binaries, whereas <a href="#_release--_update--_update-all">_update</a> only fetches the repositories.</li>
-<li>In addition to doing <a href="#_release--_update--_update-all">_update-all</a>, <a href="#_release--_update--_update-all">_release</a> runs <a href="#internal-targets">_setup-all</a>, which performs the steps necessary to turn the current directory into a complete clone of <a href="http://www.garybgenett.net/projects/composer">Composer</a>, including overwriting all supporting files.</li>
+<li>The <a href="#_release--_update--_update-all">_update-all</a> target also fetches the <a href="http://www.johnmacfarlane.net/pandoc">Pandoc</a> and <a href="https://mikefarah.gitbook.io/yq">YQ</a> binaries, along with running the builds for each repository, whereas <a href="#_release--_update--_update-all">_update</a> only fetches the source code.</li>
+<li>In addition to doing <a href="#_release--_update--_update-all">_update-all</a>, <a href="#_release--_update--_update-all">_release</a> runs <a href="#internal-targets">_setup-all</a>, which performs the steps necessary to turn the current directory into a development clone of <a href="http://www.garybgenett.net/projects/composer">Composer</a> (except for <a href="#internal-targets">site-template</a>), including overwriting all supporting files.</li>
 <li>One of the unique features of <a href="http://www.garybgenett.net/projects/composer">Composer</a> is that everything needed to compose itself is embedded in the <code>Makefile</code>.</li>
 </ul>
-<p>Rapid cloning:</p>
-<pre><code>mkdir .../clone
-cd .../clone
+<p>Creating a development clone:</p>
+<p>#WORK should create a “development/contributing/support” section, and reference this… # also: https://github.com/garybgenett/gary-os/blob/main/.vimrc</p>
+<pre><code>mkdir .../composer
+cd .../composer
 make -f .../.Composer/Makefile _release</code></pre>
 </section>
 <section id="_debug--_debug-file" class="level3">
@@ -21857,7 +21940,7 @@ make -f .../.Composer/Makefile _release</code></pre>
 <li>For the <a href="#commit--commit-all--commit-list">commit-list</a> target specifically, <a href="#c_type--c_base--c_list">c_list</a> is repurposed to select the limited list of files and/or directories that should be committed. All selected files and directories must exist in the current directory or somewhere in the subdirectory tree below it. There is no option to skip the <code>$EDITOR</code> with this target.</li>
 </ul>
 <p>Commit title format:</p>
-<pre><code>[Composer CMS v3.1 :: 2023-08-15T01:35:53-07:00]</code></pre>
+<pre><code>[Composer CMS v3.1 :: 2023-10-06T17:41:36-07:00]</code></pre>
 <p>Example using <a href="#commit--commit-all--commit-list">commit-list</a> with <a href="#c_type--c_base--c_list">c_list</a>:</p>
 <pre><code>make commit-list c_list=&quot;Makefile artifacts&quot;</code></pre>
 </section>
@@ -21944,58 +22027,62 @@ Internal Targets
 <td style="text-align: left;">Skip download steps in <a href="#_release--_update--_update-all">_update</a>, and only do builds</td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;"><a href="#internal-targets">_update-list</a></td>
+<td style="text-align: left;">Show changes to each repository (see <a href="#requirements">Requirements</a>)</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;"><a href="#internal-targets">_setup</a></td>
 <td style="text-align: left;">Extracts embedded files from <code>Makefile</code></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="#internal-targets">_setup-all</a></td>
 <td style="text-align: left;">Does <a href="#internal-targets">_setup</a>, and builds all <code>README.*</code> output files</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="#internal-targets">_test</a></td>
 <td style="text-align: left;">Test suite, validates all supported features</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="#internal-targets">_test-file</a></td>
 <td style="text-align: left;">Export <a href="#internal-targets">_test</a> results to a plain text file</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="#internal-targets">_test-dir</a></td>
 <td style="text-align: left;">Only create directory structure, and do <a href="#_release--_update--_update-all">_release</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="#internal-targets">_test-list</a></td>
 <td style="text-align: left;">Output available test cases, for running directly</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="#internal-targets">check-help</a></td>
 <td style="text-align: left;">Minimized <a href="#check--check-all">check</a> output (used for <a href="#requirements">Requirements</a>)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="#internal-targets">site-.composer.mk</a></td>
 <td style="text-align: left;"><a href="#composer_library">COMPOSER_LIBRARY</a> configured template: <code>.composer.mk</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="#internal-targets">site-.composer.yml</a></td>
 <td style="text-align: left;"><a href="#composer_library">COMPOSER_LIBRARY</a> configured template: <code>.composer.yml</code></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="#internal-targets">site-template</a></td>
 <td style="text-align: left;"><a href="#static-websites">Static Websites</a> example <code>_site</code> in <a href="#composer_dir">COMPOSER_DIR</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="#internal-targets">site-template-config</a></td>
 <td style="text-align: left;">Only create directory structure and source files</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="#internal-targets">site-template-_test</a></td>
 <td style="text-align: left;">Version configured to test specific variations</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="#internal-targets">subdirs</a></td>
 <td style="text-align: left;">Expands <a href="#composer_subdirs">COMPOSER_SUBDIRS</a> into <code>*-subdirs-*</code> targets</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="#internal-targets">list-list</a></td>
 <td style="text-align: left;">Same as <a href="#list">list</a>, but only lists the files (no headers)</td>
 </tr>
@@ -22067,9 +22154,7 @@ yaml_metadata_block</code></pre>
 override COMPOSER_TEACHER := $(abspath $(dir $(COMPOSER_MY_PATH)))/Makefile
 include $(COMPOSER_TEACHER)</code></pre>
 <p>Use the <a href="#template--template-yml--template-md">template</a> target to create <code>.composer.mk</code> files:</p>
-<pre><code>########################################
-# Global
-
+<pre><code># &gt;&gt; Global Variables
 # override MAKEJOBS := 1
 # override COMPOSER_DOCOLOR :=
 # override COMPOSER_DEBUGIT :=
@@ -22083,12 +22168,9 @@ include $(COMPOSER_TEACHER)</code></pre>
 # override c_icon := $(COMPOSER_DIR)/artifacts/images/icon.img
 # override c_css := $(COMPOSER_DIR)/artifacts/themes/theme.html-default.css
 
-########################################
-# ifneq ($(COMPOSER_CURDIR),)
+ifneq ($(COMPOSER_CURDIR),)
 
-########################################
-# Local
-
+# &gt;&gt; Local Variables
 # override COMPOSER_INCLUDE :=
 # override COMPOSER_DEPENDS :=
 # override COMPOSER_TARGETS := README.site.html README.html README.pdf README.epub README.revealjs.html README.docx
@@ -22106,8 +22188,7 @@ include $(COMPOSER_TEACHER)</code></pre>
 # override c_margin_right :=
 # override c_options :=
 
-########################################
-# endif</code></pre>
+endif</code></pre>
 <p>Use the <a href="#template--template-yml--template-md">template-yml</a> target to create <code>.composer.yml</code> files:</p>
 <pre><code># variables:
 #   title-prefix: null
@@ -22144,7 +22225,7 @@ include $(COMPOSER_TEACHER)</code></pre>
 #       - 6
 #     metainfo: &#39;&lt;date&gt; :: &lt;title&gt;&lt;|&gt; -- &lt;author|; &gt;&#39;
 #     metainfo_null: &#39;*(none)*&#39;
-#     tagslist:
+#     metalist:
 #       author:
 #         title: Author
 #         display: &#39;*Authors: &lt;|&gt;, &lt;|&gt;*&#39;
@@ -22181,7 +22262,7 @@ include $(COMPOSER_TEACHER)</code></pre>
 <p>Use the <a href="#template--template-yml--template-md">template-md</a> target to create new <code>markdown</code> files:</p>
 <pre><code>---
 title: &quot;Composer CMS: Content Make System&quot;
-date: 2023-08-15
+date: 2023-10-06
 author:
   - Gary B. Genett
 tags:
@@ -22204,14 +22285,14 @@ ifneq ($(COMPOSER_CURDIR),)
 override COMPOSER_SUBDIRS := .null
 
 ########################################
-# Wildcards
+# Defaults
 
 README.%: override c_logo := ../../projects/composer/artifacts/images/logo-v1.0.png
 README.%: override c_icon := ../../projects/composer/artifacts/images/icon-v1.0.png
 README.%: override c_toc := 0
 
 ########################################
-# Settings
+# Files
 
 override README.site.html := ../../projects/composer/artifacts/README.site.md
 README.site.html: override c_site := 1
@@ -22281,7 +22362,7 @@ variables:
 
 #&gt;&gt; metainfo: &quot;&lt;date&gt; :: &lt;title&gt;&lt;|&gt; -- &lt;author|; &gt;&quot;
 #&gt;&gt; metainfo_null: &quot;*(none)*&quot;
-#&gt;&gt; tagslist:
+#&gt;&gt; metalist:
 #&gt;&gt;   author:
 #&gt;&gt;     title: &quot;Author&quot;
 #&gt;&gt;     display: &quot;*Authors: &lt;|&gt;, &lt;|&gt;*&quot;
@@ -22362,8 +22443,8 @@ variables:
     PATH:
       - SITEMAP: ../../_library/sitemap.html
     INFO:
-      - tagslist author
-      - tagslist tags
+      - metalist author
+      - metalist tags
 
 ########################################
   site-nav-left:
@@ -22391,8 +22472,8 @@ variables:
       - contents
 #&gt;&gt;   - contents 6
 #&gt;&gt;   - contents 0
-      - tagslist author
-      - tagslist tags
+      - metalist author
+      - metalist tags
       - readtime
       - box-end
     END:
@@ -22439,8 +22520,8 @@ variables:
           TOP TEXT
     INFO:
 #&gt;&gt;   - metainfo
-#&gt;&gt;   - tagslist author
-#&gt;&gt;   - tagslist tags
+#&gt;&gt;   - metalist author
+#&gt;&gt;   - metalist tags
 #&gt;&gt;   - readtime
     ICON:
       - icon github https://github.com/garybgenett/composer Composer CMS
@@ -22457,8 +22538,8 @@ variables:
           BOTTOM TEXT
     INFO:
 #&gt;&gt;   - metainfo
-#&gt;&gt;   - tagslist author
-#&gt;&gt;   - tagslist tags
+#&gt;&gt;   - metalist author
+#&gt;&gt;   - metalist tags
       - readtime
     ICON:
 
@@ -22569,6 +22650,7 @@ COMPOSER_CONTENTS_EXT
 COMPOSER_CONTENTS_FILES
 COMPOSER_CONV
 COMPOSER_CSS
+COMPOSER_CSS_PUBLISH
 COMPOSER_CURDIR
 COMPOSER_CUSTOM
 COMPOSER_DAT
@@ -22649,9 +22731,9 @@ COMPOSER_TMP_FILE
 COMPOSER_VERSION
 COMPOSER_YML
 COMPOSER_YML_DATA
+COMPOSER_YML_DATA_METALIST
+COMPOSER_YML_DATA_METALIST_SKEL
 COMPOSER_YML_DATA_SKEL
-COMPOSER_YML_DATA_TAGSLIST
-COMPOSER_YML_DATA_TAGSLIST_SKEL
 COMPOSER_YML_DATA_VAL
 COMPOSER_YML_LIST
 CONFIGS
@@ -22696,7 +22778,6 @@ DESC_LINT
 DESC_LPDF
 DESC_PPTX
 DESC_PRES
-DESC_SITE
 DESC_TEXT
 DIFF
 DIFFUTILS_VER
@@ -22759,6 +22840,7 @@ GIT_REPO
 GIT_REPO_DO
 GIT_RUN
 GIT_RUN_COMPOSER
+GIT_RUN_REPO
 GIT_VER
 GZIP_BIN
 GZIP_VER
@@ -22918,6 +23000,12 @@ PANDOC_CMT
 PANDOC_CMT_DISPLAY
 PANDOC_DIR
 PANDOC_EXTENSIONS
+PANDOC_FILES_CSS
+PANDOC_FILES_HEADER
+PANDOC_FILES_LIST
+PANDOC_FILES_MAIN
+PANDOC_FILES_OVERRIDE
+PANDOC_FILES_SPLIT
 PANDOC_FROM
 PANDOC_JSON_TO_LINT
 PANDOC_LIC
@@ -23013,6 +23101,13 @@ PUBLISH_METAINFO_ALT
 PUBLISH_METAINFO_MOD
 PUBLISH_METAINFO_NULL
 PUBLISH_METAINFO_NULL_ALT
+PUBLISH_METALIST
+PUBLISH_METALIST_PRINT
+PUBLISH_METALIST_PRINT_ALT
+PUBLISH_METALIST_PRINT_MOD
+PUBLISH_METALIST_TITLE
+PUBLISH_METALIST_TITLE_ALT
+PUBLISH_METALIST_TITLE_MOD
 PUBLISH_OUT_README
 PUBLISH_PAGEDIR
 PUBLISH_PAGE_1
@@ -23059,15 +23154,10 @@ PUBLISH_READTIME_WPM
 PUBLISH_READTIME_WPM_ALT
 PUBLISH_ROOT
 PUBLISH_SHOWDIR
+PUBLISH_SH_GLOBAL
 PUBLISH_SH_HELPERS
+PUBLISH_SH_LOCAL
 PUBLISH_SH_RUN
-PUBLISH_TAGSLIST
-PUBLISH_TAGSLIST_PRINT
-PUBLISH_TAGSLIST_PRINT_ALT
-PUBLISH_TAGSLIST_PRINT_MOD
-PUBLISH_TAGSLIST_TITLE
-PUBLISH_TAGSLIST_TITLE_ALT
-PUBLISH_TAGSLIST_TITLE_MOD
 PUBLISH_TESTING
 READ_ALIASES
 REALMAKE
@@ -23197,6 +23287,7 @@ c_level
 c_list
 c_list_file
 c_list_var
+c_list_var_source
 c_logo
 c_margin
 c_margin_bottom
@@ -23245,6 +23336,7 @@ headers-compose-PANDOC_OPTIONS
 headers-subdirs
 help-all-CUSTOM
 help-all-DEPENDS
+help-all-FILES
 help-all-FORMAT
 help-all-GOALS
 help-all-LINKS
@@ -23302,10 +23394,10 @@ site-targets-file
 site-targets-helpers
 site-targets-metainfo
 site-targets-metainfo-done
+site-targets-metalist
+site-targets-metalist-done
 site-targets-readtime
 site-targets-readtime-done
-site-targets-tagslist
-site-targets-tagslist-done
 subdirs-template
 targets-list
 _test-COMPOSER_INCLUDE-done
@@ -23483,7 +23575,7 @@ History
 <!-- site-nav-bottom-list :: finish >> nav-bottom.["PATH"] -->
 <!-- site-nav-bottom-list :: start >> nav-bottom.["INFO"] -->
 <!-- site-nav-bottom-list :: start >> nav-bottom.["INFO"][0] -->
-<!-- composer >> tagslist-menu tags >> -->
+<!-- composer >> metalist-menu tags >> -->
 <li class="breadcrumb-item">
 <a href="../../library/tags-releases.html">Releases</a>
 </li>
@@ -23504,7 +23596,7 @@ History
 <!-- site-info-data-list :: start >> info-bottom.["INFO"][0] -->
 <p class="composer-link navbar-text me-3">
 <!-- composer >> readtime-list >> -->
-<em>Reading time: 8213 words, 37 minutes</em>
+<em>Reading time: 8534 words, 38 minutes</em>
 </p>
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"][0] -->
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"] -->

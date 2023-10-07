@@ -745,7 +745,7 @@ max-width:	100%;
 <section id="title-slide">
   <h1 class="title">Composer CMS: Content Make System</h1>
   <p class="author">Gary B. Genett</p>
-  <p class="date">v3.1 (2023-08-14)</p>
+  <p class="date">v3.1 (2023-10-05)</p>
 </section>
 
 <section>
@@ -761,7 +761,7 @@ max-width:	100%;
 <tbody>
 <tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/garybgenett/composer/tree/v3.1">Composer CMS v3.1</a></td>
-<td style="text-align: left;"><a href="https://github.com/garybgenett/composer/blob/master/LICENSE.md">License: GPL</a></td>
+<td style="text-align: left;"><a href="https://github.com/garybgenett/composer/blob/main/LICENSE.md">License: GPL</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="http://www.garybgenett.net/projects/composer">Gary B. Genett</a></td>
@@ -769,6 +769,7 @@ max-width:	100%;
 </tr>
 </tbody>
 </table>
+<p>– Formats: <a href="README.site.html">webpage</a> / <a href="README.html">html</a> / <a href="README.pdf">pdf</a> / <a href="README.epub">epub</a> / <a href="README.revealjs.html">revealjs.html</a> / <a href="README.docx">docx</a></p>
 </section>
 <section id="overview" class="slide level2">
 <h2>Overview</h2>
@@ -790,7 +791,8 @@ make Composer-v3.1.Manual.html c_list=&quot;README.md LICENSE.md&quot;</code></p
 <p>Save a persistent configuration (see [Recommended Workflow] and [Configuration Settings]):</p>
 <pre><code>make template &gt;.composer.mk
 $EDITOR .composer.mk
-    Composer-v3.1.Manual.html: override c_list := README.md LICENSE.md
+    override COMPOSER_TARGETS := .targets Composer-v3.1.Manual.html
+    override Composer-v3.1.Manual.html := README.md LICENSE.md
 make clean
 make all</code></pre>
 <p>Recursively install and build an entire directory tree (see [Recommended Workflow]):</p>
@@ -950,8 +952,8 @@ make all-all</code></pre>
 </tr>
 </tbody>
 </table>
-<p>#WORKING:FIREBASE [Google Firebase] is only for [_update-all] / DOFORCE?</p>
 <p>[Markdown Viewer] is included both for its CSS stylesheets, and for real-time rendering of [Markdown] files as they are being written. To install, follow the instructions in the <code>README.md</code>.</p>
+<p>[Google Firebase] is only necessary for uploading via the [export-all] and [export-force] targets.</p>
 <p>The versions of the integrated repositories can be changed, if desired (see [Repository Versions]).</p>
 </section>
 <section class="slide level2">
@@ -1055,42 +1057,42 @@ make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;"><code>html</code></td>
-<td style="text-align: left;">[HyperText Markup Language]</td>
+<td style="text-align: left;"><a href="#/html">HyperText Markup Language</a></td>
 <td style="text-align: left;">*.html</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><code>pdf</code></td>
-<td style="text-align: left;">[Portable Document Format]</td>
+<td style="text-align: left;"><a href="#/pdf">Portable Document Format</a></td>
 <td style="text-align: left;">*.pdf</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><code>epub</code></td>
-<td style="text-align: left;">[Electronic Publication]</td>
+<td style="text-align: left;"><a href="#/epub">Electronic Publication</a></td>
 <td style="text-align: left;">*.epub</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><code>revealjs</code></td>
-<td style="text-align: left;">[Reveal.js Presentation]</td>
+<td style="text-align: left;"><a href="#/revealjs-presentations">Reveal.js Presentation</a></td>
 <td style="text-align: left;">*.revealjs.html</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><code>docx</code></td>
-<td style="text-align: left;">[Microsoft Word]</td>
+<td style="text-align: left;"><a href="#/microsoft-word--powerpoint">Microsoft Word</a></td>
 <td style="text-align: left;">*.docx</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><code>pptx</code></td>
-<td style="text-align: left;">[Microsoft PowerPoint]</td>
+<td style="text-align: left;"><a href="#/microsoft-word--powerpoint">Microsoft PowerPoint</a></td>
 <td style="text-align: left;">*.pptx</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><code>text</code></td>
-<td style="text-align: left;">[Plain Text (well-formatted)]</td>
+<td style="text-align: left;"><a href="#/plain-text">Plain Text (well-formatted)</a></td>
 <td style="text-align: left;">*.txt</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><code>markdown</code></td>
-<td style="text-align: left;">[Markdown (for testing)]</td>
+<td style="text-align: left;"><a href="#/pandoc-markdown">Markdown (for testing)</a></td>
 <td style="text-align: left;">*.md.txt</td>
 </tr>
 </tbody>
@@ -1099,7 +1101,6 @@ make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
 <li><em>Other [c_type] values will be passed directly to [Pandoc]</em></li>
 <li><em>Special [c_css] values:</em>
 <ul>
-<li><em><code>.composer.css</code> = Filesystem override of variable value</em></li>
 <li><em><code>css_alt</code> = Use the alternate default stylesheet</em></li>
 <li><em><code>0</code> = Revert to the [Pandoc] default</em></li>
 </ul></li>
@@ -1451,11 +1452,11 @@ make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
 </tr>
 <tr class="even">
 <td style="text-align: left;">[export-all]</td>
-<td style="text-align: left;">#WORKING:DOCS</td>
+<td style="text-align: left;">Also publish <code>+Composer</code> upstream: [Git]/[Firebase]</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">[export-force]</td>
-<td style="text-align: left;">#WORKING:DOCS</td>
+<td style="text-align: left;">Publish only, without synchronizing <code>+Composer</code> first</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">[*-export]</td>
@@ -1500,7 +1501,8 @@ make Composer-v3.1.Manual.html c_list=&quot;README.md LICENSE.md&quot;</code></p
 <p>Save a persistent configuration (see [Recommended Workflow] and [Configuration Settings]):</p>
 <pre><code>make template &gt;.composer.mk
 $EDITOR .composer.mk
-    Composer-v3.1.Manual.html: override c_list := README.md LICENSE.md
+    override COMPOSER_TARGETS := .targets Composer-v3.1.Manual.html
+    override Composer-v3.1.Manual.html := README.md LICENSE.md
 make clean
 make all</code></pre>
 <p>Recursively install and build an entire directory tree (see [Recommended Workflow]):</p>
