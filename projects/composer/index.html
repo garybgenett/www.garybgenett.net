@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content />
-  <meta name="dcterms.date" content="2023-10-06" />
+  <meta name="dcterms.date" content="2023-10-08" />
   <title>Gary B. Genett – Composer CMS v3.1</title>
   <style>
     code{white-space: pre-wrap;}
@@ -20802,7 +20802,8 @@ README.revealjs.html: override c_toc :=</code></pre>
 <p>Example configuration files:</p>
 <pre><code>.../.composer.mk
 .../artifacts/.composer.yml
-.../artifacts/README.site.yml</code></pre>
+.../artifacts/README.site.yml
+.../README.site.html.yml</code></pre>
 <!-- site-box-end :: start >> -->
 </section>
 </div>
@@ -21940,7 +21941,7 @@ make -f .../.Composer/Makefile _release</code></pre>
 <li>For the <a href="#commit--commit-all--commit-list">commit-list</a> target specifically, <a href="#c_type--c_base--c_list">c_list</a> is repurposed to select the limited list of files and/or directories that should be committed. All selected files and directories must exist in the current directory or somewhere in the subdirectory tree below it. There is no option to skip the <code>$EDITOR</code> with this target.</li>
 </ul>
 <p>Commit title format:</p>
-<pre><code>[Composer CMS v3.1 :: 2023-10-06T17:41:36-07:00]</code></pre>
+<pre><code>[Composer CMS v3.1 :: 2023-10-08T05:05:17-07:00]</code></pre>
 <p>Example using <a href="#commit--commit-all--commit-list">commit-list</a> with <a href="#c_type--c_base--c_list">c_list</a>:</p>
 <pre><code>make commit-list c_list=&quot;Makefile artifacts&quot;</code></pre>
 </section>
@@ -22262,7 +22263,7 @@ endif</code></pre>
 <p>Use the <a href="#template--template-yml--template-md">template-md</a> target to create new <code>markdown</code> files:</p>
 <pre><code>---
 title: &quot;Composer CMS: Content Make System&quot;
-date: 2023-10-06
+date: 2023-10-08
 author:
   - Gary B. Genett
 tags:
@@ -22736,6 +22737,7 @@ COMPOSER_YML_DATA_METALIST_SKEL
 COMPOSER_YML_DATA_SKEL
 COMPOSER_YML_DATA_VAL
 COMPOSER_YML_LIST
+COMPOSER_YML_LIST_FILE
 CONFIGS
 CONVICT
 COPYRIGHT_FULL
@@ -23365,6 +23367,7 @@ site-cache
 site-caches
 site-caches-begin
 site-caches-end
+site-cache-root
 site-library
 site-library-digest
 site-library-digest-create
@@ -23596,7 +23599,7 @@ History
 <!-- site-info-data-list :: start >> info-bottom.["INFO"][0] -->
 <p class="composer-link navbar-text me-3">
 <!-- composer >> readtime-list >> -->
-<em>Reading time: 8534 words, 38 minutes</em>
+<em>Reading time: 8537 words, 38 minutes</em>
 </p>
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"][0] -->
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"] -->

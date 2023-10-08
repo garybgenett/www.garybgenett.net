@@ -11,13 +11,6 @@ variables:
     footer:				<composer_root>/_footer-pages.md.cms
 
 ########################################
-  site-nav-top:
-
-    CONTENTS:
-      - Contents:
-        - contents
-
-########################################
   site-nav-left:
 
     CONTENTS:

@@ -1470,7 +1470,7 @@ max-width:	100%;
 <header id="title-block-header">
 <h1 class="title">Composer CMS: Content Make System</h1>
 <p class="author">Gary B. Genett</p>
-<p class="date">v3.1 (2023-10-06)</p>
+<p class="date">v3.1 (2023-10-08)</p>
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
@@ -1957,7 +1957,8 @@ README.revealjs.html: override c_toc :=</code></pre>
 <p>Example configuration files:</p>
 <pre><code>.../.composer.mk
 .../artifacts/.composer.yml
-.../artifacts/README.site.yml</code></pre>
+.../artifacts/README.site.yml
+.../README.site.html.yml</code></pre>
 </section>
 </section>
 <section id="precedence-rules" class="level2" data-number="2.4">
@@ -2918,7 +2919,7 @@ make -f .../.Composer/Makefile _release</code></pre>
 <li>For the <a href="#commit--commit-all--commit-list">commit-list</a> target specifically, <a href="#c_type--c_base--c_list">c_list</a> is repurposed to select the limited list of files and/or directories that should be committed. All selected files and directories must exist in the current directory or somewhere in the subdirectory tree below it. There is no option to skip the <code>$EDITOR</code> with this target.</li>
 </ul>
 <p>Commit title format:</p>
-<pre><code>[Composer CMS v3.1 :: 2023-10-06T17:41:34-07:00]</code></pre>
+<pre><code>[Composer CMS v3.1 :: 2023-10-08T05:09:23-07:00]</code></pre>
 <p>Example using <a href="#commit--commit-all--commit-list">commit-list</a> with <a href="#c_type--c_base--c_list">c_list</a>:</p>
 <pre><code>make commit-list c_list=&quot;Makefile artifacts&quot;</code></pre>
 </section>
@@ -3199,7 +3200,7 @@ endif</code></pre>
 <p>Use the <a href="#template--template-yml--template-md">template-md</a> target to create new <code>markdown</code> files:</p>
 <pre><code>---
 title: &quot;Composer CMS: Content Make System&quot;
-date: 2023-10-06
+date: 2023-10-08
 author:
   - Gary B. Genett
 tags:
@@ -3654,6 +3655,7 @@ COMPOSER_YML_DATA_METALIST_SKEL
 COMPOSER_YML_DATA_SKEL
 COMPOSER_YML_DATA_VAL
 COMPOSER_YML_LIST
+COMPOSER_YML_LIST_FILE
 CONFIGS
 CONVICT
 COPYRIGHT_FULL
@@ -4283,6 +4285,7 @@ site-cache
 site-caches
 site-caches-begin
 site-caches-end
+site-cache-root
 site-library
 site-library-digest
 site-library-digest-create
