@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Gary B. Genett" />
-  <meta name="dcterms.date" content="2023-10-08" />
+  <meta name="dcterms.date" content="2023-11-08" />
   <title>EXAMPLE SITE – Configured Site</title>
   <style>
     code{white-space: pre-wrap;}
@@ -19766,7 +19766,7 @@ margin-top:	0px;
 <ul class="composer-menu-md dropdown-menu">
 <!-- site-nav-top-list :: start >> nav-top.["CONTENTS"][0].["CONTENTS"] -->
 <!-- site-nav-top-list :: start >> nav-top.["CONTENTS"][0].["CONTENTS"][0] -->
-<!-- composer >> contents-menu >> -->
+<!-- composer >> contents-menu -->
 <li>
 <a href="#workingdocs" class="dropdown-item">#WORKING:DOCS</a>
 </li>
@@ -19983,18 +19983,18 @@ CONTENTS
 <!-- site-box-begin :: finish >> 0 CONTENTS -->
 <!-- site-nav-side-list :: finish >> nav-left.["CONTENTS"][0] -->
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][1] -->
-<!-- composer >> metainfo-list >> -->
-<p>Configured Site  <em>(2023-10-08)</em> <br><em>– Gary B. Genett</em><br><em>. Main</em></p>
+<!-- composer >> metainfo-list -->
+<p>Configured Site  <em>(2023-11-08)</em> <br><em>– Gary B. Genett</em><br><em>. Main</em></p>
 <!-- site-nav-side-list :: finish >> nav-left.["CONTENTS"][1] -->
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][2] -->
-<!-- composer >> contents-list >> -->
+<!-- composer >> contents-list -->
 <ul>
 <li><a href="#workingdocs">#WORKING:DOCS</a></li>
 <li><a href="#configuration-settings">Configuration Settings</a></li>
 </ul>
 <!-- site-nav-side-list :: finish >> nav-left.["CONTENTS"][2] -->
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][3] -->
-<!-- composer >> metalist-list author >> -->
+<!-- composer >> metalist-list author -->
 <ul>
 <li>
 <a href="_library-config/author-gary-b-genett.html">Gary B. Genett</a>
@@ -20002,7 +20002,7 @@ CONTENTS
 </ul>
 <!-- site-nav-side-list :: finish >> nav-left.["CONTENTS"][3] -->
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][4] -->
-<!-- composer >> metalist-list tags >> -->
+<!-- composer >> metalist-list tags -->
 <ul>
 <li>
 <a href="_library-config/tags-main.html">Main</a>
@@ -20010,8 +20010,8 @@ CONTENTS
 </ul>
 <!-- site-nav-side-list :: finish >> nav-left.["CONTENTS"][4] -->
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][5] -->
-<!-- composer >> readtime-list >> -->
-<p><em>Words: 215 / Minutes: 1</em></p>
+<!-- composer >> readtime-list -->
+<p><em>Words: 208 / Minutes: 1</em></p>
 <!-- site-nav-side-list :: finish >> nav-left.["CONTENTS"][5] -->
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][6] -->
 <!-- site-box-end :: start >> -->
@@ -20084,9 +20084,9 @@ Header
 <div class="card-body">
 <!-- site-box-begin :: finish >> 1 #WORKING:DOCS -->
 <p>#WORKING:DOCS</p>
-<p><code>&lt;!-- composer &gt;&gt; metainfo &gt;&gt; --&gt;</code></p>
-<!-- composer >> metainfo-list >> -->
-<p>Configured Site  <em>(2023-10-08)</em> <br><em>– Gary B. Genett</em><br><em>. Main</em></p>
+<p><code>&lt;!-- composer &gt;&gt; metainfo --&gt;</code></p>
+<!-- composer >> metainfo-list -->
+<p>Configured Site  <em>(2023-11-08)</em> <br><em>– Gary B. Genett</em><br><em>. Main</em></p>
 <!-- site-box-end :: start >> -->
 </div>
 </div>
@@ -20240,32 +20240,42 @@ Configuration Settings
 <td style="text-align: left;"><code>*(permalink)*</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">digest_header</td>
+<td style="text-align: left;">digest_include</td>
 <td style="text-align: left;"><code>null</code></td>
-<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;"><code>../config/_include.md.cms</code></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">digest_footer</td>
-<td style="text-align: left;"><code>null</code></td>
-<td style="text-align: left;"><code>null</code></td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">digest_chars</td>
 <td style="text-align: left;"><code>1024</code></td>
 <td style="text-align: left;"><code>2048</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">digest_count</td>
 <td style="text-align: left;"><code>10</code></td>
 <td style="text-align: left;"><code>20</code></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">digest_expanded</td>
 <td style="text-align: left;"><code>0</code></td>
 <td style="text-align: left;"><code>null</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">digest_spacer</td>
+<td style="text-align: left;"><code>1</code></td>
+<td style="text-align: left;"><code>null</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">lists_include</td>
+<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;"><code>../config/_include.md.cms</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">lists_expanded</td>
+<td style="text-align: left;"><code>0</code></td>
+<td style="text-align: left;"><code>null</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">lists_spacer</td>
 <td style="text-align: left;"><code>1</code></td>
 <td style="text-align: left;"><code>null</code></td>
 </tr>
@@ -20281,26 +20291,6 @@ Configuration Settings
 </tr>
 <tr class="even">
 <td style="text-align: left;">sitemap_spacer</td>
-<td style="text-align: left;"><code>1</code></td>
-<td style="text-align: left;"><code>null</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">lists_header</td>
-<td style="text-align: left;"><code>null</code></td>
-<td style="text-align: left;"><code>null</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">lists_footer</td>
-<td style="text-align: left;"><code>null</code></td>
-<td style="text-align: left;"><code>null</code></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">lists_expanded</td>
-<td style="text-align: left;"><code>0</code></td>
-<td style="text-align: left;"><code>null</code></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">lists_spacer</td>
 <td style="text-align: left;"><code>1</code></td>
 <td style="text-align: left;"><code>null</code></td>
 </tr>
@@ -20586,7 +20576,7 @@ DATES
 <a href="_library-config/date-2023.html">2023</a>
 </td>
 <td class="text-end">
-2
+3
 </td>
 </tr>
 <tr>
@@ -20671,7 +20661,7 @@ AUTHORS
 <a href="_library-config/author-gary-b-genett.html">Gary B. Genett</a>
 </td>
 <td class="text-end">
-21
+22
 </td>
 </tr>
 </table>
@@ -20708,7 +20698,7 @@ TAGS
 <a href="_library-config/tags-main.html">Main</a>
 </td>
 <td class="text-end">
-1
+2
 </td>
 </tr>
 <tr>
@@ -20872,13 +20862,13 @@ TAGS
 <!-- site-nav-bottom-list :: finish >> nav-bottom.["PATH"] -->
 <!-- site-nav-bottom-list :: start >> nav-bottom.["INFO"] -->
 <!-- site-nav-bottom-list :: start >> nav-bottom.["INFO"][0] -->
-<!-- composer >> metalist-menu author >> -->
+<!-- composer >> metalist-menu author -->
 <li class="breadcrumb-item">
 <a href="_library-config/author-gary-b-genett.html">Gary B. Genett</a>
 </li>
 <!-- site-nav-bottom-list :: finish >> nav-bottom.["INFO"][0] -->
 <!-- site-nav-bottom-list :: start >> nav-bottom.["INFO"][1] -->
-<!-- composer >> metalist-menu tags >> -->
+<!-- composer >> metalist-menu tags -->
 <li class="breadcrumb-item">
 <a href="_library-config/tags-main.html">Main</a>
 </li>
@@ -20910,8 +20900,8 @@ BOTTOM TEXT
 <!-- site-info-data-list :: start >> info-bottom.["INFO"] -->
 <!-- site-info-data-list :: start >> info-bottom.["INFO"][0] -->
 <p class="composer-link navbar-text me-3">
-<!-- composer >> readtime-list >> -->
-<em>Words: 215 / Minutes: 1</em>
+<!-- composer >> readtime-list -->
+<em>Words: 208 / Minutes: 1</em>
 </p>
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"][0] -->
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"] -->

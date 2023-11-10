@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content />
-  <meta name="dcterms.date" content="2023-10-08" />
+  <meta name="dcterms.date" content="2023-11-08" />
   <title>EXAMPLE SITE – Mark: Tag 0</title>
   <style>
     code{white-space: pre-wrap;}
@@ -19766,7 +19766,7 @@ margin-top:	0px;
 <ul class="composer-menu-md dropdown-menu">
 <!-- site-nav-top-list :: start >> nav-top.["CONTENTS"][0].["CONTENTS"] -->
 <!-- site-nav-top-list :: start >> nav-top.["CONTENTS"][0].["CONTENTS"][0] -->
-<!-- composer >> contents-menu 0 >> -->
+<!-- composer >> contents-menu 0 -->
 <li>
 <a href="#number-00-in-2030nbspnbsp2030-01-010000br---gary-b-genett----author-1----author-2----author-3br-tag-0--tag-1--tag-2--tag-3" class="dropdown-item">Number 00 in 2030  <em>(2030-01-01)</em></a>
 </li>
@@ -19983,7 +19983,7 @@ CONTENTS
 <!-- site-box-begin :: finish >> 0 CONTENTS -->
 <!-- site-nav-side-list :: finish >> nav-left.["CONTENTS"][0] -->
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][1] -->
-<!-- composer >> contents-list 0 >> -->
+<!-- composer >> contents-list 0 -->
 <ul>
 <li><a href="#number-00-in-2030nbspnbsp2030-01-010000br---gary-b-genett----author-1----author-2----author-3br-tag-0--tag-1--tag-2--tag-3">Number 00 in 2030  <em>(2030-01-01)</em></a></li>
 <li><a href="#number-00-in-2020nbspnbsp2020-01-010000br---gary-b-genett----author-1----author-2----author-3br-tag-0--tag-1--tag-2--tag-3">Number 00 in 2020  <em>(2020-01-01)</em></a></li>
@@ -20082,33 +20082,32 @@ Number 00 in 2030  <em>(2030-01-01)</em> <br><em>– Gary B. Genett – Author
 <h2>2030 Lorem Ipsum</h2>
 <section id="directory-tree" class="level3">
 <h3>Directory Tree</h3>
-<p>The ideal workflow is to put [Composer] in a top-level <code>.Composer</code> for each directory tree you want to manage, creating a structure similar to this:</p>
+<p>The ideal workflow is to put <a href="http://www.garybgenett.net/projects/composer">Composer</a> in a top-level <code>.Composer</code> for each directory tree you want to manage, creating a structure similar to this:</p>
 <pre><code>.../.Composer
 .../
 .../tld/
 .../tld/sub/</code></pre>
-<p>To save on disk space, using a central [Composer] install for multiple directory trees, the [init] target can be used to create a linked <code>.Composer</code> directory:</p>
+<p>To save on disk space, using a central <a href="http://www.garybgenett.net/projects/composer">Composer</a> install for multiple directory trees, the <a href="#init--init-force">init</a> target can be used to create a linked <code>.Composer</code> directory:</p>
 <pre><code>make -f .../Makefile init</code></pre>
-<p>The directory tree can then be converted to a [Composer] documentation archive ([Quick Start] example):</p>
+<p>The directory tree can then be converted to a <a href="http://www.garybgenett.net/projects/composer">Composer</a> documentation archive (<a href="#quick-start">Quick Start</a> example):</p>
 <pre><code>make -f .Composer/Makefile install-all
 make all-all</code></pre>
 </section>
 <section id="customization" class="level3">
 <h3>Customization</h3>
-<p>If specific settings need to be used, either globally or per-directory, <code>.composer.mk</code> and <code>.composer.yml</code> files can be created (see [Configuration Settings], [Quick Start] example):</p>
+<p>If specific settings need to be used, either globally or per-directory, <code>.composer.mk</code> and <code>.composer.yml</code> files can be created (see <a href="#configuration-settings">Configuration Settings</a>, <a href="#quick-start">Quick Start</a> example):</p>
 <pre><code>make template &gt;.composer.mk &amp;&amp; $EDITOR .composer.mk
 make template-yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre>
-<p>Custom targets can also be defined, using standard [GNU Make] syntax (see [Custom Targets]).</p>
+<p>Custom targets can also be defined, using standard <a href="http://www.gnu.org/software/make">GNU Make</a> syntax (see <a href="#custom-targets">Custom Targets</a>).</p>
 </section>
 <section id="important-notes" class="level3">
 <h3>Important Notes</h3>
-<p>[GNU Make] does not support file and directory names with spaces in them, and neither does [Composer]. Documentation archives which have such files or directories will produce unexpected results.</p>
+<p><a href="http://www.gnu.org/software/make">GNU Make</a> does not support file and directory names with spaces in them, and neither does <a href="http://www.garybgenett.net/projects/composer">Composer</a>. Documentation archives which have such files or directories will produce unexpected results.</p>
 <p>It is fully supported for input files to be symbolic links to files that reside outside the documentation archive:</p>
 <pre><code>cd .../tld
 ln -rs .../README.md ./
 make README.html</code></pre>
-<p>Similarly to source code, [GNU Make] is meant to only run one instance within the directory at a time, and [Composer] shares this requirement. It should be run as a single user, to avoid duplication and conflicts. Concurrent runs will produce unexpected results. It is highly recommended to set [MAKEJOBS] to a value greater than the default, to speed up processing.</p>
-<p>It is best practice to [install-force] after every [Composer] upgrade, in case there are any changes to the <code>Makefile</code> template (see [Templates]). Everything in [Composer] sources from the main <code>Makefile</code>, so that is the only file which requires review to see what changes have been made between versions.</p>
+<p>Similarly to source code, <a href="http://www.gnu.org/software/make">GNU Make</a> is meant to only run one instance within the directory at a time, and <a href="http://www.garybgenett.net/projects/composer">Composer</a> shares this requirement. It should be run as a single user, to avoid duplication and conflicts. Concurrent runs will produce unexpected results. It is highly recommended to set <a href="#makejobs">MAKEJOBS</a> to a value greater than the default, to speed up processing.</p>
 <p><em>(continued)</em></p>
 <p><a href="../../config/pages/2030-01-01+template_00.html"><em>(permalink)</em></a></p>
 <!-- site-fold-end :: start >> -->
@@ -20141,33 +20140,32 @@ Number 00 in 2020  <em>(2020-01-01)</em> <br><em>– Gary B. Genett – Author
 <h2>2020 Lorem Ipsum</h2>
 <section id="directory-tree-1" class="level3">
 <h3>Directory Tree</h3>
-<p>The ideal workflow is to put [Composer] in a top-level <code>.Composer</code> for each directory tree you want to manage, creating a structure similar to this:</p>
+<p>The ideal workflow is to put <a href="http://www.garybgenett.net/projects/composer">Composer</a> in a top-level <code>.Composer</code> for each directory tree you want to manage, creating a structure similar to this:</p>
 <pre><code>.../.Composer
 .../
 .../tld/
 .../tld/sub/</code></pre>
-<p>To save on disk space, using a central [Composer] install for multiple directory trees, the [init] target can be used to create a linked <code>.Composer</code> directory:</p>
+<p>To save on disk space, using a central <a href="http://www.garybgenett.net/projects/composer">Composer</a> install for multiple directory trees, the <a href="#init--init-force">init</a> target can be used to create a linked <code>.Composer</code> directory:</p>
 <pre><code>make -f .../Makefile init</code></pre>
-<p>The directory tree can then be converted to a [Composer] documentation archive ([Quick Start] example):</p>
+<p>The directory tree can then be converted to a <a href="http://www.garybgenett.net/projects/composer">Composer</a> documentation archive (<a href="#quick-start">Quick Start</a> example):</p>
 <pre><code>make -f .Composer/Makefile install-all
 make all-all</code></pre>
 </section>
 <section id="customization-1" class="level3">
 <h3>Customization</h3>
-<p>If specific settings need to be used, either globally or per-directory, <code>.composer.mk</code> and <code>.composer.yml</code> files can be created (see [Configuration Settings], [Quick Start] example):</p>
+<p>If specific settings need to be used, either globally or per-directory, <code>.composer.mk</code> and <code>.composer.yml</code> files can be created (see <a href="#configuration-settings">Configuration Settings</a>, <a href="#quick-start">Quick Start</a> example):</p>
 <pre><code>make template &gt;.composer.mk &amp;&amp; $EDITOR .composer.mk
 make template-yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre>
-<p>Custom targets can also be defined, using standard [GNU Make] syntax (see [Custom Targets]).</p>
+<p>Custom targets can also be defined, using standard <a href="http://www.gnu.org/software/make">GNU Make</a> syntax (see <a href="#custom-targets">Custom Targets</a>).</p>
 </section>
 <section id="important-notes-1" class="level3">
 <h3>Important Notes</h3>
-<p>[GNU Make] does not support file and directory names with spaces in them, and neither does [Composer]. Documentation archives which have such files or directories will produce unexpected results.</p>
+<p><a href="http://www.gnu.org/software/make">GNU Make</a> does not support file and directory names with spaces in them, and neither does <a href="http://www.garybgenett.net/projects/composer">Composer</a>. Documentation archives which have such files or directories will produce unexpected results.</p>
 <p>It is fully supported for input files to be symbolic links to files that reside outside the documentation archive:</p>
 <pre><code>cd .../tld
 ln -rs .../README.md ./
 make README.html</code></pre>
-<p>Similarly to source code, [GNU Make] is meant to only run one instance within the directory at a time, and [Composer] shares this requirement. It should be run as a single user, to avoid duplication and conflicts. Concurrent runs will produce unexpected results. It is highly recommended to set [MAKEJOBS] to a value greater than the default, to speed up processing.</p>
-<p>It is best practice to [install-force] after every [Composer] upgrade, in case there are any changes to the <code>Makefile</code> template (see [Templates]). Everything in [Composer] sources from the main <code>Makefile</code>, so that is the only file which requires review to see what changes have been made between versions.</p>
+<p>Similarly to source code, <a href="http://www.gnu.org/software/make">GNU Make</a> is meant to only run one instance within the directory at a time, and <a href="http://www.garybgenett.net/projects/composer">Composer</a> shares this requirement. It should be run as a single user, to avoid duplication and conflicts. Concurrent runs will produce unexpected results. It is highly recommended to set <a href="#makejobs">MAKEJOBS</a> to a value greater than the default, to speed up processing.</p>
 <p><em>(continued)</em></p>
 <p><a href="../../config/pages/2020-01-01+template_00.html"><em>(permalink)</em></a></p>
 <!-- site-fold-end :: start >> -->
@@ -20435,7 +20433,7 @@ DATES
 <a href="./date-2023.html">2023</a>
 </td>
 <td class="text-end">
-2
+3
 </td>
 </tr>
 <tr>
@@ -20520,7 +20518,7 @@ AUTHORS
 <a href="./author-gary-b-genett.html">Gary B. Genett</a>
 </td>
 <td class="text-end">
-21
+22
 </td>
 </tr>
 </table>
@@ -20557,7 +20555,7 @@ TAGS
 <a href="./tags-main.html">Main</a>
 </td>
 <td class="text-end">
-1
+2
 </td>
 </tr>
 <tr>
@@ -20721,10 +20719,10 @@ TAGS
 <!-- site-nav-bottom-list :: finish >> nav-bottom.["PATH"] -->
 <!-- site-nav-bottom-list :: start >> nav-bottom.["INFO"] -->
 <!-- site-nav-bottom-list :: start >> nav-bottom.["INFO"][0] -->
-<!-- composer >> metalist-menu author >> -->
+<!-- composer >> metalist-menu author -->
 <!-- site-nav-bottom-list :: finish >> nav-bottom.["INFO"][0] -->
 <!-- site-nav-bottom-list :: start >> nav-bottom.["INFO"][1] -->
-<!-- composer >> metalist-menu tags >> -->
+<!-- composer >> metalist-menu tags -->
 <!-- site-nav-bottom-list :: finish >> nav-bottom.["INFO"][1] -->
 <!-- site-nav-bottom-list :: finish >> nav-bottom.["INFO"] -->
 <!-- site-nav-bottom-list :: start >> nav-bottom.["CHAINED"] -->
@@ -20753,8 +20751,8 @@ BOTTOM TEXT
 <!-- site-info-data-list :: start >> info-bottom.["INFO"] -->
 <!-- site-info-data-list :: start >> info-bottom.["INFO"][0] -->
 <p class="composer-link navbar-text me-3">
-<!-- composer >> readtime-list >> -->
-<em>Words: 658 / Minutes: 3</em>
+<!-- composer >> readtime-list -->
+<em>Words: 562 / Minutes: 2</em>
 </p>
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"][0] -->
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"] -->

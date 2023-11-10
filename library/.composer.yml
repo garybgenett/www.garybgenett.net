@@ -4,21 +4,21 @@ variables:
     homepage: http://www.garybgenett.net
     brand: null
     copyright: |
-      <!-- composer >> icon copyright >> -->
+      <!-- composer >> icon copyright -->
       Copyright (c) 2022, Gary B. Genett
     composer: 1
     search_name: |
-      <!-- composer >> icon search >> -->
+      <!-- composer >> icon search -->
     search_site: https://duckduckgo.com
     search_call: q
     search_form: |
-      <!-- composer >> form sites garybgenett.net >> -->
-      <!-- composer >> form ia web >> -->
-      <!-- composer >> form kae d >> -->
-      <!-- composer >> form ko 1 >> -->
-      <!-- composer >> form kp -1 >> -->
-      <!-- composer >> form kv 1 >> -->
-      <!-- composer >> form kz -1 >> -->
+      <!-- composer >> form sites garybgenett.net -->
+      <!-- composer >> form ia web -->
+      <!-- composer >> form kae d -->
+      <!-- composer >> form ko 1 -->
+      <!-- composer >> form kp -1 -->
+      <!-- composer >> form kv 1 -->
+      <!-- composer >> form kz -1 -->
     header: <composer_root>/_header.md.cms
     footer: <composer_root>/_footer.md.cms
     css_shade: dark
@@ -58,19 +58,17 @@ variables:
     digest_title: Latest Updates
     digest_continue: '[...]'
     digest_permalink: '*(permalink to full text)*'
-    digest_header: null
-    digest_footer: null
+    digest_include: null
     digest_chars: 1024
     digest_count: 20
     digest_expanded: 0
     digest_spacer: 1
+    lists_include: null
+    lists_expanded: null
+    lists_spacer: null
     sitemap_title: Site Map
     sitemap_expanded: 0
     sitemap_spacer: null
-    lists_header: null
-    lists_footer: null
-    lists_expanded: null
-    lists_spacer: null
   site-nav-top:
     MENU:
       - Latest: <composer_root>/index.html
@@ -113,9 +111,9 @@ variables:
     INFO: null
     ICON:
       - _: |
-          <!-- composer >> icon <composer_root>/projects/composer/artifacts/images/icon-v1.0.png project <composer_root>/projects/composer/index.html Composer CMS >> -->
-          <!-- composer >> icon <composer_root>/projects/gary-os/artifacts/images/icon-v6.0.png project <composer_root>/projects/gary-os/index.html GaryOS >> -->
-          <!-- composer >> icon github https://github.com/garybgenett Gary B. Genett on Github >> -->
+          <!-- composer >> icon <composer_root>/projects/composer/artifacts/images/icon-v1.0.png project <composer_root>/projects/composer/index.html Composer CMS -->
+          <!-- composer >> icon <composer_root>/projects/gary-os/artifacts/images/icon-v6.0.png project <composer_root>/projects/gary-os/index.html GaryOS -->
+          <!-- composer >> icon github https://github.com/garybgenett Gary B. Genett on Github -->
   site-info-bottom:
     TEXT: null
     INFO:

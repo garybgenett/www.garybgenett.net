@@ -106,11 +106,11 @@ $(addsuffix /index.md,$(PROJECTS)):
 	elif [ "$($(@))" = "gary-os" ]; then \
 		$(CAT) $(^) \
 			| $(SED) \
-				-e "s|^(# .+ #+)$$|<!-- composer >> box-end >> -->\n<!-- composer >> spacer >> -->\n<!-- composer >> box-begin 0 >> -->\n\n\1\n\n<!-- composer >> box-end -->\n<!-- composer >> spacer -->\n|g" \
-				-e "s|^## (.+) #+$$|<!-- composer >> box-end >> -->\n<!-- composer >> spacer >> -->\n<!-- composer >> box-begin 2 \1 >> -->\n|g" \
+				-e "s|^(# .+ #+)$$|<!-- composer >> box-end -->\n<!-- composer >> spacer -->\n<!-- composer >> box-begin 0 -->\n\n\1\n\n<!-- composer box-end -->\n<!-- composer spacer -->\n|g" \
+				-e "s|^## (.+) #+$$|<!-- composer >> box-end -->\n<!-- composer >> spacer -->\n<!-- composer >> box-begin 2 \1 -->\n|g" \
 				-e "/^----/d" \
 				-e "/GaryOS Download/d" \
-				-e "s|^.*End Of File.*$$|<!-- composer >> box-end >> -->|g" \
+				-e "s|^.*End Of File.*$$|<!-- composer >> box-end -->|g" \
 			| $(SED) \
 				-e "1,/box-end/{ /box-end/d; }" \
 				; \

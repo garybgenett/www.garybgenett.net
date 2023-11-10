@@ -19753,7 +19753,7 @@ margin-top:	0px;
 <!-- site-nav-top-list :: finish >> nav-top.["SPACE"] -->
 <!-- site-nav-top-list :: start >> nav-top.["CONTENTS"] -->
 <!-- site-nav-top-list :: start >> nav-top.["CONTENTS"][0] -->
-<!-- composer >> contents-menu _ >> -->
+<!-- composer >> contents-menu _ -->
 <li class="nav-item dropdown">
 <a href="#composer-cms" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">CMS</a>
 <ul class="composer-menu-md dropdown-menu">
@@ -20176,7 +20176,7 @@ Contents
 <!-- site-box-begin :: finish >> 0 Contents -->
 <!-- site-nav-side-list :: finish >> nav-left.["CONTENTS"][0] -->
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][1] -->
-<!-- composer >> contents-list >> -->
+<!-- composer >> contents-list -->
 <ul>
 <li><a href="#composer-cms">Composer CMS</a>
 <ul>
@@ -21955,7 +21955,7 @@ make -f .../.Composer/Makefile _release</code></pre>
 <li>For the <a href="#commit--commit-all--commit-list">commit-list</a> target specifically, <a href="#c_type--c_base--c_list">c_list</a> is repurposed to select the limited list of files and/or directories that should be committed. All selected files and directories must exist in the current directory or somewhere in the subdirectory tree below it. There is no option to skip the <code>$EDITOR</code> with this target.</li>
 </ul>
 <p>Commit title format:</p>
-<pre><code>[Composer CMS v3.1 :: 2023-10-08T05:05:17-07:00]</code></pre>
+<pre><code>[Composer CMS v3.1 :: 2023-11-08T07:31:56-08:00]</code></pre>
 <p>Example using <a href="#commit--commit-all--commit-list">commit-list</a> with <a href="#c_type--c_base--c_list">c_list</a>:</p>
 <pre><code>make commit-list c_list=&quot;Makefile artifacts&quot;</code></pre>
 </section>
@@ -22255,19 +22255,17 @@ endif</code></pre>
 #     digest_title: Latest Updates
 #     digest_continue: &#39;[...]&#39;
 #     digest_permalink: &#39;*(permalink to full text)*&#39;
-#     digest_header: null
-#     digest_footer: null
+#     digest_include: null
 #     digest_chars: 1024
 #     digest_count: 10
 #     digest_expanded: 0
 #     digest_spacer: 1
+#     lists_include: null
+#     lists_expanded: 0
+#     lists_spacer: 1
 #     sitemap_title: Site Map
 #     sitemap_expanded: 0
 #     sitemap_spacer: 1
-#     lists_header: null
-#     lists_footer: null
-#     lists_expanded: 0
-#     lists_spacer: 1
 #   site-nav-top: null
 #   site-nav-bottom: null
 #   site-nav-left: null
@@ -22277,7 +22275,7 @@ endif</code></pre>
 <p>Use the <a href="#template--template-yml--template-md">template-md</a> target to create new <code>markdown</code> files:</p>
 <pre><code>---
 title: &quot;Composer CMS: Content Make System&quot;
-date: 2023-10-08
+date: 2023-11-08
 author:
   - Gary B. Genett
 tags:
@@ -22342,25 +22340,25 @@ variables:
     brand: LOGO / BRAND
 #&gt;&gt; copyright: COPYRIGHT
     copyright: |
-      &lt;!-- composer &gt;&gt; icon gpl &gt;&gt; --&gt;
-      &lt;!-- composer &gt;&gt; icon cc-by-nc-nd &gt;&gt; --&gt;
-      &lt;!-- composer &gt;&gt; icon copyright &gt;&gt; --&gt;
+      &lt;!-- composer &gt;&gt; icon gpl --&gt;
+      &lt;!-- composer &gt;&gt; icon cc-by-nc-nd --&gt;
+      &lt;!-- composer &gt;&gt; icon copyright --&gt;
       COPYRIGHT
 #&gt;&gt; composer: 1
 
 #&gt;&gt; search_name: SEARCH
     search_name: |
-      &lt;!-- composer &gt;&gt; icon search &gt;&gt; --&gt;
+      &lt;!-- composer &gt;&gt; icon search --&gt;
     search_site: https://duckduckgo.com
     search_call: q
     search_form: |
-      &lt;!-- composer &gt;&gt; form sites garybgenett.net &gt;&gt; --&gt;
-      &lt;!-- composer &gt;&gt; form ia web &gt;&gt; --&gt;
-      &lt;!-- composer &gt;&gt; form kae d &gt;&gt; --&gt;
-      &lt;!-- composer &gt;&gt; form ko 1 &gt;&gt; --&gt;
-      &lt;!-- composer &gt;&gt; form kp -1 &gt;&gt; --&gt;
-      &lt;!-- composer &gt;&gt; form kv 1 &gt;&gt; --&gt;
-      &lt;!-- composer &gt;&gt; form kz -1 &gt;&gt; --&gt;
+      &lt;!-- composer &gt;&gt; form sites garybgenett.net --&gt;
+      &lt;!-- composer &gt;&gt; form ia web --&gt;
+      &lt;!-- composer &gt;&gt; form kae d --&gt;
+      &lt;!-- composer &gt;&gt; form ko 1 --&gt;
+      &lt;!-- composer &gt;&gt; form kp -1 --&gt;
+      &lt;!-- composer &gt;&gt; form kv 1 --&gt;
+      &lt;!-- composer &gt;&gt; form kz -1 --&gt;
 
 #&gt;&gt; header: null
 #&gt;&gt; footer: null
@@ -22397,21 +22395,19 @@ variables:
 #&gt;&gt; digest_title: &quot;Latest Updates&quot;
 #&gt;&gt; digest_continue: &quot;[...]&quot;
 #&gt;&gt; digest_permalink: &quot;*(permalink to full text)*&quot;
-#&gt;&gt; digest_header: null
-#&gt;&gt; digest_footer: null
+#&gt;&gt; digest_include: null
 #&gt;&gt; digest_chars: 1024
 #&gt;&gt; digest_count: 10
 #&gt;&gt; digest_expanded: 0
 #&gt;&gt; digest_spacer: 1
 
+#&gt;&gt; lists_include: null
+#&gt;&gt; lists_expanded: 0
+#&gt;&gt; lists_spacer: 1
+
 #&gt;&gt; sitemap_title: &quot;Site Map&quot;
 #&gt;&gt; sitemap_expanded: 0
 #&gt;&gt; sitemap_spacer: 1
-
-#&gt;&gt; lists_header: null
-#&gt;&gt; lists_footer: null
-#&gt;&gt; lists_expanded: 0
-#&gt;&gt; lists_spacer: 1
 
 ########################################
   site-nav-top:
@@ -22541,9 +22537,9 @@ variables:
     ICON:
       - icon github https://github.com/garybgenett/composer Composer CMS
 #&gt;&gt;   - _: |
-#&gt;&gt;       &lt;!-- composer &gt;&gt; icon gpl &gt;&gt; --&gt;
-#&gt;&gt;       &lt;!-- composer &gt;&gt; icon cc-by-nc-nd &gt;&gt; --&gt;
-#&gt;&gt;       &lt;!-- composer &gt;&gt; icon copyright &gt;&gt; --&gt;
+#&gt;&gt;       &lt;!-- composer &gt;&gt; icon gpl --&gt;
+#&gt;&gt;       &lt;!-- composer &gt;&gt; icon cc-by-nc-nd --&gt;
+#&gt;&gt;       &lt;!-- composer &gt;&gt; icon copyright --&gt;
 
 ########################################
   site-info-bottom:
@@ -22886,6 +22882,7 @@ HEREDOC_COMPOSER_YML_PUBLISH_NOTHING
 HEREDOC_COMPOSER_YML_PUBLISH_PAGEDIR
 HEREDOC_COMPOSER_YML_PUBLISH_PANDOC_DIR
 HEREDOC_COMPOSER_YML_PUBLISH_SHOWDIR
+HEREDOC_COMPOSER_YML_PUBLISH_TESTING
 HEREDOC_COMPOSER_YML_README
 HEREDOC_CUSTOM_HTML_CSS
 HEREDOC_CUSTOM_HTML_CSS_SOLARIZED
@@ -22924,12 +22921,8 @@ LIBRARY_DIGEST_COUNT_ALT
 LIBRARY_DIGEST_EXPANDED
 LIBRARY_DIGEST_EXPANDED_ALT
 LIBRARY_DIGEST_EXPANDED_MOD
-LIBRARY_DIGEST_FOOTER
-LIBRARY_DIGEST_FOOTER_ALT
-LIBRARY_DIGEST_FOOTER_MOD
-LIBRARY_DIGEST_HEADER
-LIBRARY_DIGEST_HEADER_ALT
-LIBRARY_DIGEST_HEADER_MOD
+LIBRARY_DIGEST_INCLUDE
+LIBRARY_DIGEST_INCLUDE_ALT
 LIBRARY_DIGEST_PERMALINK
 LIBRARY_DIGEST_PERMALINK_ALT
 LIBRARY_DIGEST_SPACER
@@ -22941,12 +22934,8 @@ LIBRARY_FOLDER_ALT
 LIBRARY_LISTS_EXPANDED
 LIBRARY_LISTS_EXPANDED_ALT
 LIBRARY_LISTS_EXPANDED_MOD
-LIBRARY_LISTS_FOOTER
-LIBRARY_LISTS_FOOTER_ALT
-LIBRARY_LISTS_FOOTER_MOD
-LIBRARY_LISTS_HEADER
-LIBRARY_LISTS_HEADER_ALT
-LIBRARY_LISTS_HEADER_MOD
+LIBRARY_LISTS_INCLUDE
+LIBRARY_LISTS_INCLUDE_ALT
 LIBRARY_LISTS_SPACER
 LIBRARY_LISTS_SPACER_ALT
 LIBRARY_SITEMAP_EXPANDED
@@ -23136,6 +23125,7 @@ PUBLISH_PAGE_3
 PUBLISH_PAGE_3_CONFIGS
 PUBLISH_PAGE_3_FOOTER
 PUBLISH_PAGE_3_HEADER
+PUBLISH_PAGE_3_INCLUDE
 PUBLISH_PAGE_3_NAME
 PUBLISH_PAGE_4_HEADER
 PUBLISH_PAGE_4_NAME
@@ -23387,7 +23377,6 @@ site-library-digest
 site-library-digest-create
 site-library-digest-files
 site-library-digest-list
-site-library-digest-null
 site-library-digest-src
 site-library-digest-vars
 site-library-index
@@ -23402,7 +23391,9 @@ site-library-sitemap-src-file
 site-library-sitemap-vars
 site-library-sort-sh
 site-library-sort-yq
+site-library-spacer
 site-_debug-output
+site-template-install
 site-targets
 site-targets-cache
 site-targets-contents
@@ -23432,7 +23423,7 @@ _test-mark
 _test-pwd
 _test-run
 _test-speed-init
-_test-speed-init-load
+_test-speed-init-site
 _test-headers
 _C
 _D
