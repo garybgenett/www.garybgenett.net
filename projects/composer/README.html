@@ -1470,7 +1470,7 @@ max-width:	100%;
 <header id="title-block-header">
 <h1 class="title">Composer CMS: Content Make System</h1>
 <p class="author">Gary B. Genett</p>
-<p class="date">v3.1 (2023-11-08)</p>
+<p class="date">v3.1 (2023-11-12)</p>
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
@@ -2919,7 +2919,7 @@ make -f .../.Composer/Makefile _release</code></pre>
 <li>For the <a href="#commit--commit-all--commit-list">commit-list</a> target specifically, <a href="#c_type--c_base--c_list">c_list</a> is repurposed to select the limited list of files and/or directories that should be committed. All selected files and directories must exist in the current directory or somewhere in the subdirectory tree below it. There is no option to skip the <code>$EDITOR</code> with this target.</li>
 </ul>
 <p>Commit title format:</p>
-<pre><code>[Composer CMS v3.1 :: 2023-11-08T07:31:54-08:00]</code></pre>
+<pre><code>[Composer CMS v3.1 :: 2023-11-12T21:12:43-08:00]</code></pre>
 <p>Example using <a href="#commit--commit-all--commit-list">commit-list</a> with <a href="#c_type--c_base--c_list">c_list</a>:</p>
 <pre><code>make commit-list c_list=&quot;Makefile artifacts&quot;</code></pre>
 </section>
@@ -3178,12 +3178,12 @@ endif</code></pre>
 #     digest_title: Latest Updates
 #     digest_continue: &#39;[...]&#39;
 #     digest_permalink: &#39;*(permalink to full text)*&#39;
-#     digest_include: null
+#     digest_append: null
 #     digest_chars: 1024
 #     digest_count: 10
 #     digest_expanded: 0
 #     digest_spacer: 1
-#     lists_include: null
+#     lists_append: null
 #     lists_expanded: 0
 #     lists_spacer: 1
 #     sitemap_title: Site Map
@@ -3198,7 +3198,7 @@ endif</code></pre>
 <p>Use the <a href="#template--template-yml--template-md">template-md</a> target to create new <code>markdown</code> files:</p>
 <pre><code>---
 title: &quot;Composer CMS: Content Make System&quot;
-date: 2023-11-08
+date: 2023-11-12
 author:
   - Gary B. Genett
 tags:
@@ -3318,13 +3318,13 @@ variables:
 #&gt;&gt; digest_title: &quot;Latest Updates&quot;
 #&gt;&gt; digest_continue: &quot;[...]&quot;
 #&gt;&gt; digest_permalink: &quot;*(permalink to full text)*&quot;
-#&gt;&gt; digest_include: null
+#&gt;&gt; digest_append: null
 #&gt;&gt; digest_chars: 1024
 #&gt;&gt; digest_count: 10
 #&gt;&gt; digest_expanded: 0
 #&gt;&gt; digest_spacer: 1
 
-#&gt;&gt; lists_include: null
+#&gt;&gt; lists_append: null
 #&gt;&gt; lists_expanded: 0
 #&gt;&gt; lists_spacer: 1
 
@@ -3816,6 +3816,8 @@ INPUT
 INSTALL
 LIBRARY_AUTO_UPDATE
 LIBRARY_AUTO_UPDATE_ALT
+LIBRARY_DIGEST_APPEND
+LIBRARY_DIGEST_APPEND_ALT
 LIBRARY_DIGEST_CHARS
 LIBRARY_DIGEST_CHARS_ALT
 LIBRARY_DIGEST_CONTINUE
@@ -3825,8 +3827,6 @@ LIBRARY_DIGEST_COUNT_ALT
 LIBRARY_DIGEST_EXPANDED
 LIBRARY_DIGEST_EXPANDED_ALT
 LIBRARY_DIGEST_EXPANDED_MOD
-LIBRARY_DIGEST_INCLUDE
-LIBRARY_DIGEST_INCLUDE_ALT
 LIBRARY_DIGEST_PERMALINK
 LIBRARY_DIGEST_PERMALINK_ALT
 LIBRARY_DIGEST_SPACER
@@ -3835,11 +3835,11 @@ LIBRARY_DIGEST_TITLE
 LIBRARY_DIGEST_TITLE_ALT
 LIBRARY_FOLDER
 LIBRARY_FOLDER_ALT
+LIBRARY_LISTS_APPEND
+LIBRARY_LISTS_APPEND_ALT
 LIBRARY_LISTS_EXPANDED
 LIBRARY_LISTS_EXPANDED_ALT
 LIBRARY_LISTS_EXPANDED_MOD
-LIBRARY_LISTS_INCLUDE
-LIBRARY_LISTS_INCLUDE_ALT
 LIBRARY_LISTS_SPACER
 LIBRARY_LISTS_SPACER_ALT
 LIBRARY_SITEMAP_EXPANDED
