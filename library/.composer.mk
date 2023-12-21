@@ -1,7 +1,7 @@
 override COMPOSER_INCLUDE := 1
 override COMPOSER_DEPENDS := 
 override COMPOSER_KEEPING := 100
-override COMPOSER_LOG := .composed
+override COMPOSER_LOG := .composer.log
 override COMPOSER_EXT := .md
 override COMPOSER_TARGETS := 
 override COMPOSER_SUBDIRS := 

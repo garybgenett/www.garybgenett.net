@@ -746,7 +746,7 @@ max-width:	100%;
 <section id="title-slide">
   <h1 class="title">Composer CMS: Content Make System</h1>
   <p class="author">Gary B. Genett</p>
-  <p class="date">v3.1 (2023-11-12)</p>
+  <p class="date">v3.1 (2023-12-19)</p>
 </section>
 
 <section>
@@ -954,21 +954,15 @@ make all-all</code></pre>
 </tbody>
 </table>
 <p>[Markdown Viewer] is included both for its CSS stylesheets, and for real-time rendering of [Markdown] files as they are being written. To install, follow the instructions in the <code>README.md</code>.</p>
-<p>[Google Firebase] is only necessary for uploading via the [export-all] and [export-force] targets.</p>
+<p>[Google Firebase] is only necessary for uploading via the [export-all] and [export-force] targets. Binaries are included in the repository, but do not seem to work with all versions of their respective operating systems. If the included binary fails, use <code>_update-firebase-tools</code> to build a local version (see [_update-*]).</p>
 <p>The versions of the integrated repositories can be changed, if desired (see [Repository Versions]).</p>
-</section>
-<section class="slide level2">
-
 </section></section>
-<section>
 <section id="composer-cms-v31--help" class="title-slide slide level1">
 <h1>Composer CMS v3.1 :: Help</h1>
 <pre><code>make [-f .../Makefile] [variables] &lt;filename&gt;.&lt;extension&gt;
 make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
 </section>
-<section class="slide level2">
 
-</section></section>
 <section>
 <section id="composer-variables" class="title-slide slide level1">
 <h1>Composer Variables</h1>
@@ -1160,7 +1154,7 @@ make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
 <tr class="odd">
 <td style="text-align: left;">[COMPOSER_LOG]</td>
 <td style="text-align: left;">Timestamped command log</td>
-<td style="text-align: left;">.composed</td>
+<td style="text-align: left;">.composer.log</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">[COMPOSER_EXT]</td>
@@ -1271,9 +1265,6 @@ make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
 <li><em><code>(mk)</code> = configurable in <code>.composer.mk</code></em></li>
 <li><em><code>(yml)</code> = configurable in <code>.composer.yml</code></em></li>
 </ul>
-</section>
-<section class="slide level2">
-
 </section></section>
 <section>
 <section id="composer-targets" class="title-slide slide level1">
@@ -1385,117 +1376,130 @@ make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">[_release]</td>
-<td style="text-align: left;">Full upgrade to current release, repository preparation</td>
+<td style="text-align: left;">Upgrade all tools and supporting files to next versions</td>
 </tr>
 <tr class="even">
+<td style="text-align: left;">[_release-all]</td>
+<td style="text-align: left;">Also make <code>README.*</code> files and [Static Websites]</td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;">[_update]</td>
 <td style="text-align: left;">Update all included components (see <a href="#/requirements">Requirements</a>)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">[_update-all]</td>
-<td style="text-align: left;">Complete [_update], including binaries: [Pandoc], [YQ]</td>
+<td style="text-align: left;">Additionally perform all source code builds</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">[_update-list]</td>
+<td style="text-align: left;">Show changes made to each (see [Repository Versions])</td>
 </tr>
 <tr class="even">
+<td style="text-align: left;">[_update-*]</td>
+<td style="text-align: left;">Complete fetch and build for a specific component</td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;">[_debug]</td>
 <td style="text-align: left;">Diagnostics, tests targets list in [COMPOSER_DEBUGIT]</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">[_debug-file]</td>
 <td style="text-align: left;">Export [_debug] results to a plain text file</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">[check]</td>
 <td style="text-align: left;">List system packages and versions (see <a href="#/requirements">Requirements</a>)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">[check-all]</td>
 <td style="text-align: left;">Complete [check] package list, and system information</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">[config]</td>
 <td style="text-align: left;">Show values of all <a href="#/composer-variables">Composer Variables</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">[config-all]</td>
 <td style="text-align: left;">Complete [config], including environment variables</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">[config-*]</td>
 <td style="text-align: left;">Export individual <a href="#/composer-variables">Composer Variables</a> values</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">[config-yml]</td>
 <td style="text-align: left;">JSON export of <code>.composer.yml</code> configuration</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">[targets]</td>
 <td style="text-align: left;">List all available targets for the current directory</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">[init]</td>
 <td style="text-align: left;">Create and link a <code>.Composer</code> in current directory</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">[init-force]</td>
 <td style="text-align: left;">Completely reset and relink an existing <code>.Composer</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">[commit]</td>
 <td style="text-align: left;">Timestamped [Git] commit of the current directory tree</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">[commit-all]</td>
 <td style="text-align: left;">Automatic [commit], without <code>$EDITOR</code> step</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">[export]</td>
 <td style="text-align: left;">Synchronize <code>+Composer</code> export of [COMPOSER_ROOT]</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">[export-all]</td>
-<td style="text-align: left;">Also publish <code>+Composer</code> upstream: [Git]/[Firebase]</td>
+<td style="text-align: left;">Also publish to upstream hosting providers</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">[export-force]</td>
+<td style="text-align: left;">Publish only, without synchronizing first</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">[export-force]</td>
-<td style="text-align: left;">Publish only, without synchronizing <code>+Composer</code> first</td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">[*-export]</td>
 <td style="text-align: left;">Any targets named this way will also be run by [export]</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">[site-library]</td>
 <td style="text-align: left;">Build or update the [COMPOSER_LIBRARY]</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">[site-list]</td>
 <td style="text-align: left;">Show [COMPOSER_LIBRARY] metadata for current directory</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">[site-list-all]</td>
 <td style="text-align: left;">Do [site-list] for entire directory tree</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">[site-list-list]</td>
 <td style="text-align: left;">Output existing metadata fields and values</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">[site-list-null]</td>
 <td style="text-align: left;">List files which are missing metadata fields</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">[site-list-*]</td>
 <td style="text-align: left;">Find and export all files named <code>*</code> in the tree</td>
 </tr>
 </tbody>
 </table>
-</section>
-<section class="slide level2">
-
 </section></section>
 <section>
-<section id="command-examples" class="title-slide slide level1">
-<h1>Command Examples</h1>
+<section id="final-notes" class="title-slide slide level1">
+<h1>Final Notes</h1>
+
+</section>
+<section id="command-examples" class="slide level2">
+<h2>Command Examples</h2>
 <p>Create documents from source [Markdown] files (see <a href="#/formatting-variables">Formatting Variables</a>):</p>
 <pre><code>make README.html
 make Composer-v3.1.Manual.html c_list=&quot;README.md LICENSE.md&quot;</code></pre>
@@ -1513,8 +1517,8 @@ make -f .Composer/Makefile install-all
 make all-all</code></pre>
 <p>See <code>help-all</code> for full details and additional targets.</p>
 </section>
-<section class="slide level2">
-
+<section id="go-do-a-thing" class="slide level2">
+<h2>Go Do A Thing</h2>
 <p><em>Happy Making!</em></p>
 </section></section>
     </div>

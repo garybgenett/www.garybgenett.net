@@ -42,10 +42,10 @@ variables:
 
     digest_count:			20
 
-    sitemap_spacer:			null
-
     lists_expanded:			null
     lists_spacer:			null
+
+    sitemap_spacer:			null
 
 ########################################
   site-nav-top:

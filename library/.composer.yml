@@ -21,10 +21,17 @@ variables:
       <!-- composer >> form kz -1 -->
     header: <composer_root>/_header.md.cms
     footer: <composer_root>/_footer.md.cms
-    css_shade: dark
+    css_overlay: dark
     copy_protect: 1
     cols_break: lg
-    cols_sticky: 1
+    cols_sticky:
+      - 1
+      - 1
+      - 1
+    cols_resticky:
+      - 0
+      - 0
+      - 0
     cols_order:
       - 1
       - 2
@@ -55,15 +62,14 @@ variables:
   site-library:
     folder: null
     auto_update: null
+    append: null
     digest_title: Latest Updates
     digest_continue: '[...]'
     digest_permalink: '*(permalink to full text)*'
-    digest_append: null
     digest_chars: 1024
     digest_count: 20
     digest_expanded: 0
     digest_spacer: 1
-    lists_append: null
     lists_expanded: null
     lists_spacer: null
     sitemap_title: Site Map
