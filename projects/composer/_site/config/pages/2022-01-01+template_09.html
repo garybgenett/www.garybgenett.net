@@ -12645,11 +12645,42 @@ body {
 min-width:	100%;
 margin:	0px;
 padding:	0px;
-padding-top:	70px;
-padding-bottom:	70px;
+padding-top:	60px;
+padding-bottom:	60px;
 }
-.composer-sticky {
-max-height:	85vh;
+
+@media (min-width: 1400px) {
+.composer-scroll-xxl {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+@media (min-width: 1200px) {
+.composer-scroll-xl {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+@media (min-width: 992px) {
+.composer-scroll-lg {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+@media (min-width: 768px) {
+.composer-scroll-md {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+@media (min-width: 576px) {
+.composer-scroll-sm {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+.composer-scroll {
+max-height:	calc(100vh - 60px - 60px);
 overflow:	auto;
 }
 
@@ -12747,11 +12778,29 @@ width:	auto;
 height:	24px;
 width:	auto;
 }
-.composer-display {
+.composer-display .carousel-control-prev,
+.composer-display .carousel-control-next {
+height:	64px;
+width:	64px;
+opacity:	1;
+}
+.composer-display .carousel-control-prev-icon,
+.composer-display .carousel-control-next-icon {
+height:	32px;
+width:	32px;
+}
+.composer-display .carousel-indicators {
+margin-bottom:	2px;
+}
+.composer-display .carousel-indicators [data-bs-target] {
+height:	6px;
+width:	32px;
+}
+.composer-display-banner {
 height:	auto;
 max-width:	100%;
 }
-.composer-display-item {
+.composer-display-shelf {
 height:	auto;
 max-width:	128px;
 }
@@ -19647,18 +19696,18 @@ margin-top:	0px;
 <!-- site-targets >> .../config/pages/.composer.tmp/site-cache.nav-top.html -->
 <!-- site-nav-top :: start >> .../.Composer/artifacts/images/logo-v1.0.png -->
 <!-- site-nav-begin :: start >> top .../.Composer/artifacts/images/logo-v1.0.png -->
-<div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbar-fixed-top">
+<div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#composer-nav-top">
 
 </div>
 <nav class="navbar navbar-expand-md fixed-top">
 <div class="container-fluid">
-<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-fixed-top">
+<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#composer-nav-top">
 <span class="navbar-toggler-icon"></span>
 </button>
 <!-- site-brand :: start >> .../.Composer/artifacts/images/logo-v1.0.png -->
 <a class="navbar-brand" href="http://www.garybgenett.net/projects/composer"> <img class="composer-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAc0lEQVQ4y8VTQQ7AIAgrZA/z6fwMD8vcQCDspBcN0GIrAqcXNes0w1OQpBAsLjrujVdSwm4WPF7gE+MvW0gitqM/87pyRWLl0S4hJ6nMJwDEm3l9EgDAVRrWeFb+CVZfywU4lyRWt6bgxiB1JrEc5eOfEROp5CKUZInHTAAAAABJRU5ErkJggg==">   LOGO / BRAND </a>
 <!-- site-brand :: finish >> .../.Composer/artifacts/images/logo-v1.0.png -->
-<div class="navbar-collapse collapse" id="navbar-fixed-top">
+<div class="navbar-collapse collapse" id="composer-nav-top">
 <!-- site-nav-begin :: finish >> top .../.Composer/artifacts/images/logo-v1.0.png -->
 <ul class="navbar-nav navbar-nav-scroll me-auto">
 <!-- site-nav-top-list :: start >> nav-top.["MENU"] -->
@@ -19896,7 +19945,7 @@ TOP TEXT
 <!-- site-targets >> .../config/pages/.composer.tmp/site-cache.nav-left.html -->
 <!-- site-nav-side :: start >> left -->
 <!-- site-column-begin :: start >> left -->
-<div class="d-flex flex-column d-md-static d-static order-md-1 order-2 col-md-12 col-12 d-md-block d-block p-2">
+<div id="composer-nav-left" class="d-flex flex-column order-md-1 order-2 col-md-12 col-12 d-md-block d-block p-2">
 <!-- site-column-begin :: finish >> left -->
 <!-- site-nav-side-list :: start >> nav-left.["BEGIN"] -->
 <!-- site-nav-side-list :: start >> nav-left.["BEGIN"][0] -->
@@ -19916,14 +19965,14 @@ TOP TEXT
 <!-- site-fold-begin :: start >> 0 . 0 LEFT FOLD -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="left-fold" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-LEFTFOLD">
+<div id="composer-fold-left-fold" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-left-fold-target">
 <h6 class="composer-header">
 LEFT FOLD
 </h6>
 </button>
 </div>
-<div id="toggle-LEFTFOLD" class="accordion-collapse collapse show">
+<div id="composer-fold-left-fold-target" class="accordion-collapse collapse show">
 <div class="accordion-body">
 <!-- site-fold-begin :: finish >> 0 . 0 LEFT FOLD -->
 <!-- site-nav-side-list :: finish >> nav-left.["MENU"][0] -->
@@ -19959,7 +20008,7 @@ LEFT FOLD
 <!-- site-nav-side-list :: start >> nav-left.["TEXT"][0] -->
 <!-- site-box-begin :: start >> 0 LEFT BOX -->
 <div class="card">
-<div id="left-box" class="card-header">
+<div id="composer-box-left-box" class="card-header">
 <h6 class="composer-header">
 LEFT BOX
 </h6>
@@ -19993,7 +20042,7 @@ LEFT BOX
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][0] -->
 <!-- site-box-begin :: start >> 0 CONTENTS -->
 <div class="card">
-<div id="contents" class="card-header">
+<div id="composer-box-contents" class="card-header">
 <h6 class="composer-header">
 CONTENTS
 </h6>
@@ -20089,13 +20138,13 @@ CONTENTS
 <!-- site-nav-side :: finish >> left -->
 <!-- site-targets >> .../config/pages/.composer.tmp/site-cache.column-begin.html -->
 <!-- site-column-begin :: start >> center -->
-<div class="d-flex flex-column d-md-static d-static order-md-3 order-3 col-md-9 col-12 d-md-block d-block p-2">
+<div id="composer-nav-center" class="d-flex flex-column order-md-3 order-3 col-md-9 col-12 d-md-block d-block p-2">
 <!-- site-column-begin :: finish >> center -->
 <!-- site-targets >> .../config/_header.md.cms -->
 <!-- site-file :: start >> .../config/_header.md.cms -->
 <!-- site-box-begin :: start >> 0 Header -->
 <div class="card">
-<div id="header" class="card-header">
+<div id="composer-box-header" class="card-header">
 <h6 class="composer-header">
 Header
 </h6>
@@ -20116,13 +20165,13 @@ Header
 <!-- site-file :: start >> 2022-01-01+template_09.md -->
 <!-- composer >> metainfo-start 2022-01-01+template_09.md -->
 <!-- site-box-begin :: start >> 1 Page Number 09&nbsp;&nbsp;*(2022-01-01)*&#0000;<br>*-- Gary B. Genett -- Author 1 -- Author 2 -- Author 3*<br>*. Tag 9 . Tag 1 . Tag 2 . Tag 3* -->
-<div class="card">
-<div id="page-number-09nbspnbsp2022-01-010000br---gary-b-genett----author-1----author-2----author-3br-tag-9--tag-1--tag-2--tag-3" class="card-header">
 <!-- site-header :: start >> 1 Page Number 09&nbsp;&nbsp;*(2022-01-01)*&#0000;<br>*-- Gary B. Genett -- Author 1 -- Author 2 -- Author 3*<br>*. Tag 9 . Tag 1 . Tag 2 . Tag 3* -->
 <div id="page-number-09nbspnbsp2022-01-010000br---gary-b-genett----author-1----author-2----author-3br-tag-9--tag-1--tag-2--tag-3">
 
 </div>
 <!-- site-header :: finish >> 1 Page Number 09&nbsp;&nbsp;*(2022-01-01)*&#0000;<br>*-- Gary B. Genett -- Author 1 -- Author 2 -- Author 3*<br>*. Tag 9 . Tag 1 . Tag 2 . Tag 3* -->
+<div class="card">
+<div id="composer-box-page-number-09nbspnbsp2022-01-010000br---gary-b-genett----author-1----author-2----author-3br-tag-9--tag-1--tag-2--tag-3" class="card-header">
 <h1 class="composer-header">
 Page Number 09  <em>(2022-01-01)</em> <br><em>– Gary B. Genett – Author 1 – Author 2 – Author 3</em><br><em>. Tag 9 . Tag 1 . Tag 2 . Tag 3</em>
 </h1>
@@ -20149,7 +20198,7 @@ make all-all</code></pre>
 <h3>Customization</h3>
 <p>If specific settings need to be used, either globally or per-directory, <code>.composer.mk</code> and <code>.composer.yml</code> files can be created (see [Configuration Settings], [Quick Start] example):</p>
 <pre><code>make template &gt;.composer.mk &amp;&amp; $EDITOR .composer.mk
-make template-yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre>
+make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre>
 <p>Custom targets can also be defined, using standard [GNU Make] syntax (see [Custom Targets]).</p>
 </section>
 <section id="important-notes" class="level3">
@@ -20182,7 +20231,7 @@ make README.html</code></pre>
 <!-- site-spacer :: finish >> -->
 <!-- site-box-begin :: start >> 0 Footer -->
 <div class="card">
-<div id="footer" class="card-header">
+<div id="composer-box-footer" class="card-header">
 <h6 class="composer-header">
 Footer
 </h6>
@@ -20202,7 +20251,7 @@ Footer
 <!-- site-targets >> .../config/pages/.composer.tmp/site-cache.nav-right.html -->
 <!-- site-nav-side :: start >> right -->
 <!-- site-column-begin :: start >> right -->
-<div class="d-flex flex-column d-md-static d-static order-md-2 order-1 col-md-3 col-0 d-md-block d-none p-2">
+<div id="composer-nav-right" class="d-flex flex-column order-md-2 order-1 col-md-3 col-0 d-md-block d-none p-2">
 <!-- site-column-begin :: finish >> right -->
 <!-- site-nav-side-list :: start >> nav-right.["BEGIN"] -->
 <!-- site-nav-side-list :: start >> nav-right.["BEGIN"][0] -->
@@ -20222,14 +20271,14 @@ Footer
 <!-- site-fold-begin :: start >> 0 . 0 RIGHT FOLD -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="right-fold" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-RIGHTFOLD">
+<div id="composer-fold-right-fold" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-right-fold-target">
 <h6 class="composer-header">
 RIGHT FOLD
 </h6>
 </button>
 </div>
-<div id="toggle-RIGHTFOLD" class="accordion-collapse collapse show">
+<div id="composer-fold-right-fold-target" class="accordion-collapse collapse show">
 <div class="accordion-body">
 <!-- site-fold-begin :: finish >> 0 . 0 RIGHT FOLD -->
 <!-- site-nav-side-list :: finish >> nav-right.["MENU"][0] -->
@@ -20261,7 +20310,7 @@ RIGHT FOLD
 <!-- site-nav-side-list :: start >> nav-right.["TEXT"][0] -->
 <!-- site-box-begin :: start >> 0 RIGHT BOX -->
 <div class="card">
-<div id="right-box" class="card-header">
+<div id="composer-box-right-box" class="card-header">
 <h6 class="composer-header">
 RIGHT BOX
 </h6>
@@ -20293,24 +20342,24 @@ RIGHT BOX
 <!-- site-nav-side-list :: finish >> nav-right.["SPACE"] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][0] -->
-<!-- site-fold-begin :: start >> group fold-library -->
-<div id="fold-library" class="accordion">
-<!-- site-fold-begin :: finish >> group fold-library -->
+<!-- site-fold-begin :: start >> group library -->
+<div id="composer-fold-group-library" class="accordion">
+<!-- site-fold-begin :: finish >> group library -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][0] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][1] -->
-<!-- site-fold-begin :: start >> 0 0 fold-library DATES -->
+<!-- site-fold-begin :: start >> 0 0 library DATES -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="dates" class="accordion-header">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-DATES">
+<div id="composer-fold-dates" class="accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-dates-target">
 <h6 class="composer-header">
 DATES
 </h6>
 </button>
 </div>
-<div id="toggle-DATES" class="accordion-collapse collapse" data-bs-parent="#fold-library">
+<div id="composer-fold-dates-target" class="accordion-collapse collapse" data-bs-parent="#composer-fold-group-library">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 0 0 fold-library DATES -->
+<!-- site-fold-begin :: finish >> 0 0 library DATES -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][1] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][2] -->
 <!-- site-library-shelf :: start >> list date -->
@@ -20351,19 +20400,19 @@ DATES
 <!-- site-fold-end :: finish >> -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][3] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][4] -->
-<!-- site-fold-begin :: start >> 0 0 fold-library AUTHORS -->
+<!-- site-fold-begin :: start >> 0 0 library AUTHORS -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="authors" class="accordion-header">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-AUTHORS">
+<div id="composer-fold-authors" class="accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-authors-target">
 <h6 class="composer-header">
 AUTHORS
 </h6>
 </button>
 </div>
-<div id="toggle-AUTHORS" class="accordion-collapse collapse" data-bs-parent="#fold-library">
+<div id="composer-fold-authors-target" class="accordion-collapse collapse" data-bs-parent="#composer-fold-group-library">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 0 0 fold-library AUTHORS -->
+<!-- site-fold-begin :: finish >> 0 0 library AUTHORS -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][4] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][5] -->
 <!-- site-library-shelf :: start >> list author -->
@@ -20412,19 +20461,19 @@ AUTHORS
 <!-- site-fold-end :: finish >> -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][6] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][7] -->
-<!-- site-fold-begin :: start >> 0 . fold-library TAGS -->
+<!-- site-fold-begin :: start >> 0 . library TAGS -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="tags" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-TAGS">
+<div id="composer-fold-tags" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-tags-target">
 <h6 class="composer-header">
 TAGS
 </h6>
 </button>
 </div>
-<div id="toggle-TAGS" class="accordion-collapse collapse show" data-bs-parent="#fold-library">
+<div id="composer-fold-tags-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 0 . fold-library TAGS -->
+<!-- site-fold-begin :: finish >> 0 . library TAGS -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][7] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][8] -->
 <!-- site-library-shelf :: start >> list tags -->
@@ -20564,12 +20613,12 @@ TAGS
 <!-- site-targets >> .../config/pages/.composer.tmp/site-cache.nav-bottom.html -->
 <!-- site-nav-bottom :: start >> -->
 <!-- site-nav-begin :: start >> bottom -->
-<div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbar-fixed-bottom">
+<div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#composer-nav-bottom">
 
 </div>
 <nav class="navbar navbar-expand-md fixed-bottom">
 <div class="container-fluid">
-<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-fixed-bottom">
+<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#composer-nav-bottom">
 <span class="navbar-toggler-icon"></span>
 </button>
 <!-- site-copyright :: start >> -->
@@ -20583,7 +20632,7 @@ TAGS
 <!-- site-icon :: finish >> copyright --> COPYRIGHT
 </p>
 <!-- site-copyright :: finish >> -->
-<div class="navbar-collapse collapse" id="navbar-fixed-bottom">
+<div class="navbar-collapse collapse" id="composer-nav-bottom">
 <!-- site-nav-begin :: finish >> bottom -->
 <ol class="composer-link nav-item breadcrumb me-auto">
 <li class="breadcrumb-item">

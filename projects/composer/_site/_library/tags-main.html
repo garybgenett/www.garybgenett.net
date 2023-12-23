@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content />
-  <meta name="dcterms.date" content="2023-12-20" />
+  <meta name="dcterms.date" content="2023-12-22" />
   <title>EXAMPLE SITE – Tag: Main</title>
   <style>
     code{white-space: pre-wrap;}
@@ -12666,11 +12666,42 @@ body {
 min-width:	100%;
 margin:	0px;
 padding:	0px;
-padding-top:	70px;
-padding-bottom:	70px;
+padding-top:	60px;
+padding-bottom:	60px;
 }
-.composer-sticky {
-max-height:	85vh;
+
+@media (min-width: 1400px) {
+.composer-scroll-xxl {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+@media (min-width: 1200px) {
+.composer-scroll-xl {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+@media (min-width: 992px) {
+.composer-scroll-lg {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+@media (min-width: 768px) {
+.composer-scroll-md {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+@media (min-width: 576px) {
+.composer-scroll-sm {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+.composer-scroll {
+max-height:	calc(100vh - 60px - 60px);
 overflow:	auto;
 }
 
@@ -12768,11 +12799,29 @@ width:	auto;
 height:	24px;
 width:	auto;
 }
-.composer-display {
+.composer-display .carousel-control-prev,
+.composer-display .carousel-control-next {
+height:	64px;
+width:	64px;
+opacity:	1;
+}
+.composer-display .carousel-control-prev-icon,
+.composer-display .carousel-control-next-icon {
+height:	32px;
+width:	32px;
+}
+.composer-display .carousel-indicators {
+margin-bottom:	2px;
+}
+.composer-display .carousel-indicators [data-bs-target] {
+height:	6px;
+width:	32px;
+}
+.composer-display-banner {
 height:	auto;
 max-width:	100%;
 }
-.composer-display-item {
+.composer-display-shelf {
 height:	auto;
 max-width:	128px;
 }
@@ -19668,18 +19717,18 @@ margin-top:	0px;
 <!-- site-targets >> .../_library/.composer.tmp/site-cache.nav-top.html -->
 <!-- site-nav-top :: start >> .../.Composer/artifacts/images/logo-v1.0.png -->
 <!-- site-nav-begin :: start >> top .../.Composer/artifacts/images/logo-v1.0.png -->
-<div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbar-fixed-top">
+<div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#composer-nav-top">
 
 </div>
 <nav class="navbar navbar-expand-lg fixed-top">
 <div class="container-fluid">
-<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-fixed-top">
+<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#composer-nav-top">
 <span class="navbar-toggler-icon"></span>
 </button>
 <!-- site-brand :: start >> .../.Composer/artifacts/images/logo-v1.0.png -->
 <a class="navbar-brand" href="http://www.garybgenett.net/projects/composer"> <img class="composer-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAc0lEQVQ4y8VTQQ7AIAgrZA/z6fwMD8vcQCDspBcN0GIrAqcXNes0w1OQpBAsLjrujVdSwm4WPF7gE+MvW0gitqM/87pyRWLl0S4hJ6nMJwDEm3l9EgDAVRrWeFb+CVZfywU4lyRWt6bgxiB1JrEc5eOfEROp5CKUZInHTAAAAABJRU5ErkJggg==">   LOGO / BRAND </a>
 <!-- site-brand :: finish >> .../.Composer/artifacts/images/logo-v1.0.png -->
-<div class="navbar-collapse collapse" id="navbar-fixed-top">
+<div class="navbar-collapse collapse" id="composer-nav-top">
 <!-- site-nav-begin :: finish >> top .../.Composer/artifacts/images/logo-v1.0.png -->
 <ul class="navbar-nav navbar-nav-scroll me-auto">
 <!-- site-nav-top-list :: start >> nav-top.["MENU"] -->
@@ -19792,22 +19841,22 @@ margin-top:	0px;
 <!-- site-nav-top-list :: start >> nav-top.["CONTENTS"][0].["CONTENTS"][0] -->
 <!-- composer >> contents-menu 0 -->
 <li>
-<a href="#2023-12-20--themes--overlays0000----gary-b-genett" class="dropdown-item">2023-12-20 :: Themes &amp; Overlays</a>
+<a href="#2023-12-22--themes--overlays0000----gary-b-genett" class="dropdown-item">2023-12-22 :: Themes &amp; Overlays</a>
 </li>
 <li>
-<a href="#2023-12-20--default-site0000----gary-b-genett" class="dropdown-item">2023-12-20 :: Default Site</a>
+<a href="#2023-12-22--default-site0000----gary-b-genett" class="dropdown-item">2023-12-22 :: Default Site</a>
 </li>
 <li>
-<a href="#2023-12-20--introduction0000----gary-b-genett" class="dropdown-item">2023-12-20 :: Introduction</a>
+<a href="#2023-12-22--introduction0000----gary-b-genett" class="dropdown-item">2023-12-22 :: Introduction</a>
 </li>
 <li>
-<a href="#2023-12-20--layout--elements0000----gary-b-genett" class="dropdown-item">2023-12-20 :: Layout &amp; Elements</a>
+<a href="#2023-12-22--layout--elements0000----gary-b-genett" class="dropdown-item">2023-12-22 :: Layout &amp; Elements</a>
 </li>
 <li>
-<a href="#2023-12-20--metainfo-page0000----gary-b-genett" class="dropdown-item">2023-12-20 :: Metainfo Page</a>
+<a href="#2023-12-22--metainfo-page0000----gary-b-genett" class="dropdown-item">2023-12-22 :: Metainfo Page</a>
 </li>
 <li>
-<a href="#2023-12-20--configured-site0000----gary-b-genett" class="dropdown-item">2023-12-20 :: Configured Site</a>
+<a href="#2023-12-22--configured-site0000----gary-b-genett" class="dropdown-item">2023-12-22 :: Configured Site</a>
 </li>
 <!-- site-nav-top-list :: finish >> nav-top.["CONTENTS"][0].["CONTENTS"][0] -->
 <!-- site-nav-top-list :: finish >> nav-top.["CONTENTS"][0].["CONTENTS"] -->
@@ -19998,7 +20047,7 @@ TOP TEXT
 <!-- site-targets >> .../_library/.composer.tmp/site-cache.nav-left.html -->
 <!-- site-nav-side :: start >> left -->
 <!-- site-column-begin :: start >> left -->
-<div class="d-flex flex-column composer-sticky d-lg-sticky d-static order-lg-1 order-1 col-lg-3 col-6 d-lg-block d-block p-2">
+<div id="composer-nav-left" class="d-flex flex-column composer-scroll-lg order-lg-1 order-1 col-lg-3 col-6 d-lg-block d-block p-2">
 <!-- site-column-begin :: finish >> left -->
 <!-- site-nav-side-list :: start >> nav-left.["BEGIN"] -->
 <!-- site-nav-side-list :: finish >> nav-left.["BEGIN"] -->
@@ -20007,14 +20056,14 @@ TOP TEXT
 <!-- site-fold-begin :: start >> 0 . 0 LEFT FOLD -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="left-fold" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-LEFTFOLD">
+<div id="composer-fold-left-fold" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-left-fold-target">
 <h6 class="composer-header">
 LEFT FOLD
 </h6>
 </button>
 </div>
-<div id="toggle-LEFTFOLD" class="accordion-collapse collapse show">
+<div id="composer-fold-left-fold-target" class="accordion-collapse collapse show">
 <div class="accordion-body">
 <!-- site-fold-begin :: finish >> 0 . 0 LEFT FOLD -->
 <!-- site-nav-side-list :: finish >> nav-left.["MENU"][0] -->
@@ -20046,7 +20095,7 @@ LEFT FOLD
 <!-- site-nav-side-list :: start >> nav-left.["TEXT"][0] -->
 <!-- site-box-begin :: start >> 0 LEFT BOX -->
 <div class="card">
-<div id="left-box" class="card-header">
+<div id="composer-box-left-box" class="card-header">
 <h6 class="composer-header">
 LEFT BOX
 </h6>
@@ -20076,7 +20125,7 @@ LEFT BOX
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][0] -->
 <!-- site-box-begin :: start >> 0 CONTENTS -->
 <div class="card">
-<div id="contents" class="card-header">
+<div id="composer-box-contents" class="card-header">
 <h6 class="composer-header">
 CONTENTS
 </h6>
@@ -20087,12 +20136,12 @@ CONTENTS
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][1] -->
 <!-- composer >> contents-list 0 -->
 <ul>
-<li><a href="#2023-12-20--themes--overlays0000----gary-b-genett">2023-12-20 :: Themes &amp; Overlays</a></li>
-<li><a href="#2023-12-20--default-site0000----gary-b-genett">2023-12-20 :: Default Site</a></li>
-<li><a href="#2023-12-20--introduction0000----gary-b-genett">2023-12-20 :: Introduction</a></li>
-<li><a href="#2023-12-20--layout--elements0000----gary-b-genett">2023-12-20 :: Layout &amp; Elements</a></li>
-<li><a href="#2023-12-20--metainfo-page0000----gary-b-genett">2023-12-20 :: Metainfo Page</a></li>
-<li><a href="#2023-12-20--configured-site0000----gary-b-genett">2023-12-20 :: Configured Site</a></li>
+<li><a href="#2023-12-22--themes--overlays0000----gary-b-genett">2023-12-22 :: Themes &amp; Overlays</a></li>
+<li><a href="#2023-12-22--default-site0000----gary-b-genett">2023-12-22 :: Default Site</a></li>
+<li><a href="#2023-12-22--introduction0000----gary-b-genett">2023-12-22 :: Introduction</a></li>
+<li><a href="#2023-12-22--layout--elements0000----gary-b-genett">2023-12-22 :: Layout &amp; Elements</a></li>
+<li><a href="#2023-12-22--metainfo-page0000----gary-b-genett">2023-12-22 :: Metainfo Page</a></li>
+<li><a href="#2023-12-22--configured-site0000----gary-b-genett">2023-12-22 :: Configured Site</a></li>
 </ul>
 <!-- site-nav-side-list :: finish >> nav-left.["CONTENTS"][1] -->
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][2] -->
@@ -20110,23 +20159,23 @@ CONTENTS
 <!-- site-nav-side :: finish >> left -->
 <!-- site-targets >> .../_library/.composer.tmp/site-cache.column-begin.html -->
 <!-- site-column-begin :: start >> center -->
-<div class="d-flex flex-column composer-sticky d-lg-sticky d-static order-lg-2 order-3 col-lg-7 col-12 d-lg-block d-block p-2">
+<div id="composer-nav-center" class="d-flex flex-column composer-scroll-lg order-lg-2 order-3 col-lg-7 col-12 d-lg-block d-block p-2">
 <!-- site-column-begin :: finish >> center -->
 <!-- site-targets >> .../_library.md.cms -->
 <!-- site-file :: start >> .../_library.md.cms -->
-<!-- site-box-begin :: start >> 0 #WORKING:DOCS -->
+<!-- site-box-begin :: start >> 0 #WORK -->
 <div class="card">
-<div id="workingdocs" class="card-header">
+<div id="composer-box-work" class="card-header">
 <h6 class="composer-header">
-#WORKING:DOCS
+#WORK
 </h6>
 </div>
 <div class="card-body">
-<!-- site-box-begin :: finish >> 0 #WORKING:DOCS -->
+<!-- site-box-begin :: finish >> 0 #WORK -->
 <dl>
-<dt>#WORKING:DOCS</dt>
+<dt>#WORK</dt>
 <dd>
-<code>_library/index-include.md.cms</code>
+<p><code>_library/index-include.md.cms</code></p>
 </dd>
 <dd>
 <code>_library/sitemap-include.md.cms</code>
@@ -20148,26 +20197,26 @@ CONTENTS
 <!-- site-targets >> tags-main.md -->
 <!-- site-file :: start >> tags-main.md -->
 <!-- site-fold-begin :: start >> group library-digest -->
-<div id="library-digest" class="accordion">
+<div id="composer-fold-group-library-digest" class="accordion">
 <!-- site-fold-begin :: finish >> group library-digest -->
-<!-- site-fold-begin :: start >> 1 . library-digest 2023-12-20 :: Themes & Overlays&#0000; -- Gary B. Genett -->
-<div class="accordion">
-<div class="accordion-item">
-<div id="2023-12-20--themes--overlays0000----gary-b-genett" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-2023-12-20ThemesOverlays0000--GaryBGenett">
-<!-- site-header :: start >> 1 2023-12-20 :: Themes & Overlays&#0000; -- Gary B. Genett -->
-<div id="2023-12-20--themes--overlays0000----gary-b-genett">
+<!-- site-fold-begin :: start >> 1 . library-digest 2023-12-22 :: Themes & Overlays&#0000; -- Gary B. Genett -->
+<!-- site-header :: start >> 1 2023-12-22 :: Themes & Overlays&#0000; -- Gary B. Genett -->
+<div id="2023-12-22--themes--overlays0000----gary-b-genett">
 
 </div>
-<!-- site-header :: finish >> 1 2023-12-20 :: Themes & Overlays&#0000; -- Gary B. Genett -->
+<!-- site-header :: finish >> 1 2023-12-22 :: Themes & Overlays&#0000; -- Gary B. Genett -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-2023-12-22--themes--overlays0000----gary-b-genett" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-2023-12-22--themes--overlays0000----gary-b-genett-target">
 <h1 class="composer-header">
-2023-12-20 :: Themes &amp; Overlays  – Gary B. Genett
+2023-12-22 :: Themes &amp; Overlays  – Gary B. Genett
 </h1>
 </button>
 </div>
-<div id="toggle-2023-12-20ThemesOverlays0000--GaryBGenett" class="accordion-collapse collapse show" data-bs-parent="#library-digest">
+<div id="composer-fold-2023-12-22--themes--overlays0000----gary-b-genett-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 1 . library-digest 2023-12-20 :: Themes & Overlays&#0000; -- Gary B. Genett -->
+<!-- site-fold-begin :: finish >> 1 . library-digest 2023-12-22 :: Themes & Overlays&#0000; -- Gary B. Genett -->
 <!-- site-break :: start >> -->
 <!-- site-break :: finish >> -->
 <p>[…]</p>
@@ -20182,24 +20231,24 @@ CONTENTS
 <p>
 </p>
 <!-- site-spacer :: finish >> -->
-<!-- site-fold-begin :: start >> 1 . library-digest 2023-12-20 :: Default Site&#0000; -- Gary B. Genett -->
-<div class="accordion">
-<div class="accordion-item">
-<div id="2023-12-20--default-site0000----gary-b-genett" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-2023-12-20DefaultSite0000--GaryBGenett">
-<!-- site-header :: start >> 1 2023-12-20 :: Default Site&#0000; -- Gary B. Genett -->
-<div id="2023-12-20--default-site0000----gary-b-genett">
+<!-- site-fold-begin :: start >> 1 . library-digest 2023-12-22 :: Default Site&#0000; -- Gary B. Genett -->
+<!-- site-header :: start >> 1 2023-12-22 :: Default Site&#0000; -- Gary B. Genett -->
+<div id="2023-12-22--default-site0000----gary-b-genett">
 
 </div>
-<!-- site-header :: finish >> 1 2023-12-20 :: Default Site&#0000; -- Gary B. Genett -->
+<!-- site-header :: finish >> 1 2023-12-22 :: Default Site&#0000; -- Gary B. Genett -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-2023-12-22--default-site0000----gary-b-genett" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-2023-12-22--default-site0000----gary-b-genett-target">
 <h1 class="composer-header">
-2023-12-20 :: Default Site  – Gary B. Genett
+2023-12-22 :: Default Site  – Gary B. Genett
 </h1>
 </button>
 </div>
-<div id="toggle-2023-12-20DefaultSite0000--GaryBGenett" class="accordion-collapse collapse show" data-bs-parent="#library-digest">
+<div id="composer-fold-2023-12-22--default-site0000----gary-b-genett-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 1 . library-digest 2023-12-20 :: Default Site&#0000; -- Gary B. Genett -->
+<!-- site-fold-begin :: finish >> 1 . library-digest 2023-12-22 :: Default Site&#0000; -- Gary B. Genett -->
 <p>This is a default page, where all menus and settings are empty. All aspects of <code>c_site</code> pages are configurable using <code>.composer.yml</code> files.</p>
 <table style="width:98%;">
 <colgroup>
@@ -20245,25 +20294,25 @@ CONTENTS
 <p>
 </p>
 <!-- site-spacer :: finish >> -->
-<!-- site-fold-begin :: start >> 1 . library-digest 2023-12-20 :: Introduction&#0000; -- Gary B. Genett -->
-<div class="accordion">
-<div class="accordion-item">
-<div id="2023-12-20--introduction0000----gary-b-genett" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-2023-12-20Introduction0000--GaryBGenett">
-<!-- site-header :: start >> 1 2023-12-20 :: Introduction&#0000; -- Gary B. Genett -->
-<div id="2023-12-20--introduction0000----gary-b-genett">
+<!-- site-fold-begin :: start >> 1 . library-digest 2023-12-22 :: Introduction&#0000; -- Gary B. Genett -->
+<!-- site-header :: start >> 1 2023-12-22 :: Introduction&#0000; -- Gary B. Genett -->
+<div id="2023-12-22--introduction0000----gary-b-genett">
 
 </div>
-<!-- site-header :: finish >> 1 2023-12-20 :: Introduction&#0000; -- Gary B. Genett -->
+<!-- site-header :: finish >> 1 2023-12-22 :: Introduction&#0000; -- Gary B. Genett -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-2023-12-22--introduction0000----gary-b-genett" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-2023-12-22--introduction0000----gary-b-genett-target">
 <h1 class="composer-header">
-2023-12-20 :: Introduction  – Gary B. Genett
+2023-12-22 :: Introduction  – Gary B. Genett
 </h1>
 </button>
 </div>
-<div id="toggle-2023-12-20Introduction0000--GaryBGenett" class="accordion-collapse collapse show" data-bs-parent="#library-digest">
+<div id="composer-fold-2023-12-22--introduction0000----gary-b-genett-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 1 . library-digest 2023-12-20 :: Introduction&#0000; -- Gary B. Genett -->
-<p>#WORKING:DOCS # introduction</p>
+<!-- site-fold-begin :: finish >> 1 . library-digest 2023-12-22 :: Introduction&#0000; -- Gary B. Genett -->
+<p>#WORK # introduction</p>
 <table style="width:98%;">
 <colgroup>
 <col style="width: 19%" />
@@ -20326,50 +20375,46 @@ CONTENTS
 <td style="text-align: left;"><code>lg</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">cols_sticky</td>
-<td style="text-align: left;"><code>[ 1, 1, 1 ]</code></td>
+<td style="text-align: left;">cols_scroll</td>
+<td style="text-align: left;"><code>1</code></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">cols_resticky</td>
-<td style="text-align: left;"><code>[ 0, 0, 0 ]</code></td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">cols_order</td>
 <td style="text-align: left;"><code>[ 1, 2, 3 ]</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">cols_reorder</td>
 <td style="text-align: left;"><code>[ 1, 3, 2 ]</code></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">cols_size</td>
 <td style="text-align: left;"><code>[ 3, 7, 2 ]</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">cols_resize</td>
 <td style="text-align: left;"><code>[ 6, 12, 6 ]</code></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">metainfo</td>
 <td style="text-align: left;"><code>&lt;date&gt; :: &lt;title&gt;&lt;|&gt; -- &lt;author|; &gt;</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">metainfo_null</td>
 <td style="text-align: left;"><code>*(none)*</code></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">metalist :: author</td>
 <td style="text-align: left;"><em>title:</em> <code>Author</code> <br> <em>display:</em> <code>*Authors: &lt;|&gt;, &lt;|&gt;*</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">metalist :: tags</td>
 <td style="text-align: left;"><em>title:</em> <code>Tag</code> <br> <em>display:</em> <code>*Tags: &lt;|&gt;, &lt;|&gt;*</code></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">readtime</td>
 <td style="text-align: left;"><code>*Reading time: &lt;word&gt; words, &lt;time&gt; minutes*</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">readtime_wpm</td>
 <td style="text-align: left;"><code>220</code></td>
 </tr>
@@ -20387,24 +20432,24 @@ CONTENTS
 <p>
 </p>
 <!-- site-spacer :: finish >> -->
-<!-- site-fold-begin :: start >> 1 . library-digest 2023-12-20 :: Layout & Elements&#0000; -- Gary B. Genett -->
-<div class="accordion">
-<div class="accordion-item">
-<div id="2023-12-20--layout--elements0000----gary-b-genett" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-2023-12-20LayoutElements0000--GaryBGenett">
-<!-- site-header :: start >> 1 2023-12-20 :: Layout & Elements&#0000; -- Gary B. Genett -->
-<div id="2023-12-20--layout--elements0000----gary-b-genett">
+<!-- site-fold-begin :: start >> 1 . library-digest 2023-12-22 :: Layout & Elements&#0000; -- Gary B. Genett -->
+<!-- site-header :: start >> 1 2023-12-22 :: Layout & Elements&#0000; -- Gary B. Genett -->
+<div id="2023-12-22--layout--elements0000----gary-b-genett">
 
 </div>
-<!-- site-header :: finish >> 1 2023-12-20 :: Layout & Elements&#0000; -- Gary B. Genett -->
+<!-- site-header :: finish >> 1 2023-12-22 :: Layout & Elements&#0000; -- Gary B. Genett -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-2023-12-22--layout--elements0000----gary-b-genett" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-2023-12-22--layout--elements0000----gary-b-genett-target">
 <h1 class="composer-header">
-2023-12-20 :: Layout &amp; Elements  – Gary B. Genett
+2023-12-22 :: Layout &amp; Elements  – Gary B. Genett
 </h1>
 </button>
 </div>
-<div id="toggle-2023-12-20LayoutElements0000--GaryBGenett" class="accordion-collapse collapse show" data-bs-parent="#library-digest">
+<div id="composer-fold-2023-12-22--layout--elements0000----gary-b-genett-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 1 . library-digest 2023-12-20 :: Layout & Elements&#0000; -- Gary B. Genett -->
+<!-- site-fold-begin :: finish >> 1 . library-digest 2023-12-22 :: Layout & Elements&#0000; -- Gary B. Genett -->
 <!-- site-break :: start >> -->
 <!-- site-break :: finish >> -->
 <p>[…]</p>
@@ -20419,24 +20464,24 @@ CONTENTS
 <p>
 </p>
 <!-- site-spacer :: finish >> -->
-<!-- site-fold-begin :: start >> 1 . library-digest 2023-12-20 :: Metainfo Page&#0000; -- Gary B. Genett -->
-<div class="accordion">
-<div class="accordion-item">
-<div id="2023-12-20--metainfo-page0000----gary-b-genett" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-2023-12-20MetainfoPage0000--GaryBGenett">
-<!-- site-header :: start >> 1 2023-12-20 :: Metainfo Page&#0000; -- Gary B. Genett -->
-<div id="2023-12-20--metainfo-page0000----gary-b-genett">
+<!-- site-fold-begin :: start >> 1 . library-digest 2023-12-22 :: Metainfo Page&#0000; -- Gary B. Genett -->
+<!-- site-header :: start >> 1 2023-12-22 :: Metainfo Page&#0000; -- Gary B. Genett -->
+<div id="2023-12-22--metainfo-page0000----gary-b-genett">
 
 </div>
-<!-- site-header :: finish >> 1 2023-12-20 :: Metainfo Page&#0000; -- Gary B. Genett -->
+<!-- site-header :: finish >> 1 2023-12-22 :: Metainfo Page&#0000; -- Gary B. Genett -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-2023-12-22--metainfo-page0000----gary-b-genett" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-2023-12-22--metainfo-page0000----gary-b-genett-target">
 <h1 class="composer-header">
-2023-12-20 :: Metainfo Page  – Gary B. Genett
+2023-12-22 :: Metainfo Page  – Gary B. Genett
 </h1>
 </button>
 </div>
-<div id="toggle-2023-12-20MetainfoPage0000--GaryBGenett" class="accordion-collapse collapse show" data-bs-parent="#library-digest">
+<div id="composer-fold-2023-12-22--metainfo-page0000----gary-b-genett-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 1 . library-digest 2023-12-20 :: Metainfo Page&#0000; -- Gary B. Genett -->
+<!-- site-fold-begin :: finish >> 1 . library-digest 2023-12-22 :: Metainfo Page&#0000; -- Gary B. Genett -->
 <!-- site-break :: start >> -->
 <!-- site-break :: finish >> -->
 <p>[…]</p>
@@ -20451,25 +20496,25 @@ CONTENTS
 <p>
 </p>
 <!-- site-spacer :: finish >> -->
-<!-- site-fold-begin :: start >> 1 . library-digest 2023-12-20 :: Configured Site&#0000; -- Gary B. Genett -->
-<div class="accordion">
-<div class="accordion-item">
-<div id="2023-12-20--configured-site0000----gary-b-genett" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-2023-12-20ConfiguredSite0000--GaryBGenett">
-<!-- site-header :: start >> 1 2023-12-20 :: Configured Site&#0000; -- Gary B. Genett -->
-<div id="2023-12-20--configured-site0000----gary-b-genett">
+<!-- site-fold-begin :: start >> 1 . library-digest 2023-12-22 :: Configured Site&#0000; -- Gary B. Genett -->
+<!-- site-header :: start >> 1 2023-12-22 :: Configured Site&#0000; -- Gary B. Genett -->
+<div id="2023-12-22--configured-site0000----gary-b-genett">
 
 </div>
-<!-- site-header :: finish >> 1 2023-12-20 :: Configured Site&#0000; -- Gary B. Genett -->
+<!-- site-header :: finish >> 1 2023-12-22 :: Configured Site&#0000; -- Gary B. Genett -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-2023-12-22--configured-site0000----gary-b-genett" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-2023-12-22--configured-site0000----gary-b-genett-target">
 <h1 class="composer-header">
-2023-12-20 :: Configured Site  – Gary B. Genett
+2023-12-22 :: Configured Site  – Gary B. Genett
 </h1>
 </button>
 </div>
-<div id="toggle-2023-12-20ConfiguredSite0000--GaryBGenett" class="accordion-collapse collapse show" data-bs-parent="#library-digest">
+<div id="composer-fold-2023-12-22--configured-site0000----gary-b-genett-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 1 . library-digest 2023-12-20 :: Configured Site&#0000; -- Gary B. Genett -->
-<p>#WORKING:DOCS</p>
+<!-- site-fold-begin :: finish >> 1 . library-digest 2023-12-22 :: Configured Site&#0000; -- Gary B. Genett -->
+<p>#WORK</p>
 <p><code>&lt;!-- composer &gt;&gt; metainfo --&gt;</code></p>
 <table style="width:99%;">
 <colgroup>
@@ -20511,61 +20556,56 @@ CONTENTS
 <td style="text-align: left;"><code>md</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">cols_sticky</td>
-<td style="text-align: left;"><code>[ 1, 1, 1 ]</code></td>
-<td style="text-align: left;"><code>[ 0, 0, 0 ]</code></td>
+<td style="text-align: left;">cols_scroll</td>
+<td style="text-align: left;"><code>1</code></td>
+<td style="text-align: left;"><code>null</code></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">cols_resticky</td>
-<td style="text-align: left;"><code>[ 0, 0, 0 ]</code></td>
-<td style="text-align: left;"><code>[ 0, 0, 0 ]</code></td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">cols_order</td>
 <td style="text-align: left;"><code>[ 1, 2, 3 ]</code></td>
 <td style="text-align: left;"><code>[ 1, 3, 2 ]</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">cols_reorder</td>
 <td style="text-align: left;"><code>[ 1, 3, 2 ]</code></td>
 <td style="text-align: left;"><code>[ 2, 3, 1 ]</code></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">cols_size</td>
 <td style="text-align: left;"><code>[ 3, 7, 2 ]</code></td>
 <td style="text-align: left;"><code>[ 12, 9, 3 ]</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">cols_resize</td>
 <td style="text-align: left;"><code>[ 6, 12, 6 ]</code></td>
 <td style="text-align: left;"><code>[ 12, 12, 0 ]</code></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">metainfo</td>
 <td style="text-align: left;"><code>&lt;date&gt; :: &lt;title&gt;&lt;|&gt; -- &lt;author|; &gt;</code></td>
 <td style="text-align: left;"><code>&lt;title&gt;&amp;nbsp;&amp;nbsp;*(&lt;date&gt;)*&lt;|&gt;&lt;br&gt;*-- &lt;author| -- &gt;*&lt;br&gt;*. &lt;tags| . &gt;*</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">metainfo_null</td>
 <td style="text-align: left;"><code>*(none)*</code></td>
 <td style="text-align: left;"><code>null</code></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">metalist :: author</td>
 <td style="text-align: left;"><em>title:</em> <code>Author</code> <br> <em>display:</em> <code>*Authors: &lt;|&gt;, &lt;|&gt;*</code></td>
 <td style="text-align: left;">title: <code>Creator</code> <br> display: <code>&lt;ul&gt;&lt;li&gt;&lt;|&gt;&lt;/li&gt;&lt;li&gt;&lt;|&gt;&lt;/li&gt;&lt;/ul&gt;</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">metalist :: tags</td>
 <td style="text-align: left;"><em>title:</em> <code>Tag</code> <br> <em>display:</em> <code>*Tags: &lt;|&gt;, &lt;|&gt;*</code></td>
 <td style="text-align: left;">title: <code>Mark</code> <br> display: <code>&lt;ul&gt;&lt;li&gt;&lt;|&gt;&lt;/li&gt;&lt;li&gt;&lt;|&gt;&lt;/li&gt;&lt;/ul&gt;</code></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">readtime</td>
 <td style="text-align: left;"><code>*Reading time: &lt;word&gt; words, &lt;time&gt; minutes*</code></td>
 <td style="text-align: left;"><code>*Words: &lt;word&gt; / Minutes: &lt;time&gt;*</code></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">readtime_wpm</td>
 <td style="text-align: left;"><code>220</code></td>
 <td style="text-align: left;"><code>200</code></td>
@@ -20591,7 +20631,7 @@ CONTENTS
 <!-- site-targets >> .../_library/.composer.tmp/site-cache.nav-right.html -->
 <!-- site-nav-side :: start >> right -->
 <!-- site-column-begin :: start >> right -->
-<div class="d-flex flex-column composer-sticky d-lg-sticky d-static order-lg-3 order-2 col-lg-2 col-6 d-lg-block d-block p-2">
+<div id="composer-nav-right" class="d-flex flex-column composer-scroll-lg order-lg-3 order-2 col-lg-2 col-6 d-lg-block d-block p-2">
 <!-- site-column-begin :: finish >> right -->
 <!-- site-nav-side-list :: start >> nav-right.["BEGIN"] -->
 <!-- site-nav-side-list :: finish >> nav-right.["BEGIN"] -->
@@ -20600,14 +20640,14 @@ CONTENTS
 <!-- site-fold-begin :: start >> 0 . 0 RIGHT FOLD -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="right-fold" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-RIGHTFOLD">
+<div id="composer-fold-right-fold" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-right-fold-target">
 <h6 class="composer-header">
 RIGHT FOLD
 </h6>
 </button>
 </div>
-<div id="toggle-RIGHTFOLD" class="accordion-collapse collapse show">
+<div id="composer-fold-right-fold-target" class="accordion-collapse collapse show">
 <div class="accordion-body">
 <!-- site-fold-begin :: finish >> 0 . 0 RIGHT FOLD -->
 <!-- site-nav-side-list :: finish >> nav-right.["MENU"][0] -->
@@ -20639,7 +20679,7 @@ RIGHT FOLD
 <!-- site-nav-side-list :: start >> nav-right.["TEXT"][0] -->
 <!-- site-box-begin :: start >> 0 RIGHT BOX -->
 <div class="card">
-<div id="right-box" class="card-header">
+<div id="composer-box-right-box" class="card-header">
 <h6 class="composer-header">
 RIGHT BOX
 </h6>
@@ -20667,24 +20707,24 @@ RIGHT BOX
 <!-- site-nav-side-list :: finish >> nav-right.["SPACE"] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][0] -->
-<!-- site-fold-begin :: start >> group fold-library -->
-<div id="fold-library" class="accordion">
-<!-- site-fold-begin :: finish >> group fold-library -->
+<!-- site-fold-begin :: start >> group library -->
+<div id="composer-fold-group-library" class="accordion">
+<!-- site-fold-begin :: finish >> group library -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][0] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][1] -->
-<!-- site-fold-begin :: start >> 0 0 fold-library DATES -->
+<!-- site-fold-begin :: start >> 0 0 library DATES -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="dates" class="accordion-header">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-DATES">
+<div id="composer-fold-dates" class="accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-dates-target">
 <h6 class="composer-header">
 DATES
 </h6>
 </button>
 </div>
-<div id="toggle-DATES" class="accordion-collapse collapse" data-bs-parent="#fold-library">
+<div id="composer-fold-dates-target" class="accordion-collapse collapse" data-bs-parent="#composer-fold-group-library">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 0 0 fold-library DATES -->
+<!-- site-fold-begin :: finish >> 0 0 library DATES -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][1] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][2] -->
 <!-- site-library-shelf :: start >> list date -->
@@ -20741,19 +20781,19 @@ DATES
 <!-- site-fold-end :: finish >> -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][3] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][4] -->
-<!-- site-fold-begin :: start >> 0 0 fold-library AUTHORS -->
+<!-- site-fold-begin :: start >> 0 0 library AUTHORS -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="authors" class="accordion-header">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-AUTHORS">
+<div id="composer-fold-authors" class="accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-authors-target">
 <h6 class="composer-header">
 AUTHORS
 </h6>
 </button>
 </div>
-<div id="toggle-AUTHORS" class="accordion-collapse collapse" data-bs-parent="#fold-library">
+<div id="composer-fold-authors-target" class="accordion-collapse collapse" data-bs-parent="#composer-fold-group-library">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 0 0 fold-library AUTHORS -->
+<!-- site-fold-begin :: finish >> 0 0 library AUTHORS -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][4] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][5] -->
 <!-- site-library-shelf :: start >> list author -->
@@ -20826,19 +20866,19 @@ AUTHORS
 <!-- site-fold-end :: finish >> -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][6] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][7] -->
-<!-- site-fold-begin :: start >> 0 . fold-library TAGS -->
+<!-- site-fold-begin :: start >> 0 . library TAGS -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="tags" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-TAGS">
+<div id="composer-fold-tags" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-tags-target">
 <h6 class="composer-header">
 TAGS
 </h6>
 </button>
 </div>
-<div id="toggle-TAGS" class="accordion-collapse collapse show" data-bs-parent="#fold-library">
+<div id="composer-fold-tags-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 0 . fold-library TAGS -->
+<!-- site-fold-begin :: finish >> 0 . library TAGS -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][7] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][8] -->
 <!-- site-library-shelf :: start >> list tags -->
@@ -20962,12 +21002,12 @@ TAGS
 <!-- site-targets >> .../_library/.composer.tmp/site-cache.nav-bottom.html -->
 <!-- site-nav-bottom :: start >> -->
 <!-- site-nav-begin :: start >> bottom -->
-<div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbar-fixed-bottom">
+<div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#composer-nav-bottom">
 
 </div>
 <nav class="navbar navbar-expand-lg fixed-bottom">
 <div class="container-fluid">
-<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-fixed-bottom">
+<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#composer-nav-bottom">
 <span class="navbar-toggler-icon"></span>
 </button>
 <!-- site-copyright :: start >> -->
@@ -20981,7 +21021,7 @@ TAGS
 <!-- site-icon :: finish >> copyright --> COPYRIGHT
 </p>
 <!-- site-copyright :: finish >> -->
-<div class="navbar-collapse collapse" id="navbar-fixed-bottom">
+<div class="navbar-collapse collapse" id="composer-nav-bottom">
 <!-- site-nav-begin :: finish >> bottom -->
 <ol class="composer-link nav-item breadcrumb me-auto">
 <li class="breadcrumb-item">
@@ -21024,7 +21064,7 @@ BOTTOM TEXT
 <!-- site-info-data-list :: start >> info-bottom.["INFO"][0] -->
 <p class="composer-link navbar-text me-3">
 <!-- composer >> readtime-list -->
-<em>Reading time: 505 words, 2 minutes</em>
+<em>Reading time: 476 words, 2 minutes</em>
 </p>
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"][0] -->
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"] -->

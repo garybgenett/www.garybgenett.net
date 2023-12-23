@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Gary B. Genett" />
-  <meta name="dcterms.date" content="2023-12-20" />
+  <meta name="dcterms.date" content="2023-12-22" />
   <title>Default Site</title>
   <style>
     code{white-space: pre-wrap;}
@@ -12666,11 +12666,42 @@ body {
 min-width:	100%;
 margin:	0px;
 padding:	0px;
-padding-top:	70px;
-padding-bottom:	70px;
+padding-top:	60px;
+padding-bottom:	60px;
 }
-.composer-sticky {
-max-height:	85vh;
+
+@media (min-width: 1400px) {
+.composer-scroll-xxl {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+@media (min-width: 1200px) {
+.composer-scroll-xl {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+@media (min-width: 992px) {
+.composer-scroll-lg {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+@media (min-width: 768px) {
+.composer-scroll-md {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+@media (min-width: 576px) {
+.composer-scroll-sm {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+.composer-scroll {
+max-height:	calc(100vh - 60px - 60px);
 overflow:	auto;
 }
 
@@ -12768,11 +12799,29 @@ width:	auto;
 height:	24px;
 width:	auto;
 }
-.composer-display {
+.composer-display .carousel-control-prev,
+.composer-display .carousel-control-next {
+height:	64px;
+width:	64px;
+opacity:	1;
+}
+.composer-display .carousel-control-prev-icon,
+.composer-display .carousel-control-next-icon {
+height:	32px;
+width:	32px;
+}
+.composer-display .carousel-indicators {
+margin-bottom:	2px;
+}
+.composer-display .carousel-indicators [data-bs-target] {
+height:	6px;
+width:	32px;
+}
+.composer-display-banner {
 height:	auto;
 max-width:	100%;
 }
-.composer-display-item {
+.composer-display-shelf {
 height:	auto;
 max-width:	128px;
 }
@@ -19667,19 +19716,19 @@ margin-top:	0px;
 <!-- site-targets >> .../null/.composer.tmp/site-cache.nav-top.html -->
 <!-- site-nav-top :: start >> -->
 <!-- site-nav-begin :: start >> top -->
-<div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbar-fixed-top">
+<div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#composer-nav-top">
 
 </div>
 <nav class="navbar navbar-expand-lg fixed-top">
 <div class="container-fluid">
-<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-fixed-top">
+<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#composer-nav-top">
 <span class="navbar-toggler-icon"></span>
 </button>
 <!-- site-brand :: start >> -->
 <a class="navbar-brand" href>
 <!-- site-brand :: skip >> logo --> </a>
 <!-- site-brand :: finish >> -->
-<div id="navbar-fixed-top" class="navbar-collapse collapse">
+<div id="composer-nav-top" class="navbar-collapse collapse">
 <!-- site-nav-begin :: finish >> top -->
 <ul class="navbar-nav navbar-nav-scroll me-auto">
 <!-- site-nav-top :: skip >> nav-top -->
@@ -19707,13 +19756,13 @@ margin-top:	0px;
 <!-- site-nav-side :: finish >> left -->
 <!-- site-targets >> .../null/.composer.tmp/site-cache.column-begin.html -->
 <!-- site-column-begin :: start >> center -->
-<div class="d-flex flex-column composer-sticky d-lg-sticky d-static order-lg-2 order-3 col-lg-7 col-12 d-lg-block d-block p-2">
+<div id="composer-nav-center" class="d-flex flex-column composer-scroll-lg order-lg-2 order-3 col-lg-7 col-12 d-lg-block d-block p-2">
 <!-- site-column-begin :: finish >> center -->
 <!-- site-targets >> index.md -->
 <!-- site-file :: start >> index.md -->
 <!-- site-box-begin :: start >> 0 -->
 <div class="card">
-<div class="card-header">
+<div id="composer-box-" class="card-header">
 <h6 class="composer-header">
 </h6>
 </div>
@@ -19837,19 +19886,19 @@ Same as above, for a version of the library specific to the <code>config</code> 
 <!-- site-targets >> .../null/.composer.tmp/site-cache.nav-bottom.html -->
 <!-- site-nav-bottom :: start >> -->
 <!-- site-nav-begin :: start >> bottom -->
-<div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbar-fixed-bottom">
+<div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#composer-nav-bottom">
 
 </div>
 <nav class="navbar navbar-expand-lg fixed-bottom">
 <div class="container-fluid">
-<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-fixed-bottom">
+<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#composer-nav-bottom">
 <span class="navbar-toggler-icon"></span>
 </button>
 <!-- site-copyright :: start >> -->
 <p class="composer-link navbar-text me-3">
 </p>
 <!-- site-copyright :: finish >> -->
-<div id="navbar-fixed-bottom" class="navbar-collapse collapse">
+<div id="composer-nav-bottom" class="navbar-collapse collapse">
 <!-- site-nav-begin :: finish >> bottom -->
 <ol class="composer-link nav-item breadcrumb me-auto">
 <!-- site-nav-bottom :: skip >> nav-bottom -->

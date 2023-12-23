@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content />
-  <meta name="dcterms.date" content="2023-12-20" />
+  <meta name="dcterms.date" content="2023-12-22" />
   <title>EXAMPLE SITE – Site Map</title>
   <style>
     code{white-space: pre-wrap;}
@@ -12666,11 +12666,42 @@ body {
 min-width:	100%;
 margin:	0px;
 padding:	0px;
-padding-top:	70px;
-padding-bottom:	70px;
+padding-top:	60px;
+padding-bottom:	60px;
 }
-.composer-sticky {
-max-height:	85vh;
+
+@media (min-width: 1400px) {
+.composer-scroll-xxl {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+@media (min-width: 1200px) {
+.composer-scroll-xl {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+@media (min-width: 992px) {
+.composer-scroll-lg {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+@media (min-width: 768px) {
+.composer-scroll-md {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+@media (min-width: 576px) {
+.composer-scroll-sm {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+.composer-scroll {
+max-height:	calc(100vh - 60px - 60px);
 overflow:	auto;
 }
 
@@ -12768,11 +12799,29 @@ width:	auto;
 height:	24px;
 width:	auto;
 }
-.composer-display {
+.composer-display .carousel-control-prev,
+.composer-display .carousel-control-next {
+height:	64px;
+width:	64px;
+opacity:	1;
+}
+.composer-display .carousel-control-prev-icon,
+.composer-display .carousel-control-next-icon {
+height:	32px;
+width:	32px;
+}
+.composer-display .carousel-indicators {
+margin-bottom:	2px;
+}
+.composer-display .carousel-indicators [data-bs-target] {
+height:	6px;
+width:	32px;
+}
+.composer-display-banner {
 height:	auto;
 max-width:	100%;
 }
-.composer-display-item {
+.composer-display-shelf {
 height:	auto;
 max-width:	128px;
 }
@@ -19668,18 +19717,18 @@ margin-top:	0px;
 <!-- site-targets >> .../_library/.composer.tmp/site-cache.nav-top.html -->
 <!-- site-nav-top :: start >> .../.Composer/artifacts/images/logo-v1.0.png -->
 <!-- site-nav-begin :: start >> top .../.Composer/artifacts/images/logo-v1.0.png -->
-<div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbar-fixed-top">
+<div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#composer-nav-top">
 
 </div>
 <nav class="navbar navbar-expand-lg fixed-top">
 <div class="container-fluid">
-<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-fixed-top">
+<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#composer-nav-top">
 <span class="navbar-toggler-icon"></span>
 </button>
 <!-- site-brand :: start >> .../.Composer/artifacts/images/logo-v1.0.png -->
 <a class="navbar-brand" href="http://www.garybgenett.net/projects/composer"> <img class="composer-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAc0lEQVQ4y8VTQQ7AIAgrZA/z6fwMD8vcQCDspBcN0GIrAqcXNes0w1OQpBAsLjrujVdSwm4WPF7gE+MvW0gitqM/87pyRWLl0S4hJ6nMJwDEm3l9EgDAVRrWeFb+CVZfywU4lyRWt6bgxiB1JrEc5eOfEROp5CKUZInHTAAAAABJRU5ErkJggg==">   LOGO / BRAND </a>
 <!-- site-brand :: finish >> .../.Composer/artifacts/images/logo-v1.0.png -->
-<div class="navbar-collapse collapse" id="navbar-fixed-top">
+<div class="navbar-collapse collapse" id="composer-nav-top">
 <!-- site-nav-begin :: finish >> top .../.Composer/artifacts/images/logo-v1.0.png -->
 <ul class="navbar-nav navbar-nav-scroll me-auto">
 <!-- site-nav-top-list :: start >> nav-top.["MENU"] -->
@@ -19796,6 +19845,12 @@ margin-top:	0px;
 </li>
 <li>
 <a href="#_library" class="dropdown-item">_library</a>
+</li>
+<li>
+<a href="#bootstrapsitecontentdocs" class="dropdown-item">bootstrap/site/content/docs</a>
+</li>
+<li>
+<a href="#bootstrapsitecontentdocs51" class="dropdown-item">bootstrap/site/content/docs/5.1</a>
 </li>
 <li>
 <a href="#bootstrapsitecontentdocs51getting-started" class="dropdown-item">bootstrap/site/content/docs/5.1/getting-started</a>
@@ -20010,7 +20065,7 @@ TOP TEXT
 <!-- site-targets >> .../_library/.composer.tmp/site-cache.nav-left.html -->
 <!-- site-nav-side :: start >> left -->
 <!-- site-column-begin :: start >> left -->
-<div class="d-flex flex-column composer-sticky d-lg-sticky d-static order-lg-1 order-1 col-lg-3 col-6 d-lg-block d-block p-2">
+<div id="composer-nav-left" class="d-flex flex-column composer-scroll-lg order-lg-1 order-1 col-lg-3 col-6 d-lg-block d-block p-2">
 <!-- site-column-begin :: finish >> left -->
 <!-- site-nav-side-list :: start >> nav-left.["BEGIN"] -->
 <!-- site-nav-side-list :: finish >> nav-left.["BEGIN"] -->
@@ -20019,14 +20074,14 @@ TOP TEXT
 <!-- site-fold-begin :: start >> 0 . 0 LEFT FOLD -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="left-fold" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-LEFTFOLD">
+<div id="composer-fold-left-fold" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-left-fold-target">
 <h6 class="composer-header">
 LEFT FOLD
 </h6>
 </button>
 </div>
-<div id="toggle-LEFTFOLD" class="accordion-collapse collapse show">
+<div id="composer-fold-left-fold-target" class="accordion-collapse collapse show">
 <div class="accordion-body">
 <!-- site-fold-begin :: finish >> 0 . 0 LEFT FOLD -->
 <!-- site-nav-side-list :: finish >> nav-left.["MENU"][0] -->
@@ -20058,7 +20113,7 @@ LEFT FOLD
 <!-- site-nav-side-list :: start >> nav-left.["TEXT"][0] -->
 <!-- site-box-begin :: start >> 0 LEFT BOX -->
 <div class="card">
-<div id="left-box" class="card-header">
+<div id="composer-box-left-box" class="card-header">
 <h6 class="composer-header">
 LEFT BOX
 </h6>
@@ -20088,7 +20143,7 @@ LEFT BOX
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][0] -->
 <!-- site-box-begin :: start >> 0 CONTENTS -->
 <div class="card">
-<div id="contents" class="card-header">
+<div id="composer-box-contents" class="card-header">
 <h6 class="composer-header">
 CONTENTS
 </h6>
@@ -20101,6 +20156,8 @@ CONTENTS
 <ul>
 <li><a href="#">/</a></li>
 <li><a href="#_library">_library</a></li>
+<li><a href="#bootstrapsitecontentdocs">bootstrap/site/content/docs</a></li>
+<li><a href="#bootstrapsitecontentdocs51">bootstrap/site/content/docs/5.1</a></li>
 <li><a href="#bootstrapsitecontentdocs51getting-started">bootstrap/site/content/docs/5.1/getting-started</a></li>
 <li><a href="#config">config</a></li>
 <li><a href="#config_library-config">config/_library-config</a></li>
@@ -20126,23 +20183,23 @@ CONTENTS
 <!-- site-nav-side :: finish >> left -->
 <!-- site-targets >> .../_library/.composer.tmp/site-cache.column-begin.html -->
 <!-- site-column-begin :: start >> center -->
-<div class="d-flex flex-column composer-sticky d-lg-sticky d-static order-lg-2 order-3 col-lg-7 col-12 d-lg-block d-block p-2">
+<div id="composer-nav-center" class="d-flex flex-column composer-scroll-lg order-lg-2 order-3 col-lg-7 col-12 d-lg-block d-block p-2">
 <!-- site-column-begin :: finish >> center -->
 <!-- site-targets >> .../_library.md.cms -->
 <!-- site-file :: start >> .../_library.md.cms -->
-<!-- site-box-begin :: start >> 0 #WORKING:DOCS -->
+<!-- site-box-begin :: start >> 0 #WORK -->
 <div class="card">
-<div id="workingdocs" class="card-header">
+<div id="composer-box-work" class="card-header">
 <h6 class="composer-header">
-#WORKING:DOCS
+#WORK
 </h6>
 </div>
 <div class="card-body">
-<!-- site-box-begin :: finish >> 0 #WORKING:DOCS -->
+<!-- site-box-begin :: finish >> 0 #WORK -->
 <dl>
-<dt>#WORKING:DOCS</dt>
+<dt>#WORK</dt>
 <dd>
-<code>_library/index-include.md.cms</code>
+<p><code>_library/index-include.md.cms</code></p>
 </dd>
 <dd>
 <code>_library/sitemap-include.md.cms</code>
@@ -20164,25 +20221,25 @@ CONTENTS
 <!-- site-targets >> sitemap.md -->
 <!-- site-file :: start >> sitemap.md -->
 <!-- site-file :: start >> sitemap-include.md.cms -->
-<!-- site-fold-begin :: start >> group sitemap-list -->
-<div id="sitemap-list" class="accordion">
-<!-- site-fold-begin :: finish >> group sitemap-list -->
+<!-- site-fold-begin :: start >> group library-sitemap -->
+<div id="composer-fold-group-library-sitemap" class="accordion">
+<!-- site-fold-begin :: finish >> group library-sitemap -->
 <!-- site-fold-begin :: start >> 1 . sitemap-list / -->
-<div class="accordion">
-<div class="accordion-item">
-<div class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-">
 <!-- site-header :: start >> 1 / -->
 <div>
 
 </div>
 <!-- site-header :: finish >> 1 / -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold--target">
 <h1 class="composer-header">
 /
 </h1>
 </button>
 </div>
-<div id="toggle-" class="accordion-collapse collapse show" data-bs-parent="#sitemap-list">
+<div id="composer-fold--target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-sitemap-list">
 <div class="accordion-body">
 <!-- site-fold-begin :: finish >> 1 . sitemap-list / -->
 <table class="composer-table table table-borderless align-top">
@@ -20193,7 +20250,7 @@ CONTENTS
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-20 :: Layout &amp; Elements – Gary B. Genett
+2023-12-22 :: Layout &amp; Elements – Gary B. Genett
 </td>
 <td style="text-align: left;">
 <a href="../examples.html">examples.html</a>
@@ -20201,7 +20258,7 @@ CONTENTS
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-20 :: Introduction – Gary B. Genett
+2023-12-22 :: Introduction – Gary B. Genett
 </td>
 <td style="text-align: left;">
 <a href="../index.html">index.html</a>
@@ -20209,7 +20266,7 @@ CONTENTS
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-20 :: Latest Updates – Gary B. Genett
+2023-12-22 :: Latest Updates – Gary B. Genett
 </td>
 <td style="text-align: left;">
 <a href="../index-digest.html">index-digest.html</a>
@@ -20228,21 +20285,21 @@ CONTENTS
 </p>
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . sitemap-list _library -->
-<div class="accordion">
-<div class="accordion-item">
-<div id="_library" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-_library">
 <!-- site-header :: start >> 1 _library -->
 <div id="_library">
 
 </div>
 <!-- site-header :: finish >> 1 _library -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-_library" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-_library-target">
 <h1 class="composer-header">
 _library
 </h1>
 </button>
 </div>
-<div id="toggle-_library" class="accordion-collapse collapse show" data-bs-parent="#sitemap-list">
+<div id="composer-fold-_library-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-sitemap-list">
 <div class="accordion-body">
 <!-- site-fold-begin :: finish >> 1 . sitemap-list _library -->
 <table class="composer-table table table-borderless align-top">
@@ -20253,7 +20310,7 @@ _library
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-20 :: Author: Albert Krewinkel – <em>(none)</em>
+2023-12-22 :: Author: Albert Krewinkel – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/author-albert-krewinkel.html">author-albert-krewinkel.html</a>
@@ -20261,7 +20318,7 @@ _library
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-20 :: Author: Author 1 – <em>(none)</em>
+2023-12-22 :: Author: Author 1 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/author-author-1.html">author-author-1.html</a>
@@ -20269,7 +20326,7 @@ _library
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-20 :: Author: Author 2 – <em>(none)</em>
+2023-12-22 :: Author: Author 2 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/author-author-2.html">author-author-2.html</a>
@@ -20277,7 +20334,7 @@ _library
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-20 :: Author: Author 3 – <em>(none)</em>
+2023-12-22 :: Author: Author 3 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/author-author-3.html">author-author-3.html</a>
@@ -20285,7 +20342,7 @@ _library
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-20 :: Author: Gary B. Genett – <em>(none)</em>
+2023-12-22 :: Author: Gary B. Genett – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/author-gary-b-genett.html">author-gary-b-genett.html</a>
@@ -20293,7 +20350,7 @@ _library
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-20 :: Author: John MacFarlane – <em>(none)</em>
+2023-12-22 :: Author: John MacFarlane – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/author-john-macfarlane.html">author-john-macfarlane.html</a>
@@ -20301,7 +20358,7 @@ _library
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-20 :: Author: Mauro Bieg – <em>(none)</em>
+2023-12-22 :: Author: Mauro Bieg – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/author-mauro-bieg.html">author-mauro-bieg.html</a>
@@ -20309,7 +20366,7 @@ _library
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-20 :: Year: 2020 – <em>(none)</em>
+2023-12-22 :: Year: 2020 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/date-2020.html">date-2020.html</a>
@@ -20317,7 +20374,7 @@ _library
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-20 :: Year: 2021 – <em>(none)</em>
+2023-12-22 :: Year: 2021 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/date-2021.html">date-2021.html</a>
@@ -20325,7 +20382,7 @@ _library
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-20 :: Year: 2022 – <em>(none)</em>
+2023-12-22 :: Year: 2022 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/date-2022.html">date-2022.html</a>
@@ -20333,7 +20390,7 @@ _library
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-20 :: Year: 2023 – <em>(none)</em>
+2023-12-22 :: Year: 2023 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/date-2023.html">date-2023.html</a>
@@ -20341,7 +20398,7 @@ _library
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-20 :: Year: 2024 – <em>(none)</em>
+2023-12-22 :: Year: 2024 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/date-2024.html">date-2024.html</a>
@@ -20349,7 +20406,7 @@ _library
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-20 :: Latest Updates – <em>(none)</em>
+2023-12-22 :: Latest Updates – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/index.html">index.html</a>
@@ -20357,7 +20414,7 @@ _library
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-20 :: Site Map – <em>(none)</em>
+2023-12-22 :: Site Map – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/sitemap.html">sitemap.html</a>
@@ -20365,7 +20422,7 @@ _library
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-20 :: Tag: Main – <em>(none)</em>
+2023-12-22 :: Tag: Main – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/tags-main.html">tags-main.html</a>
@@ -20373,7 +20430,7 @@ _library
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-20 :: Tag: Tag 0 – <em>(none)</em>
+2023-12-22 :: Tag: Tag 0 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/tags-tag-0.html">tags-tag-0.html</a>
@@ -20381,7 +20438,7 @@ _library
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-20 :: Tag: Tag 1 – <em>(none)</em>
+2023-12-22 :: Tag: Tag 1 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/tags-tag-1.html">tags-tag-1.html</a>
@@ -20389,7 +20446,7 @@ _library
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-20 :: Tag: Tag 2 – <em>(none)</em>
+2023-12-22 :: Tag: Tag 2 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/tags-tag-2.html">tags-tag-2.html</a>
@@ -20397,7 +20454,7 @@ _library
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-20 :: Tag: Tag 3 – <em>(none)</em>
+2023-12-22 :: Tag: Tag 3 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/tags-tag-3.html">tags-tag-3.html</a>
@@ -20405,7 +20462,7 @@ _library
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-20 :: Tag: Tag 4 – <em>(none)</em>
+2023-12-22 :: Tag: Tag 4 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/tags-tag-4.html">tags-tag-4.html</a>
@@ -20413,7 +20470,7 @@ _library
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-20 :: Tag: Tag 5 – <em>(none)</em>
+2023-12-22 :: Tag: Tag 5 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/tags-tag-5.html">tags-tag-5.html</a>
@@ -20421,7 +20478,7 @@ _library
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-20 :: Tag: Tag 6 – <em>(none)</em>
+2023-12-22 :: Tag: Tag 6 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/tags-tag-6.html">tags-tag-6.html</a>
@@ -20429,7 +20486,7 @@ _library
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-20 :: Tag: Tag 7 – <em>(none)</em>
+2023-12-22 :: Tag: Tag 7 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/tags-tag-7.html">tags-tag-7.html</a>
@@ -20437,7 +20494,7 @@ _library
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-20 :: Tag: Tag 8 – <em>(none)</em>
+2023-12-22 :: Tag: Tag 8 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/tags-tag-8.html">tags-tag-8.html</a>
@@ -20445,7 +20502,7 @@ _library
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-20 :: Tag: Tag 9 – <em>(none)</em>
+2023-12-22 :: Tag: Tag 9 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/tags-tag-9.html">tags-tag-9.html</a>
@@ -20475,10 +20532,90 @@ _library
 <p>
 </p>
 <!-- site-spacer :: finish >> -->
+<!-- site-fold-begin :: start >> 1 . sitemap-list bootstrap/site/content/docs -->
+<!-- site-header :: start >> 1 bootstrap/site/content/docs -->
+<div id="bootstrapsitecontentdocs">
+
+</div>
+<!-- site-header :: finish >> 1 bootstrap/site/content/docs -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-bootstrapsitecontentdocs" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-bootstrapsitecontentdocs-target">
+<h1 class="composer-header">
+bootstrap/site/content/docs
+</h1>
+</button>
+</div>
+<div id="composer-fold-bootstrapsitecontentdocs-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-sitemap-list">
+<div class="accordion-body">
+<!-- site-fold-begin :: finish >> 1 . sitemap-list bootstrap/site/content/docs -->
+<table class="composer-table table table-borderless align-top">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">
+–
+</td>
+<td style="text-align: left;">
+<a href="../bootstrap/site/content/docs/_index.html">_index.html</a>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- site-fold-end :: start >> -->
+</div>
+</div>
+</div>
+</div>
+<!-- site-fold-end :: finish >> -->
 <!-- site-spacer :: start >> -->
 <p>
 </p>
 <!-- site-spacer :: finish >> -->
+<!-- site-fold-begin :: start >> 1 . sitemap-list bootstrap/site/content/docs/5.1 -->
+<!-- site-header :: start >> 1 bootstrap/site/content/docs/5.1 -->
+<div id="bootstrapsitecontentdocs51">
+
+</div>
+<!-- site-header :: finish >> 1 bootstrap/site/content/docs/5.1 -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-bootstrapsitecontentdocs51" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-bootstrapsitecontentdocs51-target">
+<h1 class="composer-header">
+bootstrap/site/content/docs/5.1
+</h1>
+</button>
+</div>
+<div id="composer-fold-bootstrapsitecontentdocs51-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-sitemap-list">
+<div class="accordion-body">
+<!-- site-fold-begin :: finish >> 1 . sitemap-list bootstrap/site/content/docs/5.1 -->
+<table class="composer-table table table-borderless align-top">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">
+–
+</td>
+<td style="text-align: left;">
+<a href="../bootstrap/site/content/docs/5.1/_index.html">_index.html</a>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- site-fold-end :: start >> -->
+</div>
+</div>
+</div>
+</div>
+<!-- site-fold-end :: finish >> -->
 <!-- site-spacer :: start >> -->
 <p>
 </p>
@@ -20504,21 +20641,21 @@ _library
 </p>
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . sitemap-list bootstrap/site/content/docs/5.1/getting-started -->
-<div class="accordion">
-<div class="accordion-item">
-<div id="bootstrapsitecontentdocs51getting-started" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-bootstrapsitecontentdocs51getting-started">
 <!-- site-header :: start >> 1 bootstrap/site/content/docs/5.1/getting-started -->
 <div id="bootstrapsitecontentdocs51getting-started">
 
 </div>
 <!-- site-header :: finish >> 1 bootstrap/site/content/docs/5.1/getting-started -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-bootstrapsitecontentdocs51getting-started" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-bootstrapsitecontentdocs51getting-started-target">
 <h1 class="composer-header">
 bootstrap/site/content/docs/5.1/getting-started
 </h1>
 </button>
 </div>
-<div id="toggle-bootstrapsitecontentdocs51getting-started" class="accordion-collapse collapse show" data-bs-parent="#sitemap-list">
+<div id="composer-fold-bootstrapsitecontentdocs51getting-started-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-sitemap-list">
 <div class="accordion-body">
 <!-- site-fold-begin :: finish >> 1 . sitemap-list bootstrap/site/content/docs/5.1/getting-started -->
 <table class="composer-table table table-borderless align-top">
@@ -20648,21 +20785,21 @@ bootstrap/site/content/docs/5.1/getting-started
 </p>
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . sitemap-list config -->
-<div class="accordion">
-<div class="accordion-item">
-<div id="config" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-config">
 <!-- site-header :: start >> 1 config -->
 <div id="config">
 
 </div>
 <!-- site-header :: finish >> 1 config -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-config" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-config-target">
 <h1 class="composer-header">
 config
 </h1>
 </button>
 </div>
-<div id="toggle-config" class="accordion-collapse collapse show" data-bs-parent="#sitemap-list">
+<div id="composer-fold-config-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-sitemap-list">
 <div class="accordion-body">
 <!-- site-fold-begin :: finish >> 1 . sitemap-list config -->
 <table class="composer-table table table-borderless align-top">
@@ -20673,7 +20810,7 @@ config
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-20 :: Configured Site – Gary B. Genett
+2023-12-22 :: Configured Site – Gary B. Genett
 </td>
 <td style="text-align: left;">
 <a href="../config/index.html">index.html</a>
@@ -20681,7 +20818,7 @@ config
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-20 :: Digest – Gary B. Genett
+2023-12-22 :: Digest – Gary B. Genett
 </td>
 <td style="text-align: left;">
 <a href="../config/index-digest.html">index-digest.html</a>
@@ -20689,7 +20826,7 @@ config
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-20 :: Metainfo Page – Gary B. Genett
+2023-12-22 :: Metainfo Page – Gary B. Genett
 </td>
 <td style="text-align: left;">
 <a href="../config/pages.html">pages.html</a>
@@ -20697,7 +20834,7 @@ config
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-20 :: Metainfo Page – Gary B. Genett
+2023-12-22 :: Metainfo Page – Gary B. Genett
 </td>
 <td style="text-align: left;">
 <a href="../config/pages.pdf">pages.pdf</a>
@@ -20716,21 +20853,21 @@ config
 </p>
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . sitemap-list config/_library-config -->
-<div class="accordion">
-<div class="accordion-item">
-<div id="config_library-config" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-config_library-config">
 <!-- site-header :: start >> 1 config/_library-config -->
 <div id="config_library-config">
 
 </div>
 <!-- site-header :: finish >> 1 config/_library-config -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-config_library-config" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-config_library-config-target">
 <h1 class="composer-header">
 config/_library-config
 </h1>
 </button>
 </div>
-<div id="toggle-config_library-config" class="accordion-collapse collapse show" data-bs-parent="#sitemap-list">
+<div id="composer-fold-config_library-config-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-sitemap-list">
 <div class="accordion-body">
 <!-- site-fold-begin :: finish >> 1 . sitemap-list config/_library-config -->
 <table class="composer-table table table-borderless align-top">
@@ -20741,7 +20878,7 @@ config/_library-config
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-20 :: Creator: Author 1 – <em>(none)</em>
+2023-12-22 :: Creator: Author 1 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/author-author-1.html">author-author-1.html</a>
@@ -20749,7 +20886,7 @@ config/_library-config
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-20 :: Creator: Author 2 – <em>(none)</em>
+2023-12-22 :: Creator: Author 2 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/author-author-2.html">author-author-2.html</a>
@@ -20757,7 +20894,7 @@ config/_library-config
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-20 :: Creator: Author 3 – <em>(none)</em>
+2023-12-22 :: Creator: Author 3 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/author-author-3.html">author-author-3.html</a>
@@ -20765,7 +20902,7 @@ config/_library-config
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-20 :: Creator: Gary B. Genett – <em>(none)</em>
+2023-12-22 :: Creator: Gary B. Genett – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/author-gary-b-genett.html">author-gary-b-genett.html</a>
@@ -20773,7 +20910,7 @@ config/_library-config
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-20 :: Year: 2022 – <em>(none)</em>
+2023-12-22 :: Year: 2022 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/date-2022.html">date-2022.html</a>
@@ -20781,7 +20918,7 @@ config/_library-config
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-20 :: Year: 2023 – <em>(none)</em>
+2023-12-22 :: Year: 2023 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/date-2023.html">date-2023.html</a>
@@ -20789,7 +20926,7 @@ config/_library-config
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-20 :: Year: 2024 – <em>(none)</em>
+2023-12-22 :: Year: 2024 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/date-2024.html">date-2024.html</a>
@@ -20797,7 +20934,7 @@ config/_library-config
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-20 :: Digest – <em>(none)</em>
+2023-12-22 :: Digest – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/index.html">index.html</a>
@@ -20805,7 +20942,7 @@ config/_library-config
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-20 :: Directory – <em>(none)</em>
+2023-12-22 :: Directory – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/sitemap.html">sitemap.html</a>
@@ -20813,7 +20950,7 @@ config/_library-config
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-20 :: Mark: Main – <em>(none)</em>
+2023-12-22 :: Mark: Main – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/tags-main.html">tags-main.html</a>
@@ -20821,7 +20958,7 @@ config/_library-config
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-20 :: Mark: Tag 0 – <em>(none)</em>
+2023-12-22 :: Mark: Tag 0 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/tags-tag-0.html">tags-tag-0.html</a>
@@ -20829,7 +20966,7 @@ config/_library-config
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-20 :: Mark: Tag 1 – <em>(none)</em>
+2023-12-22 :: Mark: Tag 1 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/tags-tag-1.html">tags-tag-1.html</a>
@@ -20837,7 +20974,7 @@ config/_library-config
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-20 :: Mark: Tag 2 – <em>(none)</em>
+2023-12-22 :: Mark: Tag 2 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/tags-tag-2.html">tags-tag-2.html</a>
@@ -20845,7 +20982,7 @@ config/_library-config
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-20 :: Mark: Tag 3 – <em>(none)</em>
+2023-12-22 :: Mark: Tag 3 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/tags-tag-3.html">tags-tag-3.html</a>
@@ -20853,7 +20990,7 @@ config/_library-config
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-20 :: Mark: Tag 4 – <em>(none)</em>
+2023-12-22 :: Mark: Tag 4 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/tags-tag-4.html">tags-tag-4.html</a>
@@ -20861,7 +20998,7 @@ config/_library-config
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-20 :: Mark: Tag 5 – <em>(none)</em>
+2023-12-22 :: Mark: Tag 5 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/tags-tag-5.html">tags-tag-5.html</a>
@@ -20869,7 +21006,7 @@ config/_library-config
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-20 :: Mark: Tag 6 – <em>(none)</em>
+2023-12-22 :: Mark: Tag 6 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/tags-tag-6.html">tags-tag-6.html</a>
@@ -20877,7 +21014,7 @@ config/_library-config
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-20 :: Mark: Tag 7 – <em>(none)</em>
+2023-12-22 :: Mark: Tag 7 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/tags-tag-7.html">tags-tag-7.html</a>
@@ -20885,7 +21022,7 @@ config/_library-config
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-20 :: Mark: Tag 8 – <em>(none)</em>
+2023-12-22 :: Mark: Tag 8 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/tags-tag-8.html">tags-tag-8.html</a>
@@ -20893,7 +21030,7 @@ config/_library-config
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-20 :: Mark: Tag 9 – <em>(none)</em>
+2023-12-22 :: Mark: Tag 9 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/tags-tag-9.html">tags-tag-9.html</a>
@@ -20912,21 +21049,21 @@ config/_library-config
 </p>
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . sitemap-list config/pages -->
-<div class="accordion">
-<div class="accordion-item">
-<div id="configpages" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-configpages">
 <!-- site-header :: start >> 1 config/pages -->
 <div id="configpages">
 
 </div>
 <!-- site-header :: finish >> 1 config/pages -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-configpages" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-configpages-target">
 <h1 class="composer-header">
 config/pages
 </h1>
 </button>
 </div>
-<div id="toggle-configpages" class="accordion-collapse collapse show" data-bs-parent="#sitemap-list">
+<div id="composer-fold-configpages-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-sitemap-list">
 <div class="accordion-body">
 <!-- site-fold-begin :: finish >> 1 . sitemap-list config/pages -->
 <table class="composer-table table table-borderless align-top">
@@ -21188,21 +21325,21 @@ config/pages
 </p>
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . sitemap-list null -->
-<div class="accordion">
-<div class="accordion-item">
-<div id="null" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-null">
 <!-- site-header :: start >> 1 null -->
 <div id="null">
 
 </div>
 <!-- site-header :: finish >> 1 null -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-null" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-null-target">
 <h1 class="composer-header">
 null
 </h1>
 </button>
 </div>
-<div id="toggle-null" class="accordion-collapse collapse show" data-bs-parent="#sitemap-list">
+<div id="composer-fold-null-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-sitemap-list">
 <div class="accordion-body">
 <!-- site-fold-begin :: finish >> 1 . sitemap-list null -->
 <table class="composer-table table table-borderless align-top">
@@ -21213,7 +21350,7 @@ null
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-20 :: Default Site – Gary B. Genett
+2023-12-22 :: Default Site – Gary B. Genett
 </td>
 <td style="text-align: left;">
 <a href="../null/index.html">index.html</a>
@@ -21232,21 +21369,21 @@ null
 </p>
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . sitemap-list pandoc -->
-<div class="accordion">
-<div class="accordion-item">
-<div id="pandoc" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-pandoc">
 <!-- site-header :: start >> 1 pandoc -->
 <div id="pandoc">
 
 </div>
 <!-- site-header :: finish >> 1 pandoc -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-pandoc" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-pandoc-target">
 <h1 class="composer-header">
 pandoc
 </h1>
 </button>
 </div>
-<div id="toggle-pandoc" class="accordion-collapse collapse show" data-bs-parent="#sitemap-list">
+<div id="composer-fold-pandoc-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-sitemap-list">
 <div class="accordion-body">
 <!-- site-fold-begin :: finish >> 1 . sitemap-list pandoc -->
 <table class="composer-table table table-borderless align-top">
@@ -21332,21 +21469,21 @@ April 4, 2022 :: Pandoc User’s Guide – John MacFarlane
 </p>
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . sitemap-list pandoc/doc -->
-<div class="accordion">
-<div class="accordion-item">
-<div id="pandocdoc" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-pandocdoc">
 <!-- site-header :: start >> 1 pandoc/doc -->
 <div id="pandocdoc">
 
 </div>
 <!-- site-header :: finish >> 1 pandoc/doc -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-pandocdoc" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-pandocdoc-target">
 <h1 class="composer-header">
 pandoc/doc
 </h1>
 </button>
 </div>
-<div id="toggle-pandocdoc" class="accordion-collapse collapse show" data-bs-parent="#sitemap-list">
+<div id="composer-fold-pandocdoc-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-sitemap-list">
 <div class="accordion-body">
 <!-- site-fold-begin :: finish >> 1 . sitemap-list pandoc/doc -->
 <table class="composer-table table table-borderless align-top">
@@ -21472,21 +21609,21 @@ January 10, 2020 :: Pandoc Lua Filters – Albert Krewinkel; John MacFarlane
 </p>
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . sitemap-list themes -->
-<div class="accordion">
-<div class="accordion-item">
-<div id="themes" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-themes">
 <!-- site-header :: start >> 1 themes -->
 <div id="themes">
 
 </div>
 <!-- site-header :: finish >> 1 themes -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-themes" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-themes-target">
 <h1 class="composer-header">
 themes
 </h1>
 </button>
 </div>
-<div id="toggle-themes" class="accordion-collapse collapse show" data-bs-parent="#sitemap-list">
+<div id="composer-fold-themes-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-sitemap-list">
 <div class="accordion-body">
 <!-- site-fold-begin :: finish >> 1 . sitemap-list themes -->
 <table class="composer-table table table-borderless align-top">
@@ -21601,7 +21738,7 @@ themes
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-20 :: Themes &amp; Overlays – Gary B. Genett
+2023-12-22 :: Themes &amp; Overlays – Gary B. Genett
 </td>
 <td style="text-align: left;">
 <a href="../themes/index.html">index.html</a>
@@ -21731,7 +21868,7 @@ themes
 <!-- site-targets >> .../_library/.composer.tmp/site-cache.nav-right.html -->
 <!-- site-nav-side :: start >> right -->
 <!-- site-column-begin :: start >> right -->
-<div class="d-flex flex-column composer-sticky d-lg-sticky d-static order-lg-3 order-2 col-lg-2 col-6 d-lg-block d-block p-2">
+<div id="composer-nav-right" class="d-flex flex-column composer-scroll-lg order-lg-3 order-2 col-lg-2 col-6 d-lg-block d-block p-2">
 <!-- site-column-begin :: finish >> right -->
 <!-- site-nav-side-list :: start >> nav-right.["BEGIN"] -->
 <!-- site-nav-side-list :: finish >> nav-right.["BEGIN"] -->
@@ -21740,14 +21877,14 @@ themes
 <!-- site-fold-begin :: start >> 0 . 0 RIGHT FOLD -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="right-fold" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-RIGHTFOLD">
+<div id="composer-fold-right-fold" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-right-fold-target">
 <h6 class="composer-header">
 RIGHT FOLD
 </h6>
 </button>
 </div>
-<div id="toggle-RIGHTFOLD" class="accordion-collapse collapse show">
+<div id="composer-fold-right-fold-target" class="accordion-collapse collapse show">
 <div class="accordion-body">
 <!-- site-fold-begin :: finish >> 0 . 0 RIGHT FOLD -->
 <!-- site-nav-side-list :: finish >> nav-right.["MENU"][0] -->
@@ -21779,7 +21916,7 @@ RIGHT FOLD
 <!-- site-nav-side-list :: start >> nav-right.["TEXT"][0] -->
 <!-- site-box-begin :: start >> 0 RIGHT BOX -->
 <div class="card">
-<div id="right-box" class="card-header">
+<div id="composer-box-right-box" class="card-header">
 <h6 class="composer-header">
 RIGHT BOX
 </h6>
@@ -21807,24 +21944,24 @@ RIGHT BOX
 <!-- site-nav-side-list :: finish >> nav-right.["SPACE"] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][0] -->
-<!-- site-fold-begin :: start >> group fold-library -->
-<div id="fold-library" class="accordion">
-<!-- site-fold-begin :: finish >> group fold-library -->
+<!-- site-fold-begin :: start >> group library -->
+<div id="composer-fold-group-library" class="accordion">
+<!-- site-fold-begin :: finish >> group library -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][0] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][1] -->
-<!-- site-fold-begin :: start >> 0 0 fold-library DATES -->
+<!-- site-fold-begin :: start >> 0 0 library DATES -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="dates" class="accordion-header">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-DATES">
+<div id="composer-fold-dates" class="accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-dates-target">
 <h6 class="composer-header">
 DATES
 </h6>
 </button>
 </div>
-<div id="toggle-DATES" class="accordion-collapse collapse" data-bs-parent="#fold-library">
+<div id="composer-fold-dates-target" class="accordion-collapse collapse" data-bs-parent="#composer-fold-group-library">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 0 0 fold-library DATES -->
+<!-- site-fold-begin :: finish >> 0 0 library DATES -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][1] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][2] -->
 <!-- site-library-shelf :: start >> list date -->
@@ -21881,19 +22018,19 @@ DATES
 <!-- site-fold-end :: finish >> -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][3] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][4] -->
-<!-- site-fold-begin :: start >> 0 0 fold-library AUTHORS -->
+<!-- site-fold-begin :: start >> 0 0 library AUTHORS -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="authors" class="accordion-header">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-AUTHORS">
+<div id="composer-fold-authors" class="accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-authors-target">
 <h6 class="composer-header">
 AUTHORS
 </h6>
 </button>
 </div>
-<div id="toggle-AUTHORS" class="accordion-collapse collapse" data-bs-parent="#fold-library">
+<div id="composer-fold-authors-target" class="accordion-collapse collapse" data-bs-parent="#composer-fold-group-library">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 0 0 fold-library AUTHORS -->
+<!-- site-fold-begin :: finish >> 0 0 library AUTHORS -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][4] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][5] -->
 <!-- site-library-shelf :: start >> list author -->
@@ -21966,19 +22103,19 @@ AUTHORS
 <!-- site-fold-end :: finish >> -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][6] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][7] -->
-<!-- site-fold-begin :: start >> 0 . fold-library TAGS -->
+<!-- site-fold-begin :: start >> 0 . library TAGS -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="tags" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-TAGS">
+<div id="composer-fold-tags" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-tags-target">
 <h6 class="composer-header">
 TAGS
 </h6>
 </button>
 </div>
-<div id="toggle-TAGS" class="accordion-collapse collapse show" data-bs-parent="#fold-library">
+<div id="composer-fold-tags-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 0 . fold-library TAGS -->
+<!-- site-fold-begin :: finish >> 0 . library TAGS -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][7] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][8] -->
 <!-- site-library-shelf :: start >> list tags -->
@@ -22102,12 +22239,12 @@ TAGS
 <!-- site-targets >> .../_library/.composer.tmp/site-cache.nav-bottom.html -->
 <!-- site-nav-bottom :: start >> -->
 <!-- site-nav-begin :: start >> bottom -->
-<div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbar-fixed-bottom">
+<div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#composer-nav-bottom">
 
 </div>
 <nav class="navbar navbar-expand-lg fixed-bottom">
 <div class="container-fluid">
-<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-fixed-bottom">
+<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#composer-nav-bottom">
 <span class="navbar-toggler-icon"></span>
 </button>
 <!-- site-copyright :: start >> -->
@@ -22121,7 +22258,7 @@ TAGS
 <!-- site-icon :: finish >> copyright --> COPYRIGHT
 </p>
 <!-- site-copyright :: finish >> -->
-<div class="navbar-collapse collapse" id="navbar-fixed-bottom">
+<div class="navbar-collapse collapse" id="composer-nav-bottom">
 <!-- site-nav-begin :: finish >> bottom -->
 <ol class="composer-link nav-item breadcrumb me-auto">
 <li class="breadcrumb-item">
@@ -22164,7 +22301,7 @@ BOTTOM TEXT
 <!-- site-info-data-list :: start >> info-bottom.["INFO"][0] -->
 <p class="composer-link navbar-text me-3">
 <!-- composer >> readtime-list -->
-<em>Reading time: 1085 words, 4 minutes</em>
+<em>Reading time: 1089 words, 4 minutes</em>
 </p>
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"][0] -->
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"] -->

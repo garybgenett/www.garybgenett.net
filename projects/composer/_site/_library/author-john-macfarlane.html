@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content />
-  <meta name="dcterms.date" content="2023-12-20" />
+  <meta name="dcterms.date" content="2023-12-22" />
   <title>EXAMPLE SITE – Author: John MacFarlane</title>
   <style>
     code{white-space: pre-wrap;}
@@ -12729,11 +12729,42 @@ body {
 min-width:	100%;
 margin:	0px;
 padding:	0px;
-padding-top:	70px;
-padding-bottom:	70px;
+padding-top:	60px;
+padding-bottom:	60px;
 }
-.composer-sticky {
-max-height:	85vh;
+
+@media (min-width: 1400px) {
+.composer-scroll-xxl {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+@media (min-width: 1200px) {
+.composer-scroll-xl {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+@media (min-width: 992px) {
+.composer-scroll-lg {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+@media (min-width: 768px) {
+.composer-scroll-md {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+@media (min-width: 576px) {
+.composer-scroll-sm {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+.composer-scroll {
+max-height:	calc(100vh - 60px - 60px);
 overflow:	auto;
 }
 
@@ -12831,11 +12862,29 @@ width:	auto;
 height:	24px;
 width:	auto;
 }
-.composer-display {
+.composer-display .carousel-control-prev,
+.composer-display .carousel-control-next {
+height:	64px;
+width:	64px;
+opacity:	1;
+}
+.composer-display .carousel-control-prev-icon,
+.composer-display .carousel-control-next-icon {
+height:	32px;
+width:	32px;
+}
+.composer-display .carousel-indicators {
+margin-bottom:	2px;
+}
+.composer-display .carousel-indicators [data-bs-target] {
+height:	6px;
+width:	32px;
+}
+.composer-display-banner {
 height:	auto;
 max-width:	100%;
 }
-.composer-display-item {
+.composer-display-shelf {
 height:	auto;
 max-width:	128px;
 }
@@ -19731,18 +19780,18 @@ margin-top:	0px;
 <!-- site-targets >> .../_library/.composer.tmp/site-cache.nav-top.html -->
 <!-- site-nav-top :: start >> .../.Composer/artifacts/images/logo-v1.0.png -->
 <!-- site-nav-begin :: start >> top .../.Composer/artifacts/images/logo-v1.0.png -->
-<div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbar-fixed-top">
+<div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#composer-nav-top">
 
 </div>
 <nav class="navbar navbar-expand-lg fixed-top">
 <div class="container-fluid">
-<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-fixed-top">
+<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#composer-nav-top">
 <span class="navbar-toggler-icon"></span>
 </button>
 <!-- site-brand :: start >> .../.Composer/artifacts/images/logo-v1.0.png -->
 <a class="navbar-brand" href="http://www.garybgenett.net/projects/composer"> <img class="composer-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAc0lEQVQ4y8VTQQ7AIAgrZA/z6fwMD8vcQCDspBcN0GIrAqcXNes0w1OQpBAsLjrujVdSwm4WPF7gE+MvW0gitqM/87pyRWLl0S4hJ6nMJwDEm3l9EgDAVRrWeFb+CVZfywU4lyRWt6bgxiB1JrEc5eOfEROp5CKUZInHTAAAAABJRU5ErkJggg==">   LOGO / BRAND </a>
 <!-- site-brand :: finish >> .../.Composer/artifacts/images/logo-v1.0.png -->
-<div class="navbar-collapse collapse" id="navbar-fixed-top">
+<div class="navbar-collapse collapse" id="composer-nav-top">
 <!-- site-nav-begin :: finish >> top .../.Composer/artifacts/images/logo-v1.0.png -->
 <ul class="navbar-nav navbar-nav-scroll me-auto">
 <!-- site-nav-top-list :: start >> nav-top.["MENU"] -->
@@ -20067,7 +20116,7 @@ TOP TEXT
 <!-- site-targets >> .../_library/.composer.tmp/site-cache.nav-left.html -->
 <!-- site-nav-side :: start >> left -->
 <!-- site-column-begin :: start >> left -->
-<div class="d-flex flex-column composer-sticky d-lg-sticky d-static order-lg-1 order-1 col-lg-3 col-6 d-lg-block d-block p-2">
+<div id="composer-nav-left" class="d-flex flex-column composer-scroll-lg order-lg-1 order-1 col-lg-3 col-6 d-lg-block d-block p-2">
 <!-- site-column-begin :: finish >> left -->
 <!-- site-nav-side-list :: start >> nav-left.["BEGIN"] -->
 <!-- site-nav-side-list :: finish >> nav-left.["BEGIN"] -->
@@ -20076,14 +20125,14 @@ TOP TEXT
 <!-- site-fold-begin :: start >> 0 . 0 LEFT FOLD -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="left-fold" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-LEFTFOLD">
+<div id="composer-fold-left-fold" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-left-fold-target">
 <h6 class="composer-header">
 LEFT FOLD
 </h6>
 </button>
 </div>
-<div id="toggle-LEFTFOLD" class="accordion-collapse collapse show">
+<div id="composer-fold-left-fold-target" class="accordion-collapse collapse show">
 <div class="accordion-body">
 <!-- site-fold-begin :: finish >> 0 . 0 LEFT FOLD -->
 <!-- site-nav-side-list :: finish >> nav-left.["MENU"][0] -->
@@ -20115,7 +20164,7 @@ LEFT FOLD
 <!-- site-nav-side-list :: start >> nav-left.["TEXT"][0] -->
 <!-- site-box-begin :: start >> 0 LEFT BOX -->
 <div class="card">
-<div id="left-box" class="card-header">
+<div id="composer-box-left-box" class="card-header">
 <h6 class="composer-header">
 LEFT BOX
 </h6>
@@ -20145,7 +20194,7 @@ LEFT BOX
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][0] -->
 <!-- site-box-begin :: start >> 0 CONTENTS -->
 <div class="card">
-<div id="contents" class="card-header">
+<div id="composer-box-contents" class="card-header">
 <h6 class="composer-header">
 CONTENTS
 </h6>
@@ -20181,23 +20230,23 @@ CONTENTS
 <!-- site-nav-side :: finish >> left -->
 <!-- site-targets >> .../_library/.composer.tmp/site-cache.column-begin.html -->
 <!-- site-column-begin :: start >> center -->
-<div class="d-flex flex-column composer-sticky d-lg-sticky d-static order-lg-2 order-3 col-lg-7 col-12 d-lg-block d-block p-2">
+<div id="composer-nav-center" class="d-flex flex-column composer-scroll-lg order-lg-2 order-3 col-lg-7 col-12 d-lg-block d-block p-2">
 <!-- site-column-begin :: finish >> center -->
 <!-- site-targets >> .../_library.md.cms -->
 <!-- site-file :: start >> .../_library.md.cms -->
-<!-- site-box-begin :: start >> 0 #WORKING:DOCS -->
+<!-- site-box-begin :: start >> 0 #WORK -->
 <div class="card">
-<div id="workingdocs" class="card-header">
+<div id="composer-box-work" class="card-header">
 <h6 class="composer-header">
-#WORKING:DOCS
+#WORK
 </h6>
 </div>
 <div class="card-body">
-<!-- site-box-begin :: finish >> 0 #WORKING:DOCS -->
+<!-- site-box-begin :: finish >> 0 #WORK -->
 <dl>
-<dt>#WORKING:DOCS</dt>
+<dt>#WORK</dt>
 <dd>
-<code>_library/index-include.md.cms</code>
+<p><code>_library/index-include.md.cms</code></p>
 </dd>
 <dd>
 <code>_library/sitemap-include.md.cms</code>
@@ -20219,24 +20268,24 @@ CONTENTS
 <!-- site-targets >> author-john-macfarlane.md -->
 <!-- site-file :: start >> author-john-macfarlane.md -->
 <!-- site-fold-begin :: start >> group library-digest -->
-<div id="library-digest" class="accordion">
+<div id="composer-fold-group-library-digest" class="accordion">
 <!-- site-fold-begin :: finish >> group library-digest -->
 <!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: The pandoc family of libraries&#0000; -- John MacFarlane -->
-<div class="accordion">
-<div class="accordion-item">
-<div id="none--the-pandoc-family-of-libraries0000----john-macfarlane" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-noneThepandocfamilyoflibraries0000--JohnMacFarlane">
 <!-- site-header :: start >> 1 *(none)* :: The pandoc family of libraries&#0000; -- John MacFarlane -->
 <div id="none--the-pandoc-family-of-libraries0000----john-macfarlane">
 
 </div>
 <!-- site-header :: finish >> 1 *(none)* :: The pandoc family of libraries&#0000; -- John MacFarlane -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-none--the-pandoc-family-of-libraries0000----john-macfarlane" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-none--the-pandoc-family-of-libraries0000----john-macfarlane-target">
 <h1 class="composer-header">
 <em>(none)</em> :: The pandoc family of libraries  – John MacFarlane
 </h1>
 </button>
 </div>
-<div id="toggle-noneThepandocfamilyoflibraries0000--JohnMacFarlane" class="accordion-collapse collapse show" data-bs-parent="#library-digest">
+<div id="composer-fold-none--the-pandoc-family-of-libraries0000----john-macfarlane-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
 <div class="accordion-body">
 <!-- site-fold-begin :: finish >> 1 . library-digest *(none)* :: The pandoc family of libraries&#0000; -- John MacFarlane -->
 <p>The following Haskell libraries have been developed to support pandoc:</p>
@@ -20303,21 +20352,21 @@ Support for parsing Jira wiki syntax.
 </p>
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest November 21, 2021 :: Creating Custom Pandoc Writers in Lua&#0000; -- John MacFarlane -->
-<div class="accordion">
-<div class="accordion-item">
-<div id="november-21-2021--creating-custom-pandoc-writers-in-lua0000----john-macfarlane" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-November212021CreatingCustomPandocWritersinLua0000--JohnMacFarlane">
 <!-- site-header :: start >> 1 November 21, 2021 :: Creating Custom Pandoc Writers in Lua&#0000; -- John MacFarlane -->
 <div id="november-21-2021--creating-custom-pandoc-writers-in-lua0000----john-macfarlane">
 
 </div>
 <!-- site-header :: finish >> 1 November 21, 2021 :: Creating Custom Pandoc Writers in Lua&#0000; -- John MacFarlane -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-november-21-2021--creating-custom-pandoc-writers-in-lua0000----john-macfarlane" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-november-21-2021--creating-custom-pandoc-writers-in-lua0000----john-macfarlane-target">
 <h1 class="composer-header">
 November 21, 2021 :: Creating Custom Pandoc Writers in Lua  – John MacFarlane
 </h1>
 </button>
 </div>
-<div id="toggle-November212021CreatingCustomPandocWritersinLua0000--JohnMacFarlane" class="accordion-collapse collapse show" data-bs-parent="#library-digest">
+<div id="composer-fold-november-21-2021--creating-custom-pandoc-writers-in-lua0000----john-macfarlane-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
 <div class="accordion-body">
 <!-- site-fold-begin :: finish >> 1 . library-digest November 21, 2021 :: Creating Custom Pandoc Writers in Lua&#0000; -- John MacFarlane -->
 <section id="introduction" class="level1">
@@ -20348,21 +20397,21 @@ November 21, 2021 :: Creating Custom Pandoc Writers in Lua  – John MacFarlane
 </p>
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest November 18, 2021 :: Creating Custom Pandoc Readers in Lua&#0000; -- John MacFarlane -->
-<div class="accordion">
-<div class="accordion-item">
-<div id="november-18-2021--creating-custom-pandoc-readers-in-lua0000----john-macfarlane" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-November182021CreatingCustomPandocReadersinLua0000--JohnMacFarlane">
 <!-- site-header :: start >> 1 November 18, 2021 :: Creating Custom Pandoc Readers in Lua&#0000; -- John MacFarlane -->
 <div id="november-18-2021--creating-custom-pandoc-readers-in-lua0000----john-macfarlane">
 
 </div>
 <!-- site-header :: finish >> 1 November 18, 2021 :: Creating Custom Pandoc Readers in Lua&#0000; -- John MacFarlane -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-november-18-2021--creating-custom-pandoc-readers-in-lua0000----john-macfarlane" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-november-18-2021--creating-custom-pandoc-readers-in-lua0000----john-macfarlane-target">
 <h1 class="composer-header">
 November 18, 2021 :: Creating Custom Pandoc Readers in Lua  – John MacFarlane
 </h1>
 </button>
 </div>
-<div id="toggle-November182021CreatingCustomPandocReadersinLua0000--JohnMacFarlane" class="accordion-collapse collapse show" data-bs-parent="#library-digest">
+<div id="composer-fold-november-18-2021--creating-custom-pandoc-readers-in-lua0000----john-macfarlane-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
 <div class="accordion-body">
 <!-- site-fold-begin :: finish >> 1 . library-digest November 18, 2021 :: Creating Custom Pandoc Readers in Lua&#0000; -- John MacFarlane -->
 <section id="introduction-1" class="level1">
@@ -20389,21 +20438,21 @@ November 18, 2021 :: Creating Custom Pandoc Readers in Lua  – John MacFarlane
 </p>
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest January 10, 2020 :: Pandoc Lua Filters&#0000; -- Albert Krewinkel; John MacFarlane -->
-<div class="accordion">
-<div class="accordion-item">
-<div id="january-10-2020--pandoc-lua-filters0000----albert-krewinkel-john-macfarlane" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-January102020PandocLuaFilters0000--AlbertKrewinkelJohnMacFarlane">
 <!-- site-header :: start >> 1 January 10, 2020 :: Pandoc Lua Filters&#0000; -- Albert Krewinkel; John MacFarlane -->
 <div id="january-10-2020--pandoc-lua-filters0000----albert-krewinkel-john-macfarlane">
 
 </div>
 <!-- site-header :: finish >> 1 January 10, 2020 :: Pandoc Lua Filters&#0000; -- Albert Krewinkel; John MacFarlane -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-january-10-2020--pandoc-lua-filters0000----albert-krewinkel-john-macfarlane" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-january-10-2020--pandoc-lua-filters0000----albert-krewinkel-john-macfarlane-target">
 <h1 class="composer-header">
 January 10, 2020 :: Pandoc Lua Filters  – Albert Krewinkel; John MacFarlane
 </h1>
 </button>
 </div>
-<div id="toggle-January102020PandocLuaFilters0000--AlbertKrewinkelJohnMacFarlane" class="accordion-collapse collapse show" data-bs-parent="#library-digest">
+<div id="composer-fold-january-10-2020--pandoc-lua-filters0000----albert-krewinkel-john-macfarlane-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
 <div class="accordion-body">
 <!-- site-fold-begin :: finish >> 1 . library-digest January 10, 2020 :: Pandoc Lua Filters&#0000; -- Albert Krewinkel; John MacFarlane -->
 <section id="introduction-2" class="level1">
@@ -20425,21 +20474,21 @@ January 10, 2020 :: Pandoc Lua Filters  – Albert Krewinkel; John MacFarlane
 </p>
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: Getting started with pandoc&#0000; -- John MacFarlane -->
-<div class="accordion">
-<div class="accordion-item">
-<div id="none--getting-started-with-pandoc0000----john-macfarlane" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-noneGettingstartedwithpandoc0000--JohnMacFarlane">
 <!-- site-header :: start >> 1 *(none)* :: Getting started with pandoc&#0000; -- John MacFarlane -->
 <div id="none--getting-started-with-pandoc0000----john-macfarlane">
 
 </div>
 <!-- site-header :: finish >> 1 *(none)* :: Getting started with pandoc&#0000; -- John MacFarlane -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-none--getting-started-with-pandoc0000----john-macfarlane" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-none--getting-started-with-pandoc0000----john-macfarlane-target">
 <h1 class="composer-header">
 <em>(none)</em> :: Getting started with pandoc  – John MacFarlane
 </h1>
 </button>
 </div>
-<div id="toggle-noneGettingstartedwithpandoc0000--JohnMacFarlane" class="accordion-collapse collapse show" data-bs-parent="#library-digest">
+<div id="composer-fold-none--getting-started-with-pandoc0000----john-macfarlane-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
 <div class="accordion-body">
 <!-- site-fold-begin :: finish >> 1 . library-digest *(none)* :: Getting started with pandoc&#0000; -- John MacFarlane -->
 <p>This document is for people who are unfamiliar with command line tools. Command-line experts can go straight to the <a href="https://pandoc.org/MANUAL.html">User’s Guide</a> or the pandoc man page.</p>
@@ -20475,21 +20524,21 @@ January 10, 2020 :: Pandoc Lua Filters  – Albert Krewinkel; John MacFarlane
 </p>
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: Customizing Pandoc&#0000; -- Mauro Bieg; John MacFarlane -->
-<div class="accordion">
-<div class="accordion-item">
-<div id="none--customizing-pandoc0000----mauro-bieg-john-macfarlane" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-noneCustomizingPandoc0000--MauroBiegJohnMacFarlane">
 <!-- site-header :: start >> 1 *(none)* :: Customizing Pandoc&#0000; -- Mauro Bieg; John MacFarlane -->
 <div id="none--customizing-pandoc0000----mauro-bieg-john-macfarlane">
 
 </div>
 <!-- site-header :: finish >> 1 *(none)* :: Customizing Pandoc&#0000; -- Mauro Bieg; John MacFarlane -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-none--customizing-pandoc0000----mauro-bieg-john-macfarlane" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-none--customizing-pandoc0000----mauro-bieg-john-macfarlane-target">
 <h1 class="composer-header">
 <em>(none)</em> :: Customizing Pandoc  – Mauro Bieg; John MacFarlane
 </h1>
 </button>
 </div>
-<div id="toggle-noneCustomizingPandoc0000--MauroBiegJohnMacFarlane" class="accordion-collapse collapse show" data-bs-parent="#library-digest">
+<div id="composer-fold-none--customizing-pandoc0000----mauro-bieg-john-macfarlane-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
 <div class="accordion-body">
 <!-- site-fold-begin :: finish >> 1 . library-digest *(none)* :: Customizing Pandoc&#0000; -- Mauro Bieg; John MacFarlane -->
 <p>This document provides a quick overview over the various ways to customize pandoc’s output, with links to fuller documentation and some examples.</p>
@@ -20512,21 +20561,21 @@ January 10, 2020 :: Pandoc Lua Filters  – Albert Krewinkel; John MacFarlane
 </p>
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: Creating an ebook with pandoc&#0000; -- John MacFarlane -->
-<div class="accordion">
-<div class="accordion-item">
-<div id="none--creating-an-ebook-with-pandoc0000----john-macfarlane" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-noneCreatinganebookwithpandoc0000--JohnMacFarlane">
 <!-- site-header :: start >> 1 *(none)* :: Creating an ebook with pandoc&#0000; -- John MacFarlane -->
 <div id="none--creating-an-ebook-with-pandoc0000----john-macfarlane">
 
 </div>
 <!-- site-header :: finish >> 1 *(none)* :: Creating an ebook with pandoc&#0000; -- John MacFarlane -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-none--creating-an-ebook-with-pandoc0000----john-macfarlane" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-none--creating-an-ebook-with-pandoc0000----john-macfarlane-target">
 <h1 class="composer-header">
 <em>(none)</em> :: Creating an ebook with pandoc  – John MacFarlane
 </h1>
 </button>
 </div>
-<div id="toggle-noneCreatinganebookwithpandoc0000--JohnMacFarlane" class="accordion-collapse collapse show" data-bs-parent="#library-digest">
+<div id="composer-fold-none--creating-an-ebook-with-pandoc0000----john-macfarlane-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
 <div class="accordion-body">
 <!-- site-fold-begin :: finish >> 1 . library-digest *(none)* :: Creating an ebook with pandoc&#0000; -- John MacFarlane -->
 <p>Starting with version 1.6, pandoc can produce output in the <a href="https://en.wikipedia.org/wiki/EPUB">EPUB</a> electronic book format. EPUB books can be viewed on iPads, Nooks, and other electronic book readers, including many smart phones. (They can also be converted to Kindle books using the GUI only <a href="https://www.amazon.com/Kindle-Previewer/b?node=21381691011">KindlePreviewer</a> on Windows and Mac OSX. <a href="https://www.amazon.com/gp/feature.html?docId=1000765211">KindleGen</a> – which offers a command line interface and supports <a href="https://archive.org/details/kindlegen2.9">Linux</a>, <a href="https://web.archive.org/web/20190905040839/https://www.amazon.com/gp/feature.html?ie=UTF8&amp;docId=1000765211">Mac OSX</a> and <a href="https://archive.org/details/kindlegen_win32_v2_9">Windows</a> – has been deprecated, but binaries can still be found on the internet.)</p>
@@ -20560,21 +20609,21 @@ Chapter two has just begun.</code></pre>
 </p>
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest April 4, 2022 :: Pandoc User's Guide&#0000; -- John MacFarlane -->
-<div class="accordion">
-<div class="accordion-item">
-<div id="april-4-2022--pandoc-users-guide0000----john-macfarlane" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-April42022PandocUsersGuide0000--JohnMacFarlane">
 <!-- site-header :: start >> 1 April 4, 2022 :: Pandoc User's Guide&#0000; -- John MacFarlane -->
 <div id="april-4-2022--pandoc-users-guide0000----john-macfarlane">
 
 </div>
 <!-- site-header :: finish >> 1 April 4, 2022 :: Pandoc User's Guide&#0000; -- John MacFarlane -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-april-4-2022--pandoc-users-guide0000----john-macfarlane" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-april-4-2022--pandoc-users-guide0000----john-macfarlane-target">
 <h1 class="composer-header">
 April 4, 2022 :: Pandoc User’s Guide  – John MacFarlane
 </h1>
 </button>
 </div>
-<div id="toggle-April42022PandocUsersGuide0000--JohnMacFarlane" class="accordion-collapse collapse show" data-bs-parent="#library-digest">
+<div id="composer-fold-april-4-2022--pandoc-users-guide0000----john-macfarlane-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
 <div class="accordion-body">
 <!-- site-fold-begin :: finish >> 1 . library-digest April 4, 2022 :: Pandoc User's Guide&#0000; -- John MacFarlane -->
 <section id="synopsis" class="level1">
@@ -20606,7 +20655,7 @@ April 4, 2022 :: Pandoc User’s Guide  – John MacFarlane
 <!-- site-targets >> .../_library/.composer.tmp/site-cache.nav-right.html -->
 <!-- site-nav-side :: start >> right -->
 <!-- site-column-begin :: start >> right -->
-<div class="d-flex flex-column composer-sticky d-lg-sticky d-static order-lg-3 order-2 col-lg-2 col-6 d-lg-block d-block p-2">
+<div id="composer-nav-right" class="d-flex flex-column composer-scroll-lg order-lg-3 order-2 col-lg-2 col-6 d-lg-block d-block p-2">
 <!-- site-column-begin :: finish >> right -->
 <!-- site-nav-side-list :: start >> nav-right.["BEGIN"] -->
 <!-- site-nav-side-list :: finish >> nav-right.["BEGIN"] -->
@@ -20615,14 +20664,14 @@ April 4, 2022 :: Pandoc User’s Guide  – John MacFarlane
 <!-- site-fold-begin :: start >> 0 . 0 RIGHT FOLD -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="right-fold" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-RIGHTFOLD">
+<div id="composer-fold-right-fold" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-right-fold-target">
 <h6 class="composer-header">
 RIGHT FOLD
 </h6>
 </button>
 </div>
-<div id="toggle-RIGHTFOLD" class="accordion-collapse collapse show">
+<div id="composer-fold-right-fold-target" class="accordion-collapse collapse show">
 <div class="accordion-body">
 <!-- site-fold-begin :: finish >> 0 . 0 RIGHT FOLD -->
 <!-- site-nav-side-list :: finish >> nav-right.["MENU"][0] -->
@@ -20654,7 +20703,7 @@ RIGHT FOLD
 <!-- site-nav-side-list :: start >> nav-right.["TEXT"][0] -->
 <!-- site-box-begin :: start >> 0 RIGHT BOX -->
 <div class="card">
-<div id="right-box" class="card-header">
+<div id="composer-box-right-box" class="card-header">
 <h6 class="composer-header">
 RIGHT BOX
 </h6>
@@ -20682,24 +20731,24 @@ RIGHT BOX
 <!-- site-nav-side-list :: finish >> nav-right.["SPACE"] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][0] -->
-<!-- site-fold-begin :: start >> group fold-library -->
-<div id="fold-library" class="accordion">
-<!-- site-fold-begin :: finish >> group fold-library -->
+<!-- site-fold-begin :: start >> group library -->
+<div id="composer-fold-group-library" class="accordion">
+<!-- site-fold-begin :: finish >> group library -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][0] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][1] -->
-<!-- site-fold-begin :: start >> 0 0 fold-library DATES -->
+<!-- site-fold-begin :: start >> 0 0 library DATES -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="dates" class="accordion-header">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-DATES">
+<div id="composer-fold-dates" class="accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-dates-target">
 <h6 class="composer-header">
 DATES
 </h6>
 </button>
 </div>
-<div id="toggle-DATES" class="accordion-collapse collapse" data-bs-parent="#fold-library">
+<div id="composer-fold-dates-target" class="accordion-collapse collapse" data-bs-parent="#composer-fold-group-library">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 0 0 fold-library DATES -->
+<!-- site-fold-begin :: finish >> 0 0 library DATES -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][1] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][2] -->
 <!-- site-library-shelf :: start >> list date -->
@@ -20756,19 +20805,19 @@ DATES
 <!-- site-fold-end :: finish >> -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][3] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][4] -->
-<!-- site-fold-begin :: start >> 0 0 fold-library AUTHORS -->
+<!-- site-fold-begin :: start >> 0 0 library AUTHORS -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="authors" class="accordion-header">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-AUTHORS">
+<div id="composer-fold-authors" class="accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-authors-target">
 <h6 class="composer-header">
 AUTHORS
 </h6>
 </button>
 </div>
-<div id="toggle-AUTHORS" class="accordion-collapse collapse" data-bs-parent="#fold-library">
+<div id="composer-fold-authors-target" class="accordion-collapse collapse" data-bs-parent="#composer-fold-group-library">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 0 0 fold-library AUTHORS -->
+<!-- site-fold-begin :: finish >> 0 0 library AUTHORS -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][4] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][5] -->
 <!-- site-library-shelf :: start >> list author -->
@@ -20841,19 +20890,19 @@ AUTHORS
 <!-- site-fold-end :: finish >> -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][6] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][7] -->
-<!-- site-fold-begin :: start >> 0 . fold-library TAGS -->
+<!-- site-fold-begin :: start >> 0 . library TAGS -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="tags" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-TAGS">
+<div id="composer-fold-tags" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-tags-target">
 <h6 class="composer-header">
 TAGS
 </h6>
 </button>
 </div>
-<div id="toggle-TAGS" class="accordion-collapse collapse show" data-bs-parent="#fold-library">
+<div id="composer-fold-tags-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 0 . fold-library TAGS -->
+<!-- site-fold-begin :: finish >> 0 . library TAGS -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][7] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][8] -->
 <!-- site-library-shelf :: start >> list tags -->
@@ -20977,12 +21026,12 @@ TAGS
 <!-- site-targets >> .../_library/.composer.tmp/site-cache.nav-bottom.html -->
 <!-- site-nav-bottom :: start >> -->
 <!-- site-nav-begin :: start >> bottom -->
-<div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbar-fixed-bottom">
+<div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#composer-nav-bottom">
 
 </div>
 <nav class="navbar navbar-expand-lg fixed-bottom">
 <div class="container-fluid">
-<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-fixed-bottom">
+<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#composer-nav-bottom">
 <span class="navbar-toggler-icon"></span>
 </button>
 <!-- site-copyright :: start >> -->
@@ -20996,7 +21045,7 @@ TAGS
 <!-- site-icon :: finish >> copyright --> COPYRIGHT
 </p>
 <!-- site-copyright :: finish >> -->
-<div class="navbar-collapse collapse" id="navbar-fixed-bottom">
+<div class="navbar-collapse collapse" id="composer-nav-bottom">
 <!-- site-nav-begin :: finish >> bottom -->
 <ol class="composer-link nav-item breadcrumb me-auto">
 <li class="breadcrumb-item">

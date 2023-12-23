@@ -1,4 +1,4 @@
-override COMPOSER_INCLUDE := 1
+override COMPOSER_INCLUDE := 
 override COMPOSER_DEPENDS := 
 override COMPOSER_KEEPING := 100
 override COMPOSER_LOG := .composer.log

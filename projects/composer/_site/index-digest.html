@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Gary B. Genett" />
-  <meta name="dcterms.date" content="2023-12-20" />
+  <meta name="dcterms.date" content="2023-12-22" />
   <title>EXAMPLE SITE – Latest Updates</title>
   <style>
     code{white-space: pre-wrap;}
@@ -12729,11 +12729,42 @@ body {
 min-width:	100%;
 margin:	0px;
 padding:	0px;
-padding-top:	70px;
-padding-bottom:	70px;
+padding-top:	60px;
+padding-bottom:	60px;
 }
-.composer-sticky {
-max-height:	85vh;
+
+@media (min-width: 1400px) {
+.composer-scroll-xxl {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+@media (min-width: 1200px) {
+.composer-scroll-xl {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+@media (min-width: 992px) {
+.composer-scroll-lg {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+@media (min-width: 768px) {
+.composer-scroll-md {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+@media (min-width: 576px) {
+.composer-scroll-sm {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+.composer-scroll {
+max-height:	calc(100vh - 60px - 60px);
 overflow:	auto;
 }
 
@@ -12831,11 +12862,29 @@ width:	auto;
 height:	24px;
 width:	auto;
 }
-.composer-display {
+.composer-display .carousel-control-prev,
+.composer-display .carousel-control-next {
+height:	64px;
+width:	64px;
+opacity:	1;
+}
+.composer-display .carousel-control-prev-icon,
+.composer-display .carousel-control-next-icon {
+height:	32px;
+width:	32px;
+}
+.composer-display .carousel-indicators {
+margin-bottom:	2px;
+}
+.composer-display .carousel-indicators [data-bs-target] {
+height:	6px;
+width:	32px;
+}
+.composer-display-banner {
 height:	auto;
 max-width:	100%;
 }
-.composer-display-item {
+.composer-display-shelf {
 height:	auto;
 max-width:	128px;
 }
@@ -19728,21 +19777,21 @@ margin-top:	0px;
   </script>
 </head>
 <body>
-<!-- site-targets >> .../.composer.tmp/site-cache-index-digest.html.nav-top.html -->
+<!-- site-targets >> .../.composer.tmp/site-cache.index-digest.html.nav-top.html -->
 <!-- site-nav-top :: start >> .../.Composer/artifacts/images/logo-v1.0.png -->
 <!-- site-nav-begin :: start >> top .../.Composer/artifacts/images/logo-v1.0.png -->
-<div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbar-fixed-top">
+<div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#composer-nav-top">
 
 </div>
 <nav class="navbar navbar-expand-lg fixed-top">
 <div class="container-fluid">
-<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-fixed-top">
+<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#composer-nav-top">
 <span class="navbar-toggler-icon"></span>
 </button>
 <!-- site-brand :: start >> .../.Composer/artifacts/images/logo-v1.0.png -->
 <a class="navbar-brand" href="http://www.garybgenett.net/projects/composer"> <img class="composer-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAc0lEQVQ4y8VTQQ7AIAgrZA/z6fwMD8vcQCDspBcN0GIrAqcXNes0w1OQpBAsLjrujVdSwm4WPF7gE+MvW0gitqM/87pyRWLl0S4hJ6nMJwDEm3l9EgDAVRrWeFb+CVZfywU4lyRWt6bgxiB1JrEc5eOfEROp5CKUZInHTAAAAABJRU5ErkJggg==">   LOGO / BRAND </a>
 <!-- site-brand :: finish >> .../.Composer/artifacts/images/logo-v1.0.png -->
-<div class="navbar-collapse collapse" id="navbar-fixed-top">
+<div class="navbar-collapse collapse" id="composer-nav-top">
 <!-- site-nav-begin :: finish >> top .../.Composer/artifacts/images/logo-v1.0.png -->
 <ul class="navbar-nav navbar-nav-scroll me-auto">
 <!-- site-nav-top-list :: start >> nav-top.["MENU"] -->
@@ -19855,34 +19904,34 @@ margin-top:	0px;
 <!-- site-nav-top-list :: start >> nav-top.["CONTENTS"][0].["CONTENTS"][0] -->
 <!-- composer >> contents-menu 0 -->
 <li>
+<a href="#none--z-index0000----none" class="dropdown-item"><em>(none)</em> :: Z-index</a>
+</li>
+<li>
 <a href="#none--webpack-and-bundlers0000----none" class="dropdown-item"><em>(none)</em> :: Webpack and bundlers</a>
 </li>
 <li>
-<a href="#none--the-pandoc-family-of-libraries0000----john-macfarlane" class="dropdown-item"><em>(none)</em> :: The pandoc family of libraries</a>
+<a href="#none--visually-hidden0000----none" class="dropdown-item"><em>(none)</em> :: Visually hidden</a>
 </li>
 <li>
-<a href="#none--rtl0000----none" class="dropdown-item"><em>(none)</em> :: RTL</a>
+<a href="#none--visibility0000----none" class="dropdown-item"><em>(none)</em> :: Visibility</a>
 </li>
 <li>
-<a href="#none--rfs0000----none" class="dropdown-item"><em>(none)</em> :: RFS</a>
+<a href="#none--vertical-rule0000----none" class="dropdown-item"><em>(none)</em> :: Vertical rule</a>
 </li>
 <li>
-<a href="#none--parcel0000----none" class="dropdown-item"><em>(none)</em> :: Parcel</a>
+<a href="#none--vertical-alignment0000----none" class="dropdown-item"><em>(none)</em> :: Vertical alignment</a>
 </li>
 <li>
-<a href="#none--org-mode-features-and-differences0000----albert-krewinkel" class="dropdown-item"><em>(none)</em> :: Org-mode features and differences</a>
+<a href="#none--versions0000----none" class="dropdown-item"><em>(none)</em> :: Versions</a>
 </li>
 <li>
-<a href="#november-21-2021--creating-custom-pandoc-writers-in-lua0000----john-macfarlane" class="dropdown-item">November 21, 2021 :: Creating Custom Pandoc Writers in Lua</a>
+<a href="#none--validation0000----none" class="dropdown-item"><em>(none)</em> :: Validation</a>
 </li>
 <li>
-<a href="#november-18-2021--creating-custom-pandoc-readers-in-lua0000----john-macfarlane" class="dropdown-item">November 18, 2021 :: Creating Custom Pandoc Readers in Lua</a>
+<a href="#none--utility-api0000----none" class="dropdown-item"><em>(none)</em> :: Utility API</a>
 </li>
 <li>
-<a href="#none--javascript0000----none" class="dropdown-item"><em>(none)</em> :: JavaScript</a>
-</li>
-<li>
-<a href="#january-10-2020--pandoc-lua-filters0000----albert-krewinkel-john-macfarlane" class="dropdown-item">January 10, 2020 :: Pandoc Lua Filters</a>
+<a href="#none--utilities-for-layout0000----none" class="dropdown-item"><em>(none)</em> :: Utilities for layout</a>
 </li>
 <!-- site-nav-top-list :: finish >> nav-top.["CONTENTS"][0].["CONTENTS"][0] -->
 <!-- site-nav-top-list :: finish >> nav-top.["CONTENTS"][0].["CONTENTS"] -->
@@ -20065,15 +20114,15 @@ TOP TEXT
 </nav>
 <!-- site-nav-end :: finish >> top -->
 <!-- site-nav-top :: finish >> .../.Composer/artifacts/images/logo-v1.0.png -->
-<!-- site-targets >> .../.composer.tmp/site-cache-index-digest.html.row-begin.html -->
+<!-- site-targets >> .../.composer.tmp/site-cache.index-digest.html.row-begin.html -->
 <!-- site-row-begin :: start >> -->
 <div class="container-fluid">
 <div class="d-flex flex-row flex-wrap">
 <!-- site-row-begin :: finish >> -->
-<!-- site-targets >> .../.composer.tmp/site-cache-index-digest.html.nav-left.html -->
+<!-- site-targets >> .../.composer.tmp/site-cache.index-digest.html.nav-left.html -->
 <!-- site-nav-side :: start >> left -->
 <!-- site-column-begin :: start >> left -->
-<div class="d-flex flex-column composer-sticky d-lg-sticky d-static order-lg-1 order-1 col-lg-3 col-6 d-lg-block d-block p-2">
+<div id="composer-nav-left" class="d-flex flex-column composer-scroll-lg order-lg-1 order-1 col-lg-3 col-6 d-lg-block d-block p-2">
 <!-- site-column-begin :: finish >> left -->
 <!-- site-nav-side-list :: start >> nav-left.["BEGIN"] -->
 <!-- site-nav-side-list :: finish >> nav-left.["BEGIN"] -->
@@ -20082,14 +20131,14 @@ TOP TEXT
 <!-- site-fold-begin :: start >> 0 . 0 LEFT FOLD -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="left-fold" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-LEFTFOLD">
+<div id="composer-fold-left-fold" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-left-fold-target">
 <h6 class="composer-header">
 LEFT FOLD
 </h6>
 </button>
 </div>
-<div id="toggle-LEFTFOLD" class="accordion-collapse collapse show">
+<div id="composer-fold-left-fold-target" class="accordion-collapse collapse show">
 <div class="accordion-body">
 <!-- site-fold-begin :: finish >> 0 . 0 LEFT FOLD -->
 <!-- site-nav-side-list :: finish >> nav-left.["MENU"][0] -->
@@ -20121,7 +20170,7 @@ LEFT FOLD
 <!-- site-nav-side-list :: start >> nav-left.["TEXT"][0] -->
 <!-- site-box-begin :: start >> 0 LEFT BOX -->
 <div class="card">
-<div id="left-box" class="card-header">
+<div id="composer-box-left-box" class="card-header">
 <h6 class="composer-header">
 LEFT BOX
 </h6>
@@ -20151,7 +20200,7 @@ LEFT BOX
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][0] -->
 <!-- site-box-begin :: start >> 0 CONTENTS -->
 <div class="card">
-<div id="contents" class="card-header">
+<div id="composer-box-contents" class="card-header">
 <h6 class="composer-header">
 CONTENTS
 </h6>
@@ -20162,16 +20211,16 @@ CONTENTS
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][1] -->
 <!-- composer >> contents-list 0 -->
 <ul>
+<li><a href="#none--z-index0000----none"><em>(none)</em> :: Z-index</a></li>
 <li><a href="#none--webpack-and-bundlers0000----none"><em>(none)</em> :: Webpack and bundlers</a></li>
-<li><a href="#none--the-pandoc-family-of-libraries0000----john-macfarlane"><em>(none)</em> :: The pandoc family of libraries</a></li>
-<li><a href="#none--rtl0000----none"><em>(none)</em> :: RTL</a></li>
-<li><a href="#none--rfs0000----none"><em>(none)</em> :: RFS</a></li>
-<li><a href="#none--parcel0000----none"><em>(none)</em> :: Parcel</a></li>
-<li><a href="#none--org-mode-features-and-differences0000----albert-krewinkel"><em>(none)</em> :: Org-mode features and differences</a></li>
-<li><a href="#november-21-2021--creating-custom-pandoc-writers-in-lua0000----john-macfarlane">November 21, 2021 :: Creating Custom Pandoc Writers in Lua</a></li>
-<li><a href="#november-18-2021--creating-custom-pandoc-readers-in-lua0000----john-macfarlane">November 18, 2021 :: Creating Custom Pandoc Readers in Lua</a></li>
-<li><a href="#none--javascript0000----none"><em>(none)</em> :: JavaScript</a></li>
-<li><a href="#january-10-2020--pandoc-lua-filters0000----albert-krewinkel-john-macfarlane">January 10, 2020 :: Pandoc Lua Filters</a></li>
+<li><a href="#none--visually-hidden0000----none"><em>(none)</em> :: Visually hidden</a></li>
+<li><a href="#none--visibility0000----none"><em>(none)</em> :: Visibility</a></li>
+<li><a href="#none--vertical-rule0000----none"><em>(none)</em> :: Vertical rule</a></li>
+<li><a href="#none--vertical-alignment0000----none"><em>(none)</em> :: Vertical alignment</a></li>
+<li><a href="#none--versions0000----none"><em>(none)</em> :: Versions</a></li>
+<li><a href="#none--validation0000----none"><em>(none)</em> :: Validation</a></li>
+<li><a href="#none--utility-api0000----none"><em>(none)</em> :: Utility API</a></li>
+<li><a href="#none--utilities-for-layout0000----none"><em>(none)</em> :: Utilities for layout</a></li>
 </ul>
 <!-- site-nav-side-list :: finish >> nav-left.["CONTENTS"][1] -->
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][2] -->
@@ -20187,25 +20236,25 @@ CONTENTS
 </div>
 <!-- site-column-end :: finish >> -->
 <!-- site-nav-side :: finish >> left -->
-<!-- site-targets >> .../.composer.tmp/site-cache-index-digest.html.column-begin.html -->
+<!-- site-targets >> .../.composer.tmp/site-cache.index-digest.html.column-begin.html -->
 <!-- site-column-begin :: start >> center -->
-<div class="d-flex flex-column composer-sticky d-lg-sticky d-static order-lg-2 order-3 col-lg-7 col-12 d-lg-block d-block p-2">
+<div id="composer-nav-center" class="d-flex flex-column composer-scroll-lg order-lg-2 order-3 col-lg-7 col-12 d-lg-block d-block p-2">
 <!-- site-column-begin :: finish >> center -->
 <!-- site-targets >> .../_library.md.cms -->
 <!-- site-file :: start >> .../_library.md.cms -->
-<!-- site-box-begin :: start >> 0 #WORKING:DOCS -->
+<!-- site-box-begin :: start >> 0 #WORK -->
 <div class="card">
-<div id="workingdocs" class="card-header">
+<div id="composer-box-work" class="card-header">
 <h6 class="composer-header">
-#WORKING:DOCS
+#WORK
 </h6>
 </div>
 <div class="card-body">
-<!-- site-box-begin :: finish >> 0 #WORKING:DOCS -->
+<!-- site-box-begin :: finish >> 0 #WORK -->
 <dl>
-<dt>#WORKING:DOCS</dt>
+<dt>#WORK</dt>
 <dd>
-<code>_library/index-include.md.cms</code>
+<p><code>_library/index-include.md.cms</code></p>
 </dd>
 <dd>
 <code>_library/sitemap-include.md.cms</code>
@@ -20228,24 +20277,59 @@ CONTENTS
 <!-- site-file :: start >> index-digest.md -->
 <!-- site-file :: start >> ./_library/index-include.md.cms -->
 <!-- site-fold-begin :: start >> group library-digest -->
-<div id="library-digest" class="accordion">
+<div id="composer-fold-group-library-digest" class="accordion">
 <!-- site-fold-begin :: finish >> group library-digest -->
-<!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: Webpack and bundlers&#0000; -- *(none)* -->
+<!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: Z-index&#0000; -- *(none)* -->
+<!-- site-header :: start >> 1 *(none)* :: Z-index&#0000; -- *(none)* -->
+<div id="none--z-index0000----none">
+
+</div>
+<!-- site-header :: finish >> 1 *(none)* :: Z-index&#0000; -- *(none)* -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="none--webpack-and-bundlers0000----none" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-noneWebpackandbundlers0000--none">
+<div id="composer-fold-none--z-index0000----none" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-none--z-index0000----none-target">
+<h1 class="composer-header">
+<em>(none)</em> :: Z-index  – <em>(none)</em>
+</h1>
+</button>
+</div>
+<div id="composer-fold-none--z-index0000----none-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
+<div class="accordion-body">
+<!-- site-fold-begin :: finish >> 1 . library-digest *(none)* :: Z-index&#0000; -- *(none)* -->
+<p>Several Bootstrap components utilize <code>z-index</code>, the CSS property that helps control layout by providing a third axis to arrange content. We utilize a default z-index scale in Bootstrap that’s been designed to properly layer navigation, tooltips and popovers, modals, and more.</p>
+<p>These higher values start at an arbitrary number, high and specific enough to ideally avoid conflicts. We need a standard set of these across our layered components—tooltips, popovers, navbars, dropdowns, modals—so we can be reasonably consistent in the behaviors. There’s no reason we couldn’t have used <code>100</code>+ or <code>500</code>+.</p>
+<p>We don’t encourage customization of these individual values; should you change one, you likely need to change them all.</p>
+<p>{{&lt; scss-docs name=“zindex-stack” file=“scss/_variables.scss” &gt;}}</p>
+<p>To handle overlapping borders within components (e.g., buttons and inputs in input groups), we use low single digit <code>z-index</code> values of <code>1</code>, <code>2</code>, and <code>3</code> for default, hover, and active states. On hover/focus/active, we bring a particular element to the forefront with a higher <code>z-index</code> value to show their border over the sibling elements.</p>
+<p>[…]</p>
+<p><a href="./bootstrap/site/content/docs/5.1/layout/z-index.html"><em>(permalink to full text)</em></a></p>
+<!-- site-fold-end :: start >> -->
+</div>
+</div>
+</div>
+</div>
+<!-- site-fold-end :: finish >> -->
+<!-- site-spacer :: start >> -->
+<p>
+</p>
+<!-- site-spacer :: finish >> -->
+<!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: Webpack and bundlers&#0000; -- *(none)* -->
 <!-- site-header :: start >> 1 *(none)* :: Webpack and bundlers&#0000; -- *(none)* -->
 <div id="none--webpack-and-bundlers0000----none">
 
 </div>
 <!-- site-header :: finish >> 1 *(none)* :: Webpack and bundlers&#0000; -- *(none)* -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-none--webpack-and-bundlers0000----none" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-none--webpack-and-bundlers0000----none-target">
 <h1 class="composer-header">
 <em>(none)</em> :: Webpack and bundlers  – <em>(none)</em>
 </h1>
 </button>
 </div>
-<div id="toggle-noneWebpackandbundlers0000--none" class="accordion-collapse collapse show" data-bs-parent="#library-digest">
+<div id="composer-fold-none--webpack-and-bundlers0000----none-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
 <div class="accordion-body">
 <!-- site-fold-begin :: finish >> 1 . library-digest *(none)* :: Webpack and bundlers&#0000; -- *(none)* -->
 <section id="installing-bootstrap" class="level1">
@@ -20285,77 +20369,48 @@ CONTENTS
 <p>
 </p>
 <!-- site-spacer :: finish >> -->
-<!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: The pandoc family of libraries&#0000; -- John MacFarlane -->
-<div class="accordion">
-<div class="accordion-item">
-<div id="none--the-pandoc-family-of-libraries0000----john-macfarlane" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-noneThepandocfamilyoflibraries0000--JohnMacFarlane">
-<!-- site-header :: start >> 1 *(none)* :: The pandoc family of libraries&#0000; -- John MacFarlane -->
-<div id="none--the-pandoc-family-of-libraries0000----john-macfarlane">
+<!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: Visually hidden&#0000; -- *(none)* -->
+<!-- site-header :: start >> 1 *(none)* :: Visually hidden&#0000; -- *(none)* -->
+<div id="none--visually-hidden0000----none">
 
 </div>
-<!-- site-header :: finish >> 1 *(none)* :: The pandoc family of libraries&#0000; -- John MacFarlane -->
+<!-- site-header :: finish >> 1 *(none)* :: Visually hidden&#0000; -- *(none)* -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-none--visually-hidden0000----none" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-none--visually-hidden0000----none-target">
 <h1 class="composer-header">
-<em>(none)</em> :: The pandoc family of libraries  – John MacFarlane
+<em>(none)</em> :: Visually hidden  – <em>(none)</em>
 </h1>
 </button>
 </div>
-<div id="toggle-noneThepandocfamilyoflibraries0000--JohnMacFarlane" class="accordion-collapse collapse show" data-bs-parent="#library-digest">
+<div id="composer-fold-none--visually-hidden0000----none-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 1 . library-digest *(none)* :: The pandoc family of libraries&#0000; -- John MacFarlane -->
-<p>The following Haskell libraries have been developed to support pandoc:</p>
-<dl>
-<dt><a href="https://hackage.haskell.org/package/skylighting-core">skylighting-core</a> and <a href="https://hackage.haskell.org/package/skylighting">skylighting</a></dt>
-<dd>
-Syntax highlighting engine supporting over 140 languages.
-</dd>
-<dt><a href="https://hackage.haskell.org/package/citeproc">citeproc</a></dt>
-<dd>
-Citation processing using CSL stylesheets.
-</dd>
-<dt><a href="https://hackage.haskell.org/package/texmath">texmath</a></dt>
-<dd>
-Conversion of math between tex, Word equation, MathML, and GNU eqn.
-</dd>
-<dt><a href="https://hackage.haskell.org/package/unicode-collation">unicode-collation</a></dt>
-<dd>
-Proper Unicode collation (sorting).
-</dd>
-<dt><a href="https://hackage.haskell.org/package/doclayout">doclayout</a></dt>
-<dd>
-Combinators for laying out a textual document, with support for line wrapping, tabular layout, and more.
-</dd>
-<dt><a href="https://hackage.haskell.org/package/doctemplates">doctemplates</a></dt>
-<dd>
-Supports pandoc’s templates.
-</dd>
-<dt><a href="https://hackage.haskell.org/package/commonmark">commonmark</a>, <a href="https://hackage.haskell.org/package/commonmark-extensions">commonmark-extensions</a>, and <a href="https://hackage.haskell.org/package/commonmark-pandoc">commonmark-pandoc</a></dt>
-<dd>
-Efficient, standards-compliant parser for commonmark and extensions.
-</dd>
-<dt><a href="https://hackage.haskell.org/package/ipynb">ipynb</a></dt>
-<dd>
-Representation of Jupyter notebooks and conversion to and from JSON.
-</dd>
-<dt><a href="https://hackage.haskell.org/package/zip-archive">zip-archive</a></dt>
-<dd>
-A pure zip file creator and extractor, used by pandoc for docx, ODT, and EPUB.
-</dd>
-<dt><a href="https://hackage.haskell.org/package/rfc5051">rfc5051</a></dt>
-<dd>
-Simple unicode collation (used for citation sorting).
-</dd>
-<dt><a href="https://hackage.haskell.org/package/emojis">emojis</a></dt>
-<dd>
-Conversion between emoji characters and aliases.
-</dd>
-<dt><a href="https://hackage.haskell.org/package/jira-wiki-markup">jira-wiki-markup</a></dt>
-<dd>
-Support for parsing Jira wiki syntax.
-</dd>
-</dl>
+<!-- site-fold-begin :: finish >> 1 . library-digest *(none)* :: Visually hidden&#0000; -- *(none)* -->
+<p>Visually hide an element while still allowing it to be exposed to assistive technologies (such as screen readers) with <code>.visually-hidden</code>. Use <code>.visually-hidden-focusable</code> to visually hide an element by default, but to display it when it’s focused (e.g. by a keyboard-only user). <code>.visually-hidden-focusable</code> can also be applied to a container–thanks to <code>:focus-within</code>, the container will be displayed when any child element of the container receives focus.</p>
+<p>{{&lt; example &gt;}}</p>
+<h2 class="visually-hidden">
+<p>Title for screen readers</p>
+</h2>
+<p><a class="visually-hidden-focusable" href="#content">Skip to main content</a></p>
+<div class="visually-hidden-focusable">
+<p>A container with a <a href="#">focusable element</a>.</p>
+</div>
+<p>{{&lt; /example &gt;}}</p>
+<p>Both <code>visually-hidden</code> and <code>visually-hidden-focusable</code> can also be used as mixins.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode scss"><code class="sourceCode scss"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Usage as a mixin</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">.visually-hidden-title</span> {</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="im">@include</span> visually-hidden<span class="op">;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">.skip-navigation</span> {</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="im">@include</span> visually-hidden-focusable<span class="op">;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<!-- site-break :: start >> -->
+<!-- site-break :: finish >> -->
 <p>[…]</p>
-<p><a href="./pandoc/doc/libraries.html"><em>(permalink to full text)</em></a></p>
+<p><a href="./bootstrap/site/content/docs/5.1/helpers/visually-hidden.html"><em>(permalink to full text)</em></a></p>
 <!-- site-fold-end :: start >> -->
 </div>
 </div>
@@ -20366,83 +20421,46 @@ Support for parsing Jira wiki syntax.
 <p>
 </p>
 <!-- site-spacer :: finish >> -->
-<!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: RTL&#0000; -- *(none)* -->
-<div class="accordion">
-<div class="accordion-item">
-<div id="none--rtl0000----none" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-noneRTL0000--none">
-<!-- site-header :: start >> 1 *(none)* :: RTL&#0000; -- *(none)* -->
-<div id="none--rtl0000----none">
+<!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: Visibility&#0000; -- *(none)* -->
+<!-- site-header :: start >> 1 *(none)* :: Visibility&#0000; -- *(none)* -->
+<div id="none--visibility0000----none">
 
 </div>
-<!-- site-header :: finish >> 1 *(none)* :: RTL&#0000; -- *(none)* -->
+<!-- site-header :: finish >> 1 *(none)* :: Visibility&#0000; -- *(none)* -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-none--visibility0000----none" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-none--visibility0000----none-target">
 <h1 class="composer-header">
-<em>(none)</em> :: RTL  – <em>(none)</em>
+<em>(none)</em> :: Visibility  – <em>(none)</em>
 </h1>
 </button>
 </div>
-<div id="toggle-noneRTL0000--none" class="accordion-collapse collapse show" data-bs-parent="#library-digest">
+<div id="composer-fold-none--visibility0000----none-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 1 . library-digest *(none)* :: RTL&#0000; -- *(none)* -->
-<section id="get-familiar" class="level1">
-<h1>Get familiar</h1>
-<p>We recommend getting familiar with Bootstrap first by reading through our [Getting Started Introduction page]({{&lt; docsref “/getting-started/introduction” &gt;}}). Once you’ve run through it, continue reading here for how to enable RTL.</p>
-<p>You may also want to read up on <a href="https://rtlcss.com/">the RTLCSS project</a>, as it powers our approach to RTL.</p>
-<p>{{&lt; callout warning &gt;}} ## Experimental feature</p>
-<p>The RTL feature is still <strong>experimental</strong> and will probably evolve according to user feedback. Spotted something or have an improvement to suggest? <a href="%7B%7B%3C%20param%20repo%20%3E%7D%7D/issues/new">Open an issue</a>, we’d love to get your insights. {{&lt; /callout &gt;}}</p>
-</section>
-<section id="required-html" class="level1">
-<h1>Required HTML</h1>
-<p>There are two strict requirements for enabling RTL in Bootstrap-powered pages.</p>
-<ol type="1">
-<li>Set <code>dir=&quot;rtl&quot;</code> on the <code>&lt;html&gt;</code> element.</li>
-<li>Add an appropriate <code>lang</code> attribute, like <code>lang=&quot;ar&quot;</code>, on the <code>&lt;html&gt;</code> element.</li>
-</ol>
-<p>From there, you’ll need to include an RTL version of our CSS. For example, here’s the stylesheet for our compiled and minified CSS with RTL enabled:</p>
+<!-- site-fold-begin :: finish >> 1 . library-digest *(none)* :: Visibility&#0000; -- *(none)* -->
+<p>Set the <code>visibility</code> of elements with our visibility utilities. These utility classes do not modify the <code>display</code> value at all and do not affect layout – <code>.invisible</code> elements still take up space in the page.</p>
+<p>{{&lt; callout warning &gt;}} Elements with the <code>.invisible</code> class will be hidden <em>both</em> visually and for assistive technology/screen reader users. {{&lt; /callout &gt;}}</p>
+<p>Apply <code>.visible</code> or <code>.invisible</code> as needed.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;visible&quot;</span><span class="kw">&gt;</span>...<span class="kw">&lt;/div&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;invisible&quot;</span><span class="kw">&gt;</span>...<span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode scss"><code class="sourceCode scss"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Class</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">.visible</span> {</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">visibility</span>: <span class="dv">visible</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">.invisible</span> {</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">visibility</span>: <span class="dv">hidden</span> <span class="at">!important</span><span class="op">;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<section id="sass" class="level2">
+<h2>Sass</h2>
+<section id="utilities-api" class="level3">
+<h3>Utilities API</h3>
+<p>Visibility utilities are declared in our utilities API in <code>scss/_utilities.scss</code>. [Learn how to use the utilities API.]({{&lt; docsref “/utilities/api#using-the-api” &gt;}})</p>
+<p>{{&lt; scss-docs name=“utils-visibility” file=“scss/_utilities.scss” &gt;}}</p>
+<!-- site-break :: start >> -->
+<!-- site-break :: finish >> -->
 <p>[…]</p>
-<p><a href="./bootstrap/site/content/docs/5.1/getting-started/rtl.html"><em>(permalink to full text)</em></a></p>
-<!-- site-fold-end :: start >> -->
-</section>
-</div>
-</div>
-</div>
-</div>
-<!-- site-fold-end :: finish >> -->
-<!-- site-spacer :: start >> -->
-<p>
-</p>
-<!-- site-spacer :: finish >> -->
-<!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: RFS&#0000; -- *(none)* -->
-<div class="accordion">
-<div class="accordion-item">
-<div id="none--rfs0000----none" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-noneRFS0000--none">
-<!-- site-header :: start >> 1 *(none)* :: RFS&#0000; -- *(none)* -->
-<div id="none--rfs0000----none">
-
-</div>
-<!-- site-header :: finish >> 1 *(none)* :: RFS&#0000; -- *(none)* -->
-<h1 class="composer-header">
-<em>(none)</em> :: RFS  – <em>(none)</em>
-</h1>
-</button>
-</div>
-<div id="toggle-noneRFS0000--none" class="accordion-collapse collapse show" data-bs-parent="#library-digest">
-<div class="accordion-body">
-<!-- site-fold-begin :: finish >> 1 . library-digest *(none)* :: RFS&#0000; -- *(none)* -->
-<section id="what-is-rfs" class="level1">
-<h1>What is RFS?</h1>
-<p>Bootstrap’s side project [RFS](https://github.com/twbs/rfs/tree/{{&lt; param “rfs_version” &gt;}}) is a unit resizing engine which was initially developed to resize font sizes (hence its abbreviation for Responsive Font Sizes). Nowadays RFS is capable of rescaling most CSS properties with unit values like <code>margin</code>, <code>padding</code>, <code>border-radius</code>, or even <code>box-shadow</code>.</p>
-<p>The mechanism automatically calculates the appropriate values based on the dimensions of the browser viewport. It will be compiled into <code>calc()</code> functions with a mix of <code>rem</code> and viewport units to enable the responsive scaling behavior.</p>
-</section>
-<section id="using-rfs" class="level1">
-<h1>Using RFS</h1>
-<p>The mixins are included in Bootstrap and are available once you include Bootstrap’s <code>scss</code>. RFS can also be [installed standalone](https://github.com/twbs/rfs/tree/{{&lt; param “rfs_version” &gt;}}#installation) if needed.</p>
-<section id="using-the-mixins" class="level2">
-<h2>Using the mixins</h2>
-<p>The <code>rfs()</code> mixin has shorthands for <code>font-size</code>, <code>margin</code>, <code>margin-top</code>, <code>margin-right</code>, <code>margin-bottom</code>, <code>margin-left</code>, <code>padding</code>, <code>padding-top</code>, <code>padding-right</code>, <code>padding-bottom</code>, and <code>padding-left</code>. See the example below for source Sass and compiled CSS.</p>
-<p>[…]</p>
-<p><a href="./bootstrap/site/content/docs/5.1/getting-started/rfs.html"><em>(permalink to full text)</em></a></p>
+<p><a href="./bootstrap/site/content/docs/5.1/utilities/visibility.html"><em>(permalink to full text)</em></a></p>
 <!-- site-fold-end :: start >> -->
 </section>
 </section>
@@ -20455,96 +20473,219 @@ Support for parsing Jira wiki syntax.
 <p>
 </p>
 <!-- site-spacer :: finish >> -->
-<!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: Parcel&#0000; -- *(none)* -->
-<div class="accordion">
-<div class="accordion-item">
-<div id="none--parcel0000----none" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-noneParcel0000--none">
-<!-- site-header :: start >> 1 *(none)* :: Parcel&#0000; -- *(none)* -->
-<div id="none--parcel0000----none">
+<!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: Vertical rule&#0000; -- *(none)* -->
+<!-- site-header :: start >> 1 *(none)* :: Vertical rule&#0000; -- *(none)* -->
+<div id="none--vertical-rule0000----none">
 
 </div>
-<!-- site-header :: finish >> 1 *(none)* :: Parcel&#0000; -- *(none)* -->
+<!-- site-header :: finish >> 1 *(none)* :: Vertical rule&#0000; -- *(none)* -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-none--vertical-rule0000----none" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-none--vertical-rule0000----none-target">
 <h1 class="composer-header">
-<em>(none)</em> :: Parcel  – <em>(none)</em>
+<em>(none)</em> :: Vertical rule  – <em>(none)</em>
 </h1>
 </button>
 </div>
-<div id="toggle-noneParcel0000--none" class="accordion-collapse collapse show" data-bs-parent="#library-digest">
+<div id="composer-fold-none--vertical-rule0000----none-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 1 . library-digest *(none)* :: Parcel&#0000; -- *(none)* -->
-<section id="install-parcel" class="level1">
-<h1>Install Parcel</h1>
-<p>Install <a href="https://en.parceljs.org/getting_started.html">Parcel Bundler</a>.</p>
-</section>
-<section id="install-bootstrap" class="level1">
-<h1>Install Bootstrap</h1>
-<p><a href="#install-bootstrap">Install bootstrap</a>({{&lt; docsref “/getting-started/download#npm” &gt;}}) as a Node.js module using npm.</p>
-<p>Bootstrap depends on <a href="https://popper.js.org/">Popper</a>, which is specified in the <code>peerDependencies</code> property. This means that you will have to make sure to add both of them to your <code>package.json</code> using <code>npm install @popperjs/core</code>.</p>
-<p>When all will be completed, your project will be structured like this:</p>
-<pre class="text"><code>project-name/
-├── build/
-├── node_modules/
-│   └── bootstrap/
-│   └── popper.js/
-├── scss/
-│   └── custom.scss
-├── src/
-│   └── index.html
-│   └── index.js
-└── package.json</code></pre>
-</section>
-<section id="importing-javascript-1" class="level1">
-<h1>Importing JavaScript</h1>
-<p>Import [Bootstrap’s JavaScript]({{&lt; docsref “/getting-started/javascript” &gt;}}) in your app’s entry point (usually <code>src/index.js</code>). You can import all our plugins in one file or separately if you require only a subset of them.</p>
-<p>[…]</p>
-<p><a href="./bootstrap/site/content/docs/5.1/getting-started/parcel.html"><em>(permalink to full text)</em></a></p>
-<!-- site-fold-end :: start >> -->
-</section>
-</div>
-</div>
-</div>
-</div>
-<!-- site-fold-end :: finish >> -->
-<!-- site-spacer :: start >> -->
-<p>
-</p>
-<!-- site-spacer :: finish >> -->
-<!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: Org-mode features and differences&#0000; -- Albert Krewinkel -->
-<div class="accordion">
-<div class="accordion-item">
-<div id="none--org-mode-features-and-differences0000----albert-krewinkel" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-noneOrg-modefeaturesanddifferences0000--AlbertKrewinkel">
-<!-- site-header :: start >> 1 *(none)* :: Org-mode features and differences&#0000; -- Albert Krewinkel -->
-<div id="none--org-mode-features-and-differences0000----albert-krewinkel">
-
-</div>
-<!-- site-header :: finish >> 1 *(none)* :: Org-mode features and differences&#0000; -- Albert Krewinkel -->
-<h1 class="composer-header">
-<em>(none)</em> :: Org-mode features and differences  – Albert Krewinkel
-</h1>
-</button>
-</div>
-<div id="toggle-noneOrg-modefeaturesanddifferences0000--AlbertKrewinkel" class="accordion-collapse collapse show" data-bs-parent="#library-digest">
-<div class="accordion-body">
-<!-- site-fold-begin :: finish >> 1 . library-digest *(none)* :: Org-mode features and differences&#0000; -- Albert Krewinkel -->
-<p>Pandoc’s handling of org files is similar to that of Emacs org-mode. This document aims to highlight the cases where this is not possible or just not the case yet.</p>
-<section id="export-options" class="level1">
-<h1>Export options</h1>
-<p>The following export keywords are supported:</p>
+<!-- site-fold-begin :: finish >> 1 . library-digest *(none)* :: Vertical rule&#0000; -- *(none)* -->
+<section id="how-it-works" class="level2">
+<h2>How it works</h2>
+<p>Vertical rules are inspired by the <code>&lt;hr&gt;</code> element, allowing you to create vertical dividers in common layouts. They’re styled just like <code>&lt;hr&gt;</code> elements:</p>
 <ul>
-<li><p>AUTHOR: comma-separated list of author(s); fully supported.</p></li>
-<li><p>CREATOR: output generator; passed as plain-text metadata entry <code>creator</code>, but not used by any default templates.</p></li>
-<li><p>DATE: creation or publication date; well supported by pandoc.</p></li>
-<li><p>EMAIL: author email address; passed as plain-text metadata field <code>email</code>, but not used by any default templates.</p></li>
-<li><p>LANGUAGE: document language; included as plain-text metadata field <code>lang</code>. The value should be a <a href="https://tools.ietf.org/html/bcp47">BCP47 language tag</a>.</p></li>
-<li><p>SELECT_TAGS: tags which select a tree for export.</p></li>
-<li><p>EXCLUDE_TAGS: tags which prevent a subtree from being exported. Fully supported.</p></li>
-<li><p>TITLE: document title; fully supported.</p></li>
-<li><p>EXPORT_FILE_NAME: target filename; <em>unsupported</em>, the output defaults to stdout unless a target has to be given as a command line option.</p></li>
+<li>They’re <code>1px</code> wide</li>
+<li>They have <code>min-height</code> of <code>1em</code></li>
+<li>Their color is set via <code>currentColor</code> and <code>opacity</code></li>
+</ul>
+<p>Customize them with additional styles as needed.</p>
+</section>
+<section id="example" class="level2">
+<h2>Example</h2>
+<p>{{&lt; example &gt;}}</p>
+<div class="vr">
+
+</div>
+<p>{{&lt; /example &gt;}}</p>
+<p>Vertical rules scale their height in flex layouts:</p>
+<p>{{&lt; example &gt;}}</p>
+<div class="d-flex" style="height: 200px;">
+<div class="vr">
+
+</div>
+</div>
+<p>{{&lt; /example &gt;}}</p>
+</section>
+<section id="with-stacks" class="level2">
+<h2>With stacks</h2>
+<p>They can also be used in [stacks]({{&lt; docsref “/helpers/stacks” &gt;}}):</p>
+<p>{{&lt; example &gt;}}</p>
+<div class="hstack gap-3">
+<div class="bg-light border">
+<p>First item</p>
+</div>
+<div class="bg-light border ms-auto">
+<p>Second item</p>
+</div>
+<div class="vr">
+
+</div>
+<div class="bg-light border">
+<p>Third item</p>
+</div>
+</div>
+<p>{{&lt; /example &gt;}}</p>
+<!-- site-break :: start >> -->
+<!-- site-break :: finish >> -->
+<p>[…]</p>
+<p><a href="./bootstrap/site/content/docs/5.1/helpers/vertical-rule.html"><em>(permalink to full text)</em></a></p>
+<!-- site-fold-end :: start >> -->
+</section>
+</div>
+</div>
+</div>
+</div>
+<!-- site-fold-end :: finish >> -->
+<!-- site-spacer :: start >> -->
+<p>
+</p>
+<!-- site-spacer :: finish >> -->
+<!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: Vertical alignment&#0000; -- *(none)* -->
+<!-- site-header :: start >> 1 *(none)* :: Vertical alignment&#0000; -- *(none)* -->
+<div id="none--vertical-alignment0000----none">
+
+</div>
+<!-- site-header :: finish >> 1 *(none)* :: Vertical alignment&#0000; -- *(none)* -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-none--vertical-alignment0000----none" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-none--vertical-alignment0000----none-target">
+<h1 class="composer-header">
+<em>(none)</em> :: Vertical alignment  – <em>(none)</em>
+</h1>
+</button>
+</div>
+<div id="composer-fold-none--vertical-alignment0000----none-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
+<div class="accordion-body">
+<!-- site-fold-begin :: finish >> 1 . library-digest *(none)* :: Vertical alignment&#0000; -- *(none)* -->
+<p>Change the alignment of elements with the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align"><code>vertical-alignment</code></a> utilities. Please note that vertical-align only affects inline, inline-block, inline-table, and table cell elements.</p>
+<p>Choose from <code>.align-baseline</code>, <code>.align-top</code>, <code>.align-middle</code>, <code>.align-bottom</code>, <code>.align-text-bottom</code>, and <code>.align-text-top</code> as needed.</p>
+<p>To vertically center non-inline content (like <code>&lt;div&gt;</code>s and more), use our [flex box utilities]({{&lt; docsref “/utilities/flex#align-items” &gt;}}).</p>
+<p>With inline elements:</p>
+<p>{{&lt; example &gt;}} <span class="align-baseline">baseline</span> <span class="align-top">top</span> <span class="align-middle">middle</span> <span class="align-bottom">bottom</span> <span class="align-text-top">text-top</span> <span class="align-text-bottom">text-bottom</span> {{&lt; /example &gt;}}</p>
+<p>With table cells:</p>
+<p>{{&lt; example &gt;}}</p>
+<table style="height: 100px;">
+<tbody>
+<tr>
+<td class="align-baseline">
+<p>baseline</p>
+</td>
+<td class="align-top">
+<p>top</p>
+</td>
+<td class="align-middle">
+<p>[…]</p>
+<p><a href="./bootstrap/site/content/docs/5.1/utilities/vertical-align.html"><em>(permalink to full text)</em></a></p>
+<!-- site-fold-end :: start >> -->
+</div>
+</div>
+</div>
+</div>
+<!-- site-fold-end :: finish >> -->
+<!-- site-spacer :: start >> -->
+<p>
+</p>
+<!-- site-spacer :: finish >> -->
+<!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: Versions&#0000; -- *(none)* -->
+<!-- site-header :: start >> 1 *(none)* :: Versions&#0000; -- *(none)* -->
+<div id="none--versions0000----none">
+
+</div>
+<!-- site-header :: finish >> 1 *(none)* :: Versions&#0000; -- *(none)* -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-none--versions0000----none" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-none--versions0000----none-target">
+<h1 class="composer-header">
+<em>(none)</em> :: Versions  – <em>(none)</em>
+</h1>
+</button>
+</div>
+<div id="composer-fold-none--versions0000----none-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
+<div class="accordion-body">
+<!-- site-fold-begin :: finish >> 1 . library-digest *(none)* :: Versions&#0000; -- *(none)* -->
+<p>{{&lt; list-versions.inline &gt;}}</p>
+<div class="row">
+<p>{{- range $release := sort (index $.Site.Data “docs-versions”) “group” “desc” }}</p>
+<div class="col-md-6 col-lg-4 col-xl mb-4">
+<pre><code>&lt;h2&gt;{{ $release.group }}&lt;/h2&gt;
+&lt;p&gt;{{ $release.description }}&lt;/p&gt;
+{{- $versions := sort $release.versions &quot;v&quot; &quot;desc&quot; -}}
+{{- range $i, $version := $versions }}
+  {{- $len := len $versions -}}
+  {{ if (eq $i 0) }}&lt;div class=&quot;list-group&quot;&gt;{{ end }}
+    &lt;a class=&quot;list-group-item list-group-item-action py-2 text-primary{{ if (eq $version.v $.Site.Params.docs_version) }} d-flex justify-content-between align-items-center{{ end }}&quot; href=&quot;{{ $release.baseurl }}/{{ $version.v }}/&quot;&gt;
+      {{ $version.v }}
+      {{ if (eq $version.v $.Site.Params.docs_version) -}}
+      &lt;span class=&quot;badge bg-primary&quot;&gt;Latest&lt;/span&gt;
+      {{- end }}
+    &lt;/a&gt;
+  {{ if (eq (add $i 1) $len) }}&lt;/div&gt;{{ end }}
+{{ end -}}</code></pre>
+</div>
+<p>{{ end -}}</p>
+</div>
+<p>{{&lt; /list-versions.inline &gt;}}</p>
+<!-- site-break :: start >> -->
+<!-- site-break :: finish >> -->
+<p>[…]</p>
+<p><a href="./bootstrap/site/content/docs/versions.html"><em>(permalink to full text)</em></a></p>
+<!-- site-fold-end :: start >> -->
+</div>
+</div>
+</div>
+</div>
+<!-- site-fold-end :: finish >> -->
+<!-- site-spacer :: start >> -->
+<p>
+</p>
+<!-- site-spacer :: finish >> -->
+<!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: Validation&#0000; -- *(none)* -->
+<!-- site-header :: start >> 1 *(none)* :: Validation&#0000; -- *(none)* -->
+<div id="none--validation0000----none">
+
+</div>
+<!-- site-header :: finish >> 1 *(none)* :: Validation&#0000; -- *(none)* -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-none--validation0000----none" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-none--validation0000----none-target">
+<h1 class="composer-header">
+<em>(none)</em> :: Validation  – <em>(none)</em>
+</h1>
+</button>
+</div>
+<div id="composer-fold-none--validation0000----none-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
+<div class="accordion-body">
+<!-- site-fold-begin :: finish >> 1 . library-digest *(none)* :: Validation&#0000; -- *(none)* -->
+<p>{{&lt; callout warning &gt;}} We are aware that currently the client-side custom validation styles and tooltips are not accessible, since they are not exposed to assistive technologies. While we work on a solution, we’d recommend either using the server-side option or the default browser validation method. {{&lt; /callout &gt;}}</p>
+<section id="how-it-works-1" class="level2">
+<h2>How it works</h2>
+<p>Here’s how form validation works with Bootstrap:</p>
+<ul>
+<li>HTML form validation is applied via CSS’s two pseudo-classes, <code>:invalid</code> and <code>:valid</code>. It applies to <code>&lt;input&gt;</code>, <code>&lt;select&gt;</code>, and <code>&lt;textarea&gt;</code> elements.</li>
+<li>Bootstrap scopes the <code>:invalid</code> and <code>:valid</code> styles to parent <code>.was-validated</code> class, usually applied to the <code>&lt;form&gt;</code>. Otherwise, any required field without a value shows up as invalid on page load. This way, you may choose when to activate them (typically after form submission is attempted).</li>
+<li>To reset the appearance of the form (for instance, in the case of dynamic form submissions using AJAX), remove the <code>.was-validated</code> class from the <code>&lt;form&gt;</code> again after submission.</li>
+<li>As a fallback, <code>.is-invalid</code> and <code>.is-valid</code> classes may be used instead of the pseudo-classes for <a href="#server-side">server-side validation</a>. They do not require a <code>.was-validated</code> parent class.</li>
+<li>Due to constraints in how CSS works, we cannot (at present) apply styles to a <code>&lt;label&gt;</code> that comes before a form control in the DOM without the help of custom JavaScript.</li>
+<li>All modern browsers support the <a href="https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#the-constraint-validation-api">constraint validation API</a>, a series of JavaScript methods for validating form controls.</li>
+<li>Feedback messages may utilize the <a href="#browser-defaults">browser defaults</a> (different for each browser, and unstylable via CSS) or our custom feedback styles with additional HTML and CSS.</li>
+<li>You may provide custom validity messages with <code>setCustomValidity</code> in JavaScript.</li>
 </ul>
 <p>[…]</p>
-<p><a href="./pandoc/doc/org.html"><em>(permalink to full text)</em></a></p>
+<p><a href="./bootstrap/site/content/docs/5.1/forms/validation.html"><em>(permalink to full text)</em></a></p>
 <!-- site-fold-end :: start >> -->
 </section>
 </div>
@@ -20556,42 +20697,30 @@ Support for parsing Jira wiki syntax.
 <p>
 </p>
 <!-- site-spacer :: finish >> -->
-<!-- site-fold-begin :: start >> 1 . library-digest November 21, 2021 :: Creating Custom Pandoc Writers in Lua&#0000; -- John MacFarlane -->
-<div class="accordion">
-<div class="accordion-item">
-<div id="november-21-2021--creating-custom-pandoc-writers-in-lua0000----john-macfarlane" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-November212021CreatingCustomPandocWritersinLua0000--JohnMacFarlane">
-<!-- site-header :: start >> 1 November 21, 2021 :: Creating Custom Pandoc Writers in Lua&#0000; -- John MacFarlane -->
-<div id="november-21-2021--creating-custom-pandoc-writers-in-lua0000----john-macfarlane">
+<!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: Utility API&#0000; -- *(none)* -->
+<!-- site-header :: start >> 1 *(none)* :: Utility API&#0000; -- *(none)* -->
+<div id="none--utility-api0000----none">
 
 </div>
-<!-- site-header :: finish >> 1 November 21, 2021 :: Creating Custom Pandoc Writers in Lua&#0000; -- John MacFarlane -->
+<!-- site-header :: finish >> 1 *(none)* :: Utility API&#0000; -- *(none)* -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-none--utility-api0000----none" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-none--utility-api0000----none-target">
 <h1 class="composer-header">
-November 21, 2021 :: Creating Custom Pandoc Writers in Lua  – John MacFarlane
+<em>(none)</em> :: Utility API  – <em>(none)</em>
 </h1>
 </button>
 </div>
-<div id="toggle-November212021CreatingCustomPandocWritersinLua0000--JohnMacFarlane" class="accordion-collapse collapse show" data-bs-parent="#library-digest">
+<div id="composer-fold-none--utility-api0000----none-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 1 . library-digest November 21, 2021 :: Creating Custom Pandoc Writers in Lua&#0000; -- John MacFarlane -->
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<p>If you need to render a format not already handled by pandoc, or you want to change how pandoc renders a format, you can create a custom writer using the <a href="https://www.lua.org">Lua</a> language. Pandoc has a built-in Lua interpreter, so you needn’t install any additional software to do this.</p>
-<p>A custom writer is a Lua file that defines how to render the document. Two styles of custom writers are supported: classic custom writers must define rendering functions for each AST element. New style writers, available since pandoc 2.17.2, must define just a single function <code>Writer</code>, which gets passed the document and writer options, and then does all rendering.</p>
-</section>
-<section id="classic-style" class="level1">
-<h1>Classic style</h1>
-<p>A writer using the classic style defines rendering functions for each element of the pandoc AST.</p>
-<p>For example,</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode lua"><code class="sourceCode lua"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> Para<span class="op">(</span>s<span class="op">)</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="st">&quot;&lt;paragraph&gt;&quot;</span> <span class="op">..</span> s <span class="op">..</span> <span class="st">&quot;&lt;/paragraph&gt;&quot;</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code></pre></div>
-<p>The best way to go about creating a classic custom writer is to modify the example that comes with pandoc. To get the example, you can do</p>
-<pre><code>pandoc --print-default-data-file sample.lua &gt; sample.lua</code></pre>
+<!-- site-fold-begin :: finish >> 1 . library-digest *(none)* :: Utility API&#0000; -- *(none)* -->
+<p>Bootstrap utilities are generated with our utility API and can be used to modify or extend our default set of utility classes via Sass. Our utility API is based on a series of Sass maps and functions for generating families of classes with various options. If you’re unfamiliar with Sass maps, read up on the <a href="https://sass-lang.com/documentation/values/maps">official Sass docs</a> to get started.</p>
+<p>The <code>$utilities</code> map contains all our utilities and is later merged with your custom <code>$utilities</code> map, if present. The utility map contains a keyed list of utility groups which accept the following options:</p>
+<p>{{&lt; bs-table “table text-start” &gt;}} | Option | Type | Default value | Description | | — | — | — | — | | <a href="#property"><code>property</code></a> | <strong>Required</strong> | – | Name of the property, this can be a string or an array of strings (e.g., horizontal paddings or margins). | | <a href="#values"><code>values</code></a> | <strong>Required</strong> | – | List of values, or a map if you don’t want the class name to be the same as the value. If <code>null</code> is used as map key, it isn’t compiled. | | <a href="#class"><code>class</code></a> | Optional | null | Name of the generated class. If not provided and <code>property</code> is an array of strings, <code>class</code> will default to the first element of the <code>property</code> array. | | <a href="#css-variable-utilities"><code>css-var</code></a> | Optional | <code>false</code> | Boolean to generate CSS variables instead of CSS rules. | | <a href="#local-css-variables"><code>local-vars</code></a> | Optional | null | Map of local CSS variables to generate in addition to the CSS rules. | | <a href="#states"><code>state</code></a> | Optional | null | List of pseudo-class variants (e.g., <code>:hover</code> or <code>:focus</code>) to generate. | | <a href="#responsive"><code>responsive</code></a> | Optional | <code>false</code> | Boolean indicating if responsive classes should be generated. | | <code>rfs</code> | Optional | <code>false</code> | Boolean to enable [fluid rescaling with RFS]({{&lt; docsref “/getting-started/rfs” &gt;}}). | | <a href="#print"><code>print</code></a> | Optional | <code>false</code> | Boolean indicating if print classes need to be generated. | | <code>rtl</code> | Optional | <code>true</code> | Boolean indicating if utility should be kept in RTL. | {{&lt; /bs-table &gt;}}</p>
 <p>[…]</p>
-<p><a href="./pandoc/doc/custom-writers.html"><em>(permalink to full text)</em></a></p>
+<p><a href="./bootstrap/site/content/docs/5.1/utilities/api.html"><em>(permalink to full text)</em></a></p>
 <!-- site-fold-end :: start >> -->
-</section>
 </div>
 </div>
 </div>
@@ -20601,119 +20730,38 @@ November 21, 2021 :: Creating Custom Pandoc Writers in Lua  – John MacFarlane
 <p>
 </p>
 <!-- site-spacer :: finish >> -->
-<!-- site-fold-begin :: start >> 1 . library-digest November 18, 2021 :: Creating Custom Pandoc Readers in Lua&#0000; -- John MacFarlane -->
-<div class="accordion">
-<div class="accordion-item">
-<div id="november-18-2021--creating-custom-pandoc-readers-in-lua0000----john-macfarlane" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-November182021CreatingCustomPandocReadersinLua0000--JohnMacFarlane">
-<!-- site-header :: start >> 1 November 18, 2021 :: Creating Custom Pandoc Readers in Lua&#0000; -- John MacFarlane -->
-<div id="november-18-2021--creating-custom-pandoc-readers-in-lua0000----john-macfarlane">
+<!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: Utilities for layout&#0000; -- *(none)* -->
+<!-- site-header :: start >> 1 *(none)* :: Utilities for layout&#0000; -- *(none)* -->
+<div id="none--utilities-for-layout0000----none">
 
 </div>
-<!-- site-header :: finish >> 1 November 18, 2021 :: Creating Custom Pandoc Readers in Lua&#0000; -- John MacFarlane -->
+<!-- site-header :: finish >> 1 *(none)* :: Utilities for layout&#0000; -- *(none)* -->
+<div class="accordion">
+<div class="accordion-item">
+<div id="composer-fold-none--utilities-for-layout0000----none" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-none--utilities-for-layout0000----none-target">
 <h1 class="composer-header">
-November 18, 2021 :: Creating Custom Pandoc Readers in Lua  – John MacFarlane
+<em>(none)</em> :: Utilities for layout  – <em>(none)</em>
 </h1>
 </button>
 </div>
-<div id="toggle-November182021CreatingCustomPandocReadersinLua0000--JohnMacFarlane" class="accordion-collapse collapse show" data-bs-parent="#library-digest">
+<div id="composer-fold-none--utilities-for-layout0000----none-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 1 . library-digest November 18, 2021 :: Creating Custom Pandoc Readers in Lua&#0000; -- John MacFarlane -->
-<section id="introduction-1" class="level1">
-<h1>Introduction</h1>
-<p>If you need to parse a format not already handled by pandoc, you can create a custom reader using the <a href="https://www.lua.org">Lua</a> language. Pandoc has a built-in Lua interpreter, so you needn’t install any additional software to do this.</p>
-<p>A custom reader is a Lua file that defines a function called <code>Reader</code>, which takes two arguments:</p>
-<ul>
-<li>the raw input to be parsed, as a list of sources</li>
-<li>optionally, a table of reader options, e.g. <code>{ columns = 62, standalone = true }</code>.</li>
-</ul>
-<p>The <code>Reader</code> function should return a <code>Pandoc</code> AST. This can be created using functions in the <a href="https://pandoc.org/lua-filters.html#module-pandoc"><code>pandoc</code> module</a>, which is automatically in scope. (Indeed, all of the utility functions that are available for <a href="https://pandoc.org/lua-filters.html">Lua filters</a> are available in custom readers, too.)</p>
-<p>Each source item corresponds to a file or stream passed to pandoc containing its text and name. E.g., if a single file <code>input.txt</code> is passed to pandoc, then the list of sources will contain just a single element <code>s</code>, where <code>s.name == &#39;input.txt&#39;</code> and <code>s.text</code> contains the file contents as a string.</p>
-<p>[…]</p>
-<p><a href="./pandoc/doc/custom-readers.html"><em>(permalink to full text)</em></a></p>
-<!-- site-fold-end :: start >> -->
+<!-- site-fold-begin :: finish >> 1 . library-digest *(none)* :: Utilities for layout&#0000; -- *(none)* -->
+<section id="changing-display" class="level2">
+<h2>Changing <code>display</code></h2>
+<p>Use our [display utilities]({{&lt; docsref “/utilities/display” &gt;}}) for responsively toggling common values of the <code>display</code> property. Mix it with our grid system, content, or components to show or hide them across specific viewports.</p>
 </section>
-</div>
-</div>
-</div>
-</div>
-<!-- site-fold-end :: finish >> -->
-<!-- site-spacer :: start >> -->
-<p>
-</p>
-<!-- site-spacer :: finish >> -->
-<!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: JavaScript&#0000; -- *(none)* -->
-<div class="accordion">
-<div class="accordion-item">
-<div id="none--javascript0000----none" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-noneJavaScript0000--none">
-<!-- site-header :: start >> 1 *(none)* :: JavaScript&#0000; -- *(none)* -->
-<div id="none--javascript0000----none">
-
-</div>
-<!-- site-header :: finish >> 1 *(none)* :: JavaScript&#0000; -- *(none)* -->
-<h1 class="composer-header">
-<em>(none)</em> :: JavaScript  – <em>(none)</em>
-</h1>
-</button>
-</div>
-<div id="toggle-noneJavaScript0000--none" class="accordion-collapse collapse show" data-bs-parent="#library-digest">
-<div class="accordion-body">
-<!-- site-fold-begin :: finish >> 1 . library-digest *(none)* :: JavaScript&#0000; -- *(none)* -->
-<section id="individual-or-compiled" class="level1">
-<h1>Individual or compiled</h1>
-<p>Plugins can be included individually (using Bootstrap’s individual <code>js/dist/*.js</code>), or all at once using <code>bootstrap.js</code> or the minified <code>bootstrap.min.js</code> (don’t include both).</p>
-<p>If you use a bundler (Webpack, Rollup…), you can use <code>/js/dist/*.js</code> files which are UMD ready.</p>
+<section id="flexbox-options" class="level2">
+<h2>Flexbox options</h2>
+<p>Bootstrap is built with flexbox, but not every element’s <code>display</code> has been changed to <code>display: flex</code> as this would add many unnecessary overrides and unexpectedly change key browser behaviors. Most of [our components]({{&lt; docsref “/components/alerts” &gt;}}) are built with flexbox enabled.</p>
+<p>Should you need to add <code>display: flex</code> to an element, do so with <code>.d-flex</code> or one of the responsive variants (e.g., <code>.d-sm-flex</code>). You’ll need this class or <code>display</code> value to allow the use of our extra [flexbox utilities]({{&lt; docsref “/utilities/flex” &gt;}}) for sizing, alignment, spacing, and more.</p>
 </section>
-<section id="using-bootstrap-as-a-module" class="level1">
-<h1>Using Bootstrap as a module</h1>
-<p>We provide a version of Bootstrap built as <code>ESM</code> (<code>bootstrap.esm.js</code> and <code>bootstrap.esm.min.js</code>) which allows you to use Bootstrap as a module in your browser, if your <a href="https://caniuse.com/es6-module">targeted browsers support it</a>.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">&quot;module&quot;</span><span class="kw">&gt;</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="im">import</span> { Toast } <span class="im">from</span> <span class="st">&#39;bootstrap.esm.min.js&#39;</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(<span class="bu">document</span><span class="op">.</span><span class="fu">querySelectorAll</span>(<span class="st">&#39;.toast&#39;</span>))</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">forEach</span>(toastNode <span class="kw">=&gt;</span> <span class="kw">new</span> <span class="fu">Toast</span>(toastNode))</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/script&gt;</span></span></code></pre></div>
-<p>{{&lt; callout warning &gt;}} # Incompatible plugins</p>
-<p>Due to browser limitations, some of our plugins, namely Dropdown, Tooltip and Popover plugins, cannot be used in a <code>&lt;script&gt;</code> tag with <code>module</code> type because they depend on Popper. For more information about the issue see <a href="https://v8.dev/features/modules#specifiers">here</a>. {{&lt; /callout &gt;}}</p>
+<section id="margin-and-padding" class="level2">
+<h2>Margin and padding</h2>
+<p>Use the <code>margin</code> and <code>padding</code> [spacing utilities]({{&lt; docsref “/utilities/spacing” &gt;}}) to control how elements and components are spaced and sized. Bootstrap includes a six-level scale for spacing utilities, based on a <code>1rem</code> value default <code>$spacer</code> variable. Choose values for all viewports (e.g., <code>.me-3</code> for <code>margin-right: 1rem</code> in LTR), or pick responsive variants to target specific viewports (e.g., <code>.me-md-3</code> for <code>margin-right: 1rem</code> —in LTR— starting at the <code>md</code> breakpoint).</p>
 <p>[…]</p>
-<p><a href="./bootstrap/site/content/docs/5.1/getting-started/javascript.html"><em>(permalink to full text)</em></a></p>
-<!-- site-fold-end :: start >> -->
-</section>
-</div>
-</div>
-</div>
-</div>
-<!-- site-fold-end :: finish >> -->
-<!-- site-spacer :: start >> -->
-<p>
-</p>
-<!-- site-spacer :: finish >> -->
-<!-- site-fold-begin :: start >> 1 . library-digest January 10, 2020 :: Pandoc Lua Filters&#0000; -- Albert Krewinkel; John MacFarlane -->
-<div class="accordion">
-<div class="accordion-item">
-<div id="january-10-2020--pandoc-lua-filters0000----albert-krewinkel-john-macfarlane" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-January102020PandocLuaFilters0000--AlbertKrewinkelJohnMacFarlane">
-<!-- site-header :: start >> 1 January 10, 2020 :: Pandoc Lua Filters&#0000; -- Albert Krewinkel; John MacFarlane -->
-<div id="january-10-2020--pandoc-lua-filters0000----albert-krewinkel-john-macfarlane">
-
-</div>
-<!-- site-header :: finish >> 1 January 10, 2020 :: Pandoc Lua Filters&#0000; -- Albert Krewinkel; John MacFarlane -->
-<h1 class="composer-header">
-January 10, 2020 :: Pandoc Lua Filters  – Albert Krewinkel; John MacFarlane
-</h1>
-</button>
-</div>
-<div id="toggle-January102020PandocLuaFilters0000--AlbertKrewinkelJohnMacFarlane" class="accordion-collapse collapse show" data-bs-parent="#library-digest">
-<div class="accordion-body">
-<!-- site-fold-begin :: finish >> 1 . library-digest January 10, 2020 :: Pandoc Lua Filters&#0000; -- Albert Krewinkel; John MacFarlane -->
-<section id="introduction-2" class="level1">
-<h1>Introduction</h1>
-<p>Pandoc has long supported filters, which allow the pandoc abstract syntax tree (AST) to be manipulated between the parsing and the writing phase. <a href="https://pandoc.org/filters.html">Traditional pandoc filters</a> accept a JSON representation of the pandoc AST and produce an altered JSON representation of the AST. They may be written in any programming language, and invoked from pandoc using the <code>--filter</code> option.</p>
-<p>Although traditional filters are very flexible, they have a couple of disadvantages. First, there is some overhead in writing JSON to stdout and reading it from stdin (twice, once on each side of the filter). Second, whether a filter will work will depend on details of the user’s environment. A filter may require an interpreter for a certain programming language to be available, as well as a library for manipulating the pandoc AST in JSON form. One cannot simply provide a filter that can be used by anyone who has a certain version of the pandoc executable.</p>
-<p>Starting with version 2.0, pandoc makes it possible to write filters in Lua without any external dependencies at all. A Lua interpreter (version 5.3) and a Lua library for creating pandoc filters is built into the pandoc executable. Pandoc data types are marshaled to Lua directly, avoiding the overhead of writing JSON to stdout and reading it from stdin.</p>
-<p>[…]</p>
-<p><a href="./pandoc/doc/lua-filters.html"><em>(permalink to full text)</em></a></p>
+<p><a href="./bootstrap/site/content/docs/5.1/layout/utilities.html"><em>(permalink to full text)</em></a></p>
 <!-- site-fold-end :: start >> -->
 </section>
 </div>
@@ -20726,14 +20774,14 @@ January 10, 2020 :: Pandoc Lua Filters  – Albert Krewinkel; John MacFarlane
 <!-- site-fold-end :: finish >> group -->
 <!-- site-file :: finish >> ./_library/index-include.md.cms -->
 <!-- site-file :: finish >> index-digest.md -->
-<!-- site-targets >> .../.composer.tmp/site-cache-index-digest.html.column-end.html -->
+<!-- site-targets >> .../.composer.tmp/site-cache.index-digest.html.column-end.html -->
 <!-- site-column-end :: start >> -->
 </div>
 <!-- site-column-end :: finish >> -->
-<!-- site-targets >> .../.composer.tmp/site-cache-index-digest.html.nav-right.html -->
+<!-- site-targets >> .../.composer.tmp/site-cache.index-digest.html.nav-right.html -->
 <!-- site-nav-side :: start >> right -->
 <!-- site-column-begin :: start >> right -->
-<div class="d-flex flex-column composer-sticky d-lg-sticky d-static order-lg-3 order-2 col-lg-2 col-6 d-lg-block d-block p-2">
+<div id="composer-nav-right" class="d-flex flex-column composer-scroll-lg order-lg-3 order-2 col-lg-2 col-6 d-lg-block d-block p-2">
 <!-- site-column-begin :: finish >> right -->
 <!-- site-nav-side-list :: start >> nav-right.["BEGIN"] -->
 <!-- site-nav-side-list :: finish >> nav-right.["BEGIN"] -->
@@ -20742,14 +20790,14 @@ January 10, 2020 :: Pandoc Lua Filters  – Albert Krewinkel; John MacFarlane
 <!-- site-fold-begin :: start >> 0 . 0 RIGHT FOLD -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="right-fold" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-RIGHTFOLD">
+<div id="composer-fold-right-fold" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-right-fold-target">
 <h6 class="composer-header">
 RIGHT FOLD
 </h6>
 </button>
 </div>
-<div id="toggle-RIGHTFOLD" class="accordion-collapse collapse show">
+<div id="composer-fold-right-fold-target" class="accordion-collapse collapse show">
 <div class="accordion-body">
 <!-- site-fold-begin :: finish >> 0 . 0 RIGHT FOLD -->
 <!-- site-nav-side-list :: finish >> nav-right.["MENU"][0] -->
@@ -20781,7 +20829,7 @@ RIGHT FOLD
 <!-- site-nav-side-list :: start >> nav-right.["TEXT"][0] -->
 <!-- site-box-begin :: start >> 0 RIGHT BOX -->
 <div class="card">
-<div id="right-box" class="card-header">
+<div id="composer-box-right-box" class="card-header">
 <h6 class="composer-header">
 RIGHT BOX
 </h6>
@@ -20809,24 +20857,24 @@ RIGHT BOX
 <!-- site-nav-side-list :: finish >> nav-right.["SPACE"] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][0] -->
-<!-- site-fold-begin :: start >> group fold-library -->
-<div id="fold-library" class="accordion">
-<!-- site-fold-begin :: finish >> group fold-library -->
+<!-- site-fold-begin :: start >> group library -->
+<div id="composer-fold-group-library" class="accordion">
+<!-- site-fold-begin :: finish >> group library -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][0] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][1] -->
-<!-- site-fold-begin :: start >> 0 0 fold-library DATES -->
+<!-- site-fold-begin :: start >> 0 0 library DATES -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="dates" class="accordion-header">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-DATES">
+<div id="composer-fold-dates" class="accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-dates-target">
 <h6 class="composer-header">
 DATES
 </h6>
 </button>
 </div>
-<div id="toggle-DATES" class="accordion-collapse collapse" data-bs-parent="#fold-library">
+<div id="composer-fold-dates-target" class="accordion-collapse collapse" data-bs-parent="#composer-fold-group-library">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 0 0 fold-library DATES -->
+<!-- site-fold-begin :: finish >> 0 0 library DATES -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][1] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][2] -->
 <!-- site-library-shelf :: start >> list date -->
@@ -20883,19 +20931,19 @@ DATES
 <!-- site-fold-end :: finish >> -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][3] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][4] -->
-<!-- site-fold-begin :: start >> 0 0 fold-library AUTHORS -->
+<!-- site-fold-begin :: start >> 0 0 library AUTHORS -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="authors" class="accordion-header">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-AUTHORS">
+<div id="composer-fold-authors" class="accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-authors-target">
 <h6 class="composer-header">
 AUTHORS
 </h6>
 </button>
 </div>
-<div id="toggle-AUTHORS" class="accordion-collapse collapse" data-bs-parent="#fold-library">
+<div id="composer-fold-authors-target" class="accordion-collapse collapse" data-bs-parent="#composer-fold-group-library">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 0 0 fold-library AUTHORS -->
+<!-- site-fold-begin :: finish >> 0 0 library AUTHORS -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][4] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][5] -->
 <!-- site-library-shelf :: start >> list author -->
@@ -20968,19 +21016,19 @@ AUTHORS
 <!-- site-fold-end :: finish >> -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][6] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][7] -->
-<!-- site-fold-begin :: start >> 0 . fold-library TAGS -->
+<!-- site-fold-begin :: start >> 0 . library TAGS -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="tags" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-TAGS">
+<div id="composer-fold-tags" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-tags-target">
 <h6 class="composer-header">
 TAGS
 </h6>
 </button>
 </div>
-<div id="toggle-TAGS" class="accordion-collapse collapse show" data-bs-parent="#fold-library">
+<div id="composer-fold-tags-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 0 . fold-library TAGS -->
+<!-- site-fold-begin :: finish >> 0 . library TAGS -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][7] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][8] -->
 <!-- site-library-shelf :: start >> list tags -->
@@ -21096,20 +21144,20 @@ TAGS
 </div>
 <!-- site-column-end :: finish >> -->
 <!-- site-nav-side :: finish >> right -->
-<!-- site-targets >> .../.composer.tmp/site-cache-index-digest.html.row-end.html -->
+<!-- site-targets >> .../.composer.tmp/site-cache.index-digest.html.row-end.html -->
 <!-- site-row-end :: start >> -->
 </div>
 </div>
 <!-- site-row-end :: finish >> -->
-<!-- site-targets >> .../.composer.tmp/site-cache-index-digest.html.nav-bottom.html -->
+<!-- site-targets >> .../.composer.tmp/site-cache.index-digest.html.nav-bottom.html -->
 <!-- site-nav-bottom :: start >> -->
 <!-- site-nav-begin :: start >> bottom -->
-<div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbar-fixed-bottom">
+<div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#composer-nav-bottom">
 
 </div>
 <nav class="navbar navbar-expand-lg fixed-bottom">
 <div class="container-fluid">
-<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-fixed-bottom">
+<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#composer-nav-bottom">
 <span class="navbar-toggler-icon"></span>
 </button>
 <!-- site-copyright :: start >> -->
@@ -21123,7 +21171,7 @@ TAGS
 <!-- site-icon :: finish >> copyright --> COPYRIGHT
 </p>
 <!-- site-copyright :: finish >> -->
-<div class="navbar-collapse collapse" id="navbar-fixed-bottom">
+<div class="navbar-collapse collapse" id="composer-nav-bottom">
 <!-- site-nav-begin :: finish >> bottom -->
 <ol class="composer-link nav-item breadcrumb me-auto">
 <li class="breadcrumb-item">
@@ -21172,7 +21220,7 @@ BOTTOM TEXT
 <!-- site-info-data-list :: start >> info-bottom.["INFO"][0] -->
 <p class="composer-link navbar-text me-3">
 <!-- composer >> readtime-list -->
-<em>Reading time: 1654 words, 7 minutes</em>
+<em>Reading time: 1710 words, 7 minutes</em>
 </p>
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"][0] -->
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"] -->

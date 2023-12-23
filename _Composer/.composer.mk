@@ -22,7 +22,6 @@ endif
 ########################################
 
 override MAKEJOBS			:= 0
-override COMPOSER_INCLUDE		:= 1
 
 override c_site				:= 1
 override c_logo				:= $(COMPOSER_ROOT)/_branding/logo.png

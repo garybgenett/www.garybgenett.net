@@ -746,7 +746,7 @@ max-width:	100%;
 <section id="title-slide">
   <h1 class="title">Composer CMS: Content Make System</h1>
   <p class="author">Gary B. Genett</p>
-  <p class="date">v3.1 (2023-12-19)</p>
+  <p class="date">v3.1 (2023-12-22)</p>
 </section>
 
 <section>
@@ -1139,7 +1139,7 @@ make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
 <tr class="even">
 <td style="text-align: left;">[COMPOSER_INCLUDE]</td>
 <td style="text-align: left;">Include all: <code>.composer.mk</code></td>
-<td style="text-align: left;"><code>(boolean)</code></td>
+<td style="text-align: left;">1 <code>(boolean)</code></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">[COMPOSER_DEPENDS]</td>
@@ -1294,11 +1294,11 @@ make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
 <td style="text-align: left;">Print settings template: <code>.composer.mk</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">[template-yml]</td>
+<td style="text-align: left;">[template.yml]</td>
 <td style="text-align: left;">Print settings template: <code>.composer.yml</code></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">[template-md]</td>
+<td style="text-align: left;">[template.md]</td>
 <td style="text-align: left;">Print <code>markdown</code> file template</td>
 </tr>
 <tr class="even">
@@ -1423,11 +1423,11 @@ make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
 <td style="text-align: left;">Complete [config], including environment variables</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">[config-*]</td>
+<td style="text-align: left;">[config.*]</td>
 <td style="text-align: left;">Export individual <a href="#/composer-variables">Composer Variables</a> values</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">[config-yml]</td>
+<td style="text-align: left;">[config.yml]</td>
 <td style="text-align: left;">JSON export of <code>.composer.yml</code> configuration</td>
 </tr>
 <tr class="odd">
@@ -1451,43 +1451,47 @@ make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
 <td style="text-align: left;">Automatic [commit], without <code>$EDITOR</code> step</td>
 </tr>
 <tr class="even">
+<td style="text-align: left;">[commit-list]</td>
+<td style="text-align: left;">Use [c_list] to select and commit only specific files</td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;">[export]</td>
 <td style="text-align: left;">Synchronize <code>+Composer</code> export of [COMPOSER_ROOT]</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">[export-all]</td>
 <td style="text-align: left;">Also publish to upstream hosting providers</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">[export-force]</td>
 <td style="text-align: left;">Publish only, without synchronizing first</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">[*-export]</td>
 <td style="text-align: left;">Any targets named this way will also be run by [export]</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">[site-library]</td>
 <td style="text-align: left;">Build or update the [COMPOSER_LIBRARY]</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">[site-list]</td>
 <td style="text-align: left;">Show [COMPOSER_LIBRARY] metadata for current directory</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">[site-list-all]</td>
 <td style="text-align: left;">Do [site-list] for entire directory tree</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">[site-list-list]</td>
 <td style="text-align: left;">Output existing metadata fields and values</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">[site-list-null]</td>
 <td style="text-align: left;">List files which are missing metadata fields</td>
 </tr>
-<tr class="odd">
-<td style="text-align: left;">[site-list-*]</td>
+<tr class="even">
+<td style="text-align: left;">[site-list.*]</td>
 <td style="text-align: left;">Find and export all files named <code>*</code> in the tree</td>
 </tr>
 </tbody>

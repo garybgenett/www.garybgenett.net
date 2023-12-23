@@ -12665,11 +12665,42 @@ body {
 min-width:	100%;
 margin:	0px;
 padding:	0px;
-padding-top:	70px;
-padding-bottom:	70px;
+padding-top:	60px;
+padding-bottom:	60px;
 }
-.composer-sticky {
-max-height:	85vh;
+
+@media (min-width: 1400px) {
+.composer-scroll-xxl {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+@media (min-width: 1200px) {
+.composer-scroll-xl {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+@media (min-width: 992px) {
+.composer-scroll-lg {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+@media (min-width: 768px) {
+.composer-scroll-md {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+@media (min-width: 576px) {
+.composer-scroll-sm {
+max-height:	calc(100vh - 60px - 60px);
+overflow:	auto;
+}
+}
+.composer-scroll {
+max-height:	calc(100vh - 60px - 60px);
 overflow:	auto;
 }
 
@@ -12767,11 +12798,29 @@ width:	auto;
 height:	24px;
 width:	auto;
 }
-.composer-display {
+.composer-display .carousel-control-prev,
+.composer-display .carousel-control-next {
+height:	64px;
+width:	64px;
+opacity:	1;
+}
+.composer-display .carousel-control-prev-icon,
+.composer-display .carousel-control-next-icon {
+height:	32px;
+width:	32px;
+}
+.composer-display .carousel-indicators {
+margin-bottom:	2px;
+}
+.composer-display .carousel-indicators [data-bs-target] {
+height:	6px;
+width:	32px;
+}
+.composer-display-banner {
 height:	auto;
 max-width:	100%;
 }
-.composer-display-item {
+.composer-display-shelf {
 height:	auto;
 max-width:	128px;
 }
@@ -19667,18 +19716,18 @@ margin-top:	0px;
 <!-- site-targets >> .../projects/composer/.composer.tmp/site-cache.nav-top.html -->
 <!-- site-nav-top :: start >> .../_branding/logo.png -->
 <!-- site-nav-begin :: start >> top .../_branding/logo.png -->
-<div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbar-fixed-top">
+<div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#composer-nav-top">
 
 </div>
 <nav class="navbar navbar-expand-lg fixed-top">
 <div class="container-fluid">
-<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-fixed-top">
+<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#composer-nav-top">
 <span class="navbar-toggler-icon"></span>
 </button>
 <!-- site-brand :: start >> .../_branding/logo.png -->
 <a class="navbar-brand" href="http://www.garybgenett.net"> <img class="composer-logo" src="data:image/png;base64,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"> </a>
 <!-- site-brand :: finish >> .../_branding/logo.png -->
-<div class="navbar-collapse collapse" id="navbar-fixed-top">
+<div class="navbar-collapse collapse" id="composer-nav-top">
 <!-- site-nav-begin :: finish >> top .../_branding/logo.png -->
 <ul class="navbar-nav navbar-nav-scroll me-auto">
 <!-- site-nav-top-list :: start >> nav-top.["MENU"] -->
@@ -19894,7 +19943,7 @@ margin-top:	0px;
 <!-- site-targets >> .../projects/composer/.composer.tmp/site-cache.nav-left.html -->
 <!-- site-nav-side :: start >> left -->
 <!-- site-column-begin :: start >> left -->
-<div class="d-flex flex-column composer-sticky d-lg-sticky d-static order-lg-1 order-1 col-lg-3 col-6 d-lg-block d-block p-2">
+<div id="composer-nav-left" class="d-flex flex-column composer-scroll-lg order-lg-1 order-1 col-lg-3 col-6 d-lg-block d-block p-2">
 <!-- site-column-begin :: finish >> left -->
 <!-- site-nav-side-list :: start >> nav-left.["MENU"] -->
 <!-- site-nav-side-list :: finish >> nav-left.["MENU"] -->
@@ -19904,7 +19953,7 @@ margin-top:	0px;
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][0] -->
 <!-- site-box-begin :: start >> 0 Contents -->
 <div class="card">
-<div id="contents" class="card-header">
+<div id="composer-box-contents" class="card-header">
 <h6 class="composer-header">
 Contents
 </h6>
@@ -19965,7 +20014,7 @@ Contents
 <!-- site-nav-side :: finish >> left -->
 <!-- site-targets >> .../projects/composer/.composer.tmp/site-cache.column-begin.html -->
 <!-- site-column-begin :: start >> center -->
-<div class="d-flex flex-column composer-sticky d-lg-sticky d-static order-lg-2 order-3 col-lg-7 col-12 d-lg-block d-block p-2">
+<div id="composer-nav-center" class="d-flex flex-column composer-scroll-lg order-lg-2 order-3 col-lg-7 col-12 d-lg-block d-block p-2">
 <!-- site-column-begin :: finish >> center -->
 <!-- site-targets >> .../_header.md.cms -->
 <!-- site-file :: start >> .../_header.md.cms -->
@@ -20176,7 +20225,7 @@ All rights reserved.</code></pre>
 <!-- site-targets >> .../projects/composer/.composer.tmp/site-cache.nav-right.html -->
 <!-- site-nav-side :: start >> right -->
 <!-- site-column-begin :: start >> right -->
-<div class="d-flex flex-column composer-sticky d-lg-sticky d-static order-lg-3 order-2 col-lg-2 col-6 d-lg-block d-block p-2">
+<div id="composer-nav-right" class="d-flex flex-column composer-scroll-lg order-lg-3 order-2 col-lg-2 col-6 d-lg-block d-block p-2">
 <!-- site-column-begin :: finish >> right -->
 <!-- site-nav-side-list :: start >> nav-right.["MENU"] -->
 <!-- site-nav-side-list :: finish >> nav-right.["MENU"] -->
@@ -20186,7 +20235,7 @@ All rights reserved.</code></pre>
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][0] -->
 <!-- site-box-begin :: start >> 0 Tags -->
 <div class="card">
-<div id="tags" class="card-header">
+<div id="composer-box-tags" class="card-header">
 <h6 class="composer-header">
 Tags
 </h6>
@@ -20231,7 +20280,7 @@ Tags
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][4] -->
 <!-- site-box-begin :: start >> 0 History -->
 <div class="card">
-<div id="history" class="card-header">
+<div id="composer-box-history" class="card-header">
 <h6 class="composer-header">
 History
 </h6>
@@ -20272,12 +20321,12 @@ History
 <!-- site-targets >> .../projects/composer/.composer.tmp/site-cache.nav-bottom.html -->
 <!-- site-nav-bottom :: start >> -->
 <!-- site-nav-begin :: start >> bottom -->
-<div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbar-fixed-bottom">
+<div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#composer-nav-bottom">
 
 </div>
 <nav class="navbar navbar-expand-lg fixed-bottom">
 <div class="container-fluid">
-<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-fixed-bottom">
+<button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#composer-nav-bottom">
 <span class="navbar-toggler-icon"></span>
 </button>
 <!-- site-copyright :: start >> -->
@@ -20287,7 +20336,7 @@ History
 <!-- site-icon :: finish >> copyright --> Copyright (c) 2022, Gary B. Genett
 </p>
 <!-- site-copyright :: finish >> -->
-<div class="navbar-collapse collapse" id="navbar-fixed-bottom">
+<div class="navbar-collapse collapse" id="composer-nav-bottom">
 <!-- site-nav-begin :: finish >> bottom -->
 <ol class="composer-link nav-item breadcrumb me-auto">
 <li class="breadcrumb-item">
