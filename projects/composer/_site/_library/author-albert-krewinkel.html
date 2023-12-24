@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content />
-  <meta name="dcterms.date" content="2023-12-22" />
+  <meta name="dcterms.date" content="2023-12-24" />
   <title>EXAMPLE SITE – Author: Albert Krewinkel</title>
   <style>
     code{white-space: pre-wrap;}
@@ -12604,11 +12604,6 @@ color:	var(--solarized-magenta);
   <style type="text/css">
 
 
-.composer-form {
-background-color:	rgba(var(--bs-dark-rgb));
-color:	rgba(var(--bs-secondary-rgb));
-border:	1px solid rgba(var(--bs-secondary-rgb));
-}
 .navbar,
 .dropdown-menu,
 .accordion-button,
@@ -12621,6 +12616,12 @@ color:	rgba(var(--bs-secondary-rgb));
 }
 .accordion-item,
 .card {
+border:	1px solid rgba(var(--bs-secondary-rgb));
+}
+
+.composer-form {
+background-color:	rgba(var(--bs-dark-rgb));
+color:	rgba(var(--bs-secondary-rgb));
 border:	1px solid rgba(var(--bs-secondary-rgb));
 }
 
@@ -12801,21 +12802,42 @@ width:	auto;
 }
 .composer-display .carousel-control-prev,
 .composer-display .carousel-control-next {
-height:	64px;
-width:	64px;
-opacity:	1;
+background-color:	rgba(var(--bs-secondary-rgb));
+height:	calc(32px + (1px * 2));
+width:	calc(32px + (1px * 2));
+border:	1px solid black;
+border-radius:	8px;
+margin:	0px;
+opacity:	0.8;
 }
 .composer-display .carousel-control-prev-icon,
 .composer-display .carousel-control-next-icon {
 height:	32px;
 width:	32px;
 }
+.composer-display .carousel-indicators,
+.composer-display .carousel-indicators [data-bs-target] {
+background-color:	rgba(var(--bs-secondary-rgb));
+border:	1px solid black;
+border-radius:	12px;
+}
 .composer-display .carousel-indicators {
-margin-bottom:	2px;
+height:	calc(6px + (1px * 2) + (2px * 2) + (1px * 2));
+width:	auto;
+margin-left:	20%;
+margin-right:	20%;
+opacity:	0.8;
 }
 .composer-display .carousel-indicators [data-bs-target] {
 height:	6px;
 width:	32px;
+margin-top:	2px;
+margin-bottom:	2px;
+opacity:	1;
+}
+.composer-display .carousel-indicators .active {
+background-color:	black;
+opacity:	1;
 }
 .composer-display-banner {
 height:	auto;
@@ -19841,16 +19863,16 @@ margin-top:	0px;
 <!-- site-nav-top-list :: start >> nav-top.["CONTENTS"][0].["CONTENTS"][0] -->
 <!-- composer >> contents-menu 0 -->
 <li>
-<a href="#none--org-mode-features-and-differences0000----albert-krewinkel" class="dropdown-item"><em>(none)</em> :: Org-mode features and differences</a>
+<a href="#none--org-mode-features-and-differences" class="dropdown-item"><em>(none)</em> :: Org-mode features and differences</a>
 </li>
 <li>
-<a href="#january-10-2020--pandoc-lua-filters0000----albert-krewinkel-john-macfarlane" class="dropdown-item">January 10, 2020 :: Pandoc Lua Filters</a>
+<a href="#january-10-2020--pandoc-lua-filters" class="dropdown-item">January 10, 2020 :: Pandoc Lua Filters</a>
 </li>
 <li>
-<a href="#none--jats0000----albert-krewinkel" class="dropdown-item"><em>(none)</em> :: JATS</a>
+<a href="#none--jats" class="dropdown-item"><em>(none)</em> :: JATS</a>
 </li>
 <li>
-<a href="#2021-06-07--short-guide-to-pandocs-sources0000----albert-krewinkel" class="dropdown-item">2021-06-07 :: Short guide to pandoc’s sources</a>
+<a href="#2021-06-07--short-guide-to-pandocs-sources" class="dropdown-item">2021-06-07 :: Short guide to pandoc’s sources</a>
 </li>
 <!-- site-nav-top-list :: finish >> nav-top.["CONTENTS"][0].["CONTENTS"][0] -->
 <!-- site-nav-top-list :: finish >> nav-top.["CONTENTS"][0].["CONTENTS"] -->
@@ -20130,10 +20152,10 @@ CONTENTS
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][1] -->
 <!-- composer >> contents-list 0 -->
 <ul>
-<li><a href="#none--org-mode-features-and-differences0000----albert-krewinkel"><em>(none)</em> :: Org-mode features and differences</a></li>
-<li><a href="#january-10-2020--pandoc-lua-filters0000----albert-krewinkel-john-macfarlane">January 10, 2020 :: Pandoc Lua Filters</a></li>
-<li><a href="#none--jats0000----albert-krewinkel"><em>(none)</em> :: JATS</a></li>
-<li><a href="#2021-06-07--short-guide-to-pandocs-sources0000----albert-krewinkel">2021-06-07 :: Short guide to pandoc’s sources</a></li>
+<li><a href="#none--org-mode-features-and-differences"><em>(none)</em> :: Org-mode features and differences</a></li>
+<li><a href="#january-10-2020--pandoc-lua-filters">January 10, 2020 :: Pandoc Lua Filters</a></li>
+<li><a href="#none--jats"><em>(none)</em> :: JATS</a></li>
+<li><a href="#2021-06-07--short-guide-to-pandocs-sources">2021-06-07 :: Short guide to pandoc’s sources</a></li>
 </ul>
 <!-- site-nav-side-list :: finish >> nav-left.["CONTENTS"][1] -->
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][2] -->
@@ -20193,7 +20215,7 @@ CONTENTS
 <!-- site-fold-begin :: finish >> group library-digest -->
 <!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: Org-mode features and differences&#0000; -- Albert Krewinkel -->
 <!-- site-header :: start >> 1 *(none)* :: Org-mode features and differences&#0000; -- Albert Krewinkel -->
-<div id="none--org-mode-features-and-differences0000----albert-krewinkel">
+<div id="none--org-mode-features-and-differences">
 
 </div>
 <!-- site-header :: finish >> 1 *(none)* :: Org-mode features and differences&#0000; -- Albert Krewinkel -->
@@ -20239,7 +20261,7 @@ CONTENTS
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest January 10, 2020 :: Pandoc Lua Filters&#0000; -- Albert Krewinkel; John MacFarlane -->
 <!-- site-header :: start >> 1 January 10, 2020 :: Pandoc Lua Filters&#0000; -- Albert Krewinkel; John MacFarlane -->
-<div id="january-10-2020--pandoc-lua-filters0000----albert-krewinkel-john-macfarlane">
+<div id="january-10-2020--pandoc-lua-filters">
 
 </div>
 <!-- site-header :: finish >> 1 January 10, 2020 :: Pandoc Lua Filters&#0000; -- Albert Krewinkel; John MacFarlane -->
@@ -20275,7 +20297,7 @@ January 10, 2020 :: Pandoc Lua Filters  – Albert Krewinkel; John MacFarlane
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: JATS&#0000; -- Albert Krewinkel -->
 <!-- site-header :: start >> 1 *(none)* :: JATS&#0000; -- Albert Krewinkel -->
-<div id="none--jats0000----albert-krewinkel">
+<div id="none--jats">
 
 </div>
 <!-- site-header :: finish >> 1 *(none)* :: JATS&#0000; -- Albert Krewinkel -->
@@ -20599,7 +20621,7 @@ The article title. Added to the document’s front matter via the <a href="https
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2021-06-07 :: Short guide to pandoc's sources&#0000; -- Albert Krewinkel -->
 <!-- site-header :: start >> 1 2021-06-07 :: Short guide to pandoc's sources&#0000; -- Albert Krewinkel -->
-<div id="2021-06-07--short-guide-to-pandocs-sources0000----albert-krewinkel">
+<div id="2021-06-07--short-guide-to-pandocs-sources">
 
 </div>
 <!-- site-header :: finish >> 1 2021-06-07 :: Short guide to pandoc's sources&#0000; -- Albert Krewinkel -->

@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content />
-  <meta name="dcterms.date" content="2023-12-22" />
+  <meta name="dcterms.date" content="2023-12-24" />
   <title>Gary B. Genett – Composer CMS v3.1</title>
   <style>
     code{white-space: pre-wrap;}
@@ -12604,11 +12604,6 @@ color:	var(--solarized-magenta);
   <style type="text/css">
 
 
-.composer-form {
-background-color:	rgba(var(--bs-dark-rgb));
-color:	rgba(var(--bs-secondary-rgb));
-border:	1px solid rgba(var(--bs-secondary-rgb));
-}
 .navbar,
 .dropdown-menu,
 .accordion-button,
@@ -12621,6 +12616,12 @@ color:	rgba(var(--bs-secondary-rgb));
 }
 .accordion-item,
 .card {
+border:	1px solid rgba(var(--bs-secondary-rgb));
+}
+
+.composer-form {
+background-color:	rgba(var(--bs-dark-rgb));
+color:	rgba(var(--bs-secondary-rgb));
 border:	1px solid rgba(var(--bs-secondary-rgb));
 }
 
@@ -12801,21 +12802,42 @@ width:	auto;
 }
 .composer-display .carousel-control-prev,
 .composer-display .carousel-control-next {
-height:	64px;
-width:	64px;
-opacity:	1;
+background-color:	rgba(var(--bs-secondary-rgb));
+height:	calc(32px + (1px * 2));
+width:	calc(32px + (1px * 2));
+border:	1px solid black;
+border-radius:	8px;
+margin:	0px;
+opacity:	0.8;
 }
 .composer-display .carousel-control-prev-icon,
 .composer-display .carousel-control-next-icon {
 height:	32px;
 width:	32px;
 }
+.composer-display .carousel-indicators,
+.composer-display .carousel-indicators [data-bs-target] {
+background-color:	rgba(var(--bs-secondary-rgb));
+border:	1px solid black;
+border-radius:	12px;
+}
 .composer-display .carousel-indicators {
-margin-bottom:	2px;
+height:	calc(6px + (1px * 2) + (2px * 2) + (1px * 2));
+width:	auto;
+margin-left:	20%;
+margin-right:	20%;
+opacity:	0.8;
 }
 .composer-display .carousel-indicators [data-bs-target] {
 height:	6px;
 width:	32px;
+margin-top:	2px;
+margin-bottom:	2px;
+opacity:	1;
+}
+.composer-display .carousel-indicators .active {
+background-color:	black;
+opacity:	1;
 }
 .composer-display-banner {
 height:	auto;
@@ -22008,7 +22030,7 @@ make -f .../.Composer/Makefile _release</code></pre>
 <li>For the <a href="#commit--commit-all--commit-list">commit-list</a> target specifically, <a href="#c_type--c_base--c_list">c_list</a> is repurposed to select the limited list of files and/or directories that should be committed. All selected files and directories must exist in the current directory or somewhere in the subdirectory tree below it. There is no option to skip the <code>$EDITOR</code> with this target.</li>
 </ul>
 <p>Commit title format:</p>
-<pre><code>[Composer CMS v3.1 :: 2023-12-22T20:52:50-08:00]</code></pre>
+<pre><code>[Composer CMS v3.1 :: 2023-12-24T06:31:33-08:00]</code></pre>
 <p>Example using <a href="#commit--commit-all--commit-list">commit-list</a> with <a href="#c_type--c_base--c_list">c_list</a>:</p>
 <pre><code>make commit-list c_list=&quot;Makefile artifacts&quot;</code></pre>
 </section>
@@ -22317,7 +22339,7 @@ endif</code></pre>
 <p>Use the <a href="#template--templateyml--templatemd">template.md</a> target to create new <code>markdown</code> files:</p>
 <pre><code>---
 title: &quot;Composer CMS: Content Make System&quot;
-date: 2023-12-22
+date: 2023-12-24
 author:
   - Gary B. Genett
 tags:
@@ -22669,6 +22691,8 @@ template</code></pre>
 .headers-subdirs
 7Z
 7Z_VER
+ASPELL
+ASPELL_DIR
 BASE64
 BASH
 BASH_VER
@@ -22986,6 +23010,7 @@ HEREDOC_CUSTOM_REVEALJS_CSS_HACK
 HEREDOC_GITATTRIBUTES
 HEREDOC_GITIGNORE
 HEREDOC_LICENSE
+HEREDOC_SPELL_WORDLIST
 HTML_BREAK
 HTML_HIDE
 HTML_SPACE
@@ -23727,7 +23752,7 @@ History
 <!-- site-info-data-list :: start >> info-bottom.["INFO"][0] -->
 <p class="composer-link navbar-text me-3">
 <!-- composer >> readtime-list -->
-<em>Reading time: 8848 words, 40 minutes</em>
+<em>Reading time: 8851 words, 40 minutes</em>
 </p>
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"][0] -->
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"] -->

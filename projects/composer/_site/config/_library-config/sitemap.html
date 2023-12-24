@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content />
-  <meta name="dcterms.date" content="2023-12-22" />
+  <meta name="dcterms.date" content="2023-12-24" />
   <title>EXAMPLE SITE – Directory</title>
   <style>
     code{white-space: pre-wrap;}
@@ -12777,21 +12777,42 @@ width:	auto;
 }
 .composer-display .carousel-control-prev,
 .composer-display .carousel-control-next {
-height:	64px;
-width:	64px;
-opacity:	1;
+background-color:	rgba(var(--bs-secondary-rgb));
+height:	calc(32px + (1px * 2));
+width:	calc(32px + (1px * 2));
+border:	1px solid black;
+border-radius:	8px;
+margin:	0px;
+opacity:	0.8;
 }
 .composer-display .carousel-control-prev-icon,
 .composer-display .carousel-control-next-icon {
 height:	32px;
 width:	32px;
 }
+.composer-display .carousel-indicators,
+.composer-display .carousel-indicators [data-bs-target] {
+background-color:	rgba(var(--bs-secondary-rgb));
+border:	1px solid black;
+border-radius:	12px;
+}
 .composer-display .carousel-indicators {
-margin-bottom:	2px;
+height:	calc(6px + (1px * 2) + (2px * 2) + (1px * 2));
+width:	auto;
+margin-left:	20%;
+margin-right:	20%;
+opacity:	0.8;
 }
 .composer-display .carousel-indicators [data-bs-target] {
 height:	6px;
 width:	32px;
+margin-top:	2px;
+margin-bottom:	2px;
+opacity:	1;
+}
+.composer-display .carousel-indicators .active {
+background-color:	black;
+opacity:	1;
 }
 .composer-display-banner {
 height:	auto;
@@ -20140,7 +20161,7 @@ config
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">
-Configured Site  <em>(2023-12-22)</em><br><em>– Gary B. Genett</em><br><em>. Main</em>
+Configured Site  <em>(2023-12-24)</em><br><em>– Gary B. Genett</em><br><em>. Main</em>
 </td>
 <td style="text-align: left;">
 <a href="../../config/index.html">index.html</a>
@@ -20148,7 +20169,7 @@ Configured Site  <em>(2023-12-22)</em><br><em>– Gary B. Genett</em><br><em>.
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-Digest  <em>(2023-12-22)</em><br><em>– Gary B. Genett</em><br><em>. Main</em>
+Digest  <em>(2023-12-24)</em><br><em>– Gary B. Genett</em><br><em>. Main</em>
 </td>
 <td style="text-align: left;">
 <a href="../../config/index-digest.html">index-digest.html</a>
@@ -20156,7 +20177,7 @@ Digest  <em>(2023-12-22)</em><br><em>– Gary B. Genett</em><br><em>. Main</em
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-Metainfo Page  <em>(2023-12-22)</em><br><em>– Gary B. Genett</em><br><em>. Main</em>
+Metainfo Page  <em>(2023-12-24)</em><br><em>– Gary B. Genett</em><br><em>. Main</em>
 </td>
 <td style="text-align: left;">
 <a href="../../config/pages.html">pages.html</a>
@@ -20164,7 +20185,7 @@ Metainfo Page  <em>(2023-12-22)</em><br><em>– Gary B. Genett</em><br><em>. M
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-Metainfo Page  <em>(2023-12-22)</em><br><em>– Gary B. Genett</em><br><em>. Main</em>
+Metainfo Page  <em>(2023-12-24)</em><br><em>– Gary B. Genett</em><br><em>. Main</em>
 </td>
 <td style="text-align: left;">
 <a href="../../config/pages.pdf">pages.pdf</a>
@@ -20204,7 +20225,7 @@ config/_library-config
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">
-Creator: Author 1  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
+Creator: Author 1  <em>(2023-12-24)</em><br><em>– </em><br><em>. </em>
 </td>
 <td style="text-align: left;">
 <a href="../../config/_library-config/author-author-1.html">author-author-1.html</a>
@@ -20212,7 +20233,7 @@ Creator: Author 1  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-Creator: Author 2  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
+Creator: Author 2  <em>(2023-12-24)</em><br><em>– </em><br><em>. </em>
 </td>
 <td style="text-align: left;">
 <a href="../../config/_library-config/author-author-2.html">author-author-2.html</a>
@@ -20220,7 +20241,7 @@ Creator: Author 2  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-Creator: Author 3  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
+Creator: Author 3  <em>(2023-12-24)</em><br><em>– </em><br><em>. </em>
 </td>
 <td style="text-align: left;">
 <a href="../../config/_library-config/author-author-3.html">author-author-3.html</a>
@@ -20228,7 +20249,7 @@ Creator: Author 3  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-Creator: Gary B. Genett  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
+Creator: Gary B. Genett  <em>(2023-12-24)</em><br><em>– </em><br><em>. </em>
 </td>
 <td style="text-align: left;">
 <a href="../../config/_library-config/author-gary-b-genett.html">author-gary-b-genett.html</a>
@@ -20236,7 +20257,7 @@ Creator: Gary B. Genett  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-Year: 2022  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
+Year: 2022  <em>(2023-12-24)</em><br><em>– </em><br><em>. </em>
 </td>
 <td style="text-align: left;">
 <a href="../../config/_library-config/date-2022.html">date-2022.html</a>
@@ -20244,7 +20265,7 @@ Year: 2022  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-Year: 2023  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
+Year: 2023  <em>(2023-12-24)</em><br><em>– </em><br><em>. </em>
 </td>
 <td style="text-align: left;">
 <a href="../../config/_library-config/date-2023.html">date-2023.html</a>
@@ -20252,7 +20273,7 @@ Year: 2023  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-Year: 2024  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
+Year: 2024  <em>(2023-12-24)</em><br><em>– </em><br><em>. </em>
 </td>
 <td style="text-align: left;">
 <a href="../../config/_library-config/date-2024.html">date-2024.html</a>
@@ -20260,7 +20281,7 @@ Year: 2024  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-Digest  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
+Digest  <em>(2023-12-24)</em><br><em>– </em><br><em>. </em>
 </td>
 <td style="text-align: left;">
 <a href="../../config/_library-config/index.html">index.html</a>
@@ -20268,7 +20289,7 @@ Digest  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-Directory  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
+Directory  <em>(2023-12-24)</em><br><em>– </em><br><em>. </em>
 </td>
 <td style="text-align: left;">
 <a href="../../config/_library-config/sitemap.html">sitemap.html</a>
@@ -20276,7 +20297,7 @@ Directory  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-Mark: Main  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
+Mark: Main  <em>(2023-12-24)</em><br><em>– </em><br><em>. </em>
 </td>
 <td style="text-align: left;">
 <a href="../../config/_library-config/tags-main.html">tags-main.html</a>
@@ -20284,7 +20305,7 @@ Mark: Main  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-Mark: Tag 0  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
+Mark: Tag 0  <em>(2023-12-24)</em><br><em>– </em><br><em>. </em>
 </td>
 <td style="text-align: left;">
 <a href="../../config/_library-config/tags-tag-0.html">tags-tag-0.html</a>
@@ -20292,7 +20313,7 @@ Mark: Tag 0  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-Mark: Tag 1  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
+Mark: Tag 1  <em>(2023-12-24)</em><br><em>– </em><br><em>. </em>
 </td>
 <td style="text-align: left;">
 <a href="../../config/_library-config/tags-tag-1.html">tags-tag-1.html</a>
@@ -20300,7 +20321,7 @@ Mark: Tag 1  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-Mark: Tag 2  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
+Mark: Tag 2  <em>(2023-12-24)</em><br><em>– </em><br><em>. </em>
 </td>
 <td style="text-align: left;">
 <a href="../../config/_library-config/tags-tag-2.html">tags-tag-2.html</a>
@@ -20308,7 +20329,7 @@ Mark: Tag 2  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-Mark: Tag 3  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
+Mark: Tag 3  <em>(2023-12-24)</em><br><em>– </em><br><em>. </em>
 </td>
 <td style="text-align: left;">
 <a href="../../config/_library-config/tags-tag-3.html">tags-tag-3.html</a>
@@ -20316,7 +20337,7 @@ Mark: Tag 3  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-Mark: Tag 4  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
+Mark: Tag 4  <em>(2023-12-24)</em><br><em>– </em><br><em>. </em>
 </td>
 <td style="text-align: left;">
 <a href="../../config/_library-config/tags-tag-4.html">tags-tag-4.html</a>
@@ -20324,7 +20345,7 @@ Mark: Tag 4  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-Mark: Tag 5  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
+Mark: Tag 5  <em>(2023-12-24)</em><br><em>– </em><br><em>. </em>
 </td>
 <td style="text-align: left;">
 <a href="../../config/_library-config/tags-tag-5.html">tags-tag-5.html</a>
@@ -20332,7 +20353,7 @@ Mark: Tag 5  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-Mark: Tag 6  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
+Mark: Tag 6  <em>(2023-12-24)</em><br><em>– </em><br><em>. </em>
 </td>
 <td style="text-align: left;">
 <a href="../../config/_library-config/tags-tag-6.html">tags-tag-6.html</a>
@@ -20340,7 +20361,7 @@ Mark: Tag 6  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-Mark: Tag 7  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
+Mark: Tag 7  <em>(2023-12-24)</em><br><em>– </em><br><em>. </em>
 </td>
 <td style="text-align: left;">
 <a href="../../config/_library-config/tags-tag-7.html">tags-tag-7.html</a>
@@ -20348,7 +20369,7 @@ Mark: Tag 7  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-Mark: Tag 8  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
+Mark: Tag 8  <em>(2023-12-24)</em><br><em>– </em><br><em>. </em>
 </td>
 <td style="text-align: left;">
 <a href="../../config/_library-config/tags-tag-8.html">tags-tag-8.html</a>
@@ -20356,7 +20377,7 @@ Mark: Tag 8  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-Mark: Tag 9  <em>(2023-12-22)</em><br><em>– </em><br><em>. </em>
+Mark: Tag 9  <em>(2023-12-24)</em><br><em>– </em><br><em>. </em>
 </td>
 <td style="text-align: left;">
 <a href="../../config/_library-config/tags-tag-9.html">tags-tag-9.html</a>

@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content />
-  <meta name="dcterms.date" content="2023-12-22" />
+  <meta name="dcterms.date" content="2023-12-24" />
   <title>EXAMPLE SITE – Year: 2023</title>
   <style>
     code{white-space: pre-wrap;}
@@ -12604,11 +12604,6 @@ color:	var(--solarized-magenta);
   <style type="text/css">
 
 
-.composer-form {
-background-color:	rgba(var(--bs-dark-rgb));
-color:	rgba(var(--bs-secondary-rgb));
-border:	1px solid rgba(var(--bs-secondary-rgb));
-}
 .navbar,
 .dropdown-menu,
 .accordion-button,
@@ -12621,6 +12616,12 @@ color:	rgba(var(--bs-secondary-rgb));
 }
 .accordion-item,
 .card {
+border:	1px solid rgba(var(--bs-secondary-rgb));
+}
+
+.composer-form {
+background-color:	rgba(var(--bs-dark-rgb));
+color:	rgba(var(--bs-secondary-rgb));
 border:	1px solid rgba(var(--bs-secondary-rgb));
 }
 
@@ -12801,21 +12802,42 @@ width:	auto;
 }
 .composer-display .carousel-control-prev,
 .composer-display .carousel-control-next {
-height:	64px;
-width:	64px;
-opacity:	1;
+background-color:	rgba(var(--bs-secondary-rgb));
+height:	calc(32px + (1px * 2));
+width:	calc(32px + (1px * 2));
+border:	1px solid black;
+border-radius:	8px;
+margin:	0px;
+opacity:	0.8;
 }
 .composer-display .carousel-control-prev-icon,
 .composer-display .carousel-control-next-icon {
 height:	32px;
 width:	32px;
 }
+.composer-display .carousel-indicators,
+.composer-display .carousel-indicators [data-bs-target] {
+background-color:	rgba(var(--bs-secondary-rgb));
+border:	1px solid black;
+border-radius:	12px;
+}
 .composer-display .carousel-indicators {
-margin-bottom:	2px;
+height:	calc(6px + (1px * 2) + (2px * 2) + (1px * 2));
+width:	auto;
+margin-left:	20%;
+margin-right:	20%;
+opacity:	0.8;
 }
 .composer-display .carousel-indicators [data-bs-target] {
 height:	6px;
 width:	32px;
+margin-top:	2px;
+margin-bottom:	2px;
+opacity:	1;
+}
+.composer-display .carousel-indicators .active {
+background-color:	black;
+opacity:	1;
 }
 .composer-display-banner {
 height:	auto;
@@ -19841,52 +19863,52 @@ margin-top:	0px;
 <!-- site-nav-top-list :: start >> nav-top.["CONTENTS"][0].["CONTENTS"][0] -->
 <!-- composer >> contents-menu 0 -->
 <li>
-<a href="#2023-12-22--themes--overlays0000----gary-b-genett" class="dropdown-item">2023-12-22 :: Themes &amp; Overlays</a>
+<a href="#2023-12-24--themes--overlays" class="dropdown-item">2023-12-24 :: Themes &amp; Overlays</a>
 </li>
 <li>
-<a href="#2023-12-22--default-site0000----gary-b-genett" class="dropdown-item">2023-12-22 :: Default Site</a>
+<a href="#2023-12-24--default-site" class="dropdown-item">2023-12-24 :: Default Site</a>
 </li>
 <li>
-<a href="#2023-12-22--introduction0000----gary-b-genett" class="dropdown-item">2023-12-22 :: Introduction</a>
+<a href="#2023-12-24--introduction" class="dropdown-item">2023-12-24 :: Introduction</a>
 </li>
 <li>
-<a href="#2023-12-22--layout--elements0000----gary-b-genett" class="dropdown-item">2023-12-22 :: Layout &amp; Elements</a>
+<a href="#2023-12-24--layout--elements" class="dropdown-item">2023-12-24 :: Layout &amp; Elements</a>
 </li>
 <li>
-<a href="#2023-12-22--metainfo-page0000----gary-b-genett" class="dropdown-item">2023-12-22 :: Metainfo Page</a>
+<a href="#2023-12-24--metainfo-page" class="dropdown-item">2023-12-24 :: Metainfo Page</a>
 </li>
 <li>
-<a href="#2023-12-22--configured-site0000----gary-b-genett" class="dropdown-item">2023-12-22 :: Configured Site</a>
+<a href="#2023-12-24--configured-site" class="dropdown-item">2023-12-24 :: Configured Site</a>
 </li>
 <li>
-<a href="#2023-01-01--page-number-090000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2023-01-01 :: Page Number 09</a>
+<a href="#2023-01-01--page-number-09" class="dropdown-item">2023-01-01 :: Page Number 09</a>
 </li>
 <li>
-<a href="#2023-01-01--page-number-080000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2023-01-01 :: Page Number 08</a>
+<a href="#2023-01-01--page-number-08" class="dropdown-item">2023-01-01 :: Page Number 08</a>
 </li>
 <li>
-<a href="#2023-01-01--page-number-070000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2023-01-01 :: Page Number 07</a>
+<a href="#2023-01-01--page-number-07" class="dropdown-item">2023-01-01 :: Page Number 07</a>
 </li>
 <li>
-<a href="#2023-01-01--page-number-060000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2023-01-01 :: Page Number 06</a>
+<a href="#2023-01-01--page-number-06" class="dropdown-item">2023-01-01 :: Page Number 06</a>
 </li>
 <li>
-<a href="#2023-01-01--page-number-050000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2023-01-01 :: Page Number 05</a>
+<a href="#2023-01-01--page-number-05" class="dropdown-item">2023-01-01 :: Page Number 05</a>
 </li>
 <li>
-<a href="#2023-01-01--page-number-040000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2023-01-01 :: Page Number 04</a>
+<a href="#2023-01-01--page-number-04" class="dropdown-item">2023-01-01 :: Page Number 04</a>
 </li>
 <li>
-<a href="#2023-01-01--page-number-030000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2023-01-01 :: Page Number 03</a>
+<a href="#2023-01-01--page-number-03" class="dropdown-item">2023-01-01 :: Page Number 03</a>
 </li>
 <li>
-<a href="#2023-01-01--page-number-020000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2023-01-01 :: Page Number 02</a>
+<a href="#2023-01-01--page-number-02" class="dropdown-item">2023-01-01 :: Page Number 02</a>
 </li>
 <li>
-<a href="#2023-01-01--page-number-010000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2023-01-01 :: Page Number 01</a>
+<a href="#2023-01-01--page-number-01" class="dropdown-item">2023-01-01 :: Page Number 01</a>
 </li>
 <li>
-<a href="#2023-01-01--page-number-000000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2023-01-01 :: Page Number 00</a>
+<a href="#2023-01-01--page-number-00" class="dropdown-item">2023-01-01 :: Page Number 00</a>
 </li>
 <!-- site-nav-top-list :: finish >> nav-top.["CONTENTS"][0].["CONTENTS"][0] -->
 <!-- site-nav-top-list :: finish >> nav-top.["CONTENTS"][0].["CONTENTS"] -->
@@ -20166,22 +20188,22 @@ CONTENTS
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][1] -->
 <!-- composer >> contents-list 0 -->
 <ul>
-<li><a href="#2023-12-22--themes--overlays0000----gary-b-genett">2023-12-22 :: Themes &amp; Overlays</a></li>
-<li><a href="#2023-12-22--default-site0000----gary-b-genett">2023-12-22 :: Default Site</a></li>
-<li><a href="#2023-12-22--introduction0000----gary-b-genett">2023-12-22 :: Introduction</a></li>
-<li><a href="#2023-12-22--layout--elements0000----gary-b-genett">2023-12-22 :: Layout &amp; Elements</a></li>
-<li><a href="#2023-12-22--metainfo-page0000----gary-b-genett">2023-12-22 :: Metainfo Page</a></li>
-<li><a href="#2023-12-22--configured-site0000----gary-b-genett">2023-12-22 :: Configured Site</a></li>
-<li><a href="#2023-01-01--page-number-090000----gary-b-genett-author-1-author-2-author-3">2023-01-01 :: Page Number 09</a></li>
-<li><a href="#2023-01-01--page-number-080000----gary-b-genett-author-1-author-2-author-3">2023-01-01 :: Page Number 08</a></li>
-<li><a href="#2023-01-01--page-number-070000----gary-b-genett-author-1-author-2-author-3">2023-01-01 :: Page Number 07</a></li>
-<li><a href="#2023-01-01--page-number-060000----gary-b-genett-author-1-author-2-author-3">2023-01-01 :: Page Number 06</a></li>
-<li><a href="#2023-01-01--page-number-050000----gary-b-genett-author-1-author-2-author-3">2023-01-01 :: Page Number 05</a></li>
-<li><a href="#2023-01-01--page-number-040000----gary-b-genett-author-1-author-2-author-3">2023-01-01 :: Page Number 04</a></li>
-<li><a href="#2023-01-01--page-number-030000----gary-b-genett-author-1-author-2-author-3">2023-01-01 :: Page Number 03</a></li>
-<li><a href="#2023-01-01--page-number-020000----gary-b-genett-author-1-author-2-author-3">2023-01-01 :: Page Number 02</a></li>
-<li><a href="#2023-01-01--page-number-010000----gary-b-genett-author-1-author-2-author-3">2023-01-01 :: Page Number 01</a></li>
-<li><a href="#2023-01-01--page-number-000000----gary-b-genett-author-1-author-2-author-3">2023-01-01 :: Page Number 00</a></li>
+<li><a href="#2023-12-24--themes--overlays">2023-12-24 :: Themes &amp; Overlays</a></li>
+<li><a href="#2023-12-24--default-site">2023-12-24 :: Default Site</a></li>
+<li><a href="#2023-12-24--introduction">2023-12-24 :: Introduction</a></li>
+<li><a href="#2023-12-24--layout--elements">2023-12-24 :: Layout &amp; Elements</a></li>
+<li><a href="#2023-12-24--metainfo-page">2023-12-24 :: Metainfo Page</a></li>
+<li><a href="#2023-12-24--configured-site">2023-12-24 :: Configured Site</a></li>
+<li><a href="#2023-01-01--page-number-09">2023-01-01 :: Page Number 09</a></li>
+<li><a href="#2023-01-01--page-number-08">2023-01-01 :: Page Number 08</a></li>
+<li><a href="#2023-01-01--page-number-07">2023-01-01 :: Page Number 07</a></li>
+<li><a href="#2023-01-01--page-number-06">2023-01-01 :: Page Number 06</a></li>
+<li><a href="#2023-01-01--page-number-05">2023-01-01 :: Page Number 05</a></li>
+<li><a href="#2023-01-01--page-number-04">2023-01-01 :: Page Number 04</a></li>
+<li><a href="#2023-01-01--page-number-03">2023-01-01 :: Page Number 03</a></li>
+<li><a href="#2023-01-01--page-number-02">2023-01-01 :: Page Number 02</a></li>
+<li><a href="#2023-01-01--page-number-01">2023-01-01 :: Page Number 01</a></li>
+<li><a href="#2023-01-01--page-number-00">2023-01-01 :: Page Number 00</a></li>
 </ul>
 <!-- site-nav-side-list :: finish >> nav-left.["CONTENTS"][1] -->
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][2] -->
@@ -20239,24 +20261,24 @@ CONTENTS
 <!-- site-fold-begin :: start >> group library-digest -->
 <div id="composer-fold-group-library-digest" class="accordion">
 <!-- site-fold-begin :: finish >> group library-digest -->
-<!-- site-fold-begin :: start >> 1 . library-digest 2023-12-22 :: Themes & Overlays&#0000; -- Gary B. Genett -->
-<!-- site-header :: start >> 1 2023-12-22 :: Themes & Overlays&#0000; -- Gary B. Genett -->
-<div id="2023-12-22--themes--overlays0000----gary-b-genett">
+<!-- site-fold-begin :: start >> 1 . library-digest 2023-12-24 :: Themes & Overlays&#0000; -- Gary B. Genett -->
+<!-- site-header :: start >> 1 2023-12-24 :: Themes & Overlays&#0000; -- Gary B. Genett -->
+<div id="2023-12-24--themes--overlays">
 
 </div>
-<!-- site-header :: finish >> 1 2023-12-22 :: Themes & Overlays&#0000; -- Gary B. Genett -->
+<!-- site-header :: finish >> 1 2023-12-24 :: Themes & Overlays&#0000; -- Gary B. Genett -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="composer-fold-2023-12-22--themes--overlays0000----gary-b-genett" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-2023-12-22--themes--overlays0000----gary-b-genett-target">
+<div id="composer-fold-2023-12-24--themes--overlays0000----gary-b-genett" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-2023-12-24--themes--overlays0000----gary-b-genett-target">
 <h1 class="composer-header">
-2023-12-22 :: Themes &amp; Overlays  – Gary B. Genett
+2023-12-24 :: Themes &amp; Overlays  – Gary B. Genett
 </h1>
 </button>
 </div>
-<div id="composer-fold-2023-12-22--themes--overlays0000----gary-b-genett-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
+<div id="composer-fold-2023-12-24--themes--overlays0000----gary-b-genett-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 1 . library-digest 2023-12-22 :: Themes & Overlays&#0000; -- Gary B. Genett -->
+<!-- site-fold-begin :: finish >> 1 . library-digest 2023-12-24 :: Themes & Overlays&#0000; -- Gary B. Genett -->
 <!-- site-break :: start >> -->
 <!-- site-break :: finish >> -->
 <p>[…]</p>
@@ -20271,24 +20293,24 @@ CONTENTS
 <p>
 </p>
 <!-- site-spacer :: finish >> -->
-<!-- site-fold-begin :: start >> 1 . library-digest 2023-12-22 :: Default Site&#0000; -- Gary B. Genett -->
-<!-- site-header :: start >> 1 2023-12-22 :: Default Site&#0000; -- Gary B. Genett -->
-<div id="2023-12-22--default-site0000----gary-b-genett">
+<!-- site-fold-begin :: start >> 1 . library-digest 2023-12-24 :: Default Site&#0000; -- Gary B. Genett -->
+<!-- site-header :: start >> 1 2023-12-24 :: Default Site&#0000; -- Gary B. Genett -->
+<div id="2023-12-24--default-site">
 
 </div>
-<!-- site-header :: finish >> 1 2023-12-22 :: Default Site&#0000; -- Gary B. Genett -->
+<!-- site-header :: finish >> 1 2023-12-24 :: Default Site&#0000; -- Gary B. Genett -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="composer-fold-2023-12-22--default-site0000----gary-b-genett" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-2023-12-22--default-site0000----gary-b-genett-target">
+<div id="composer-fold-2023-12-24--default-site0000----gary-b-genett" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-2023-12-24--default-site0000----gary-b-genett-target">
 <h1 class="composer-header">
-2023-12-22 :: Default Site  – Gary B. Genett
+2023-12-24 :: Default Site  – Gary B. Genett
 </h1>
 </button>
 </div>
-<div id="composer-fold-2023-12-22--default-site0000----gary-b-genett-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
+<div id="composer-fold-2023-12-24--default-site0000----gary-b-genett-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 1 . library-digest 2023-12-22 :: Default Site&#0000; -- Gary B. Genett -->
+<!-- site-fold-begin :: finish >> 1 . library-digest 2023-12-24 :: Default Site&#0000; -- Gary B. Genett -->
 <p>This is a default page, where all menus and settings are empty. All aspects of <code>c_site</code> pages are configurable using <code>.composer.yml</code> files.</p>
 <table style="width:98%;">
 <colgroup>
@@ -20334,24 +20356,24 @@ CONTENTS
 <p>
 </p>
 <!-- site-spacer :: finish >> -->
-<!-- site-fold-begin :: start >> 1 . library-digest 2023-12-22 :: Introduction&#0000; -- Gary B. Genett -->
-<!-- site-header :: start >> 1 2023-12-22 :: Introduction&#0000; -- Gary B. Genett -->
-<div id="2023-12-22--introduction0000----gary-b-genett">
+<!-- site-fold-begin :: start >> 1 . library-digest 2023-12-24 :: Introduction&#0000; -- Gary B. Genett -->
+<!-- site-header :: start >> 1 2023-12-24 :: Introduction&#0000; -- Gary B. Genett -->
+<div id="2023-12-24--introduction">
 
 </div>
-<!-- site-header :: finish >> 1 2023-12-22 :: Introduction&#0000; -- Gary B. Genett -->
+<!-- site-header :: finish >> 1 2023-12-24 :: Introduction&#0000; -- Gary B. Genett -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="composer-fold-2023-12-22--introduction0000----gary-b-genett" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-2023-12-22--introduction0000----gary-b-genett-target">
+<div id="composer-fold-2023-12-24--introduction0000----gary-b-genett" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-2023-12-24--introduction0000----gary-b-genett-target">
 <h1 class="composer-header">
-2023-12-22 :: Introduction  – Gary B. Genett
+2023-12-24 :: Introduction  – Gary B. Genett
 </h1>
 </button>
 </div>
-<div id="composer-fold-2023-12-22--introduction0000----gary-b-genett-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
+<div id="composer-fold-2023-12-24--introduction0000----gary-b-genett-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 1 . library-digest 2023-12-22 :: Introduction&#0000; -- Gary B. Genett -->
+<!-- site-fold-begin :: finish >> 1 . library-digest 2023-12-24 :: Introduction&#0000; -- Gary B. Genett -->
 <p>#WORK # introduction</p>
 <table style="width:98%;">
 <colgroup>
@@ -20472,24 +20494,24 @@ CONTENTS
 <p>
 </p>
 <!-- site-spacer :: finish >> -->
-<!-- site-fold-begin :: start >> 1 . library-digest 2023-12-22 :: Layout & Elements&#0000; -- Gary B. Genett -->
-<!-- site-header :: start >> 1 2023-12-22 :: Layout & Elements&#0000; -- Gary B. Genett -->
-<div id="2023-12-22--layout--elements0000----gary-b-genett">
+<!-- site-fold-begin :: start >> 1 . library-digest 2023-12-24 :: Layout & Elements&#0000; -- Gary B. Genett -->
+<!-- site-header :: start >> 1 2023-12-24 :: Layout & Elements&#0000; -- Gary B. Genett -->
+<div id="2023-12-24--layout--elements">
 
 </div>
-<!-- site-header :: finish >> 1 2023-12-22 :: Layout & Elements&#0000; -- Gary B. Genett -->
+<!-- site-header :: finish >> 1 2023-12-24 :: Layout & Elements&#0000; -- Gary B. Genett -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="composer-fold-2023-12-22--layout--elements0000----gary-b-genett" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-2023-12-22--layout--elements0000----gary-b-genett-target">
+<div id="composer-fold-2023-12-24--layout--elements0000----gary-b-genett" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-2023-12-24--layout--elements0000----gary-b-genett-target">
 <h1 class="composer-header">
-2023-12-22 :: Layout &amp; Elements  – Gary B. Genett
+2023-12-24 :: Layout &amp; Elements  – Gary B. Genett
 </h1>
 </button>
 </div>
-<div id="composer-fold-2023-12-22--layout--elements0000----gary-b-genett-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
+<div id="composer-fold-2023-12-24--layout--elements0000----gary-b-genett-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 1 . library-digest 2023-12-22 :: Layout & Elements&#0000; -- Gary B. Genett -->
+<!-- site-fold-begin :: finish >> 1 . library-digest 2023-12-24 :: Layout & Elements&#0000; -- Gary B. Genett -->
 <!-- site-break :: start >> -->
 <!-- site-break :: finish >> -->
 <p>[…]</p>
@@ -20504,24 +20526,24 @@ CONTENTS
 <p>
 </p>
 <!-- site-spacer :: finish >> -->
-<!-- site-fold-begin :: start >> 1 . library-digest 2023-12-22 :: Metainfo Page&#0000; -- Gary B. Genett -->
-<!-- site-header :: start >> 1 2023-12-22 :: Metainfo Page&#0000; -- Gary B. Genett -->
-<div id="2023-12-22--metainfo-page0000----gary-b-genett">
+<!-- site-fold-begin :: start >> 1 . library-digest 2023-12-24 :: Metainfo Page&#0000; -- Gary B. Genett -->
+<!-- site-header :: start >> 1 2023-12-24 :: Metainfo Page&#0000; -- Gary B. Genett -->
+<div id="2023-12-24--metainfo-page">
 
 </div>
-<!-- site-header :: finish >> 1 2023-12-22 :: Metainfo Page&#0000; -- Gary B. Genett -->
+<!-- site-header :: finish >> 1 2023-12-24 :: Metainfo Page&#0000; -- Gary B. Genett -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="composer-fold-2023-12-22--metainfo-page0000----gary-b-genett" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-2023-12-22--metainfo-page0000----gary-b-genett-target">
+<div id="composer-fold-2023-12-24--metainfo-page0000----gary-b-genett" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-2023-12-24--metainfo-page0000----gary-b-genett-target">
 <h1 class="composer-header">
-2023-12-22 :: Metainfo Page  – Gary B. Genett
+2023-12-24 :: Metainfo Page  – Gary B. Genett
 </h1>
 </button>
 </div>
-<div id="composer-fold-2023-12-22--metainfo-page0000----gary-b-genett-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
+<div id="composer-fold-2023-12-24--metainfo-page0000----gary-b-genett-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 1 . library-digest 2023-12-22 :: Metainfo Page&#0000; -- Gary B. Genett -->
+<!-- site-fold-begin :: finish >> 1 . library-digest 2023-12-24 :: Metainfo Page&#0000; -- Gary B. Genett -->
 <!-- site-break :: start >> -->
 <!-- site-break :: finish >> -->
 <p>[…]</p>
@@ -20536,24 +20558,24 @@ CONTENTS
 <p>
 </p>
 <!-- site-spacer :: finish >> -->
-<!-- site-fold-begin :: start >> 1 . library-digest 2023-12-22 :: Configured Site&#0000; -- Gary B. Genett -->
-<!-- site-header :: start >> 1 2023-12-22 :: Configured Site&#0000; -- Gary B. Genett -->
-<div id="2023-12-22--configured-site0000----gary-b-genett">
+<!-- site-fold-begin :: start >> 1 . library-digest 2023-12-24 :: Configured Site&#0000; -- Gary B. Genett -->
+<!-- site-header :: start >> 1 2023-12-24 :: Configured Site&#0000; -- Gary B. Genett -->
+<div id="2023-12-24--configured-site">
 
 </div>
-<!-- site-header :: finish >> 1 2023-12-22 :: Configured Site&#0000; -- Gary B. Genett -->
+<!-- site-header :: finish >> 1 2023-12-24 :: Configured Site&#0000; -- Gary B. Genett -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="composer-fold-2023-12-22--configured-site0000----gary-b-genett" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-2023-12-22--configured-site0000----gary-b-genett-target">
+<div id="composer-fold-2023-12-24--configured-site0000----gary-b-genett" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-2023-12-24--configured-site0000----gary-b-genett-target">
 <h1 class="composer-header">
-2023-12-22 :: Configured Site  – Gary B. Genett
+2023-12-24 :: Configured Site  – Gary B. Genett
 </h1>
 </button>
 </div>
-<div id="composer-fold-2023-12-22--configured-site0000----gary-b-genett-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
+<div id="composer-fold-2023-12-24--configured-site0000----gary-b-genett-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 1 . library-digest 2023-12-22 :: Configured Site&#0000; -- Gary B. Genett -->
+<!-- site-fold-begin :: finish >> 1 . library-digest 2023-12-24 :: Configured Site&#0000; -- Gary B. Genett -->
 <p>#WORK</p>
 <p><code>&lt;!-- composer &gt;&gt; metainfo --&gt;</code></p>
 <table style="width:99%;">
@@ -20666,7 +20688,7 @@ CONTENTS
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2023-01-01 :: Page Number 09&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2023-01-01 :: Page Number 09&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2023-01-01--page-number-090000----gary-b-genett-author-1-author-2-author-3">
+<div id="2023-01-01--page-number-09">
 
 </div>
 <!-- site-header :: finish >> 1 2023-01-01 :: Page Number 09&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -20719,7 +20741,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2023-01-01 :: Page Number 08&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2023-01-01 :: Page Number 08&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2023-01-01--page-number-080000----gary-b-genett-author-1-author-2-author-3">
+<div id="2023-01-01--page-number-08">
 
 </div>
 <!-- site-header :: finish >> 1 2023-01-01 :: Page Number 08&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -20772,7 +20794,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2023-01-01 :: Page Number 07&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2023-01-01 :: Page Number 07&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2023-01-01--page-number-070000----gary-b-genett-author-1-author-2-author-3">
+<div id="2023-01-01--page-number-07">
 
 </div>
 <!-- site-header :: finish >> 1 2023-01-01 :: Page Number 07&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -20825,7 +20847,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2023-01-01 :: Page Number 06&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2023-01-01 :: Page Number 06&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2023-01-01--page-number-060000----gary-b-genett-author-1-author-2-author-3">
+<div id="2023-01-01--page-number-06">
 
 </div>
 <!-- site-header :: finish >> 1 2023-01-01 :: Page Number 06&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -20878,7 +20900,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2023-01-01 :: Page Number 05&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2023-01-01 :: Page Number 05&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2023-01-01--page-number-050000----gary-b-genett-author-1-author-2-author-3">
+<div id="2023-01-01--page-number-05">
 
 </div>
 <!-- site-header :: finish >> 1 2023-01-01 :: Page Number 05&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -20931,7 +20953,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2023-01-01 :: Page Number 04&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2023-01-01 :: Page Number 04&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2023-01-01--page-number-040000----gary-b-genett-author-1-author-2-author-3">
+<div id="2023-01-01--page-number-04">
 
 </div>
 <!-- site-header :: finish >> 1 2023-01-01 :: Page Number 04&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -20984,7 +21006,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2023-01-01 :: Page Number 03&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2023-01-01 :: Page Number 03&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2023-01-01--page-number-030000----gary-b-genett-author-1-author-2-author-3">
+<div id="2023-01-01--page-number-03">
 
 </div>
 <!-- site-header :: finish >> 1 2023-01-01 :: Page Number 03&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -21037,7 +21059,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2023-01-01 :: Page Number 02&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2023-01-01 :: Page Number 02&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2023-01-01--page-number-020000----gary-b-genett-author-1-author-2-author-3">
+<div id="2023-01-01--page-number-02">
 
 </div>
 <!-- site-header :: finish >> 1 2023-01-01 :: Page Number 02&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -21090,7 +21112,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2023-01-01 :: Page Number 01&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2023-01-01 :: Page Number 01&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2023-01-01--page-number-010000----gary-b-genett-author-1-author-2-author-3">
+<div id="2023-01-01--page-number-01">
 
 </div>
 <!-- site-header :: finish >> 1 2023-01-01 :: Page Number 01&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -21143,7 +21165,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2023-01-01 :: Page Number 00&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2023-01-01 :: Page Number 00&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2023-01-01--page-number-000000----gary-b-genett-author-1-author-2-author-3">
+<div id="2023-01-01--page-number-00">
 
 </div>
 <!-- site-header :: finish >> 1 2023-01-01 :: Page Number 00&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->

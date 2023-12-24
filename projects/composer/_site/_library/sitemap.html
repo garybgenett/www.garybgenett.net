@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content />
-  <meta name="dcterms.date" content="2023-12-22" />
+  <meta name="dcterms.date" content="2023-12-24" />
   <title>EXAMPLE SITE – Site Map</title>
   <style>
     code{white-space: pre-wrap;}
@@ -12604,11 +12604,6 @@ color:	var(--solarized-magenta);
   <style type="text/css">
 
 
-.composer-form {
-background-color:	rgba(var(--bs-dark-rgb));
-color:	rgba(var(--bs-secondary-rgb));
-border:	1px solid rgba(var(--bs-secondary-rgb));
-}
 .navbar,
 .dropdown-menu,
 .accordion-button,
@@ -12621,6 +12616,12 @@ color:	rgba(var(--bs-secondary-rgb));
 }
 .accordion-item,
 .card {
+border:	1px solid rgba(var(--bs-secondary-rgb));
+}
+
+.composer-form {
+background-color:	rgba(var(--bs-dark-rgb));
+color:	rgba(var(--bs-secondary-rgb));
 border:	1px solid rgba(var(--bs-secondary-rgb));
 }
 
@@ -12801,21 +12802,42 @@ width:	auto;
 }
 .composer-display .carousel-control-prev,
 .composer-display .carousel-control-next {
-height:	64px;
-width:	64px;
-opacity:	1;
+background-color:	rgba(var(--bs-secondary-rgb));
+height:	calc(32px + (1px * 2));
+width:	calc(32px + (1px * 2));
+border:	1px solid black;
+border-radius:	8px;
+margin:	0px;
+opacity:	0.8;
 }
 .composer-display .carousel-control-prev-icon,
 .composer-display .carousel-control-next-icon {
 height:	32px;
 width:	32px;
 }
+.composer-display .carousel-indicators,
+.composer-display .carousel-indicators [data-bs-target] {
+background-color:	rgba(var(--bs-secondary-rgb));
+border:	1px solid black;
+border-radius:	12px;
+}
 .composer-display .carousel-indicators {
-margin-bottom:	2px;
+height:	calc(6px + (1px * 2) + (2px * 2) + (1px * 2));
+width:	auto;
+margin-left:	20%;
+margin-right:	20%;
+opacity:	0.8;
 }
 .composer-display .carousel-indicators [data-bs-target] {
 height:	6px;
 width:	32px;
+margin-top:	2px;
+margin-bottom:	2px;
+opacity:	1;
+}
+.composer-display .carousel-indicators .active {
+background-color:	black;
+opacity:	1;
 }
 .composer-display-banner {
 height:	auto;
@@ -20250,7 +20272,7 @@ CONTENTS
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-22 :: Layout &amp; Elements – Gary B. Genett
+2023-12-24 :: Layout &amp; Elements – Gary B. Genett
 </td>
 <td style="text-align: left;">
 <a href="../examples.html">examples.html</a>
@@ -20258,7 +20280,7 @@ CONTENTS
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-22 :: Introduction – Gary B. Genett
+2023-12-24 :: Introduction – Gary B. Genett
 </td>
 <td style="text-align: left;">
 <a href="../index.html">index.html</a>
@@ -20266,7 +20288,7 @@ CONTENTS
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-22 :: Latest Updates – Gary B. Genett
+2023-12-24 :: Latest Updates – Gary B. Genett
 </td>
 <td style="text-align: left;">
 <a href="../index-digest.html">index-digest.html</a>
@@ -20310,7 +20332,7 @@ _library
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-22 :: Author: Albert Krewinkel – <em>(none)</em>
+2023-12-24 :: Author: Albert Krewinkel – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/author-albert-krewinkel.html">author-albert-krewinkel.html</a>
@@ -20318,7 +20340,7 @@ _library
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-22 :: Author: Author 1 – <em>(none)</em>
+2023-12-24 :: Author: Author 1 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/author-author-1.html">author-author-1.html</a>
@@ -20326,7 +20348,7 @@ _library
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-22 :: Author: Author 2 – <em>(none)</em>
+2023-12-24 :: Author: Author 2 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/author-author-2.html">author-author-2.html</a>
@@ -20334,7 +20356,7 @@ _library
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-22 :: Author: Author 3 – <em>(none)</em>
+2023-12-24 :: Author: Author 3 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/author-author-3.html">author-author-3.html</a>
@@ -20342,7 +20364,7 @@ _library
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-22 :: Author: Gary B. Genett – <em>(none)</em>
+2023-12-24 :: Author: Gary B. Genett – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/author-gary-b-genett.html">author-gary-b-genett.html</a>
@@ -20350,7 +20372,7 @@ _library
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-22 :: Author: John MacFarlane – <em>(none)</em>
+2023-12-24 :: Author: John MacFarlane – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/author-john-macfarlane.html">author-john-macfarlane.html</a>
@@ -20358,7 +20380,7 @@ _library
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-22 :: Author: Mauro Bieg – <em>(none)</em>
+2023-12-24 :: Author: Mauro Bieg – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/author-mauro-bieg.html">author-mauro-bieg.html</a>
@@ -20366,7 +20388,7 @@ _library
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-22 :: Year: 2020 – <em>(none)</em>
+2023-12-24 :: Year: 2020 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/date-2020.html">date-2020.html</a>
@@ -20374,7 +20396,7 @@ _library
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-22 :: Year: 2021 – <em>(none)</em>
+2023-12-24 :: Year: 2021 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/date-2021.html">date-2021.html</a>
@@ -20382,7 +20404,7 @@ _library
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-22 :: Year: 2022 – <em>(none)</em>
+2023-12-24 :: Year: 2022 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/date-2022.html">date-2022.html</a>
@@ -20390,7 +20412,7 @@ _library
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-22 :: Year: 2023 – <em>(none)</em>
+2023-12-24 :: Year: 2023 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/date-2023.html">date-2023.html</a>
@@ -20398,7 +20420,7 @@ _library
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-22 :: Year: 2024 – <em>(none)</em>
+2023-12-24 :: Year: 2024 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/date-2024.html">date-2024.html</a>
@@ -20406,7 +20428,7 @@ _library
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-22 :: Latest Updates – <em>(none)</em>
+2023-12-24 :: Latest Updates – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/index.html">index.html</a>
@@ -20414,7 +20436,7 @@ _library
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-22 :: Site Map – <em>(none)</em>
+2023-12-24 :: Site Map – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/sitemap.html">sitemap.html</a>
@@ -20422,7 +20444,7 @@ _library
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-22 :: Tag: Main – <em>(none)</em>
+2023-12-24 :: Tag: Main – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/tags-main.html">tags-main.html</a>
@@ -20430,7 +20452,7 @@ _library
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-22 :: Tag: Tag 0 – <em>(none)</em>
+2023-12-24 :: Tag: Tag 0 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/tags-tag-0.html">tags-tag-0.html</a>
@@ -20438,7 +20460,7 @@ _library
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-22 :: Tag: Tag 1 – <em>(none)</em>
+2023-12-24 :: Tag: Tag 1 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/tags-tag-1.html">tags-tag-1.html</a>
@@ -20446,7 +20468,7 @@ _library
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-22 :: Tag: Tag 2 – <em>(none)</em>
+2023-12-24 :: Tag: Tag 2 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/tags-tag-2.html">tags-tag-2.html</a>
@@ -20454,7 +20476,7 @@ _library
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-22 :: Tag: Tag 3 – <em>(none)</em>
+2023-12-24 :: Tag: Tag 3 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/tags-tag-3.html">tags-tag-3.html</a>
@@ -20462,7 +20484,7 @@ _library
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-22 :: Tag: Tag 4 – <em>(none)</em>
+2023-12-24 :: Tag: Tag 4 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/tags-tag-4.html">tags-tag-4.html</a>
@@ -20470,7 +20492,7 @@ _library
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-22 :: Tag: Tag 5 – <em>(none)</em>
+2023-12-24 :: Tag: Tag 5 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/tags-tag-5.html">tags-tag-5.html</a>
@@ -20478,7 +20500,7 @@ _library
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-22 :: Tag: Tag 6 – <em>(none)</em>
+2023-12-24 :: Tag: Tag 6 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/tags-tag-6.html">tags-tag-6.html</a>
@@ -20486,7 +20508,7 @@ _library
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-22 :: Tag: Tag 7 – <em>(none)</em>
+2023-12-24 :: Tag: Tag 7 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/tags-tag-7.html">tags-tag-7.html</a>
@@ -20494,7 +20516,7 @@ _library
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-22 :: Tag: Tag 8 – <em>(none)</em>
+2023-12-24 :: Tag: Tag 8 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/tags-tag-8.html">tags-tag-8.html</a>
@@ -20502,7 +20524,7 @@ _library
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-22 :: Tag: Tag 9 – <em>(none)</em>
+2023-12-24 :: Tag: Tag 9 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../_library/tags-tag-9.html">tags-tag-9.html</a>
@@ -20810,7 +20832,7 @@ config
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-22 :: Configured Site – Gary B. Genett
+2023-12-24 :: Configured Site – Gary B. Genett
 </td>
 <td style="text-align: left;">
 <a href="../config/index.html">index.html</a>
@@ -20818,7 +20840,7 @@ config
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-22 :: Digest – Gary B. Genett
+2023-12-24 :: Digest – Gary B. Genett
 </td>
 <td style="text-align: left;">
 <a href="../config/index-digest.html">index-digest.html</a>
@@ -20826,7 +20848,7 @@ config
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-22 :: Metainfo Page – Gary B. Genett
+2023-12-24 :: Metainfo Page – Gary B. Genett
 </td>
 <td style="text-align: left;">
 <a href="../config/pages.html">pages.html</a>
@@ -20834,7 +20856,7 @@ config
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-22 :: Metainfo Page – Gary B. Genett
+2023-12-24 :: Metainfo Page – Gary B. Genett
 </td>
 <td style="text-align: left;">
 <a href="../config/pages.pdf">pages.pdf</a>
@@ -20878,7 +20900,7 @@ config/_library-config
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-22 :: Creator: Author 1 – <em>(none)</em>
+2023-12-24 :: Creator: Author 1 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/author-author-1.html">author-author-1.html</a>
@@ -20886,7 +20908,7 @@ config/_library-config
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-22 :: Creator: Author 2 – <em>(none)</em>
+2023-12-24 :: Creator: Author 2 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/author-author-2.html">author-author-2.html</a>
@@ -20894,7 +20916,7 @@ config/_library-config
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-22 :: Creator: Author 3 – <em>(none)</em>
+2023-12-24 :: Creator: Author 3 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/author-author-3.html">author-author-3.html</a>
@@ -20902,7 +20924,7 @@ config/_library-config
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-22 :: Creator: Gary B. Genett – <em>(none)</em>
+2023-12-24 :: Creator: Gary B. Genett – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/author-gary-b-genett.html">author-gary-b-genett.html</a>
@@ -20910,7 +20932,7 @@ config/_library-config
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-22 :: Year: 2022 – <em>(none)</em>
+2023-12-24 :: Year: 2022 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/date-2022.html">date-2022.html</a>
@@ -20918,7 +20940,7 @@ config/_library-config
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-22 :: Year: 2023 – <em>(none)</em>
+2023-12-24 :: Year: 2023 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/date-2023.html">date-2023.html</a>
@@ -20926,7 +20948,7 @@ config/_library-config
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-22 :: Year: 2024 – <em>(none)</em>
+2023-12-24 :: Year: 2024 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/date-2024.html">date-2024.html</a>
@@ -20934,7 +20956,7 @@ config/_library-config
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-22 :: Digest – <em>(none)</em>
+2023-12-24 :: Digest – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/index.html">index.html</a>
@@ -20942,7 +20964,7 @@ config/_library-config
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-22 :: Directory – <em>(none)</em>
+2023-12-24 :: Directory – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/sitemap.html">sitemap.html</a>
@@ -20950,7 +20972,7 @@ config/_library-config
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-22 :: Mark: Main – <em>(none)</em>
+2023-12-24 :: Mark: Main – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/tags-main.html">tags-main.html</a>
@@ -20958,7 +20980,7 @@ config/_library-config
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-22 :: Mark: Tag 0 – <em>(none)</em>
+2023-12-24 :: Mark: Tag 0 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/tags-tag-0.html">tags-tag-0.html</a>
@@ -20966,7 +20988,7 @@ config/_library-config
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-22 :: Mark: Tag 1 – <em>(none)</em>
+2023-12-24 :: Mark: Tag 1 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/tags-tag-1.html">tags-tag-1.html</a>
@@ -20974,7 +20996,7 @@ config/_library-config
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-22 :: Mark: Tag 2 – <em>(none)</em>
+2023-12-24 :: Mark: Tag 2 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/tags-tag-2.html">tags-tag-2.html</a>
@@ -20982,7 +21004,7 @@ config/_library-config
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-22 :: Mark: Tag 3 – <em>(none)</em>
+2023-12-24 :: Mark: Tag 3 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/tags-tag-3.html">tags-tag-3.html</a>
@@ -20990,7 +21012,7 @@ config/_library-config
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-22 :: Mark: Tag 4 – <em>(none)</em>
+2023-12-24 :: Mark: Tag 4 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/tags-tag-4.html">tags-tag-4.html</a>
@@ -20998,7 +21020,7 @@ config/_library-config
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-22 :: Mark: Tag 5 – <em>(none)</em>
+2023-12-24 :: Mark: Tag 5 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/tags-tag-5.html">tags-tag-5.html</a>
@@ -21006,7 +21028,7 @@ config/_library-config
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-22 :: Mark: Tag 6 – <em>(none)</em>
+2023-12-24 :: Mark: Tag 6 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/tags-tag-6.html">tags-tag-6.html</a>
@@ -21014,7 +21036,7 @@ config/_library-config
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-22 :: Mark: Tag 7 – <em>(none)</em>
+2023-12-24 :: Mark: Tag 7 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/tags-tag-7.html">tags-tag-7.html</a>
@@ -21022,7 +21044,7 @@ config/_library-config
 </tr>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-22 :: Mark: Tag 8 – <em>(none)</em>
+2023-12-24 :: Mark: Tag 8 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/tags-tag-8.html">tags-tag-8.html</a>
@@ -21030,7 +21052,7 @@ config/_library-config
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-22 :: Mark: Tag 9 – <em>(none)</em>
+2023-12-24 :: Mark: Tag 9 – <em>(none)</em>
 </td>
 <td style="text-align: left;">
 <a href="../config/_library-config/tags-tag-9.html">tags-tag-9.html</a>
@@ -21350,7 +21372,7 @@ null
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">
-2023-12-22 :: Default Site – Gary B. Genett
+2023-12-24 :: Default Site – Gary B. Genett
 </td>
 <td style="text-align: left;">
 <a href="../null/index.html">index.html</a>
@@ -21738,7 +21760,7 @@ themes
 </tr>
 <tr class="even">
 <td style="text-align: left;">
-2023-12-22 :: Themes &amp; Overlays – Gary B. Genett
+2023-12-24 :: Themes &amp; Overlays – Gary B. Genett
 </td>
 <td style="text-align: left;">
 <a href="../themes/index.html">index.html</a>

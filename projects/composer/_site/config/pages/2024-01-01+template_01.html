@@ -12780,21 +12780,42 @@ width:	auto;
 }
 .composer-display .carousel-control-prev,
 .composer-display .carousel-control-next {
-height:	64px;
-width:	64px;
-opacity:	1;
+background-color:	rgba(var(--bs-secondary-rgb));
+height:	calc(32px + (1px * 2));
+width:	calc(32px + (1px * 2));
+border:	1px solid black;
+border-radius:	8px;
+margin:	0px;
+opacity:	0.8;
 }
 .composer-display .carousel-control-prev-icon,
 .composer-display .carousel-control-next-icon {
 height:	32px;
 width:	32px;
 }
+.composer-display .carousel-indicators,
+.composer-display .carousel-indicators [data-bs-target] {
+background-color:	rgba(var(--bs-secondary-rgb));
+border:	1px solid black;
+border-radius:	12px;
+}
 .composer-display .carousel-indicators {
-margin-bottom:	2px;
+height:	calc(6px + (1px * 2) + (2px * 2) + (1px * 2));
+width:	auto;
+margin-left:	20%;
+margin-right:	20%;
+opacity:	0.8;
 }
 .composer-display .carousel-indicators [data-bs-target] {
 height:	6px;
 width:	32px;
+margin-top:	2px;
+margin-bottom:	2px;
+opacity:	1;
+}
+.composer-display .carousel-indicators .active {
+background-color:	black;
+opacity:	1;
 }
 .composer-display-banner {
 height:	auto;
@@ -19820,7 +19841,7 @@ margin-top:	0px;
 <!-- site-nav-top-list :: start >> nav-top.["CONTENTS"][0].["CONTENTS"][0] -->
 <!-- composer >> contents-menu -->
 <li>
-<a href="#page-number-01nbspnbsp2024-01-010000br---gary-b-genett----author-1----author-2----author-3br-tag-1--tag-1--tag-2--tag-3" class="dropdown-item">Page Number 01  <em>(2024-01-01)</em></a>
+<a href="#page-number-01nbspnbsp2024-01-01" class="dropdown-item">Page Number 01  <em>(2024-01-01)</em></a>
 <ul class="composer-menu-list">
 <li>
 <a href="#2024-lorem-ipsum-1" class="dropdown-item">2024 Lorem Ipsum #1</a>
@@ -20057,7 +20078,7 @@ CONTENTS
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][2] -->
 <!-- composer >> contents-list -->
 <ul>
-<li><a href="#page-number-01nbspnbsp2024-01-010000br---gary-b-genett----author-1----author-2----author-3br-tag-1--tag-1--tag-2--tag-3">Page Number 01  <em>(2024-01-01)</em></a>
+<li><a href="#page-number-01nbspnbsp2024-01-01">Page Number 01  <em>(2024-01-01)</em></a>
 <ul>
 <li><a href="#2024-lorem-ipsum-1">2024 Lorem Ipsum #1</a>
 <ul>
@@ -20163,7 +20184,7 @@ Header
 <!-- composer >> metainfo-start 2024-01-01+template_01.md -->
 <!-- site-box-begin :: start >> 1 Page Number 01&nbsp;&nbsp;*(2024-01-01)*&#0000;<br>*-- Gary B. Genett -- Author 1 -- Author 2 -- Author 3*<br>*. Tag 1 . Tag 1 . Tag 2 . Tag 3* -->
 <!-- site-header :: start >> 1 Page Number 01&nbsp;&nbsp;*(2024-01-01)*&#0000;<br>*-- Gary B. Genett -- Author 1 -- Author 2 -- Author 3*<br>*. Tag 1 . Tag 1 . Tag 2 . Tag 3* -->
-<div id="page-number-01nbspnbsp2024-01-010000br---gary-b-genett----author-1----author-2----author-3br-tag-1--tag-1--tag-2--tag-3">
+<div id="page-number-01nbspnbsp2024-01-01">
 
 </div>
 <!-- site-header :: finish >> 1 Page Number 01&nbsp;&nbsp;*(2024-01-01)*&#0000;<br>*-- Gary B. Genett -- Author 1 -- Author 2 -- Author 3*<br>*. Tag 1 . Tag 1 . Tag 2 . Tag 3* -->

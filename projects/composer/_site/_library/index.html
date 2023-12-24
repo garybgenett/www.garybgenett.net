@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content />
-  <meta name="dcterms.date" content="2023-12-22" />
+  <meta name="dcterms.date" content="2023-12-24" />
   <title>EXAMPLE SITE – Latest Updates</title>
   <style>
     code{white-space: pre-wrap;}
@@ -12667,11 +12667,6 @@ color:	var(--solarized-magenta);
   <style type="text/css">
 
 
-.composer-form {
-background-color:	rgba(var(--bs-dark-rgb));
-color:	rgba(var(--bs-secondary-rgb));
-border:	1px solid rgba(var(--bs-secondary-rgb));
-}
 .navbar,
 .dropdown-menu,
 .accordion-button,
@@ -12684,6 +12679,12 @@ color:	rgba(var(--bs-secondary-rgb));
 }
 .accordion-item,
 .card {
+border:	1px solid rgba(var(--bs-secondary-rgb));
+}
+
+.composer-form {
+background-color:	rgba(var(--bs-dark-rgb));
+color:	rgba(var(--bs-secondary-rgb));
 border:	1px solid rgba(var(--bs-secondary-rgb));
 }
 
@@ -12864,21 +12865,42 @@ width:	auto;
 }
 .composer-display .carousel-control-prev,
 .composer-display .carousel-control-next {
-height:	64px;
-width:	64px;
-opacity:	1;
+background-color:	rgba(var(--bs-secondary-rgb));
+height:	calc(32px + (1px * 2));
+width:	calc(32px + (1px * 2));
+border:	1px solid black;
+border-radius:	8px;
+margin:	0px;
+opacity:	0.8;
 }
 .composer-display .carousel-control-prev-icon,
 .composer-display .carousel-control-next-icon {
 height:	32px;
 width:	32px;
 }
+.composer-display .carousel-indicators,
+.composer-display .carousel-indicators [data-bs-target] {
+background-color:	rgba(var(--bs-secondary-rgb));
+border:	1px solid black;
+border-radius:	12px;
+}
 .composer-display .carousel-indicators {
-margin-bottom:	2px;
+height:	calc(6px + (1px * 2) + (2px * 2) + (1px * 2));
+width:	auto;
+margin-left:	20%;
+margin-right:	20%;
+opacity:	0.8;
 }
 .composer-display .carousel-indicators [data-bs-target] {
 height:	6px;
 width:	32px;
+margin-top:	2px;
+margin-bottom:	2px;
+opacity:	1;
+}
+.composer-display .carousel-indicators .active {
+background-color:	black;
+opacity:	1;
 }
 .composer-display-banner {
 height:	auto;
@@ -19904,34 +19926,34 @@ margin-top:	0px;
 <!-- site-nav-top-list :: start >> nav-top.["CONTENTS"][0].["CONTENTS"][0] -->
 <!-- composer >> contents-menu 0 -->
 <li>
-<a href="#none--z-index0000----none" class="dropdown-item"><em>(none)</em> :: Z-index</a>
+<a href="#none--z-index" class="dropdown-item"><em>(none)</em> :: Z-index</a>
 </li>
 <li>
-<a href="#none--webpack-and-bundlers0000----none" class="dropdown-item"><em>(none)</em> :: Webpack and bundlers</a>
+<a href="#none--webpack-and-bundlers" class="dropdown-item"><em>(none)</em> :: Webpack and bundlers</a>
 </li>
 <li>
-<a href="#none--visually-hidden0000----none" class="dropdown-item"><em>(none)</em> :: Visually hidden</a>
+<a href="#none--visually-hidden" class="dropdown-item"><em>(none)</em> :: Visually hidden</a>
 </li>
 <li>
-<a href="#none--visibility0000----none" class="dropdown-item"><em>(none)</em> :: Visibility</a>
+<a href="#none--visibility" class="dropdown-item"><em>(none)</em> :: Visibility</a>
 </li>
 <li>
-<a href="#none--vertical-rule0000----none" class="dropdown-item"><em>(none)</em> :: Vertical rule</a>
+<a href="#none--vertical-rule" class="dropdown-item"><em>(none)</em> :: Vertical rule</a>
 </li>
 <li>
-<a href="#none--vertical-alignment0000----none" class="dropdown-item"><em>(none)</em> :: Vertical alignment</a>
+<a href="#none--vertical-alignment" class="dropdown-item"><em>(none)</em> :: Vertical alignment</a>
 </li>
 <li>
-<a href="#none--versions0000----none" class="dropdown-item"><em>(none)</em> :: Versions</a>
+<a href="#none--versions" class="dropdown-item"><em>(none)</em> :: Versions</a>
 </li>
 <li>
-<a href="#none--validation0000----none" class="dropdown-item"><em>(none)</em> :: Validation</a>
+<a href="#none--validation" class="dropdown-item"><em>(none)</em> :: Validation</a>
 </li>
 <li>
-<a href="#none--utility-api0000----none" class="dropdown-item"><em>(none)</em> :: Utility API</a>
+<a href="#none--utility-api" class="dropdown-item"><em>(none)</em> :: Utility API</a>
 </li>
 <li>
-<a href="#none--utilities-for-layout0000----none" class="dropdown-item"><em>(none)</em> :: Utilities for layout</a>
+<a href="#none--utilities-for-layout" class="dropdown-item"><em>(none)</em> :: Utilities for layout</a>
 </li>
 <!-- site-nav-top-list :: finish >> nav-top.["CONTENTS"][0].["CONTENTS"][0] -->
 <!-- site-nav-top-list :: finish >> nav-top.["CONTENTS"][0].["CONTENTS"] -->
@@ -20211,16 +20233,16 @@ CONTENTS
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][1] -->
 <!-- composer >> contents-list 0 -->
 <ul>
-<li><a href="#none--z-index0000----none"><em>(none)</em> :: Z-index</a></li>
-<li><a href="#none--webpack-and-bundlers0000----none"><em>(none)</em> :: Webpack and bundlers</a></li>
-<li><a href="#none--visually-hidden0000----none"><em>(none)</em> :: Visually hidden</a></li>
-<li><a href="#none--visibility0000----none"><em>(none)</em> :: Visibility</a></li>
-<li><a href="#none--vertical-rule0000----none"><em>(none)</em> :: Vertical rule</a></li>
-<li><a href="#none--vertical-alignment0000----none"><em>(none)</em> :: Vertical alignment</a></li>
-<li><a href="#none--versions0000----none"><em>(none)</em> :: Versions</a></li>
-<li><a href="#none--validation0000----none"><em>(none)</em> :: Validation</a></li>
-<li><a href="#none--utility-api0000----none"><em>(none)</em> :: Utility API</a></li>
-<li><a href="#none--utilities-for-layout0000----none"><em>(none)</em> :: Utilities for layout</a></li>
+<li><a href="#none--z-index"><em>(none)</em> :: Z-index</a></li>
+<li><a href="#none--webpack-and-bundlers"><em>(none)</em> :: Webpack and bundlers</a></li>
+<li><a href="#none--visually-hidden"><em>(none)</em> :: Visually hidden</a></li>
+<li><a href="#none--visibility"><em>(none)</em> :: Visibility</a></li>
+<li><a href="#none--vertical-rule"><em>(none)</em> :: Vertical rule</a></li>
+<li><a href="#none--vertical-alignment"><em>(none)</em> :: Vertical alignment</a></li>
+<li><a href="#none--versions"><em>(none)</em> :: Versions</a></li>
+<li><a href="#none--validation"><em>(none)</em> :: Validation</a></li>
+<li><a href="#none--utility-api"><em>(none)</em> :: Utility API</a></li>
+<li><a href="#none--utilities-for-layout"><em>(none)</em> :: Utilities for layout</a></li>
 </ul>
 <!-- site-nav-side-list :: finish >> nav-left.["CONTENTS"][1] -->
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][2] -->
@@ -20281,7 +20303,7 @@ CONTENTS
 <!-- site-fold-begin :: finish >> group library-digest -->
 <!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: Z-index&#0000; -- *(none)* -->
 <!-- site-header :: start >> 1 *(none)* :: Z-index&#0000; -- *(none)* -->
-<div id="none--z-index0000----none">
+<div id="none--z-index">
 
 </div>
 <!-- site-header :: finish >> 1 *(none)* :: Z-index&#0000; -- *(none)* -->
@@ -20316,7 +20338,7 @@ CONTENTS
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: Webpack and bundlers&#0000; -- *(none)* -->
 <!-- site-header :: start >> 1 *(none)* :: Webpack and bundlers&#0000; -- *(none)* -->
-<div id="none--webpack-and-bundlers0000----none">
+<div id="none--webpack-and-bundlers">
 
 </div>
 <!-- site-header :: finish >> 1 *(none)* :: Webpack and bundlers&#0000; -- *(none)* -->
@@ -20371,7 +20393,7 @@ CONTENTS
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: Visually hidden&#0000; -- *(none)* -->
 <!-- site-header :: start >> 1 *(none)* :: Visually hidden&#0000; -- *(none)* -->
-<div id="none--visually-hidden0000----none">
+<div id="none--visually-hidden">
 
 </div>
 <!-- site-header :: finish >> 1 *(none)* :: Visually hidden&#0000; -- *(none)* -->
@@ -20423,7 +20445,7 @@ CONTENTS
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: Visibility&#0000; -- *(none)* -->
 <!-- site-header :: start >> 1 *(none)* :: Visibility&#0000; -- *(none)* -->
-<div id="none--visibility0000----none">
+<div id="none--visibility">
 
 </div>
 <!-- site-header :: finish >> 1 *(none)* :: Visibility&#0000; -- *(none)* -->
@@ -20475,7 +20497,7 @@ CONTENTS
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: Vertical rule&#0000; -- *(none)* -->
 <!-- site-header :: start >> 1 *(none)* :: Vertical rule&#0000; -- *(none)* -->
-<div id="none--vertical-rule0000----none">
+<div id="none--vertical-rule">
 
 </div>
 <!-- site-header :: finish >> 1 *(none)* :: Vertical rule&#0000; -- *(none)* -->
@@ -20553,7 +20575,7 @@ CONTENTS
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: Vertical alignment&#0000; -- *(none)* -->
 <!-- site-header :: start >> 1 *(none)* :: Vertical alignment&#0000; -- *(none)* -->
-<div id="none--vertical-alignment0000----none">
+<div id="none--vertical-alignment">
 
 </div>
 <!-- site-header :: finish >> 1 *(none)* :: Vertical alignment&#0000; -- *(none)* -->
@@ -20600,7 +20622,7 @@ CONTENTS
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: Versions&#0000; -- *(none)* -->
 <!-- site-header :: start >> 1 *(none)* :: Versions&#0000; -- *(none)* -->
-<div id="none--versions0000----none">
+<div id="none--versions">
 
 </div>
 <!-- site-header :: finish >> 1 *(none)* :: Versions&#0000; -- *(none)* -->
@@ -20654,7 +20676,7 @@ CONTENTS
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: Validation&#0000; -- *(none)* -->
 <!-- site-header :: start >> 1 *(none)* :: Validation&#0000; -- *(none)* -->
-<div id="none--validation0000----none">
+<div id="none--validation">
 
 </div>
 <!-- site-header :: finish >> 1 *(none)* :: Validation&#0000; -- *(none)* -->
@@ -20699,7 +20721,7 @@ CONTENTS
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: Utility API&#0000; -- *(none)* -->
 <!-- site-header :: start >> 1 *(none)* :: Utility API&#0000; -- *(none)* -->
-<div id="none--utility-api0000----none">
+<div id="none--utility-api">
 
 </div>
 <!-- site-header :: finish >> 1 *(none)* :: Utility API&#0000; -- *(none)* -->
@@ -20732,7 +20754,7 @@ CONTENTS
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: Utilities for layout&#0000; -- *(none)* -->
 <!-- site-header :: start >> 1 *(none)* :: Utilities for layout&#0000; -- *(none)* -->
-<div id="none--utilities-for-layout0000----none">
+<div id="none--utilities-for-layout">
 
 </div>
 <!-- site-header :: finish >> 1 *(none)* :: Utilities for layout&#0000; -- *(none)* -->

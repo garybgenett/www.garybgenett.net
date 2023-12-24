@@ -12603,11 +12603,6 @@ color:	var(--solarized-magenta);
   <style type="text/css">
 
 
-.composer-form {
-background-color:	rgba(var(--bs-dark-rgb));
-color:	rgba(var(--bs-secondary-rgb));
-border:	1px solid rgba(var(--bs-secondary-rgb));
-}
 .navbar,
 .dropdown-menu,
 .accordion-button,
@@ -12620,6 +12615,12 @@ color:	rgba(var(--bs-secondary-rgb));
 }
 .accordion-item,
 .card {
+border:	1px solid rgba(var(--bs-secondary-rgb));
+}
+
+.composer-form {
+background-color:	rgba(var(--bs-dark-rgb));
+color:	rgba(var(--bs-secondary-rgb));
 border:	1px solid rgba(var(--bs-secondary-rgb));
 }
 
@@ -12800,21 +12801,42 @@ width:	auto;
 }
 .composer-display .carousel-control-prev,
 .composer-display .carousel-control-next {
-height:	64px;
-width:	64px;
-opacity:	1;
+background-color:	rgba(var(--bs-secondary-rgb));
+height:	calc(32px + (1px * 2));
+width:	calc(32px + (1px * 2));
+border:	1px solid black;
+border-radius:	8px;
+margin:	0px;
+opacity:	0.8;
 }
 .composer-display .carousel-control-prev-icon,
 .composer-display .carousel-control-next-icon {
 height:	32px;
 width:	32px;
 }
+.composer-display .carousel-indicators,
+.composer-display .carousel-indicators [data-bs-target] {
+background-color:	rgba(var(--bs-secondary-rgb));
+border:	1px solid black;
+border-radius:	12px;
+}
 .composer-display .carousel-indicators {
-margin-bottom:	2px;
+height:	calc(6px + (1px * 2) + (2px * 2) + (1px * 2));
+width:	auto;
+margin-left:	20%;
+margin-right:	20%;
+opacity:	0.8;
 }
 .composer-display .carousel-indicators [data-bs-target] {
 height:	6px;
 width:	32px;
+margin-top:	2px;
+margin-bottom:	2px;
+opacity:	1;
+}
+.composer-display .carousel-indicators .active {
+background-color:	black;
+opacity:	1;
 }
 .composer-display-banner {
 height:	auto;
@@ -19800,7 +19822,7 @@ margin-top:	0px;
 <!-- site-nav-top-list :: start >> nav-top.["CONTENTS"][0].["Contents"][0] -->
 <!-- composer >> contents-menu 0 -->
 <li>
-<a href="#2023-12-22--composer-cms-v31" class="dropdown-item">2023-12-22 :: Composer CMS v3.1</a>
+<a href="#2023-12-24--composer-cms-v31" class="dropdown-item">2023-12-24 :: Composer CMS v3.1</a>
 </li>
 <li>
 <a href="#2023-05-25--projects" class="dropdown-item">2023-05-25 :: Projects</a>
@@ -19898,7 +19920,7 @@ Contents
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][1] -->
 <!-- composer >> contents-list 0 -->
 <ul>
-<li><a href="#2023-12-22--composer-cms-v31">2023-12-22 :: Composer CMS v3.1</a></li>
+<li><a href="#2023-12-24--composer-cms-v31">2023-12-24 :: Composer CMS v3.1</a></li>
 <li><a href="#2023-05-25--projects">2023-05-25 :: Projects</a></li>
 <li><a href="#2023-03-07--resume">2023-03-07 :: Resume</a></li>
 <li><a href="#2023-01-14--garyos-v70">2023-01-14 :: GaryOS v7.0</a></li>
@@ -19934,24 +19956,24 @@ Contents
 <!-- site-fold-begin :: start >> group library-digest -->
 <div id="composer-fold-group-library-digest" class="accordion">
 <!-- site-fold-begin :: finish >> group library-digest -->
-<!-- site-fold-begin :: start >> 1 . library-digest 2023-12-22 :: Composer CMS v3.1 -->
-<!-- site-header :: start >> 1 2023-12-22 :: Composer CMS v3.1 -->
-<div id="2023-12-22--composer-cms-v31">
+<!-- site-fold-begin :: start >> 1 . library-digest 2023-12-24 :: Composer CMS v3.1 -->
+<!-- site-header :: start >> 1 2023-12-24 :: Composer CMS v3.1 -->
+<div id="2023-12-24--composer-cms-v31">
 
 </div>
-<!-- site-header :: finish >> 1 2023-12-22 :: Composer CMS v3.1 -->
+<!-- site-header :: finish >> 1 2023-12-24 :: Composer CMS v3.1 -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="composer-fold-2023-12-22--composer-cms-v31" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-2023-12-22--composer-cms-v31-target">
+<div id="composer-fold-2023-12-24--composer-cms-v31" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-2023-12-24--composer-cms-v31-target">
 <h1 class="composer-header">
-2023-12-22 :: Composer CMS v3.1
+2023-12-24 :: Composer CMS v3.1
 </h1>
 </button>
 </div>
-<div id="composer-fold-2023-12-22--composer-cms-v31-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
+<div id="composer-fold-2023-12-24--composer-cms-v31-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 1 . library-digest 2023-12-22 :: Composer CMS v3.1 -->
+<!-- site-fold-begin :: finish >> 1 . library-digest 2023-12-24 :: Composer CMS v3.1 -->
 <section id="composer-cms" class="level1">
 <h1>Composer CMS</h1>
 <table>

@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content />
-  <meta name="dcterms.date" content="2023-12-22" />
+  <meta name="dcterms.date" content="2023-12-24" />
   <title>EXAMPLE SITE – Author: Author 1</title>
   <style>
     code{white-space: pre-wrap;}
@@ -12604,11 +12604,6 @@ color:	var(--solarized-magenta);
   <style type="text/css">
 
 
-.composer-form {
-background-color:	rgba(var(--bs-dark-rgb));
-color:	rgba(var(--bs-secondary-rgb));
-border:	1px solid rgba(var(--bs-secondary-rgb));
-}
 .navbar,
 .dropdown-menu,
 .accordion-button,
@@ -12621,6 +12616,12 @@ color:	rgba(var(--bs-secondary-rgb));
 }
 .accordion-item,
 .card {
+border:	1px solid rgba(var(--bs-secondary-rgb));
+}
+
+.composer-form {
+background-color:	rgba(var(--bs-dark-rgb));
+color:	rgba(var(--bs-secondary-rgb));
 border:	1px solid rgba(var(--bs-secondary-rgb));
 }
 
@@ -12801,21 +12802,42 @@ width:	auto;
 }
 .composer-display .carousel-control-prev,
 .composer-display .carousel-control-next {
-height:	64px;
-width:	64px;
-opacity:	1;
+background-color:	rgba(var(--bs-secondary-rgb));
+height:	calc(32px + (1px * 2));
+width:	calc(32px + (1px * 2));
+border:	1px solid black;
+border-radius:	8px;
+margin:	0px;
+opacity:	0.8;
 }
 .composer-display .carousel-control-prev-icon,
 .composer-display .carousel-control-next-icon {
 height:	32px;
 width:	32px;
 }
+.composer-display .carousel-indicators,
+.composer-display .carousel-indicators [data-bs-target] {
+background-color:	rgba(var(--bs-secondary-rgb));
+border:	1px solid black;
+border-radius:	12px;
+}
 .composer-display .carousel-indicators {
-margin-bottom:	2px;
+height:	calc(6px + (1px * 2) + (2px * 2) + (1px * 2));
+width:	auto;
+margin-left:	20%;
+margin-right:	20%;
+opacity:	0.8;
 }
 .composer-display .carousel-indicators [data-bs-target] {
 height:	6px;
 width:	32px;
+margin-top:	2px;
+margin-bottom:	2px;
+opacity:	1;
+}
+.composer-display .carousel-indicators .active {
+background-color:	black;
+opacity:	1;
 }
 .composer-display-banner {
 height:	auto;
@@ -19841,94 +19863,94 @@ margin-top:	0px;
 <!-- site-nav-top-list :: start >> nav-top.["CONTENTS"][0].["CONTENTS"][0] -->
 <!-- composer >> contents-menu 0 -->
 <li>
-<a href="#2024-01-01--page-number-090000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2024-01-01 :: Page Number 09</a>
+<a href="#2024-01-01--page-number-09" class="dropdown-item">2024-01-01 :: Page Number 09</a>
 </li>
 <li>
-<a href="#2024-01-01--page-number-080000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2024-01-01 :: Page Number 08</a>
+<a href="#2024-01-01--page-number-08" class="dropdown-item">2024-01-01 :: Page Number 08</a>
 </li>
 <li>
-<a href="#2024-01-01--page-number-070000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2024-01-01 :: Page Number 07</a>
+<a href="#2024-01-01--page-number-07" class="dropdown-item">2024-01-01 :: Page Number 07</a>
 </li>
 <li>
-<a href="#2024-01-01--page-number-060000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2024-01-01 :: Page Number 06</a>
+<a href="#2024-01-01--page-number-06" class="dropdown-item">2024-01-01 :: Page Number 06</a>
 </li>
 <li>
-<a href="#2024-01-01--page-number-050000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2024-01-01 :: Page Number 05</a>
+<a href="#2024-01-01--page-number-05" class="dropdown-item">2024-01-01 :: Page Number 05</a>
 </li>
 <li>
-<a href="#2024-01-01--page-number-040000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2024-01-01 :: Page Number 04</a>
+<a href="#2024-01-01--page-number-04" class="dropdown-item">2024-01-01 :: Page Number 04</a>
 </li>
 <li>
-<a href="#2024-01-01--page-number-030000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2024-01-01 :: Page Number 03</a>
+<a href="#2024-01-01--page-number-03" class="dropdown-item">2024-01-01 :: Page Number 03</a>
 </li>
 <li>
-<a href="#2024-01-01--page-number-020000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2024-01-01 :: Page Number 02</a>
+<a href="#2024-01-01--page-number-02" class="dropdown-item">2024-01-01 :: Page Number 02</a>
 </li>
 <li>
-<a href="#2024-01-01--page-number-010000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2024-01-01 :: Page Number 01</a>
+<a href="#2024-01-01--page-number-01" class="dropdown-item">2024-01-01 :: Page Number 01</a>
 </li>
 <li>
-<a href="#2024-01-01--page-number-000000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2024-01-01 :: Page Number 00</a>
+<a href="#2024-01-01--page-number-00" class="dropdown-item">2024-01-01 :: Page Number 00</a>
 </li>
 <li>
-<a href="#2023-01-01--page-number-090000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2023-01-01 :: Page Number 09</a>
+<a href="#2023-01-01--page-number-09" class="dropdown-item">2023-01-01 :: Page Number 09</a>
 </li>
 <li>
-<a href="#2023-01-01--page-number-080000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2023-01-01 :: Page Number 08</a>
+<a href="#2023-01-01--page-number-08" class="dropdown-item">2023-01-01 :: Page Number 08</a>
 </li>
 <li>
-<a href="#2023-01-01--page-number-070000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2023-01-01 :: Page Number 07</a>
+<a href="#2023-01-01--page-number-07" class="dropdown-item">2023-01-01 :: Page Number 07</a>
 </li>
 <li>
-<a href="#2023-01-01--page-number-060000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2023-01-01 :: Page Number 06</a>
+<a href="#2023-01-01--page-number-06" class="dropdown-item">2023-01-01 :: Page Number 06</a>
 </li>
 <li>
-<a href="#2023-01-01--page-number-050000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2023-01-01 :: Page Number 05</a>
+<a href="#2023-01-01--page-number-05" class="dropdown-item">2023-01-01 :: Page Number 05</a>
 </li>
 <li>
-<a href="#2023-01-01--page-number-040000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2023-01-01 :: Page Number 04</a>
+<a href="#2023-01-01--page-number-04" class="dropdown-item">2023-01-01 :: Page Number 04</a>
 </li>
 <li>
-<a href="#2023-01-01--page-number-030000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2023-01-01 :: Page Number 03</a>
+<a href="#2023-01-01--page-number-03" class="dropdown-item">2023-01-01 :: Page Number 03</a>
 </li>
 <li>
-<a href="#2023-01-01--page-number-020000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2023-01-01 :: Page Number 02</a>
+<a href="#2023-01-01--page-number-02" class="dropdown-item">2023-01-01 :: Page Number 02</a>
 </li>
 <li>
-<a href="#2023-01-01--page-number-010000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2023-01-01 :: Page Number 01</a>
+<a href="#2023-01-01--page-number-01" class="dropdown-item">2023-01-01 :: Page Number 01</a>
 </li>
 <li>
-<a href="#2023-01-01--page-number-000000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2023-01-01 :: Page Number 00</a>
+<a href="#2023-01-01--page-number-00" class="dropdown-item">2023-01-01 :: Page Number 00</a>
 </li>
 <li>
-<a href="#2022-01-01--page-number-090000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2022-01-01 :: Page Number 09</a>
+<a href="#2022-01-01--page-number-09" class="dropdown-item">2022-01-01 :: Page Number 09</a>
 </li>
 <li>
-<a href="#2022-01-01--page-number-080000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2022-01-01 :: Page Number 08</a>
+<a href="#2022-01-01--page-number-08" class="dropdown-item">2022-01-01 :: Page Number 08</a>
 </li>
 <li>
-<a href="#2022-01-01--page-number-070000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2022-01-01 :: Page Number 07</a>
+<a href="#2022-01-01--page-number-07" class="dropdown-item">2022-01-01 :: Page Number 07</a>
 </li>
 <li>
-<a href="#2022-01-01--page-number-060000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2022-01-01 :: Page Number 06</a>
+<a href="#2022-01-01--page-number-06" class="dropdown-item">2022-01-01 :: Page Number 06</a>
 </li>
 <li>
-<a href="#2022-01-01--page-number-050000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2022-01-01 :: Page Number 05</a>
+<a href="#2022-01-01--page-number-05" class="dropdown-item">2022-01-01 :: Page Number 05</a>
 </li>
 <li>
-<a href="#2022-01-01--page-number-040000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2022-01-01 :: Page Number 04</a>
+<a href="#2022-01-01--page-number-04" class="dropdown-item">2022-01-01 :: Page Number 04</a>
 </li>
 <li>
-<a href="#2022-01-01--page-number-030000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2022-01-01 :: Page Number 03</a>
+<a href="#2022-01-01--page-number-03" class="dropdown-item">2022-01-01 :: Page Number 03</a>
 </li>
 <li>
-<a href="#2022-01-01--page-number-020000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2022-01-01 :: Page Number 02</a>
+<a href="#2022-01-01--page-number-02" class="dropdown-item">2022-01-01 :: Page Number 02</a>
 </li>
 <li>
-<a href="#2022-01-01--page-number-010000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2022-01-01 :: Page Number 01</a>
+<a href="#2022-01-01--page-number-01" class="dropdown-item">2022-01-01 :: Page Number 01</a>
 </li>
 <li>
-<a href="#2022-01-01--page-number-000000----gary-b-genett-author-1-author-2-author-3" class="dropdown-item">2022-01-01 :: Page Number 00</a>
+<a href="#2022-01-01--page-number-00" class="dropdown-item">2022-01-01 :: Page Number 00</a>
 </li>
 <!-- site-nav-top-list :: finish >> nav-top.["CONTENTS"][0].["CONTENTS"][0] -->
 <!-- site-nav-top-list :: finish >> nav-top.["CONTENTS"][0].["CONTENTS"] -->
@@ -20208,36 +20230,36 @@ CONTENTS
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][1] -->
 <!-- composer >> contents-list 0 -->
 <ul>
-<li><a href="#2024-01-01--page-number-090000----gary-b-genett-author-1-author-2-author-3">2024-01-01 :: Page Number 09</a></li>
-<li><a href="#2024-01-01--page-number-080000----gary-b-genett-author-1-author-2-author-3">2024-01-01 :: Page Number 08</a></li>
-<li><a href="#2024-01-01--page-number-070000----gary-b-genett-author-1-author-2-author-3">2024-01-01 :: Page Number 07</a></li>
-<li><a href="#2024-01-01--page-number-060000----gary-b-genett-author-1-author-2-author-3">2024-01-01 :: Page Number 06</a></li>
-<li><a href="#2024-01-01--page-number-050000----gary-b-genett-author-1-author-2-author-3">2024-01-01 :: Page Number 05</a></li>
-<li><a href="#2024-01-01--page-number-040000----gary-b-genett-author-1-author-2-author-3">2024-01-01 :: Page Number 04</a></li>
-<li><a href="#2024-01-01--page-number-030000----gary-b-genett-author-1-author-2-author-3">2024-01-01 :: Page Number 03</a></li>
-<li><a href="#2024-01-01--page-number-020000----gary-b-genett-author-1-author-2-author-3">2024-01-01 :: Page Number 02</a></li>
-<li><a href="#2024-01-01--page-number-010000----gary-b-genett-author-1-author-2-author-3">2024-01-01 :: Page Number 01</a></li>
-<li><a href="#2024-01-01--page-number-000000----gary-b-genett-author-1-author-2-author-3">2024-01-01 :: Page Number 00</a></li>
-<li><a href="#2023-01-01--page-number-090000----gary-b-genett-author-1-author-2-author-3">2023-01-01 :: Page Number 09</a></li>
-<li><a href="#2023-01-01--page-number-080000----gary-b-genett-author-1-author-2-author-3">2023-01-01 :: Page Number 08</a></li>
-<li><a href="#2023-01-01--page-number-070000----gary-b-genett-author-1-author-2-author-3">2023-01-01 :: Page Number 07</a></li>
-<li><a href="#2023-01-01--page-number-060000----gary-b-genett-author-1-author-2-author-3">2023-01-01 :: Page Number 06</a></li>
-<li><a href="#2023-01-01--page-number-050000----gary-b-genett-author-1-author-2-author-3">2023-01-01 :: Page Number 05</a></li>
-<li><a href="#2023-01-01--page-number-040000----gary-b-genett-author-1-author-2-author-3">2023-01-01 :: Page Number 04</a></li>
-<li><a href="#2023-01-01--page-number-030000----gary-b-genett-author-1-author-2-author-3">2023-01-01 :: Page Number 03</a></li>
-<li><a href="#2023-01-01--page-number-020000----gary-b-genett-author-1-author-2-author-3">2023-01-01 :: Page Number 02</a></li>
-<li><a href="#2023-01-01--page-number-010000----gary-b-genett-author-1-author-2-author-3">2023-01-01 :: Page Number 01</a></li>
-<li><a href="#2023-01-01--page-number-000000----gary-b-genett-author-1-author-2-author-3">2023-01-01 :: Page Number 00</a></li>
-<li><a href="#2022-01-01--page-number-090000----gary-b-genett-author-1-author-2-author-3">2022-01-01 :: Page Number 09</a></li>
-<li><a href="#2022-01-01--page-number-080000----gary-b-genett-author-1-author-2-author-3">2022-01-01 :: Page Number 08</a></li>
-<li><a href="#2022-01-01--page-number-070000----gary-b-genett-author-1-author-2-author-3">2022-01-01 :: Page Number 07</a></li>
-<li><a href="#2022-01-01--page-number-060000----gary-b-genett-author-1-author-2-author-3">2022-01-01 :: Page Number 06</a></li>
-<li><a href="#2022-01-01--page-number-050000----gary-b-genett-author-1-author-2-author-3">2022-01-01 :: Page Number 05</a></li>
-<li><a href="#2022-01-01--page-number-040000----gary-b-genett-author-1-author-2-author-3">2022-01-01 :: Page Number 04</a></li>
-<li><a href="#2022-01-01--page-number-030000----gary-b-genett-author-1-author-2-author-3">2022-01-01 :: Page Number 03</a></li>
-<li><a href="#2022-01-01--page-number-020000----gary-b-genett-author-1-author-2-author-3">2022-01-01 :: Page Number 02</a></li>
-<li><a href="#2022-01-01--page-number-010000----gary-b-genett-author-1-author-2-author-3">2022-01-01 :: Page Number 01</a></li>
-<li><a href="#2022-01-01--page-number-000000----gary-b-genett-author-1-author-2-author-3">2022-01-01 :: Page Number 00</a></li>
+<li><a href="#2024-01-01--page-number-09">2024-01-01 :: Page Number 09</a></li>
+<li><a href="#2024-01-01--page-number-08">2024-01-01 :: Page Number 08</a></li>
+<li><a href="#2024-01-01--page-number-07">2024-01-01 :: Page Number 07</a></li>
+<li><a href="#2024-01-01--page-number-06">2024-01-01 :: Page Number 06</a></li>
+<li><a href="#2024-01-01--page-number-05">2024-01-01 :: Page Number 05</a></li>
+<li><a href="#2024-01-01--page-number-04">2024-01-01 :: Page Number 04</a></li>
+<li><a href="#2024-01-01--page-number-03">2024-01-01 :: Page Number 03</a></li>
+<li><a href="#2024-01-01--page-number-02">2024-01-01 :: Page Number 02</a></li>
+<li><a href="#2024-01-01--page-number-01">2024-01-01 :: Page Number 01</a></li>
+<li><a href="#2024-01-01--page-number-00">2024-01-01 :: Page Number 00</a></li>
+<li><a href="#2023-01-01--page-number-09">2023-01-01 :: Page Number 09</a></li>
+<li><a href="#2023-01-01--page-number-08">2023-01-01 :: Page Number 08</a></li>
+<li><a href="#2023-01-01--page-number-07">2023-01-01 :: Page Number 07</a></li>
+<li><a href="#2023-01-01--page-number-06">2023-01-01 :: Page Number 06</a></li>
+<li><a href="#2023-01-01--page-number-05">2023-01-01 :: Page Number 05</a></li>
+<li><a href="#2023-01-01--page-number-04">2023-01-01 :: Page Number 04</a></li>
+<li><a href="#2023-01-01--page-number-03">2023-01-01 :: Page Number 03</a></li>
+<li><a href="#2023-01-01--page-number-02">2023-01-01 :: Page Number 02</a></li>
+<li><a href="#2023-01-01--page-number-01">2023-01-01 :: Page Number 01</a></li>
+<li><a href="#2023-01-01--page-number-00">2023-01-01 :: Page Number 00</a></li>
+<li><a href="#2022-01-01--page-number-09">2022-01-01 :: Page Number 09</a></li>
+<li><a href="#2022-01-01--page-number-08">2022-01-01 :: Page Number 08</a></li>
+<li><a href="#2022-01-01--page-number-07">2022-01-01 :: Page Number 07</a></li>
+<li><a href="#2022-01-01--page-number-06">2022-01-01 :: Page Number 06</a></li>
+<li><a href="#2022-01-01--page-number-05">2022-01-01 :: Page Number 05</a></li>
+<li><a href="#2022-01-01--page-number-04">2022-01-01 :: Page Number 04</a></li>
+<li><a href="#2022-01-01--page-number-03">2022-01-01 :: Page Number 03</a></li>
+<li><a href="#2022-01-01--page-number-02">2022-01-01 :: Page Number 02</a></li>
+<li><a href="#2022-01-01--page-number-01">2022-01-01 :: Page Number 01</a></li>
+<li><a href="#2022-01-01--page-number-00">2022-01-01 :: Page Number 00</a></li>
 </ul>
 <!-- site-nav-side-list :: finish >> nav-left.["CONTENTS"][1] -->
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][2] -->
@@ -20297,7 +20319,7 @@ CONTENTS
 <!-- site-fold-begin :: finish >> group library-digest -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2024-01-01 :: Page Number 09&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2024-01-01 :: Page Number 09&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2024-01-01--page-number-090000----gary-b-genett-author-1-author-2-author-3">
+<div id="2024-01-01--page-number-09">
 
 </div>
 <!-- site-header :: finish >> 1 2024-01-01 :: Page Number 09&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -20350,7 +20372,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2024-01-01 :: Page Number 08&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2024-01-01 :: Page Number 08&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2024-01-01--page-number-080000----gary-b-genett-author-1-author-2-author-3">
+<div id="2024-01-01--page-number-08">
 
 </div>
 <!-- site-header :: finish >> 1 2024-01-01 :: Page Number 08&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -20403,7 +20425,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2024-01-01 :: Page Number 07&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2024-01-01 :: Page Number 07&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2024-01-01--page-number-070000----gary-b-genett-author-1-author-2-author-3">
+<div id="2024-01-01--page-number-07">
 
 </div>
 <!-- site-header :: finish >> 1 2024-01-01 :: Page Number 07&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -20456,7 +20478,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2024-01-01 :: Page Number 06&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2024-01-01 :: Page Number 06&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2024-01-01--page-number-060000----gary-b-genett-author-1-author-2-author-3">
+<div id="2024-01-01--page-number-06">
 
 </div>
 <!-- site-header :: finish >> 1 2024-01-01 :: Page Number 06&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -20509,7 +20531,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2024-01-01 :: Page Number 05&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2024-01-01 :: Page Number 05&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2024-01-01--page-number-050000----gary-b-genett-author-1-author-2-author-3">
+<div id="2024-01-01--page-number-05">
 
 </div>
 <!-- site-header :: finish >> 1 2024-01-01 :: Page Number 05&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -20562,7 +20584,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2024-01-01 :: Page Number 04&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2024-01-01 :: Page Number 04&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2024-01-01--page-number-040000----gary-b-genett-author-1-author-2-author-3">
+<div id="2024-01-01--page-number-04">
 
 </div>
 <!-- site-header :: finish >> 1 2024-01-01 :: Page Number 04&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -20615,7 +20637,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2024-01-01 :: Page Number 03&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2024-01-01 :: Page Number 03&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2024-01-01--page-number-030000----gary-b-genett-author-1-author-2-author-3">
+<div id="2024-01-01--page-number-03">
 
 </div>
 <!-- site-header :: finish >> 1 2024-01-01 :: Page Number 03&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -20668,7 +20690,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2024-01-01 :: Page Number 02&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2024-01-01 :: Page Number 02&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2024-01-01--page-number-020000----gary-b-genett-author-1-author-2-author-3">
+<div id="2024-01-01--page-number-02">
 
 </div>
 <!-- site-header :: finish >> 1 2024-01-01 :: Page Number 02&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -20721,7 +20743,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2024-01-01 :: Page Number 01&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2024-01-01 :: Page Number 01&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2024-01-01--page-number-010000----gary-b-genett-author-1-author-2-author-3">
+<div id="2024-01-01--page-number-01">
 
 </div>
 <!-- site-header :: finish >> 1 2024-01-01 :: Page Number 01&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -20774,7 +20796,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2024-01-01 :: Page Number 00&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2024-01-01 :: Page Number 00&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2024-01-01--page-number-000000----gary-b-genett-author-1-author-2-author-3">
+<div id="2024-01-01--page-number-00">
 
 </div>
 <!-- site-header :: finish >> 1 2024-01-01 :: Page Number 00&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -20827,7 +20849,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2023-01-01 :: Page Number 09&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2023-01-01 :: Page Number 09&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2023-01-01--page-number-090000----gary-b-genett-author-1-author-2-author-3">
+<div id="2023-01-01--page-number-09">
 
 </div>
 <!-- site-header :: finish >> 1 2023-01-01 :: Page Number 09&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -20880,7 +20902,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2023-01-01 :: Page Number 08&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2023-01-01 :: Page Number 08&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2023-01-01--page-number-080000----gary-b-genett-author-1-author-2-author-3">
+<div id="2023-01-01--page-number-08">
 
 </div>
 <!-- site-header :: finish >> 1 2023-01-01 :: Page Number 08&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -20933,7 +20955,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2023-01-01 :: Page Number 07&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2023-01-01 :: Page Number 07&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2023-01-01--page-number-070000----gary-b-genett-author-1-author-2-author-3">
+<div id="2023-01-01--page-number-07">
 
 </div>
 <!-- site-header :: finish >> 1 2023-01-01 :: Page Number 07&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -20986,7 +21008,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2023-01-01 :: Page Number 06&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2023-01-01 :: Page Number 06&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2023-01-01--page-number-060000----gary-b-genett-author-1-author-2-author-3">
+<div id="2023-01-01--page-number-06">
 
 </div>
 <!-- site-header :: finish >> 1 2023-01-01 :: Page Number 06&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -21039,7 +21061,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2023-01-01 :: Page Number 05&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2023-01-01 :: Page Number 05&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2023-01-01--page-number-050000----gary-b-genett-author-1-author-2-author-3">
+<div id="2023-01-01--page-number-05">
 
 </div>
 <!-- site-header :: finish >> 1 2023-01-01 :: Page Number 05&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -21092,7 +21114,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2023-01-01 :: Page Number 04&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2023-01-01 :: Page Number 04&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2023-01-01--page-number-040000----gary-b-genett-author-1-author-2-author-3">
+<div id="2023-01-01--page-number-04">
 
 </div>
 <!-- site-header :: finish >> 1 2023-01-01 :: Page Number 04&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -21145,7 +21167,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2023-01-01 :: Page Number 03&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2023-01-01 :: Page Number 03&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2023-01-01--page-number-030000----gary-b-genett-author-1-author-2-author-3">
+<div id="2023-01-01--page-number-03">
 
 </div>
 <!-- site-header :: finish >> 1 2023-01-01 :: Page Number 03&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -21198,7 +21220,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2023-01-01 :: Page Number 02&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2023-01-01 :: Page Number 02&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2023-01-01--page-number-020000----gary-b-genett-author-1-author-2-author-3">
+<div id="2023-01-01--page-number-02">
 
 </div>
 <!-- site-header :: finish >> 1 2023-01-01 :: Page Number 02&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -21249,9 +21271,11 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <p>
 </p>
 <!-- site-spacer :: finish >> -->
+<section id="2023-lorem-ipsum-1" class="level2">
+<h2>2023 Lorem Ipsum #1</h2>
 <!-- site-fold-begin :: start >> 1 . library-digest 2023-01-01 :: Page Number 01&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2023-01-01 :: Page Number 01&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2023-01-01--page-number-010000----gary-b-genett-author-1-author-2-author-3">
+<div id="2023-01-01--page-number-01">
 
 </div>
 <!-- site-header :: finish >> 1 2023-01-01 :: Page Number 01&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -21267,8 +21291,6 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <div id="composer-fold-2023-01-01--page-number-010000----gary-b-genett-author-1-author-2-author-3-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
 <div class="accordion-body">
 <!-- site-fold-begin :: finish >> 1 . library-digest 2023-01-01 :: Page Number 01&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<section id="2023-lorem-ipsum-1" class="level2">
-<h2>2023 Lorem Ipsum #1</h2>
 <section id="directory-tree-18" class="level3">
 <h3>Directory Tree</h3>
 <p>The ideal workflow is to put [Composer] in a top-level <code>.Composer</code> for each directory tree you want to manage, creating a structure similar to this:</p>
@@ -21292,7 +21314,6 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <p><a href="../config/pages/2023-01-01+template_01.html"><em>(permalink to full text)</em></a></p>
 <!-- site-fold-end :: start >> -->
 </section>
-</section>
 </div>
 </div>
 </div>
@@ -21304,7 +21325,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2023-01-01 :: Page Number 00&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2023-01-01 :: Page Number 00&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2023-01-01--page-number-000000----gary-b-genett-author-1-author-2-author-3">
+<div id="2023-01-01--page-number-00">
 
 </div>
 <!-- site-header :: finish >> 1 2023-01-01 :: Page Number 00&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -21357,7 +21378,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2022-01-01 :: Page Number 09&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2022-01-01 :: Page Number 09&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2022-01-01--page-number-090000----gary-b-genett-author-1-author-2-author-3">
+<div id="2022-01-01--page-number-09">
 
 </div>
 <!-- site-header :: finish >> 1 2022-01-01 :: Page Number 09&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -21410,7 +21431,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2022-01-01 :: Page Number 08&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2022-01-01 :: Page Number 08&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2022-01-01--page-number-080000----gary-b-genett-author-1-author-2-author-3">
+<div id="2022-01-01--page-number-08">
 
 </div>
 <!-- site-header :: finish >> 1 2022-01-01 :: Page Number 08&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -21463,7 +21484,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2022-01-01 :: Page Number 07&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2022-01-01 :: Page Number 07&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2022-01-01--page-number-070000----gary-b-genett-author-1-author-2-author-3">
+<div id="2022-01-01--page-number-07">
 
 </div>
 <!-- site-header :: finish >> 1 2022-01-01 :: Page Number 07&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -21516,7 +21537,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2022-01-01 :: Page Number 06&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2022-01-01 :: Page Number 06&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2022-01-01--page-number-060000----gary-b-genett-author-1-author-2-author-3">
+<div id="2022-01-01--page-number-06">
 
 </div>
 <!-- site-header :: finish >> 1 2022-01-01 :: Page Number 06&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -21569,7 +21590,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2022-01-01 :: Page Number 05&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2022-01-01 :: Page Number 05&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2022-01-01--page-number-050000----gary-b-genett-author-1-author-2-author-3">
+<div id="2022-01-01--page-number-05">
 
 </div>
 <!-- site-header :: finish >> 1 2022-01-01 :: Page Number 05&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -21622,7 +21643,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2022-01-01 :: Page Number 04&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2022-01-01 :: Page Number 04&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2022-01-01--page-number-040000----gary-b-genett-author-1-author-2-author-3">
+<div id="2022-01-01--page-number-04">
 
 </div>
 <!-- site-header :: finish >> 1 2022-01-01 :: Page Number 04&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -21659,7 +21680,8 @@ make all-all</code></pre>
 <pre><code>make template &gt;.composer.mk &amp;&amp; $EDITOR .composer.mk
 make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre>
 <p>Custom targets can also be defined, using standard [GNU Make] syntax (see [Custom Targets]).</p>
-<p>[…][<em>(permalink to full text)</em>](../config/pages/2022-01-01+template_04.html)</p>
+<p>[…]</p>
+<p><a href="../config/pages/2022-01-01+template_04.html"><em>(permalink to full text)</em></a></p>
 <!-- site-fold-end :: start >> -->
 </section>
 </section>
@@ -21674,7 +21696,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2022-01-01 :: Page Number 03&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2022-01-01 :: Page Number 03&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2022-01-01--page-number-030000----gary-b-genett-author-1-author-2-author-3">
+<div id="2022-01-01--page-number-03">
 
 </div>
 <!-- site-header :: finish >> 1 2022-01-01 :: Page Number 03&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -21727,7 +21749,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2022-01-01 :: Page Number 02&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2022-01-01 :: Page Number 02&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2022-01-01--page-number-020000----gary-b-genett-author-1-author-2-author-3">
+<div id="2022-01-01--page-number-02">
 
 </div>
 <!-- site-header :: finish >> 1 2022-01-01 :: Page Number 02&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -21780,7 +21802,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2022-01-01 :: Page Number 01&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2022-01-01 :: Page Number 01&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2022-01-01--page-number-010000----gary-b-genett-author-1-author-2-author-3">
+<div id="2022-01-01--page-number-01">
 
 </div>
 <!-- site-header :: finish >> 1 2022-01-01 :: Page Number 01&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -21833,7 +21855,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2022-01-01 :: Page Number 00&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
 <!-- site-header :: start >> 1 2022-01-01 :: Page Number 00&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
-<div id="2022-01-01--page-number-000000----gary-b-genett-author-1-author-2-author-3">
+<div id="2022-01-01--page-number-00">
 
 </div>
 <!-- site-header :: finish >> 1 2022-01-01 :: Page Number 00&#0000; -- Gary B. Genett; Author 1; Author 2; Author 3 -->
@@ -21881,6 +21903,7 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 </div>
 <!-- site-fold-end :: finish >> -->
 <!-- site-fold-end :: start >> group -->
+</section>
 </div>
 <!-- site-fold-end :: finish >> group -->
 <!-- site-file :: finish >> author-author-1.md -->
@@ -22324,7 +22347,7 @@ BOTTOM TEXT
 <!-- site-info-data-list :: start >> info-bottom.["INFO"][0] -->
 <p class="composer-link navbar-text me-3">
 <!-- composer >> readtime-list -->
-<em>Reading time: 4679 words, 21 minutes</em>
+<em>Reading time: 4680 words, 21 minutes</em>
 </p>
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"][0] -->
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"] -->

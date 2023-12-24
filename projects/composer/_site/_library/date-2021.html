@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content />
-  <meta name="dcterms.date" content="2023-12-22" />
+  <meta name="dcterms.date" content="2023-12-24" />
   <title>EXAMPLE SITE – Year: 2021</title>
   <style>
     code{white-space: pre-wrap;}
@@ -12667,11 +12667,6 @@ color:	var(--solarized-magenta);
   <style type="text/css">
 
 
-.composer-form {
-background-color:	rgba(var(--bs-dark-rgb));
-color:	rgba(var(--bs-secondary-rgb));
-border:	1px solid rgba(var(--bs-secondary-rgb));
-}
 .navbar,
 .dropdown-menu,
 .accordion-button,
@@ -12684,6 +12679,12 @@ color:	rgba(var(--bs-secondary-rgb));
 }
 .accordion-item,
 .card {
+border:	1px solid rgba(var(--bs-secondary-rgb));
+}
+
+.composer-form {
+background-color:	rgba(var(--bs-dark-rgb));
+color:	rgba(var(--bs-secondary-rgb));
 border:	1px solid rgba(var(--bs-secondary-rgb));
 }
 
@@ -12864,21 +12865,42 @@ width:	auto;
 }
 .composer-display .carousel-control-prev,
 .composer-display .carousel-control-next {
-height:	64px;
-width:	64px;
-opacity:	1;
+background-color:	rgba(var(--bs-secondary-rgb));
+height:	calc(32px + (1px * 2));
+width:	calc(32px + (1px * 2));
+border:	1px solid black;
+border-radius:	8px;
+margin:	0px;
+opacity:	0.8;
 }
 .composer-display .carousel-control-prev-icon,
 .composer-display .carousel-control-next-icon {
 height:	32px;
 width:	32px;
 }
+.composer-display .carousel-indicators,
+.composer-display .carousel-indicators [data-bs-target] {
+background-color:	rgba(var(--bs-secondary-rgb));
+border:	1px solid black;
+border-radius:	12px;
+}
 .composer-display .carousel-indicators {
-margin-bottom:	2px;
+height:	calc(6px + (1px * 2) + (2px * 2) + (1px * 2));
+width:	auto;
+margin-left:	20%;
+margin-right:	20%;
+opacity:	0.8;
 }
 .composer-display .carousel-indicators [data-bs-target] {
 height:	6px;
 width:	32px;
+margin-top:	2px;
+margin-bottom:	2px;
+opacity:	1;
+}
+.composer-display .carousel-indicators .active {
+background-color:	black;
+opacity:	1;
 }
 .composer-display-banner {
 height:	auto;
@@ -19904,13 +19926,13 @@ margin-top:	0px;
 <!-- site-nav-top-list :: start >> nav-top.["CONTENTS"][0].["CONTENTS"][0] -->
 <!-- composer >> contents-menu 0 -->
 <li>
-<a href="#november-21-2021--creating-custom-pandoc-writers-in-lua0000----john-macfarlane" class="dropdown-item">November 21, 2021 :: Creating Custom Pandoc Writers in Lua</a>
+<a href="#november-21-2021--creating-custom-pandoc-writers-in-lua" class="dropdown-item">November 21, 2021 :: Creating Custom Pandoc Writers in Lua</a>
 </li>
 <li>
-<a href="#november-18-2021--creating-custom-pandoc-readers-in-lua0000----john-macfarlane" class="dropdown-item">November 18, 2021 :: Creating Custom Pandoc Readers in Lua</a>
+<a href="#november-18-2021--creating-custom-pandoc-readers-in-lua" class="dropdown-item">November 18, 2021 :: Creating Custom Pandoc Readers in Lua</a>
 </li>
 <li>
-<a href="#2021-06-07--short-guide-to-pandocs-sources0000----albert-krewinkel" class="dropdown-item">2021-06-07 :: Short guide to pandoc’s sources</a>
+<a href="#2021-06-07--short-guide-to-pandocs-sources" class="dropdown-item">2021-06-07 :: Short guide to pandoc’s sources</a>
 </li>
 <!-- site-nav-top-list :: finish >> nav-top.["CONTENTS"][0].["CONTENTS"][0] -->
 <!-- site-nav-top-list :: finish >> nav-top.["CONTENTS"][0].["CONTENTS"] -->
@@ -20190,9 +20212,9 @@ CONTENTS
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][1] -->
 <!-- composer >> contents-list 0 -->
 <ul>
-<li><a href="#november-21-2021--creating-custom-pandoc-writers-in-lua0000----john-macfarlane">November 21, 2021 :: Creating Custom Pandoc Writers in Lua</a></li>
-<li><a href="#november-18-2021--creating-custom-pandoc-readers-in-lua0000----john-macfarlane">November 18, 2021 :: Creating Custom Pandoc Readers in Lua</a></li>
-<li><a href="#2021-06-07--short-guide-to-pandocs-sources0000----albert-krewinkel">2021-06-07 :: Short guide to pandoc’s sources</a></li>
+<li><a href="#november-21-2021--creating-custom-pandoc-writers-in-lua">November 21, 2021 :: Creating Custom Pandoc Writers in Lua</a></li>
+<li><a href="#november-18-2021--creating-custom-pandoc-readers-in-lua">November 18, 2021 :: Creating Custom Pandoc Readers in Lua</a></li>
+<li><a href="#2021-06-07--short-guide-to-pandocs-sources">2021-06-07 :: Short guide to pandoc’s sources</a></li>
 </ul>
 <!-- site-nav-side-list :: finish >> nav-left.["CONTENTS"][1] -->
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][2] -->
@@ -20252,7 +20274,7 @@ CONTENTS
 <!-- site-fold-begin :: finish >> group library-digest -->
 <!-- site-fold-begin :: start >> 1 . library-digest November 21, 2021 :: Creating Custom Pandoc Writers in Lua&#0000; -- John MacFarlane -->
 <!-- site-header :: start >> 1 November 21, 2021 :: Creating Custom Pandoc Writers in Lua&#0000; -- John MacFarlane -->
-<div id="november-21-2021--creating-custom-pandoc-writers-in-lua0000----john-macfarlane">
+<div id="november-21-2021--creating-custom-pandoc-writers-in-lua">
 
 </div>
 <!-- site-header :: finish >> 1 November 21, 2021 :: Creating Custom Pandoc Writers in Lua&#0000; -- John MacFarlane -->
@@ -20297,7 +20319,7 @@ November 21, 2021 :: Creating Custom Pandoc Writers in Lua  – John MacFarlane
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest November 18, 2021 :: Creating Custom Pandoc Readers in Lua&#0000; -- John MacFarlane -->
 <!-- site-header :: start >> 1 November 18, 2021 :: Creating Custom Pandoc Readers in Lua&#0000; -- John MacFarlane -->
-<div id="november-18-2021--creating-custom-pandoc-readers-in-lua0000----john-macfarlane">
+<div id="november-18-2021--creating-custom-pandoc-readers-in-lua">
 
 </div>
 <!-- site-header :: finish >> 1 November 18, 2021 :: Creating Custom Pandoc Readers in Lua&#0000; -- John MacFarlane -->
@@ -20338,7 +20360,7 @@ November 18, 2021 :: Creating Custom Pandoc Readers in Lua  – John MacFarlane
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest 2021-06-07 :: Short guide to pandoc's sources&#0000; -- Albert Krewinkel -->
 <!-- site-header :: start >> 1 2021-06-07 :: Short guide to pandoc's sources&#0000; -- Albert Krewinkel -->
-<div id="2021-06-07--short-guide-to-pandocs-sources0000----albert-krewinkel">
+<div id="2021-06-07--short-guide-to-pandocs-sources">
 
 </div>
 <!-- site-header :: finish >> 1 2021-06-07 :: Short guide to pandoc's sources&#0000; -- Albert Krewinkel -->

@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Gary B. Genett" />
-  <meta name="dcterms.date" content="2023-12-22" />
+  <meta name="dcterms.date" content="2023-12-24" />
   <title>EXAMPLE SITE – Themes &amp; Overlays</title>
   <style>
     code{white-space: pre-wrap;}
@@ -12604,11 +12604,6 @@ color:	var(--solarized-magenta);
   <style type="text/css">
 
 
-.composer-form {
-background-color:	rgba(var(--bs-dark-rgb));
-color:	rgba(var(--bs-secondary-rgb));
-border:	1px solid rgba(var(--bs-secondary-rgb));
-}
 .navbar,
 .dropdown-menu,
 .accordion-button,
@@ -12621,6 +12616,12 @@ color:	rgba(var(--bs-secondary-rgb));
 }
 .accordion-item,
 .card {
+border:	1px solid rgba(var(--bs-secondary-rgb));
+}
+
+.composer-form {
+background-color:	rgba(var(--bs-dark-rgb));
+color:	rgba(var(--bs-secondary-rgb));
 border:	1px solid rgba(var(--bs-secondary-rgb));
 }
 
@@ -12801,21 +12802,42 @@ width:	auto;
 }
 .composer-display .carousel-control-prev,
 .composer-display .carousel-control-next {
-height:	64px;
-width:	64px;
-opacity:	1;
+background-color:	rgba(var(--bs-secondary-rgb));
+height:	calc(32px + (1px * 2));
+width:	calc(32px + (1px * 2));
+border:	1px solid black;
+border-radius:	8px;
+margin:	0px;
+opacity:	0.8;
 }
 .composer-display .carousel-control-prev-icon,
 .composer-display .carousel-control-next-icon {
 height:	32px;
 width:	32px;
 }
+.composer-display .carousel-indicators,
+.composer-display .carousel-indicators [data-bs-target] {
+background-color:	rgba(var(--bs-secondary-rgb));
+border:	1px solid black;
+border-radius:	12px;
+}
 .composer-display .carousel-indicators {
-margin-bottom:	2px;
+height:	calc(6px + (1px * 2) + (2px * 2) + (1px * 2));
+width:	auto;
+margin-left:	20%;
+margin-right:	20%;
+opacity:	0.8;
 }
 .composer-display .carousel-indicators [data-bs-target] {
 height:	6px;
 width:	32px;
+margin-top:	2px;
+margin-bottom:	2px;
+opacity:	1;
+}
+.composer-display .carousel-indicators .active {
+background-color:	black;
+opacity:	1;
 }
 .composer-display-banner {
 height:	auto;
@@ -20224,7 +20246,7 @@ CONTENTS
 <!-- site-nav-side-list :: finish >> nav-left.["CONTENTS"][0] -->
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][1] -->
 <!-- composer >> metainfo-list -->
-<p>2023-12-22 :: Themes &amp; Overlays  – Gary B. Genett</p>
+<p>2023-12-24 :: Themes &amp; Overlays  – Gary B. Genett</p>
 <!-- site-nav-side-list :: finish >> nav-left.["CONTENTS"][1] -->
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][2] -->
 <!-- composer >> contents-list -->
@@ -20593,7 +20615,7 @@ Generic Box
 <h2>Displays</h2>
 <p><code>&lt;!-- composer &gt;&gt; display {composer_root}/examples.yml Example Banner --&gt;</code></p>
 <!-- site-display :: start >> ../examples.yml Example Banner -->
-<div id="composer-display-example-banner" class="composer-display carousel carousel-dark slide" data-bs-ride="true">
+<div id="composer-display-example-banner" class="composer-display carousel slide" data-bs-ride="true">
 <div class="carousel-indicators">
 <button type="button" data-bs-slide-to="0" data-bs-target="#composer-display-example-banner" class="active">
 </button>
@@ -20900,7 +20922,7 @@ Same as above, for a version of the library specific to the <code>config</code> 
 <h2>Metainfo</h2>
 <p><code>&lt;!-- composer &gt;&gt; metainfo --&gt;</code></p>
 <!-- composer >> metainfo-list -->
-<p>2023-12-22 :: Themes &amp; Overlays  – Gary B. Genett</p>
+<p>2023-12-24 :: Themes &amp; Overlays  – Gary B. Genett</p>
 <p>#WORK # demonstrated elsewhere…</p>
 <ul>
 <li><code>site-nav-left: { metainfo }</code> + <code>&lt;!-- composer &gt;&gt; metainfo --&gt;</code>

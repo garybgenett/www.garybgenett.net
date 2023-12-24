@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content />
-  <meta name="dcterms.date" content="2023-12-22" />
+  <meta name="dcterms.date" content="2023-12-24" />
   <title>EXAMPLE SITE – Author: John MacFarlane</title>
   <style>
     code{white-space: pre-wrap;}
@@ -12667,11 +12667,6 @@ color:	var(--solarized-magenta);
   <style type="text/css">
 
 
-.composer-form {
-background-color:	rgba(var(--bs-dark-rgb));
-color:	rgba(var(--bs-secondary-rgb));
-border:	1px solid rgba(var(--bs-secondary-rgb));
-}
 .navbar,
 .dropdown-menu,
 .accordion-button,
@@ -12684,6 +12679,12 @@ color:	rgba(var(--bs-secondary-rgb));
 }
 .accordion-item,
 .card {
+border:	1px solid rgba(var(--bs-secondary-rgb));
+}
+
+.composer-form {
+background-color:	rgba(var(--bs-dark-rgb));
+color:	rgba(var(--bs-secondary-rgb));
 border:	1px solid rgba(var(--bs-secondary-rgb));
 }
 
@@ -12864,21 +12865,42 @@ width:	auto;
 }
 .composer-display .carousel-control-prev,
 .composer-display .carousel-control-next {
-height:	64px;
-width:	64px;
-opacity:	1;
+background-color:	rgba(var(--bs-secondary-rgb));
+height:	calc(32px + (1px * 2));
+width:	calc(32px + (1px * 2));
+border:	1px solid black;
+border-radius:	8px;
+margin:	0px;
+opacity:	0.8;
 }
 .composer-display .carousel-control-prev-icon,
 .composer-display .carousel-control-next-icon {
 height:	32px;
 width:	32px;
 }
+.composer-display .carousel-indicators,
+.composer-display .carousel-indicators [data-bs-target] {
+background-color:	rgba(var(--bs-secondary-rgb));
+border:	1px solid black;
+border-radius:	12px;
+}
 .composer-display .carousel-indicators {
-margin-bottom:	2px;
+height:	calc(6px + (1px * 2) + (2px * 2) + (1px * 2));
+width:	auto;
+margin-left:	20%;
+margin-right:	20%;
+opacity:	0.8;
 }
 .composer-display .carousel-indicators [data-bs-target] {
 height:	6px;
 width:	32px;
+margin-top:	2px;
+margin-bottom:	2px;
+opacity:	1;
+}
+.composer-display .carousel-indicators .active {
+background-color:	black;
+opacity:	1;
 }
 .composer-display-banner {
 height:	auto;
@@ -19904,28 +19926,28 @@ margin-top:	0px;
 <!-- site-nav-top-list :: start >> nav-top.["CONTENTS"][0].["CONTENTS"][0] -->
 <!-- composer >> contents-menu 0 -->
 <li>
-<a href="#none--the-pandoc-family-of-libraries0000----john-macfarlane" class="dropdown-item"><em>(none)</em> :: The pandoc family of libraries</a>
+<a href="#none--the-pandoc-family-of-libraries" class="dropdown-item"><em>(none)</em> :: The pandoc family of libraries</a>
 </li>
 <li>
-<a href="#november-21-2021--creating-custom-pandoc-writers-in-lua0000----john-macfarlane" class="dropdown-item">November 21, 2021 :: Creating Custom Pandoc Writers in Lua</a>
+<a href="#november-21-2021--creating-custom-pandoc-writers-in-lua" class="dropdown-item">November 21, 2021 :: Creating Custom Pandoc Writers in Lua</a>
 </li>
 <li>
-<a href="#november-18-2021--creating-custom-pandoc-readers-in-lua0000----john-macfarlane" class="dropdown-item">November 18, 2021 :: Creating Custom Pandoc Readers in Lua</a>
+<a href="#november-18-2021--creating-custom-pandoc-readers-in-lua" class="dropdown-item">November 18, 2021 :: Creating Custom Pandoc Readers in Lua</a>
 </li>
 <li>
-<a href="#january-10-2020--pandoc-lua-filters0000----albert-krewinkel-john-macfarlane" class="dropdown-item">January 10, 2020 :: Pandoc Lua Filters</a>
+<a href="#january-10-2020--pandoc-lua-filters" class="dropdown-item">January 10, 2020 :: Pandoc Lua Filters</a>
 </li>
 <li>
-<a href="#none--getting-started-with-pandoc0000----john-macfarlane" class="dropdown-item"><em>(none)</em> :: Getting started with pandoc</a>
+<a href="#none--getting-started-with-pandoc" class="dropdown-item"><em>(none)</em> :: Getting started with pandoc</a>
 </li>
 <li>
-<a href="#none--customizing-pandoc0000----mauro-bieg-john-macfarlane" class="dropdown-item"><em>(none)</em> :: Customizing Pandoc</a>
+<a href="#none--customizing-pandoc" class="dropdown-item"><em>(none)</em> :: Customizing Pandoc</a>
 </li>
 <li>
-<a href="#none--creating-an-ebook-with-pandoc0000----john-macfarlane" class="dropdown-item"><em>(none)</em> :: Creating an ebook with pandoc</a>
+<a href="#none--creating-an-ebook-with-pandoc" class="dropdown-item"><em>(none)</em> :: Creating an ebook with pandoc</a>
 </li>
 <li>
-<a href="#april-4-2022--pandoc-users-guide0000----john-macfarlane" class="dropdown-item">April 4, 2022 :: Pandoc User’s Guide</a>
+<a href="#april-4-2022--pandoc-users-guide" class="dropdown-item">April 4, 2022 :: Pandoc User’s Guide</a>
 </li>
 <!-- site-nav-top-list :: finish >> nav-top.["CONTENTS"][0].["CONTENTS"][0] -->
 <!-- site-nav-top-list :: finish >> nav-top.["CONTENTS"][0].["CONTENTS"] -->
@@ -20205,14 +20227,14 @@ CONTENTS
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][1] -->
 <!-- composer >> contents-list 0 -->
 <ul>
-<li><a href="#none--the-pandoc-family-of-libraries0000----john-macfarlane"><em>(none)</em> :: The pandoc family of libraries</a></li>
-<li><a href="#november-21-2021--creating-custom-pandoc-writers-in-lua0000----john-macfarlane">November 21, 2021 :: Creating Custom Pandoc Writers in Lua</a></li>
-<li><a href="#november-18-2021--creating-custom-pandoc-readers-in-lua0000----john-macfarlane">November 18, 2021 :: Creating Custom Pandoc Readers in Lua</a></li>
-<li><a href="#january-10-2020--pandoc-lua-filters0000----albert-krewinkel-john-macfarlane">January 10, 2020 :: Pandoc Lua Filters</a></li>
-<li><a href="#none--getting-started-with-pandoc0000----john-macfarlane"><em>(none)</em> :: Getting started with pandoc</a></li>
-<li><a href="#none--customizing-pandoc0000----mauro-bieg-john-macfarlane"><em>(none)</em> :: Customizing Pandoc</a></li>
-<li><a href="#none--creating-an-ebook-with-pandoc0000----john-macfarlane"><em>(none)</em> :: Creating an ebook with pandoc</a></li>
-<li><a href="#april-4-2022--pandoc-users-guide0000----john-macfarlane">April 4, 2022 :: Pandoc User’s Guide</a></li>
+<li><a href="#none--the-pandoc-family-of-libraries"><em>(none)</em> :: The pandoc family of libraries</a></li>
+<li><a href="#november-21-2021--creating-custom-pandoc-writers-in-lua">November 21, 2021 :: Creating Custom Pandoc Writers in Lua</a></li>
+<li><a href="#november-18-2021--creating-custom-pandoc-readers-in-lua">November 18, 2021 :: Creating Custom Pandoc Readers in Lua</a></li>
+<li><a href="#january-10-2020--pandoc-lua-filters">January 10, 2020 :: Pandoc Lua Filters</a></li>
+<li><a href="#none--getting-started-with-pandoc"><em>(none)</em> :: Getting started with pandoc</a></li>
+<li><a href="#none--customizing-pandoc"><em>(none)</em> :: Customizing Pandoc</a></li>
+<li><a href="#none--creating-an-ebook-with-pandoc"><em>(none)</em> :: Creating an ebook with pandoc</a></li>
+<li><a href="#april-4-2022--pandoc-users-guide">April 4, 2022 :: Pandoc User’s Guide</a></li>
 </ul>
 <!-- site-nav-side-list :: finish >> nav-left.["CONTENTS"][1] -->
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][2] -->
@@ -20272,7 +20294,7 @@ CONTENTS
 <!-- site-fold-begin :: finish >> group library-digest -->
 <!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: The pandoc family of libraries&#0000; -- John MacFarlane -->
 <!-- site-header :: start >> 1 *(none)* :: The pandoc family of libraries&#0000; -- John MacFarlane -->
-<div id="none--the-pandoc-family-of-libraries0000----john-macfarlane">
+<div id="none--the-pandoc-family-of-libraries">
 
 </div>
 <!-- site-header :: finish >> 1 *(none)* :: The pandoc family of libraries&#0000; -- John MacFarlane -->
@@ -20353,7 +20375,7 @@ Support for parsing Jira wiki syntax.
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest November 21, 2021 :: Creating Custom Pandoc Writers in Lua&#0000; -- John MacFarlane -->
 <!-- site-header :: start >> 1 November 21, 2021 :: Creating Custom Pandoc Writers in Lua&#0000; -- John MacFarlane -->
-<div id="november-21-2021--creating-custom-pandoc-writers-in-lua0000----john-macfarlane">
+<div id="november-21-2021--creating-custom-pandoc-writers-in-lua">
 
 </div>
 <!-- site-header :: finish >> 1 November 21, 2021 :: Creating Custom Pandoc Writers in Lua&#0000; -- John MacFarlane -->
@@ -20398,7 +20420,7 @@ November 21, 2021 :: Creating Custom Pandoc Writers in Lua  – John MacFarlane
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest November 18, 2021 :: Creating Custom Pandoc Readers in Lua&#0000; -- John MacFarlane -->
 <!-- site-header :: start >> 1 November 18, 2021 :: Creating Custom Pandoc Readers in Lua&#0000; -- John MacFarlane -->
-<div id="november-18-2021--creating-custom-pandoc-readers-in-lua0000----john-macfarlane">
+<div id="november-18-2021--creating-custom-pandoc-readers-in-lua">
 
 </div>
 <!-- site-header :: finish >> 1 November 18, 2021 :: Creating Custom Pandoc Readers in Lua&#0000; -- John MacFarlane -->
@@ -20439,7 +20461,7 @@ November 18, 2021 :: Creating Custom Pandoc Readers in Lua  – John MacFarlane
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest January 10, 2020 :: Pandoc Lua Filters&#0000; -- Albert Krewinkel; John MacFarlane -->
 <!-- site-header :: start >> 1 January 10, 2020 :: Pandoc Lua Filters&#0000; -- Albert Krewinkel; John MacFarlane -->
-<div id="january-10-2020--pandoc-lua-filters0000----albert-krewinkel-john-macfarlane">
+<div id="january-10-2020--pandoc-lua-filters">
 
 </div>
 <!-- site-header :: finish >> 1 January 10, 2020 :: Pandoc Lua Filters&#0000; -- Albert Krewinkel; John MacFarlane -->
@@ -20475,7 +20497,7 @@ January 10, 2020 :: Pandoc Lua Filters  – Albert Krewinkel; John MacFarlane
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: Getting started with pandoc&#0000; -- John MacFarlane -->
 <!-- site-header :: start >> 1 *(none)* :: Getting started with pandoc&#0000; -- John MacFarlane -->
-<div id="none--getting-started-with-pandoc0000----john-macfarlane">
+<div id="none--getting-started-with-pandoc">
 
 </div>
 <!-- site-header :: finish >> 1 *(none)* :: Getting started with pandoc&#0000; -- John MacFarlane -->
@@ -20525,7 +20547,7 @@ January 10, 2020 :: Pandoc Lua Filters  – Albert Krewinkel; John MacFarlane
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: Customizing Pandoc&#0000; -- Mauro Bieg; John MacFarlane -->
 <!-- site-header :: start >> 1 *(none)* :: Customizing Pandoc&#0000; -- Mauro Bieg; John MacFarlane -->
-<div id="none--customizing-pandoc0000----mauro-bieg-john-macfarlane">
+<div id="none--customizing-pandoc">
 
 </div>
 <!-- site-header :: finish >> 1 *(none)* :: Customizing Pandoc&#0000; -- Mauro Bieg; John MacFarlane -->
@@ -20562,7 +20584,7 @@ January 10, 2020 :: Pandoc Lua Filters  – Albert Krewinkel; John MacFarlane
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest *(none)* :: Creating an ebook with pandoc&#0000; -- John MacFarlane -->
 <!-- site-header :: start >> 1 *(none)* :: Creating an ebook with pandoc&#0000; -- John MacFarlane -->
-<div id="none--creating-an-ebook-with-pandoc0000----john-macfarlane">
+<div id="none--creating-an-ebook-with-pandoc">
 
 </div>
 <!-- site-header :: finish >> 1 *(none)* :: Creating an ebook with pandoc&#0000; -- John MacFarlane -->
@@ -20610,7 +20632,7 @@ Chapter two has just begun.</code></pre>
 <!-- site-spacer :: finish >> -->
 <!-- site-fold-begin :: start >> 1 . library-digest April 4, 2022 :: Pandoc User's Guide&#0000; -- John MacFarlane -->
 <!-- site-header :: start >> 1 April 4, 2022 :: Pandoc User's Guide&#0000; -- John MacFarlane -->
-<div id="april-4-2022--pandoc-users-guide0000----john-macfarlane">
+<div id="april-4-2022--pandoc-users-guide">
 
 </div>
 <!-- site-header :: finish >> 1 April 4, 2022 :: Pandoc User's Guide&#0000; -- John MacFarlane -->
