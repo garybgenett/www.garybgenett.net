@@ -27,7 +27,14 @@ override define DO_PROJECT_YML =
 variables:
   site-nav-left:
     TAGLINE:
-      - _: "$(if $(filter composer,$(1)),*Happy Making!*,*Happy Hacking!*)"
+      - _: "$(if $(filter composer,$(1)),$(COMPOSER_TAGLINE),*Happy Hacking!*)"
+endef
+
+override define DO_PROJECT_YML_FILE =
+variables:
+  site-nav-top:
+    CONTENTS:
+      - contents
 endef
 
 ########################################
@@ -61,6 +68,8 @@ $(addsuffix /index.md,$(PROJECTS)):
 	@$(call $(COMPOSER_TINYNAME)-makefile,$(CURDIR)/$($(@))/$(MAKEFILE))
 	@$(call DO_HEREDOC,DO_PROJECT_MK,,$($(@))) >$(CURDIR)/$($(@))/$(COMPOSER_SETTINGS)
 	@$(call DO_HEREDOC,DO_PROJECT_YML,,$($(@))) >$(CURDIR)/$($(@))/$(COMPOSER_YML)
+	@$(call DO_HEREDOC,DO_PROJECT_YML_FILE,,$($(@))) >$(CURDIR)/$($(@))/index.html.yml
+	@$(call DO_HEREDOC,DO_PROJECT_YML_FILE,,$($(@))) >$(CURDIR)/$($(@))/license.html.yml
 	@if [ -n "$(COMPOSER_DEBUGIT)" ]; then	$(ECHO) "$(_E)"; \
 		else				$(ECHO) "$(_F)"; \
 		fi
@@ -94,12 +103,14 @@ $(addsuffix /index.md,$(PROJECTS)):
 			$(ECHO) "  - Releases\n"; \
 			$(ECHO) "---\n"; \
 		} >$(CURDIR)/$(@); \
-		$(SED) \
-			-e "1i ---\ntitle: $${TITL} License\n---\n" \
+		$(if $(filter composer,$($(@))),\
+			$(CAT) ,\
+			$(SED) "1i ---\ntitle: \"$${TITL}: License\"\n---\n" \
+			) \
 			$(CURDIR)/$($(@))/LICENSE.md \
-		>$(CURDIR)/$($(@))/license.md
+			>$(CURDIR)/$($(@))/license.md
 	@if [ "$($(@))" = "composer" ]; then \
-		$(CAT) $(CURDIR)/$($(@))/artifacts/README.site.md \
+		$(CAT) $(CURDIR)/$($(@))/$(call COMPOSER_CONV,,$(COMPOSER_ART))/$(OUT_README).$(PUBLISH)$(COMPOSER_EXT_DEFAULT) \
 			| $(SED) \
 				-e "1,/^---$$/d" \
 				; \
@@ -116,8 +127,8 @@ $(addsuffix /index.md,$(PROJECTS)):
 				; \
 	fi \
 		| $(SED) \
-			-e "s|^([[]License.*[]]:) http.+$$|\1 license.html|g" \
-			-e "s|([( ])(artifacts[/])|\1<composer_root>/projects/$($(@))/\2|g" \
+			-e "s|^([[]License.*[]]:) .+$$|\1 license.html|g" \
+			-e "s|([( ])($(call COMPOSER_CONV,,$(COMPOSER_ART))[/])|\1$(PUBLISH_CMD_ROOT)/projects/$($(@))/\2|g" \
 		>>$(CURDIR)/$(@)
 	@$(ECHO) "$(_D)"
 

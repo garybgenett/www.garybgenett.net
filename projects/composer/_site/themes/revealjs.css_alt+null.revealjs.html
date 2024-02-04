@@ -746,7 +746,7 @@ max-width:	100%;
 <section id="title-slide">
   <h1 class="title">Composer CMS: Content Make System</h1>
   <p class="author">Gary B. Genett</p>
-  <p class="date">v3.1 (2023-12-24)</p>
+  <p class="date">v3.1 (2024-02-02)</p>
 </section>
 
 <section>
@@ -762,7 +762,7 @@ max-width:	100%;
 <tbody>
 <tr class="odd">
 <td style="text-align: left;"><a href="https://github.com/garybgenett/composer/tree/v3.1">Composer CMS v3.1</a></td>
-<td style="text-align: left;"><a href="https://github.com/garybgenett/composer/blob/main/LICENSE.md">License: GPL</a></td>
+<td style="text-align: left;"><a href="LICENSE.html">License: GPL</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="http://www.garybgenett.net/projects/composer">Gary B. Genett</a></td>
@@ -771,6 +771,7 @@ max-width:	100%;
 </tbody>
 </table>
 <p>– Formats: <a href="README.site.html">webpage</a> / <a href="README.html">html</a> / <a href="README.pdf">pdf</a> / <a href="README.epub">epub</a> / <a href="README.revealjs.html">revealjs.html</a> / <a href="README.docx">docx</a></p>
+<!-- #>> [License: GPL]: https://github.com/garybgenett/composer/blob/main/LICENSE.md -->
 </section>
 <section id="overview" class="slide level2">
 <h2>Overview</h2>
@@ -826,7 +827,7 @@ make all-all</code></pre>
 </section>
 <section id="requirements" class="slide level2">
 <h2>Requirements</h2>
-<p><a href="http://www.garybgenett.net/projects/composer">Composer</a> has almost no external dependencies. All needed components are integrated directly into the repository, including [Pandoc]. <a href="http://www.garybgenett.net/projects/composer">Composer</a> does require a minimal command-line environment based on [GNU] tools, particularly [GNU Make], which is standard for all [GNU/Linux] systems. The [Windows Subsystem for Linux] for Windows and [MacPorts] for macOS both provide suitable environments.</p>
+<p><a href="http://www.garybgenett.net/projects/composer">Composer</a> has almost no external dependencies. All needed components are integrated directly into the repository, including [Pandoc] and [YQ]. <a href="http://www.garybgenett.net/projects/composer">Composer</a> does require a minimal command-line environment based on [GNU] tools, particularly [GNU Make], which is standard for all [GNU/Linux] systems. The [Windows Subsystem for Linux] for Windows and [MacPorts] for macOS both provide suitable environments.</p>
 <p>The one large external requirement is [TeX Live], and it can be installed using the package managers of each of the above systems. It is only necessary for creating [PDF] files.</p>
 <p>Below are the versions of the components in the repository, and the tested versions of external tools for this iteration of <a href="http://www.garybgenett.net/projects/composer">Composer</a>. Use [check] to validate your system.</p>
 <table>
@@ -864,7 +865,7 @@ make all-all</code></pre>
 <td style="text-align: left;">MIT</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">[Font-Awesome]</td>
+<td style="text-align: left;">[Font Awesome]</td>
 <td style="text-align: left;">6.1.2</td>
 <td style="text-align: left;">MIT / CC-BY</td>
 </tr>
@@ -937,7 +938,7 @@ make all-all</code></pre>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Supporting Tools:</td>
-<td style="text-align: left;">&gt;&gt;</td>
+<td style="text-align: left;">–</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">– [Git SCM]</td>
@@ -1127,14 +1128,14 @@ make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
 <td style="text-align: left;">1 <code>(makejobs)</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">[COMPOSER_DOCOLOR]</td>
-<td style="text-align: left;">Enable title/color sequences</td>
-<td style="text-align: left;"><code>(boolean)</code></td>
-</tr>
-<tr class="odd">
 <td style="text-align: left;">[COMPOSER_DEBUGIT]</td>
 <td style="text-align: left;">Use verbose output</td>
 <td style="text-align: left;"><code>(debugit)</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">[COMPOSER_DOCOLOR]</td>
+<td style="text-align: left;">Enable title/color sequences</td>
+<td style="text-align: left;"><code>(boolean)</code></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">[COMPOSER_INCLUDE]</td>
@@ -1185,8 +1186,8 @@ make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
 </table>
 <ul>
 <li><em>[MAKEJOBS] ~ <code>c_jobs</code> ~ <code>J</code></em></li>
-<li><em>[COMPOSER_DOCOLOR] ~ <code>c_color</code> ~ <code>C</code></em></li>
 <li><em>[COMPOSER_DEBUGIT] ~ <code>c_debug</code> ~ <code>V</code></em></li>
+<li><em>[COMPOSER_DOCOLOR] ~ <code>c_color</code> ~ <code>C</code></em></li>
 <li><em><code>(makejobs)</code> = empty is disabled / number of threads / <code>0</code> is no limit</em></li>
 <li><em><code>(debugit)</code> = empty is disabled / any value enables / <code>0</code> is full tracing</em></li>
 <li><em><code>(keeping)</code> = empty is no limit / number to keep / <code>0</code> is none</em></li>
@@ -1521,8 +1522,8 @@ make -f .Composer/Makefile install-all
 make all-all</code></pre>
 <p>See <code>help-all</code> for full details and additional targets.</p>
 </section>
-<section id="go-do-a-thing" class="slide level2">
-<h2>Go Do A Thing</h2>
+<section id="go-make-a-thing" class="slide level2">
+<h2>Go Make A Thing</h2>
 <p><em>Happy Making!</em></p>
 </section></section>
     </div>
