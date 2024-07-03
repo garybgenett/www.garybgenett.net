@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Gary B. Genett" />
-  <meta name="dcterms.date" content="2024-02-02" />
+  <meta name="dcterms.date" content="2024-07-03" />
   <title>EXAMPLE SITE – Introduction</title>
   <style>
     code{white-space: pre-wrap;}
@@ -9076,7 +9076,7 @@ background-color:	transparent;
 ::-webkit-scrollbar-thumb {
 background-color:	rgba(var(--bs-secondary-rgb));
 }
-body {
+:root {
 scrollbar-color:	rgba(var(--bs-secondary-rgb)) transparent;
 }
 </style>
@@ -9134,11 +9134,13 @@ scrollbar-color:	rgba(var(--bs-secondary-rgb)) transparent;
 --text-bright:	var(--solarized-dark1);
 --links:	var(--solarized-yellow);
 
---background-alt:	var(--solarized-light2);
 --background:	var(--solarized-light2);
+--background-alt:	var(--solarized-light2);
 --border:	var(--solarized-light1);
 --focus:	var(--solarized-light1);
 
+--scrollbar-thumb:	var(--solarized-light1);
+--scrollbar-thumb-hover:	var(--solarized-light1);
 --button-base:	var(--solarized-light1);
 --button-hover:	var(--solarized-light1);
 --form-placeholder:	var(--solarized-dark0);
@@ -9742,45 +9744,9 @@ color:	var(--solarized-magenta);
 }
 }
 html {
-scrollbar-color: rgb(163, 175, 175) #fdf6e3;
+scrollbar-color: #93a1a1 #fdf6e3;
 scrollbar-color: var(--scrollbar-thumb) var(--background-body);
 scrollbar-width: thin;
-}
-@media (prefers-color-scheme: dark) {
-html {
-scrollbar-color: #586e75 #002b36;
-scrollbar-color: var(--scrollbar-thumb) var(--background-body);
-}
-}
-@media (prefers-color-scheme: dark) {
-html {
-scrollbar-color: #586e75 #002b36;
-scrollbar-color: var(--scrollbar-thumb) var(--background-body);
-}
-}
-@media (prefers-color-scheme: dark) {
-html {
-scrollbar-color: #586e75 #002b36;
-scrollbar-color: var(--scrollbar-thumb) var(--background-body);
-}
-}
-@media (prefers-color-scheme: dark) {
-html {
-scrollbar-color: #586e75 #002b36;
-scrollbar-color: var(--scrollbar-thumb) var(--background-body);
-}
-}
-@media (prefers-color-scheme: dark) {
-html {
-scrollbar-color: #586e75 #002b36;
-scrollbar-color: var(--scrollbar-thumb) var(--background-body);
-}
-}
-@media (prefers-color-scheme: dark) {
-html {
-scrollbar-color: #586e75 #002b36;
-scrollbar-color: var(--scrollbar-thumb) var(--background-body);
-}
 }
 @media (prefers-color-scheme: dark) {
 html {
@@ -11996,9 +11962,15 @@ background: var(--background);
 }
 }
 ::-webkit-scrollbar-thumb {
-background: rgb(163, 175, 175);
+background: #93a1a1;
 background: var(--scrollbar-thumb);
 border-radius: 6px;
+}
+@media (prefers-color-scheme: dark) {
+::-webkit-scrollbar-thumb {
+background: #586e75;
+background: var(--scrollbar-thumb);
+}
 }
 @media (prefers-color-scheme: dark) {
 ::-webkit-scrollbar-thumb {
@@ -12036,31 +12008,37 @@ background: var(--scrollbar-thumb-hover);
 }
 @media (prefers-color-scheme: dark) {
 ::-webkit-scrollbar-thumb:hover {
-background: rgb(0, 0, 0);
+background: #586e75;
 background: var(--scrollbar-thumb-hover);
 }
 }
 @media (prefers-color-scheme: dark) {
 ::-webkit-scrollbar-thumb:hover {
-background: rgb(0, 0, 0);
+background: #586e75;
 background: var(--scrollbar-thumb-hover);
 }
 }
 @media (prefers-color-scheme: dark) {
 ::-webkit-scrollbar-thumb:hover {
-background: rgb(0, 0, 0);
+background: #586e75;
 background: var(--scrollbar-thumb-hover);
 }
 }
 @media (prefers-color-scheme: dark) {
 ::-webkit-scrollbar-thumb:hover {
-background: rgb(0, 0, 0);
+background: #586e75;
 background: var(--scrollbar-thumb-hover);
 }
 }
 @media (prefers-color-scheme: dark) {
 ::-webkit-scrollbar-thumb:hover {
-background: rgb(0, 0, 0);
+background: #586e75;
+background: var(--scrollbar-thumb-hover);
+}
+}
+@media (prefers-color-scheme: dark) {
+::-webkit-scrollbar-thumb:hover {
+background: #586e75;
 background: var(--scrollbar-thumb-hover);
 }
 }
@@ -12500,7 +12478,7 @@ text-decoration: underline;
 --button-base: #0c151c;
 --button-hover: #040a0f;
 --scrollbar-thumb: var(--button-hover);
---scrollbar-thumb-hover: rgb(0, 0, 0);
+--scrollbar-thumb-hover: rgb(72, 83, 83);
 --form-placeholder: #a9a9a9;
 --form-text: #fff;
 --variable: #d941e2;
@@ -12540,11 +12518,13 @@ text-decoration: underline;
 --text-bright:	var(--solarized-light1);
 --links:	var(--solarized-yellow);
 
---background-alt:	var(--solarized-dark2);
 --background:	var(--solarized-dark2);
+--background-alt:	var(--solarized-dark2);
 --border:	var(--solarized-dark1);
 --focus:	var(--solarized-dark1);
 
+--scrollbar-thumb:	var(--solarized-dark1);
+--scrollbar-thumb-hover:	var(--solarized-dark1);
 --button-base:	var(--solarized-dark1);
 --button-hover:	var(--solarized-dark1);
 --form-placeholder:	var(--solarized-light0);
@@ -13280,7 +13260,7 @@ border-radius:	10px;
 ::-webkit-scrollbar-thumb {
 border-radius:	10px;
 }
-body {
+:root {
 scrollbar-width:	thin;
 }
 
@@ -20707,7 +20687,7 @@ CONTENTS
 <!-- site-nav-side-list :: finish >> nav-left.["CONTENTS"][0] -->
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][1] -->
 <!-- composer >> metainfo-list -->
-<p>2024-02-02 :: Introduction  – Gary B. Genett</p>
+<p>2024-07-03 :: Introduction  – Gary B. Genett</p>
 <!-- site-nav-side-list :: finish >> nav-left.["CONTENTS"][1] -->
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][2] -->
 <!-- composer >> contents-list -->
@@ -20727,7 +20707,7 @@ CONTENTS
 <!-- site-nav-side-list :: finish >> nav-left.["CONTENTS"][4] -->
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][5] -->
 <!-- composer >> readtime-list -->
-<p><em>Reading time: 392 words, 1 minutes</em></p>
+<p><em>Reading time: 432 words, 1 minutes</em></p>
 <!-- site-nav-side-list :: finish >> nav-left.["CONTENTS"][5] -->
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][6] -->
 <!-- site-box-end :: start >> -->
@@ -20769,7 +20749,7 @@ Introduction
 <td style="text-align: left;">Top Bar</td>
 <td style="text-align: left;"><code>brand</code> (<code>homepage</code>)</td>
 <td style="text-align: left;"><code>nav-top</code></td>
-<td style="text-align: right;"><code>info-top</code> / <code>search_*</code></td>
+<td style="text-align: right;"><code>info-top</code> / <code>search.*</code></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Main Page</td>
@@ -20911,71 +20891,104 @@ Default Configuration
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><a href="./../README.site.html#header">header</a></td>
-<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;"><a href="./../index.html#brand">brand</a></td>
+<td style="text-align: left;">null</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="./../README.site.html#footer">footer</a></td>
-<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;"><a href="./../index.html#homepage">homepage</a></td>
+<td style="text-align: left;">null</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="./../README.site.html#css_overlay">css_overlay</a></td>
-<td style="text-align: left;"><code>dark</code></td>
+<td style="text-align: left;"><a href="./../index.html#search">search</a> :: name</td>
+<td style="text-align: left;">null</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="./../README.site.html#copy_protect">copy_protect</a></td>
-<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;"><a href="./../index.html#search">search</a> :: site</td>
+<td style="text-align: left;">null</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="./../README.site.html#cols_break">cols_break</a></td>
-<td style="text-align: left;"><code>lg</code></td>
+<td style="text-align: left;"><a href="./../index.html#search">search</a> :: call</td>
+<td style="text-align: left;">null</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="./../README.site.html#cols_scroll">cols_scroll</a></td>
+<td style="text-align: left;"><a href="./../index.html#search">search</a> :: form</td>
+<td style="text-align: left;">null</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="./../index.html#copyright">copyright</a></td>
+<td style="text-align: left;">null</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="./../index.html#composer">composer</a></td>
 <td style="text-align: left;"><code>1</code></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="./../README.site.html#cols_order">cols_order</a></td>
+<td style="text-align: left;"><a href="./../index.html#header">header</a></td>
+<td style="text-align: left;"><code>null</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="./../index.html#footer">footer</a></td>
+<td style="text-align: left;"><code>null</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="./../index.html#css_overlay">css_overlay</a></td>
+<td style="text-align: left;"><code>dark</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="./../index.html#copy_protect">copy_protect</a></td>
+<td style="text-align: left;"><code>null</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="./../index.html#cols_break">cols_break</a></td>
+<td style="text-align: left;"><code>lg</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="./../index.html#cols_scroll">cols_scroll</a></td>
+<td style="text-align: left;"><code>1</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="./../index.html#cols_order">cols_order</a></td>
 <td style="text-align: left;"><code>[ 1, 2, 3 ]</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="./../README.site.html#cols_reorder">cols_reorder</a></td>
+<td style="text-align: left;"><a href="./../index.html#cols_reorder">cols_reorder</a></td>
 <td style="text-align: left;"><code>[ 1, 3, 2 ]</code></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="./../README.site.html#cols_size">cols_size</a></td>
+<td style="text-align: left;"><a href="./../index.html#cols_size">cols_size</a></td>
 <td style="text-align: left;"><code>[ 3, 7, 2 ]</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="./../README.site.html#cols_resize">cols_resize</a></td>
+<td style="text-align: left;"><a href="./../index.html#cols_resize">cols_resize</a></td>
 <td style="text-align: left;"><code>[ 6, 12, 6 ]</code></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="./../README.site.html#metainfo">metainfo</a></td>
+<td style="text-align: left;"><a href="./../index.html#metainfo">metainfo</a></td>
 <td style="text-align: left;"><code>&lt;date&gt; :: &lt;title&gt;&lt;|&gt; -- &lt;author|; &gt;</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="./../README.site.html#metainfo_null">metainfo_null</a></td>
+<td style="text-align: left;"><a href="./../index.html#metainfo_null">metainfo_null</a></td>
 <td style="text-align: left;"><code>*(none)*</code></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="./../README.site.html#metalist">metalist</a> :: author</td>
+<td style="text-align: left;"><a href="./../index.html#metalist">metalist</a> :: author</td>
 <td style="text-align: left;"><em>title:</em> <code>Author</code> <br> <em>display:</em> <code>*Authors: &lt;|&gt;, &lt;|&gt;*</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="./../README.site.html#metalist">metalist</a> :: tags</td>
+<td style="text-align: left;"><a href="./../index.html#metalist">metalist</a> :: tags</td>
 <td style="text-align: left;"><em>title:</em> <code>Tag</code> <br> <em>display:</em> <code>*Tags: &lt;|&gt;, &lt;|&gt;*</code></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="./../README.site.html#readtime">readtime</a></td>
+<td style="text-align: left;"><a href="./../index.html#readtime">readtime</a></td>
 <td style="text-align: left;"><code>*Reading time: &lt;word&gt; words, &lt;time&gt; minutes*</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="./../README.site.html#readtime_wpm">readtime_wpm</a></td>
+<td style="text-align: left;"><a href="./../index.html#readtime_wpm">readtime_wpm</a></td>
 <td style="text-align: left;"><code>220</code></td>
 </tr>
 </tbody>
 </table>
+<p><em>(For this test site, the <a href="./../index.html#brand">brand</a>, <a href="./../index.html#homepage">homepage</a>, <a href="./../index.html#search">search</a>, and <a href="./../index.html#copyright">copyright</a> options have all been configured)</em></p>
 <table>
 <thead>
 <tr class="header">
@@ -20985,68 +20998,68 @@ Default Configuration
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><a href="./../README.site.html#folder">folder</a></td>
+<td style="text-align: left;"><a href="./../index.html#folder">folder</a></td>
 <td style="text-align: left;"><code>null</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="./../README.site.html#auto_update">auto_update</a></td>
+<td style="text-align: left;"><a href="./../index.html#auto_update">auto_update</a></td>
 <td style="text-align: left;"><code>null</code></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="./../README.site.html#append">append</a></td>
+<td style="text-align: left;"><a href="./../index.html#append">append</a></td>
 <td style="text-align: left;"><code>null</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="./../README.site.html#digest_title">digest_title</a></td>
+<td style="text-align: left;"><a href="./../index.html#digest_title">digest_title</a></td>
 <td style="text-align: left;"><code>Latest Updates</code></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="./../README.site.html#digest_continue">digest_continue</a></td>
+<td style="text-align: left;"><a href="./../index.html#digest_continue">digest_continue</a></td>
 <td style="text-align: left;"><code>[...]</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="./../README.site.html#digest_permalink">digest_permalink</a></td>
+<td style="text-align: left;"><a href="./../index.html#digest_permalink">digest_permalink</a></td>
 <td style="text-align: left;"><code>*(permalink to full text)*</code></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="./../README.site.html#digest_chars">digest_chars</a></td>
+<td style="text-align: left;"><a href="./../index.html#digest_chars">digest_chars</a></td>
 <td style="text-align: left;"><code>1024</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="./../README.site.html#digest_count">digest_count</a></td>
+<td style="text-align: left;"><a href="./../index.html#digest_count">digest_count</a></td>
 <td style="text-align: left;"><code>10</code></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="./../README.site.html#digest_expanded">digest_expanded</a></td>
+<td style="text-align: left;"><a href="./../index.html#digest_expanded">digest_expanded</a></td>
 <td style="text-align: left;"><code>0</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="./../README.site.html#digest_spacer">digest_spacer</a></td>
+<td style="text-align: left;"><a href="./../index.html#digest_spacer">digest_spacer</a></td>
 <td style="text-align: left;"><code>1</code></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="./../README.site.html#lists_expanded">lists_expanded</a></td>
+<td style="text-align: left;"><a href="./../index.html#lists_expanded">lists_expanded</a></td>
 <td style="text-align: left;"><code>0</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="./../README.site.html#lists_spacer">lists_spacer</a></td>
+<td style="text-align: left;"><a href="./../index.html#lists_spacer">lists_spacer</a></td>
 <td style="text-align: left;"><code>1</code></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="./../README.site.html#sitemap_title">sitemap_title</a></td>
+<td style="text-align: left;"><a href="./../index.html#sitemap_title">sitemap_title</a></td>
 <td style="text-align: left;"><code>Site Map</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="./../README.site.html#sitemap_expanded">sitemap_expanded</a></td>
+<td style="text-align: left;"><a href="./../index.html#sitemap_expanded">sitemap_expanded</a></td>
 <td style="text-align: left;"><code>0</code></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="./../README.site.html#sitemap_spacer">sitemap_spacer</a></td>
+<td style="text-align: left;"><a href="./../index.html#sitemap_spacer">sitemap_spacer</a></td>
 <td style="text-align: left;"><code>1</code></td>
 </tr>
 </tbody>
 </table>
-<p><em>(For this test site, the library has been enabled as: <code>_library</code>)</em></p>
+<p><em>(For this test site, the library <a href="./../index.html#folder">folder</a> has been enabled as: <code>_library</code>)</em></p>
 <!-- site-box-end :: start >> -->
 </div>
 </div>
@@ -21498,7 +21511,7 @@ BOTTOM TEXT
 <!-- site-info-data-list :: start >> info-bottom.["INFO"][0] -->
 <p class="composer-link navbar-text me-3">
 <!-- composer >> readtime-list -->
-<em>Reading time: 392 words, 1 minutes</em>
+<em>Reading time: 432 words, 1 minutes</em>
 </p>
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"][0] -->
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"] -->

@@ -742,7 +742,7 @@ max-width:	100%;
 <section id="title-slide">
   <h1 class="title">Composer CMS: Content Make System</h1>
   <p class="author">Gary B. Genett</p>
-  <p class="date">v3.1 (2024-02-02)</p>
+  <p class="date">v3.1 (2024-07-03)</p>
 </section>
 
 <section>
@@ -951,7 +951,7 @@ make all-all</code></pre>
 </tbody>
 </table>
 <p>[Markdown Viewer] is included both for its CSS stylesheets, and for real-time rendering of [Markdown] files as they are being written. To install, follow the instructions in the <code>README.md</code>.</p>
-<p>[Google Firebase] is only necessary for uploading via the [export-all] and [export-force] targets. Binaries are included in the repository, but do not seem to work with all versions of their respective operating systems. If the included binary fails, use <code>_update-firebase-tools</code> to build a local version (see [_update-*]).</p>
+<p>[Google Firebase] is only necessary for uploading via the [export-all] and [export-force] targets. Binaries are included in the repository, but do not seem to work with all versions of their respective operating systems. If the included binary fails, use <code>+update-firebase-tools</code> to build a local version (see [+update-*]).</p>
 <p>The versions of the integrated repositories can be changed, if desired (see [Repository Versions]).</p>
 </section></section>
 <section id="composer-cms-v31--help" class="title-slide slide level1">
@@ -1170,12 +1170,12 @@ make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">[COMPOSER_EXPORTS]</td>
-<td style="text-align: left;">See also: [c_site]/[export]</td>
+<td style="text-align: left;">See: [c_site]/[export]</td>
 <td style="text-align: left;">[config]</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">[COMPOSER_IGNORES]</td>
-<td style="text-align: left;">See also: [c_site]/[export]</td>
+<td style="text-align: left;">See: [c_site]/[export]</td>
 <td style="text-align: left;">[config]</td>
 </tr>
 </tbody>
@@ -1186,7 +1186,7 @@ make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
 <li><em>[COMPOSER_DOCOLOR] ~ <code>c_color</code> ~ <code>C</code></em></li>
 <li><em><code>(makejobs)</code> = empty is disabled / number of threads / <code>0</code> is no limit</em></li>
 <li><em><code>(debugit)</code> = empty is disabled / any value enables / <code>0</code> is full tracing</em></li>
-<li><em><code>(keeping)</code> = empty is no limit / number to keep / <code>0</code> is none</em></li>
+<li><em><code>(keeping)</code> = empty is none / number to keep / <code>0</code> is no limit</em></li>
 <li><em><code>(boolean)</code> = empty is disabled / any value enables</em></li>
 </ul>
 </section>
@@ -1372,36 +1372,36 @@ make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">[_release]</td>
+<td style="text-align: left;">[+release]</td>
 <td style="text-align: left;">Upgrade all tools and supporting files to next versions</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">[_release-all]</td>
+<td style="text-align: left;">[+release-all]</td>
 <td style="text-align: left;">Also make <code>README.*</code> files and [Static Websites]</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">[_update]</td>
+<td style="text-align: left;">[+update]</td>
 <td style="text-align: left;">Update all included components (see <a href="#/requirements">Requirements</a>)</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">[_update-all]</td>
+<td style="text-align: left;">[+update-all]</td>
 <td style="text-align: left;">Additionally perform all source code builds</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">[_update-list]</td>
+<td style="text-align: left;">[+update-list]</td>
 <td style="text-align: left;">Show changes made to each (see [Repository Versions])</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">[_update-*]</td>
+<td style="text-align: left;">[+update-*]</td>
 <td style="text-align: left;">Complete fetch and build for a specific component</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">[_debug]</td>
+<td style="text-align: left;">[+debug]</td>
 <td style="text-align: left;">Diagnostics, tests targets list in [COMPOSER_DEBUGIT]</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">[_debug-file]</td>
-<td style="text-align: left;">Export [_debug] results to a plain text file</td>
+<td style="text-align: left;">[+debug-file]</td>
+<td style="text-align: left;">Export [+debug] results to a plain text file</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">[check]</td>
@@ -1441,55 +1441,51 @@ make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
 </tr>
 <tr class="even">
 <td style="text-align: left;">[commit]</td>
-<td style="text-align: left;">Timestamped [Git] commit of the current directory tree</td>
+<td style="text-align: left;">[Git] commit of current directory tree or [c_list]</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">[commit-all]</td>
 <td style="text-align: left;">Automatic [commit], without <code>$EDITOR</code> step</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">[commit-list]</td>
-<td style="text-align: left;">Use [c_list] to select and commit only specific files</td>
-</tr>
-<tr class="odd">
 <td style="text-align: left;">[export]</td>
 <td style="text-align: left;">Synchronize <code>+Composer</code> export of [COMPOSER_ROOT]</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">[export-all]</td>
 <td style="text-align: left;">Also publish to upstream hosting providers</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">[export-force]</td>
 <td style="text-align: left;">Publish only, without synchronizing first</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">[*-export]</td>
 <td style="text-align: left;">Any targets named this way will also be run by [export]</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">[site-library]</td>
 <td style="text-align: left;">Build or update the [COMPOSER_LIBRARY]</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">[site-list]</td>
-<td style="text-align: left;">Show [COMPOSER_LIBRARY] metadata for current directory</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">[site-list-all]</td>
-<td style="text-align: left;">Do [site-list] for entire directory tree</td>
+<td style="text-align: left;">[COMPOSER_LIBRARY] for current directory or [c_list]</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">[site-list-list]</td>
-<td style="text-align: left;">Output existing metadata fields and values</td>
+<td style="text-align: left;">[site-list-all]</td>
+<td style="text-align: left;">Do [site-list] for current directory tree</td>
 </tr>
 <tr class="odd">
+<td style="text-align: left;">[site-list-list]</td>
+<td style="text-align: left;">All metadata fields and values, sorted by most used</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;">[site-list-null]</td>
 <td style="text-align: left;">List files which are missing metadata fields</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">[site-list.*]</td>
-<td style="text-align: left;">Find and export all files named <code>*</code> in the tree</td>
+<td style="text-align: left;">Direct export of metadata or index, [c_list] searchable</td>
 </tr>
 </tbody>
 </table>

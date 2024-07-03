@@ -39,11 +39,11 @@ endef
 
 ########################################
 
-.PHONY: projects-all
-projects-all: $(addsuffix /index.md,$(PROJECTS))
-projects-all:
-#>	@+$(MAKE) site-library
-	@$(ECHO) ""
+.PHONY: projects-export
+projects-export:
+	@$(RSYNC) \
+		$(abspath $(COMPOSER_ROOT)/../../coding/composer/$(notdir $(PUBLISH_ROOT))/$(notdir $(COMPOSER_EXPORT_DEFAULT)))/ \
+		$(COMPOSER_EXPORT)/projects/composer/$(notdir $(PUBLISH_ROOT))
 
 .PHONY: projects-clean
 projects-clean: $(addprefix clean-,$(PROJECTS))
@@ -56,6 +56,12 @@ $(addprefix clean-,$(PROJECTS)):
 	@$(eval $(@) := $(patsubst $(CLEANER)-%,%,$(@)))
 #>	@$(call $(COMPOSER_TINYNAME)-rm,$(CURDIR)/$($(@)),1)
 	@$(call $(COMPOSER_TINYNAME)-rm,$(CURDIR)/$($(@))/index.md)
+
+.PHONY: projects-all
+projects-all: $(addsuffix /index.md,$(PROJECTS))
+projects-all:
+#>	@+$(MAKE) site-library
+	@$(ECHO) ""
 
 $(foreach FILE,$(PROJECTS),$(eval $(abspath ../library/site-library): $(FILE)/index.md))
 $(foreach FILE,$(PROJECTS),$(eval $(FILE)/index.md: $(CODE_DIR)/$(FILE)/README.md))

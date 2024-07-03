@@ -9075,7 +9075,7 @@ background-color:	transparent;
 ::-webkit-scrollbar-thumb {
 background-color:	rgba(var(--bs-secondary-rgb));
 }
-body {
+:root {
 scrollbar-color:	rgba(var(--bs-secondary-rgb)) transparent;
 }
 </style>
@@ -9133,11 +9133,13 @@ scrollbar-color:	rgba(var(--bs-secondary-rgb)) transparent;
 --text-bright:	var(--solarized-dark1);
 --links:	var(--solarized-yellow);
 
---background-alt:	var(--solarized-light2);
 --background:	var(--solarized-light2);
+--background-alt:	var(--solarized-light2);
 --border:	var(--solarized-light1);
 --focus:	var(--solarized-light1);
 
+--scrollbar-thumb:	var(--solarized-light1);
+--scrollbar-thumb-hover:	var(--solarized-light1);
 --button-base:	var(--solarized-light1);
 --button-hover:	var(--solarized-light1);
 --form-placeholder:	var(--solarized-dark0);
@@ -9741,45 +9743,9 @@ color:	var(--solarized-magenta);
 }
 }
 html {
-scrollbar-color: rgb(163, 175, 175) #fdf6e3;
+scrollbar-color: #93a1a1 #fdf6e3;
 scrollbar-color: var(--scrollbar-thumb) var(--background-body);
 scrollbar-width: thin;
-}
-@media (prefers-color-scheme: dark) {
-html {
-scrollbar-color: #586e75 #002b36;
-scrollbar-color: var(--scrollbar-thumb) var(--background-body);
-}
-}
-@media (prefers-color-scheme: dark) {
-html {
-scrollbar-color: #586e75 #002b36;
-scrollbar-color: var(--scrollbar-thumb) var(--background-body);
-}
-}
-@media (prefers-color-scheme: dark) {
-html {
-scrollbar-color: #586e75 #002b36;
-scrollbar-color: var(--scrollbar-thumb) var(--background-body);
-}
-}
-@media (prefers-color-scheme: dark) {
-html {
-scrollbar-color: #586e75 #002b36;
-scrollbar-color: var(--scrollbar-thumb) var(--background-body);
-}
-}
-@media (prefers-color-scheme: dark) {
-html {
-scrollbar-color: #586e75 #002b36;
-scrollbar-color: var(--scrollbar-thumb) var(--background-body);
-}
-}
-@media (prefers-color-scheme: dark) {
-html {
-scrollbar-color: #586e75 #002b36;
-scrollbar-color: var(--scrollbar-thumb) var(--background-body);
-}
 }
 @media (prefers-color-scheme: dark) {
 html {
@@ -11995,9 +11961,15 @@ background: var(--background);
 }
 }
 ::-webkit-scrollbar-thumb {
-background: rgb(163, 175, 175);
+background: #93a1a1;
 background: var(--scrollbar-thumb);
 border-radius: 6px;
+}
+@media (prefers-color-scheme: dark) {
+::-webkit-scrollbar-thumb {
+background: #586e75;
+background: var(--scrollbar-thumb);
+}
 }
 @media (prefers-color-scheme: dark) {
 ::-webkit-scrollbar-thumb {
@@ -12035,31 +12007,37 @@ background: var(--scrollbar-thumb-hover);
 }
 @media (prefers-color-scheme: dark) {
 ::-webkit-scrollbar-thumb:hover {
-background: rgb(0, 0, 0);
+background: #586e75;
 background: var(--scrollbar-thumb-hover);
 }
 }
 @media (prefers-color-scheme: dark) {
 ::-webkit-scrollbar-thumb:hover {
-background: rgb(0, 0, 0);
+background: #586e75;
 background: var(--scrollbar-thumb-hover);
 }
 }
 @media (prefers-color-scheme: dark) {
 ::-webkit-scrollbar-thumb:hover {
-background: rgb(0, 0, 0);
+background: #586e75;
 background: var(--scrollbar-thumb-hover);
 }
 }
 @media (prefers-color-scheme: dark) {
 ::-webkit-scrollbar-thumb:hover {
-background: rgb(0, 0, 0);
+background: #586e75;
 background: var(--scrollbar-thumb-hover);
 }
 }
 @media (prefers-color-scheme: dark) {
 ::-webkit-scrollbar-thumb:hover {
-background: rgb(0, 0, 0);
+background: #586e75;
+background: var(--scrollbar-thumb-hover);
+}
+}
+@media (prefers-color-scheme: dark) {
+::-webkit-scrollbar-thumb:hover {
+background: #586e75;
 background: var(--scrollbar-thumb-hover);
 }
 }
@@ -12499,7 +12477,7 @@ text-decoration: underline;
 --button-base: #0c151c;
 --button-hover: #040a0f;
 --scrollbar-thumb: var(--button-hover);
---scrollbar-thumb-hover: rgb(0, 0, 0);
+--scrollbar-thumb-hover: rgb(72, 83, 83);
 --form-placeholder: #a9a9a9;
 --form-text: #fff;
 --variable: #d941e2;
@@ -12539,11 +12517,13 @@ text-decoration: underline;
 --text-bright:	var(--solarized-light1);
 --links:	var(--solarized-yellow);
 
---background-alt:	var(--solarized-dark2);
 --background:	var(--solarized-dark2);
+--background-alt:	var(--solarized-dark2);
 --border:	var(--solarized-dark1);
 --focus:	var(--solarized-dark1);
 
+--scrollbar-thumb:	var(--solarized-dark1);
+--scrollbar-thumb-hover:	var(--solarized-dark1);
 --button-base:	var(--solarized-dark1);
 --button-hover:	var(--solarized-dark1);
 --form-placeholder:	var(--solarized-light0);
@@ -13279,7 +13259,7 @@ border-radius:	10px;
 ::-webkit-scrollbar-thumb {
 border-radius:	10px;
 }
-body {
+:root {
 scrollbar-width:	thin;
 }
 

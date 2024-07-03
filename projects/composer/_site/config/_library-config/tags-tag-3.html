@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content />
-  <meta name="dcterms.date" content="2024-02-02" />
+  <meta name="dcterms.date" content="2024-07-03" />
   <title>EXAMPLE SITE – Mark: Tag 3</title>
   <style>
     code{white-space: pre-wrap;}
@@ -9076,7 +9076,7 @@ background-color:	transparent;
 ::-webkit-scrollbar-thumb {
 background-color:	rgba(var(--bs-secondary-rgb));
 }
-body {
+:root {
 scrollbar-color:	rgba(var(--bs-secondary-rgb)) transparent;
 }
 </style>
@@ -9134,11 +9134,13 @@ scrollbar-color:	rgba(var(--bs-secondary-rgb)) transparent;
 --text-bright:	var(--solarized-dark1);
 --links:	var(--solarized-yellow);
 
---background-alt:	var(--solarized-light2);
 --background:	var(--solarized-light2);
+--background-alt:	var(--solarized-light2);
 --border:	var(--solarized-light1);
 --focus:	var(--solarized-light1);
 
+--scrollbar-thumb:	var(--solarized-light1);
+--scrollbar-thumb-hover:	var(--solarized-light1);
 --button-base:	var(--solarized-light1);
 --button-hover:	var(--solarized-light1);
 --form-placeholder:	var(--solarized-dark0);
@@ -9742,45 +9744,9 @@ color:	var(--solarized-magenta);
 }
 }
 html {
-scrollbar-color: rgb(163, 175, 175) #fdf6e3;
+scrollbar-color: #93a1a1 #fdf6e3;
 scrollbar-color: var(--scrollbar-thumb) var(--background-body);
 scrollbar-width: thin;
-}
-@media (prefers-color-scheme: dark) {
-html {
-scrollbar-color: #586e75 #002b36;
-scrollbar-color: var(--scrollbar-thumb) var(--background-body);
-}
-}
-@media (prefers-color-scheme: dark) {
-html {
-scrollbar-color: #586e75 #002b36;
-scrollbar-color: var(--scrollbar-thumb) var(--background-body);
-}
-}
-@media (prefers-color-scheme: dark) {
-html {
-scrollbar-color: #586e75 #002b36;
-scrollbar-color: var(--scrollbar-thumb) var(--background-body);
-}
-}
-@media (prefers-color-scheme: dark) {
-html {
-scrollbar-color: #586e75 #002b36;
-scrollbar-color: var(--scrollbar-thumb) var(--background-body);
-}
-}
-@media (prefers-color-scheme: dark) {
-html {
-scrollbar-color: #586e75 #002b36;
-scrollbar-color: var(--scrollbar-thumb) var(--background-body);
-}
-}
-@media (prefers-color-scheme: dark) {
-html {
-scrollbar-color: #586e75 #002b36;
-scrollbar-color: var(--scrollbar-thumb) var(--background-body);
-}
 }
 @media (prefers-color-scheme: dark) {
 html {
@@ -11996,9 +11962,15 @@ background: var(--background);
 }
 }
 ::-webkit-scrollbar-thumb {
-background: rgb(163, 175, 175);
+background: #93a1a1;
 background: var(--scrollbar-thumb);
 border-radius: 6px;
+}
+@media (prefers-color-scheme: dark) {
+::-webkit-scrollbar-thumb {
+background: #586e75;
+background: var(--scrollbar-thumb);
+}
 }
 @media (prefers-color-scheme: dark) {
 ::-webkit-scrollbar-thumb {
@@ -12036,31 +12008,37 @@ background: var(--scrollbar-thumb-hover);
 }
 @media (prefers-color-scheme: dark) {
 ::-webkit-scrollbar-thumb:hover {
-background: rgb(0, 0, 0);
+background: #586e75;
 background: var(--scrollbar-thumb-hover);
 }
 }
 @media (prefers-color-scheme: dark) {
 ::-webkit-scrollbar-thumb:hover {
-background: rgb(0, 0, 0);
+background: #586e75;
 background: var(--scrollbar-thumb-hover);
 }
 }
 @media (prefers-color-scheme: dark) {
 ::-webkit-scrollbar-thumb:hover {
-background: rgb(0, 0, 0);
+background: #586e75;
 background: var(--scrollbar-thumb-hover);
 }
 }
 @media (prefers-color-scheme: dark) {
 ::-webkit-scrollbar-thumb:hover {
-background: rgb(0, 0, 0);
+background: #586e75;
 background: var(--scrollbar-thumb-hover);
 }
 }
 @media (prefers-color-scheme: dark) {
 ::-webkit-scrollbar-thumb:hover {
-background: rgb(0, 0, 0);
+background: #586e75;
+background: var(--scrollbar-thumb-hover);
+}
+}
+@media (prefers-color-scheme: dark) {
+::-webkit-scrollbar-thumb:hover {
+background: #586e75;
 background: var(--scrollbar-thumb-hover);
 }
 }
@@ -12500,7 +12478,7 @@ text-decoration: underline;
 --button-base: #0c151c;
 --button-hover: #040a0f;
 --scrollbar-thumb: var(--button-hover);
---scrollbar-thumb-hover: rgb(0, 0, 0);
+--scrollbar-thumb-hover: rgb(72, 83, 83);
 --form-placeholder: #a9a9a9;
 --form-text: #fff;
 --variable: #d941e2;
@@ -12540,11 +12518,13 @@ text-decoration: underline;
 --text-bright:	var(--solarized-light1);
 --links:	var(--solarized-yellow);
 
---background-alt:	var(--solarized-dark2);
 --background:	var(--solarized-dark2);
+--background-alt:	var(--solarized-dark2);
 --border:	var(--solarized-dark1);
 --focus:	var(--solarized-dark1);
 
+--scrollbar-thumb:	var(--solarized-dark1);
+--scrollbar-thumb-hover:	var(--solarized-dark1);
 --button-base:	var(--solarized-dark1);
 --button-hover:	var(--solarized-dark1);
 --form-placeholder:	var(--solarized-light0);
@@ -13243,7 +13223,7 @@ border-radius:	10px;
 ::-webkit-scrollbar-thumb {
 border-radius:	10px;
 }
-body {
+:root {
 scrollbar-width:	thin;
 }
 
@@ -20442,6 +20422,9 @@ margin-top:	0px;
 <a href="#page-number-01nbspnbsp2023-01-01" class="dropdown-item">Page Number 01  <em>(2023-01-01)</em></a>
 </li>
 <li>
+<a href="#page-number-00nbspnbsp2023-01-01" class="dropdown-item">Page Number 00  <em>(2023-01-01)</em></a>
+</li>
+<li>
 <a href="#page-number-09nbspnbsp2022-01-01" class="dropdown-item">Page Number 09  <em>(2022-01-01)</em></a>
 </li>
 <li>
@@ -20702,6 +20685,7 @@ CONTENTS
 <li><a href="#page-number-03nbspnbsp2023-01-01">Page Number 03  <em>(2023-01-01)</em></a></li>
 <li><a href="#page-number-02nbspnbsp2023-01-01">Page Number 02  <em>(2023-01-01)</em></a></li>
 <li><a href="#page-number-01nbspnbsp2023-01-01">Page Number 01  <em>(2023-01-01)</em></a></li>
+<li><a href="#page-number-00nbspnbsp2023-01-01">Page Number 00  <em>(2023-01-01)</em></a></li>
 <li><a href="#page-number-09nbspnbsp2022-01-01">Page Number 09  <em>(2022-01-01)</em></a></li>
 <li><a href="#page-number-08nbspnbsp2022-01-01">Page Number 08  <em>(2022-01-01)</em></a></li>
 <li><a href="#page-number-07nbspnbsp2022-01-01">Page Number 07  <em>(2022-01-01)</em></a></li>
@@ -20745,7 +20729,7 @@ CONTENTS
 <!-- site-nav-side :: finish >> left -->
 <!-- site-targets >> .../config/_library-config/.composer.tmp/site-cache.column-begin.html -->
 <!-- site-column-begin :: start >> center -->
-<div class="d-flex flex-column order-md-3 order-3 col-md-9 col-12 d-md-block d-block p-2" id="composer-nav-center">
+<div id="composer-nav-center" class="d-flex flex-column order-md-3 order-3 col-md-9 col-12 d-md-block d-block p-2">
 <!-- site-column-begin :: finish >> center -->
 <!-- site-targets >> .../config/_library-config.md.cms -->
 <!-- site-file :: start >> .../config/_library-config.md.cms -->
@@ -20783,7 +20767,7 @@ CONTENTS
 <!-- site-targets >> tags-tag-3.md -->
 <!-- site-file :: start >> tags-tag-3.md -->
 <!-- site-fold-begin :: start >> group library-digest -->
-<div class="accordion" id="composer-fold-group-library-digest">
+<div id="composer-fold-group-library-digest" class="accordion">
 <!-- site-fold-begin :: finish >> group library-digest -->
 <!-- site-fold-begin :: start >> 1 0 library-digest Page Number 09&nbsp;&nbsp;*(2024-01-01)*&#0000;<br>*-- Gary B. Genett -- Author 1 -- Author 2 -- Author 3*<br>*. Tag 9 . Tag 1 . Tag 2 . Tag 3* -->
 <!-- site-header :: start >> 1 Page Number 09&nbsp;&nbsp;*(2024-01-01)*&#0000;<br>*-- Gary B. Genett -- Author 1 -- Author 2 -- Author 3*<br>*. Tag 9 . Tag 1 . Tag 2 . Tag 3* -->
@@ -21878,7 +21862,16 @@ ln -rs .../README.md ./
 make README.html</code></pre>
 <p>Similarly to source code, <a href="http://www.gnu.org/software/make">GNU Make</a> is meant to only run one instance within the directory at a time, and <a href="http://www.garybgenett.net/projects/composer">Composer</a> shares this requirement. It should be run as a single user, to avoid duplication and conflicts. Concurrent runs will produce unexpected results. It is highly recommended to set <a href="#makejobs">MAKEJOBS</a> to a value greater than the default, to speed up processing.</p>
 <p><em>(continued)</em></p>
-[ <em>(permalink)</em>](<!-- composer >> fold-end --> ../../config/pages/2023-01-01+template_01.html) <!-- site-fold-begin :: start >> 1 0 library-digest Page Number 00&nbsp;&nbsp;*(2023-01-01)*&#0000;<br>*-- Gary B. Genett -- Author 1 -- Author 2 -- Author 3*<br>*. Tag 0 . Tag 1 . Tag 2 . Tag 3* -->
+<p><a href="../../config/pages/2023-01-01+template_01.html"><em>(permalink)</em></a></p>
+<!-- site-fold-end :: start >> -->
+</section>
+</section>
+</div>
+</div>
+</div>
+</div>
+<!-- site-fold-end :: finish >> -->
+<!-- site-fold-begin :: start >> 1 0 library-digest Page Number 00&nbsp;&nbsp;*(2023-01-01)*&#0000;<br>*-- Gary B. Genett -- Author 1 -- Author 2 -- Author 3*<br>*. Tag 0 . Tag 1 . Tag 2 . Tag 3* -->
 <!-- site-header :: start >> 1 Page Number 00&nbsp;&nbsp;*(2023-01-01)*&#0000;<br>*-- Gary B. Genett -- Author 1 -- Author 2 -- Author 3*<br>*. Tag 0 . Tag 1 . Tag 2 . Tag 3* -->
 <div id="page-number-00nbspnbsp2023-01-01">
 
@@ -22517,8 +22510,6 @@ make README.html</code></pre>
 </div>
 <!-- site-fold-end :: finish >> -->
 <!-- site-fold-end :: start >> group -->
-</section>
-</section>
 </div>
 <!-- site-fold-end :: finish >> group -->
 <!-- site-file :: finish >> tags-tag-3.md -->
@@ -22641,6 +22632,32 @@ DATES
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][1] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][2] -->
 <!-- site-library-shelf :: start >> list date -->
+<table class="composer-table table table-borderless align-top">
+<tr>
+<td>
+<a href="./date-2024.html">2024</a>
+</td>
+<td class="text-end">
+12
+</td>
+</tr>
+<tr>
+<td>
+<a href="./date-2023.html">2023</a>
+</td>
+<td class="text-end">
+10
+</td>
+</tr>
+<tr>
+<td>
+<a href="./date-2022.html">2022</a>
+</td>
+<td class="text-end">
+10
+</td>
+</tr>
+</table>
 <!-- site-library-shelf :: finish >> list date -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][2] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][3] -->
@@ -22668,6 +22685,40 @@ AUTHORS
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][4] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][5] -->
 <!-- site-library-shelf :: start >> list author -->
+<table class="composer-table table table-borderless align-top">
+<tr>
+<td>
+<a href="./author-author-1.html">Author 1</a>
+</td>
+<td class="text-end">
+30
+</td>
+</tr>
+<tr>
+<td>
+<a href="./author-author-2.html">Author 2</a>
+</td>
+<td class="text-end">
+30
+</td>
+</tr>
+<tr>
+<td>
+<a href="./author-author-3.html">Author 3</a>
+</td>
+<td class="text-end">
+30
+</td>
+</tr>
+<tr>
+<td>
+<a href="./author-gary-b-genett.html">Gary B. Genett</a>
+</td>
+<td class="text-end">
+32
+</td>
+</tr>
+</table>
 <!-- site-library-shelf :: finish >> list author -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][5] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][6] -->
@@ -22695,6 +22746,96 @@ TAGS
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][7] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][8] -->
 <!-- site-library-shelf :: start >> list tags -->
+<table class="composer-table table table-borderless align-top">
+<tr>
+<td>
+<a href="./tags-main.html">Main</a>
+</td>
+<td class="text-end">
+2
+</td>
+</tr>
+<tr>
+<td>
+<a href="./tags-tag-0.html">Tag 0</a>
+</td>
+<td class="text-end">
+3
+</td>
+</tr>
+<tr>
+<td>
+<a href="./tags-tag-1.html">Tag 1</a>
+</td>
+<td class="text-end">
+30
+</td>
+</tr>
+<tr>
+<td>
+<a href="./tags-tag-2.html">Tag 2</a>
+</td>
+<td class="text-end">
+30
+</td>
+</tr>
+<tr>
+<td>
+<a href="./tags-tag-3.html">Tag 3</a>
+</td>
+<td class="text-end">
+30
+</td>
+</tr>
+<tr>
+<td>
+<a href="./tags-tag-4.html">Tag 4</a>
+</td>
+<td class="text-end">
+3
+</td>
+</tr>
+<tr>
+<td>
+<a href="./tags-tag-5.html">Tag 5</a>
+</td>
+<td class="text-end">
+3
+</td>
+</tr>
+<tr>
+<td>
+<a href="./tags-tag-6.html">Tag 6</a>
+</td>
+<td class="text-end">
+3
+</td>
+</tr>
+<tr>
+<td>
+<a href="./tags-tag-7.html">Tag 7</a>
+</td>
+<td class="text-end">
+3
+</td>
+</tr>
+<tr>
+<td>
+<a href="./tags-tag-8.html">Tag 8</a>
+</td>
+<td class="text-end">
+3
+</td>
+</tr>
+<tr>
+<td>
+<a href="./tags-tag-9.html">Tag 9</a>
+</td>
+<td class="text-end">
+3
+</td>
+</tr>
+</table>
 <!-- site-library-shelf :: finish >> list tags -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][8] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][9] -->
@@ -22810,7 +22951,7 @@ BOTTOM TEXT
 <!-- site-info-data-list :: start >> info-bottom.["INFO"][0] -->
 <p class="composer-link navbar-text me-3">
 <!-- composer >> readtime-list -->
-<em>Words: 8432 / Minutes: 42</em>
+<em>Words: 8430 / Minutes: 42</em>
 </p>
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"][0] -->
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"] -->

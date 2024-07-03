@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content />
-  <meta name="dcterms.date" content="2024-02-02" />
+  <meta name="dcterms.date" content="2024-07-03" />
   <title>EXAMPLE SITE – Creator: Gary B. Genett</title>
   <style>
     code{white-space: pre-wrap;}
@@ -9076,7 +9076,7 @@ background-color:	transparent;
 ::-webkit-scrollbar-thumb {
 background-color:	rgba(var(--bs-secondary-rgb));
 }
-body {
+:root {
 scrollbar-color:	rgba(var(--bs-secondary-rgb)) transparent;
 }
 </style>
@@ -9134,11 +9134,13 @@ scrollbar-color:	rgba(var(--bs-secondary-rgb)) transparent;
 --text-bright:	var(--solarized-dark1);
 --links:	var(--solarized-yellow);
 
---background-alt:	var(--solarized-light2);
 --background:	var(--solarized-light2);
+--background-alt:	var(--solarized-light2);
 --border:	var(--solarized-light1);
 --focus:	var(--solarized-light1);
 
+--scrollbar-thumb:	var(--solarized-light1);
+--scrollbar-thumb-hover:	var(--solarized-light1);
 --button-base:	var(--solarized-light1);
 --button-hover:	var(--solarized-light1);
 --form-placeholder:	var(--solarized-dark0);
@@ -9742,45 +9744,9 @@ color:	var(--solarized-magenta);
 }
 }
 html {
-scrollbar-color: rgb(163, 175, 175) #fdf6e3;
+scrollbar-color: #93a1a1 #fdf6e3;
 scrollbar-color: var(--scrollbar-thumb) var(--background-body);
 scrollbar-width: thin;
-}
-@media (prefers-color-scheme: dark) {
-html {
-scrollbar-color: #586e75 #002b36;
-scrollbar-color: var(--scrollbar-thumb) var(--background-body);
-}
-}
-@media (prefers-color-scheme: dark) {
-html {
-scrollbar-color: #586e75 #002b36;
-scrollbar-color: var(--scrollbar-thumb) var(--background-body);
-}
-}
-@media (prefers-color-scheme: dark) {
-html {
-scrollbar-color: #586e75 #002b36;
-scrollbar-color: var(--scrollbar-thumb) var(--background-body);
-}
-}
-@media (prefers-color-scheme: dark) {
-html {
-scrollbar-color: #586e75 #002b36;
-scrollbar-color: var(--scrollbar-thumb) var(--background-body);
-}
-}
-@media (prefers-color-scheme: dark) {
-html {
-scrollbar-color: #586e75 #002b36;
-scrollbar-color: var(--scrollbar-thumb) var(--background-body);
-}
-}
-@media (prefers-color-scheme: dark) {
-html {
-scrollbar-color: #586e75 #002b36;
-scrollbar-color: var(--scrollbar-thumb) var(--background-body);
-}
 }
 @media (prefers-color-scheme: dark) {
 html {
@@ -11996,9 +11962,15 @@ background: var(--background);
 }
 }
 ::-webkit-scrollbar-thumb {
-background: rgb(163, 175, 175);
+background: #93a1a1;
 background: var(--scrollbar-thumb);
 border-radius: 6px;
+}
+@media (prefers-color-scheme: dark) {
+::-webkit-scrollbar-thumb {
+background: #586e75;
+background: var(--scrollbar-thumb);
+}
 }
 @media (prefers-color-scheme: dark) {
 ::-webkit-scrollbar-thumb {
@@ -12036,31 +12008,37 @@ background: var(--scrollbar-thumb-hover);
 }
 @media (prefers-color-scheme: dark) {
 ::-webkit-scrollbar-thumb:hover {
-background: rgb(0, 0, 0);
+background: #586e75;
 background: var(--scrollbar-thumb-hover);
 }
 }
 @media (prefers-color-scheme: dark) {
 ::-webkit-scrollbar-thumb:hover {
-background: rgb(0, 0, 0);
+background: #586e75;
 background: var(--scrollbar-thumb-hover);
 }
 }
 @media (prefers-color-scheme: dark) {
 ::-webkit-scrollbar-thumb:hover {
-background: rgb(0, 0, 0);
+background: #586e75;
 background: var(--scrollbar-thumb-hover);
 }
 }
 @media (prefers-color-scheme: dark) {
 ::-webkit-scrollbar-thumb:hover {
-background: rgb(0, 0, 0);
+background: #586e75;
 background: var(--scrollbar-thumb-hover);
 }
 }
 @media (prefers-color-scheme: dark) {
 ::-webkit-scrollbar-thumb:hover {
-background: rgb(0, 0, 0);
+background: #586e75;
+background: var(--scrollbar-thumb-hover);
+}
+}
+@media (prefers-color-scheme: dark) {
+::-webkit-scrollbar-thumb:hover {
+background: #586e75;
 background: var(--scrollbar-thumb-hover);
 }
 }
@@ -12500,7 +12478,7 @@ text-decoration: underline;
 --button-base: #0c151c;
 --button-hover: #040a0f;
 --scrollbar-thumb: var(--button-hover);
---scrollbar-thumb-hover: rgb(0, 0, 0);
+--scrollbar-thumb-hover: rgb(72, 83, 83);
 --form-placeholder: #a9a9a9;
 --form-text: #fff;
 --variable: #d941e2;
@@ -12540,11 +12518,13 @@ text-decoration: underline;
 --text-bright:	var(--solarized-light1);
 --links:	var(--solarized-yellow);
 
---background-alt:	var(--solarized-dark2);
 --background:	var(--solarized-dark2);
+--background-alt:	var(--solarized-dark2);
 --border:	var(--solarized-dark1);
 --focus:	var(--solarized-dark1);
 
+--scrollbar-thumb:	var(--solarized-dark1);
+--scrollbar-thumb-hover:	var(--solarized-dark1);
 --button-base:	var(--solarized-dark1);
 --button-hover:	var(--solarized-dark1);
 --form-placeholder:	var(--solarized-light0);
@@ -13243,7 +13223,7 @@ border-radius:	10px;
 ::-webkit-scrollbar-thumb {
 border-radius:	10px;
 }
-body {
+:root {
 scrollbar-width:	thin;
 }
 
@@ -20385,10 +20365,10 @@ margin-top:	0px;
 <!-- site-nav-top-list :: start >> nav-top.["CONTENTS"][0].["CONTENTS"][0] -->
 <!-- composer >> contents-menu 0 -->
 <li>
-<a href="#metainfo-pagenbspnbsp2024-02-02" class="dropdown-item">Metainfo Page  <em>(2024-02-02)</em></a>
+<a href="#metainfo-pagenbspnbsp2024-07-03" class="dropdown-item">Metainfo Page  <em>(2024-07-03)</em></a>
 </li>
 <li>
-<a href="#configured-sitenbspnbsp2024-02-02" class="dropdown-item">Configured Site  <em>(2024-02-02)</em></a>
+<a href="#configured-sitenbspnbsp2024-07-03" class="dropdown-item">Configured Site  <em>(2024-07-03)</em></a>
 </li>
 <li>
 <a href="#page-number-09nbspnbsp2024-01-01" class="dropdown-item">Page Number 09  <em>(2024-01-01)</em></a>
@@ -20692,8 +20672,8 @@ CONTENTS
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][1] -->
 <!-- composer >> contents-list 0 -->
 <ul>
-<li><a href="#metainfo-pagenbspnbsp2024-02-02">Metainfo Page  <em>(2024-02-02)</em></a></li>
-<li><a href="#configured-sitenbspnbsp2024-02-02">Configured Site  <em>(2024-02-02)</em></a></li>
+<li><a href="#metainfo-pagenbspnbsp2024-07-03">Metainfo Page  <em>(2024-07-03)</em></a></li>
+<li><a href="#configured-sitenbspnbsp2024-07-03">Configured Site  <em>(2024-07-03)</em></a></li>
 <li><a href="#page-number-09nbspnbsp2024-01-01">Page Number 09  <em>(2024-01-01)</em></a></li>
 <li><a href="#page-number-08nbspnbsp2024-01-01">Page Number 08  <em>(2024-01-01)</em></a></li>
 <li><a href="#page-number-07nbspnbsp2024-01-01">Page Number 07  <em>(2024-01-01)</em></a></li>
@@ -20797,24 +20777,24 @@ CONTENTS
 <!-- site-fold-begin :: start >> group library-digest -->
 <div id="composer-fold-group-library-digest" class="accordion">
 <!-- site-fold-begin :: finish >> group library-digest -->
-<!-- site-fold-begin :: start >> 1 0 library-digest Metainfo Page&nbsp;&nbsp;*(2024-02-02)*&#0000;<br>*-- Gary B. Genett*<br>*. Main* -->
-<!-- site-header :: start >> 1 Metainfo Page&nbsp;&nbsp;*(2024-02-02)*&#0000;<br>*-- Gary B. Genett*<br>*. Main* -->
-<div id="metainfo-pagenbspnbsp2024-02-02">
+<!-- site-fold-begin :: start >> 1 0 library-digest Metainfo Page&nbsp;&nbsp;*(2024-07-03)*&#0000;<br>*-- Gary B. Genett*<br>*. Main* -->
+<!-- site-header :: start >> 1 Metainfo Page&nbsp;&nbsp;*(2024-07-03)*&#0000;<br>*-- Gary B. Genett*<br>*. Main* -->
+<div id="metainfo-pagenbspnbsp2024-07-03">
 
 </div>
-<!-- site-header :: finish >> 1 Metainfo Page&nbsp;&nbsp;*(2024-02-02)*&#0000;<br>*-- Gary B. Genett*<br>*. Main* -->
+<!-- site-header :: finish >> 1 Metainfo Page&nbsp;&nbsp;*(2024-07-03)*&#0000;<br>*-- Gary B. Genett*<br>*. Main* -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="composer-fold-metainfo-pagenbspnbsp2024-02-020000br---gary-b-genettbr-main" class="accordion-header">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-metainfo-pagenbspnbsp2024-02-020000br---gary-b-genettbr-main-target">
+<div id="composer-fold-metainfo-pagenbspnbsp2024-07-030000br---gary-b-genettbr-main" class="accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-metainfo-pagenbspnbsp2024-07-030000br---gary-b-genettbr-main-target">
 <h1 class="composer-header">
-Metainfo Page  <em>(2024-02-02)</em> <br><em>– Gary B. Genett</em><br><em>. Main</em>
+Metainfo Page  <em>(2024-07-03)</em> <br><em>– Gary B. Genett</em><br><em>. Main</em>
 </h1>
 </button>
 </div>
-<div id="composer-fold-metainfo-pagenbspnbsp2024-02-020000br---gary-b-genettbr-main-target" class="accordion-collapse collapse" data-bs-parent="#composer-fold-group-library-digest">
+<div id="composer-fold-metainfo-pagenbspnbsp2024-07-030000br---gary-b-genettbr-main-target" class="accordion-collapse collapse" data-bs-parent="#composer-fold-group-library-digest">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 1 0 library-digest Metainfo Page&nbsp;&nbsp;*(2024-02-02)*&#0000;<br>*-- Gary B. Genett*<br>*. Main* -->
+<!-- site-fold-begin :: finish >> 1 0 library-digest Metainfo Page&nbsp;&nbsp;*(2024-07-03)*&#0000;<br>*-- Gary B. Genett*<br>*. Main* -->
 <!-- site-break :: start >> -->
 <!-- site-break :: finish >> -->
 <p><em>(continued)</em></p>
@@ -20825,31 +20805,31 @@ Metainfo Page  <em>(2024-02-02)</em> <br><em>– Gary B. Genett</em><br><em>. 
 </div>
 </div>
 <!-- site-fold-end :: finish >> -->
-<!-- site-fold-begin :: start >> 1 0 library-digest Configured Site&nbsp;&nbsp;*(2024-02-02)*&#0000;<br>*-- Gary B. Genett*<br>*. Main* -->
-<!-- site-header :: start >> 1 Configured Site&nbsp;&nbsp;*(2024-02-02)*&#0000;<br>*-- Gary B. Genett*<br>*. Main* -->
-<div id="configured-sitenbspnbsp2024-02-02">
+<!-- site-fold-begin :: start >> 1 0 library-digest Configured Site&nbsp;&nbsp;*(2024-07-03)*&#0000;<br>*-- Gary B. Genett*<br>*. Main* -->
+<!-- site-header :: start >> 1 Configured Site&nbsp;&nbsp;*(2024-07-03)*&#0000;<br>*-- Gary B. Genett*<br>*. Main* -->
+<div id="configured-sitenbspnbsp2024-07-03">
 
 </div>
-<!-- site-header :: finish >> 1 Configured Site&nbsp;&nbsp;*(2024-02-02)*&#0000;<br>*-- Gary B. Genett*<br>*. Main* -->
+<!-- site-header :: finish >> 1 Configured Site&nbsp;&nbsp;*(2024-07-03)*&#0000;<br>*-- Gary B. Genett*<br>*. Main* -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="composer-fold-configured-sitenbspnbsp2024-02-020000br---gary-b-genettbr-main" class="accordion-header">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-configured-sitenbspnbsp2024-02-020000br---gary-b-genettbr-main-target">
+<div id="composer-fold-configured-sitenbspnbsp2024-07-030000br---gary-b-genettbr-main" class="accordion-header">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-configured-sitenbspnbsp2024-07-030000br---gary-b-genettbr-main-target">
 <h1 class="composer-header">
-Configured Site  <em>(2024-02-02)</em> <br><em>– Gary B. Genett</em><br><em>. Main</em>
+Configured Site  <em>(2024-07-03)</em> <br><em>– Gary B. Genett</em><br><em>. Main</em>
 </h1>
 </button>
 </div>
-<div id="composer-fold-configured-sitenbspnbsp2024-02-020000br---gary-b-genettbr-main-target" class="accordion-collapse collapse" data-bs-parent="#composer-fold-group-library-digest">
+<div id="composer-fold-configured-sitenbspnbsp2024-07-030000br---gary-b-genettbr-main-target" class="accordion-collapse collapse" data-bs-parent="#composer-fold-group-library-digest">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 1 0 library-digest Configured Site&nbsp;&nbsp;*(2024-02-02)*&#0000;<br>*-- Gary B. Genett*<br>*. Main* -->
+<!-- site-fold-begin :: finish >> 1 0 library-digest Configured Site&nbsp;&nbsp;*(2024-07-03)*&#0000;<br>*-- Gary B. Genett*<br>*. Main* -->
 <p>#WORK</p>
 <p><code>&lt;!-- composer &gt;&gt; metainfo --&gt;</code></p>
 <table style="width:99%;">
 <colgroup>
+<col style="width: 30%" />
 <col style="width: 31%" />
-<col style="width: 31%" />
-<col style="width: 36%" />
+<col style="width: 37%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -20860,82 +20840,122 @@ Configured Site  <em>(2024-02-02)</em> <br><em>– Gary B. Genett</em><br><em>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><a href="../../../README.site.html#header">header</a> <code>null</code></td>
-<td style="text-align: left;">`../../con</td>
-<td style="text-align: left;">fig/_header.md.cms`</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"><a href="../../../README.site.html#footer">footer</a> <code>null</code></td>
-<td style="text-align: left;">`../../con</td>
-<td style="text-align: left;">fig/_footer.md.cms`</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"><a href="../../../README.site.html#css_overlay">css_overlay</a> <code>dark</code></td>
-<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;"><a href="../../../index.html#brand">brand</a> null</td>
+<td style="text-align: left;">null</td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="../../../README.site.html#copy_protect">copy_protect</a> <code>null</code></td>
+<td style="text-align: left;"><a href="../../../index.html#homepage">homepage</a> null</td>
+<td style="text-align: left;">null</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="../../../index.html#search">search</a> :: name null</td>
+<td style="text-align: left;">null</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="../../../index.html#search">search</a> :: site null</td>
+<td style="text-align: left;">null</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="../../../index.html#search">search</a> :: call null</td>
+<td style="text-align: left;">null</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="../../../index.html#search">search</a> :: form null</td>
+<td style="text-align: left;">null</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="../../../index.html#copyright">copyright</a> null</td>
+<td style="text-align: left;">null</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="../../../index.html#composer">composer</a> <code>1</code></td>
 <td style="text-align: left;"><code>1</code></td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="../../../README.site.html#cols_break">cols_break</a> <code>lg</code></td>
+<td style="text-align: left;"><a href="../../../index.html#header">header</a> <code>null</code></td>
+<td style="text-align: left;">`../../con</td>
+<td style="text-align: left;">fig/_header.md.cms`</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="../../../index.html#footer">footer</a> <code>null</code></td>
+<td style="text-align: left;">`../../con</td>
+<td style="text-align: left;">fig/_footer.md.cms`</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="../../../index.html#css_overlay">css_overlay</a> <code>dark</code></td>
+<td style="text-align: left;"><code>null</code></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="../../../index.html#copy_protect">copy_protect</a> <code>null</code></td>
+<td style="text-align: left;"><code>1</code></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="../../../index.html#cols_break">cols_break</a> <code>lg</code></td>
 <td style="text-align: left;"><code>md</code></td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="../../../README.site.html#cols_scroll">cols_scroll</a> <code>1</code></td>
+<td style="text-align: left;"><a href="../../../index.html#cols_scroll">cols_scroll</a> <code>1</code></td>
 <td style="text-align: left;"><code>null</code></td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="../../../README.site.html#cols_order">cols_order</a> `[ 1, 2, 3</td>
+<td style="text-align: left;"><a href="../../../index.html#cols_order">cols_order</a> `[ 1, 2, 3</td>
 <td style="text-align: left;">]<code></code>[ 1, 3, 2</td>
 <td style="text-align: left;">]`</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="../../../README.site.html#cols_reorder">cols_reorder</a> `[ 1, 3, 2</td>
+<td style="text-align: left;"><a href="../../../index.html#cols_reorder">cols_reorder</a> `[ 1, 3, 2</td>
 <td style="text-align: left;">]<code></code>[ 2, 3, 1</td>
 <td style="text-align: left;">]`</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="../../../README.site.html#cols_size">cols_size</a> `[ 3, 7, 2</td>
+<td style="text-align: left;"><a href="../../../index.html#cols_size">cols_size</a> `[ 3, 7, 2</td>
 <td style="text-align: left;">]<code></code>[ 12, 9,</td>
 <td style="text-align: left;">3 ]`</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="../../../README.site.html#cols_resize">cols_resize</a> `[ 6, 12,</td>
+<td style="text-align: left;"><a href="../../../index.html#cols_resize">cols_resize</a> `[ 6, 12,</td>
 <td style="text-align: left;">6 ]<code></code>[ 12, 12,</td>
 <td style="text-align: left;">0 ]`</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="../../../README.site.html#metainfo">metainfo</a> `<date> ::</td>
+<td style="text-align: left;"><a href="../../../index.html#metainfo">metainfo</a> `<date> ::</td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;">bsp; <em>(<date>)</em>&lt;|&gt;<br><em>– &lt;author| – &gt;</em><br><em>. &lt;tags| . &gt;</em>`</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="../../../README.site.html#metainfo_null">metainfo_null</a> <code>*(none)*</code></td>
+<td style="text-align: left;"><a href="../../../index.html#metainfo_null">metainfo_null</a> <code>*(none)*</code></td>
 <td style="text-align: left;"><code>null</code></td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="../../../README.site.html#metalist">metalist</a> :: author <em>title:</em> `</td>
+<td style="text-align: left;"><a href="../../../index.html#metalist">metalist</a> :: author <em>title:</em> `</td>
 <td style="text-align: left;">Author<code></code><br><code>{=html} *display:*</code><em>Authors: &lt;|&gt;, &lt;|&gt;</em><code>title:</code>Cr</td>
 <td style="text-align: left;">eator<code></code><br><code>{=html} display:</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="../../../README.site.html#metalist">metalist</a> :: tags <em>title:</em> `</td>
+<td style="text-align: left;"><a href="../../../index.html#metalist">metalist</a> :: tags <em>title:</em> `</td>
 <td style="text-align: left;">Tag<code></code><br><code>{=html} *display:*</code><em>Tags: &lt;|&gt;, &lt;|&gt;</em><code>title:</code>Ma</td>
 <td style="text-align: left;">rk<code></code><br><code>{=html} display:</code></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="../../../README.site.html#readtime">readtime</a> `*Reading</td>
+<td style="text-align: left;"><a href="../../../index.html#readtime">readtime</a> `*Reading</td>
 <td style="text-align: left;">time: <word> words, <time> minutes<em><code></code></em>Words: &lt;</td>
 <td style="text-align: left;">word&gt; / Minutes: <time>*`</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="../../../README.site.html#readtime_wpm">readtime_wpm</a> <code>220</code></td>
+<td style="text-align: left;"><a href="../../../index.html#readtime_wpm">readtime_wpm</a> <code>220</code></td>
 <td style="text-align: left;"><code>200</code></td>
 <td style="text-align: left;"></td>
 </tr>
@@ -22812,6 +22832,32 @@ DATES
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][1] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][2] -->
 <!-- site-library-shelf :: start >> list date -->
+<table class="composer-table table table-borderless align-top">
+<tr>
+<td>
+<a href="./date-2024.html">2024</a>
+</td>
+<td class="text-end">
+12
+</td>
+</tr>
+<tr>
+<td>
+<a href="./date-2023.html">2023</a>
+</td>
+<td class="text-end">
+10
+</td>
+</tr>
+<tr>
+<td>
+<a href="./date-2022.html">2022</a>
+</td>
+<td class="text-end">
+10
+</td>
+</tr>
+</table>
 <!-- site-library-shelf :: finish >> list date -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][2] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][3] -->
@@ -22839,6 +22885,40 @@ AUTHORS
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][4] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][5] -->
 <!-- site-library-shelf :: start >> list author -->
+<table class="composer-table table table-borderless align-top">
+<tr>
+<td>
+<a href="./author-author-1.html">Author 1</a>
+</td>
+<td class="text-end">
+30
+</td>
+</tr>
+<tr>
+<td>
+<a href="./author-author-2.html">Author 2</a>
+</td>
+<td class="text-end">
+30
+</td>
+</tr>
+<tr>
+<td>
+<a href="./author-author-3.html">Author 3</a>
+</td>
+<td class="text-end">
+30
+</td>
+</tr>
+<tr>
+<td>
+<a href="./author-gary-b-genett.html">Gary B. Genett</a>
+</td>
+<td class="text-end">
+32
+</td>
+</tr>
+</table>
 <!-- site-library-shelf :: finish >> list author -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][5] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][6] -->
@@ -22866,6 +22946,96 @@ TAGS
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][7] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][8] -->
 <!-- site-library-shelf :: start >> list tags -->
+<table class="composer-table table table-borderless align-top">
+<tr>
+<td>
+<a href="./tags-main.html">Main</a>
+</td>
+<td class="text-end">
+2
+</td>
+</tr>
+<tr>
+<td>
+<a href="./tags-tag-0.html">Tag 0</a>
+</td>
+<td class="text-end">
+3
+</td>
+</tr>
+<tr>
+<td>
+<a href="./tags-tag-1.html">Tag 1</a>
+</td>
+<td class="text-end">
+30
+</td>
+</tr>
+<tr>
+<td>
+<a href="./tags-tag-2.html">Tag 2</a>
+</td>
+<td class="text-end">
+30
+</td>
+</tr>
+<tr>
+<td>
+<a href="./tags-tag-3.html">Tag 3</a>
+</td>
+<td class="text-end">
+30
+</td>
+</tr>
+<tr>
+<td>
+<a href="./tags-tag-4.html">Tag 4</a>
+</td>
+<td class="text-end">
+3
+</td>
+</tr>
+<tr>
+<td>
+<a href="./tags-tag-5.html">Tag 5</a>
+</td>
+<td class="text-end">
+3
+</td>
+</tr>
+<tr>
+<td>
+<a href="./tags-tag-6.html">Tag 6</a>
+</td>
+<td class="text-end">
+3
+</td>
+</tr>
+<tr>
+<td>
+<a href="./tags-tag-7.html">Tag 7</a>
+</td>
+<td class="text-end">
+3
+</td>
+</tr>
+<tr>
+<td>
+<a href="./tags-tag-8.html">Tag 8</a>
+</td>
+<td class="text-end">
+3
+</td>
+</tr>
+<tr>
+<td>
+<a href="./tags-tag-9.html">Tag 9</a>
+</td>
+<td class="text-end">
+3
+</td>
+</tr>
+</table>
 <!-- site-library-shelf :: finish >> list tags -->
 <!-- site-nav-side-list :: finish >> nav-right.["LIBRARY"][8] -->
 <!-- site-nav-side-list :: start >> nav-right.["LIBRARY"][9] -->
@@ -22981,7 +23151,7 @@ BOTTOM TEXT
 <!-- site-info-data-list :: start >> info-bottom.["INFO"][0] -->
 <p class="composer-link navbar-text me-3">
 <!-- composer >> readtime-list -->
-<em>Words: 8567 / Minutes: 42</em>
+<em>Words: 8599 / Minutes: 42</em>
 </p>
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"][0] -->
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"] -->

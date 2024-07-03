@@ -29,17 +29,18 @@ override c_icon				:= $(COMPOSER_ROOT)/_branding/logo.png
 
 ################################################################################
 ifeq ($(COMPOSER_CURDIR),)
+ifeq ($(filter $(COMPOSER_ROOT)/_Composer%,$(CURDIR)),)
 ################################################################################
 
+ifeq ($(CURDIR),$(COMPOSER_ROOT))
 .PHONY: $(notdir $(COMPOSER_ROOT))-export
 $(notdir $(COMPOSER_ROOT))-export:
 	@$(TOUCH) $(COMPOSER_ROOT)/.nojekyll
-	@$(RSYNC) \
-		$(abspath $(COMPOSER_ROOT)/../../coding/composer/$(notdir $(PUBLISH_ROOT))/$(notdir $(COMPOSER_EXPORT_DEFAULT)))/ \
-		$(COMPOSER_EXPORT)/projects/composer/$(notdir $(PUBLISH_ROOT))
 	@(cd $(COMPOSER_ROOT) && $(HOME)/.bashrc git-perms root)
+endif
 
 ################################################################################
+endif
 endif
 ################################################################################
 # end of file

@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content="Gary B. Genett" />
-  <meta name="dcterms.date" content="2024-02-02" />
+  <meta name="dcterms.date" content="2024-07-03" />
   <title>EXAMPLE SITE – Themes &amp; Overlays</title>
   <style>
     code{white-space: pre-wrap;}
@@ -9076,7 +9076,7 @@ background-color:	transparent;
 ::-webkit-scrollbar-thumb {
 background-color:	rgba(var(--bs-secondary-rgb));
 }
-body {
+:root {
 scrollbar-color:	rgba(var(--bs-secondary-rgb)) transparent;
 }
 </style>
@@ -9948,7 +9948,7 @@ border-radius:	10px;
 ::-webkit-scrollbar-thumb {
 border-radius:	10px;
 }
-body {
+:root {
 scrollbar-width:	thin;
 }
 
@@ -17473,7 +17473,7 @@ CONTENTS
 <!-- site-nav-side-list :: finish >> nav-left.["CONTENTS"][0] -->
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][1] -->
 <!-- composer >> metainfo-list -->
-<p>2024-02-02 :: Themes &amp; Overlays  – Gary B. Genett</p>
+<p>2024-07-03 :: Themes &amp; Overlays  – Gary B. Genett</p>
 <!-- site-nav-side-list :: finish >> nav-left.["CONTENTS"][1] -->
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][2] -->
 <!-- composer >> contents-list -->
@@ -17535,7 +17535,7 @@ CONTENTS
 <!-- site-nav-side-list :: finish >> nav-left.["CONTENTS"][4] -->
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][5] -->
 <!-- composer >> readtime-list -->
-<p><em>Reading time: 1039 words, 4 minutes</em></p>
+<p><em>Reading time: 1087 words, 4 minutes</em></p>
 <!-- site-nav-side-list :: finish >> nav-left.["CONTENTS"][5] -->
 <!-- site-nav-side-list :: start >> nav-left.["CONTENTS"][6] -->
 <!-- site-box-end :: start >> -->
@@ -17644,7 +17644,7 @@ Themes &amp; Overlays
 <td style="text-align: left;">Top Bar</td>
 <td style="text-align: left;"><code>brand</code> (<code>homepage</code>)</td>
 <td style="text-align: left;"><code>nav-top</code></td>
-<td style="text-align: right;"><code>info-top</code> / <code>search_*</code></td>
+<td style="text-align: right;"><code>info-top</code> / <code>search.*</code></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Main Page</td>
@@ -18150,7 +18150,7 @@ Same as above, for a version of the library specific to the <code>config</code> 
 <h2>Metainfo</h2>
 <p><code>&lt;!-- composer &gt;&gt; metainfo --&gt;</code></p>
 <!-- composer >> metainfo-list -->
-<p>2024-02-02 :: Themes &amp; Overlays  – Gary B. Genett</p>
+<p>2024-07-03 :: Themes &amp; Overlays  – Gary B. Genett</p>
 <p>#WORK # demonstrated elsewhere…</p>
 <ul>
 <li><code>site-nav-left: { metainfo }</code> + <code>&lt;!-- composer &gt;&gt; metainfo --&gt;</code>
@@ -18353,7 +18353,7 @@ Same as above, for a version of the library specific to the <code>config</code> 
 <h2>Read Time</h2>
 <p><code>&lt;!-- composer &gt;&gt; readtime --&gt;</code></p>
 <!-- composer >> readtime-list -->
-<p><em>Reading time: 1039 words, 4 minutes</em></p>
+<p><em>Reading time: 1087 words, 4 minutes</em></p>
 </section>
 </section>
 <section id="library" class="level1">
@@ -18362,6 +18362,7 @@ Same as above, for a version of the library specific to the <code>config</code> 
 <p><code>&lt;!-- composer &gt;&gt; row-begin --&gt;</code></p>
 <p><code>&lt;!-- composer &gt;&gt; column-begin col-3/col-4/col-3 --&gt;</code></p>
 <p><code>&lt;!-- composer &gt;&gt; library date/author/tags --&gt;</code></p>
+<p><code>&lt;!-- composer &gt;&gt; library date/author/tags 0 --&gt;</code></p>
 <!-- site-row-begin :: start >> -->
 <div class="container-fluid">
 <div class="d-flex flex-row flex-wrap">
@@ -18592,6 +18593,159 @@ Same as above, for a version of the library specific to the <code>config</code> 
 </tr>
 </table>
 <!-- site-library-shelf :: finish >> list tags -->
+<!-- site-column-end :: start >> -->
+</div>
+<!-- site-column-end :: finish >> -->
+<!-- site-row-end :: start >> -->
+</div>
+</div>
+<!-- site-row-end :: finish >> -->
+<!-- site-row-begin :: start >> -->
+<div class="container-fluid">
+<div class="d-flex flex-row flex-wrap">
+<!-- site-row-begin :: finish >> -->
+<!-- site-column-begin :: start >> col-3 -->
+<div class="d-flex flex-column col-3 p-2">
+<!-- site-column-begin :: finish >> col-3 -->
+<!-- site-library-shelf :: start >> list date 0 -->
+<table class="composer-table table table-borderless align-top">
+<tr>
+<td>
+<a href="../_library/date-2024.html">2024</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../_library/date-2023.html">2023</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../_library/date-2022.html">2022</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../_library/date-2021.html">2021</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../_library/date-2020.html">2020</a>
+</td>
+</tr>
+</table>
+<!-- site-library-shelf :: finish >> list date 0 -->
+<!-- site-column-end :: start >> -->
+</div>
+<!-- site-column-end :: finish >> -->
+<!-- site-column-begin :: start >> col-4 -->
+<div class="d-flex flex-column col-4 p-2">
+<!-- site-column-begin :: finish >> col-4 -->
+<!-- site-library-shelf :: start >> list author 0 -->
+<table class="composer-table table table-borderless align-top">
+<tr>
+<td>
+<a href="../_library/author-albert-krewinkel.html">Albert Krewinkel</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../_library/author-author-1.html">Author 1</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../_library/author-author-2.html">Author 2</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../_library/author-author-3.html">Author 3</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../_library/author-gary-b-genett.html">Gary B. Genett</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../_library/author-john-macfarlane.html">John MacFarlane</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../_library/author-mauro-bieg.html">Mauro Bieg</a>
+</td>
+</tr>
+</table>
+<!-- site-library-shelf :: finish >> list author 0 -->
+<!-- site-column-end :: start >> -->
+</div>
+<!-- site-column-end :: finish >> -->
+<!-- site-column-begin :: start >> col-3 -->
+<div class="d-flex flex-column col-3 p-2">
+<!-- site-column-begin :: finish >> col-3 -->
+<!-- site-library-shelf :: start >> list tags 0 -->
+<table class="composer-table table table-borderless align-top">
+<tr>
+<td>
+<a href="../_library/tags-main.html">Main</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../_library/tags-tag-0.html">Tag 0</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../_library/tags-tag-1.html">Tag 1</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../_library/tags-tag-2.html">Tag 2</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../_library/tags-tag-3.html">Tag 3</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../_library/tags-tag-4.html">Tag 4</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../_library/tags-tag-5.html">Tag 5</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../_library/tags-tag-6.html">Tag 6</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../_library/tags-tag-7.html">Tag 7</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../_library/tags-tag-8.html">Tag 8</a>
+</td>
+</tr>
+<tr>
+<td>
+<a href="../_library/tags-tag-9.html">Tag 9</a>
+</td>
+</tr>
+</table>
+<!-- site-library-shelf :: finish >> list tags 0 -->
 <!-- site-column-end :: start >> -->
 </div>
 <!-- site-column-end :: finish >> -->
@@ -19050,7 +19204,7 @@ BOTTOM TEXT
 <!-- site-info-data-list :: start >> info-bottom.["INFO"][0] -->
 <p class="composer-link navbar-text me-3">
 <!-- composer >> readtime-list -->
-<em>Reading time: 1039 words, 4 minutes</em>
+<em>Reading time: 1087 words, 4 minutes</em>
 </p>
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"][0] -->
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"] -->
