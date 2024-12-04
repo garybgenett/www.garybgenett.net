@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content />
-  <meta name="dcterms.date" content="2024-07-03" />
+  <meta name="dcterms.date" content="2024-12-03" />
   <title>EXAMPLE SITE – Year: 2020</title>
   <style>
     code{white-space: pre-wrap;}
@@ -20360,7 +20360,7 @@ margin-top:	0px;
 <!-- site-nav-top-list :: finish >> nav-top.["MENU"][1].["PAGES"][3].["Layout & Elements"][1] -->
 <!-- site-nav-top-list :: start >> nav-top.["MENU"][1].["PAGES"][3].["Layout & Elements"][2] -->
 <li>
-<a class="dropdown-item" href="../config/pages/2022-01-01+template_00.html">Metainfo File</a>
+<a class="dropdown-item" href="../config/pages/2022-01-01+template_0.html">Metainfo File</a>
 </li>
 <!-- site-nav-top-list :: finish >> nav-top.["MENU"][1].["PAGES"][3].["Layout & Elements"][2] -->
 <!-- site-nav-top-list :: start >> nav-top.["MENU"][1].["PAGES"][3].["Layout & Elements"][3] -->
@@ -20414,7 +20414,7 @@ margin-top:	0px;
 <!-- site-nav-top-list :: start >> nav-top.["SPACE"][0] -->
 <!-- site-nav-divider :: start >> top-menu -->
 <li class="composer-menu-div nav-item nav-link d-lg-block d-none">
- 
+<span hidden>…</span>
 </li>
 <li class="nav-item d-lg-none d-block">
 <hr class="dropdown-divider">
@@ -20740,31 +20740,31 @@ CONTENTS
 <!-- site-fold-begin :: start >> group library-digest -->
 <div id="composer-fold-group-library-digest" class="accordion">
 <!-- site-fold-begin :: finish >> group library-digest -->
-<!-- site-fold-begin :: start >> 1 . library-digest January 10, 2020 :: Pandoc Lua Filters&#0000; -- Albert Krewinkel; John MacFarlane -->
-<!-- site-header :: start >> 1 January 10, 2020 :: Pandoc Lua Filters&#0000; -- Albert Krewinkel; John MacFarlane -->
+<!-- site-fold-begin :: start >> 1 . library-digest January 10, 2020 :: Pandoc Lua Filters<span hidden>...</span> -- Albert Krewinkel; John MacFarlane -->
+<!-- site-header :: start >> 1 January 10, 2020 :: Pandoc Lua Filters<span hidden>...</span> -- Albert Krewinkel; John MacFarlane -->
 <div id="january-10-2020--pandoc-lua-filters">
 
 </div>
-<!-- site-header :: finish >> 1 January 10, 2020 :: Pandoc Lua Filters&#0000; -- Albert Krewinkel; John MacFarlane -->
+<!-- site-header :: finish >> 1 January 10, 2020 :: Pandoc Lua Filters<span hidden>...</span> -- Albert Krewinkel; John MacFarlane -->
 <div class="accordion">
 <div class="accordion-item">
-<div id="composer-fold-january-10-2020--pandoc-lua-filters0000----albert-krewinkel-john-macfarlane" class="accordion-header">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-january-10-2020--pandoc-lua-filters0000----albert-krewinkel-john-macfarlane-target">
+<div id="composer-fold-january-10-2020--pandoc-lua-filtersspan-hiddenspan----albert-krewinkel-john-macfarlane" class="accordion-header">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#composer-fold-january-10-2020--pandoc-lua-filtersspan-hiddenspan----albert-krewinkel-john-macfarlane-target">
 <h1 class="composer-header">
-January 10, 2020 :: Pandoc Lua Filters  – Albert Krewinkel; John MacFarlane
+January 10, 2020 :: Pandoc Lua Filters<span hidden>…</span> – Albert Krewinkel; John MacFarlane
 </h1>
 </button>
 </div>
-<div id="composer-fold-january-10-2020--pandoc-lua-filters0000----albert-krewinkel-john-macfarlane-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
+<div id="composer-fold-january-10-2020--pandoc-lua-filtersspan-hiddenspan----albert-krewinkel-john-macfarlane-target" class="accordion-collapse collapse show" data-bs-parent="#composer-fold-group-library-digest">
 <div class="accordion-body">
-<!-- site-fold-begin :: finish >> 1 . library-digest January 10, 2020 :: Pandoc Lua Filters&#0000; -- Albert Krewinkel; John MacFarlane -->
+<!-- site-fold-begin :: finish >> 1 . library-digest January 10, 2020 :: Pandoc Lua Filters<span hidden>...</span> -- Albert Krewinkel; John MacFarlane -->
+<!-- >> pandoc/doc/lua-filters.md -->
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
 <p>Pandoc has long supported filters, which allow the pandoc abstract syntax tree (AST) to be manipulated between the parsing and the writing phase. <a href="https://pandoc.org/filters.html">Traditional pandoc filters</a> accept a JSON representation of the pandoc AST and produce an altered JSON representation of the AST. They may be written in any programming language, and invoked from pandoc using the <code>--filter</code> option.</p>
 <p>Although traditional filters are very flexible, they have a couple of disadvantages. First, there is some overhead in writing JSON to stdout and reading it from stdin (twice, once on each side of the filter). Second, whether a filter will work will depend on details of the user’s environment. A filter may require an interpreter for a certain programming language to be available, as well as a library for manipulating the pandoc AST in JSON form. One cannot simply provide a filter that can be used by anyone who has a certain version of the pandoc executable.</p>
 <p>Starting with version 2.0, pandoc makes it possible to write filters in Lua without any external dependencies at all. A Lua interpreter (version 5.3) and a Lua library for creating pandoc filters is built into the pandoc executable. Pandoc data types are marshaled to Lua directly, avoiding the overhead of writing JSON to stdout and reading it from stdin.</p>
-<p>[…]</p>
-<p><a href="../pandoc/doc/lua-filters.html"><em>(permalink to full text)</em></a></p>
+<p><em>[…]</em> <a href="../pandoc/doc/lua-filters.html"><em>(link to full page)</em></a></p>
 <!-- site-fold-end :: start >> -->
 </section>
 </div>
@@ -21177,7 +21177,7 @@ TAGS
 <!-- site-nav-begin :: finish >> bottom -->
 <ol class="composer-link nav-item breadcrumb me-auto">
 <li class="breadcrumb-item">
- 
+<span hidden>…</span>
 </li>
 <!-- site-nav-bottom-list :: start >> nav-bottom.["PATH"] -->
 <!-- site-nav-bottom-list :: start >> nav-bottom.["PATH"][0] -->
@@ -21195,7 +21195,7 @@ TAGS
 <!-- site-nav-bottom-list :: finish >> nav-bottom.["INFO"][1] -->
 <!-- site-nav-bottom-list :: finish >> nav-bottom.["INFO"] -->
 <li class="breadcrumb-item">
- 
+<span hidden>…</span>
 </li>
 </ol>
 <!-- site-nav-end :: start >> bottom -->
@@ -21216,7 +21216,7 @@ BOTTOM TEXT
 <!-- site-info-data-list :: start >> info-bottom.["INFO"][0] -->
 <p class="composer-link navbar-text me-3">
 <!-- composer >> readtime-list -->
-<em>Reading time: 232 words, 1 minutes</em>
+<em>Reading time: 233 words, 1 minutes</em>
 </p>
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"][0] -->
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"] -->

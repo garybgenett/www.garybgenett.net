@@ -8,8 +8,8 @@ variables:
 ########################################
   site-config:
 
-    homepage:				http://www.garybgenett.net
     brand:				null
+    homepage:				http://www.garybgenett.net
     search:
       name: |
         <!-- composer >> icon search -->
@@ -32,7 +32,8 @@ variables:
 
     copy_protect:			1
 
-    metainfo:				"<date> :: <title>"
+    metainfo:
+      display:				"<date> :: <title>"
 
 ########################################
   site-library:
@@ -40,12 +41,15 @@ variables:
     folder:				library
     auto_update:			null #>>> 1
 
-    digest_count:			20
+    digest:
+      count:				20
 
-    lists_expanded:			null
-    lists_spacer:			null
+    lists:
+      expanded:				null
+      spacer:				null
 
-    sitemap_spacer:			null
+    sitemap:
+      spacer:				null
 
 ########################################
   site-nav-top:

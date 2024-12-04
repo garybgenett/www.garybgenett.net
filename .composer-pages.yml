@@ -19,7 +19,7 @@ variables:
       - spacer
       - contents
       - spacer
-      - tagslist tags
+      - metalist tags
       - box-end
 
 ################################################################################

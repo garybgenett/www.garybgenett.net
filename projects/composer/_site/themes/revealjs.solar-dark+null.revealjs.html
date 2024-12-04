@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="Gary B. Genett">
-  <title>EXAMPLE SITE – Composer CMS: Content Make System</title>
+  <title>EXAMPLE SITE – Theme: revealjs.solar-dark, Overlay: null</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -745,7 +745,7 @@ max-width:	100%;
 <section id="title-slide">
   <h1 class="title">Composer CMS: Content Make System</h1>
   <p class="author">Gary B. Genett</p>
-  <p class="date">v3.1 (2024-07-03)</p>
+  <p class="date">v3.1 (2024-08-10)</p>
 </section>
 
 <section>
@@ -829,6 +829,7 @@ make all-all</code></pre>
 <p><a href="http://www.garybgenett.net/projects/composer">Composer</a> has almost no external dependencies. All needed components are integrated directly into the repository, including [Pandoc] and [YQ]. <a href="http://www.garybgenett.net/projects/composer">Composer</a> does require a minimal command-line environment based on [GNU] tools, particularly [GNU Make], which is standard for all [GNU/Linux] systems. The [Windows Subsystem for Linux] for Windows and [MacPorts] for macOS both provide suitable environments.</p>
 <p>The one large external requirement is [TeX Live], and it can be installed using the package managers of each of the above systems. It is only necessary for creating [PDF] files.</p>
 <p>Below are the versions of the components in the repository, and the tested versions of external tools for this iteration of <a href="http://www.garybgenett.net/projects/composer">Composer</a>. Use [check] to validate your system.</p>
+<p>The versions of the integrated repositories can be changed, if desired (see [Repository Versions]).</p>
 <table>
 <thead>
 <tr class="header">
@@ -955,7 +956,6 @@ make all-all</code></pre>
 </table>
 <p>[Markdown Viewer] is included both for its CSS stylesheets, and for real-time rendering of [Markdown] files as they are being written. To install, follow the instructions in the <code>README.md</code>.</p>
 <p>[Google Firebase] is only necessary for uploading via the [export-all] and [export-force] targets. Binaries are included in the repository, but do not seem to work with all versions of their respective operating systems. If the included binary fails, use <code>+update-firebase-tools</code> to build a local version (see [+update-*]).</p>
-<p>The versions of the integrated repositories can be changed, if desired (see [Repository Versions]).</p>
 </section></section>
 <section id="composer-cms-v31--help" class="title-slide slide level1">
 <h1>Composer CMS v3.1 :: Help</h1>

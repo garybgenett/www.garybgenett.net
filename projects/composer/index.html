@@ -5,7 +5,7 @@
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <meta name="author" content />
-  <meta name="dcterms.date" content="2024-07-03" />
+  <meta name="dcterms.date" content="2024-08-10" />
   <title>Gary B. Genett – Composer CMS v3.1</title>
   <style>
     code{white-space: pre-wrap;}
@@ -20275,7 +20275,7 @@ margin-top:	0px;
   </script>
 </head>
 <body>
-<!-- site-targets >> .../projects/composer/.composer.tmp/site-cache.index.html.nav-top.html -->
+<!-- site-targets >> .../projects/composer/.composer.tmp/site-cache+index.html.nav-top.html -->
 <!-- site-nav-top :: start >> .../_branding/logo.png -->
 <!-- site-nav-begin :: start >> top .../_branding/logo.png -->
 <div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#composer-nav-top">
@@ -20348,7 +20348,7 @@ margin-top:	0px;
 <!-- site-nav-top-list :: start >> nav-top.["SPACE"][0] -->
 <!-- site-nav-divider :: start >> top-menu -->
 <li class="composer-menu-div nav-item nav-link d-lg-block d-none">
- 
+<span hidden>…</span>
 </li>
 <li class="nav-item d-lg-none d-block">
 <hr class="dropdown-divider">
@@ -20736,12 +20736,12 @@ margin-top:	0px;
 </nav>
 <!-- site-nav-end :: finish >> top -->
 <!-- site-nav-top :: finish >> .../_branding/logo.png -->
-<!-- site-targets >> .../projects/composer/.composer.tmp/site-cache.index.html.row-begin.html -->
+<!-- site-targets >> .../projects/composer/.composer.tmp/site-cache+index.html.row-begin.html -->
 <!-- site-row-begin :: start >> -->
 <div class="container-fluid user-select-none">
 <div class="d-flex flex-row flex-wrap">
 <!-- site-row-begin :: finish >> -->
-<!-- site-targets >> .../projects/composer/.composer.tmp/site-cache.index.html.nav-left.html -->
+<!-- site-targets >> .../projects/composer/.composer.tmp/site-cache+index.html.nav-left.html -->
 <!-- site-nav-side :: start >> left -->
 <!-- site-column-begin :: start >> left -->
 <div id="composer-nav-left" class="d-flex flex-column composer-scroll-lg order-lg-1 order-1 col-lg-3 col-6 d-lg-block d-block p-2">
@@ -20912,7 +20912,7 @@ Contents
 </div>
 <!-- site-column-end :: finish >> -->
 <!-- site-nav-side :: finish >> left -->
-<!-- site-targets >> .../projects/composer/.composer.tmp/site-cache.index.html.column-begin.html -->
+<!-- site-targets >> .../projects/composer/.composer.tmp/site-cache+index.html.column-begin.html -->
 <!-- site-column-begin :: start >> center -->
 <div id="composer-nav-center" class="d-flex flex-column composer-scroll-lg order-lg-2 order-3 col-lg-7 col-12 d-lg-block d-block p-2">
 <!-- site-column-begin :: finish >> center -->
@@ -21073,6 +21073,7 @@ Requirements
 <p><a href="http://www.garybgenett.net/projects/composer">Composer</a> has almost no external dependencies. All needed components are integrated directly into the repository, including <a href="https://pandoc.org">Pandoc</a> and <a href="https://mikefarah.gitbook.io/yq">YQ</a>. <a href="http://www.garybgenett.net/projects/composer">Composer</a> does require a minimal command-line environment based on <a href="http://www.gnu.org">GNU</a> tools, particularly <a href="http://www.gnu.org/software/make">GNU Make</a>, which is standard for all <a href="https://gnu.org/gnu/linux-and-gnu.html">GNU/Linux</a> systems. The <a href="https://docs.microsoft.com/en-us/windows/wsl">Windows Subsystem for Linux</a> for Windows and <a href="https://www.macports.org">MacPorts</a> for macOS both provide suitable environments.</p>
 <p>The one large external requirement is <a href="https://tug.org/texlive">TeX Live</a>, and it can be installed using the package managers of each of the above systems. It is only necessary for creating <a href="#pdf">PDF</a> files.</p>
 <p>Below are the versions of the components in the repository, and the tested versions of external tools for this iteration of <a href="http://www.garybgenett.net/projects/composer">Composer</a>. Use <a href="#check--check-all">check</a> to validate your system.</p>
+<p>The versions of the integrated repositories can be changed, if desired (see <a href="#repository-versions">Repository Versions</a>).</p>
 <table>
 <thead>
 <tr class="header">
@@ -21199,7 +21200,6 @@ Requirements
 </table>
 <p><a href="https://github.com/simov/markdown-viewer">Markdown Viewer</a> is included both for its CSS stylesheets, and for real-time rendering of <a href="https://pandoc.org/MANUAL.html#pandocs-markdown">Markdown</a> files as they are being written. To install, follow the instructions in the <code>README.md</code>.</p>
 <p><a href="https://firebase.google.com">Google Firebase</a> is only necessary for uploading via the <a href="#export--export-all--export-force---export">export-all</a> and <a href="#export--export-all--export-force---export">export-force</a> targets. Binaries are included in the repository, but do not seem to work with all versions of their respective operating systems. If the included binary fails, use <code>+update-firebase-tools</code> to build a local version (see <a href="#release--release-all--update--update-all--update-list--update-">+update-*</a>).</p>
-<p>The versions of the integrated repositories can be changed, if desired (see <a href="#repository-versions">Repository Versions</a>).</p>
 <!-- site-box-end :: start >> -->
 </div>
 </div>
@@ -21446,11 +21446,11 @@ Precedence Rules
 <p>#WORK # the <a href="#c_css">c_css</a> layering…</p>
 <ol type="1">
 <li><a href="#c_site">c_site</a> &gt;&gt; <a href="https://getbootstrap.com">Bootstrap</a></li>
-<li><a href="#c_css">c_css</a> #WORK # comment 1. <a href="#composer_dir">COMPOSER_DIR</a>/artifacts/composer/composer-<a href="#c_type--c_base--c_list">c_type</a>.css</li>
+<li><a href="#c_css">c_css</a></li>
+<li><a href="#c_site">c_site</a> &gt;&gt; <code>.composer.yml</code> :: [site-config].[css_overlay] #WORK # comment 1. <a href="#composer_dir">COMPOSER_DIR</a>/artifacts/composer/composer-<a href="#c_type--c_base--c_list">c_type</a>.css</li>
 <li><a href="#composer_art">COMPOSER_ART</a>/composer/composer-<a href="#c_type--c_base--c_list">c_type</a>.css</li>
 <li><a href="#composer_include">COMPOSER_INCLUDE</a> &gt;&gt; …/.composer-<a href="#c_type--c_base--c_list">c_type</a>.css</li>
 <li><a href="#curdir">CURDIR</a>/<a href="#c_type--c_base--c_list">c_base</a>.<code>&lt;extension&gt;</code>.css</li>
-<li><a href="#c_site">c_site</a> &gt;&gt; <code>.composer.yml</code> :: [site-config].[css_overlay]</li>
 </ol>
 <p>The first four are core to <a href="http://www.garybgenett.net/projects/composer">Composer</a>, and are always included. <a href="#composer_include">COMPOSER_INCLUDE</a> and <a href="#curdir">CURDIR</a> files are optional, and only used if they exist.</p>
 </section>
@@ -22563,7 +22563,7 @@ make -f .../.Composer/Makefile +release</code></pre>
 <li>In the context of <a href="#commit--commit-all">commit</a>, the <a href="#c_type--c_base--c_list">c_list</a> variable is repurposed to select the limited list of directories and/or files that should be committed. All selected directories and files must exist in the current directory tree.</li>
 </ul>
 <p>Commit title format:</p>
-<pre><code>[Composer CMS v3.1 :: 2024-07-03T06:52:38-07:00]</code></pre>
+<pre><code>[Composer CMS v3.1 :: 2024-12-03T20:00:00-08:00]</code></pre>
 <p>Example using <a href="#c_type--c_base--c_list">c_list</a>:</p>
 <pre><code>make commit c_list=&quot;Makefile artifacts&quot;</code></pre>
 </section>
@@ -22816,26 +22816,28 @@ endif</code></pre>
 #     footer: null
 #     css_overlay: dark
 #     copy_protect: null
-#     cols_break: lg
-#     cols_scroll: 1
-#     cols_order:
-#       - 1
-#       - 2
-#       - 3
-#     cols_reorder:
-#       - 1
-#       - 3
-#       - 2
-#     cols_size:
-#       - 3
-#       - 7
-#       - 2
-#     cols_resize:
-#       - 6
-#       - 12
-#       - 6
-#     metainfo: &#39;&lt;date&gt; :: &lt;title&gt;&lt;|&gt; -- &lt;author|; &gt;&#39;
-#     metainfo_null: &#39;*(none)*&#39;
+#     cols:
+#       break: lg
+#       scroll: 1
+#       order:
+#         - 1
+#         - 2
+#         - 3
+#       reorder:
+#         - 1
+#         - 3
+#         - 2
+#       size:
+#         - 3
+#         - 7
+#         - 2
+#       resize:
+#         - 6
+#         - 12
+#         - 6
+#     metainfo:
+#       display: &#39;&lt;date&gt; :: &lt;title&gt;&lt;|&gt; -- &lt;author|; &gt;&#39;
+#       null: &#39;*(none)*&#39;
 #     metalist:
 #       author:
 #         title: Author
@@ -22843,24 +22845,34 @@ endif</code></pre>
 #       tags:
 #         title: Tag
 #         display: &#39;*Tags: &lt;|&gt;, &lt;|&gt;*&#39;
-#     readtime: &#39;*Reading time: &lt;word&gt; words, &lt;time&gt; minutes*&#39;
-#     readtime_wpm: 220
+#     readtime:
+#       display: &#39;*Reading time: &lt;word&gt; words, &lt;time&gt; minutes*&#39;
+#       wpm: 220
+#     redirect:
+#       title: Moved To
+#       display: &#39;**This link has been permanently moved to: &lt;link&gt;**&#39;
+#       match: &#39;*&#39;
+#       time: 5
 #   site-library:
 #     folder: null
 #     auto_update: null
+#     anchor_links: 1
 #     append: null
-#     digest_title: Latest Updates
-#     digest_continue: &#39;[...]&#39;
-#     digest_permalink: &#39;*(permalink to full text)*&#39;
-#     digest_chars: 1024
-#     digest_count: 10
-#     digest_expanded: 0
-#     digest_spacer: 1
-#     lists_expanded: 0
-#     lists_spacer: 1
-#     sitemap_title: Site Map
-#     sitemap_expanded: 0
-#     sitemap_spacer: 1
+#     digest:
+#       title: Latest Updates
+#       continue: &#39;*[...]*&#39;
+#       permalink: &#39;*(link to full page)*&#39;
+#       chars: 1024
+#       count: 10
+#       expanded: 0
+#       spacer: 1
+#     lists:
+#       expanded: 0
+#       spacer: 1
+#     sitemap:
+#       title: Site Map
+#       expanded: 0
+#       spacer: 1
 #   site-nav-top: null
 #   site-nav-bottom: null
 #   site-nav-left: null
@@ -22870,7 +22882,7 @@ endif</code></pre>
 <p>Use the <a href="#template--templateyml--templatemd">template.md</a> target to create new <code>markdown</code> files:</p>
 <pre><code>---
 title: &quot;Composer CMS: Content Make System&quot;
-date: 2024-07-03
+date: 2024-12-03
 author:
   - Gary B. Genett
 tags:
@@ -22942,15 +22954,15 @@ variables:
 ########################################
 # site
 
-  title-prefix: EXAMPLE SITE
+  title-prefix: &quot;EXAMPLE SITE&quot;
 
 ########################################
   site-config:
 
-    brand: LOGO / BRAND
+    brand: &quot;LOGO / BRAND&quot;
     homepage: http://www.garybgenett.net/projects/composer
     search:
-#&gt;&gt;   name: SEARCH
+#&gt;&gt;   name: &quot;SEARCH&quot;
       name: |
         &lt;!-- composer &gt;&gt; icon search --&gt;
       site: https://duckduckgo.com
@@ -22963,7 +22975,7 @@ variables:
         &lt;!-- composer &gt;&gt; form kp -1 --&gt;
         &lt;!-- composer &gt;&gt; form kv 1 --&gt;
         &lt;!-- composer &gt;&gt; form kz -1 --&gt;
-#&gt;&gt; copyright: COPYRIGHT
+#&gt;&gt; copyright: &quot;COPYRIGHT&quot;
     copyright: |
       &lt;!-- composer &gt;&gt; icon gpl --&gt;
       &lt;!-- composer &gt;&gt; icon cc-by-nc-nd --&gt;
@@ -22977,15 +22989,17 @@ variables:
 #&gt;&gt; css_overlay: dark
 #&gt;&gt; copy_protect: null
 
-#&gt;&gt; cols_break: lg
-#&gt;&gt; cols_scroll: 1
-#&gt;&gt; cols_order: [ 1, 2, 3 ]
-#&gt;&gt; cols_reorder: [ 1, 3, 2 ]
-#&gt;&gt; cols_size: [ 3, 7, 2 ]
-#&gt;&gt; cols_resize: [ 6, 12, 6 ]
+#&gt;&gt; cols:
+#&gt;&gt;   break: lg
+#&gt;&gt;   scroll: 1
+#&gt;&gt;   order: [ 1, 2, 3 ]
+#&gt;&gt;   reorder: [ 1, 3, 2 ]
+#&gt;&gt;   size: [ 3, 7, 2 ]
+#&gt;&gt;   resize: [ 6, 12, 6 ]
 
-#&gt;&gt; metainfo: &quot;&lt;date&gt; :: &lt;title&gt;&lt;|&gt; -- &lt;author|; &gt;&quot;
-#&gt;&gt; metainfo_null: &quot;*(none)*&quot;
+#&gt;&gt; metainfo:
+#&gt;&gt;   display: &quot;&lt;date&gt; :: &lt;title&gt;&lt;|&gt; -- &lt;author|; &gt;&quot;
+#&gt;&gt;   null: &quot;*(none)*&quot;
 #&gt;&gt; metalist:
 #&gt;&gt;   author:
 #&gt;&gt;     title: &quot;Author&quot;
@@ -22993,32 +23007,42 @@ variables:
 #&gt;&gt;   tags:
 #&gt;&gt;     title: &quot;Tag&quot;
 #&gt;&gt;     display: &quot;*Tags: &lt;|&gt;, &lt;|&gt;*&quot;
+#&gt;&gt; readtime:
+#&gt;&gt;   display: &quot;*Reading time: &lt;word&gt; words, &lt;time&gt; minutes*&quot;
+#&gt;&gt;   wpm: 220
 
-#&gt;&gt; readtime: &quot;*Reading time: &lt;word&gt; words, &lt;time&gt; minutes*&quot;
-#&gt;&gt; readtime_wpm: 220
+#&gt;&gt; redirect:
+#&gt;&gt;   title: &quot;Moved To&quot;
+#&gt;&gt;   display: &quot;**This link has been permanently moved to: &lt;link&gt;**&quot;
+#&gt;&gt;   match: &quot;*&quot;
+#&gt;&gt;   time: 5
 
 ########################################
   site-library:
 
     folder: #&gt;&gt; null
 #&gt;&gt; auto_update: null
+#&gt;&gt; anchor_links: 1
 
 #&gt;&gt; append: null
 
-#&gt;&gt; digest_title: &quot;Latest Updates&quot;
-#&gt;&gt; digest_continue: &quot;[...]&quot;
-#&gt;&gt; digest_permalink: &quot;*(permalink to full text)*&quot;
-#&gt;&gt; digest_chars: 1024
-#&gt;&gt; digest_count: 10
-#&gt;&gt; digest_expanded: 0
-#&gt;&gt; digest_spacer: 1
+#&gt;&gt; digest:
+#&gt;&gt;   title: &quot;Latest Updates&quot;
+#&gt;&gt;   continue: &quot;*[...]*&quot;
+#&gt;&gt;   permalink: &quot;*(link to full page)*&quot;
+#&gt;&gt;   chars: 1024
+#&gt;&gt;   count: 10
+#&gt;&gt;   expanded: 0
+#&gt;&gt;   spacer: 1
 
-#&gt;&gt; lists_expanded: 0
-#&gt;&gt; lists_spacer: 1
+#&gt;&gt; lists:
+#&gt;&gt;   expanded: 0
+#&gt;&gt;   spacer: 1
 
-#&gt;&gt; sitemap_title: &quot;Site Map&quot;
-#&gt;&gt; sitemap_expanded: 0
-#&gt;&gt; sitemap_spacer: 1
+#&gt;&gt; sitemap:
+#&gt;&gt;   title: &quot;Site Map&quot;
+#&gt;&gt;   expanded: 0
+#&gt;&gt;   spacer: 1
 
 ########################################
   site-nav-top:
@@ -23037,7 +23061,7 @@ variables:
         - Layout &amp; Elements:
           - _: ../../examples.html
           - Metainfo Page: ../../config/pages.html
-          - Metainfo File: ../../config/pages/2022-01-01+template_00.html
+          - Metainfo File: ../../config/pages/2022-01-01+template_0.html
           - Themes &amp; Overlays: ../../themes/index.html
         - Default Library Page:
           - _: ../../_library/index.html
@@ -23373,6 +23397,7 @@ COMPOSER_INCLUDES
 COMPOSER_INCLUDES_DIRS
 COMPOSER_KEEPING
 COMPOSER_LIBRARY
+COMPOSER_LIBRARY_ANCHOR_LINKS
 COMPOSER_LIBRARY_AUTO_UPDATE
 COMPOSER_LIBRARY_DIR
 COMPOSER_LIBRARY_PATH
@@ -23398,6 +23423,7 @@ COMPOSER_REGEX
 COMPOSER_REGEX_DEFINE
 COMPOSER_REGEX_OVERRIDE
 COMPOSER_REGEX_PREFIX
+COMPOSER_RELDATE
 COMPOSER_RELEASE
 COMPOSER_REPOPAGE
 COMPOSER_RESERVED
@@ -23480,6 +23506,19 @@ DESC_PRES
 DESC_TEXT
 DIFF
 DIFFUTILS_VER
+DISPLAY_BANNER_AUTO
+DISPLAY_BANNER_AUTO_MOD
+DISPLAY_BANNER_TIME
+DISPLAY_BANNER_TIME_MOD
+DISPLAY_SHELF_AUTO
+DISPLAY_SHELF_AUTO_MOD
+DISPLAY_SHELF_SHOW
+DISPLAY_SHELF_SHOW_MOD
+DISPLAY_SHELF_SIZE
+DISPLAY_SHELF_SIZE_MOD
+DISPLAY_SHELF_TIME
+DISPLAY_SHELF_TIME_MOD
+DISPLAY_SHOW_DEFAULT
 DISTRIB
 DIST_ICON_v1.0
 DIST_LOGO_v1.0
@@ -23575,6 +23614,8 @@ HEREDOC_COMPOSER_MK_PUBLISH
 HEREDOC_COMPOSER_MK_PUBLISH_BOOTSTRAP_DIR
 HEREDOC_COMPOSER_MK_PUBLISH_BOOTSTRAP_TREE
 HEREDOC_COMPOSER_MK_PUBLISH_CONFIGS
+HEREDOC_COMPOSER_MK_PUBLISH_CONFIGS_HACK
+HEREDOC_COMPOSER_MK_PUBLISH_CONFIGS_HACK_DONE
 HEREDOC_COMPOSER_MK_PUBLISH_EXAMPLE
 HEREDOC_COMPOSER_MK_PUBLISH_NOTHING
 HEREDOC_COMPOSER_MK_PUBLISH_PAGEDIR
@@ -23619,6 +23660,8 @@ HEREDOC_GITATTRIBUTES
 HEREDOC_GITCONFIG
 HEREDOC_GITIGNORE
 HEREDOC_LICENSE
+HEREDOC_REDIRECT_MD
+HEREDOC_REDIRECT_YML
 HEREDOC_SPELL_WORDLIST
 HTML_BREAK
 HTML_HIDE
@@ -23630,39 +23673,51 @@ INPUT
 INSTALL
 KEY_FILEPATH
 KEY_UPDATED
+LIBRARY_ANCHOR_LINKS
+LIBRARY_ANCHOR_LINKS_ALT
+LIBRARY_ANCHOR_LINKS_MOD
 LIBRARY_APPEND
 LIBRARY_APPEND_ALT
 LIBRARY_APPEND_MOD
 LIBRARY_AUTO_UPDATE
 LIBRARY_AUTO_UPDATE_ALT
+LIBRARY_AUTO_UPDATE_MOD
 LIBRARY_DIGEST_CHARS
 LIBRARY_DIGEST_CHARS_ALT
+LIBRARY_DIGEST_CHARS_MOD
 LIBRARY_DIGEST_CONTINUE
 LIBRARY_DIGEST_CONTINUE_ALT
+LIBRARY_DIGEST_CONTINUE_MOD
 LIBRARY_DIGEST_COUNT
 LIBRARY_DIGEST_COUNT_ALT
+LIBRARY_DIGEST_COUNT_MOD
 LIBRARY_DIGEST_EXPANDED
 LIBRARY_DIGEST_EXPANDED_ALT
 LIBRARY_DIGEST_EXPANDED_MOD
 LIBRARY_DIGEST_PERMALINK
 LIBRARY_DIGEST_PERMALINK_ALT
+LIBRARY_DIGEST_PERMALINK_MOD
 LIBRARY_DIGEST_SPACER
 LIBRARY_DIGEST_SPACER_ALT
+LIBRARY_DIGEST_SPACER_MOD
 LIBRARY_DIGEST_TITLE
 LIBRARY_DIGEST_TITLE_ALT
 LIBRARY_DIGEST_TITLE_MOD
 LIBRARY_FOLDER
 LIBRARY_FOLDER_ALT
+LIBRARY_FOLDER_MOD
 LIBRARY_LISTS_EXPANDED
 LIBRARY_LISTS_EXPANDED_ALT
 LIBRARY_LISTS_EXPANDED_MOD
 LIBRARY_LISTS_SPACER
 LIBRARY_LISTS_SPACER_ALT
+LIBRARY_LISTS_SPACER_MOD
 LIBRARY_SITEMAP_EXPANDED
 LIBRARY_SITEMAP_EXPANDED_ALT
 LIBRARY_SITEMAP_EXPANDED_MOD
 LIBRARY_SITEMAP_SPACER
 LIBRARY_SITEMAP_SPACER_ALT
+LIBRARY_SITEMAP_SPACER_MOD
 LIBRARY_SITEMAP_TITLE
 LIBRARY_SITEMAP_TITLE_ALT
 LIBRARY_SITEMAP_TITLE_MOD
@@ -23784,6 +23839,7 @@ PUBLISH_CMD_END
 PUBLISH_CMD_ROOT
 PUBLISH_COLS_BREAK
 PUBLISH_COLS_BREAK_ALT
+PUBLISH_COLS_BREAK_MOD
 PUBLISH_COLS_ORDER_C
 PUBLISH_COLS_ORDER_C_ALT
 PUBLISH_COLS_ORDER_C_MOD
@@ -23828,15 +23884,17 @@ PUBLISH_COMPOSER_ALT
 PUBLISH_COMPOSER_MOD
 PUBLISH_COPY_PROTECT
 PUBLISH_COPY_PROTECT_ALT
+PUBLISH_COPY_PROTECT_MOD
 PUBLISH_CREATORS
-PUBLISH_CREATORS_PRINT
-PUBLISH_CREATORS_PRINT_ALT
-PUBLISH_CREATORS_PRINT_MOD
+PUBLISH_CREATORS_DISPLAY
+PUBLISH_CREATORS_DISPLAY_ALT
+PUBLISH_CREATORS_DISPLAY_MOD
 PUBLISH_CREATORS_TITLE
 PUBLISH_CREATORS_TITLE_ALT
 PUBLISH_CREATORS_TITLE_MOD
 PUBLISH_CSS_OVERLAY
 PUBLISH_CSS_OVERLAY_ALT
+PUBLISH_CSS_OVERLAY_MOD
 PUBLISH_DIRS
 PUBLISH_DIRS_CONFIGS
 PUBLISH_DIRS_DEBUGIT
@@ -23859,20 +23917,27 @@ PUBLISH_INDEX
 PUBLISH_KEEPING
 PUBLISH_LIBRARY
 PUBLISH_LIBRARY_ALT
-PUBLISH_METAINFO
-PUBLISH_METAINFO_ALT
-PUBLISH_METAINFO_MOD
+PUBLISH_LIBRARY_ITEM
+PUBLISH_METAINFO_DISPLAY
+PUBLISH_METAINFO_DISPLAY_ALT
+PUBLISH_METAINFO_DISPLAY_MOD
 PUBLISH_METAINFO_NULL
 PUBLISH_METAINFO_NULL_ALT
+PUBLISH_METAINFO_NULL_MOD
 PUBLISH_METALIST
-PUBLISH_METALIST_PRINT
-PUBLISH_METALIST_PRINT_ALT
-PUBLISH_METALIST_PRINT_MOD
+PUBLISH_METALIST_DISPLAY
+PUBLISH_METALIST_DISPLAY_ALT
+PUBLISH_METALIST_DISPLAY_MOD
 PUBLISH_METALIST_TITLE
 PUBLISH_METALIST_TITLE_ALT
 PUBLISH_METALIST_TITLE_MOD
 PUBLISH_OUT_README
 PUBLISH_PAGEDIR
+PUBLISH_PAGEONE
+PUBLISH_PAGES_DATE
+PUBLISH_PAGES_JOIN
+PUBLISH_PAGES_NUMS
+PUBLISH_PAGES_YEARS
 PUBLISH_PAGE_1
 PUBLISH_PAGE_1_CONFIGS
 PUBLISH_PAGE_1_CONFIGS_LINKS
@@ -23882,7 +23947,6 @@ PUBLISH_PAGE_2
 PUBLISH_PAGE_2_NAME
 PUBLISH_PAGE_3
 PUBLISH_PAGE_3_APPEND
-PUBLISH_PAGE_3_CONFIGS
 PUBLISH_PAGE_3_FOOTER
 PUBLISH_PAGE_3_HEADER
 PUBLISH_PAGE_3_NAME
@@ -23908,25 +23972,43 @@ PUBLISH_PAGE_LIBRARY_NAME
 PUBLISH_PAGE_PAGEDIR_FOOTER
 PUBLISH_PAGE_PAGEDIR_HEADER
 PUBLISH_PAGE_PAGEDIR_NAME
+PUBLISH_PAGE_PAGEONE
+PUBLISH_PAGE_PAGEONE_NAME
 PUBLISH_PAGE_SHOWDIR
 PUBLISH_PAGE_SHOWDIR_INCLUDE
 PUBLISH_PAGE_SHOWDIR_NAME
-PUBLISH_PAGE_TESTING
-PUBLISH_PAGE_TESTING_NAME
-PUBLISH_READTIME
-PUBLISH_READTIME_ALT
+PUBLISH_READTIME_DISPLAY
+PUBLISH_READTIME_DISPLAY_ALT
+PUBLISH_READTIME_DISPLAY_MOD
 PUBLISH_READTIME_WPM
 PUBLISH_READTIME_WPM_ALT
+PUBLISH_READTIME_WPM_MOD
+PUBLISH_REDIRECT_DISPLAY
+PUBLISH_REDIRECT_DISPLAY_ALT
+PUBLISH_REDIRECT_DISPLAY_MOD
+PUBLISH_REDIRECT_MATCH
+PUBLISH_REDIRECT_MATCH_ALT
+PUBLISH_REDIRECT_MATCH_MOD
+PUBLISH_REDIRECT_TIME
+PUBLISH_REDIRECT_TIME_ALT
+PUBLISH_REDIRECT_TIME_MOD
+PUBLISH_REDIRECT_TITLE
+PUBLISH_REDIRECT_TITLE_ALT
+PUBLISH_REDIRECT_TITLE_MOD
 PUBLISH_ROOT
+PUBLISH_ROOT_TESTING
 PUBLISH_SHOWDIR
 PUBLISH_SH_GLOBAL
 PUBLISH_SH_HELPERS
 PUBLISH_SH_LOCAL
 PUBLISH_SH_RUN
-PUBLISH_TESTING
 READ_ALIASES
 REALMAKE
 REALPATH
+REDIRECT_DISPLAY
+REDIRECT_MATCH
+REDIRECT_TIME
+REDIRECT_TITLE
 REPOSITORIES_LIST
 REVEALJS_CMT
 REVEALJS_CSS_ALT
@@ -24103,6 +24185,8 @@ composer-note
 composer-rm
 config-targets
 export-config
+export-redirect-files
+export-redirect-list
 help-all-custom
 help-all-depends
 help-all-files
@@ -24157,6 +24241,7 @@ site-library-digest-src
 site-library-digest-vars
 site-library-index
 site-library-index-create
+site-library-index-title
 site-library-metadata
 site-library-metadata-create
 site-library-sitemap
@@ -24198,7 +24283,6 @@ site-template-targets
 subdirs-targets
 subdirs-template
 targets-list
-targets-targets
 template-print
 template-var
 template-var-static</code></pre>
@@ -24213,12 +24297,12 @@ template-var-static</code></pre>
 <hr />
 <p><em>None of the content on this site or on my linked websites was generated by (AI) artificial intelligence. I do my own work and express my own thoughts.</em></p>
 <!-- site-file :: finish >> .../_footer.md.cms -->
-<!-- site-targets >> .../projects/composer/.composer.tmp/site-cache.index.html.column-end.html -->
+<!-- site-targets >> .../projects/composer/.composer.tmp/site-cache+index.html.column-end.html -->
 <!-- site-column-end :: start >> -->
 </section>
 </div>
 <!-- site-column-end :: finish >> -->
-<!-- site-targets >> .../projects/composer/.composer.tmp/site-cache.index.html.nav-right.html -->
+<!-- site-targets >> .../projects/composer/.composer.tmp/site-cache+index.html.nav-right.html -->
 <!-- site-nav-side :: start >> right -->
 <!-- site-column-begin :: start >> right -->
 <div id="composer-nav-right" class="d-flex flex-column composer-scroll-lg order-lg-3 order-2 col-lg-2 col-6 d-lg-block d-block p-2">
@@ -24317,12 +24401,12 @@ History
 </div>
 <!-- site-column-end :: finish >> -->
 <!-- site-nav-side :: finish >> right -->
-<!-- site-targets >> .../projects/composer/.composer.tmp/site-cache.index.html.row-end.html -->
+<!-- site-targets >> .../projects/composer/.composer.tmp/site-cache+index.html.row-end.html -->
 <!-- site-row-end :: start >> -->
 </div>
 </div>
 <!-- site-row-end :: finish >> -->
-<!-- site-targets >> .../projects/composer/.composer.tmp/site-cache.index.html.nav-bottom.html -->
+<!-- site-targets >> .../projects/composer/.composer.tmp/site-cache+index.html.nav-bottom.html -->
 <!-- site-nav-bottom :: start >> -->
 <!-- site-nav-begin :: start >> bottom -->
 <div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#composer-nav-bottom">
@@ -24344,7 +24428,7 @@ History
 <!-- site-nav-begin :: finish >> bottom -->
 <ol class="composer-link nav-item breadcrumb me-auto">
 <li class="breadcrumb-item">
- 
+<span hidden>…</span>
 </li>
 <!-- site-nav-bottom-list :: start >> nav-bottom.["PATH"] -->
 <!-- site-nav-bottom-list :: start >> nav-bottom.["PATH"][0] -->
@@ -24362,7 +24446,7 @@ History
 <!-- site-nav-bottom-list :: finish >> nav-bottom.["INFO"][0] -->
 <!-- site-nav-bottom-list :: finish >> nav-bottom.["INFO"] -->
 <li class="breadcrumb-item">
- 
+<span hidden>…</span>
 </li>
 </ol>
 <!-- site-nav-end :: start >> bottom -->
@@ -24378,7 +24462,7 @@ History
 <!-- site-info-data-list :: start >> info-bottom.["INFO"][0] -->
 <p class="composer-link navbar-text me-3">
 <!-- composer >> readtime-list -->
-<em>Reading time: 9060 words, 41 minutes</em>
+<em>Reading time: 9194 words, 41 minutes</em>
 </p>
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"][0] -->
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"] -->
