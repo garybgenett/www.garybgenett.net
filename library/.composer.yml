@@ -9,5 +9,6 @@ variables:
       - contents 0
       - box-end
   site-library:
-    folder: null
-    auto_update: null
+    folder:
+      name: null
+      auto_update: null

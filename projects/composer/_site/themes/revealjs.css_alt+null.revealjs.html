@@ -799,8 +799,8 @@ make clean
 make all</code></pre>
 <p>Recursively install and build an entire directory tree (see [Recommended Workflow]):</p>
 <pre><code>cd .../documents
-mv .../composer .Composer
-make -f .Composer/Makefile install-all
+make -f .../.Composer/Makefile init
+make -f .../.Composer/Makefile install-all
 make all-all</code></pre>
 <p>See <code>help-all</code> for full details and additional targets.</p>
 </section>
@@ -1185,9 +1185,10 @@ make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
 </tbody>
 </table>
 <ul>
-<li><em>[MAKEJOBS] ~ <code>c_jobs</code> ~ <code>J</code></em></li>
-<li><em>[COMPOSER_DEBUGIT] ~ <code>c_debug</code> ~ <code>V</code></em></li>
-<li><em>[COMPOSER_DOCOLOR] ~ <code>c_color</code> ~ <code>C</code></em></li>
+<li><em>[MAKEJOBS] ~ <code>J</code></em></li>
+<li><em>[COMPOSER_DEBUGIT] ~ <code>V</code></em></li>
+<li><em>[COMPOSER_DOCOLOR] ~ <code>C</code></em></li>
+<li><em>[COMPOSER_KEEPING] ~ <code>K</code></em></li>
 <li><em><code>(makejobs)</code> = empty is disabled / number of threads / <code>0</code> is no limit</em></li>
 <li><em><code>(debugit)</code> = empty is disabled / any value enables / <code>0</code> is full tracing</em></li>
 <li><em><code>(keeping)</code> = empty is none / number to keep / <code>0</code> is no limit</em></li>
@@ -1248,7 +1249,7 @@ make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
 <tr class="even">
 <td style="text-align: left;">[COMPOSER_ART]</td>
 <td style="text-align: left;"><a href="http://www.garybgenett.net/projects/composer">Composer</a> supporting files</td>
-<td style="text-align: left;">[COMPOSER_DIR]/artifacts</td>
+<td style="text-align: left;">[COMPOSER_DIR]/_artifacts</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">[COMPOSER_DAT]</td>
@@ -1440,54 +1441,50 @@ make [-f .../Makefile] [variables] &lt;target&gt;</code></pre>
 <td style="text-align: left;">Create and link a <code>.Composer</code> in current directory</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">[init-force]</td>
-<td style="text-align: left;">Completely reset and relink an existing <code>.Composer</code></td>
-</tr>
-<tr class="even">
 <td style="text-align: left;">[commit]</td>
 <td style="text-align: left;">[Git] commit of current directory tree or [c_list]</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">[commit-all]</td>
 <td style="text-align: left;">Automatic [commit], without <code>$EDITOR</code> step</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">[export]</td>
 <td style="text-align: left;">Synchronize <code>+Composer</code> export of [COMPOSER_ROOT]</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">[export-all]</td>
 <td style="text-align: left;">Also publish to upstream hosting providers</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">[export-force]</td>
 <td style="text-align: left;">Publish only, without synchronizing first</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">[*-export]</td>
 <td style="text-align: left;">Any targets named this way will also be run by [export]</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">[site-library]</td>
 <td style="text-align: left;">Build or update the [COMPOSER_LIBRARY]</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">[site-list]</td>
 <td style="text-align: left;">[COMPOSER_LIBRARY] for current directory or [c_list]</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">[site-list-all]</td>
 <td style="text-align: left;">Do [site-list] for current directory tree</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">[site-list-list]</td>
 <td style="text-align: left;">All metadata fields and values, sorted by most used</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;">[site-list-null]</td>
 <td style="text-align: left;">List files which are missing metadata fields</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;">[site-list.*]</td>
 <td style="text-align: left;">Direct export of metadata or index, [c_list] searchable</td>
 </tr>
@@ -1513,8 +1510,8 @@ make clean
 make all</code></pre>
 <p>Recursively install and build an entire directory tree (see [Recommended Workflow]):</p>
 <pre><code>cd .../documents
-mv .../composer .Composer
-make -f .Composer/Makefile install-all
+make -f .../.Composer/Makefile init
+make -f .../.Composer/Makefile install-all
 make all-all</code></pre>
 <p>See <code>help-all</code> for full details and additional targets.</p>
 </section>

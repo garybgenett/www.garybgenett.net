@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="author" content />
+  <meta name="author" content="(no author)" />
   <meta name="dcterms.date" content="2024-12-03" />
   <title>EXAMPLE SITE – Tag: Tag 8</title>
   <style>
@@ -20275,9 +20275,9 @@ margin-top:	0px;
   </script>
 </head>
 <body>
-<!-- site-targets >> .../_library/.composer.tmp/site-cache.nav-top.html -->
-<!-- site-nav-top :: start >> .../.Composer/artifacts/images/logo-v1.0.png -->
-<!-- site-nav-begin :: start >> top .../.Composer/artifacts/images/logo-v1.0.png -->
+<!-- site-targets-cache >> .../_library/.composer.tmp/site-cache.nav-top.html -->
+<!-- site-nav-top :: start >> .../.Composer/_artifacts/images/logo-v1.0.png -->
+<!-- site-nav-begin :: start >> top .../.Composer/_artifacts/images/logo-v1.0.png -->
 <div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#composer-nav-top">
 
 </div>
@@ -20286,11 +20286,11 @@ margin-top:	0px;
 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#composer-nav-top">
 <span class="navbar-toggler-icon"></span>
 </button>
-<!-- site-brand :: start >> .../.Composer/artifacts/images/logo-v1.0.png -->
+<!-- site-brand :: start >> .../.Composer/_artifacts/images/logo-v1.0.png -->
 <a class="navbar-brand" href="http://www.garybgenett.net/projects/composer"> <img class="composer-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAc0lEQVQ4y8VTQQ7AIAgrZA/z6fwMD8vcQCDspBcN0GIrAqcXNes0w1OQpBAsLjrujVdSwm4WPF7gE+MvW0gitqM/87pyRWLl0S4hJ6nMJwDEm3l9EgDAVRrWeFb+CVZfywU4lyRWt6bgxiB1JrEc5eOfEROp5CKUZInHTAAAAABJRU5ErkJggg==">   LOGO / BRAND </a>
-<!-- site-brand :: finish >> .../.Composer/artifacts/images/logo-v1.0.png -->
+<!-- site-brand :: finish >> .../.Composer/_artifacts/images/logo-v1.0.png -->
 <div class="navbar-collapse collapse" id="composer-nav-top">
-<!-- site-nav-begin :: finish >> top .../.Composer/artifacts/images/logo-v1.0.png -->
+<!-- site-nav-begin :: finish >> top .../.Composer/_artifacts/images/logo-v1.0.png -->
 <ul class="navbar-nav navbar-nav-scroll me-auto">
 <!-- site-nav-top-list :: start >> nav-top.["MENU"] -->
 <!-- site-nav-top-list :: start >> nav-top.["MENU"][0] -->
@@ -20590,13 +20590,13 @@ TOP TEXT
 </div>
 </nav>
 <!-- site-nav-end :: finish >> top -->
-<!-- site-nav-top :: finish >> .../.Composer/artifacts/images/logo-v1.0.png -->
-<!-- site-targets >> .../_library/.composer.tmp/site-cache.row-begin.html -->
+<!-- site-nav-top :: finish >> .../.Composer/_artifacts/images/logo-v1.0.png -->
+<!-- site-targets-cache >> .../_library/.composer.tmp/site-cache.row-begin.html -->
 <!-- site-row-begin :: start >> -->
 <div class="container-fluid">
 <div class="d-flex flex-row flex-wrap">
 <!-- site-row-begin :: finish >> -->
-<!-- site-targets >> .../_library/.composer.tmp/site-cache.nav-left.html -->
+<!-- site-targets-cache >> .../_library/.composer.tmp/site-cache.nav-left.html -->
 <!-- site-nav-side :: start >> left -->
 <!-- site-column-begin :: start >> left -->
 <div id="composer-nav-left" class="d-flex flex-column composer-scroll-lg order-lg-1 order-1 col-lg-3 col-6 d-lg-block d-block p-2">
@@ -20706,11 +20706,11 @@ CONTENTS
 </div>
 <!-- site-column-end :: finish >> -->
 <!-- site-nav-side :: finish >> left -->
-<!-- site-targets >> .../_library/.composer.tmp/site-cache.column-begin.html -->
+<!-- site-targets-cache >> .../_library/.composer.tmp/site-cache.column-begin.html -->
 <!-- site-column-begin :: start >> center -->
 <div id="composer-nav-center" class="d-flex flex-column composer-scroll-lg order-lg-2 order-3 col-lg-7 col-12 d-lg-block d-block p-2">
 <!-- site-column-begin :: finish >> center -->
-<!-- site-targets >> .../_library.md.cms -->
+<!-- site-targets-file >> .../_library.md.cms -->
 <!-- site-file :: start >> .../_library.md.cms -->
 <!-- site-box-begin :: start >> 0 #WORK -->
 <div class="card">
@@ -20743,7 +20743,7 @@ CONTENTS
 </p>
 <!-- site-spacer :: finish >> -->
 <!-- site-file :: finish >> .../_library.md.cms -->
-<!-- site-targets >> tags-tag-8.md -->
+<!-- site-targets-file >> tags-tag-8.md -->
 <!-- site-file :: start >> tags-tag-8.md -->
 <!-- site-fold-begin :: start >> group library-digest -->
 <div id="composer-fold-group-library-digest" class="accordion">
@@ -20778,17 +20778,15 @@ CONTENTS
 .../
 .../tld/
 .../tld/sub/</code></pre>
-<p>To save on disk space, using a central [Composer] install for multiple directory trees, the [init] target can be used to create a linked <code>.Composer</code> directory:</p>
-<pre><code>make -f .../Makefile init</code></pre>
-<p>The directory tree can then be converted to a [Composer] documentation archive ([Quick Start] example):</p>
-<pre><code>make -f .Composer/Makefile install-all
+<p>To save on disk space using a central [Composer] install for multiple directory trees, the [init] target can be used to create a linked <code>.Composer</code> directory, and then the entire directory tree can be converted to a [Composer] documentation archive ([Quick Start] example):</p>
+<pre><code>cd .../documents
+make -f .../.Composer/Makefile init
+make -f .../.Composer/Makefile install-all
 make all-all</code></pre>
 </section>
 <section id="customization" class="level3">
 <h3>Customization</h3>
 <p>If specific settings need to be used, either globally or per-directory, <code>.composer.mk</code> and <code>.composer.yml</code> files can be created (see [Configuration Settings], [Quick Start] example):</p>
-<pre><code>make template &gt;.composer.mk &amp;&amp; $EDITOR .composer.mk
-make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre>
 <p><em>[…]</em> <a href="../config/pages/2024-01-01+template_8.html"><em>(link to full page)</em></a></p>
 <!-- site-fold-end :: start >> -->
 </section>
@@ -20833,17 +20831,15 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 .../
 .../tld/
 .../tld/sub/</code></pre>
-<p>To save on disk space, using a central [Composer] install for multiple directory trees, the [init] target can be used to create a linked <code>.Composer</code> directory:</p>
-<pre><code>make -f .../Makefile init</code></pre>
-<p>The directory tree can then be converted to a [Composer] documentation archive ([Quick Start] example):</p>
-<pre><code>make -f .Composer/Makefile install-all
+<p>To save on disk space using a central [Composer] install for multiple directory trees, the [init] target can be used to create a linked <code>.Composer</code> directory, and then the entire directory tree can be converted to a [Composer] documentation archive ([Quick Start] example):</p>
+<pre><code>cd .../documents
+make -f .../.Composer/Makefile init
+make -f .../.Composer/Makefile install-all
 make all-all</code></pre>
 </section>
 <section id="customization-1" class="level3">
 <h3>Customization</h3>
 <p>If specific settings need to be used, either globally or per-directory, <code>.composer.mk</code> and <code>.composer.yml</code> files can be created (see [Configuration Settings], [Quick Start] example):</p>
-<pre><code>make template &gt;.composer.mk &amp;&amp; $EDITOR .composer.mk
-make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre>
 <p><em>[…]</em> <a href="../config/pages/2023-01-01+template_8.html"><em>(link to full page)</em></a></p>
 <!-- site-fold-end :: start >> -->
 </section>
@@ -20888,17 +20884,15 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 .../
 .../tld/
 .../tld/sub/</code></pre>
-<p>To save on disk space, using a central [Composer] install for multiple directory trees, the [init] target can be used to create a linked <code>.Composer</code> directory:</p>
-<pre><code>make -f .../Makefile init</code></pre>
-<p>The directory tree can then be converted to a [Composer] documentation archive ([Quick Start] example):</p>
-<pre><code>make -f .Composer/Makefile install-all
+<p>To save on disk space using a central [Composer] install for multiple directory trees, the [init] target can be used to create a linked <code>.Composer</code> directory, and then the entire directory tree can be converted to a [Composer] documentation archive ([Quick Start] example):</p>
+<pre><code>cd .../documents
+make -f .../.Composer/Makefile init
+make -f .../.Composer/Makefile install-all
 make all-all</code></pre>
 </section>
 <section id="customization-2" class="level3">
 <h3>Customization</h3>
 <p>If specific settings need to be used, either globally or per-directory, <code>.composer.mk</code> and <code>.composer.yml</code> files can be created (see [Configuration Settings], [Quick Start] example):</p>
-<pre><code>make template &gt;.composer.mk &amp;&amp; $EDITOR .composer.mk
-make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre>
 <p><em>[…]</em> <a href="../config/pages/2022-01-01+template_8.html"><em>(link to full page)</em></a></p>
 <!-- site-fold-end :: start >> -->
 </section>
@@ -20913,11 +20907,11 @@ make template.yml &gt;.composer.yml &amp;&amp; $EDITOR .composer.yml</code></pre
 </div>
 <!-- site-fold-end :: finish >> group -->
 <!-- site-file :: finish >> tags-tag-8.md -->
-<!-- site-targets >> .../_library/.composer.tmp/site-cache.column-end.html -->
+<!-- site-targets-cache >> .../_library/.composer.tmp/site-cache.column-end.html -->
 <!-- site-column-end :: start >> -->
 </div>
 <!-- site-column-end :: finish >> -->
-<!-- site-targets >> .../_library/.composer.tmp/site-cache.nav-right.html -->
+<!-- site-targets-cache >> .../_library/.composer.tmp/site-cache.nav-right.html -->
 <!-- site-nav-side :: start >> right -->
 <!-- site-column-begin :: start >> right -->
 <div id="composer-nav-right" class="d-flex flex-column composer-scroll-lg order-lg-3 order-2 col-lg-2 col-6 d-lg-block d-block p-2">
@@ -21283,12 +21277,12 @@ TAGS
 </div>
 <!-- site-column-end :: finish >> -->
 <!-- site-nav-side :: finish >> right -->
-<!-- site-targets >> .../_library/.composer.tmp/site-cache.row-end.html -->
+<!-- site-targets-cache >> .../_library/.composer.tmp/site-cache.row-end.html -->
 <!-- site-row-end :: start >> -->
 </div>
 </div>
 <!-- site-row-end :: finish >> -->
-<!-- site-targets >> .../_library/.composer.tmp/site-cache.nav-bottom.html -->
+<!-- site-targets-cache >> .../_library/.composer.tmp/site-cache.nav-bottom.html -->
 <!-- site-nav-bottom :: start >> -->
 <!-- site-nav-begin :: start >> bottom -->
 <div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#composer-nav-bottom">
@@ -21325,11 +21319,20 @@ TAGS
 <!-- site-nav-bottom-list :: finish >> nav-bottom.["PATH"] -->
 <!-- site-nav-bottom-list :: start >> nav-bottom.["INFO"] -->
 <!-- site-nav-bottom-list :: start >> nav-bottom.["INFO"][0] -->
-<!-- composer >> metalist-menu author -->
+<!-- composer >> metalist-menu title -->
 <!-- site-nav-bottom-list :: finish >> nav-bottom.["INFO"][0] -->
 <!-- site-nav-bottom-list :: start >> nav-bottom.["INFO"][1] -->
-<!-- composer >> metalist-menu tags -->
+<!-- composer >> metalist-menu date -->
+<li class="breadcrumb-item">
+<a href="./date-2024.html">2024-12-03</a>
+</li>
 <!-- site-nav-bottom-list :: finish >> nav-bottom.["INFO"][1] -->
+<!-- site-nav-bottom-list :: start >> nav-bottom.["INFO"][2] -->
+<!-- composer >> metalist-menu author -->
+<!-- site-nav-bottom-list :: finish >> nav-bottom.["INFO"][2] -->
+<!-- site-nav-bottom-list :: start >> nav-bottom.["INFO"][3] -->
+<!-- composer >> metalist-menu tags -->
+<!-- site-nav-bottom-list :: finish >> nav-bottom.["INFO"][3] -->
 <!-- site-nav-bottom-list :: finish >> nav-bottom.["INFO"] -->
 <li class="breadcrumb-item">
 <span hidden>…</span>
@@ -21353,7 +21356,7 @@ BOTTOM TEXT
 <!-- site-info-data-list :: start >> info-bottom.["INFO"][0] -->
 <p class="composer-link navbar-text me-3">
 <!-- composer >> readtime-list -->
-<em>Reading time: 483 words, 2 minutes</em>
+<em>Reading time: 459 words, 2 minutes</em>
 </p>
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"][0] -->
 <!-- site-info-data-list :: finish >> info-bottom.["INFO"] -->

@@ -7,8 +7,9 @@ variables:
 ########################################
   site-config:
 
-    header:				<composer_root>/_header-pages.md.cms
-    footer:				<composer_root>/_footer-pages.md.cms
+    pages:
+      header:				[ <composer_root>/_header-pages.md.cms ]
+      footer:				[ <composer_root>/_footer-pages.md.cms ]
 
 ########################################
   site-nav-left:

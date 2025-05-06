@@ -20274,9 +20274,9 @@ margin-top:	0px;
   </script>
 </head>
 <body>
-<!-- site-targets >> .../.composer.tmp/site-cache+README.site.html.nav-top.html -->
-<!-- site-nav-top :: start >> artifacts/images/logo-v1.0.png -->
-<!-- site-nav-begin :: start >> top artifacts/images/logo-v1.0.png -->
+<!-- site-targets-cache >> .../.composer.tmp/site-cache+README.site.html.nav-top.html -->
+<!-- site-nav-top :: start >> _artifacts/images/logo-v1.0.png -->
+<!-- site-nav-begin :: start >> top _artifacts/images/logo-v1.0.png -->
 <div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#composer-nav-top">
 
 </div>
@@ -20285,11 +20285,11 @@ margin-top:	0px;
 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#composer-nav-top">
 <span class="navbar-toggler-icon"></span>
 </button>
-<!-- site-brand :: start >> artifacts/images/logo-v1.0.png -->
+<!-- site-brand :: start >> _artifacts/images/logo-v1.0.png -->
 <a class="navbar-brand" href="http://www.garybgenett.net/projects/composer"> <img class="composer-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAc0lEQVQ4y8VTQQ7AIAgrZA/z6fwMD8vcQCDspBcN0GIrAqcXNes0w1OQpBAsLjrujVdSwm4WPF7gE+MvW0gitqM/87pyRWLl0S4hJ6nMJwDEm3l9EgDAVRrWeFb+CVZfywU4lyRWt6bgxiB1JrEc5eOfEROp5CKUZInHTAAAAABJRU5ErkJggg==">   Composer CMS </a>
-<!-- site-brand :: finish >> artifacts/images/logo-v1.0.png -->
+<!-- site-brand :: finish >> _artifacts/images/logo-v1.0.png -->
 <div class="navbar-collapse collapse" id="composer-nav-top">
-<!-- site-nav-begin :: finish >> top artifacts/images/logo-v1.0.png -->
+<!-- site-nav-begin :: finish >> top _artifacts/images/logo-v1.0.png -->
 <ul class="navbar-nav navbar-nav-scroll me-auto">
 <!-- site-nav-top-list :: start >> nav-top.["MENU"] -->
 <!-- site-nav-top-list :: start >> nav-top.["MENU"][0] -->
@@ -20641,7 +20641,7 @@ margin-top:	0px;
 <a href="#config--config-all--config--configyml--targets" class="dropdown-item">config / config-all / config.* / config.yml / targets</a>
 </li>
 <li>
-<a href="#init--init-force" class="dropdown-item">init / init-force</a>
+<a href="#init" class="dropdown-item">init</a>
 </li>
 <li>
 <a href="#commit--commit-all" class="dropdown-item">commit / commit-all</a>
@@ -20719,13 +20719,13 @@ margin-top:	0px;
 </div>
 </nav>
 <!-- site-nav-end :: finish >> top -->
-<!-- site-nav-top :: finish >> artifacts/images/logo-v1.0.png -->
-<!-- site-targets >> .../.composer.tmp/site-cache+README.site.html.row-begin.html -->
+<!-- site-nav-top :: finish >> _artifacts/images/logo-v1.0.png -->
+<!-- site-targets-cache >> .../.composer.tmp/site-cache+README.site.html.row-begin.html -->
 <!-- site-row-begin :: start >> -->
 <div class="container-fluid">
 <div class="d-flex flex-row flex-wrap">
 <!-- site-row-begin :: finish >> -->
-<!-- site-targets >> .../.composer.tmp/site-cache+README.site.html.nav-left.html -->
+<!-- site-targets-cache >> .../.composer.tmp/site-cache+README.site.html.nav-left.html -->
 <!-- site-nav-side :: start >> left -->
 <!-- site-column-begin :: start >> left -->
 <div id="composer-nav-left" class="d-flex flex-column composer-scroll-md order-md-1 order-1 col-md-4 col-0 d-md-block d-none p-2">
@@ -20900,7 +20900,7 @@ Contents
 <li><a href="#debug--debug-file">+debug / +debug-file</a></li>
 <li><a href="#check--check-all">check / check-all</a></li>
 <li><a href="#config--config-all--config--configyml--targets">config / config-all / config.* / config.yml / targets</a></li>
-<li><a href="#init--init-force">init / init-force</a></li>
+<li><a href="#init">init</a></li>
 <li><a href="#commit--commit-all">commit / commit-all</a></li>
 <li><a href="#export--export-all--export-force---export">export / export-all / export-force / *-export</a></li>
 <li><a href="#site-library">site-library</a></li>
@@ -20940,12 +20940,12 @@ Contents
 </div>
 <!-- site-column-end :: finish >> -->
 <!-- site-nav-side :: finish >> left -->
-<!-- site-targets >> .../.composer.tmp/site-cache+README.site.html.column-begin.html -->
+<!-- site-targets-cache >> .../.composer.tmp/site-cache+README.site.html.column-begin.html -->
 <!-- site-column-begin :: start >> center -->
 <div id="composer-nav-center" class="d-flex flex-column composer-scroll-md order-md-2 order-3 col-md-8 col-12 d-md-block d-block p-2">
 <!-- site-column-begin :: finish >> center -->
-<!-- site-targets >> artifacts/README.site.md -->
-<!-- site-file :: start >> artifacts/README.site.md -->
+<!-- site-targets-file >> _artifacts/README.site.md -->
+<!-- site-file :: start >> _artifacts/README.site.md -->
 <section id="composer-cms" class="level1">
 <h1>Composer CMS</h1>
 <table>
@@ -21029,8 +21029,8 @@ make clean
 make all</code></pre>
 <p>Recursively install and build an entire directory tree (see <a href="#recommended-workflow">Recommended Workflow</a>):</p>
 <pre><code>cd .../documents
-mv .../composer .Composer
-make -f .Composer/Makefile install-all
+make -f .../.Composer/Makefile init
+make -f .../.Composer/Makefile install-all
 make all-all</code></pre>
 <p>See <code>help-all</code> for full details and additional targets.</p>
 <!-- site-box-end :: start >> -->
@@ -21261,10 +21261,10 @@ Recommended Workflow
 .../
 .../tld/
 .../tld/sub/</code></pre>
-<p>To save on disk space, using a central <a href="http://www.garybgenett.net/projects/composer">Composer</a> install for multiple directory trees, the <a href="#init--init-force">init</a> target can be used to create a linked <code>.Composer</code> directory:</p>
-<pre><code>make -f .../Makefile init</code></pre>
-<p>The directory tree can then be converted to a <a href="http://www.garybgenett.net/projects/composer">Composer</a> documentation archive (<a href="#quick-start">Quick Start</a> example):</p>
-<pre><code>make -f .Composer/Makefile install-all
+<p>To save on disk space using a central <a href="http://www.garybgenett.net/projects/composer">Composer</a> install for multiple directory trees, the <a href="#init">init</a> target can be used to create a linked <code>.Composer</code> directory, and then the entire directory tree can be converted to a <a href="http://www.garybgenett.net/projects/composer">Composer</a> documentation archive (<a href="#quick-start">Quick Start</a> example):</p>
+<pre><code>cd .../documents
+make -f .../.Composer/Makefile init
+make -f .../.Composer/Makefile install-all
 make all-all</code></pre>
 </section>
 <section id="customization" class="level3">
@@ -21312,10 +21312,10 @@ Document Formatting
 <div class="card-body">
 <!-- site-box-begin :: finish >> 2 Document Formatting -->
 <p>#WORKING:DOCS###################################################################</p>
-<pre><code>.../artifacts/pandoc/template.*
-.../artifacts/pandoc/reference.*
-.../artifacts/composer/composer-site.css
-.../artifacts/composer/composer-html.css</code></pre>
+<pre><code>.../_artifacts/pandoc/template.*
+.../_artifacts/pandoc/reference.*
+.../_artifacts/composer/composer-site.css
+.../_artifacts/composer/composer-html.css</code></pre>
 <p>As outlined in <a href="#overview">Overview</a> and <a href="#principles">Principles</a>, a primary goal of <a href="http://www.garybgenett.net/projects/composer">Composer</a> is to produce beautiful and professional output. <a href="https://pandoc.org">Pandoc</a> does reasonably well at this, and yet its primary focus is document conversion, not document formatting. <a href="http://www.garybgenett.net/projects/composer">Composer</a> fills this gap by specifically tuning a select list of the most commonly used document formats.</p>
 <p>The input <a href="https://pandoc.org/MANUAL.html#pandocs-markdown">Markdown</a> format used by <a href="http://www.garybgenett.net/projects/composer">Composer</a> is the <a href="https://pandoc.org">Pandoc</a> default. However, the <a href="#pandoc-extensions">Pandoc Extensions</a> list has been modified slightly. See that section and the <a href="https://pandoc.org">Pandoc</a> <a href="https://pandoc.org/MANUAL.html#pandocs-markdown">Markdown</a> documentation for the exact list and details for each.</p>
 <p>Further options for each document type are in <a href="#formatting-variables">Formatting Variables</a>. All improvements not exposed as variables will apply to all documents created with a given instance of <a href="http://www.garybgenett.net/projects/composer">Composer</a>.</p>
@@ -21325,13 +21325,13 @@ Document Formatting
 <p><a href="https://getbootstrap.com">Bootstrap</a> is a leading web development framework, capable of building static webpages that behave dynamically. Static sites are very easy and inexpensive to host, and are extremely responsive compared to truly dynamic webpages.</p>
 <p><a href="http://www.garybgenett.net/projects/composer">Composer</a> uses this framework to transform an archive of simple text files into a modern website, with the appearance and behavior of dynamically indexed pages.</p>
 <p>#WORKING:DOCS###################################################################</p>
-<pre><code>.../artifacts/bootstrap/bootstrap.js
-.../artifacts/bootstrap/bootstrap.css
-.../artifacts/composer/composer.site.css
-.../artifacts/composer/composer.site.overlay.light.css
-.../artifacts/composer/composer.site.overlay.dark.css
-.../artifacts/images/logo.img
-.../artifacts/images/icon.img</code></pre>
+<pre><code>.../_artifacts/bootstrap/bootstrap.js
+.../_artifacts/bootstrap/bootstrap.css
+.../_artifacts/composer/composer.site.css
+.../_artifacts/composer/composer.site.overlay.light.css
+.../_artifacts/composer/composer.site.overlay.dark.css
+.../_artifacts/images/logo.img
+.../_artifacts/images/icon.img</code></pre>
 <p><a href="https://github.com/twbs/bootlint">Bootlint</a> <a href="https://bootswatch.com">Bootswatch</a></p>
 <pre><code>.../bootswatch/docs/index.html</code></pre>
 <p>– Examples: <a href="_site/index.html">Example Website</a> / <a href="README.site.html">README.site.html</a></p>
@@ -21346,8 +21346,8 @@ Document Formatting
 <h3>PDF</h3>
 <p>The default formatting for <a href="#pdf">PDF</a> is geared towards academic papers and the typesetting of printed books, instead of documents that are intended to be purely digital.</p>
 <p>Internally, <a href="https://pandoc.org">Pandoc</a> first converts to LaTeX, and then uses <a href="https://tug.org/texlive">TeX Live</a> to convert into the final <a href="#pdf">PDF</a>. <a href="http://www.garybgenett.net/projects/composer">Composer</a> inserts customized LaTeX to modify the final output:</p>
-<pre><code>.../artifacts/composer/composer-pdf.header</code></pre>
-<p>#WORK # …/artifacts/composer/composer.pdf.latex</p>
+<pre><code>.../_artifacts/composer/composer-pdf.header</code></pre>
+<p>#WORK # …/_artifacts/composer/composer.pdf.latex</p>
 <p>– Example: <a href="README.pdf">README.pdf</a></p>
 </section>
 <section id="epub" class="level3">
@@ -21358,21 +21358,21 @@ Document Formatting
 <section id="revealjs-presentations" class="level3">
 <h3>Reveal.js Presentations</h3>
 <p>The CSS for <a href="https://revealjs.com">Reveal.js</a> presentations has been modified to create a more traditional and readable end result. The customized version is at:</p>
-<pre><code>.../artifacts/composer/composer-revealjs.css</code></pre>
-<p>#WORK # …/artifacts/composer/composer.revealjs.css</p>
+<pre><code>.../_artifacts/composer/composer-revealjs.css</code></pre>
+<p>#WORK # …/_artifacts/composer/composer.revealjs.css</p>
 <p>#WORK # rework this</p>
 <p>It links in a default theme from the <code>.../reveal.js/dist/theme</code> directory. Edit the location in the file, or use <a href="#c_css">c_css</a> to select a different theme.</p>
 <p>It is set up so that a logo can be placed in the upper right hand corner on each slide, for presentations that need to be branded. Simply copy an image file to the logo location:</p>
-<pre><code>.../artifacts/images/logo.img</code></pre>
+<pre><code>.../_artifacts/images/logo.img</code></pre>
 <p>To have different logos for different directories (using <a href="#recommended-workflow">Recommended Workflow</a>, <a href="#configuration-settings">Configuration Settings</a> and <a href="#precedence-rules">Precedence Rules</a>):</p>
-<p>#WORK # no longer the best way to do this… cd …/presentations cp …/logo.img ./ ln -rs …/.Composer/artifacts/composer/composer.revealjs.css ./.composer-revealjs.css echo ‘override c_type := revealjs’ &gt;&gt;./.composer.mk make all</p>
+<p>#WORK # no longer the best way to do this… cd …/presentations cp …/logo.img ./ ln -rs …/.Composer/_artifacts/composer/composer.revealjs.css ./.composer-revealjs.css echo ‘override c_type := revealjs’ &gt;&gt;./.composer.mk make all</p>
 <p>– Example: <a href="README.revealjs.html">README.revealjs.html</a></p>
 </section>
 <section id="microsoft-word--powerpoint" class="level3">
 <h3>Microsoft Word &amp; PowerPoint</h3>
 <p>The internal <a href="https://pandoc.org">Pandoc</a> templates for these are exported by <a href="http://www.garybgenett.net/projects/composer">Composer</a>, so they are available for customization:</p>
-<pre><code>.../artifacts/pandoc/reference.docx
-.../artifacts/pandoc/reference.pptx</code></pre>
+<pre><code>.../_artifacts/pandoc/reference.docx
+.../_artifacts/pandoc/reference.pptx</code></pre>
 <p>They are not currently modified by <a href="http://www.garybgenett.net/projects/composer">Composer</a>.</p>
 <p>– Example: <a href="README.docx">README.docx</a></p>
 </section>
@@ -21426,8 +21426,8 @@ README.revealjs.html: override c_toc :=</code></pre>
 <p>In this case, there are multiple definitions that could apply to <code>README.revealjs.html</code>, due to the <code>%</code> wildcard. Since the most specific target match is used, the final value for <a href="#c_toc">c_toc</a> would be empty.</p>
 <p>Example configuration files:</p>
 <pre><code>.../.composer.mk
-.../artifacts/.composer.yml</code></pre>
-<p>#WORK …/artifacts/README.site.yml …/README.site.html.yml</p>
+.../_artifacts/.composer.yml</code></pre>
+<p>#WORK …/_artifacts/README.site.yml …/README.site.html.yml</p>
 <!-- site-box-end :: start >> -->
 </section>
 </div>
@@ -21461,18 +21461,18 @@ Precedence Rules
 <section id="header--css-files" class="level3">
 <h3>Header &amp; CSS Files</h3>
 <p>#WORK # the same for all…</p>
-<pre><code>.../artifacts/composer/composer-pdf.header
+<pre><code>.../_artifacts/composer/composer-pdf.header
 .../.composer-pdf.header
 ./README.pdf.header</code></pre>
 <p>#WORK # the same for all…</p>
-<pre><code>.../artifacts/composer/composer-html.css
+<pre><code>.../_artifacts/composer/composer-html.css
 .../.composer-html.css
 ./README.html.css</code></pre>
 <p>#WORK # the <a href="#c_css">c_css</a> layering…</p>
 <ol type="1">
 <li><a href="#c_site">c_site</a> &gt;&gt; <a href="https://getbootstrap.com">Bootstrap</a></li>
 <li><a href="#c_css">c_css</a></li>
-<li><a href="#c_site">c_site</a> &gt;&gt; <code>.composer.yml</code> :: [site-config].[css_overlay] #WORK # comment 1. <a href="#composer_dir">COMPOSER_DIR</a>/artifacts/composer/composer-<a href="#c_type--c_base--c_list">c_type</a>.css</li>
+<li><a href="#c_site">c_site</a> &gt;&gt; <code>.composer.yml</code> :: [site-config].[css_overlay] #WORK # comment 1. <a href="#composer_dir">COMPOSER_DIR</a>/_artifacts/composer/composer-<a href="#c_type--c_base--c_list">c_type</a>.css</li>
 <li><a href="#composer_art">COMPOSER_ART</a>/composer/composer-<a href="#c_type--c_base--c_list">c_type</a>.css</li>
 <li><a href="#composer_include">COMPOSER_INCLUDE</a> &gt;&gt; …/.composer-<a href="#c_type--c_base--c_list">c_type</a>.css</li>
 <li><a href="#curdir">CURDIR</a>/<a href="#c_type--c_base--c_list">c_base</a>.<code>&lt;extension&gt;</code>.css</li>
@@ -21512,8 +21512,8 @@ Specifying Dependencies
 <!-- site-box-begin :: finish >> 2 Specifying Dependencies -->
 <p>If there are files or directories that have dependencies on other files or directories being processed first, this can be done simply using <a href="http://www.gnu.org/software/make">GNU Make</a> syntax in <code>.composer.mk</code>:</p>
 <pre><code>LICENSE.html: README.html
-subdirs-all-artifacts: subdirs-all-pandoc</code></pre>
-<p>This would require <code>README.html</code> to be completed before <code>LICENSE.html</code>, and for <code>pandoc</code> to be processed before <code>artifacts</code>. Directories need to be specified with the <code>subdirs-all-*</code> syntax in order to avoid conflicts with target names (see <a href="#custom-targets">Custom Targets</a>).</p>
+subdirs-all-_artifacts: subdirs-all-pandoc</code></pre>
+<p>This would require <code>README.html</code> to be completed before <code>LICENSE.html</code>, and for <code>pandoc</code> to be processed before <code>_artifacts</code>. Directories need to be specified with the <code>subdirs-all-*</code> syntax in order to avoid conflicts with target names (see <a href="#custom-targets">Custom Targets</a>).</p>
 <p>Chaining of dependencies can be as complex and layered as <a href="http://www.gnu.org/software/make">GNU Make</a> will support. Note that if a file or directory is set to depend on a target, that target will be run whenever the file or directory is called.</p>
 <!-- site-box-end :: start >> -->
 </div>
@@ -21782,8 +21782,8 @@ make compose c_type=&quot;man&quot; c_base=&quot;Composer-v3.1.Manual&quot; c_li
 <section id="c_logo" class="level3">
 <h3>c_logo</h3>
 <p>#WORK # 1 # revealjs</p>
-<p>#WORK # document /.g/_data/zactive/coding/composer/artifacts/images</p>
-<pre><code>.../artifacts/images</code></pre>
+<p>#WORK # document /.g/_data/zactive/coding/composer/_artifacts/images</p>
+<pre><code>.../_artifacts/images</code></pre>
 </section>
 <section id="c_icon" class="level3">
 <h3>c_icon</h3>
@@ -21791,8 +21791,8 @@ make compose c_type=&quot;man&quot; c_base=&quot;Composer-v3.1.Manual&quot; c_li
 </section>
 <section id="c_css" class="level3">
 <h3>c_css</h3>
-<p>#WORK # document /.g/_data/zactive/coding/composer/artifacts/theme</p>
-<pre><code>.../artifacts/themes</code></pre>
+<p>#WORK # document /.g/_data/zactive/coding/composer/_artifacts/theme</p>
+<pre><code>.../_artifacts/themes</code></pre>
 <ul>
 <li>By default, a CSS stylesheet from <a href="https://github.com/simov/markdown-viewer">Markdown Viewer</a> is used for <a href="#html">HTML</a> and <a href="#epub">EPUB</a>, and one of the <a href="https://revealjs.com">Reveal.js</a> themes is used for <a href="#revealjs-presentations">Reveal.js Presentations</a>. This variable allows for selection of a different file in all cases.</li>
 <li>The special value <code>css_alt</code> selects the alternate default stylesheet. Using <code>0</code> reverts to the <a href="https://pandoc.org">Pandoc</a> default.</li>
@@ -21929,9 +21929,10 @@ Control Variables
 </tbody>
 </table>
 <ul>
-<li><em><a href="#makejobs">MAKEJOBS</a> ~ <code>c_jobs</code> ~ <code>J</code></em></li>
-<li><em><a href="#composer_debugit">COMPOSER_DEBUGIT</a> ~ <code>c_debug</code> ~ <code>V</code></em></li>
-<li><em><a href="#composer_docolor">COMPOSER_DOCOLOR</a> ~ <code>c_color</code> ~ <code>C</code></em></li>
+<li><em><a href="#makejobs">MAKEJOBS</a> ~ <code>J</code></em></li>
+<li><em><a href="#composer_debugit">COMPOSER_DEBUGIT</a> ~ <code>V</code></em></li>
+<li><em><a href="#composer_docolor">COMPOSER_DOCOLOR</a> ~ <code>C</code></em></li>
+<li><em><a href="#composer_keeping">COMPOSER_KEEPING</a> ~ <code>K</code></em></li>
 <li><em><code>(makejobs)</code> = empty is disabled / number of threads / <code>0</code> is no limit</em></li>
 <li><em><code>(debugit)</code> = empty is disabled / any value enables / <code>0</code> is full tracing</em></li>
 <li><em><code>(keeping)</code> = empty is none / number to keep / <code>0</code> is no limit</em></li>
@@ -22116,7 +22117,7 @@ Helper Variables
 <tr class="even">
 <td style="text-align: left;"><a href="#composer_art">COMPOSER_ART</a></td>
 <td style="text-align: left;"><a href="http://www.garybgenett.net/projects/composer">Composer</a> supporting files</td>
-<td style="text-align: left;"><a href="#composer_dir">COMPOSER_DIR</a>/artifacts</td>
+<td style="text-align: left;"><a href="#composer_dir">COMPOSER_DIR</a>/_artifacts</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="#composer_dat">COMPOSER_DAT</a></td>
@@ -22461,58 +22462,54 @@ Additional Targets
 <td style="text-align: left;">List all available targets for the current directory</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="#init--init-force">init</a></td>
+<td style="text-align: left;"><a href="#init">init</a></td>
 <td style="text-align: left;">Create and link a <code>.Composer</code> in current directory</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="#init--init-force">init-force</a></td>
-<td style="text-align: left;">Completely reset and relink an existing <code>.Composer</code></td>
-</tr>
-<tr class="even">
 <td style="text-align: left;"><a href="#commit--commit-all">commit</a></td>
 <td style="text-align: left;"><a href="https://git-scm.com">Git</a> commit of current directory tree or <a href="#c_type--c_base--c_list">c_list</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="#commit--commit-all">commit-all</a></td>
 <td style="text-align: left;">Automatic <a href="#commit--commit-all">commit</a>, without <code>$EDITOR</code> step</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="#export--export-all--export-force---export">export</a></td>
 <td style="text-align: left;">Synchronize <code>+Composer</code> export of <a href="#composer_root">COMPOSER_ROOT</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="#export--export-all--export-force---export">export-all</a></td>
 <td style="text-align: left;">Also publish to upstream hosting providers</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="#export--export-all--export-force---export">export-force</a></td>
 <td style="text-align: left;">Publish only, without synchronizing first</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="#export--export-all--export-force---export">*-export</a></td>
 <td style="text-align: left;">Any targets named this way will also be run by <a href="#export--export-all--export-force---export">export</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="#site-library">site-library</a></td>
 <td style="text-align: left;">Build or update the <a href="#composer_library">COMPOSER_LIBRARY</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="#site-list--site-list-all--site-list-list--site-list-null--site-list">site-list</a></td>
 <td style="text-align: left;"><a href="#composer_library">COMPOSER_LIBRARY</a> for current directory or <a href="#c_type--c_base--c_list">c_list</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="#site-list--site-list-all--site-list-list--site-list-null--site-list">site-list-all</a></td>
 <td style="text-align: left;">Do <a href="#site-list--site-list-all--site-list-list--site-list-null--site-list">site-list</a> for current directory tree</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="#site-list--site-list-all--site-list-list--site-list-null--site-list">site-list-list</a></td>
 <td style="text-align: left;">All metadata fields and values, sorted by most used</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="#site-list--site-list-all--site-list-list--site-list-null--site-list">site-list-null</a></td>
 <td style="text-align: left;">List files which are missing metadata fields</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="#site-list--site-list-all--site-list-list--site-list-null--site-list">site-list.*</a></td>
 <td style="text-align: left;">Direct export of metadata or index, <a href="#c_type--c_base--c_list">c_list</a> searchable</td>
 </tr>
@@ -22520,7 +22517,7 @@ Additional Targets
 </table>
 <section id="release--release-all--update--update-all--update-list--update-" class="level3">
 <h3>+release / +release-all / +update / +update-all / +update-list / +update-*</h3>
-<p>#WORK break this up into two sections…</p>
+<p>#WORK # break this up into two sections…</p>
 <ul>
 <li>Using the repository configuration (see <a href="#repository-versions">Repository Versions</a>), these fetch and build all external components.</li>
 <li>Simply doing <a href="#release--release-all--update--update-all--update-list--update-">+update</a> will fetch all source repositories and pre-built binaries.</li>
@@ -22564,7 +22561,7 @@ make -f .../.Composer/Makefile +release</code></pre>
 </section>
 <section id="config--config-all--config--configyml--targets" class="level3">
 <h3>config / config-all / config.* / config.yml / targets</h3>
-<p>#WORK break this up into two sections…</p>
+<p>#WORK # break this up into two sections…</p>
 <ul>
 <li>The current values of all <a href="#composer-variables">Composer Variables</a> is output by <a href="#config--config-all--config--configyml--targets">config</a>, and <a href="#config--config-all--config--configyml--targets">config-all</a> will additionally output all environment variables.</li>
 <li>Individual <a href="#composer-variables">Composer Variables</a> can be exported with <a href="#config--config-all--config--configyml--targets">config.*</a>. This is useful for scripting in <code>.composer.mk</code> (see <a href="#custom-targets">Custom Targets</a>).</li>
@@ -22573,8 +22570,8 @@ make -f .../.Composer/Makefile +release</code></pre>
 <li>Together, <a href="#config--config-all--config--configyml--targets">config</a> and <a href="#config--config-all--config--configyml--targets">targets</a> reveal the entire internal state of <a href="http://www.garybgenett.net/projects/composer">Composer</a>.</li>
 </ul>
 </section>
-<section id="init--init-force" class="level3">
-<h3>init / init-force</h3>
+<section id="init" class="level3">
+<h3>init</h3>
 <p>#WORK</p>
 </section>
 <section id="commit--commit-all" class="level3">
@@ -22590,7 +22587,7 @@ make -f .../.Composer/Makefile +release</code></pre>
 <p>Commit title format:</p>
 <pre><code>[Composer CMS v3.1 :: 2024-12-03T20:00:00-08:00]</code></pre>
 <p>Example using <a href="#c_type--c_base--c_list">c_list</a>:</p>
-<pre><code>make commit c_list=&quot;Makefile artifacts&quot;</code></pre>
+<pre><code>make commit c_list=&quot;Makefile _artifacts&quot;</code></pre>
 </section>
 <section id="export--export-all--export-force---export" class="level3">
 <h3>export / export-all / export-force / *-export</h3>
@@ -22642,28 +22639,36 @@ Internal Targets
 <td style="text-align: left;">Complete <code>README.md</code> content (similar to <a href="#help--help-all">help-all</a>)</td>
 </tr>
 <tr class="even">
+<td style="text-align: left;">[help-template]</td>
+<td style="text-align: left;">Animated demonstration, for screenshots and for fun!</td>
+</tr>
+<tr class="odd">
 <td style="text-align: left;"><a href="#internal-targets">.headers</a></td>
 <td style="text-align: left;">Series of targets that handle all informational output</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="#internal-targets">.headers-template</a></td>
 <td style="text-align: left;">For testing default <a href="#internal-targets">.headers</a> output</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="#internal-targets">.headers-template-all</a></td>
 <td style="text-align: left;">For testing complete <a href="#internal-targets">.headers</a> output</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="#internal-targets">.make</a></td>
 <td style="text-align: left;">Complete contents of <a href="http://www.gnu.org/software/make">GNU Make</a> internal state</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: left;"><a href="#internal-targets">.targets</a></td>
 <td style="text-align: left;">Extracted list of all targets from <a href="#internal-targets">.make</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: left;"><a href="#internal-targets">.null</a></td>
 <td style="text-align: left;">Placeholder to specify or detect empty values</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">[+release-+test]</td>
+<td style="text-align: left;">Full validation pass, with <a href="#debug--debug-file">+debug</a>, skips <a href="#release--release-all--update--update-all--update-list--update-">+update</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><a href="#internal-targets">+setup</a></td>
@@ -22758,31 +22763,36 @@ Configuration
 <section id="pandoc-extensions" class="level3">
 <h3>Pandoc Extensions</h3>
 <p><a href="http://www.garybgenett.net/projects/composer">Composer</a> uses the <code>markdown</code> input format, with these extensions:</p>
-<pre><code>ascii_identifiers
-auto_identifiers
-emoji
-fancy_lists
-fenced_divs
-footnotes
-gfm_auto_identifiers
-header_attributes
-implicit_figures
-implicit_header_references
-inline_notes
-intraword_underscores
-line_blocks
-link_attributes
-markdown_in_html_blocks
-pandoc_title_block
-pipe_tables
-raw_html
-raw_tex
-shortcut_reference_links
-smart
-strikeout
-superscript
-task_lists
-yaml_metadata_block</code></pre>
+<pre><code>+ascii_identifiers
++auto_identifiers
++emoji
++fancy_lists
++fenced_divs
++footnotes
++gfm_auto_identifiers
++header_attributes
++implicit_figures
++implicit_header_references
++inline_notes
++intraword_underscores
++line_blocks
++link_attributes
++lists_without_preceding_blankline
++markdown_in_html_blocks
++pandoc_title_block
++pipe_tables
++raw_attribute
++raw_html
++raw_tex
++shortcut_reference_links
++smart
++strikeout
++superscript
++task_lists
++yaml_metadata_block</code></pre>
+<p>When reading <code>docx</code> files with [extract], these import extensions are used:</p>
+<pre><code>-empty_paragraphs
+-styles</code></pre>
 </section>
 <section id="templates" class="level3">
 <h3>Templates</h3>
@@ -22802,9 +22812,9 @@ include $(COMPOSER_TEACHER)</code></pre>
 # override c_site :=
 # override c_type := html
 # override c_lang := en-US
-# override c_logo := $(COMPOSER_DIR)/artifacts/images/logo.img
-# override c_icon := $(COMPOSER_DIR)/artifacts/images/icon.img
-# override c_css := $(COMPOSER_DIR)/artifacts/themes/theme.html-default.css
+# override c_logo := $(COMPOSER_DIR)/_artifacts/images/logo.img
+# override c_icon := $(COMPOSER_DIR)/_artifacts/images/icon.img
+# override c_css := $(COMPOSER_DIR)/_artifacts/themes/theme.html-default.css
 
 ifneq ($(COMPOSER_CURDIR),)
 
@@ -22828,19 +22838,23 @@ endif</code></pre>
 <pre><code>variables:
   title-prefix: null
 #   site-config:
-#     brand: null
-#     homepage: null
-#     search:
-#       name: null
-#       site: null
-#       call: null
-#       form: null
-#     copyright: null
-#     composer: 1
-#     header: null
-#     footer: null
-#     css_overlay: dark
-#     copy_protect: null
+#     navbars:
+#       brand: null
+#       homepage: null
+#       search:
+#         name: null
+#         site: null
+#         call: null
+#         form: null
+#       copyright: null
+#       composer: 1
+#     pages:
+#       css_overlay: dark
+#       copy_protect: null
+#       header:
+#         - null
+#       footer:
+#         - null
 #     cols:
 #       break: lg
 #       scroll: 1
@@ -22860,29 +22874,50 @@ endif</code></pre>
 #         - 6
 #         - 12
 #         - 6
+#     dates:
+#       parse:
+#         - &quot;2006-01-02T15:04:05-07:00&quot;
+#         - 2006-01-02 15:04 -07:00
+#         - &quot;2006-01-02&quot;
+#         - January 2, 2006
+#         - January 2, 2006 3:04 PM MST -07:00
+#       display: &quot;2006-01-02&quot;
+#       library: &quot;2006&quot;
+#       timezone: -08:00
+#   site-helpers:
 #     metainfo:
 #       display: &#39;&lt;date&gt; :: &lt;title&gt;&lt;|&gt; -- &lt;author|; &gt;&#39;
-#       null: &#39;*(none)*&#39;
+#       empty: &#39;*(no metadata)*&#39;
 #     metalist:
+#       title:
+#         title: &#39;Title: &lt;name&gt;&#39;
+#         display: &#39;Title: &lt;|&gt;, &lt;|&gt;&#39;
+#         empty: &#39;*(no title)*&#39;
+#       date:
+#         title: &#39;Year: &lt;name&gt;&#39;
+#         display: &#39;Date: &lt;|&gt;, &lt;|&gt;&#39;
+#         empty: &#39;*(no date)*&#39;
 #       author:
-#         title: Author
-#         display: &#39;*Authors: &lt;|&gt;, &lt;|&gt;*&#39;
-#       tags:
-#         title: Tag
-#         display: &#39;*Tags: &lt;|&gt;, &lt;|&gt;*&#39;
+#         title: &#39;Author: &lt;name&gt;&#39;
+#         display: &#39;Authors: &lt;|&gt;, &lt;|&gt;&#39;
+#         empty: &#39;*(no author)*&#39;
 #     readtime:
 #       display: &#39;*Reading time: &lt;word&gt; words, &lt;time&gt; minutes*&#39;
 #       wpm: 220
 #     redirect:
-#       title: Moved To
+#       title: &#39;Moved To: &lt;link&gt;&#39;
 #       display: &#39;**This link has been permanently moved to: &lt;link&gt;**&#39;
-#       match: &#39;*&#39;
+#       exclude:
+#         - &quot;null&quot;
 #       time: 5
 #   site-library:
-#     folder: null
-#     auto_update: null
-#     anchor_links: 1
-#     append: null
+#     folder:
+#       name: null
+#       auto_update: null
+#     pages:
+#       anchor_links: 1
+#       append:
+#         - null
 #     digest:
 #       title: Latest Updates
 #       continue: &#39;*[...]*&#39;
@@ -22896,6 +22931,8 @@ endif</code></pre>
 #       spacer: 1
 #     sitemap:
 #       title: Site Map
+#       exclude:
+#         - &quot;null&quot;
 #       expanded: 0
 #       spacer: 1
 #   site-nav-top: null
@@ -22907,11 +22944,9 @@ endif</code></pre>
 <p>Use the <a href="#template--templateyml--templatemd">template.md</a> target to create new <code>markdown</code> files:</p>
 <pre><code>---
 title: &quot;Composer CMS: Content Make System&quot;
-date: 2024-12-03
+date: 2024-12-03 20:00 -08:00
 author:
   - Gary B. Genett
-tags:
-  - Composer
 ---
 *Happy Making!*</code></pre>
 </section>
@@ -22945,20 +22980,20 @@ override COMPOSER_SUBDIRS := .null
 ########################################
 # Defaults
 
-README.% LICENSE.%: override c_logo := artifacts/images/logo-v1.0.png
-README.% LICENSE.%: override c_icon := artifacts/images/icon-v1.0.png
+README.% LICENSE.%: override c_logo := _artifacts/images/logo-v1.0.png
+README.% LICENSE.%: override c_icon := _artifacts/images/icon-v1.0.png
 README.% LICENSE.%: override c_toc := 0
 
 ########################################
 # Files
 
-override README.site.html := artifacts/README.site.md
+override README.site.html := _artifacts/README.site.md
 README.site.html: override c_site := 1
 README.site.html: override c_toc :=
 
 override README.pdf := README.md LICENSE.md
 
-override README.revealjs.html := artifacts/README.revealjs.md
+override README.revealjs.html := _artifacts/README.revealjs.md
 README.revealjs.html: override c_toc :=
 
 LICENSE.html: override c_site := 1
@@ -22969,7 +23004,7 @@ endif
 ################################################################################
 # End Of File
 ################################################################################</code></pre>
-<p>The template <code>.composer.yml</code> in the <code>artifacts</code> directory:</p>
+<p>The template <code>.composer.yml</code> in the <code>_artifacts</code> directory:</p>
 <pre><code>################################################################################
 # Composer CMS :: YAML Configuration
 ################################################################################
@@ -22984,35 +23019,36 @@ variables:
 ########################################
   site-config:
 
-    brand: &quot;LOGO / BRAND&quot;
-    homepage: http://www.garybgenett.net/projects/composer
-    search:
-#&gt;&gt;   name: &quot;SEARCH&quot;
-      name: |
-        &lt;!-- composer &gt;&gt; icon search --&gt;
-      site: https://duckduckgo.com
-      call: q
-      form: |
-        &lt;!-- composer &gt;&gt; form sites garybgenett.net --&gt;
-        &lt;!-- composer &gt;&gt; form ia web --&gt;
-        &lt;!-- composer &gt;&gt; form kae d --&gt;
-        &lt;!-- composer &gt;&gt; form ko 1 --&gt;
-        &lt;!-- composer &gt;&gt; form kp -1 --&gt;
-        &lt;!-- composer &gt;&gt; form kv 1 --&gt;
-        &lt;!-- composer &gt;&gt; form kz -1 --&gt;
-#&gt;&gt; copyright: &quot;COPYRIGHT&quot;
-    copyright: |
-      &lt;!-- composer &gt;&gt; icon gpl --&gt;
-      &lt;!-- composer &gt;&gt; icon cc-by-nc-nd --&gt;
-      &lt;!-- composer &gt;&gt; icon copyright --&gt;
-      COPYRIGHT
-#&gt;&gt; composer: 1
+    navbars:
+      brand: &quot;LOGO / BRAND&quot;
+      homepage: http://www.garybgenett.net/projects/composer
+      search:
+#&gt;&gt;     name: &quot;SEARCH&quot;
+        name: |
+          &lt;!-- composer &gt;&gt; icon search --&gt;
+        site: https://duckduckgo.com
+        call: q
+        form: |
+          &lt;!-- composer &gt;&gt; form sites garybgenett.net --&gt;
+          &lt;!-- composer &gt;&gt; form ia web --&gt;
+          &lt;!-- composer &gt;&gt; form kae d --&gt;
+          &lt;!-- composer &gt;&gt; form ko 1 --&gt;
+          &lt;!-- composer &gt;&gt; form kp -1 --&gt;
+          &lt;!-- composer &gt;&gt; form kv 1 --&gt;
+          &lt;!-- composer &gt;&gt; form kz -1 --&gt;
+#&gt;&gt;   copyright: &quot;COPYRIGHT&quot;
+      copyright: |
+        &lt;!-- composer &gt;&gt; icon gpl --&gt;
+        &lt;!-- composer &gt;&gt; icon cc-by-nc-nd --&gt;
+        &lt;!-- composer &gt;&gt; icon copyright --&gt;
+        COPYRIGHT
+#&gt;&gt;   composer: 1
 
-#&gt;&gt; header: null
-#&gt;&gt; footer: null
-
-#&gt;&gt; css_overlay: dark
-#&gt;&gt; copy_protect: null
+#&gt;&gt; pages:
+#&gt;&gt;   css_overlay: dark
+#&gt;&gt;   copy_protect: null
+#&gt;&gt;   header: [ &quot;null&quot; ]
+#&gt;&gt;   footer: [ &quot;null&quot; ]
 
 #&gt;&gt; cols:
 #&gt;&gt;   break: lg
@@ -23022,34 +23058,57 @@ variables:
 #&gt;&gt;   size: [ 3, 7, 2 ]
 #&gt;&gt;   resize: [ 6, 12, 6 ]
 
+#&gt;&gt; dates:
+#&gt;&gt;   parse: [ &quot;2006-01-02T15:04:05-07:00&quot;, &quot;2006-01-02 15:04 -07:00&quot;, &quot;2006-01-02&quot;, &quot;January 2, 2006&quot;, &quot;January 2, 2006 3:04 PM MST -07:00&quot; ]
+#&gt;&gt;   display: &quot;2006-01-02&quot;
+#&gt;&gt;   library: &quot;2006&quot;
+#&gt;&gt;   timezone: &quot;-08:00&quot;
+
+########################################
+  site-helpers:
+
 #&gt;&gt; metainfo:
 #&gt;&gt;   display: &quot;&lt;date&gt; :: &lt;title&gt;&lt;|&gt; -- &lt;author|; &gt;&quot;
-#&gt;&gt;   null: &quot;*(none)*&quot;
-#&gt;&gt; metalist:
+#&gt;&gt;   empty: &quot;*(no metadata)*&quot;
+
+    metalist:
+#&gt;&gt;   title:
+#&gt;&gt;     title: &quot;Title: &lt;name&gt;&quot;
+#&gt;&gt;     display: &quot;Title: &lt;|&gt;, &lt;|&gt;&quot;
+#&gt;&gt;     empty: &quot;*(no title)*&quot;
+#&gt;&gt;   date:
+#&gt;&gt;     title: &quot;Year: &lt;name&gt;&quot;
+#&gt;&gt;     display: &quot;Date: &lt;|&gt;, &lt;|&gt;&quot;
+#&gt;&gt;     empty: &quot;*(no date)*&quot;
 #&gt;&gt;   author:
-#&gt;&gt;     title: &quot;Author&quot;
-#&gt;&gt;     display: &quot;*Authors: &lt;|&gt;, &lt;|&gt;*&quot;
-#&gt;&gt;   tags:
-#&gt;&gt;     title: &quot;Tag&quot;
-#&gt;&gt;     display: &quot;*Tags: &lt;|&gt;, &lt;|&gt;*&quot;
+#&gt;&gt;     title: &quot;Author: &lt;name&gt;&quot;
+#&gt;&gt;     display: &quot;Authors: &lt;|&gt;, &lt;|&gt;&quot;
+#&gt;&gt;     empty: &quot;*(no author)*&quot;
+      tags:
+        title: &quot;Tag: &lt;name&gt;&quot;
+        display: &quot;Tags: &lt;|&gt;, &lt;|&gt;&quot;
+        empty: &quot;*(no tags)*&quot;
+
 #&gt;&gt; readtime:
 #&gt;&gt;   display: &quot;*Reading time: &lt;word&gt; words, &lt;time&gt; minutes*&quot;
 #&gt;&gt;   wpm: 220
 
 #&gt;&gt; redirect:
-#&gt;&gt;   title: &quot;Moved To&quot;
+#&gt;&gt;   title: &quot;Moved To: &lt;link&gt;&quot;
 #&gt;&gt;   display: &quot;**This link has been permanently moved to: &lt;link&gt;**&quot;
-#&gt;&gt;   match: &quot;*&quot;
+#&gt;&gt;   exclude: [ &quot;null&quot; ]
 #&gt;&gt;   time: 5
 
 ########################################
   site-library:
 
-    folder: #&gt;&gt; null
-#&gt;&gt; auto_update: null
-#&gt;&gt; anchor_links: 1
+    folder:
+      name: null
+#&gt;&gt;   auto_update: null
 
-#&gt;&gt; append: null
+#&gt;&gt; pages:
+#&gt;&gt;   anchor_links: 1
+#&gt;&gt;   append: [ &quot;null&quot; ]
 
 #&gt;&gt; digest:
 #&gt;&gt;   title: &quot;Latest Updates&quot;
@@ -23066,6 +23125,7 @@ variables:
 
 #&gt;&gt; sitemap:
 #&gt;&gt;   title: &quot;Site Map&quot;
+#&gt;&gt;   exclude: [ &quot;null&quot; ]
 #&gt;&gt;   expanded: 0
 #&gt;&gt;   spacer: 1
 
@@ -23114,6 +23174,8 @@ variables:
     PATH:
       - SITEMAP: ./_library/sitemap.html
     INFO:
+      - metalist title
+      - metalist date
       - metalist author
       - metalist tags
 
@@ -23140,11 +23202,13 @@ variables:
     CONTENTS:
       - box-begin 0 CONTENTS
       - metainfo
+      - metalist title
+      - metalist date
+      - metalist author
+      - metalist tags
       - contents
 #&gt;&gt;   - contents 6
 #&gt;&gt;   - contents 0
-      - metalist author
-      - metalist tags
       - readtime
       - box-end
     END:
@@ -23191,6 +23255,8 @@ variables:
           TOP TEXT
     INFO:
 #&gt;&gt;   - metainfo
+#&gt;&gt;   - metalist title
+#&gt;&gt;   - metalist date
 #&gt;&gt;   - metalist author
 #&gt;&gt;   - metalist tags
 #&gt;&gt;   - readtime
@@ -23209,6 +23275,8 @@ variables:
           BOTTOM TEXT
     INFO:
 #&gt;&gt;   - metainfo
+#&gt;&gt;   - metalist title
+#&gt;&gt;   - metalist date
 #&gt;&gt;   - metalist author
 #&gt;&gt;   - metalist tags
       - readtime
@@ -23259,6 +23327,7 @@ commit
 compose
 config
 export
+extract
 help
 init
 install
@@ -23273,6 +23342,7 @@ template</code></pre>
 <p>Do not create variables which match these, and avoid similar names:</p>
 <pre><code>+debug-output
 +setup-targets
++test-+test
 +test-.headers
 +test-COMPOSER_INCLUDE-.composer-html.css
 +test-COMPOSER_INCLUDE-.composer.mk
@@ -23322,6 +23392,8 @@ template</code></pre>
 .headers-skip
 .headers-subdirs
 .headers-table
+.headers-template-extension
+.headers-template-prefix
 /
 7Z
 7Z_VER
@@ -23422,7 +23494,6 @@ COMPOSER_INCLUDES
 COMPOSER_INCLUDES_DIRS
 COMPOSER_KEEPING
 COMPOSER_LIBRARY
-COMPOSER_LIBRARY_ANCHOR_LINKS
 COMPOSER_LIBRARY_AUTO_UPDATE
 COMPOSER_LIBRARY_DIR
 COMPOSER_LIBRARY_PATH
@@ -23476,6 +23547,7 @@ COMPOSER_TMP
 COMPOSER_TMP_FILE
 COMPOSER_VERSION
 COMPOSER_YML
+COMPOSER_YML_ARRAY
 COMPOSER_YML_DATA
 COMPOSER_YML_DATA_METALIST
 COMPOSER_YML_DATA_PARSE
@@ -23514,6 +23586,7 @@ CUSTOM_PUBLISH_CSS
 CUSTOM_PUBLISH_CSS_OVERLAY
 CUSTOM_PUBLISH_SH
 DATE
+DATEFORMAT
 DATEMARK
 DATENOW
 DATESTAMP
@@ -23576,6 +23649,7 @@ EXTN_OUTPUT
 EXTN_PPTX
 EXTN_PRES
 EXTN_TEXT
+EXTRACT
 EXT_ICON_CC
 EXT_ICON_GPL
 FIND
@@ -23645,6 +23719,7 @@ HEREDOC_COMPOSER_MK_PUBLISH_EXAMPLE
 HEREDOC_COMPOSER_MK_PUBLISH_NOTHING
 HEREDOC_COMPOSER_MK_PUBLISH_PAGEDIR
 HEREDOC_COMPOSER_MK_PUBLISH_PANDOC_DIR
+HEREDOC_COMPOSER_MK_PUBLISH_REDIRECT_FILE
 HEREDOC_COMPOSER_MK_PUBLISH_SHOWDIR
 HEREDOC_COMPOSER_MK_PUBLISH_SHOWDIR_TARGET
 HEREDOC_COMPOSER_YML
@@ -23652,8 +23727,10 @@ HEREDOC_COMPOSER_YML_PUBLISH_BOOTSTRAP_DIR
 HEREDOC_COMPOSER_YML_PUBLISH_BOOTSTRAP_TREE
 HEREDOC_COMPOSER_YML_PUBLISH_CONFIGS
 HEREDOC_COMPOSER_YML_PUBLISH_EXAMPLE
+HEREDOC_COMPOSER_YML_PUBLISH_EXAMPLE_TESTING
 HEREDOC_COMPOSER_YML_PUBLISH_LIBRARY
 HEREDOC_COMPOSER_YML_PUBLISH_NOTHING
+HEREDOC_COMPOSER_YML_PUBLISH_NOTHING_TESTING
 HEREDOC_COMPOSER_YML_PUBLISH_PAGEDIR
 HEREDOC_COMPOSER_YML_PUBLISH_PANDOC_DIR
 HEREDOC_COMPOSER_YML_PUBLISH_SHOWDIR
@@ -23684,6 +23761,7 @@ HEREDOC_CUSTOM_PUBLISH_SH
 HEREDOC_GITATTRIBUTES
 HEREDOC_GITCONFIG
 HEREDOC_GITIGNORE
+HEREDOC_GITIGNORE_COMPOSER
 HEREDOC_LICENSE
 HEREDOC_REDIRECT_MD
 HEREDOC_REDIRECT_YML
@@ -23694,8 +23772,10 @@ HTML_SPACE
 INCLUDE_FILE_APPEND
 INCLUDE_FILE_FOOTER
 INCLUDE_FILE_HEADER
-INPUT
 INSTALL
+KEY_DATE
+KEY_DATE_LIBRARY
+KEY_DATE_PARSE
 KEY_FILEPATH
 KEY_UPDATED
 LIBRARY_ANCHOR_LINKS
@@ -23737,6 +23817,9 @@ LIBRARY_LISTS_EXPANDED_MOD
 LIBRARY_LISTS_SPACER
 LIBRARY_LISTS_SPACER_ALT
 LIBRARY_LISTS_SPACER_MOD
+LIBRARY_SITEMAP_EXCLUDE
+LIBRARY_SITEMAP_EXCLUDE_ALT
+LIBRARY_SITEMAP_EXCLUDE_MOD
 LIBRARY_SITEMAP_EXPANDED
 LIBRARY_SITEMAP_EXPANDED_ALT
 LIBRARY_SITEMAP_EXPANDED_MOD
@@ -23814,7 +23897,11 @@ PANDOC
 PANDOC_BIN
 PANDOC_CMT
 PANDOC_DIR
-PANDOC_EXTENSIONS
+PANDOC_EXTENSIONS_COMMONMARK
+PANDOC_EXTENSIONS_DOCX
+PANDOC_EXTENSIONS_FROM
+PANDOC_EXTENSIONS_MARKDOWN
+PANDOC_EXTENSIONS_TO
 PANDOC_FILES_CSS
 PANDOC_FILES_HEADER
 PANDOC_FILES_LIST
@@ -23865,61 +23952,48 @@ PUBLISH_CMD_ROOT
 PUBLISH_COLS_BREAK
 PUBLISH_COLS_BREAK_ALT
 PUBLISH_COLS_BREAK_MOD
-PUBLISH_COLS_ORDER_C
-PUBLISH_COLS_ORDER_C_ALT
-PUBLISH_COLS_ORDER_C_MOD
-PUBLISH_COLS_ORDER_L
-PUBLISH_COLS_ORDER_L_ALT
-PUBLISH_COLS_ORDER_L_MOD
-PUBLISH_COLS_ORDER_R
-PUBLISH_COLS_ORDER_R_ALT
-PUBLISH_COLS_ORDER_R_MOD
-PUBLISH_COLS_REORDER_C
-PUBLISH_COLS_REORDER_C_ALT
-PUBLISH_COLS_REORDER_C_MOD
-PUBLISH_COLS_REORDER_L
-PUBLISH_COLS_REORDER_L_ALT
-PUBLISH_COLS_REORDER_L_MOD
-PUBLISH_COLS_REORDER_R
-PUBLISH_COLS_REORDER_R_ALT
-PUBLISH_COLS_REORDER_R_MOD
-PUBLISH_COLS_RESIZE_C
-PUBLISH_COLS_RESIZE_C_ALT
-PUBLISH_COLS_RESIZE_C_MOD
-PUBLISH_COLS_RESIZE_L
-PUBLISH_COLS_RESIZE_L_ALT
-PUBLISH_COLS_RESIZE_L_MOD
-PUBLISH_COLS_RESIZE_R
-PUBLISH_COLS_RESIZE_R_ALT
-PUBLISH_COLS_RESIZE_R_MOD
+PUBLISH_COLS_ORDER
+PUBLISH_COLS_ORDER_ALT
+PUBLISH_COLS_ORDER_MOD
+PUBLISH_COLS_REORDER
+PUBLISH_COLS_REORDER_ALT
+PUBLISH_COLS_REORDER_MOD
+PUBLISH_COLS_RESIZE
+PUBLISH_COLS_RESIZE_ALT
+PUBLISH_COLS_RESIZE_MOD
 PUBLISH_COLS_SCROLL
 PUBLISH_COLS_SCROLL_ALT
 PUBLISH_COLS_SCROLL_MOD
-PUBLISH_COLS_SIZE_C
-PUBLISH_COLS_SIZE_C_ALT
-PUBLISH_COLS_SIZE_C_MOD
-PUBLISH_COLS_SIZE_L
-PUBLISH_COLS_SIZE_L_ALT
-PUBLISH_COLS_SIZE_L_MOD
-PUBLISH_COLS_SIZE_R
-PUBLISH_COLS_SIZE_R_ALT
-PUBLISH_COLS_SIZE_R_MOD
+PUBLISH_COLS_SIZE
+PUBLISH_COLS_SIZE_ALT
+PUBLISH_COLS_SIZE_MOD
 PUBLISH_COMPOSER
 PUBLISH_COMPOSER_ALT
 PUBLISH_COMPOSER_MOD
 PUBLISH_COPY_PROTECT
 PUBLISH_COPY_PROTECT_ALT
 PUBLISH_COPY_PROTECT_MOD
-PUBLISH_CREATORS
-PUBLISH_CREATORS_DISPLAY
-PUBLISH_CREATORS_DISPLAY_ALT
-PUBLISH_CREATORS_DISPLAY_MOD
-PUBLISH_CREATORS_TITLE
-PUBLISH_CREATORS_TITLE_ALT
-PUBLISH_CREATORS_TITLE_MOD
 PUBLISH_CSS_OVERLAY
 PUBLISH_CSS_OVERLAY_ALT
 PUBLISH_CSS_OVERLAY_MOD
+PUBLISH_DATES_DISPLAY
+PUBLISH_DATES_DISPLAY_ALT
+PUBLISH_DATES_DISPLAY_MOD
+PUBLISH_DATES_FORMAT_DEFAULT
+PUBLISH_DATES_FORMAT_PANDOC
+PUBLISH_DATES_INTERNAL_FORMAT
+PUBLISH_DATES_INTERNAL_NULL
+PUBLISH_DATES_LIBRARY
+PUBLISH_DATES_LIBRARY_ALT
+PUBLISH_DATES_LIBRARY_MOD
+PUBLISH_DATES_PARSE
+PUBLISH_DATES_PARSE_ALT
+PUBLISH_DATES_PARSE_MOD
+PUBLISH_DATES_TIMEZONE
+PUBLISH_DATES_TIMEZONE_ALT
+PUBLISH_DATES_TIMEZONE_DEFAULT
+PUBLISH_DATES_TIMEZONE_FORMAT
+PUBLISH_DATES_TIMEZONE_MOD
 PUBLISH_DIRS
 PUBLISH_DIRS_CONFIGS
 PUBLISH_DIRS_DEBUGIT
@@ -23943,23 +24017,57 @@ PUBLISH_KEEPING
 PUBLISH_LIBRARY
 PUBLISH_LIBRARY_ALT
 PUBLISH_LIBRARY_ITEM
+PUBLISH_METAAUTH
+PUBLISH_METAAUTH_DISPLAY
+PUBLISH_METAAUTH_DISPLAY_ALT
+PUBLISH_METAAUTH_DISPLAY_MOD
+PUBLISH_METAAUTH_EMPTY
+PUBLISH_METAAUTH_EMPTY_ALT
+PUBLISH_METAAUTH_EMPTY_MOD
+PUBLISH_METAAUTH_TITLE
+PUBLISH_METAAUTH_TITLE_ALT
+PUBLISH_METAAUTH_TITLE_MOD
+PUBLISH_METADATE
+PUBLISH_METADATE_DISPLAY
+PUBLISH_METADATE_DISPLAY_ALT
+PUBLISH_METADATE_DISPLAY_MOD
+PUBLISH_METADATE_EMPTY
+PUBLISH_METADATE_EMPTY_ALT
+PUBLISH_METADATE_EMPTY_MOD
+PUBLISH_METADATE_TITLE
+PUBLISH_METADATE_TITLE_ALT
+PUBLISH_METADATE_TITLE_MOD
 PUBLISH_METAINFO_DISPLAY
 PUBLISH_METAINFO_DISPLAY_ALT
 PUBLISH_METAINFO_DISPLAY_MOD
-PUBLISH_METAINFO_NULL
-PUBLISH_METAINFO_NULL_ALT
-PUBLISH_METAINFO_NULL_MOD
-PUBLISH_METALIST
-PUBLISH_METALIST_DISPLAY
-PUBLISH_METALIST_DISPLAY_ALT
-PUBLISH_METALIST_DISPLAY_MOD
-PUBLISH_METALIST_TITLE
-PUBLISH_METALIST_TITLE_ALT
-PUBLISH_METALIST_TITLE_MOD
+PUBLISH_METAINFO_EMPTY
+PUBLISH_METAINFO_EMPTY_ALT
+PUBLISH_METAINFO_EMPTY_MOD
+PUBLISH_METATAGS
+PUBLISH_METATAGS_DISPLAY
+PUBLISH_METATAGS_DISPLAY_ALT
+PUBLISH_METATAGS_DISPLAY_MOD
+PUBLISH_METATAGS_EMPTY
+PUBLISH_METATAGS_EMPTY_ALT
+PUBLISH_METATAGS_EMPTY_MOD
+PUBLISH_METATAGS_TITLE
+PUBLISH_METATAGS_TITLE_ALT
+PUBLISH_METATAGS_TITLE_MOD
+PUBLISH_METATITL
+PUBLISH_METATITL_DISPLAY
+PUBLISH_METATITL_DISPLAY_ALT
+PUBLISH_METATITL_DISPLAY_MOD
+PUBLISH_METATITL_EMPTY
+PUBLISH_METATITL_EMPTY_ALT
+PUBLISH_METATITL_EMPTY_MOD
+PUBLISH_METATITL_TITLE
+PUBLISH_METATITL_TITLE_ALT
+PUBLISH_METATITL_TITLE_MOD
 PUBLISH_OUT_README
 PUBLISH_PAGEDIR
 PUBLISH_PAGEONE
 PUBLISH_PAGES_DATE
+PUBLISH_PAGES_DATE_FORMAT
 PUBLISH_PAGES_JOIN
 PUBLISH_PAGES_NUMS
 PUBLISH_PAGES_YEARS
@@ -24011,9 +24119,10 @@ PUBLISH_READTIME_WPM_MOD
 PUBLISH_REDIRECT_DISPLAY
 PUBLISH_REDIRECT_DISPLAY_ALT
 PUBLISH_REDIRECT_DISPLAY_MOD
-PUBLISH_REDIRECT_MATCH
-PUBLISH_REDIRECT_MATCH_ALT
-PUBLISH_REDIRECT_MATCH_MOD
+PUBLISH_REDIRECT_EXCLUDE
+PUBLISH_REDIRECT_EXCLUDE_ALT
+PUBLISH_REDIRECT_EXCLUDE_MOD
+PUBLISH_REDIRECT_FILE
 PUBLISH_REDIRECT_TIME
 PUBLISH_REDIRECT_TIME_ALT
 PUBLISH_REDIRECT_TIME_MOD
@@ -24027,11 +24136,13 @@ PUBLISH_SH_GLOBAL
 PUBLISH_SH_HELPERS
 PUBLISH_SH_LOCAL
 PUBLISH_SH_RUN
+PUBLISH_TABLE_CLASS
+PUBLISH_TAGSMAIN
 READ_ALIASES
 REALMAKE
 REALPATH
 REDIRECT_DISPLAY
-REDIRECT_MATCH
+REDIRECT_EXCLUDE
 REDIRECT_TIME
 REDIRECT_TITLE
 REPOSITORIES_LIST
@@ -24080,6 +24191,7 @@ TITLE_LN
 TMPL_DOCX
 TMPL_EPUB
 TMPL_HTML
+TMPL_INPUT
 TMPL_LINT
 TMPL_LPDF
 TMPL_OUTPUT
@@ -24160,6 +24272,8 @@ YQ_WRITE_FILE
 YQ_WRITE_JSON
 YQ_WRITE_OUT
 YQ_WRITE_OUT_COLOR
+YQ_WRITE_OUT_COLOR_MARK
+YQ_WRITE_OUT_COLOR_NULL
 _
 _C
 _D
@@ -24246,7 +24360,12 @@ help-list-template
 help-targets-format
 help-targets-sections
 help-targets-titles
+help-template-.targets
+help-template-init
+help-template-list
 install-Makefile
+site-+debug-date
+site-+debug-keys
 site-+debug-output
 site-cache
 site-cache-root
@@ -24316,22 +24435,22 @@ template-var-static</code></pre>
 </div>
 </div>
 <!-- site-box-end :: finish >> -->
-<!-- site-file :: finish >> artifacts/README.site.md -->
-<!-- site-targets >> .../.composer.tmp/site-cache+README.site.html.column-end.html -->
+<!-- site-file :: finish >> _artifacts/README.site.md -->
+<!-- site-targets-cache >> .../.composer.tmp/site-cache+README.site.html.column-end.html -->
 <!-- site-column-end :: start >> -->
 </section>
 </div>
 <!-- site-column-end :: finish >> -->
-<!-- site-targets >> .../.composer.tmp/site-cache+README.site.html.nav-right.html -->
+<!-- site-targets-cache >> .../.composer.tmp/site-cache+README.site.html.nav-right.html -->
 <!-- site-nav-side :: start >> right -->
 <!-- site-nav-side :: skip >> nav-right -->
 <!-- site-nav-side :: finish >> right -->
-<!-- site-targets >> .../.composer.tmp/site-cache+README.site.html.row-end.html -->
+<!-- site-targets-cache >> .../.composer.tmp/site-cache+README.site.html.row-end.html -->
 <!-- site-row-end :: start >> -->
 </div>
 </div>
 <!-- site-row-end :: finish >> -->
-<!-- site-targets >> .../.composer.tmp/site-cache+README.site.html.nav-bottom.html -->
+<!-- site-targets-cache >> .../.composer.tmp/site-cache+README.site.html.nav-bottom.html -->
 <!-- site-nav-bottom :: start >> -->
 <!-- site-nav-begin :: start >> bottom -->
 <div class="composer-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#composer-nav-bottom">

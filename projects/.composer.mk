@@ -17,7 +17,7 @@ override define DO_PROJECT_MK =
 #>override COMPOSER_TARGETS		:= .targets index.html
 override COMPOSER_TARGETS		:= index.html license.html
 override COMPOSER_SUBDIRS		:= .null
-override COMPOSER_IGNORES		:= README.md LICENSE.md license.md artifacts
+override COMPOSER_IGNORES		:= README.md LICENSE.md license.md _artifacts
 #>index.html: README.html
 #>index.html:
 #>	@$$(call $$(COMPOSER_TINYNAME)-ln,README.html,$$(@))
@@ -86,7 +86,7 @@ $(addsuffix /index.md,$(PROJECTS)):
 		--filter="P_/license.*" \
 		--filter="+_/LICENSE.*" \
 		--filter="+_/README.*" \
-		--filter="+_/artifacts" \
+		--filter="+_/_artifacts" \
 		--filter="-_/*" \
 		$(CODE_DIR)/$($(@))/ \
 		$(CURDIR)/$($(@)) \

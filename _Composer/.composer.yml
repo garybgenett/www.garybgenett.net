@@ -8,38 +8,48 @@ variables:
 ########################################
   site-config:
 
-    brand:				null
-    homepage:				http://www.garybgenett.net
-    search:
-      name: |
-        <!-- composer >> icon search -->
-      site:				https://duckduckgo.com
-      call:				q
-      form: |
-        <!-- composer >> form sites garybgenett.net -->
-        <!-- composer >> form ia web -->
-        <!-- composer >> form kae d -->
-        <!-- composer >> form ko 1 -->
-        <!-- composer >> form kp -1 -->
-        <!-- composer >> form kv 1 -->
-        <!-- composer >> form kz -1 -->
-    copyright: |
-      <!-- composer >> icon copyright -->
-      Copyright (c) 2022, Gary B. Genett
+    navbars:
+      brand:				null
+      homepage:				http://www.garybgenett.net
+      search:
+        name: |
+          <!-- composer >> icon search -->
+        site:				https://duckduckgo.com
+        call:				q
+        form: |
+          <!-- composer >> form sites garybgenett.net -->
+          <!-- composer >> form ia web -->
+          <!-- composer >> form kae d -->
+          <!-- composer >> form ko 1 -->
+          <!-- composer >> form kp -1 -->
+          <!-- composer >> form kv 1 -->
+          <!-- composer >> form kz -1 -->
+      copyright: |
+        <!-- composer >> icon copyright -->
+        Copyright (c) 2022, Gary B. Genett
 
-    header:				<composer_root>/_header.md.cms
-    footer:				<composer_root>/_footer.md.cms
+    pages:
+      copy_protect:			1
+      header:				[ <composer_root>/_header.md.cms ]
+      footer:				[ <composer_root>/_footer.md.cms ]
 
-    copy_protect:			1
+########################################
+  site-helpers:
 
     metainfo:
       display:				"<date> :: <title>"
+    metalist:
+      tags:
+        title:				"Tag: <name>"
+        display:			"Tags: <|>, <|>"
+        empty:				"*(no tags)*"
 
 ########################################
   site-library:
 
-    folder:				library
-    auto_update:			null #>>> 1
+    folder:
+      name:				library
+      auto_update:			null #>>> 1
 
     digest:
       count:				20
@@ -114,8 +124,8 @@ variables:
 #>        <!-- composer >> icon <composer_root>/../garygearguy/_branding/logo.png author http://www.garygearguy.com Gary Gear Guy -->
 #>        <!-- composer >> icon <composer_root>/../tresobis/_branding/logo.png project http://www.tresobis.org Tresobis -->
       - _: |
-          <!-- composer >> icon <composer_root>/projects/composer/artifacts/images/icon-v1.0.png project <composer_root>/projects/composer/index.html Composer CMS -->
-          <!-- composer >> icon <composer_root>/projects/gary-os/artifacts/images/icon-v6.0.png project <composer_root>/projects/gary-os/index.html GaryOS -->
+          <!-- composer >> icon <composer_root>/projects/composer/_artifacts/images/icon-v1.0.png project <composer_root>/projects/composer/index.html Composer CMS -->
+          <!-- composer >> icon <composer_root>/projects/gary-os/_artifacts/images/icon-v6.0.png project <composer_root>/projects/gary-os/index.html GaryOS -->
           <!-- composer >> icon github https://github.com/garybgenett Gary B. Genett on Github -->
 
 ########################################
