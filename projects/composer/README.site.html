@@ -21486,7 +21486,7 @@ Precedence Rules
 </section>
 <section id="pandoc-options" class="level3">
 <h3>Pandoc Options</h3>
-<p>#WORK # does not seem to be documented anywhere… test it, with examples here, regardless… # seems to be: yaml_metadata, –defaults, –metadata*, etc.</p>
+<p>#WORK # does not seem to be documented anywhere… test it, with examples here, regardless… # seems to be: yaml_metadata_block, –defaults, –metadata*, etc.</p>
 <!-- site-box-end :: start >> -->
 </section>
 </div>
@@ -21940,7 +21940,7 @@ Control Variables
 </ul>
 <section id="makejobs" class="level3">
 <h3>MAKEJOBS</h3>
-<p>#WORK # a small number of large directories will process faster than a large number of small ones, especially with site # windows subsystem for linux (increase memory…): /mnt/c/Users/*/.wslconfig # [wsl2] # processors=2 # memory=2GB # swap=0</p>
+<p>#WORK # a small number of large directories will process faster than a large number of small ones, especially with site # windows subsystem for linux (increase memory…): /mnt/c/Users/*/.wslconfig # [wsl2] # processors=2 # memory=2GB # swap=0 # a first troubleshooting step is to do MAKEJOBS=“1” # this came up with site-library when two different sub-directories triggered a rebuild simultaneously</p>
 <ul>
 <li>By default, <a href="http://www.garybgenett.net/projects/composer">Composer</a> progresses linearly, doing one task at a time. If there are dependencies between items, this can be beneficial, since it ensures things will happen in a particular order. The downside, however, is that it is very slow.</li>
 <li><a href="http://www.garybgenett.net/projects/composer">Composer</a> supports <a href="http://www.gnu.org/software/make">GNU Make</a> parallel execution, where multiple threads can be working through tasks independently. Experiment with lower values first. When recursing through large directories, each <code>make</code> that instantiates into a sub-directory has it’s own jobs server, so the total number of threads running can proliferate rapidly.</li>
